@@ -14,13 +14,13 @@ routertl_compat:
   library: work
   files:
   - library/util_cdc/sync_bits.v
+  - library/axi_laser_driver/axi_laser_driver_regmap.v
+  - library/common/ad_rst.v
   - library/util_cdc/sync_data.v
   - library/util_cdc/sync_event.v
-  - library/common/ad_rst.v
   - library/axi_pulse_gen/axi_pulse_gen_regmap.v
-  - library/axi_laser_driver/axi_laser_driver_regmap.v
-  - library/common/up_clock_mon.v
   - library/common/up_axi.v
+  - library/common/up_clock_mon.v
   - library/common/util_pulse_gen.v
   - library/axi_laser_driver/axi_laser_driver.v
 tags:

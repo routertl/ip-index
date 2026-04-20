@@ -13,34 +13,34 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_axi.v
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
-  - library/common/up_xfer_cntrl.v
-  - library/common/ad_rst.v
-  - library/common/up_dac_common.v
-  - library/common/up_dac_channel.v
+  - library/xilinx/common/ad_data_in.v
+  - library/axi_ad9963/axi_ad9963_if.v
+  - library/common/ad_datafmt.v
+  - library/xilinx/common/ad_dcfilter.v
   - library/xilinx/common/ad_mul.v
   - library/common/ad_iqcor.v
+  - library/common/ad_pnmon.v
+  - library/axi_ad9963/axi_ad9963_rx_pnmon.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
+  - library/common/up_adc_channel.v
+  - library/axi_ad9963/axi_ad9963_rx_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_adc_common.v
+  - library/common/up_delay_cntrl.v
+  - library/axi_ad9963/axi_ad9963_rx.v
+  - library/common/ad_dds_sine.v
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
-  - library/common/ad_dds_sine.v
   - library/common/ad_dds_1.v
   - library/common/ad_dds_2.v
   - library/common/ad_dds.v
+  - library/common/up_dac_channel.v
   - library/axi_ad9963/axi_ad9963_tx_channel.v
+  - library/common/up_dac_common.v
   - library/axi_ad9963/axi_ad9963_tx.v
-  - library/common/up_adc_common.v
-  - library/xilinx/common/ad_dcfilter.v
-  - library/common/ad_pnmon.v
-  - library/axi_ad9963/axi_ad9963_rx_pnmon.v
-  - library/common/ad_datafmt.v
-  - library/common/up_adc_channel.v
-  - library/axi_ad9963/axi_ad9963_rx_channel.v
-  - library/common/up_delay_cntrl.v
-  - library/axi_ad9963/axi_ad9963_rx.v
-  - library/xilinx/common/ad_data_in.v
-  - library/axi_ad9963/axi_ad9963_if.v
+  - library/common/up_axi.v
   - library/axi_ad9963/axi_ad9963.v
 tags:
 - ad9963

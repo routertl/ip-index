@@ -1,8 +1,8 @@
 name: axi_dac_interpolate_reg
 namespace: analog-devices
 version: 0.0.0
-description: Provides AXI register interface for configuring DAC interpolation, filtering,
-  correction, and data control parameters.
+description: Provides AXI register interface to configure DAC interpolation ratios,
+  filter masks, correction coefficients, and con...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

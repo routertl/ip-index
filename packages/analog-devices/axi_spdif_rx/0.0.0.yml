@@ -14,8 +14,8 @@ routertl_compat:
   library: work
   files:
   - library/axi_spdif_rx/rx_package.vhd
-  - library/axi_spdif_rx/rx_phase_det.vhd
   - library/axi_spdif_rx/rx_decode.vhd
+  - library/axi_spdif_rx/rx_phase_det.vhd
   - library/axi_spdif_rx/rx_status_reg.vhd
   - library/axi_spdif_rx/axi_spdif_rx.vhd
 tags:

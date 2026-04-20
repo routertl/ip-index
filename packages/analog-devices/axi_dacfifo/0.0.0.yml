@@ -14,14 +14,14 @@ routertl_compat:
   library: work
   files:
   - library/common/ad_b2g.v
-  - library/common/ad_mem_asym.v
   - library/common/ad_g2b.v
-  - library/util_dacfifo/util_dacfifo_bypass.v
+  - library/common/ad_mem_asym.v
   - library/common/ad_mem.v
   - library/xilinx/axi_dacfifo/axi_dacfifo_address_buffer.v
   - library/xilinx/axi_dacfifo/axi_dacfifo_rd.v
   - library/common/ad_axis_inf_rx.v
   - library/xilinx/axi_dacfifo/axi_dacfifo_wr.v
+  - library/util_dacfifo/util_dacfifo_bypass.v
   - library/xilinx/axi_dacfifo/axi_dacfifo.v
 tags:
 - amba

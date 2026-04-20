@@ -13,14 +13,14 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_axi.v
-  - library/common/up_xfer_cntrl.v
-  - library/axi_dac_interpolate/axi_dac_interpolate_reg.v
-  - library/axi_dac_interpolate/fir_interp.v
   - library/xilinx/common/ad_mul.v
   - library/common/ad_iqcor.v
   - library/axi_dac_interpolate/cic_interp.v
+  - library/axi_dac_interpolate/fir_interp.v
   - library/axi_dac_interpolate/axi_dac_interpolate_filter.v
+  - library/common/up_xfer_cntrl.v
+  - library/axi_dac_interpolate/axi_dac_interpolate_reg.v
+  - library/common/up_axi.v
   - library/axi_dac_interpolate/axi_dac_interpolate.v
 tags:
 - amba

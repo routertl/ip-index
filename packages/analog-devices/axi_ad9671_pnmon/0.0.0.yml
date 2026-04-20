@@ -1,8 +1,8 @@
 name: axi_ad9671_pnmon
 namespace: analog-devices
 version: 0.0.0
-description: Monitors pseudo-random PN sequences in AD9671 ADC data and detects synchronization
-  loss and bit errors.
+description: Monitors pseudo-random (PN) sequence integrity in ADC data, detecting
+  sync loss and bit errors.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

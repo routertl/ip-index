@@ -14,32 +14,32 @@ routertl_compat:
   library: work
   files:
   - library/axi_dmac/inc_id.vh
-  - library/axi_dmac/address_generator.v
-  - library/axi_dmac/resp.vh
-  - library/axi_dmac/response_handler.v
-  - library/axi_dmac/dest_axi_mm.v
-  - library/axi_dmac/splitter.v
-  - library/axi_dmac/src_axi_mm.v
-  - library/axi_dmac/axi_register_slice.v
-  - library/axi_dmac/data_mover.v
-  - library/axi_dmac/src_axi_stream.v
-  - library/util_cdc/sync_bits.v
-  - library/axi_dmac/src_fifo_inf.v
   - library/common/ad_mem_asym.v
   - library/axi_dmac/axi_dmac_resize_dest.v
   - library/axi_dmac/axi_dmac_resize_src.v
+  - library/util_cdc/sync_bits.v
   - library/axi_dmac/axi_dmac_burst_memory.v
+  - library/util_cdc/sync_event.v
+  - library/axi_dmac/axi_dmac_ext_sync.v
   - library/common/ad_mem.v
   - library/util_cdc/sync_gray.v
   - library/util_axis_fifo/util_axis_fifo_address_generator.v
   - library/util_axis_fifo/util_axis_fifo.v
   - library/axi_dmac/axi_dmac_response_manager.v
-  - library/util_cdc/sync_event.v
-  - library/axi_dmac/axi_dmac_ext_sync.v
-  - library/axi_dmac/request_generator.v
+  - library/axi_dmac/axi_register_slice.v
+  - library/axi_dmac/address_generator.v
+  - library/axi_dmac/resp.vh
+  - library/axi_dmac/response_handler.v
+  - library/axi_dmac/dest_axi_mm.v
   - library/axi_dmac/response_generator.v
   - library/axi_dmac/dest_axi_stream.v
   - library/axi_dmac/dest_fifo_inf.v
+  - library/axi_dmac/request_generator.v
+  - library/axi_dmac/splitter.v
+  - library/axi_dmac/src_axi_mm.v
+  - library/axi_dmac/data_mover.v
+  - library/axi_dmac/src_axi_stream.v
+  - library/axi_dmac/src_fifo_inf.v
   - library/axi_dmac/request_arb.v
 tags:
 - arb

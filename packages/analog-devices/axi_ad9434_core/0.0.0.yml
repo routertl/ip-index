@@ -1,8 +1,8 @@
 name: axi_ad9434_core
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces a 12-bit AD9434 ADC to a DMA engine with delay and dynamic
-  reconfiguration control.
+description: Interfaces a 12-bit AD9434 ADC to an AXI DMA controller with dynamic
+  delay and configuration management.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,16 +14,16 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/ad_rst.v
-  - library/common/up_delay_cntrl.v
+  - library/common/ad_datafmt.v
   - library/common/ad_pnmon.v
   - library/axi_ad9434/axi_ad9434_pnmon.v
-  - library/common/ad_datafmt.v
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
-  - library/common/up_adc_common.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_adc_common.v
+  - library/common/up_delay_cntrl.v
   - library/axi_ad9434/axi_ad9434_core.v
 tags:
 - ad9434

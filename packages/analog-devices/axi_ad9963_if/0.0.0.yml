@@ -1,8 +1,8 @@
 name: axi_ad9963_if
 namespace: analog-devices
 version: 0.0.0
-description: AXI interface controller for AD9963 transceiver handling bidirectional
-  IQ data conversion between physical and digita...
+description: AXI interface controller for AD9963 mixed-signal transceiver managing
+  bidirectional IQ data conversion and clock dist...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

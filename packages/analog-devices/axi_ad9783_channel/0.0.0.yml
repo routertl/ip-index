@@ -1,8 +1,8 @@
 name: axi_ad9783_channel
 namespace: analog-devices
 version: 0.0.0
-description: Manages AD9783 DAC channel output with DDS signal generation, DMA data
-  routing, and register-based control.
+description: DAC channel controller that generates or passes through waveform data
+  with DDS synthesis, DMA integration, and regist...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,15 +14,15 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_xfer_cntrl.v
-  - library/common/up_dac_channel.v
   - library/xilinx/common/ad_mul.v
+  - library/common/ad_dds_sine.v
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
-  - library/common/ad_dds_sine.v
   - library/common/ad_dds_1.v
   - library/common/ad_dds_2.v
   - library/common/ad_dds.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_dac_channel.v
   - library/axi_ad9783/axi_ad9783_channel.v
 tags:
 - ad9783

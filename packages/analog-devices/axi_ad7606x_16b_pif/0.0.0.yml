@@ -1,8 +1,8 @@
 name: axi_ad7606x_16b_pif
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces AD7606X 16-bit parallel ADC to AXI, handling data acquisition,
-  status, and CRC validation across 8 channels.
+description: Bridges AD7606X analog-to-digital converter parallel interface to capture
+  8 channels of 16-bit ADC data with CRC vali...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

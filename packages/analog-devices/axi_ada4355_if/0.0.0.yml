@@ -1,8 +1,8 @@
 name: axi_ada4355_if
 namespace: analog-devices
 version: 0.0.0
-description: AXI interface module for the AD4355 precision ADC that acquires differential
-  data and frame signals with programmable...
+description: AXI interface for ADA4355 analog-to-digital converter with LVDS input
+  serialization, programmable delay control, and ...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

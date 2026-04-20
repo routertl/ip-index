@@ -14,14 +14,14 @@ routertl_compat:
   library: work
   files:
   - library/axi_ltc235x/axi_ltc235x_cmos.v
-  - library/common/up_axi.v
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
-  - library/common/up_xfer_cntrl.v
-  - library/common/ad_rst.v
-  - library/common/up_adc_common.v
-  - library/common/up_adc_channel.v
   - library/axi_ltc235x/axi_ltc235x_lvds.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
+  - library/common/up_adc_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_adc_common.v
+  - library/common/up_axi.v
   - library/axi_ltc235x/axi_ltc235x.v
 tags:
 - amba

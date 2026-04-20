@@ -13,14 +13,14 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - library/common/ad_rst.v
   - library/util_cdc/sync_bits.v
   - library/util_cdc/sync_data.v
+  - library/common/up_axi.v
   - library/common/ad_mem.v
   - library/util_cdc/sync_gray.v
   - library/util_axis_fifo/util_axis_fifo_address_generator.v
   - library/util_axis_fifo/util_axis_fifo.v
-  - library/common/up_axi.v
-  - library/common/ad_rst.v
   - library/spi_engine/axi_spi_engine/axi_spi_engine.v
 tags:
 - amba

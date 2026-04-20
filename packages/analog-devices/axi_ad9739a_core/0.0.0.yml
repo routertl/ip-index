@@ -1,8 +1,8 @@
 name: axi_ad9739a_core
 namespace: analog-devices
 version: 0.0.0
-description: AXI AD9739A DAC core with DDS signal generation and DMA data interface
-  for high-speed analog output.
+description: AXI AD9739A DAC core that generates 16 channels of 16-bit output data
+  with DDS signal generation and DMA interface su...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,19 +14,19 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_xfer_cntrl.v
-  - library/common/up_dac_channel.v
   - library/xilinx/common/ad_mul.v
+  - library/common/ad_dds_sine.v
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
-  - library/common/ad_dds_sine.v
   - library/common/ad_dds_1.v
   - library/common/ad_dds_2.v
   - library/common/ad_dds.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_dac_channel.v
   - library/axi_ad9739a/axi_ad9739a_channel.v
+  - library/common/ad_rst.v
   - library/common/up_clock_mon.v
   - library/common/up_xfer_status.v
-  - library/common/ad_rst.v
   - library/common/up_dac_common.v
   - library/axi_ad9739a/axi_ad9739a_core.v
 tags:

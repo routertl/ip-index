@@ -1,8 +1,8 @@
 name: axi_pulsar_lvds_channel
 namespace: analog-devices
 version: 0.0.0
-description: Manages a single LVDS ADC channel with data formatting, PN sequence error
-  detection, and AXI register control.
+description: AXI interface for a single LVDS ADC channel with data formatting, PN
+  sequence monitoring, and overrange detection.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -15,8 +15,8 @@ routertl_compat:
   library: work
   files:
   - library/common/ad_datafmt.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
   - library/axi_pulsar_lvds/axi_pulsar_lvds_channel.v
 tags:

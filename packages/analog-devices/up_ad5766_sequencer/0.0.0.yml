@@ -1,8 +1,8 @@
 name: up_ad5766_sequencer
 namespace: analog-devices
 version: 0.0.0
-description: Sequencer for AD5766 DAC that manages programmable output sequences via
-  AXI-Lite register interface.
+description: Generates sequenced 8-bit data outputs for AD5766 DAC control via configurable
+  register interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

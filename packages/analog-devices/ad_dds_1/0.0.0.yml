@@ -1,8 +1,8 @@
 name: ad_dds_1
 namespace: analog-devices
 version: 0.0.0
-description: Generates sinusoidal output data from phase input using direct digital
-  synthesis with programmable scaling.
+description: Generates scaled sinusoidal output from phase input using direct digital
+  synthesis.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -15,9 +15,9 @@ routertl_compat:
   library: work
   files:
   - library/xilinx/common/ad_mul.v
+  - library/common/ad_dds_sine.v
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
-  - library/common/ad_dds_sine.v
   - library/common/ad_dds_1.v
 tags:
 - ad

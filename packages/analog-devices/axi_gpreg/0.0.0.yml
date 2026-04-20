@@ -13,11 +13,11 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_clock_mon.v
   - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
   - library/axi_gpreg/axi_gpreg_clock_mon.v
-  - library/common/up_axi.v
   - library/axi_gpreg/axi_gpreg_io.v
+  - library/common/up_axi.v
   - library/axi_gpreg/axi_gpreg.v
 tags:
 - amba

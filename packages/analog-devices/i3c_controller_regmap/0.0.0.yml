@@ -14,10 +14,10 @@ routertl_compat:
   library: work
   files:
   - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
-  - library/util_cdc/sync_bits.v
-  - library/common/ad_rst.v
-  - library/common/up_axi.v
   - library/common/ad_mem_dual.v
+  - library/common/ad_rst.v
+  - library/util_cdc/sync_bits.v
+  - library/common/up_axi.v
   - library/common/ad_mem.v
   - library/util_cdc/sync_gray.v
   - library/util_axis_fifo/util_axis_fifo_address_generator.v

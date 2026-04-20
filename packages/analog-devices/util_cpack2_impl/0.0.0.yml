@@ -1,8 +1,8 @@
 name: util_cpack2_impl
 namespace: analog-devices
 version: 0.0.0
-description: Packs multi-channel sample data from parallel inputs into a single aggregated
-  output stream with overflow handling an...
+description: Packs multi-channel sample data from parallel inputs into a serialized
+  FIFO stream with synchronization control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -15,8 +15,8 @@ routertl_compat:
   library: work
   files:
   - library/common/ad_perfect_shuffle.v
-  - library/util_pack/util_pack_common/pack_interconnect.v
   - library/util_pack/util_pack_common/pack_ctrl.v
+  - library/util_pack/util_pack_common/pack_interconnect.v
   - library/util_pack/util_pack_common/pack_network.v
   - library/util_pack/util_pack_common/pack_shell.v
   - library/util_pack/util_cpack2/util_cpack2_impl.v

@@ -1,8 +1,8 @@
 name: daq3_spi
 namespace: analog-devices
 version: 0.0.0
-description: Manages SPI communication for DAQ3 with chip select, clock, data I/O,
-  and direction control.
+description: SPI interface controller for DAQ3 supporting both standard and bidirectional
+  modes with multi-chip select capability.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

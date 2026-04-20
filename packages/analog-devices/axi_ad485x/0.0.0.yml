@@ -1,8 +1,8 @@
 name: axi_ad485x
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite interface controller for AD485x high-speed analog-to-digital
-  converter with configurable LVDS/CMOS data lan...
+description: AXI interface controller for AD485x high-speed multi-lane ADC with configurable
+  LVDS/CMOS input and output serializat...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,22 +14,22 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/ad_rst.v
-  - library/common/up_delay_cntrl.v
   - library/common/ad_datafmt.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
+  - library/axi_ad485x/axi_ad485x_16b_channel.v
   - library/axi_ad485x/axi_ad485x_20b_channel.v
   - library/xilinx/common/ad_data_in.v
   - library/axi_ad485x/axi_ad485x_crc.v
   - library/axi_ad485x/axi_ad485x_cmos.v
   - library/xilinx/common/ad_serdes_out.v
   - library/axi_ad485x/axi_ad485x_lvds.v
-  - library/common/up_axi.v
+  - library/common/ad_rst.v
   - library/common/up_clock_mon.v
   - library/common/up_adc_common.v
-  - library/axi_ad485x/axi_ad485x_16b_channel.v
+  - library/common/up_axi.v
+  - library/common/up_delay_cntrl.v
   - library/axi_ad485x/axi_ad485x.v
 tags:
 - ad485x

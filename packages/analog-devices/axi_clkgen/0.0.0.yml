@@ -13,10 +13,10 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - library/xilinx/common/ad_mmcm_drp.v
   - library/common/up_axi.v
   - library/common/ad_rst.v
   - library/common/up_clkgen.v
-  - library/xilinx/common/ad_mmcm_drp.v
   - library/axi_clkgen/axi_clkgen.v
 tags:
 - amba

@@ -1,8 +1,8 @@
 name: axi_ltc2387
 namespace: analog-devices
 version: 0.0.0
-description: AXI interface for LTC2387 18-bit ADC with dual-lane LVDS input and configurable
-  resolution output.
+description: AXI4-Lite interface for the LTC2387 18-bit analog-to-digital converter
+  with dual-lane LVDS input and configurable out...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,18 +14,18 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/ad_rst.v
-  - library/common/up_delay_cntrl.v
   - library/common/ad_datafmt.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
   - library/axi_ltc2387/axi_ltc2387_channel.v
-  - library/common/up_axi.v
   - library/xilinx/common/ad_data_in.v
   - library/axi_ltc2387/axi_ltc2387_if.v
+  - library/common/ad_rst.v
   - library/common/up_clock_mon.v
   - library/common/up_adc_common.v
+  - library/common/up_axi.v
+  - library/common/up_delay_cntrl.v
   - library/axi_ltc2387/axi_ltc2387.v
 tags:
 - amba

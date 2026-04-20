@@ -1,8 +1,8 @@
 name: axi_xcvrlb_1
 namespace: analog-devices
 version: 0.0.0
-description: Manages high-speed serial transceiver with clock generation, signal conditioning,
-  and processor control interface.
+description: Configurable high-speed transceiver with PLL control and AXI processor
+  interface for serial data transmission and rec...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,11 +14,11 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - library/common/ad_pnmon.v
   - library/common/up_xfer_status.v
   - library/util_cdc/sync_bits.v
   - library/jesd204/jesd204_common/sync_header_align.v
   - library/xilinx/util_adxcvr/util_adxcvr_xch.v
-  - library/common/ad_pnmon.v
   - library/xilinx/axi_xcvrlb/axi_xcvrlb_1.v
 tags:
 - amba

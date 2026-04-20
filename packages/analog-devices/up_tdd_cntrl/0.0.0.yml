@@ -14,8 +14,8 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_tdd_cntrl.v
 tags:
 - cntrl

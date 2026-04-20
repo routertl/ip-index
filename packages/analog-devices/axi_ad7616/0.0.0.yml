@@ -1,8 +1,8 @@
 name: axi_ad7616
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite interface controller for the AD7616 16-channel simultaneous
-  sampling ADC with SPI-like physical data access.
+description: AXI4-Lite interface controller for the AD7616 analog-to-digital converter
+  with SPI-like physical data and control sig...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,15 +14,15 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/axi_ad7616/axi_ad7616_pif.v
-  - library/common/up_axi.v
   - library/common/ad_datafmt.v
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
+  - library/axi_ad7616/axi_ad7616_pif.v
   - library/common/up_xfer_cntrl.v
-  - library/common/ad_rst.v
-  - library/common/up_adc_common.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_adc_common.v
+  - library/common/up_axi.v
   - library/axi_ad7616/axi_ad7616.v
 tags:
 - ad7616

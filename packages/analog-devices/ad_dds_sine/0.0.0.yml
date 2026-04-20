@@ -1,8 +1,7 @@
 name: ad_dds_sine
 namespace: analog-devices
 version: 0.0.0
-description: Computes the sine of an input angle and passes through delayed data with
-  configurable width.
+description: Computes sine values from phase angles with configurable data delay pipeline.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

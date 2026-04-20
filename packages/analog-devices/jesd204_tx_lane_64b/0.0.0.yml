@@ -1,7 +1,7 @@
 name: jesd204_tx_lane_64b
 namespace: analog-devices
 version: 0.0.0
-description: Transmits 64-bit JESD204 data with optional scrambling, header insertion,
+description: Transmits 64-bit JESD204 data with configurable scrambling, header insertion,
   and lane control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
@@ -15,8 +15,8 @@ routertl_compat:
   library: work
   files:
   - library/jesd204/jesd204_common/jesd204_crc12.v
-  - library/jesd204/jesd204_tx/jesd204_tx_header.v
   - library/jesd204/jesd204_common/jesd204_scrambler_64b.v
+  - library/jesd204/jesd204_tx/jesd204_tx_header.v
   - library/jesd204/jesd204_tx/jesd204_tx_lane_64b.v
 tags:
 - 64b

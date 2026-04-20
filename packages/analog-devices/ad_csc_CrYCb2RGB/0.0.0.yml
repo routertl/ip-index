@@ -1,8 +1,8 @@
 name: ad_csc_CrYCb2RGB
 namespace: analog-devices
 version: 0.0.0
-description: Converts YCbCr color space video data to RGB format with configurable
-  pipeline delay synchronization.
+description: Converts Cr-Y-Cb color format to RGB color format with synchronization
+  control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

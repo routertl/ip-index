@@ -1,8 +1,8 @@
 name: axi_ad9671_channel
 namespace: analog-devices
 version: 0.0.0
-description: Manages data acquisition, PN sequence validation, and control for a single
-  AD9671 ADC channel with processor register...
+description: ADC channel interface for AD9671 with data formatting, PN sequence checking,
+  and processor register control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,11 +14,11 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - library/common/ad_datafmt.v
   - library/common/ad_pnmon.v
   - library/axi_ad9671/axi_ad9671_pnmon.v
-  - library/common/ad_datafmt.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
   - library/axi_ad9671/axi_ad9671_channel.v
 tags:

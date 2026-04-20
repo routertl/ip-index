@@ -1,8 +1,8 @@
 name: axi_ltc2387_if
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces with LTC2387 ADC, capturing differential data from one or
-  two lanes with configurable resolution and IDELA...
+description: Interfaces with LTC2387 ADC, converting differential inputs to parallel
+  data with configurable resolution and dual-la...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

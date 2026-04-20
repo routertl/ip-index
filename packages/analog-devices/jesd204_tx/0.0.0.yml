@@ -13,21 +13,21 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/util_pipeline_stage.v
-  - library/jesd204/jesd204_common/jesd204_crc12.v
-  - library/jesd204/jesd204_tx/jesd204_tx_header.v
-  - library/jesd204/jesd204_common/jesd204_scrambler_64b.v
-  - library/jesd204/jesd204_tx/jesd204_tx_lane_64b.v
+  - library/jesd204/jesd204_common/jesd204_frame_mark.v
+  - library/jesd204/jesd204_common/jesd204_lmfc.v
   - library/util_cdc/sync_bits.v
+  - library/jesd204/jesd204_tx/jesd204_tx_ctrl.v
   - library/common/ad_pack.v
   - library/common/ad_upack.v
   - library/jesd204/jesd204_tx/jesd204_tx_gearbox.v
-  - library/jesd204/jesd204_tx/jesd204_tx_ctrl.v
-  - library/jesd204/jesd204_common/jesd204_frame_mark.v
   - library/jesd204/jesd204_common/jesd204_frame_align_replace.v
   - library/jesd204/jesd204_common/jesd204_scrambler.v
+  - library/common/util_pipeline_stage.v
   - library/jesd204/jesd204_tx/jesd204_tx_lane.v
-  - library/jesd204/jesd204_common/jesd204_lmfc.v
+  - library/jesd204/jesd204_common/jesd204_crc12.v
+  - library/jesd204/jesd204_common/jesd204_scrambler_64b.v
+  - library/jesd204/jesd204_tx/jesd204_tx_header.v
+  - library/jesd204/jesd204_tx/jesd204_tx_lane_64b.v
   - library/util_cdc/sync_event.v
   - library/jesd204/jesd204_tx/jesd204_tx.v
 tags:

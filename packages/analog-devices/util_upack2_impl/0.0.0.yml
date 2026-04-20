@@ -14,8 +14,8 @@ routertl_compat:
   library: work
   files:
   - library/common/ad_perfect_shuffle.v
-  - library/util_pack/util_pack_common/pack_interconnect.v
   - library/util_pack/util_pack_common/pack_ctrl.v
+  - library/util_pack/util_pack_common/pack_interconnect.v
   - library/util_pack/util_pack_common/pack_network.v
   - library/util_pack/util_pack_common/pack_shell.v
   - library/util_pack/util_upack2/util_upack2_impl.v

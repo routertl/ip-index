@@ -1,8 +1,8 @@
 name: fmcomms8_spi
 namespace: analog-devices
 version: 0.0.0
-description: SPI interface controller for FMCOMMS8 that multiplexes chip select, clock,
-  and data signals across multiple slave dev...
+description: Multiplexes SPI communication with shared SDIO line for fmcomms8 RF transceiver
+  control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

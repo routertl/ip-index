@@ -14,8 +14,8 @@ routertl_compat:
   library: work
   files:
   - library/axi_dmac/splitter.v
-  - library/util_cdc/sync_bits.v
   - library/common/ad_mem.v
+  - library/util_cdc/sync_bits.v
   - library/util_cdc/sync_gray.v
   - library/util_axis_fifo/util_axis_fifo_address_generator.v
   - library/util_axis_fifo/util_axis_fifo.v

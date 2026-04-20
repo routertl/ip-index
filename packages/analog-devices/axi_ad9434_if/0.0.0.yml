@@ -1,8 +1,8 @@
 name: axi_ad9434_if
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces a 12-bit differential AD9434 ADC to an AXI system with configurable
-  I/O delay and MMCM clock management.
+description: Interfaces a 12-bit AD9434 ADC with differential LVDS inputs, providing
+  clock/data synchronization and configurable i...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,11 +14,11 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - library/xilinx/common/ad_mmcm_drp.v
+  - library/xilinx/common/ad_serdes_clk.v
   - library/util_cdc/sync_bits.v
   - library/util_cdc/sync_event.v
   - library/xilinx/common/ad_serdes_in.v
-  - library/xilinx/common/ad_mmcm_drp.v
-  - library/xilinx/common/ad_serdes_clk.v
   - library/axi_ad9434/axi_ad9434_if.v
 tags:
 - ad9434

@@ -1,8 +1,8 @@
 name: axi_ad7606x
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite interface controller for the AD7606x multi-channel simultaneous
-  sampling ADC with parallel data acquisition.
+description: AXI4-Lite interface controller for AD7606x analog-to-digital converter
+  with parallel data acquisition and configurati...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,17 +14,17 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - library/common/ad_datafmt.v
   - library/common/ad_edge_detect.v
   - library/axi_ad7606x/axi_ad7606x_16b_pif.v
-  - library/common/ad_datafmt.v
-  - library/common/up_axi.v
   - library/axi_ad7606x/axi_ad7606x_18b_pif.v
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
-  - library/common/ad_rst.v
-  - library/common/up_adc_common.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_adc_common.v
+  - library/common/up_axi.v
   - library/axi_ad7606x/axi_ad7606x.v
 tags:
 - ad7606x

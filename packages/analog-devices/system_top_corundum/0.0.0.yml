@@ -13,8 +13,8 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/ad_iobuf.v
   - library/common/ad_3w_spi.v
+  - library/common/ad_iobuf.v
   - projects/ad9081_fmca_ebz/vcu118/system_top_corundum.v
 tags:
 - corundum

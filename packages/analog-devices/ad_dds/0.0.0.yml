@@ -1,8 +1,8 @@
 name: ad_dds
 namespace: analog-devices
 version: 0.0.0
-description: Generates multiple DDS tones with configurable frequency, phase, and
-  amplitude for DAC output.
+description: Generates scaled multi-tone DDS output with configurable frequency, phase,
+  and sample rate conversion.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -15,9 +15,9 @@ routertl_compat:
   library: work
   files:
   - library/xilinx/common/ad_mul.v
+  - library/common/ad_dds_sine.v
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
-  - library/common/ad_dds_sine.v
   - library/common/ad_dds_1.v
   - library/common/ad_dds_2.v
   - library/common/ad_dds.v

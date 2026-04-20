@@ -1,8 +1,8 @@
 name: axi_ad9625_pnmon
 namespace: analog-devices
 version: 0.0.0
-description: Monitors ADC data against selectable PN9 or PN23 sequences and reports
-  synchronization/error status.
+description: Monitors ADC data against selectable PN9/PN23 sequences and flags synchronization
+  loss or bit errors.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

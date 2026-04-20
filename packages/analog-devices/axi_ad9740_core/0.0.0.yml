@@ -1,8 +1,8 @@
 name: axi_ad9740_core
 namespace: analog-devices
 version: 0.0.0
-description: AXI-based DAC core controller for AD9740 with DMA data input, optional
-  DDS signal generation, and processor register ...
+description: AXI-based AD9740 DAC controller with DMA interface, DDS signal generation,
+  and processor register access.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,20 +14,20 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
-  - library/common/up_xfer_cntrl.v
-  - library/common/ad_rst.v
-  - library/common/up_dac_common.v
-  - library/common/up_dac_channel.v
   - library/xilinx/common/ad_mul.v
+  - library/common/ad_dds_sine.v
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
-  - library/common/ad_dds_sine.v
   - library/common/ad_dds_1.v
   - library/common/ad_dds_2.v
   - library/common/ad_dds.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_dac_channel.v
   - library/axi_ad9740/axi_ad9740_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_xfer_status.v
+  - library/common/up_dac_common.v
   - library/axi_ad9740/axi_ad9740_core.v
 tags:
 - ad9740

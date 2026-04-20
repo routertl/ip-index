@@ -1,8 +1,8 @@
 name: axi_hdmi_tx_core
 namespace: analog-devices
 version: 0.0.0
-description: Generates HDMI video output signals with configurable bit-width interface
-  and optional color space conversion.
+description: Generates synchronized HDMI video output signals with configurable data
+  width (16/24/36-bit) and format conversion.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -13,24 +13,24 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
-  - library/common/up_xfer_cntrl.v
-  - library/common/ad_rst.v
-  - library/common/up_adc_common.v
-  - library/common/up_axi.v
-  - library/jesd204/ad_ip_jesd204_tpl_common/up_tpl_common.v
-  - library/common/up_adc_channel.v
-  - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_regmap.v
   - library/common/ad_datafmt.v
   - library/common/ad_pnmon.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_pnmon.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_channel.v
-  - library/common/ad_xcvr_rx_if.v
   - library/common/ad_perfect_shuffle.v
+  - library/common/ad_xcvr_rx_if.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_deframer.v
   - library/common/util_ext_sync.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_core.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
+  - library/common/up_adc_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_adc_common.v
+  - library/common/up_axi.v
+  - library/jesd204/ad_ip_jesd204_tpl_common/up_tpl_common.v
+  - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_regmap.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc.v
 tags:
 - ad

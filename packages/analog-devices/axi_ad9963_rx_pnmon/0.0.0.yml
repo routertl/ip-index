@@ -1,8 +1,8 @@
 name: axi_ad9963_rx_pnmon
 namespace: analog-devices
 version: 0.0.0
-description: Monitors ADC pseudo-random sequence synchronization and detects bit errors
-  in received PN sequences.
+description: Monitors ADC data for PN sequence errors and out-of-sync conditions using
+  selectable PN patterns.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

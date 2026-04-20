@@ -15,8 +15,8 @@ routertl_compat:
   files:
   - library/common/ad_axis_inf_rx.v
   - library/common/ad_mem_asym.v
-  - library/util_cdc/sync_gray.v
   - library/common/ad_rst.v
+  - library/util_cdc/sync_gray.v
   - library/util_adcfifo/util_adcfifo.v
 tags:
 - adcfifo

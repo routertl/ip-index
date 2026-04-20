@@ -13,18 +13,18 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/ad_rst.v
-  - library/common/up_delay_cntrl.v
   - library/common/ad_datafmt.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
   - library/axi_pulsar_lvds/axi_pulsar_lvds_channel.v
-  - library/common/up_axi.v
-  - library/common/up_clock_mon.v
-  - library/common/up_adc_common.v
   - library/xilinx/common/ad_data_in.v
   - library/axi_pulsar_lvds/axi_pulsar_lvds_if.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_adc_common.v
+  - library/common/up_axi.v
+  - library/common/up_delay_cntrl.v
   - library/axi_pulsar_lvds/axi_pulsar_lvds.v
 tags:
 - amba

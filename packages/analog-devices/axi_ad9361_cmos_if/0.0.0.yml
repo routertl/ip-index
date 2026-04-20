@@ -13,9 +13,9 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - library/xilinx/common/ad_data_clk.v
   - library/xilinx/common/ad_data_in.v
   - library/xilinx/common/ad_data_out.v
-  - library/xilinx/common/ad_data_clk.v
   - library/axi_ad9361/xilinx/axi_ad9361_cmos_if.v
 tags:
 - ad9361

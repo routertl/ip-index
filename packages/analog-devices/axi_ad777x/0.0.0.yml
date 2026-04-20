@@ -13,14 +13,14 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
+  - library/axi_ad777x/axi_ad777x_if.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
+  - library/common/up_adc_channel.v
   - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
   - library/common/up_adc_common.v
   - library/common/up_axi.v
-  - library/common/up_adc_channel.v
-  - library/axi_ad777x/axi_ad777x_if.v
   - library/axi_ad777x/axi_ad777x.v
 tags:
 - ad777x

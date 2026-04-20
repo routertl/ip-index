@@ -1,8 +1,8 @@
 name: axi_adaq8092
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite interface module for dual-channel ADAQ8092 ADC with LVDS/CMOS
-  input support and configurable data path proc...
+description: AXI4-Lite interface controller for dual-channel ADAQ8092 ADC with LVDS/CMOS
+  input support and configurable data path ...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -15,21 +15,21 @@ routertl_compat:
   library: work
   files:
   - library/axi_adaq8092/axi_adaq8092_apb_decode.v
-  - library/xilinx/common/ad_dcfilter.v
   - library/common/ad_datafmt.v
-  - library/common/up_xfer_status.v
+  - library/xilinx/common/ad_dcfilter.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
   - library/axi_adaq8092/axi_adaq8092_channel.v
-  - library/xilinx/common/ad_data_in.v
   - library/xilinx/common/ad_data_clk.v
+  - library/xilinx/common/ad_data_in.v
   - library/axi_adaq8092/axi_adaq8092_if.v
-  - library/common/ad_rst.v
-  - library/common/up_delay_cntrl.v
   - library/axi_adaq8092/axi_adaq8092_rand_decode.v
-  - library/common/up_axi.v
+  - library/common/ad_rst.v
   - library/common/up_clock_mon.v
   - library/common/up_adc_common.v
+  - library/common/up_axi.v
+  - library/common/up_delay_cntrl.v
   - library/axi_adaq8092/axi_adaq8092.v
 tags:
 - adaq8092

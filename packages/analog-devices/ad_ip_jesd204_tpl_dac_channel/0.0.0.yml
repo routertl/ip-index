@@ -1,8 +1,8 @@
 name: ad_ip_jesd204_tpl_dac_channel
 namespace: analog-devices
 version: 0.0.0
-description: JESD204 DAC channel processor that selects between DMA data, DDS-generated
-  signals, and PN test patterns with optiona...
+description: JESD204 DAC channel processor that routes, generates, or conditions multi-sample
+  data streams with optional DDS and t...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -15,13 +15,13 @@ routertl_compat:
   library: work
   files:
   - library/xilinx/common/ad_mul.v
-  - library/common/ad_iqcor.v
+  - library/common/ad_dds_sine.v
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
-  - library/common/ad_dds_sine.v
   - library/common/ad_dds_1.v
   - library/common/ad_dds_2.v
   - library/common/ad_dds.v
+  - library/common/ad_iqcor.v
   - library/jesd204/ad_ip_jesd204_tpl_dac/ad_ip_jesd204_tpl_dac_channel.v
 tags:
 - ad

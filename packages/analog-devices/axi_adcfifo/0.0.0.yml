@@ -16,11 +16,11 @@ routertl_compat:
   - library/common/up_xfer_status.v
   - library/xilinx/axi_adcfifo/axi_adcfifo_adc.v
   - library/common/ad_axis_inf_rx.v
-  - library/common/ad_mem.v
-  - library/xilinx/axi_adcfifo/axi_adcfifo_wr.v
   - library/common/ad_mem_asym.v
   - library/xilinx/axi_adcfifo/axi_adcfifo_dma.v
   - library/xilinx/axi_adcfifo/axi_adcfifo_rd.v
+  - library/common/ad_mem.v
+  - library/xilinx/axi_adcfifo/axi_adcfifo_wr.v
   - library/xilinx/axi_adcfifo/axi_adcfifo.v
 tags:
 - adcfifo

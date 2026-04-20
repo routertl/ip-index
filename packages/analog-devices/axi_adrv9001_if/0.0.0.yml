@@ -1,8 +1,8 @@
 name: axi_adrv9001_if
 namespace: analog-devices
 version: 0.0.0
-description: AXI interface controller for ADRV9001 RF transceiver with dual RX/TX
-  channels, clock management, and configurable I/O...
+description: AXI interface adapter for ADRV9001 RF transceiver with dual RX/TX channels,
+  LVDS/CMOS signaling, and configurable I/O...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -15,11 +15,11 @@ routertl_compat:
   library: work
   files:
   - library/axi_adrv9001/intel/adrv9001_rx.v
-  - library/axi_adrv9001/intel/adrv9001_tx.v
   - library/axi_adrv9001/adrv9001_aligner4.v
-  - library/axi_adrv9001/adrv9001_pack.v
   - library/axi_adrv9001/adrv9001_aligner8.v
+  - library/axi_adrv9001/adrv9001_pack.v
   - library/axi_adrv9001/adrv9001_rx_link.v
+  - library/axi_adrv9001/intel/adrv9001_tx.v
   - library/axi_adrv9001/adrv9001_tx_link.v
   - library/axi_adrv9001/axi_adrv9001_if.v
 tags:

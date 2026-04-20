@@ -14,11 +14,11 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - library/common/ad_datafmt.v
   - library/common/ad_pnmon.v
   - library/axi_ad9684/axi_ad9684_pnmon.v
-  - library/common/ad_datafmt.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
   - library/axi_ad9684/axi_ad9684_channel.v
 tags:

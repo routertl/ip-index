@@ -13,17 +13,17 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_axi.v
-  - library/axi_hdmi_rx/axi_hdmi_rx_es.v
   - library/common/ad_csc.v
   - library/common/ad_csc_CrYCb2RGB.v
-  - library/axi_hdmi_rx/axi_hdmi_rx_tpm.v
   - library/common/ad_ss_422to444.v
+  - library/axi_hdmi_rx/axi_hdmi_rx_es.v
+  - library/axi_hdmi_rx/axi_hdmi_rx_tpm.v
   - library/axi_hdmi_rx/axi_hdmi_rx_core.v
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
-  - library/common/up_xfer_cntrl.v
+  - library/common/up_axi.v
   - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_hdmi_rx.v
   - library/axi_hdmi_rx/axi_hdmi_rx.v
 tags:

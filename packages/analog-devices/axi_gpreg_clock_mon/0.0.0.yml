@@ -1,8 +1,8 @@
 name: axi_gpreg_clock_mon
 namespace: analog-devices
 version: 0.0.0
-description: Monitors and reports clock frequency via AXI GP register interface with
-  optional buffering.
+description: Monitors and exposes clock frequency measurements via an AXI register
+  interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,8 +14,8 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_clock_mon.v
   - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
   - library/axi_gpreg/axi_gpreg_clock_mon.v
 tags:
 - amba

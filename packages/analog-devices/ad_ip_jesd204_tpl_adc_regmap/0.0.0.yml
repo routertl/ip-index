@@ -13,14 +13,14 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
+  - library/common/up_adc_channel.v
   - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
   - library/common/up_adc_common.v
   - library/common/up_axi.v
   - library/jesd204/ad_ip_jesd204_tpl_common/up_tpl_common.v
-  - library/common/up_adc_channel.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_regmap.v
 tags:
 - ad

@@ -13,43 +13,43 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/ad_addsub.v
-  - library/common/ad_tdd_control.v
-  - library/common/up_xfer_status.v
-  - library/common/up_xfer_cntrl.v
-  - library/common/up_tdd_cntrl.v
-  - library/axi_ad9361/axi_ad9361_tdd.v
-  - library/common/up_clock_mon.v
-  - library/common/ad_rst.v
-  - library/common/up_adc_common.v
+  - library/common/ad_pps_receiver.v
+  - library/xilinx/common/ad_data_clk.v
+  - library/xilinx/common/ad_data_in.v
+  - library/xilinx/common/ad_data_out.v
+  - library/axi_ad9361/xilinx/axi_ad9361_cmos_if.v
+  - library/axi_ad9361/xilinx/axi_ad9361_lvds_if.v
+  - library/common/ad_datafmt.v
   - library/xilinx/common/ad_dcfilter.v
-  - library/common/ad_pnmon.v
-  - library/axi_ad9361/axi_ad9361_rx_pnmon.v
   - library/xilinx/common/ad_mul.v
   - library/common/ad_iqcor.v
-  - library/common/ad_datafmt.v
+  - library/common/ad_pnmon.v
+  - library/axi_ad9361/axi_ad9361_rx_pnmon.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
   - library/axi_ad9361/axi_ad9361_rx_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_adc_common.v
   - library/common/up_delay_cntrl.v
   - library/axi_ad9361/axi_ad9361_rx.v
-  - library/common/up_dac_common.v
-  - library/common/up_dac_channel.v
+  - library/common/ad_addsub.v
+  - library/common/ad_tdd_control.v
+  - library/common/up_tdd_cntrl.v
+  - library/axi_ad9361/axi_ad9361_tdd.v
+  - library/axi_ad9361/axi_ad9361_tdd_if.v
+  - library/common/ad_dds_sine.v
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
-  - library/common/ad_dds_sine.v
   - library/common/ad_dds_1.v
   - library/common/ad_dds_2.v
   - library/common/ad_dds.v
+  - library/common/up_dac_channel.v
   - library/axi_ad9361/axi_ad9361_tx_channel.v
+  - library/common/up_dac_common.v
   - library/axi_ad9361/axi_ad9361_tx.v
-  - library/common/ad_pps_receiver.v
-  - library/xilinx/common/ad_data_in.v
-  - library/xilinx/common/ad_data_out.v
-  - library/xilinx/common/ad_data_clk.v
-  - library/axi_ad9361/xilinx/axi_ad9361_cmos_if.v
   - library/common/up_axi.v
-  - library/axi_ad9361/axi_ad9361_tdd_if.v
-  - library/axi_ad9361/xilinx/axi_ad9361_lvds_if.v
   - library/axi_ad9361/axi_ad9361.v
 tags:
 - ad9361

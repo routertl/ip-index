@@ -13,10 +13,10 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/axi_dac_interpolate/fir_interp.v
   - library/xilinx/common/ad_mul.v
   - library/common/ad_iqcor.v
   - library/axi_dac_interpolate/cic_interp.v
+  - library/axi_dac_interpolate/fir_interp.v
   - library/axi_dac_interpolate/axi_dac_interpolate_filter.v
 tags:
 - amba

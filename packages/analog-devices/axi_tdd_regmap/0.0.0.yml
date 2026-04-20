@@ -1,8 +1,8 @@
 name: axi_tdd_regmap
 namespace: analog-devices
 version: 0.0.0
-description: Provides register mapping interface for configurable time-division duplex
-  control with multi-channel timing and synch...
+description: Provides AXI register interface to configure TDD (Time Division Duplex)
+  timing and channel control parameters.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

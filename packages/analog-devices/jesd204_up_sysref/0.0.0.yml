@@ -1,8 +1,8 @@
 name: jesd204_up_sysref
 namespace: analog-devices
 version: 0.0.0
-description: Manages JESD204 SYSREF configuration and monitoring through a register
-  interface with clock domain crossing.
+description: JESD204 SYSREF signal controller that manages synchronization reference
+  configuration and monitoring across multiple ...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

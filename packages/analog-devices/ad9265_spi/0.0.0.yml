@@ -1,8 +1,8 @@
 name: ad9265_spi
 namespace: analog-devices
 version: 0.0.0
-description: Manages SPI communication interface for AD9265 analog-to-digital converter
-  with configurable chip select, clock, data...
+description: SPI interface controller for AD9265 analog-to-digital converter with
+  configurable chip select, MOSI/MISO, and bidirec...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

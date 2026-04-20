@@ -1,8 +1,8 @@
 name: axi_ada4355
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite interface for the ADA4355 ADC, providing data acquisition,
-  PN error monitoring, and delay control.
+description: AXI4-Lite interfaced ADC controller for the ADA4355 analog-to-digital
+  converter with PN error monitoring and programm...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,19 +14,19 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/ad_rst.v
-  - library/common/up_delay_cntrl.v
   - library/util_cdc/sync_bits.v
   - library/util_cdc/sync_event.v
   - library/xilinx/common/ad_serdes_in.v
   - library/axi_ada4355/axi_ada4355_if.v
-  - library/common/up_axi.v
   - library/axi_ada4355/axi_ada4355_regmap.v
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
-  - library/common/up_adc_common.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_adc_common.v
+  - library/common/up_axi.v
+  - library/common/up_delay_cntrl.v
   - library/axi_ada4355/axi_ada4355.v
 tags:
 - ada4355

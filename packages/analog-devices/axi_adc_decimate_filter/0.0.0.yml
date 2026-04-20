@@ -1,7 +1,8 @@
 name: axi_adc_decimate_filter
 namespace: analog-devices
 version: 0.0.0
-description: Decimates and filters dual-channel ADC data with optional gain correction.
+description: Decimates and filters dual ADC data streams with configurable ratio,
+  filter selection, and optional gain correction.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -15,10 +16,10 @@ routertl_compat:
   files:
   - library/xilinx/common/ad_mul.v
   - library/common/ad_iqcor.v
-  - library/axi_adc_decimate/fir_decim.v
   - library/util_cic/cic_comb.v
   - library/util_cic/cic_int.v
   - library/axi_adc_decimate/cic_decim.v
+  - library/axi_adc_decimate/fir_decim.v
   - library/axi_adc_decimate/axi_adc_decimate_filter.v
 tags:
 - adc

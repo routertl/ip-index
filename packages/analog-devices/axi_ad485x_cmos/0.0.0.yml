@@ -1,8 +1,8 @@
 name: axi_ad485x_cmos
 namespace: analog-devices
 version: 0.0.0
-description: AXI-based interface for AD485x high-resolution ADC with configurable
-  channels, CMOS input, and CRC error detection.
+description: AXI interface controller for AD485x CMOS ADC with configurable resolution,
+  CRC support, and IODELAY calibration.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

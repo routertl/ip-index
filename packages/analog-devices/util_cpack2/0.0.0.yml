@@ -1,8 +1,8 @@
 name: util_cpack2
 namespace: analog-devices
 version: 0.0.0
-description: Packs multiple parallel data channels into a serialized output stream
-  with configurable channel count and sample width.
+description: Multiplexes and packs multi-channel sample data into a serialized output
+  stream with configurable channel count and s...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -15,8 +15,8 @@ routertl_compat:
   library: work
   files:
   - library/common/ad_perfect_shuffle.v
-  - library/util_pack/util_pack_common/pack_interconnect.v
   - library/util_pack/util_pack_common/pack_ctrl.v
+  - library/util_pack/util_pack_common/pack_interconnect.v
   - library/util_pack/util_pack_common/pack_network.v
   - library/util_pack/util_pack_common/pack_shell.v
   - library/util_pack/util_cpack2/util_cpack2_impl.v

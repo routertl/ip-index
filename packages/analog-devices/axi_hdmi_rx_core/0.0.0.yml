@@ -1,8 +1,8 @@
 name: axi_hdmi_rx_core
 namespace: analog-devices
 version: 0.0.0
-description: Captures and processes HDMI video data, performing color space conversion
-  and synchronization, then outputs formatted...
+description: Receives HDMI video data and outputs formatted pixel streams with synchronization
+  detection and color space conversio...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,11 +14,11 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/axi_hdmi_rx/axi_hdmi_rx_es.v
   - library/common/ad_csc.v
   - library/common/ad_csc_CrYCb2RGB.v
-  - library/axi_hdmi_rx/axi_hdmi_rx_tpm.v
   - library/common/ad_ss_422to444.v
+  - library/axi_hdmi_rx/axi_hdmi_rx_es.v
+  - library/axi_hdmi_rx/axi_hdmi_rx_tpm.v
   - library/axi_hdmi_rx/axi_hdmi_rx_core.v
 tags:
 - amba

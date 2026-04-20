@@ -13,10 +13,10 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - library/common/ad_rst.v
   - library/util_cdc/sync_bits.v
   - library/util_cdc/sync_data.v
   - library/util_cdc/sync_event.v
-  - library/common/ad_rst.v
   - library/axi_pulse_gen/axi_pulse_gen_regmap.v
   - library/common/up_axi.v
   - library/common/util_pulse_gen.v

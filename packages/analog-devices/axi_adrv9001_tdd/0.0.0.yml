@@ -1,8 +1,8 @@
 name: axi_adrv9001_tdd
 namespace: analog-devices
 version: 0.0.0
-description: AXI-based time-division duplex controller for ADRV9001 RF transceiver
-  with VCO/RF enable and data flow management.
+description: TDD (Time Division Duplex) control module for ADRV9001 RF transceiver
+  managing RX/TX switching and VCO/RF enables.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -16,8 +16,8 @@ routertl_compat:
   files:
   - library/common/ad_addsub.v
   - library/common/ad_tdd_control.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_tdd_cntrl.v
   - library/axi_adrv9001/axi_adrv9001_tdd.v
 tags:

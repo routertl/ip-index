@@ -1,8 +1,8 @@
 name: axi_adaq8092_if
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces ADAQ8092 dual-channel ADC with FPGA, supporting LVDS/CMOS
-  inputs and SDR/DDR modes with configurable delay...
+description: Interfaces with ADAQ8092 ADC, supporting both LVDS and CMOS inputs with
+  configurable SDR/DDR modes and programmable I...
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,8 +14,8 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/xilinx/common/ad_data_in.v
   - library/xilinx/common/ad_data_clk.v
+  - library/xilinx/common/ad_data_in.v
   - library/axi_adaq8092/axi_adaq8092_if.v
 tags:
 - adaq8092

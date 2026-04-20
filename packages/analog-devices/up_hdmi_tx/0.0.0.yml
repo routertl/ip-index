@@ -13,10 +13,10 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_clock_mon.v
-  - library/common/up_xfer_status.v
-  - library/common/up_xfer_cntrl.v
   - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_hdmi_tx.v
 tags:
 - hdmi

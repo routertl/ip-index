@@ -15,9 +15,9 @@ routertl_compat:
   files:
   - library/axi_dmac/inc_id.vh
   - library/common/ad_mem_asym.v
-  - library/util_cdc/sync_bits.v
   - library/axi_dmac/axi_dmac_resize_dest.v
   - library/axi_dmac/axi_dmac_resize_src.v
+  - library/util_cdc/sync_bits.v
   - library/axi_dmac/axi_dmac_burst_memory.v
 tags:
 - amba

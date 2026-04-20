@@ -1,8 +1,8 @@
 name: axi_ad9963_tx_channel
 namespace: analog-devices
 version: 0.0.0
-description: Transmit channel for AD9963 DAC with DDS, digital filtering, and AXI
-  register control.
+description: Transmit channel for AD9963 DAC with DDS synthesis, DMA data path, and
+  memory-mapped control interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,16 +14,16 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_xfer_cntrl.v
-  - library/common/up_dac_channel.v
   - library/xilinx/common/ad_mul.v
-  - library/common/ad_iqcor.v
+  - library/common/ad_dds_sine.v
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
-  - library/common/ad_dds_sine.v
   - library/common/ad_dds_1.v
   - library/common/ad_dds_2.v
   - library/common/ad_dds.v
+  - library/common/ad_iqcor.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_dac_channel.v
   - library/axi_ad9963/axi_ad9963_tx_channel.v
 tags:
 - ad9963

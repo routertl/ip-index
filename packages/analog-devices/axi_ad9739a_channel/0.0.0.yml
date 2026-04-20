@@ -1,8 +1,8 @@
 name: axi_ad9739a_channel
 namespace: analog-devices
 version: 0.0.0
-description: Generates and outputs 16-channel 16-bit DAC data with DDS signal generation
-  and DMA input support.
+description: Configurable DAC channel processor that generates or routes 16-bit output
+  samples with optional DDS signal generation.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,15 +14,15 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/common/up_xfer_cntrl.v
-  - library/common/up_dac_channel.v
   - library/xilinx/common/ad_mul.v
+  - library/common/ad_dds_sine.v
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
-  - library/common/ad_dds_sine.v
   - library/common/ad_dds_1.v
   - library/common/ad_dds_2.v
   - library/common/ad_dds.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_dac_channel.v
   - library/axi_ad9739a/axi_ad9739a_channel.v
 tags:
 - ad9739a

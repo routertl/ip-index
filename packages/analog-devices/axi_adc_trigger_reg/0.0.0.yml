@@ -1,8 +1,7 @@
 name: axi_adc_trigger_reg
 namespace: analog-devices
 version: 0.0.0
-description: Configures ADC trigger conditions and parameters through an AXI register
-  interface, outputting trigger control signal...
+description: Configures ADC trigger parameters and conditions via AXI register interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

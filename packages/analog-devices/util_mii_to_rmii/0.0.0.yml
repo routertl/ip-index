@@ -1,8 +1,8 @@
 name: util_mii_to_rmii
 namespace: analog-devices
 version: 0.0.0
-description: Converts MII (4-bit parallel) Ethernet interface to RMII (2-bit parallel)
-  protocol for PHY communication.
+description: Converts MII (4-bit parallel) Ethernet interface signals to RMII (2-bit
+  parallel) format for PHY communication.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

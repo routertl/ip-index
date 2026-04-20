@@ -15,8 +15,8 @@ routertl_compat:
   library: work
   files:
   - library/common/ad_datafmt.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
   - library/axi_ad485x/axi_ad485x_20b_channel.v
 tags:

@@ -15,14 +15,14 @@ routertl_compat:
   files:
   - library/util_cdc/sync_bits.v
   - library/util_cdc/sync_data.v
+  - library/common/up_xfer_cntrl.v
+  - library/axi_ad5766/up_ad5766_sequencer.v
   - library/common/up_axi.v
-  - library/common/util_pulse_gen.v
+  - library/common/ad_rst.v
   - library/common/up_clock_mon.v
   - library/common/up_xfer_status.v
-  - library/common/up_xfer_cntrl.v
-  - library/common/ad_rst.v
   - library/common/up_dac_common.v
-  - library/axi_ad5766/up_ad5766_sequencer.v
+  - library/common/util_pulse_gen.v
   - library/axi_ad5766/axi_ad5766.v
 tags:
 - ad5766

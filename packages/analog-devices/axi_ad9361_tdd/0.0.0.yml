@@ -16,8 +16,8 @@ routertl_compat:
   files:
   - library/common/ad_addsub.v
   - library/common/ad_tdd_control.v
-  - library/common/up_xfer_status.v
   - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
   - library/common/up_tdd_cntrl.v
   - library/axi_ad9361/axi_ad9361_tdd.v
 tags:

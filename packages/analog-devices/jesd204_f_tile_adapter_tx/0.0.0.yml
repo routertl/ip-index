@@ -13,8 +13,8 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/util_cdc/sync_bits.v
   - library/intel/jesd204c/jesd204_f_tile_adapter_tx/gearbox_66b64b.v
+  - library/util_cdc/sync_bits.v
   - library/intel/jesd204c/jesd204_f_tile_adapter_tx/jesd204_f_tile_adapter_tx.v
 tags:
 - adapter

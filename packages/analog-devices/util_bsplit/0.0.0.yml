@@ -1,8 +1,8 @@
 name: util_bsplit
 namespace: analog-devices
 version: 0.0.0
-description: Splits a multiplexed input bus into 8 separate channel outputs based
-  on configurable data width.
+description: Demultiplexes a concatenated multi-channel data bus into eight separate
+  channel outputs.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

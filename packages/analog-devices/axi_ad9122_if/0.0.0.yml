@@ -1,8 +1,8 @@
 name: axi_ad9122_if
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces internal DAC data and control signals to AD9122 dual-channel
-  DAC with SERDES/DDR output serialization and ...
+description: Interfaces AD9122 DAC with differential clock/data serialization and
+  multi-channel frame synchronization.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -14,9 +14,9 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - library/xilinx/common/ad_serdes_out.v
   - library/xilinx/common/ad_mmcm_drp.v
   - library/xilinx/common/ad_serdes_clk.v
+  - library/xilinx/common/ad_serdes_out.v
   - library/axi_ad9122/axi_ad9122_if.v
 tags:
 - ad9122
