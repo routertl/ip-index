@@ -1,8 +1,8 @@
 name: clk_div
 namespace: pulp-platform
 version: master
-description: Divides an input clock by a configurable ratio when enabled, with optional
-  testmode bypass and asynchronous reset.
+description: Divides an input clock by a configurable ratio to produce a slower output
+  clock with optional test mode bypass.
 license: Apache-2.0
 license_class: permissive
 source:

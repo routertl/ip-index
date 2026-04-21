@@ -2,7 +2,7 @@ name: ecc_decode
 namespace: pulp-platform
 version: master
 description: Decodes ECC-encoded data, corrects single-bit errors, and detects double-bit
-  errors in transmitted codewords.
+  errors with syndrome output.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,8 +1,7 @@
 name: axi_ada4355_regmap
 namespace: analog-devices
 version: 0.0.0
-description: AXI register map interface for the ADA4355 ADC, enabling processor read/write
-  access to device configuration and status.
+description: AXI register map interface for ADA4355 ADC configuration and status monitoring.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

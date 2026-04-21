@@ -1,8 +1,8 @@
 name: credit_counter
 namespace: pulp-platform
 version: master
-description: Manages a credit counter that tracks available credits, supporting increment,
-  decrement, and reinitialization operati...
+description: Tracks and manages a pool of credits, allowing increments, decrements,
+  and reinitialization.
 license: Apache-2.0
 license_class: permissive
 source:

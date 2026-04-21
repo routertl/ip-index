@@ -1,8 +1,8 @@
 name: taxi_eth_phy_10g_7_gt
 namespace: fpganinja
 version: master
-description: 10G Ethernet PHY transceiver interface for Xilinx Virtex-7 GTH with APB
-  control and configurable TX/RX equalization.
+description: 10 Gigabit Ethernet PHY transceiver interface with GTH serdes, QPLL clock
+  generation, and APB control.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

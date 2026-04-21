@@ -1,8 +1,8 @@
 name: taxi_axi_axil_adapter
 namespace: fpganinja
 version: master
-description: Adapts AXI4 transactions to AXI4-Lite protocol with optional burst repacking
-  for wider buses.
+description: Adapts AXI4 slave transactions to AXI4-Lite master interface with optional
+  burst repacking.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

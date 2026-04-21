@@ -1,8 +1,8 @@
 name: clock_divider
 namespace: pulp-platform
 version: master
-description: Divides an input clock by a programmable factor and outputs the divided
-  clock with gating and test mode support.
+description: Divides input clock frequency by a programmable factor with gating and
+  test mode control.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -3,7 +3,7 @@ namespace: open-logic
 version: 4.4.1
 description: This is a reset generator. It generates a pulse of the specified duration
   after FPGA configuration. The reset output is High-Active according to the Open-Logic
-  definitions. The reset generator also...
+  definitions.
 license: ''
 license_class: unknown
 source:

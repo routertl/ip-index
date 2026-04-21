@@ -1,8 +1,8 @@
 name: taxi_apb_interconnect
 namespace: fpganinja
 version: master
-description: Interconnects multiple APB slave interfaces to multiple APB master interfaces
-  with configurable address decoding and access control.
+description: Interconnects multiple APB slave ports to multiple APB master ports with
+  configurable address mapping and access control.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

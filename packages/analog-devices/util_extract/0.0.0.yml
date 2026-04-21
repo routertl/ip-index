@@ -1,8 +1,8 @@
 name: util_extract
 namespace: analog-devices
 version: 0.0.0
-description: Extracts and selectively outputs multi-channel data based on trigger
-  conditions with valid handshaking.
+description: Extracts and conditionally routes multi-channel packed data based on
+  trigger conditions.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

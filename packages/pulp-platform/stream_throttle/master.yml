@@ -1,8 +1,8 @@
 name: stream_throttle
 namespace: pulp-platform
 version: master
-description: Throttles downstream requests based on available credits to limit outstanding
-  transactions.
+description: Limits outstanding requests by gating request flow based on available
+  credit count using ready/valid handshakes.
 license: Apache-2.0
 license_class: permissive
 source:

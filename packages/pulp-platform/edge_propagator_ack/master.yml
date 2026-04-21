@@ -1,7 +1,8 @@
 name: edge_propagator_ack
 namespace: pulp-platform
 version: master
-description: Propagates pulse edges across clock domains with handshake acknowledgment.
+description: Propagates an edge pulse from transmit to receive clock domain and returns
+  acknowledgment.
 license: Apache-2.0
 license_class: permissive
 source:

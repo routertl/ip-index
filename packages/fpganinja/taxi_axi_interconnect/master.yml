@@ -1,8 +1,8 @@
 name: taxi_axi_interconnect
 namespace: fpganinja
 version: master
-description: Interconnects multiple AXI4 slave interfaces to multiple master interfaces
-  with configurable address decoding and routing.
+description: Interconnect that routes AXI transactions from multiple slave interfaces
+  to multiple master interfaces with configurable address mapping and access control.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

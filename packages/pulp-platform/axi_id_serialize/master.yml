@@ -2,7 +2,7 @@ name: axi_id_serialize
 namespace: pulp-platform
 version: master
 description: Serializes AXI transactions by remapping slave port IDs to master port
-  IDs with configurable limits on concurrent transactions and unique IDs.
+  IDs while enforcing per-ID transaction limits.
 license: Apache-2.0
 license_class: permissive
 source:

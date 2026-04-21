@@ -1,8 +1,8 @@
 name: sysid_rom
 namespace: analog-devices
 version: 0.0.0
-description: Synchronous read-only memory storing system identification data, addressed
-  by ROM_ADDR_BITS and outputting ROM_WIDTH-...
+description: Provides read-only memory access to system identification data via synchronous
+  address-based lookups.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

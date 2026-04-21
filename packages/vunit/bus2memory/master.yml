@@ -1,7 +1,7 @@
 name: bus2memory
 namespace: vunit
 version: master
-description: Interfaces bus to memory.
+description: Interfaces a bus master to a memory module for read/write transactions.
 license: ''
 license_class: unknown
 source:

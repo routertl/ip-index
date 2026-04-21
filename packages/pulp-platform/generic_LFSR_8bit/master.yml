@@ -1,8 +1,8 @@
 name: generic_LFSR_8bit
 namespace: pulp-platform
 version: master
-description: 8-bit LFSR that generates pseudo-random sequences output as one-hot and
-  binary encoded values.
+description: 8-bit LFSR generating pseudo-random numbers with configurable width in
+  one-hot and binary encodings.
 license: Apache-2.0
 license_class: permissive
 source:

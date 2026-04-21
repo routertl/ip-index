@@ -1,8 +1,8 @@
 name: taxi_stats_counter
 namespace: fpganinja
 version: master
-description: Accumulates statistics from a streaming input and exposes counters via
-  AXI Lite registers.
+description: Accumulates statistics from a streaming input and provides AXI Lite register
+  access to read/write counter values.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

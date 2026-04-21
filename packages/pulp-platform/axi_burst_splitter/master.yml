@@ -1,8 +1,8 @@
 name: axi_burst_splitter
 namespace: pulp-platform
 version: master
-description: Splits AXI bursts into smaller transactions while managing read/write
-  outstanding transaction limits.
+description: Splits AXI burst transactions into smaller bursts while managing read/write
+  transaction limits.
 license: Apache-2.0
 license_class: permissive
 source:

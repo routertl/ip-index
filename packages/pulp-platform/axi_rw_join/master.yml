@@ -1,8 +1,8 @@
 name: axi_rw_join
 namespace: pulp-platform
 version: master
-description: Combines separate AXI read and write slave ports into a single master
-  port.
+description: Multiplexes separate AXI read and write slave ports onto a single AXI
+  master port.
 license: Apache-2.0
 license_class: permissive
 source:

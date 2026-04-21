@@ -1,8 +1,8 @@
 name: ad_dds_1
 namespace: analog-devices
 version: 0.0.0
-description: Generates scaled sinusoidal output from phase input using direct digital
-  synthesis.
+description: Generates a single DDS output sample by computing the scaled sine value
+  at a given phase angle.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: axi_ad9434_pnmon
 namespace: analog-devices
 version: 0.0.0
-description: Monitors PN sequences in ADC data to detect errors and loss-of-synchronization
-  conditions.
+description: Monitors ADC data against selectable PN sequences, detecting errors and
+  out-of-sync conditions.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: taxi_lfsr_prbs_check
 namespace: fpganinja
 version: master
-description: Verifies incoming data against a configurable Linear Feedback Shift Register
-  (LFSR) PRBS pattern and outputs checked data.
+description: Verifies incoming data against a pseudo-random bit sequence (PRBS) generated
+  by an LFSR and outputs the syndrome/error bits.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

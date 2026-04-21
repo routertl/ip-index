@@ -1,8 +1,8 @@
 name: axi_stream_monitor
 namespace: vunit
 version: master
-description: Monitors AXI4-Stream transactions and captures data, validity, and handshake
-  signals for verification.
+description: Monitors AXI4-Stream transactions by observing valid, ready, and data
+  signals with optional last, keep, ID, destination, and user fields.
 license: ''
 license_class: unknown
 source:

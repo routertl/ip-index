@@ -1,8 +1,8 @@
 name: hash_block
 namespace: pulp-platform
 version: master
-description: Counting Bloom filter that increments/decrements counters for input data
-  while providing lookup, usage, and status signals.
+description: Counting Bloom filter that performs parallel hash-based lookups, increments,
+  and decrements on fixed-width counter buckets.
 license: Apache-2.0
 license_class: permissive
 source:

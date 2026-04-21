@@ -1,8 +1,8 @@
 name: jesd204_rx_frame_align
 namespace: analog-devices
 version: 0.0.0
-description: Aligns JESD204 receiver data to frame boundaries and optionally replaces
-  control characters.
+description: Aligns JESD204 receive data frames and optionally replaces K28.5 characters
+  while tracking alignment errors.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

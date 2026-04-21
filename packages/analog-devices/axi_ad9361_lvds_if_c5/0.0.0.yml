@@ -1,8 +1,8 @@
 name: axi_ad9361_lvds_if_c5
 namespace: analog-devices
 version: 0.0.0
-description: Converts AD9361 LVDS RF interface signals between differential pairs
-  and single-ended digital data streams for receiv...
+description: Interfaces AD9361 RF transceiver LVDS signals with differential-to-single
+  conversion and data deserialization/serialization for receive and transmit paths.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,7 +1,7 @@
 name: taxi_gmii_phy_if
 namespace: fpganinja
 version: master
-description: Bridges a MAC and PHY with GMII interface adaptation, clock domain crossing,
+description: Bridges GMII interface between MAC and PHY with clock domain crossing
   and link speed reporting.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft

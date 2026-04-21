@@ -1,8 +1,8 @@
 name: taxi_apb_adapter
 namespace: fpganinja
 version: master
-description: Adapts between APB slave and master interfaces, bridging APB protocol
-  transactions.
+description: Adapts an APB slave interface to an APB master interface, enabling protocol
+  translation between APB endpoints.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

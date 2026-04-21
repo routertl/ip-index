@@ -1,8 +1,8 @@
 name: rstgen
 namespace: pulp-platform
 version: master
-description: Generates synchronized reset and initialization signals from an asynchronous
-  input reset.
+description: Generates synchronized reset signals with optional test mode override
+  and initialization output.
 license: Apache-2.0
 license_class: permissive
 source:

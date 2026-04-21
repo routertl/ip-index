@@ -2,7 +2,7 @@ name: axi_err_slv
 namespace: pulp-platform
 version: master
 description: AXI error slave that responds to all transactions with configurable error
-  responses and data.
+  codes and data.
 license: Apache-2.0
 license_class: permissive
 source:

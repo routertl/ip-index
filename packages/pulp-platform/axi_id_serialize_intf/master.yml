@@ -1,8 +1,8 @@
 name: axi_id_serialize_intf
 namespace: pulp-platform
 version: master
-description: Remaps AXI slave port transaction IDs to master port IDs while enforcing
-  per-ID transaction limits.
+description: Remaps AXI transaction IDs from a wide slave port to a narrower master
+  port with configurable ID mapping and transaction tracking.
 license: Apache-2.0
 license_class: permissive
 source:

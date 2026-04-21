@@ -1,8 +1,8 @@
 name: stream_to_mem
 namespace: pulp-platform
 version: master
-description: Buffers and bridges streaming memory requests/responses with configurable
-  response latency tolerance.
+description: Bridges a memory request/response stream interface with buffering to
+  decouple downstream consumers from memory latency.
 license: Apache-2.0
 license_class: permissive
 source:

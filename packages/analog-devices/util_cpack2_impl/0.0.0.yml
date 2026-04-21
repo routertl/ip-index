@@ -1,8 +1,8 @@
 name: util_cpack2_impl
 namespace: analog-devices
 version: 0.0.0
-description: Packs multi-channel sample data from parallel inputs into a serialized
-  FIFO stream with synchronization control.
+description: Packs multi-channel sample data from parallel inputs into a single serialized
+  data stream with overflow management.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

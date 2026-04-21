@@ -1,8 +1,7 @@
 name: axi_join_intf
 namespace: pulp-platform
 version: master
-description: Combines or passes through AXI bus signals from a slave input to a master
-  output interface.
+description: Joins/passes through an AXI slave interface to an AXI master interface.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,0 +1,35 @@
+name: axi_ad9361_alt_lvds_rx
+namespace: analog-devices
+version: HEAD
+description: Receive engine
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/axi_ltc235x/axi_ltc235x_cmos.v
+  - library/axi_ad9361/intel/axi_ad9361_alt_lvds_rx.v
+tags:
+- ad9361
+- alt
+- amba
+- axi
+- bus
+- differential
+- low
+- lvds
+- receive
+- receiver
+- rx
+- signaling
+- voltage
+role: top
+components:
+- axi_ltc235x_cmos

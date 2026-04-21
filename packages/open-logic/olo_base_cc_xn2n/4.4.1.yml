@@ -3,7 +3,7 @@ namespace: open-logic
 version: 4.4.1
 description: This entity implements a clock crossing between two synchronous clocks
   where the output clock period is an integer multiple of the input clock period (input
-  clock frequency is an integer multiple o...
+  clock frequency is an integer multiple of the output clock frequency).
 license: ''
 license_class: unknown
 source:

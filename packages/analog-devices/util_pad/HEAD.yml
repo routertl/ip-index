@@ -1,0 +1,22 @@
+name: util_pad
+namespace: analog-devices
+version: HEAD
+description: Pads or truncates multi-sample data to a different bit width with optional
+  sign extension.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/util_pad/util_pad.v
+tags:
+- pad
+- util
+role: top

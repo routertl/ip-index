@@ -1,7 +1,7 @@
 name: taxi_mmcm_frac
 namespace: fpganinja
 version: master
-description: Generates fractional-division clock outputs with optional phase offset
+description: Generates fractional-divider clock outputs with optional phase offset
   using cascaded MMCMs.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft

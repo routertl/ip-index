@@ -1,0 +1,25 @@
+name: avl_dacfifo_rd
+namespace: analog-devices
+version: HEAD
+description: FIFO buffer with configurable parameters
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_b2g.v
+  - library/common/ad_g2b.v
+  - library/common/ad_mem.v
+  - library/intel/avl_dacfifo/avl_dacfifo_rd.v
+tags:
+- avl
+- dacfifo
+- rd
+role: component

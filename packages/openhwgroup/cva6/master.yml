@@ -3,7 +3,7 @@ namespace: openhwgroup
 version: master
 description: 'CVA6 is a 6-stage, single-issue, in-order CPU which implements the 64-bit
   RISC-V instruction set. It fully implements I, M, A and C extensions as specified
-  in Volume I: User-Level ISA V 2.3 as well...'
+  in Volume I: User-Level ISA V 2.3 as well as the draft privilege extension 1.10.'
 license: Apache-2.0
 license_class: permissive
 source:
@@ -15,16 +15,16 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
+  - core/include/ariane_pkg.sv
   - vendor/pulp-platform/common_cells/src/cf_math_pkg.sv
   - core/pmp/include/riscv.sv
-  - core/include/ariane_pkg.sv
+  - vendor/pulp-platform/common_cells/src/delta_counter.sv
+  - vendor/pulp-platform/common_cells/src/counter.sv
   - vendor/pulp-platform/fpga-support/rtl/AsyncDpRam.sv
   - vendor/pulp-platform/fpga-support/rtl/SyncDpRam_ind_r_w.sv
   - core/cva6_fifo_v3.sv
   - vendor/pulp-platform/common_cells/src/spill_register_flushable.sv
   - vendor/pulp-platform/common_cells/src/spill_register.sv
-  - vendor/pulp-platform/common_cells/src/delta_counter.sv
-  - vendor/pulp-platform/common_cells/src/counter.sv
   - core/acc_dispatcher.sv
   - core/include/aes_pkg.sv
   - core/aes.sv
@@ -35,26 +35,15 @@ routertl_compat:
   - core/cache_subsystem/amo_alu.sv
   - core/amo_buffer.sv
   - core/include/cvxif_types.svh
-  - core/cvxif_example/include/cvxif_instr_pkg.sv
-  - core/cvxif_example/instr_decoder.sv
-  - core/cvxif_example/copro_alu.sv
-  - core/cvxif_example/compressed_instr_decoder.sv
-  - core/cvxif_example/cvxif_example_coprocessor.sv
   - core/include/rvfi_types.svh
-  - vendor/pulp-platform/common_cells/src/unread.sv
-  - core/frontend/instr_queue.sv
-  - core/frontend/ras.sv
-  - core/frontend/instr_scan.sv
-  - core/frontend/bht2lvl.sv
-  - vendor/pulp-platform/fpga-support/rtl/SyncDpRam.sv
-  - core/frontend/btb.sv
-  - core/instr_realign.sv
-  - vendor/pulp-platform/fpga-support/rtl/SyncThreePortRam.sv
-  - vendor/pulp-platform/fpga-support/rtl/AsyncThreePortRam.sv
-  - core/frontend/bht.sv
-  - core/frontend/frontend.sv
   - core/commit_stage.sv
+  - core/controller.sv
+  - core/include/triggers_pkg.sv
+  - core/trigger_module.sv
+  - core/csr_regfile.sv
   - core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv
+  - core/cache_subsystem/cva6_hpdcache_if_adapter.sv
+  - core/cache_subsystem/cva6_hpdcache_wrapper.sv
   - core/include/wt_cache_pkg.sv
   - vendor/pulp-platform/common_cells/src/lfsr.sv
   - vendor/pulp-platform/fpga-support/rtl/SyncSpRamBeNx64.sv
@@ -64,136 +53,147 @@ routertl_compat:
   - common/local/util/tc_sram_wrapper_cache_techno.sv
   - common/local/util/sram_cache.sv
   - core/cache_subsystem/cva6_icache.sv
-  - core/cache_subsystem/cva6_hpdcache_if_adapter.sv
-  - core/cache_subsystem/cva6_hpdcache_wrapper.sv
   - core/cache_subsystem/cva6_hpdcache_subsystem.sv
+  - core/cva6_rvfi_probes.sv
+  - core/branch_unit.sv
+  - core/csr_buffer.sv
+  - core/cvxif_fu.sv
+  - core/fpu_wrap.sv
+  - core/pmp/src/pmp_entry.sv
+  - core/pmp/src/pmp.sv
+  - core/cva6_mmu/cva6_ptw.sv
+  - core/cva6_mmu/cva6_shared_tlb.sv
+  - core/cva6_mmu/cva6_tlb.sv
+  - core/cva6_mmu/cva6_mmu.sv
+  - core/load_unit.sv
+  - core/lsu_bypass.sv
+  - core/pmp/src/pmp_data_if.sv
+  - vendor/pulp-platform/common_cells/src/shift_reg.sv
+  - core/store_buffer.sv
+  - core/store_unit.sv
+  - core/load_store_unit.sv
+  - core/multiplier.sv
+  - core/serdiv.sv
+  - core/mult.sv
+  - core/ex_stage.sv
+  - vendor/pulp-platform/common_cells/src/fifo_v3.sv
+  - vendor/pulp-platform/fpga-support/rtl/AsyncThreePortRam.sv
+  - vendor/pulp-platform/fpga-support/rtl/SyncThreePortRam.sv
+  - core/frontend/bht.sv
+  - core/frontend/bht2lvl.sv
+  - vendor/pulp-platform/fpga-support/rtl/SyncDpRam.sv
+  - vendor/pulp-platform/common_cells/src/unread.sv
+  - core/frontend/btb.sv
+  - core/frontend/instr_queue.sv
+  - core/instr_realign.sv
+  - core/frontend/instr_scan.sv
+  - core/frontend/ras.sv
+  - core/frontend/frontend.sv
+  - core/compressed_decoder.sv
+  - core/cvxif_compressed_if_driver.sv
   - core/cva6_accel_first_pass_decoder_stub.sv
   - core/decoder.sv
-  - core/compressed_decoder.sv
-  - core/zcmt_decoder.sv
-  - core/cvxif_compressed_if_driver.sv
   - core/macro_decoder.sv
+  - core/zcmt_decoder.sv
   - core/id_stage.sv
-  - core/cva6_rvfi_probes.sv
   - common/local/util/ex_trace_item.svh
   - common/local/util/instr_trace_item.svh
   - common/local/util/instr_tracer.sv
-  - core/branch_unit.sv
-  - core/serdiv.sv
-  - core/multiplier.sv
-  - core/mult.sv
-  - core/csr_buffer.sv
-  - core/cvxif_fu.sv
-  - vendor/pulp-platform/common_cells/src/shift_reg.sv
-  - core/pmp/src/pmp_entry.sv
-  - core/pmp/src/pmp.sv
-  - core/pmp/src/pmp_data_if.sv
-  - core/cva6_mmu/cva6_tlb.sv
-  - core/cva6_mmu/cva6_ptw.sv
-  - core/cva6_mmu/cva6_shared_tlb.sv
-  - core/cva6_mmu/cva6_mmu.sv
-  - core/store_buffer.sv
-  - core/store_unit.sv
-  - core/lsu_bypass.sv
-  - core/load_unit.sv
-  - core/load_store_unit.sv
-  - core/fpu_wrap.sv
-  - core/ex_stage.sv
+  - core/ariane_regfile_ff.sv
+  - core/ariane_regfile_fpga.sv
+  - core/cvxif_issue_register_commit_if_driver.sv
+  - core/raw_checker.sv
+  - core/issue_read_operands.sv
+  - core/scoreboard.sv
+  - core/issue_stage.sv
   - core/perf_counters.sv
   - vendor/pulp-platform/common_cells/src/rr_arb_tree.sv
-  - core/include/triggers_pkg.sv
-  - core/trigger_module.sv
-  - core/csr_regfile.sv
-  - vendor/pulp-platform/common_cells/src/fifo_v3.sv
-  - core/scoreboard.sv
-  - core/raw_checker.sv
-  - core/cvxif_issue_register_commit_if_driver.sv
-  - core/ariane_regfile_fpga.sv
-  - core/ariane_regfile_ff.sv
-  - core/issue_read_operands.sv
-  - core/issue_stage.sv
   - core/include/std_cache_pkg.sv
   - core/axi_shim.sv
   - core/cache_subsystem/cva6_icache_axi_wrapper.sv
-  - vendor/pulp-platform/common_cells/src/stream_mux.sv
+  - core/cache_subsystem/cache_ctrl.sv
+  - core/cache_subsystem/axi_adapter.sv
+  - vendor/pulp-platform/common_cells/src/lfsr_8bit.sv
+  - core/cache_subsystem/miss_handler.sv
+  - core/cache_subsystem/tag_cmp.sv
+  - core/cache_subsystem/std_nbdcache.sv
   - vendor/pulp-platform/common_cells/src/stream_arbiter_flushable.sv
   - vendor/pulp-platform/common_cells/src/stream_arbiter.sv
-  - core/cache_subsystem/tag_cmp.sv
-  - vendor/pulp-platform/common_cells/src/lfsr_8bit.sv
-  - core/cache_subsystem/axi_adapter.sv
-  - core/cache_subsystem/miss_handler.sv
-  - core/cache_subsystem/cache_ctrl.sv
-  - core/cache_subsystem/std_nbdcache.sv
   - vendor/pulp-platform/common_cells/src/stream_demux.sv
+  - vendor/pulp-platform/common_cells/src/stream_mux.sv
   - core/cache_subsystem/std_cache_subsystem.sv
+  - core/cache_subsystem/wt_axi_adapter.sv
   - core/cache_subsystem/wt_dcache_ctrl.sv
   - core/cache_subsystem/wt_dcache_mem.sv
   - vendor/pulp-platform/common_cells/src/exp_backoff.sv
   - core/cache_subsystem/wt_dcache_missunit.sv
   - core/cache_subsystem/wt_dcache_wbuffer.sv
   - core/cache_subsystem/wt_dcache.sv
-  - core/cache_subsystem/wt_axi_adapter.sv
-  - vendor/pulp-platform/common_cells/src/deprecated/rrarbiter.sv
   - vendor/pulp-platform/common_cells/src/deprecated/fifo_v2.sv
+  - vendor/pulp-platform/common_cells/src/deprecated/rrarbiter.sv
   - core/cache_subsystem/wt_l15_adapter.sv
   - core/cache_subsystem/wt_cache_subsystem.sv
-  - core/controller.sv
   - core/cva6.sv
+  - core/cvxif_example/include/cvxif_instr_pkg.sv
+  - core/cvxif_example/compressed_instr_decoder.sv
+  - core/cvxif_example/copro_alu.sv
+  - core/cvxif_example/instr_decoder.sv
+  - core/cvxif_example/cvxif_example_coprocessor.sv
   - corev_apu/src/ariane.sv
   - corev_apu/openpiton/ariane_verilog_wrap.sv
   - corev_apu/instr_tracing/ITI/include/iti_types.svh
-  - corev_apu/instr_tracing/ITI/cva6_iti/itype_detector.sv
-  - corev_apu/instr_tracing/ITI/cva6_iti/block_retirement.sv
-  - corev_apu/instr_tracing/ITI/cva6_iti/single_retirement.sv
-  - corev_apu/instr_tracing/ITI/cva6_iti/iti.sv
   - vendor/pulp-platform/axi/src/axi_pkg.sv
   - corev_apu/tb/axi_intf.sv
+  - corev_apu/tb/common/mock_uart.sv
+  - corev_apu/tb/ariane_peripherals.sv
   - vendor/pulp-platform/axi_riscv_atomics/src/axi_riscv_amos_alu.sv
   - vendor/pulp-platform/axi_riscv_atomics/src/axi_riscv_amos.sv
   - vendor/pulp-platform/axi_riscv_atomics/src/axi_res_tbl.sv
   - vendor/pulp-platform/axi_riscv_atomics/src/axi_riscv_lrsc.sv
   - vendor/pulp-platform/axi_riscv_atomics/src/axi_riscv_atomics.sv
   - vendor/pulp-platform/axi_riscv_atomics/src/axi_riscv_atomics_wrap.sv
-  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_resync_counter.sv
-  - vendor/pulp-platform/tech_cells_generic/src/fpga/tc_clk_xilinx.sv
-  - vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.sv
-  - vendor/pulp-platform/common_cells/src/sync.sv
-  - vendor/pulp-platform/common_cells/src/sync_wedge.sv
-  - vendor/pulp-platform/common_cells/src/edge_detect.sv
-  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_reg.sv
-  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_filter.sv
-  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_priority.sv
-  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_packet_emitter.sv
-  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_branch_map.sv
-  - corev_apu/instr_tracing/rv_tracer-main/rtl/rv_tracer.sv
-  - corev_apu/instr_tracing/DPTI/dpti_ctrl.vhd
+  - vendor/pulp-platform/common_cells/src/addr_decode.sv
   - vendor/pulp-platform/axi/src/axi_demux.sv
   - vendor/pulp-platform/common_cells/src/stream_register.sv
   - vendor/pulp-platform/axi/src/axi_atop_filter.sv
   - vendor/pulp-platform/axi/src/axi_err_slv.sv
   - vendor/pulp-platform/axi/src/axi_id_prepend.sv
   - vendor/pulp-platform/axi/src/axi_mux.sv
-  - vendor/pulp-platform/common_cells/src/addr_decode.sv
   - vendor/pulp-platform/axi/src/axi_xbar.sv
-  - corev_apu/instr_tracing/rv_encapsulator-main/src/rtl/encapsulator.sv
-  - corev_apu/fpga/src/fan_ctrl.sv
-  - core/cva6_rvfi.sv
   - corev_apu/clint/axi_lite_interface.sv
   - corev_apu/clint/clint.sv
-  - corev_apu/tb/common/mock_uart.sv
-  - corev_apu/tb/ariane_peripherals.sv
-  - corev_apu/instr_tracing/DPTI/slicer_DPTI.sv
+  - corev_apu/instr_tracing/ITI/cva6_iti/block_retirement.sv
+  - corev_apu/instr_tracing/ITI/cva6_iti/itype_detector.sv
+  - corev_apu/instr_tracing/ITI/cva6_iti/single_retirement.sv
+  - corev_apu/instr_tracing/ITI/cva6_iti/iti.sv
+  - core/cva6_rvfi.sv
+  - corev_apu/instr_tracing/DPTI/dpti_ctrl.vhd
+  - corev_apu/instr_tracing/rv_encapsulator-main/src/rtl/encapsulator.sv
+  - corev_apu/fpga/src/fan_ctrl.sv
   - vendor/pulp-platform/common_cells/src/rstgen_bypass.sv
   - vendor/pulp-platform/common_cells/src/rstgen.sv
+  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_branch_map.sv
+  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_filter.sv
+  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_packet_emitter.sv
+  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_priority.sv
+  - vendor/pulp-platform/tech_cells_generic/src/fpga/tc_clk_xilinx.sv
+  - vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.sv
+  - vendor/pulp-platform/common_cells/src/sync.sv
+  - vendor/pulp-platform/common_cells/src/sync_wedge.sv
+  - vendor/pulp-platform/common_cells/src/edge_detect.sv
+  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_reg.sv
+  - corev_apu/instr_tracing/rv_tracer-main/rtl/te_resync_counter.sv
+  - corev_apu/instr_tracing/rv_tracer-main/rtl/rv_tracer.sv
+  - corev_apu/instr_tracing/DPTI/slicer_DPTI.sv
   - corev_apu/fpga/src/ariane_xilinx.sv
   - corev_apu/fpga/src/axi_dw_adapter/axi_dw_adapter_rd.v
   - corev_apu/fpga/src/axi_dw_adapter/axi_dw_adapter_wr.v
   - corev_apu/fpga/src/axi_dw_adapter/axi_dw_adapter.v
   - corev_apu/bootrom/bootrom.sv
+  - corev_apu/altera/src/cva6_altera_peripherals.sv
   - vendor/pulp-platform/tech_cells_generic/src/deprecated/cluster_clk_cells.sv
   - corev_apu/altera/src/dmi_vjtag_tap.sv
   - corev_apu/altera/src/dmi_vjtag.sv
-  - corev_apu/altera/src/cva6_altera_peripherals.sv
   - corev_apu/altera/src/cva6_altera.sv
   - common/local/util/find_first_one.sv
   - vendor/pulp-platform/fpga-support/rtl/SyncSpRam.sv
@@ -202,8 +202,8 @@ routertl_compat:
   - vendor/pulp-platform/fpga-support/rtl/SyncSpRamBeNx32.sv
   - common/local/util/hpdcache_sram_wbyteenable_1rw.sv
   - pd/synth/hpdcache_sram_wbyteenable_1rw_00000007_00000040_00000080.sv
-  - corev_apu/tb/common/SimJTAG.sv
   - corev_apu/tb/common/SimDTM.sv
+  - corev_apu/tb/common/SimJTAG.sv
   - corev_apu/openpiton/riscv_peripherals.sv
   - pd/synth/tc_sram_wrapper_256_64_00000008_00000001_00000001_none_0.sv
 tags:

@@ -1,0 +1,25 @@
+name: hsci_phy_top
+namespace: analog-devices
+version: HEAD
+description: HSCI physical layer interface providing high-speed SPI communication
+  with differential signaling, PLL clock generatio...
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - projects/ad9084_ebz/common/hsci_phy_top.sv
+tags:
+- hsci
+- layer
+- phy
+- physical
+- top
+role: top

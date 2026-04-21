@@ -1,8 +1,8 @@
 name: taxi_lfsr_scramble
 namespace: fpganinja
 version: master
-description: Scrambles input data using a configurable LFSR with optional bit-reversal
-  and self-synchronization.
+description: Scrambles input data using a configurable LFSR-based pseudo-random sequence
+  generator with optional bit-reversal and self-synchronization.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

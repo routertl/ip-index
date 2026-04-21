@@ -1,8 +1,8 @@
 name: taxi_axi_dma_wr
 namespace: fpganinja
 version: master
-description: DMA write engine that transfers AXI stream data to memory via AXI4 master
-  interface with configurable burst length and optional unaligned transfer support.
+description: Transfers data from an AXI Stream input to system memory via an AXI4
+  write master interface using DMA descriptors.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

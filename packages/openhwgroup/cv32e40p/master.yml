@@ -3,7 +3,7 @@ namespace: openhwgroup
 version: master
 description: CV32E40P is a small and efficient, 32-bit, in-order RISC-V core with
   a 4-stage pipeline that implements the RV32IM\[F|Zfinx\]C instruction set architecture,
-  and the PULP custom extensions for achie...
+  and the PULP custom extensions for achieving higher code density, performance, a...
 license: Apache-2.0
 license_class: permissive
 source:
@@ -25,48 +25,48 @@ routertl_compat:
   - rtl/cv32e40p_compressed_decoder.sv
   - rtl/cv32e40p_controller.sv
   - rtl/include/cv32e40p_apu_core_pkg.sv
-  - rtl/cv32e40p_prefetch_controller.sv
-  - rtl/cv32e40p_fifo.sv
-  - rtl/cv32e40p_obi_interface.sv
-  - rtl/cv32e40p_prefetch_buffer.sv
-  - rtl/cv32e40p_if_stage.sv
   - rtl/cv32e40p_cs_registers.sv
-  - rtl/cv32e40p_sleep_unit.sv
   - rtl/cv32e40p_mult.sv
   - rtl/cv32e40p_ex_stage.sv
-  - rtl/cv32e40p_load_store_unit.sv
-  - rtl/cv32e40p_int_controller.sv
-  - rtl/cv32e40p_register_file_latch.sv
   - rtl/include/cv32e40p_fpu_pkg.sv
   - rtl/cv32e40p_decoder.sv
   - rtl/cv32e40p_hwloop_regs.sv
+  - rtl/cv32e40p_int_controller.sv
+  - rtl/cv32e40p_register_file_latch.sv
   - rtl/cv32e40p_id_stage.sv
+  - rtl/cv32e40p_fifo.sv
+  - rtl/cv32e40p_obi_interface.sv
+  - rtl/cv32e40p_prefetch_controller.sv
+  - rtl/cv32e40p_prefetch_buffer.sv
+  - rtl/cv32e40p_if_stage.sv
+  - rtl/cv32e40p_load_store_unit.sv
+  - rtl/cv32e40p_sleep_unit.sv
   - rtl/cv32e40p_core.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_pkg.sv
-  - rtl/vendor/pulp_platform_common_cells/src/lzc.sv
-  - rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_classifier.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_rounding.sv
+  - rtl/vendor/pulp_platform_common_cells/src/lzc.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_fma.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_noncomp.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_fmt_slice.sv
-  - rtl/vendor/pulp_platform_fpnew/src/fpnew_fma_multi.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_cast_multi.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_multi.sv
-  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_frbus.v
-  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_src_type.v
   - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/clk/rtl/gated_clk_cell.v
-  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v
-  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_srt_single.v
   - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v
-  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_round_single.v
-  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_special.v
   - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_pack_single.v
   - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ff1.v
   - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_prepare.v
+  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_round_single.v
+  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_special.v
+  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_srt_single.v
   - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_top.v
+  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_src_type.v
+  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v
+  - rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_frbus.v
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv
+  - rtl/vendor/pulp_platform_fpnew/src/fpnew_fma_multi.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv
+  - rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_block.sv
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_top.sv
   - rtl/cv32e40p_fp_wrapper.sv

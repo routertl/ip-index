@@ -1,0 +1,38 @@
+name: axi_ad9361_tx_channel
+namespace: analog-devices
+version: HEAD
+description: AD9361 transmit channel with DDS, IQ correction, and DMA data processing
+  for DAC output.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/xilinx/common/ad_mul.v
+  - library/common/ad_dds_sine.v
+  - library/common/ad_dds_cordic_pipe.v
+  - library/common/ad_dds_sine_cordic.v
+  - library/common/ad_dds_1.v
+  - library/common/ad_dds_2.v
+  - library/common/ad_dds.v
+  - library/common/ad_iqcor.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_dac_channel.v
+  - library/axi_ad9361/axi_ad9361_tx_channel.v
+tags:
+- ad9361
+- amba
+- axi
+- bus
+- channel
+- transmit
+- transmitter
+- tx
+role: component

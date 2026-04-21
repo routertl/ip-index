@@ -1,8 +1,8 @@
 name: taxi_eth_mac_10g
 namespace: fpganinja
 version: master
-description: 10 Gigabit Ethernet MAC with AXI streaming interfaces, XGMII PHY connectivity,
-  and optional PTP/PFC/pause flow control.
+description: 10 Gigabit Ethernet MAC controller with AXI-Stream interfaces, XGMII
+  PHY connectivity, and optional PTP/flow-control support.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

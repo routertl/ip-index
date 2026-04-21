@@ -1,8 +1,8 @@
 name: taxi_axil_interconnect_1s
 namespace: fpganinja
 version: master
-description: AXI4-Lite interconnect that routes transactions from a single slave to
-  multiple configurable master interfaces with address decoding.
+description: Multiplexes a single AXI4-Lite slave interface to multiple master interfaces
+  with address-based routing and optional security checks.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -1,8 +1,8 @@
 name: taxi_axil_interconnect_1s_wr
 namespace: fpganinja
 version: master
-description: Routes AXI4-Lite write transactions from a single slave to multiple configurable
-  master interfaces with address-based demultiplexing.
+description: Interconnects a single AXI4-Lite slave write interface to multiple master
+  write interfaces with address-based routing and region decoding.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

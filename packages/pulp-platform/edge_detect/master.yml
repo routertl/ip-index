@@ -1,7 +1,8 @@
 name: edge_detect
 namespace: pulp-platform
 version: master
-description: Detects rising and falling edges on an input data stream.
+description: Detects rising and falling edges on an input data stream using clock-synchronized
+  sampling.
 license: Apache-2.0
 license_class: permissive
 source:

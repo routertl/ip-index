@@ -1,8 +1,8 @@
 name: taxi_rgmii_phy_if
 namespace: fpganinja
 version: master
-description: Converts between GMII (MAC) and RGMII (PHY) interfaces with clock domain
-  bridging and speed detection.
+description: Bridges GMII MAC interface to RGMII PHY with clock domain conversion
+  and data serialization/deserialization.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

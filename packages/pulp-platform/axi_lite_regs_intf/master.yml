@@ -1,8 +1,8 @@
 name: axi_lite_regs_intf
 namespace: pulp-platform
 version: master
-description: AXI4-Lite slave interface that exposes a configurable register file with
-  access control and byte-level read/write protection.
+description: AXI4-Lite slave module that manages memory-mapped registers with configurable
+  read-only bytes and access protection.
 license: Apache-2.0
 license_class: permissive
 source:

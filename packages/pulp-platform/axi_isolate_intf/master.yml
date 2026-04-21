@@ -1,8 +1,8 @@
 name: axi_isolate_intf
 namespace: pulp-platform
 version: master
-description: Isolates an AXI master port from a slave port, blocking transactions
-  and optionally returning error responses when isolated.
+description: Isolates an AXI master port from slave port requests, optionally terminating
+  transactions with error responses.
 license: Apache-2.0
 license_class: permissive
 source:

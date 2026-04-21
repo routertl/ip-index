@@ -1,8 +1,8 @@
 name: axi_lite_to_axi_intf
 namespace: pulp-platform
 version: master
-description: Converts AXI-Lite requests to full AXI protocol with configurable data
-  width and cache attributes.
+description: Converts AXI-Lite protocol requests to full AXI protocol with configurable
+  data width and cache policies.
 license: Apache-2.0
 license_class: permissive
 source:

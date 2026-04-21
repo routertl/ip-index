@@ -1,0 +1,24 @@
+name: hsci_master_regs_regs
+namespace: analog-devices
+version: HEAD
+description: +----------+----------------------------+---------+-----------------------------------------------------------------------+
+  |  ADDRESS | REG NAME                   |  BITS   |  BITFIELD...
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - library/axi_hsci/hsci_master_regs_defs.vh
+  - library/axi_hsci/hsci_master_regs_regs.sv
+tags:
+- hsci
+- master
+- regs
+role: component

@@ -1,0 +1,39 @@
+name: axi_ad9740_core
+namespace: analog-devices
+version: HEAD
+description: AXI-based AD9740 DAC core with DMA interface, DDS signal generation,
+  and processor control registers.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/xilinx/common/ad_mul.v
+  - library/common/ad_dds_sine.v
+  - library/common/ad_dds_cordic_pipe.v
+  - library/common/ad_dds_sine_cordic.v
+  - library/common/ad_dds_1.v
+  - library/common/ad_dds_2.v
+  - library/common/ad_dds.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_dac_channel.v
+  - library/axi_ad9740/axi_ad9740_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_xfer_status.v
+  - library/common/up_dac_common.v
+  - library/axi_ad9740/axi_ad9740_core.v
+tags:
+- ad9740
+- amba
+- axi
+- bus
+- core
+role: component

@@ -1,8 +1,8 @@
 name: exp_backoff
 namespace: pulp-platform
 version: master
-description: Implements exponential backoff with configurable maximum range using
-  a 16-bit LFSR for randomized retry delays.
+description: Implements exponential backoff with random wait periods for retry logic
+  using a configurable LFSR.
 license: Apache-2.0
 license_class: permissive
 source:

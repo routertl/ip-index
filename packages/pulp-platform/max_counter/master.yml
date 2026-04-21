@@ -1,8 +1,8 @@
 name: max_counter
 namespace: pulp-platform
 version: master
-description: Configurable counter with programmable delta that tracks maximum value
-  reached and detects overflow conditions.
+description: A parameterizable counter that tracks current value and maximum value
+  reached, with up/down counting, load, and overflow detection.
 license: Apache-2.0
 license_class: permissive
 source:

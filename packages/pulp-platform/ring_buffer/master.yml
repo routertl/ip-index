@@ -3,7 +3,7 @@ namespace: pulp-platform
 version: master
 description: This module implements a flexible ring buffer with decoupled write and
   read access. It supports sequential writes and random reads with a valid/ready handshake
-  protocol. The buffer is implemented u...
+  protocol.
 license: Apache-2.0
 license_class: permissive
 source:

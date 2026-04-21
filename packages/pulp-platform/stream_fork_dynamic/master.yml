@@ -1,7 +1,7 @@
 name: stream_fork_dynamic
 namespace: pulp-platform
 version: master
-description: Dynamically routes an input stream to selected output streams based on
+description: Dynamically routes an input stream to multiple output streams based on
   a selection mask.
 license: Apache-2.0
 license_class: permissive

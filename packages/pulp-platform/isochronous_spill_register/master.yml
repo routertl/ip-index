@@ -1,8 +1,8 @@
 name: isochronous_spill_register
 namespace: pulp-platform
 version: master
-description: Synchronizes data across clock domains using isochronous ready/valid
-  handshake protocol.
+description: Synchronizes data across clock domains using isochronous handshake with
+  optional bypass mode.
 license: Apache-2.0
 license_class: permissive
 source:

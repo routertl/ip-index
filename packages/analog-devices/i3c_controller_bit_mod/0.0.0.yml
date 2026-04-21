@@ -3,7 +3,7 @@ namespace: analog-devices
 version: 0.0.0
 description: 'Modulates the SDA and SCL lanes. SCL high time is fixed at 40ns in I3C
   mode: * 4 clock cycles at 100MHz clk. * 2 clock cycles at 50MHz clk. I3C Open drain
-  is 1.5625MHz,while I2C speed depends on I2...'
+  is 1.5625MHz,while I2C speed depends on I2C_MOD, e.g.: * I2C_MOD = 0 : 1.'
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

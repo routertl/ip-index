@@ -1,8 +1,8 @@
 name: taxi_eth_phy_25g_us_gt
 namespace: fpganinja
 version: master
-description: 25G Ethernet PHY transceiver wrapper for Xilinx UltraScale+ GTY with
-  PLL and MAC interface.
+description: 25G Ethernet PHY transceiver interface with GTY high-speed SerDes, PLL
+  clock management, and APB control.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

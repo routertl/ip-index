@@ -1,8 +1,8 @@
 name: avalon_sink
 namespace: vunit
 version: master
-description: Receives data streams over Avalon interface with ready/valid handshaking
-  and packet demarcation.
+description: Receives streaming data via Avalon interface with ready/valid handshake,
+  packet framing signals, and configurable data width.
 license: ''
 license_class: unknown
 source:

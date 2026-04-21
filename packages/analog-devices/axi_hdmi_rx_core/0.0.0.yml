@@ -1,8 +1,8 @@
 name: axi_hdmi_rx_core
 namespace: analog-devices
 version: 0.0.0
-description: Receives HDMI video data and outputs formatted pixel streams with synchronization
-  detection and color space conversio...
+description: Receives HDMI video data and converts it to AXI DMA format with synchronization
+  and color space conversion.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

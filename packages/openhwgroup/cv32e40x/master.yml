@@ -25,8 +25,8 @@ routertl_compat:
   - rtl/cv32e40x_clic_int_controller.sv
   - rtl/cv32e40x_compressed_decoder.sv
   - rtl/cv32e40x_controller_bypass.sv
-  - rtl/cv32e40x_if_xif.sv
   - rtl/cv32e40x_if_c_obi.sv
+  - rtl/cv32e40x_if_xif.sv
   - rtl/cv32e40x_controller_fsm.sv
   - rtl/cv32e40x_controller.sv
   - rtl/cv32e40x_csr.sv
@@ -40,23 +40,23 @@ routertl_compat:
   - rtl/cv32e40x_decoder.sv
   - rtl/cv32e40x_pc_target.sv
   - rtl/cv32e40x_id_stage.sv
+  - rtl/cv32e40x_instr_obi_interface.sv
+  - rtl/cv32e40x_pma.sv
+  - rtl/cv32e40x_mpu.sv
   - rtl/cv32e40x_prefetcher.sv
   - rtl/cv32e40x_prefetch_unit.sv
   - rtl/cv32e40x_sequencer.sv
-  - rtl/cv32e40x_pma.sv
-  - rtl/cv32e40x_mpu.sv
-  - rtl/cv32e40x_instr_obi_interface.sv
   - rtl/cv32e40x_if_stage.sv
   - rtl/cv32e40x_int_controller.sv
-  - rtl/cv32e40x_wb_stage.sv
   - rtl/cv32e40x_data_obi_interface.sv
   - rtl/cv32e40x_lsu_response_filter.sv
   - rtl/cv32e40x_wpt.sv
   - rtl/cv32e40x_write_buffer.sv
   - rtl/cv32e40x_load_store_unit.sv
-  - rtl/cv32e40x_sleep_unit.sv
   - rtl/cv32e40x_register_file.sv
   - rtl/cv32e40x_register_file_wrapper.sv
+  - rtl/cv32e40x_sleep_unit.sv
+  - rtl/cv32e40x_wb_stage.sv
   - rtl/cv32e40x_core.sv
   - rtl/cv32e40x_popcnt.sv
 tags:

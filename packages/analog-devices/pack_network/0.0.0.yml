@@ -1,8 +1,8 @@
 name: pack_network
 namespace: analog-devices
 version: 0.0.0
-description: Rotates and compacts input data streams based on prefix counts to remove
-  gaps and align active elements.
+description: Rotates and packs multiple data streams based on prefix counts to eliminate
+  gaps in the output.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

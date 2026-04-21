@@ -1,8 +1,8 @@
 name: axi_ltc2387
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite interface for the LTC2387 18-bit analog-to-digital converter
-  with dual-lane LVDS input and configurable out...
+description: AXI interface for the LTC2387 18-bit ADC with dual-lane LVDS input and
+  configurable output resolution.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

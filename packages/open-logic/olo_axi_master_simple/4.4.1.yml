@@ -2,8 +2,7 @@ name: olo_axi_master_simple
 namespace: open-logic
 version: 4.4.1
 description: 'This entity implements a simple AXI master. Simple means: It does not
-  support any unaligned reads/writes and it does not do any width conversions. It
-  just executes the transfers requested and split...'
+  support any unaligned reads/writes and it does not do any width conversions.'
 license: ''
 license_class: unknown
 source:

@@ -1,8 +1,8 @@
 name: spill_register
 namespace: pulp-platform
 version: master
-description: Buffers data with ready/valid handshake, optionally bypassing storage
-  via the Bypass parameter.
+description: Buffers data with ready/valid handshake, decoupling upstream and downstream
+  timing.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: avalon_master
 namespace: vunit
 version: master
-description: Avalon bus master interface that initiates read and write transactions
-  with configurable latency and request probabil...
+description: Avalon bus master interface that controls read/write operations with
+  configurable latency and data validity handling.
 license: ''
 license_class: unknown
 source:

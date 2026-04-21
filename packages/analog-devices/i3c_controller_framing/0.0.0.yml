@@ -3,7 +3,7 @@ namespace: analog-devices
 version: 0.0.0
 description: Frames commands to the word module. That means, joins cmdp and sdio bus
   into single interface cmdw. It is the main state-machine for the Command Descriptors
-  received. The Dynamic Address Assigment ...
+  received.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

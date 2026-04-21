@@ -1,0 +1,32 @@
+name: axi_ad485x_lvds
+namespace: analog-devices
+version: HEAD
+description: LVDS interface controller for AD485x ADC that deserializes serial data
+  and outputs parallel ADC samples with optional CRC validation.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/xilinx/common/ad_data_in.v
+  - library/xilinx/common/ad_serdes_out.v
+  - library/axi_ad485x/axi_ad485x_crc.v
+  - library/axi_ad485x/axi_ad485x_lvds.v
+tags:
+- ad485x
+- amba
+- axi
+- bus
+- differential
+- low
+- lvds
+- signaling
+- voltage
+role: component

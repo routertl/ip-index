@@ -1,0 +1,26 @@
+name: system_top_lvds
+namespace: analog-devices
+version: HEAD
+description: SPI with MDIO interface
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - projects/dc2677a/c5soc/system_top_lvds.v
+tags:
+- differential
+- low
+- lvds
+- signaling
+- system
+- top
+- voltage
+role: top

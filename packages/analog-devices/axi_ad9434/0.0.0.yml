@@ -2,7 +2,7 @@ name: axi_ad9434
 namespace: analog-devices
 version: 0.0.0
 description: AXI4-Lite controlled interface for AD9434 12-bit ADC with differential
-  inputs and configurable I/O delay.
+  signal acquisition and programmable I/O delays.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

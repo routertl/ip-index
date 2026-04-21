@@ -1,0 +1,30 @@
+name: axi_adrv9001_tdd
+namespace: analog-devices
+version: HEAD
+description: TDD (Time Division Duplex) control module for ADRV9001 RF transceiver
+  managing RX/TX switching and VCO/RF enables.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_addsub.v
+  - library/common/ad_tdd_control.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
+  - library/common/up_tdd_cntrl.v
+  - library/axi_adrv9001/axi_adrv9001_tdd.v
+tags:
+- adrv9001
+- amba
+- axi
+- bus
+- tdd
+role: component

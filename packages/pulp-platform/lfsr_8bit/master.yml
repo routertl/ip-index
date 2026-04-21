@@ -1,8 +1,8 @@
 name: lfsr_8bit
 namespace: pulp-platform
 version: master
-description: Generates pseudo-random 8-bit values in both one-hot and binary encodings
-  for cache refill way selection.
+description: Generates pseudo-random 8-bit values for cache way selection using a
+  linear feedback shift register.
 license: Apache-2.0
 license_class: permissive
 source:

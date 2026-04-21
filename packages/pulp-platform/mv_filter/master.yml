@@ -1,8 +1,8 @@
 name: mv_filter
 namespace: pulp-platform
 version: master
-description: Median-voting filter that outputs a filtered digital signal based on
-  majority consensus of input samples.
+description: Median voting filter that outputs the majority bit value from recent
+  samples with configurable threshold.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: axi_slave_compare
 namespace: pulp-platform
 version: master
-description: Compares AXI4+ATOP transactions between reference and test slaves to
-  detect mismatches across all channels.
+description: Compares AXI4+ATOP transactions between reference and test channels,
+  flagging mismatches on write/read address, write data, and response phases.
 license: Apache-2.0
 license_class: permissive
 source:

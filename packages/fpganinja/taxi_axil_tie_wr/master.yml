@@ -1,8 +1,7 @@
 name: taxi_axil_tie_wr
 namespace: fpganinja
 version: master
-description: Passes through AXI4-Lite write transactions from a slave interface to
-  a master interface.
+description: Passes through AXI4-Lite write transactions from slave to master interface.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

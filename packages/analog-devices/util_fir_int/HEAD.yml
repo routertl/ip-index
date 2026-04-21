@@ -1,0 +1,27 @@
+name: util_fir_int
+namespace: analog-devices
+version: HEAD
+description: Applies FIR filtering and interpolation to streaming input data, outputting
+  dual-channel results via AXI4-Stream.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/axi_dac_interpolate/fir_interp.v
+  - library/util_fir_int/util_fir_int.v
+tags:
+- fir
+- int
+- util
+role: top
+components:
+- axi_dac_interpolate_filter
+- fir_interp

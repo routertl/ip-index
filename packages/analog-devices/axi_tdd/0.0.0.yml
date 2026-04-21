@@ -1,8 +1,8 @@
 name: axi_tdd
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite controlled time-division duplex (TDD) frame generator with
-  configurable channel timing and internal/externa...
+description: AXI4-Lite configurable TDD (Time Division Duplex) controller generating
+  timed channel outputs with programmable frame timing and burst repetition.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

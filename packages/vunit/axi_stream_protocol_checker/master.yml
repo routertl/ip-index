@@ -1,8 +1,8 @@
 name: axi_stream_protocol_checker
 namespace: vunit
 version: master
-description: Validates AXI4-Stream protocol compliance by monitoring control signals
-  and data integrity.
+description: Validates AXI4-Stream protocol compliance by monitoring transaction signals
+  and handshake behavior.
 license: ''
 license_class: unknown
 source:

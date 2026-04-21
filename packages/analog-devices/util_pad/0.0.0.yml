@@ -1,8 +1,8 @@
 name: util_pad
 namespace: analog-devices
 version: 0.0.0
-description: Pads or truncates multiple samples to a different bit width, optionally
-  with sign extension.
+description: Pads or truncates multi-sample data to a different bit width with optional
+  sign extension.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

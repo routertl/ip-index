@@ -2,7 +2,7 @@ name: taxi_apb_dp_ram
 namespace: fpganinja
 version: master
 description: Dual-port RAM with independent APB slave interfaces on each port supporting
-  asynchronous read/write operations.
+  simultaneous asynchronous access.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

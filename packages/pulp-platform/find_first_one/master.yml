@@ -2,7 +2,7 @@ name: find_first_one
 namespace: pulp-platform
 version: master
 description: Finds the position of the first set bit in an input vector, with optional
-  bit-order reversal.
+  bit reversal.
 license: Apache-2.0
 license_class: permissive
 source:

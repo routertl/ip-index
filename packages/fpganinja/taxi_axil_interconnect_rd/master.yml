@@ -2,7 +2,7 @@ name: taxi_axil_interconnect_rd
 namespace: fpganinja
 version: master
 description: Routes read requests from multiple AXI4-Lite slave interfaces to multiple
-  master interfaces with configurable address-based arbitration.
+  master interfaces with configurable address decoding and access control.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

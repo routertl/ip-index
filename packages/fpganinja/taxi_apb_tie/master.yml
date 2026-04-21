@@ -1,8 +1,8 @@
 name: taxi_apb_tie
 namespace: fpganinja
 version: master
-description: Bridges APB slave and master interfaces, routing transactions between
-  them.
+description: Bridges an APB slave interface to an APB master interface, passing through
+  APB transactions.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

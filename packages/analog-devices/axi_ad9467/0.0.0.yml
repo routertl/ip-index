@@ -1,8 +1,8 @@
 name: axi_ad9467
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite controlled AD9467 ADC interface module that acquires differential
-  analog signals and outputs sampled data w...
+description: AXI4-Lite controlled AD9467 analog-to-digital converter interface with
+  configurable I/O delays and DMA output.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

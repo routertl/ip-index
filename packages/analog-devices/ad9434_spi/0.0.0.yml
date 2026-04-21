@@ -1,8 +1,8 @@
 name: ad9434_spi
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces with AD9434 ADC via SPI protocol to read/write configuration
-  registers.
+description: SPI interface controller for the AD9434 analog-to-digital converter with
+  multiplexed SDIO support.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

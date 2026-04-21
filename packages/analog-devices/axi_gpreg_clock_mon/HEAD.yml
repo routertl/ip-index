@@ -1,0 +1,28 @@
+name: axi_gpreg_clock_mon
+namespace: analog-devices
+version: HEAD
+description: Monitors clock frequency and provides AXI register interface for read/write
+  access to clock monitoring data.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/axi_gpreg/axi_gpreg_clock_mon.v
+tags:
+- amba
+- axi
+- bus
+- clock
+- gpreg
+- mon
+role: component

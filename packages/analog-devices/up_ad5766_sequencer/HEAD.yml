@@ -1,0 +1,23 @@
+name: up_ad5766_sequencer
+namespace: analog-devices
+version: HEAD
+description: Sequencer controller for AD5766 DAC that outputs 8-bit sequence data
+  on request with dual-clock register interface.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/up_xfer_cntrl.v
+  - library/axi_ad5766/up_ad5766_sequencer.v
+tags:
+- ad5766
+- sequencer
+role: component

@@ -1,8 +1,8 @@
 name: taxi_apb_interconnect_1s
 namespace: fpganinja
 version: master
-description: Routes APB transactions from a single slave interface to multiple master
-  interfaces based on address decoding.
+description: Routes APB transactions from a single slave interface to multiple configurable
+  master interfaces based on address decoding.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

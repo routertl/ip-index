@@ -1,8 +1,8 @@
 name: axi_throttle
 namespace: pulp-platform
 version: master
-description: Limits AXI4 read and write request throughput by gating transactions
-  based on configurable maximum pending request counts.
+description: Throttles AXI transactions by limiting concurrent write and read requests
+  based on available credits.
 license: Apache-2.0
 license_class: permissive
 source:

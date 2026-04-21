@@ -17,9 +17,9 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_math.vhd
   - src/base/vhdl/olo_base_pkg_logic.vhd
   - src/base/vhdl/olo_base_pkg_string.vhd
+  - src/base/vhdl/olo_base_strobe_gen.vhd
   - src/base/vhdl/olo_base_pkg_attribute.vhd
   - src/intf/vhdl/olo_intf_sync.vhd
-  - src/base/vhdl/olo_base_strobe_gen.vhd
   - src/intf/vhdl/olo_intf_uart.vhd
 tags:
 - asynchronous

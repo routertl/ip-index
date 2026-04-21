@@ -3,7 +3,7 @@ namespace: open-logic
 version: 4.4.1
 description: This is a very basic clock crossing that allows passing multple independent
   single-bit signals from one clock domain to another one. Double stage synchronizers
-  are implemeted for each bit, includin...
+  are implemeted for each bit, including then required attributes for correct s...
 license: ''
 license_class: unknown
 source:

@@ -1,7 +1,7 @@
 name: taxi_axi_tie_wr
 namespace: fpganinja
 version: master
-description: Forwards AXI4 write transactions from a slave port to a master port.
+description: Bridges AXI4 write transactions between a slave port and a master port.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

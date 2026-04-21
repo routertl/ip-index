@@ -1,8 +1,8 @@
 name: ad_dds
 namespace: analog-devices
 version: 0.0.0
-description: Generates scaled multi-tone DDS output with configurable frequency, phase,
-  and sample rate conversion.
+description: Generates programmable multi-tone DDS output with configurable frequency,
+  phase, and amplitude for DAC applications.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

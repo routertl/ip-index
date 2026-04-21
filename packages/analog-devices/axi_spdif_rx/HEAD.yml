@@ -1,0 +1,34 @@
+name: axi_spdif_rx
+namespace: analog-devices
+version: HEAD
+description: AXI4-Lite receive engine with AXI4-Stream interface and memory interface
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - library/axi_spdif_rx/rx_package.vhd
+  - library/axi_spdif_rx/rx_decode.vhd
+  - library/axi_spdif_rx/rx_phase_det.vhd
+  - library/axi_spdif_rx/rx_status_reg.vhd
+  - library/axi_spdif_rx/axi_spdif_rx.vhd
+tags:
+- amba
+- axi
+- bus
+- receive
+- receiver
+- rx
+- spdif
+role: top
+components:
+- rx_decode
+- rx_phase_det
+- rx_status_reg

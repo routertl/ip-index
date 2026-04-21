@@ -1,8 +1,8 @@
 name: isochronous_4phase_handshake
 namespace: pulp-platform
 version: master
-description: Synchronizes ready/valid handshake signals between two clock domains
-  using isochronous 4-phase protocol.
+description: Synchronizes ready/valid handshake signals between two independent clock
+  domains using 4-phase protocol.
 license: Apache-2.0
 license_class: permissive
 source:

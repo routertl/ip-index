@@ -1,8 +1,8 @@
 name: axi_zero_mem
 namespace: pulp-platform
 version: master
-description: Converts AXI4+ATOP requests to banked memory interface with configurable
-  address width, data width, and response buffering.
+description: Bridges AXI4+ATOP transactions to a zero-latency memory interface with
+  configurable banks and response buffering.
 license: Apache-2.0
 license_class: permissive
 source:

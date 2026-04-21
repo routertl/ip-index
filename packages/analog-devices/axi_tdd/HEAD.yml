@@ -1,0 +1,79 @@
+name: axi_tdd
+namespace: analog-devices
+version: HEAD
+description: AXI4-Lite configurable TDD (Time Division Duplex) controller generating
+  timed channel outputs with programmable frame timing and burst repetition.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - library/axi_tdd/axi_tdd_pkg.sv
+  - library/axi_tdd/axi_tdd_channel.sv
+  - library/axi_tdd/axi_tdd_counter.sv
+  - library/util_cdc/sync_bits.v
+  - library/util_cdc/sync_data.v
+  - library/util_cdc/sync_event.v
+  - library/axi_tdd/axi_tdd_regmap.sv
+  - library/axi_tdd/axi_tdd_sync_gen.sv
+  - library/common/up_axi.v
+  - library/axi_tdd/axi_tdd.sv
+tags:
+- amba
+- axi
+- bus
+- tdd
+role: top
+components:
+- ad408x_phy
+- ad_ip_jesd204_tpl_adc
+- ad_ip_jesd204_tpl_adc_regmap
+- ad_ip_jesd204_tpl_dac_regmap
+- ad_serdes_in
+- axi_ad9434_if
+- axi_ad9684_if
+- axi_ada4355_if
+- axi_ada4355_regmap
+- axi_adrv9001_core
+- axi_adrv9001_tx
+- axi_dmac_burst_memory
+- axi_dmac_ext_sync
+- axi_dmac_regmap
+- axi_dmac_regmap_request
+- axi_dmac_reset_manager
+- axi_dmac_response_manager
+- axi_dmac_transfer
+- axi_laser_driver_regmap
+- axi_pulse_gen_regmap
+- axi_pwm_gen_regmap
+- axi_tdd_channel
+- axi_tdd_counter
+- axi_tdd_regmap
+- axi_tdd_sync_gen
+- axi_xcvrlb_1
+- data_offload_fsm
+- data_offload_regmap
+- dmac_sg
+- i3c_controller_regmap
+- jesd204_tx_ctrl
+- jesd204_tx_gearbox
+- jesd204_up_ilas_mem
+- jesd204_up_rx
+- jesd204_up_rx_lane
+- jesd204_up_sysref
+- jesd204_up_tx
+- request_arb
+- sync_bits
+- sync_data
+- sync_event
+- up_axi
+- util_adxcvr_xch
+- util_axis_fifo
+- util_axis_fifo_asym

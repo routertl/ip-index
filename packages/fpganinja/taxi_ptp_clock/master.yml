@@ -1,8 +1,8 @@
 name: taxi_ptp_clock
 namespace: fpganinja
 version: master
-description: Generates and maintains synchronized PTP clock timestamps with adjustable
-  period, offset, and drift correction.
+description: Generates and maintains PTP timestamps with synchronization, period/offset/drift
+  adjustments, and PPS output.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

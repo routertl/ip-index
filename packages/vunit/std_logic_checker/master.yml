@@ -1,7 +1,8 @@
 name: std_logic_checker
 namespace: vunit
 version: master
-description: Validates std_logic_vector input against configurable checker criteria.
+description: Validates incoming std_logic_vector values against configurable checker
+  criteria.
 license: ''
 license_class: unknown
 source:

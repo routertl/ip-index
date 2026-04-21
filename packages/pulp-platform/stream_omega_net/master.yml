@@ -1,8 +1,8 @@
 name: stream_omega_net
 namespace: pulp-platform
 version: master
-description: Omega network switching fabric that routes multiple input streams to
-  selected output ports with round-robin arbitration and AXI handshaking.
+description: Streaming omega network that arbitrates and routes data from multiple
+  inputs to multiple outputs using round-robin arbitration with AXI-style handshaking.
 license: Apache-2.0
 license_class: permissive
 source:

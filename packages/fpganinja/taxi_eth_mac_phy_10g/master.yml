@@ -1,8 +1,8 @@
 name: taxi_eth_mac_phy_10g
 namespace: fpganinja
 version: master
-description: Integrates 10G Ethernet MAC and PHY layers with optional PTP timestamping,
-  flow control, and statistics.
+description: Integrates 10G Ethernet MAC and PHY layers with configurable PTP, pause
+  control, and statistics.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

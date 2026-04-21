@@ -1,8 +1,8 @@
 name: axi_lfsr
 namespace: pulp-platform
 version: master
-description: AXI4 interface with dual LFSR serial shift paths for write and read data
-  manipulation.
+description: AXI4 interface with dual LFSR shift registers for serial write/read data
+  manipulation and testmode support.
 license: Apache-2.0
 license_class: permissive
 source:

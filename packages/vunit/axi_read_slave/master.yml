@@ -1,8 +1,8 @@
 name: axi_read_slave
 namespace: vunit
 version: master
-description: AXI read slave that accepts read requests and returns data with response
-  information.
+description: Implements an AXI read slave that accepts read requests and returns data
+  with responses.
 license: ''
 license_class: unknown
 source:

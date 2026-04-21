@@ -1,0 +1,28 @@
+name: ad9434_spi
+namespace: analog-devices
+version: HEAD
+description: SPI interface controller for the AD9434 analog-to-digital converter with
+  multiplexed SDIO support.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_iobuf.v
+  - projects/ad9434_fmc/common/ad9434_spi.v
+tags:
+- ad9434
+- interface
+- peripheral
+- serial
+- spi
+role: top
+components:
+- ad_iobuf

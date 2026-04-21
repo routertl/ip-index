@@ -1,8 +1,8 @@
 name: addr_decode_napot
 namespace: pulp-platform
 version: master
-description: Decodes an address using NAPOT (Naturally Aligned Power-of-Two) rules
-  to output a matching rule index with validity flags.
+description: Decodes a NAPOT address against a rule map to output matching rule index
+  or default index with validity status.
 license: Apache-2.0
 license_class: permissive
 source:

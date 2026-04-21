@@ -1,0 +1,28 @@
+name: adrv9001_rx_link
+namespace: analog-devices
+version: HEAD
+description: Receives and deserializes ADC data streams into formatted I/Q sample
+  pairs with configurable SDR/DDR and lane modes.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/axi_adrv9001/adrv9001_aligner4.v
+  - library/axi_adrv9001/adrv9001_aligner8.v
+  - library/axi_adrv9001/adrv9001_pack.v
+  - library/axi_adrv9001/adrv9001_rx_link.v
+tags:
+- adrv9001
+- link
+- receive
+- receiver
+- rx
+role: component

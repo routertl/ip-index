@@ -1,0 +1,33 @@
+name: axi_ad9361_lvds_if_c5
+namespace: analog-devices
+version: HEAD
+description: Interfaces AD9361 RF transceiver LVDS signals with differential-to-single
+  conversion and data deserialization/serialization for receive and transmit paths.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/axi_ltc235x/axi_ltc235x_cmos.v
+  - library/axi_ad9361/intel/axi_ad9361_lvds_if_c5.v
+tags:
+- ad9361
+- amba
+- axi
+- bus
+- c5
+- differential
+- low
+- lvds
+- signaling
+- voltage
+role: top
+components:
+- axi_ltc235x_cmos

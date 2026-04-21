@@ -1,8 +1,8 @@
 name: taxi_xfcp_mod_stats
 namespace: fpganinja
 version: master
-description: Collects and reports statistics via XFCP protocol with configurable counter
-  width and optional string labels.
+description: Collects and reports statistics data through XFCP protocol with configurable
+  counter width and pipeline depth.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

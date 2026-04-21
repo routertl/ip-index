@@ -1,0 +1,133 @@
+name: axi_dmac
+namespace: analog-devices
+version: HEAD
+description: AXI4 with ready/valid handshake and interrupt support
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_mem.v
+  - library/util_cdc/sync_bits.v
+  - library/util_cdc/sync_gray.v
+  - library/util_axis_fifo/util_axis_fifo_address_generator.v
+  - library/util_axis_fifo/util_axis_fifo.v
+  - library/axi_dmac/axi_dmac_regmap_request.v
+  - library/common/up_axi.v
+  - library/axi_dmac/axi_dmac_regmap.v
+  - library/axi_dmac/axi_dmac_framelock.v
+  - library/axi_dmac/axi_dmac_reset_manager.v
+  - library/axi_dmac/dmac_2d_transfer.v
+  - library/axi_dmac/splitter.v
+  - library/axi_dmac/dmac_sg.v
+  - library/axi_dmac/inc_id.vh
+  - library/common/ad_mem_asym.v
+  - library/axi_dmac/axi_dmac_resize_dest.v
+  - library/axi_dmac/axi_dmac_resize_src.v
+  - library/axi_dmac/axi_dmac_burst_memory.v
+  - library/util_cdc/sync_event.v
+  - library/axi_dmac/axi_dmac_ext_sync.v
+  - library/axi_dmac/axi_dmac_response_manager.v
+  - library/axi_dmac/axi_register_slice.v
+  - library/axi_dmac/address_generator.v
+  - library/axi_dmac/resp.vh
+  - library/axi_dmac/response_handler.v
+  - library/axi_dmac/dest_axi_mm.v
+  - library/axi_dmac/response_generator.v
+  - library/axi_dmac/dest_axi_stream.v
+  - library/axi_dmac/dest_fifo_inf.v
+  - library/axi_dmac/request_generator.v
+  - library/axi_dmac/src_axi_mm.v
+  - library/axi_dmac/data_mover.v
+  - library/axi_dmac/src_axi_stream.v
+  - library/axi_dmac/src_fifo_inf.v
+  - library/axi_dmac/request_arb.v
+  - library/axi_dmac/axi_dmac_transfer.v
+  - library/axi_dmac/axi_dmac.v
+tags:
+- amba
+- axi
+- bus
+- dmac
+role: top
+components:
+- ad408x_phy
+- ad_ip_jesd204_tpl_adc
+- ad_ip_jesd204_tpl_adc_regmap
+- ad_ip_jesd204_tpl_dac_regmap
+- ad_mem
+- ad_mem_asym
+- ad_serdes_in
+- address_generator
+- avl_dacfifo_rd
+- axi_ad9434_if
+- axi_ad9625_if
+- axi_ad9671_if
+- axi_ad9684_if
+- axi_ada4355_if
+- axi_ada4355_regmap
+- axi_adcfifo_dma
+- axi_adcfifo_wr
+- axi_adrv9001_core
+- axi_adrv9001_tx
+- axi_dacfifo_address_buffer
+- axi_dacfifo_rd
+- axi_dacfifo_wr
+- axi_dmac_burst_memory
+- axi_dmac_ext_sync
+- axi_dmac_framelock
+- axi_dmac_regmap
+- axi_dmac_regmap_request
+- axi_dmac_reset_manager
+- axi_dmac_resize_dest
+- axi_dmac_resize_src
+- axi_dmac_response_manager
+- axi_dmac_transfer
+- axi_hdmi_tx_core
+- axi_laser_driver_regmap
+- axi_pulse_gen_regmap
+- axi_pwm_gen_regmap
+- axi_register_slice
+- axi_tdd_regmap
+- axi_xcvrlb_1
+- data_mover
+- data_offload_fsm
+- data_offload_regmap
+- dest_axi_mm
+- dest_axi_stream
+- dest_fifo_inf
+- dmac_2d_transfer
+- dmac_sg
+- i3c_controller_regmap
+- jesd204_tx_ctrl
+- jesd204_tx_gearbox
+- jesd204_up_ilas_mem
+- jesd204_up_rx
+- jesd204_up_rx_lane
+- jesd204_up_sysref
+- jesd204_up_tx
+- request_arb
+- request_generator
+- response_generator
+- response_handler
+- splitter
+- src_axi_mm
+- src_axi_stream
+- src_fifo_inf
+- sync_bits
+- sync_data
+- sync_event
+- sync_gray
+- up_axi
+- util_adxcvr_xch
+- util_axis_fifo
+- util_axis_fifo_address_generator
+- util_axis_fifo_asym
+- util_dacfifo_bypass

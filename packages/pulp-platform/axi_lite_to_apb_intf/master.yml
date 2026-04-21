@@ -1,8 +1,8 @@
 name: axi_lite_to_apb_intf
 namespace: pulp-platform
 version: master
-description: Converts AXI4-Lite protocol transactions to APB4 protocol with address-based
-  slave selection and optional pipelining.
+description: Converts AXI4-Lite requests to APB4 transactions with configurable address
+  mapping across multiple slaves.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,7 +1,7 @@
 name: taxi_axi_ram
 namespace: fpganinja
 version: master
-description: AXI4 slave interface RAM supporting configurable address width and optional
+description: Provides an AXI4 slave interface to a configurable-width RAM with optional
   output pipelining.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft

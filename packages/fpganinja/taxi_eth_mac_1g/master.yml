@@ -1,8 +1,8 @@
 name: taxi_eth_mac_1g
 namespace: fpganinja
 version: master
-description: 1G Ethernet MAC with AXI-Stream interfaces, supporting PTP timestamping,
-  flow control (PAUSE/PFC), and optional statistics.
+description: Gigabit Ethernet MAC controller with AXI-stream interfaces, supporting
+  PTP timestamping, flow control, and optional statistics.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -1,8 +1,8 @@
 name: taxi_xfcp_mod_axil
 namespace: fpganinja
 version: master
-description: Translates XFCP protocol commands to AXI Lite read/write transactions
-  on behalf of a master.
+description: XFCP module that translates upstream protocol messages into AXI Lite
+  master read/write transactions.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

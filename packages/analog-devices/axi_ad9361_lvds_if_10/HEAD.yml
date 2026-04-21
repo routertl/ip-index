@@ -1,0 +1,30 @@
+name: axi_ad9361_lvds_if_10
+namespace: analog-devices
+version: HEAD
+description: Interfaces AD9361 RF transceiver LVDS signals with differential I/O conversion
+  and data path routing.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/axi_ad9361/intel/axi_ad9361_lvds_if_10.v
+tags:
+- '10'
+- ad9361
+- amba
+- axi
+- bus
+- differential
+- low
+- lvds
+- signaling
+- voltage
+role: top

@@ -1,8 +1,8 @@
 name: serial_deglitch
 namespace: pulp-platform
 version: master
-description: Filters noisy serial input data through a shift register to remove glitches
-  and metastability.
+description: Filters noisy serial input data through a shift register to eliminate
+  glitches.
 license: Apache-2.0
 license_class: permissive
 source:

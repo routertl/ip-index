@@ -1,8 +1,8 @@
 name: cordic_demod
 namespace: analog-devices
 version: 0.0.0
-description: Demodulates complex input signals using CORDIC algorithm with AXI-Stream
-  handshake interface.
+description: Demodulates 64-bit complex input signals using CORDIC algorithm with
+  AXI-Stream handshake.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

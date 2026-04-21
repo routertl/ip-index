@@ -1,0 +1,25 @@
+name: axi_ada4355_regmap
+namespace: analog-devices
+version: HEAD
+description: AXI register map interface for ADA4355 ADC configuration and status monitoring.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/util_cdc/sync_bits.v
+  - library/axi_ada4355/axi_ada4355_regmap.v
+tags:
+- ada4355
+- amba
+- axi
+- bus
+- regmap
+role: component

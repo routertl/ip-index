@@ -1,8 +1,8 @@
 name: axi_ad9122_if
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces AD9122 DAC with differential clock/data serialization and
-  multi-channel frame synchronization.
+description: AD9122 DAC interface controller managing clock generation, data serialization,
+  and LVDS output for multi-channel digital-to-analog conversion.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

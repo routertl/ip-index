@@ -2,7 +2,7 @@ name: taxi_axis_pipeline_register
 namespace: fpganinja
 version: master
 description: Implements a configurable AXI4-Stream pipeline register stage with bypass,
-  buffering, or skid buffer modes.
+  buffer, or skid buffer modes for latency control.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

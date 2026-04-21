@@ -1,8 +1,8 @@
 name: taxi_axis_adapter
 namespace: fpganinja
 version: master
-description: Adapts AXI4-Stream interface signals between input and output ports with
-  clock and reset control.
+description: Adapts AXI4-Stream interfaces between sink and source endpoints with
+  clock and reset synchronization.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

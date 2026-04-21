@@ -18,12 +18,12 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_math.vhd
   - src/base/vhdl/olo_base_pkg_logic.vhd
   - src/base/vhdl/olo_base_pkg_string.vhd
-  - src/base/vhdl/olo_base_pkg_attribute.vhd
-  - src/base/vhdl/olo_base_pl_stage.vhd
   - src/base/vhdl/olo_base_crc.vhd
+  - src/base/vhdl/olo_base_pkg_attribute.vhd
   - src/base/vhdl/olo_base_ram_sdp.vhd
   - src/base/vhdl/olo_base_fifo_sync.vhd
   - src/base/vhdl/olo_base_fifo_packet.vhd
+  - src/base/vhdl/olo_base_pl_stage.vhd
   - src/base/vhdl/olo_base_crc_check.vhd
 tags:
 - base

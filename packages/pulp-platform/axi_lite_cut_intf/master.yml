@@ -1,8 +1,8 @@
 name: axi_lite_cut_intf
 namespace: pulp-platform
 version: master
-description: Provides optional pipeline stage isolation between AXI slave and master
-  ports with per-channel bypass control.
+description: AXI cut module that optionally registers request/response signals to
+  break combinational paths between slave and master ports.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -3,7 +3,7 @@ namespace: neorv32
 version: 0.0.0
 description: The NEORV32 Processor is a **customizable microcontroller-like system
   on chip (SoC)** built around the NEORV32 [RISC-V](https://riscv.org/) CPU that is
-  written in **platform-independent VHDL**. The...
+  written in **platform-independent VHDL**.
 license: BSD-3-Clause
 license_class: permissive
 source:
@@ -25,23 +25,23 @@ routertl_compat:
   - rtl/core/neorv32_cache.vhd
   - rtl/core/neorv32_cfs.vhd
   - rtl/core/neorv32_clint.vhd
-  - rtl/core/neorv32_cpu_trace.vhd
-  - rtl/core/neorv32_cpu_pmp.vhd
-  - rtl/core/neorv32_cpu_regfile.vhd
-  - rtl/core/neorv32_cpu_decompressor.vhd
-  - rtl/core/neorv32_cpu_frontend.vhd
-  - rtl/core/neorv32_cpu_control.vhd
-  - rtl/core/neorv32_cpu_lsu.vhd
-  - rtl/core/neorv32_cpu_hwtrig.vhd
-  - rtl/core/neorv32_cpu_counters.vhd
-  - rtl/core/neorv32_cpu_alu_crypto.vhd
-  - rtl/core/neorv32_cpu_alu_fpu.vhd
   - rtl/core/neorv32_cpu_alu_bitmanip.vhd
   - rtl/core/neorv32_cpu_alu_cfu.vhd
-  - rtl/core/neorv32_cpu_alu_shifter.vhd
   - rtl/core/neorv32_cpu_alu_cond.vhd
+  - rtl/core/neorv32_cpu_alu_crypto.vhd
+  - rtl/core/neorv32_cpu_alu_fpu.vhd
   - rtl/core/neorv32_cpu_alu_muldiv.vhd
+  - rtl/core/neorv32_cpu_alu_shifter.vhd
   - rtl/core/neorv32_cpu_alu.vhd
+  - rtl/core/neorv32_cpu_control.vhd
+  - rtl/core/neorv32_cpu_counters.vhd
+  - rtl/core/neorv32_cpu_decompressor.vhd
+  - rtl/core/neorv32_cpu_frontend.vhd
+  - rtl/core/neorv32_cpu_hwtrig.vhd
+  - rtl/core/neorv32_cpu_lsu.vhd
+  - rtl/core/neorv32_cpu_pmp.vhd
+  - rtl/core/neorv32_cpu_regfile.vhd
+  - rtl/core/neorv32_cpu_trace.vhd
   - rtl/core/neorv32_cpu.vhd
   - rtl/core/neorv32_debug_auth.vhd
   - rtl/core/neorv32_debug_dm.vhd
@@ -55,20 +55,20 @@ routertl_compat:
   - rtl/core/neorv32_imem_image.vhd
   - rtl/core/neorv32_imem_rom.vhd
   - rtl/core/neorv32_imem.vhd
-  - rtl/core/neorv32_tracer.vhd
-  - rtl/core/neorv32_wdt.vhd
-  - rtl/core/neorv32_twi.vhd
-  - rtl/core/neorv32_sdi.vhd
-  - rtl/core/neorv32_sys.vhd
   - rtl/core/neorv32_neoled.vhd
-  - rtl/core/neorv32_uart.vhd
-  - rtl/core/neorv32_twd.vhd
-  - rtl/core/neorv32_xbus.vhd
   - rtl/core/neorv32_onewire.vhd
-  - rtl/core/neorv32_slink.vhd
   - rtl/core/neorv32_pwm.vhd
+  - rtl/core/neorv32_sdi.vhd
+  - rtl/core/neorv32_slink.vhd
   - rtl/core/neorv32_spi.vhd
+  - rtl/core/neorv32_sys.vhd
   - rtl/core/neorv32_sysinfo.vhd
+  - rtl/core/neorv32_tracer.vhd
+  - rtl/core/neorv32_twd.vhd
+  - rtl/core/neorv32_twi.vhd
+  - rtl/core/neorv32_uart.vhd
+  - rtl/core/neorv32_wdt.vhd
+  - rtl/core/neorv32_xbus.vhd
   - rtl/core/neorv32_top.vhd
   - rtl/system_integration/neorv32_litex_core_complex.vhd
   - rtl/test_setups/neorv32_test_setup_approm.vhd
@@ -77,7 +77,6 @@ routertl_compat:
   - rtl/verilog/neorv32_verilog_wrapper.vhd
   - rtl/system_integration/xbus2axi4_bridge.vhd
   - rtl/system_integration/neorv32_vivado_ip.vhd
-  - rtl/verilog/testbench.v
 tags:
 - access
 - adapter
@@ -173,7 +172,6 @@ tags:
 - serial
 - setup
 - shifter
-- sim
 - simlog
 - slice
 - slink
@@ -223,8 +221,8 @@ top_modules:
 - neorv32_test_setup_bootloader
 - neorv32_test_setup_on_chip_debugger
 - neorv32_trng
+- neorv32_verilog_wrapper
 - neorv32_vivado_ip
-- uart_sim_receiver
 components:
 - neoTRNG
 - neorv32_bootrom
@@ -277,8 +275,7 @@ components:
 - neorv32_twd
 - neorv32_twi
 - neorv32_uart
-- neorv32_verilog_wrapper
 - neorv32_wdt
 - neorv32_xbus
 - xbus2axi4_bridge
-total_entities: 79
+total_entities: 78

@@ -1,8 +1,8 @@
 name: ecc_encode
 namespace: pulp-platform
 version: master
-description: Encodes data with Hamming ECC by computing parity bits and generating
-  a protected codeword.
+description: Encodes data with error-correcting code parity bits for single-error
+  correction capability.
 license: Apache-2.0
 license_class: permissive
 source:

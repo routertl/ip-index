@@ -1,8 +1,8 @@
 name: taxi_eth_phy_10g
 namespace: fpganinja
 version: master
-description: 10 Gigabit Ethernet PHY layer implementing XGMII to SERDES interface
-  conversion with FEC, synchronization, and error monitoring.
+description: 10 Gigabit Ethernet PHY transceiver with XGMII interface, SERDES integration,
+  and link status monitoring.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

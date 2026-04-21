@@ -1,8 +1,7 @@
 name: axi_rw_split
 namespace: pulp-platform
 version: master
-description: Splits a combined AXI slave interface into separate read and write master
-  interfaces.
+description: Splits a single AXI slave port into separate read and write master ports.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: taxi_axi_interconnect_1s_rd
 namespace: fpganinja
 version: master
-description: AXI interconnect that routes read requests from a single slave to multiple
-  masters based on address decoding.
+description: AXI read interconnect that routes single slave read requests to multiple
+  master interfaces based on address decoding.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

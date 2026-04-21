@@ -3,7 +3,7 @@ namespace: enjoy-digital
 version: master
 description: The LiteX framework provides a convenient and efficient infrastructure
   to create FPGA Cores/SoCs, to explore various digital design architectures and create
-  [full FPGA based  systems](https://githu...
+  [full FPGA based  systems](https://github.com/enjoy-digital/litex/wiki/Projects).
 license: BSD-2-Clause
 license_class: permissive
 source:

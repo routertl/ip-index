@@ -1,8 +1,7 @@
 name: taxi_apb_ram
 namespace: fpganinja
 version: master
-description: APB slave RAM with configurable address width and optional output pipeline
-  register.
+description: APB slave RAM with configurable address width and optional output pipelining.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

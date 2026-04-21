@@ -1,8 +1,8 @@
 name: taxi_axis_null_snk
 namespace: fpganinja
 version: master
-description: Consumes AXI4-Stream data without processing or output, effectively discarding
-  incoming traffic.
+description: Consumes AXI4-Stream data without processing or output, serving as a
+  null sink terminator.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

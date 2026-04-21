@@ -3,7 +3,7 @@ namespace: open-logic
 version: 4.4.1
 description: This entity implements a full AXI master. In contrast to olo_axi_master_simple,
   this entity can do unaligned transfers and it supports different width for the AXI
-  interface than for the data interf...
+  interface than for the data interface.
 license: ''
 license_class: unknown
 source:
@@ -24,8 +24,8 @@ routertl_compat:
   - src/base/vhdl/olo_base_ram_sdp.vhd
   - src/base/vhdl/olo_base_fifo_sync.vhd
   - src/axi/vhdl/olo_axi_master_simple.vhd
-  - src/base/vhdl/olo_base_wconv_n2xn.vhd
   - src/base/vhdl/olo_base_pl_stage.vhd
+  - src/base/vhdl/olo_base_wconv_n2xn.vhd
   - src/axi/vhdl/olo_axi_master_full.vhd
 tags:
 - amba

@@ -1,8 +1,8 @@
 name: rr_arb_tree
 namespace: pulp-platform
 version: master
-description: Round-robin tree arbiter that selects highest-priority active request
-  and multiplexes corresponding data with optional fair throughput distribution.
+description: Round-robin tree arbiter that selects among NumIn requests and multiplexes
+  corresponding data with fair or simple priority rotation.
 license: Apache-2.0
 license_class: permissive
 source:

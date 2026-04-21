@@ -2,7 +2,7 @@ name: taxi_eth_mac_stats
 namespace: fpganinja
 version: master
 description: Collects and streams Ethernet MAC transmit/receive statistics including
-  packet counts, errors, and flow control events across multiple clock domains.
+  packet counts, errors, and flow control events.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

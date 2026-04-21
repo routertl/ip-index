@@ -1,8 +1,8 @@
 name: taxi_axis_arb_mux
 namespace: fpganinja
 version: master
-description: Arbitrates multiple AXI Stream inputs to a single output using configurable
-  priority or round-robin selection.
+description: Arbitrates multiple AXI Stream inputs onto a single output with configurable
+  priority/round-robin arbitration.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

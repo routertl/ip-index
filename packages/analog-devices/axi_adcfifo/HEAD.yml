@@ -1,0 +1,98 @@
+name: axi_adcfifo
+namespace: analog-devices
+version: HEAD
+description: AXI4 FIFO buffer with configurable parameters
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/up_xfer_status.v
+  - library/xilinx/axi_adcfifo/axi_adcfifo_adc.v
+  - library/common/ad_axis_inf_rx.v
+  - library/common/ad_mem_asym.v
+  - library/xilinx/axi_adcfifo/axi_adcfifo_dma.v
+  - library/xilinx/axi_adcfifo/axi_adcfifo_rd.v
+  - library/common/ad_mem.v
+  - library/xilinx/axi_adcfifo/axi_adcfifo_wr.v
+  - library/xilinx/axi_adcfifo/axi_adcfifo.v
+tags:
+- adcfifo
+- amba
+- axi
+- bus
+role: top
+components:
+- ad_axis_inf_rx
+- ad_ip_jesd204_tpl_adc
+- ad_ip_jesd204_tpl_adc_regmap
+- ad_ip_jesd204_tpl_dac_regmap
+- ad_mem
+- ad_mem_asym
+- avl_dacfifo_rd
+- axi_ad35xxr_core
+- axi_ad485x_16b_channel
+- axi_ad485x_20b_channel
+- axi_ad9122_core
+- axi_ad9265_channel
+- axi_ad9361_rx
+- axi_ad9361_rx_channel
+- axi_ad9361_tdd
+- axi_ad9361_tx
+- axi_ad9434_core
+- axi_ad9467_channel
+- axi_ad9625_channel
+- axi_ad9625_if
+- axi_ad9671_channel
+- axi_ad9671_if
+- axi_ad9684_channel
+- axi_ad9739a_core
+- axi_ad9740_core
+- axi_ad9783_core
+- axi_ad9963_rx
+- axi_ad9963_rx_channel
+- axi_ad9963_tx
+- axi_adaq8092_channel
+- axi_adcfifo_adc
+- axi_adcfifo_dma
+- axi_adcfifo_rd
+- axi_adcfifo_wr
+- axi_adrv9001_core
+- axi_adrv9001_rx
+- axi_adrv9001_rx_channel
+- axi_adrv9001_sync_ctrl
+- axi_adrv9001_tdd
+- axi_adrv9001_tx
+- axi_dacfifo_address_buffer
+- axi_dacfifo_rd
+- axi_dacfifo_wr
+- axi_dmac_burst_memory
+- axi_dmac_regmap
+- axi_dmac_regmap_request
+- axi_dmac_response_manager
+- axi_dmac_transfer
+- axi_hdmi_tx_core
+- axi_logic_analyzer_reg
+- axi_ltc2387_channel
+- axi_pulsar_lvds_channel
+- axi_xcvrlb_1
+- dmac_sg
+- i3c_controller_regmap
+- request_arb
+- up_adc_channel
+- up_adc_common
+- up_dac_common
+- up_hdmi_rx
+- up_hdmi_tx
+- up_tdd_cntrl
+- up_xfer_status
+- util_axis_fifo
+- util_axis_fifo_asym
+- util_dacfifo_bypass

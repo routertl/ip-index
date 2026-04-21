@@ -1,8 +1,8 @@
 name: taxi_axil_register
 namespace: fpganinja
 version: master
-description: Registers AXI4-Lite transactions across five channels with configurable
-  buffering for timing optimization.
+description: Buffers AXI4-Lite write and read channels with configurable pipeline
+  stages between slave and master interfaces.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

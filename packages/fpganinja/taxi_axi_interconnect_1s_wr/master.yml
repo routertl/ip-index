@@ -1,8 +1,8 @@
 name: taxi_axi_interconnect_1s_wr
 namespace: fpganinja
 version: master
-description: Routes AXI write transactions from a single slave port to multiple master
-  ports based on address decoding.
+description: Routes AXI write transactions from a single slave port to one of multiple
+  master ports based on address decoding.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

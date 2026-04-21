@@ -1,8 +1,8 @@
 name: taxi_uart
 namespace: fpganinja
 version: master
-description: UART transceiver with AXI4-Stream interfaces for transmitting and receiving
-  serial data.
+description: UART transceiver with AXI4-Stream interfaces for transmit/receive data
+  and configurable baud rate prescaling.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

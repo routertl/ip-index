@@ -1,0 +1,24 @@
+name: elastic_buffer
+namespace: analog-devices
+version: HEAD
+description: Buffers data with configurable width conversion and optional asynchronous
+  clock domain crossing.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_pack.v
+  - library/common/ad_upack.v
+  - library/jesd204/jesd204_rx/elastic_buffer.v
+tags:
+- buffer
+- elastic
+role: component

@@ -1,8 +1,8 @@
 name: axi_adc_trigger
 namespace: analog-devices
 version: 0.0.0
-description: Generates ADC trigger signals with configurable thresholds for dual-channel
-  data streams via AXI4-Lite control interf...
+description: Generates trigger events for dual-channel ADC data acquisition based
+  on configurable level/edge detection with AXI-Lite control interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

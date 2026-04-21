@@ -1,8 +1,7 @@
 name: popcount
 namespace: pulp-platform
 version: master
-description: Counts the number of set bits in a configurable-width input and outputs
-  the result.
+description: Counts the number of set bits in a fixed-width input data word.
 license: Apache-2.0
 license_class: permissive
 source:

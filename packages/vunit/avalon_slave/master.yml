@@ -1,8 +1,8 @@
 name: avalon_slave
 namespace: vunit
 version: master
-description: Implements an Avalon Memory-Mapped Slave interface for reading and writing
-  data with configurable address and burst s...
+description: Implements an Avalon Memory-Mapped Slave interface supporting configurable
+  read/write transactions with burst capability.
 license: ''
 license_class: unknown
 source:

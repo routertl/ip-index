@@ -1,0 +1,56 @@
+name: axi_clock_monitor
+namespace: analog-devices
+version: HEAD
+description: AXI4-Lite with configurable parameters
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/axi_ltc235x/axi_ltc235x_cmos.v
+  - library/common/up_axi.v
+  - library/common/up_clock_mon.v
+  - library/axi_clock_monitor/axi_clock_monitor.v
+tags:
+- amba
+- axi
+- bus
+- clock
+- monitor
+role: top
+components:
+- ad_ip_jesd204_tpl_adc
+- ad_ip_jesd204_tpl_adc_regmap
+- ad_ip_jesd204_tpl_dac_regmap
+- axi_ad35xxr_core
+- axi_ad9122_core
+- axi_ad9361_rx
+- axi_ad9361_tx
+- axi_ad9434_core
+- axi_ad9739a_core
+- axi_ad9740_core
+- axi_ad9783_core
+- axi_ad9963_rx
+- axi_ad9963_tx
+- axi_adrv9001_core
+- axi_adrv9001_rx
+- axi_adrv9001_sync_ctrl
+- axi_adrv9001_tx
+- axi_dmac_regmap
+- axi_gpreg_clock_mon
+- axi_ltc235x_cmos
+- i3c_controller_regmap
+- jesd204_up_common
+- up_adc_common
+- up_axi
+- up_clock_mon
+- up_dac_common
+- up_hdmi_rx
+- up_hdmi_tx

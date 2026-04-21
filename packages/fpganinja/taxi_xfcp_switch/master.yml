@@ -1,8 +1,8 @@
 name: taxi_xfcp_switch
 namespace: fpganinja
 version: master
-description: Routes XFCP protocol messages between one upstream port and multiple
-  downstream ports based on destination addressing.
+description: Routes XFCP protocol packets between one upstream port and multiple downstream
+  ports based on packet addressing.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

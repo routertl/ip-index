@@ -1,8 +1,8 @@
 name: taxi_axi_dma
 namespace: fpganinja
 version: master
-description: DMA controller that transfers data between AXI memory and AXI streams
-  with configurable burst lengths and unaligned transfer support.
+description: DMA controller that performs AXI-based memory transfers using descriptor-driven
+  read and write operations with configurable burst lengths.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

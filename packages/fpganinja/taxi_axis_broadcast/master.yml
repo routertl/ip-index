@@ -1,7 +1,8 @@
 name: taxi_axis_broadcast
 namespace: fpganinja
 version: master
-description: Broadcasts a single AXI4-Stream input to multiple AXI4-Stream outputs.
+description: Broadcasts a single AXI4-Stream input to multiple AXI4-Stream outputs
+  simultaneously.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

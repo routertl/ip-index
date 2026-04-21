@@ -3,7 +3,7 @@ namespace: openhwgroup
 version: 0.0.0
 description: CVE2 is a class of 2-stage pipeline OpenHW Foundation cores. Currently,
   the only core in this class is the CV32E20. CV32E20 is a fork of the [Ibex](https://github.com/lowRISC/ibex)
-  core. Differentl...
+  core.
 license: Apache-2.0
 license_class: permissive
 source:
@@ -20,21 +20,21 @@ routertl_compat:
   - rtl/cve2_branch_predict.sv
   - rtl/cve2_clock_gate.sv
   - rtl/cve2_compressed_decoder.sv
-  - rtl/cve2_decoder.sv
-  - rtl/cve2_id_stage.sv
-  - rtl/cve2_register_file_ff.sv
-  - rtl/cve2_pmp.sv
-  - rtl/cve2_fetch_fifo.sv
-  - rtl/cve2_prefetch_buffer.sv
-  - rtl/cve2_if_stage.sv
+  - rtl/cve2_pmp_reset_default.svh
+  - rtl/cve2_counter.sv
+  - rtl/cve2_csr.sv
+  - rtl/cve2_cs_registers.sv
   - rtl/cve2_multdiv_fast.sv
   - rtl/cve2_multdiv_slow.sv
   - rtl/cve2_ex_block.sv
-  - rtl/cve2_pmp_reset_default.svh
-  - rtl/cve2_csr.sv
-  - rtl/cve2_counter.sv
-  - rtl/cve2_cs_registers.sv
+  - rtl/cve2_decoder.sv
+  - rtl/cve2_id_stage.sv
+  - rtl/cve2_fetch_fifo.sv
+  - rtl/cve2_prefetch_buffer.sv
+  - rtl/cve2_if_stage.sv
   - rtl/cve2_load_store_unit.sv
+  - rtl/cve2_pmp.sv
+  - rtl/cve2_register_file_ff.sv
   - rtl/cve2_wb.sv
   - rtl/cve2_core.sv
   - rtl/cve2_controller.sv

@@ -1,7 +1,7 @@
 name: taxi_axi_register
 namespace: fpganinja
 version: master
-description: Registers AXI4 write and read channels with configurable buffering stages
+description: Registers AXI4 write and read channels with configurable buffer types
   between slave and master interfaces.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft

@@ -1,8 +1,8 @@
 name: taxi_ram_1rw
 namespace: fpganinja
 version: master
-description: Single-port RAM with simultaneous read and write capability, supporting
-  optional write strobes for selective byte enables.
+description: Single-port RAM with configurable width supporting simultaneous read
+  and write operations with optional write strobe control.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

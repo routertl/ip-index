@@ -1,8 +1,8 @@
 name: axi_to_axi_lite
 namespace: pulp-platform
 version: master
-description: Converts AXI4+ATOP transactions to AXI4-Lite protocol while managing
-  burst splitting and transaction ordering.
+description: Converts full AXI4+ATOP protocol transactions to AXI4-Lite protocol with
+  configurable burst handling and transaction buffering.
 license: Apache-2.0
 license_class: permissive
 source:

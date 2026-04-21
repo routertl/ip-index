@@ -1,8 +1,8 @@
 name: axi_xp_intf
 namespace: pulp-platform
 version: master
-description: AXI crossbar interconnect that routes transactions from multiple slave
-  ports to master ports based on address mapping with atomic operation support.
+description: AXI crossbar interconnect routing transactions from multiple slave ports
+  to master ports based on address mapping rules.
 license: Apache-2.0
 license_class: permissive
 source:

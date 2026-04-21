@@ -1,9 +1,8 @@
 name: taxi_axi_cdma
 namespace: fpganinja
 version: master
-description: AXI coherent DMA engine that transfers data between memory locations
-  using AXI master interfaces with configurable burst lengths and unaligned transfer
-  support.
+description: AXI DMA controller that transfers data between memory locations based
+  on descriptor commands with configurable burst length and alignment support.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

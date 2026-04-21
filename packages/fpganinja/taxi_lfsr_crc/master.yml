@@ -1,8 +1,8 @@
 name: taxi_lfsr_crc
 namespace: fpganinja
 version: master
-description: Computes a configurable CRC checksum over streaming data using a parameterized
-  LFSR polynomial.
+description: Computes a cyclic redundancy check (CRC) on streaming input data using
+  a configurable linear feedback shift register.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

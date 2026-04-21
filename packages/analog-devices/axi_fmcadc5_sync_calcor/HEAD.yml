@@ -1,0 +1,29 @@
+name: axi_fmcadc5_sync_calcor
+namespace: analog-devices
+version: HEAD
+description: Synchronizes and calibrates dual ADC data streams with per-channel offset
+  and scale correction.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/xilinx/common/ad_mul.v
+  - library/axi_fmcadc5_sync/axi_fmcadc5_sync_calcor.v
+tags:
+- amba
+- axi
+- bus
+- calcor
+- fmcadc5
+- sync
+- synchronizer
+- synchronous
+role: component

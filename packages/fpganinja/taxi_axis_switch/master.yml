@@ -1,8 +1,8 @@
 name: taxi_axis_switch
 namespace: fpganinja
 version: master
-description: Routes multiple AXI Stream inputs to outputs based on tdest field with
-  configurable arbitration and optional register stages.
+description: Switches multiple AXI Stream inputs to multiple outputs based on tdest
+  routing configuration and arbitration.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -1,0 +1,32 @@
+name: axi_intr_monitor
+namespace: analog-devices
+version: HEAD
+description: AXI4-Lite with interrupt support
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/up_axi.v
+  - library/axi_intr_monitor/axi_intr_monitor.v
+tags:
+- amba
+- axi
+- bus
+- intr
+- monitor
+role: top
+components:
+- ad_ip_jesd204_tpl_adc
+- ad_ip_jesd204_tpl_adc_regmap
+- ad_ip_jesd204_tpl_dac_regmap
+- axi_dmac_regmap
+- i3c_controller_regmap
+- up_axi

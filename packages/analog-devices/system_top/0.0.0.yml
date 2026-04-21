@@ -1,8 +1,8 @@
 name: system_top
 namespace: analog-devices
 version: 0.0.0
-description: Top-level system module providing GPIO control, differential clock/data
-  signaling, and SPI communication interface.
+description: Top-level system module interfacing GPIO, differential clock/data signals,
+  and SPI communication.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

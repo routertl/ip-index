@@ -1,8 +1,7 @@
 name: taxi_axi_ram_if_rd
 namespace: fpganinja
 version: master
-description: Bridges AXI4 read requests to RAM interface, translating slave read commands
-  and responses.
+description: Converts AXI4 read transactions to RAM interface commands and responses.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -1,8 +1,8 @@
 name: axi_multicut
 namespace: pulp-platform
 version: master
-description: Inserts configurable pipeline stages on AXI bus to break combinational
-  paths between slave and master ports.
+description: Inserts multiple pipeline stages on AXI write/read channels to break
+  timing paths.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: addr_decode
 namespace: pulp-platform
 version: master
-description: Decodes an input address against a rule set to output a matching index
-  with validity flags.
+description: Decodes an input address against a set of rules to output a matching
+  index or error flag.
 license: Apache-2.0
 license_class: permissive
 source:

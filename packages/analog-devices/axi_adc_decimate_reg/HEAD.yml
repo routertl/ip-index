@@ -1,0 +1,31 @@
+name: axi_adc_decimate_reg
+namespace: analog-devices
+version: HEAD
+description: Provides register interface for ADC decimation configuration including
+  ratio, filtering, and correction parameters.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/up_xfer_cntrl.v
+  - library/axi_adc_decimate/axi_adc_decimate_reg.v
+tags:
+- adc
+- amba
+- analog
+- axi
+- bus
+- converter
+- decimate
+- digital
+- reg
+- register
+role: component

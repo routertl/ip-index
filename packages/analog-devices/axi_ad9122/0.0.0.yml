@@ -1,8 +1,8 @@
 name: axi_ad9122
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite interface for AD9122 dual-channel DAC with DDS and SERDES/DDR
-  output control.
+description: AXI4-Lite controller for the AD9122 dual-channel DAC with DDS and configurable
+  SERDES/DDR output interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

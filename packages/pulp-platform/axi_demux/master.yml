@@ -2,7 +2,7 @@ name: axi_demux
 namespace: pulp-platform
 version: master
 description: Demultiplexes a single AXI slave port to multiple AXI master ports based
-  on address-based routing signals.
+  on address-based selection signals.
 license: Apache-2.0
 license_class: permissive
 source:

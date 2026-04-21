@@ -1,8 +1,8 @@
 name: avalon_source
 namespace: vunit
 version: master
-description: Generates Avalon streaming source interface with ready/valid handshake,
-  framing signals, and configurable data output.
+description: Generates Avalon streaming data with ready/valid handshake, frame boundaries,
+  and configurable payload width.
 license: ''
 license_class: unknown
 source:

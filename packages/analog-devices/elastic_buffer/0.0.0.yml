@@ -1,8 +1,8 @@
 name: elastic_buffer
 namespace: analog-devices
 version: 0.0.0
-description: Buffers data between clock domains, converting input width to output
-  width with programmable storage.
+description: Buffers data with configurable width conversion and optional asynchronous
+  clock domain crossing.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

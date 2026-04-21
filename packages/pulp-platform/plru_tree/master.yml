@@ -1,8 +1,8 @@
 name: plru_tree
 namespace: pulp-platform
 version: master
-description: Tracks entry usage to identify and output the least recently used entry
-  among multiple cache/buffer slots.
+description: Implements a pseudo-least-recently-used (PLRU) replacement policy tracker
+  that identifies the least recently used cache entry among multiple entries.
 license: Apache-2.0
 license_class: permissive
 source:

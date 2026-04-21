@@ -2,7 +2,7 @@ name: axi_ad9739a
 namespace: analog-devices
 version: 0.0.0
 description: AXI4-Lite controlled interface for the AD9739A dual-channel 14-bit DAC
-  with DDS and programmable data path.
+  with DMA integration and optional DDS/CORDIC signal generation.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

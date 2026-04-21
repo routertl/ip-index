@@ -2,7 +2,7 @@ name: axi_lite_mux_intf
 namespace: pulp-platform
 version: master
 description: Multiplexes multiple AXI4-Lite master ports onto a single slave port
-  with configurable transaction queuing and pipeline registers.
+  with configurable transaction buffering and pipeline stages.
 license: Apache-2.0
 license_class: permissive
 source:

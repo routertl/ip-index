@@ -1,0 +1,25 @@
+name: fmcomms11_spi
+namespace: analog-devices
+version: HEAD
+description: Multiplexes SPI communication between a 4-wire interface and multiple
+  3-wire slave devices on the FMCOMMS11 board.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - projects/fmcomms11/common/fmcomms11_spi.v
+tags:
+- fmcomms11
+- interface
+- peripheral
+- serial
+- spi
+role: top

@@ -1,8 +1,8 @@
 name: taxi_mac_ctrl_tx
 namespace: fpganinja
 version: master
-description: Multiplexes MAC control frames into Ethernet transmit stream while handling
-  pause requests and forwarding regular traffic.
+description: Transmit MAC control frame controller that arbitrates between normal
+  AXI4-Stream traffic and MAC control frames with pause support.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

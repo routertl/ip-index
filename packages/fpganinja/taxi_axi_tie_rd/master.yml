@@ -1,7 +1,7 @@
 name: taxi_axi_tie_rd
 namespace: fpganinja
 version: master
-description: Bridges AXI4 read channels between slave and master interfaces.
+description: Bridges AXI4 read channels from a slave interface to a master interface.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

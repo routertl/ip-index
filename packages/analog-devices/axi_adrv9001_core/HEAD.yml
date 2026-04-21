@@ -1,0 +1,57 @@
+name: axi_adrv9001_core
+namespace: analog-devices
+version: HEAD
+description: AXI-based RF transceiver interface controller for AD9001 supporting dual-channel
+  RX/TX with configurable clocking, DDS, and TDD modes.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_datafmt.v
+  - library/xilinx/common/ad_dcfilter.v
+  - library/xilinx/common/ad_mul.v
+  - library/common/ad_iqcor.v
+  - library/common/ad_pngen.v
+  - library/common/ad_pnmon.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
+  - library/common/up_adc_channel.v
+  - library/axi_adrv9001/axi_adrv9001_rx_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_adc_common.v
+  - library/axi_adrv9001/axi_adrv9001_rx.v
+  - library/axi_adrv9001/axi_adrv9001_sync_ctrl.v
+  - library/common/ad_addsub.v
+  - library/common/ad_tdd_control.v
+  - library/common/up_tdd_cntrl.v
+  - library/axi_adrv9001/axi_adrv9001_tdd.v
+  - library/common/ad_dds_sine.v
+  - library/common/ad_dds_cordic_pipe.v
+  - library/common/ad_dds_sine_cordic.v
+  - library/common/ad_dds_1.v
+  - library/common/ad_dds_2.v
+  - library/common/ad_dds.v
+  - library/common/up_dac_channel.v
+  - library/axi_adrv9001/axi_adrv9001_tx_channel.v
+  - library/util_cdc/sync_bits.v
+  - library/common/up_dac_common.v
+  - library/axi_adrv9001/axi_adrv9001_tx.v
+  - library/common/up_delay_cntrl.v
+  - library/common/util_ext_sync.v
+  - library/axi_adrv9001/axi_adrv9001_core.v
+tags:
+- adrv9001
+- amba
+- axi
+- bus
+- core
+role: component

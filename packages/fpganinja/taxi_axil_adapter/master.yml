@@ -1,8 +1,8 @@
 name: taxi_axil_adapter
 namespace: fpganinja
 version: master
-description: Bridges AXI4-Lite slave and master interfaces, adapting protocol signals
-  between them.
+description: Bridges AXI4-Lite slave interface to master interface with clock and
+  reset control.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

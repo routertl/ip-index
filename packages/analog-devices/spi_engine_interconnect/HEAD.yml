@@ -1,0 +1,25 @@
+name: spi_engine_interconnect
+namespace: analog-devices
+version: HEAD
+description: SPI with ready/valid handshake and configurable parameters
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/spi_engine/spi_engine_interconnect/spi_engine_interconnect.v
+tags:
+- engine
+- interconnect
+- interface
+- peripheral
+- serial
+- spi
+role: top

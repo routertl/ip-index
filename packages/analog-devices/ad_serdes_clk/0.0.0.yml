@@ -1,8 +1,8 @@
 name: ad_serdes_clk
 namespace: analog-devices
 version: 0.0.0
-description: Generates and conditions differential/single-ended input clock for SERDES
-  operation with configurable division and MM...
+description: Generates and conditions differential/single-ended input clock with programmable
+  MMCM/BUFR-based multiplication, division, and DRP configuration interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

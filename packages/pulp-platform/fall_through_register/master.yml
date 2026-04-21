@@ -2,7 +2,7 @@ name: fall_through_register
 namespace: pulp-platform
 version: master
 description: Buffers data with ready/valid handshake protocol, passing through when
-  not full or immediately forwarding when output is ready.
+  output is ready.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: ad_dds_2
 namespace: analog-devices
 version: 0.0.0
-description: Generates two independent DDS outputs with configurable phase and amplitude,
-  combining them into a single data stream.
+description: Generates two phase-shifted DDS output signals that are scaled and combined
+  into a single data stream.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

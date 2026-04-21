@@ -1,8 +1,8 @@
 name: axi_cut_intf
 namespace: pulp-platform
 version: master
-description: Decouples AXI master and slave ports with optional pipeline registers
-  on individual channels.
+description: Cuts AXI transaction paths with optional register stages to decouple
+  master and slave timing domains.
 license: Apache-2.0
 license_class: permissive
 source:

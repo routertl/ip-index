@@ -1,8 +1,8 @@
 name: axi_to_mem_interleaved
 namespace: pulp-platform
 version: master
-description: Converts AXI4+ATOP transactions to interleaved memory bank requests with
-  configurable data width striping and response buffering.
+description: Converts AXI4+ATOP transactions to interleaved memory bank requests,
+  distributing data across multiple banks with response buffering.
 license: Apache-2.0
 license_class: permissive
 source:

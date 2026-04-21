@@ -2,7 +2,7 @@ name: taxi_arbiter
 namespace: fpganinja
 version: master
 description: Arbitrates access to a shared resource among multiple requesters using
-  configurable priority and blocking schemes.
+  configurable round-robin or priority selection.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
