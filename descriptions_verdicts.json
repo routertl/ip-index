@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "description": "Curator verdicts for catalog entry descriptions. RTL-P2.399. Scanner honours verdict=good entries by emitting locked_text verbatim, skipping every tier. See routertl/docs/internal/ or RTL-P2.399 backlog for the full design.",
+  "entries": {
+    "analog-devices/ad_tdd_control": {
+      "verdict": "good",
+      "locked_text": "Time-division duplex controller generating synchronized transmit and receive path switching signals based on frame timing.",
+      "reviewed_at": "2026-04-21",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during P2.396 rescan."
+    },
+    "analog-devices/axi_dmac_reset_manager": {
+      "verdict": "good",
+      "locked_text": "Cross-domain reset and enable manager for AXI DMA controller request, destination, and source clock domains.",
+      "reviewed_at": "2026-04-21",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during P2.396 rescan."
+    },
+    "analog-devices/hsci_master_regs_regs": {
+      "verdict": "good",
+      "locked_text": "Register bank for the HSCI master controller, exposing configuration and status fields over the processor interface.",
+      "reviewed_at": "2026-04-21",
+      "reviewed_by": "dmazure",
+      "notes": "upstream description was an ASCII register-map dump; rewrote from module role."
+    },
+    "analog-devices/hsci_mlink_ctrl": {
+      "verdict": "good",
+      "locked_text": "High-speed serial link controller coordinating FSM-based link establishment with clock adjustment and alignment.",
+      "reviewed_at": "2026-04-21",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during P2.396 rescan."
+    },
+    "analog-devices/up_delay_cntrl": {
+      "verdict": "good",
+      "locked_text": "Configurable delay controller with register-based processor interface for multiple delay channels and DRP readback.",
+      "reviewed_at": "2026-04-21",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during P2.396 rescan."
+    }
+  }
+}
