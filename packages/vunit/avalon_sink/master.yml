@@ -1,6 +1,8 @@
 name: avalon_sink
 namespace: vunit
 version: master
+commit_sha: a1dfc8259d2340ebc2237756fed8892475ce3f4c
+published_at: '2026-04-13T22:09:26+02:00'
 description: Receives streaming data via Avalon interface with ready/valid handshake,
   packet framing signals, and configurable data width.
 license: ''
@@ -10,6 +12,7 @@ source:
   url: https://github.com/VUnit/vunit.git
   tag: master
   ip_yml_path: .
+  resolved_commit: a1dfc8259d2340ebc2237756fed8892475ce3f4c
 routertl_compat:
   language: vhdl-2008
   library: vunit_lib

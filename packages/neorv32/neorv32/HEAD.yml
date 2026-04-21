@@ -1,6 +1,8 @@
 name: neorv32
 namespace: neorv32
 version: HEAD
+commit_sha: d6260ef5a453a56259285b2b37df19a79517572b
+published_at: '2026-04-13T07:30:18+02:00'
 description: The NEORV32 Processor is a **customizable microcontroller-like system
   on chip (SoC)** built around the NEORV32 [RISC-V](https://riscv.org/) CPU that is
   written in **platform-independent VHDL**.

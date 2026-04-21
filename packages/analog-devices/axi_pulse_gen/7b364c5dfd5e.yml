@@ -1,0 +1,99 @@
+name: axi_pulse_gen
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: AXI4-Lite generator
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_rst.v
+  - library/util_cdc/sync_bits.v
+  - library/util_cdc/sync_data.v
+  - library/util_cdc/sync_event.v
+  - library/axi_pulse_gen/axi_pulse_gen_regmap.v
+  - library/common/up_axi.v
+  - library/common/util_pulse_gen.v
+  - library/axi_pulse_gen/axi_pulse_gen.v
+tags:
+- amba
+- axi
+- bus
+- gen
+- pulse
+role: top
+components:
+- ad408x_phy
+- ad_ip_jesd204_tpl_adc
+- ad_ip_jesd204_tpl_adc_regmap
+- ad_ip_jesd204_tpl_dac_regmap
+- ad_rst
+- ad_serdes_in
+- axi_ad35xxr_core
+- axi_ad9122_core
+- axi_ad9361_rx
+- axi_ad9361_tx
+- axi_ad9434_core
+- axi_ad9434_if
+- axi_ad9684_if
+- axi_ad9739a_core
+- axi_ad9740_core
+- axi_ad9783_core
+- axi_ad9963_rx
+- axi_ad9963_tx
+- axi_ada4355_if
+- axi_ada4355_regmap
+- axi_adrv9001_core
+- axi_adrv9001_rx
+- axi_adrv9001_sync_ctrl
+- axi_adrv9001_tx
+- axi_dmac_burst_memory
+- axi_dmac_ext_sync
+- axi_dmac_regmap
+- axi_dmac_regmap_request
+- axi_dmac_reset_manager
+- axi_dmac_response_manager
+- axi_dmac_transfer
+- axi_gpreg_clock_mon
+- axi_laser_driver_regmap
+- axi_logic_analyzer_reg
+- axi_pulse_gen_regmap
+- axi_pwm_gen_regmap
+- axi_tdd_regmap
+- axi_xcvrlb_1
+- data_offload_fsm
+- data_offload_regmap
+- dmac_sg
+- hsci_master_top
+- i3c_controller_regmap
+- jesd204_tx_ctrl
+- jesd204_tx_gearbox
+- jesd204_up_ilas_mem
+- jesd204_up_rx
+- jesd204_up_rx_lane
+- jesd204_up_sysref
+- jesd204_up_tx
+- request_arb
+- sync_bits
+- sync_data
+- sync_event
+- up_adc_common
+- up_axi
+- up_clkgen
+- up_dac_common
+- up_delay_cntrl
+- up_hdmi_rx
+- up_hdmi_tx
+- util_adxcvr_xch
+- util_axis_fifo
+- util_axis_fifo_asym
+- util_pulse_gen

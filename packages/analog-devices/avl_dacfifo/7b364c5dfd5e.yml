@@ -1,0 +1,56 @@
+name: avl_dacfifo
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: FIFO buffer with ready/valid handshake and configurable parameters
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_b2g.v
+  - library/common/ad_g2b.v
+  - library/common/ad_mem.v
+  - library/intel/avl_dacfifo/avl_dacfifo_rd.v
+  - library/intel/avl_dacfifo/avl_dacfifo_wr.v
+  - library/common/ad_mem_asym.v
+  - library/util_dacfifo/util_dacfifo_bypass.v
+  - library/intel/avl_dacfifo/avl_dacfifo.v
+tags:
+- avl
+- dacfifo
+role: top
+components:
+- ad_b2g
+- ad_g2b
+- ad_mem
+- ad_mem_asym
+- avl_dacfifo_rd
+- avl_dacfifo_wr
+- axi_ad9625_if
+- axi_ad9671_if
+- axi_adcfifo_dma
+- axi_adcfifo_wr
+- axi_dacfifo_address_buffer
+- axi_dacfifo_rd
+- axi_dacfifo_wr
+- axi_dmac_burst_memory
+- axi_dmac_regmap
+- axi_dmac_regmap_request
+- axi_dmac_response_manager
+- axi_dmac_transfer
+- axi_hdmi_tx_core
+- dmac_sg
+- i3c_controller_regmap
+- request_arb
+- util_axis_fifo
+- util_axis_fifo_asym
+- util_dacfifo_bypass

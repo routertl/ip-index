@@ -1,6 +1,8 @@
 name: rx_cap_reg
 namespace: analog-devices
 version: HEAD
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
 description: WISHBONE SPDIF IP Core                                       ----
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive

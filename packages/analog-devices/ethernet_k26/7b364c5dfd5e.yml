@@ -1,0 +1,24 @@
+name: ethernet_k26
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: This file repackages Corundum MQNIC Core AXI with the sole purpose of
+  providing it as an IP Core. The original file can be refereed
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/corundum/ethernet/k26/ethernet_k26.v
+tags:
+- ethernet
+- k26
+role: top

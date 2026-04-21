@@ -1,0 +1,28 @@
+name: axi_ad9265_if
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: Converts differential AD9265 ADC interface signals to single-ended with
+  configurable I/O delays and clock domain adaptation.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/xilinx/common/ad_data_clk.v
+  - library/xilinx/common/ad_data_in.v
+  - library/axi_ad9265/axi_ad9265_if.v
+tags:
+- ad9265
+- amba
+- axi
+- bus
+role: component

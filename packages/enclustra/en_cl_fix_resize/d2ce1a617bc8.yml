@@ -1,0 +1,33 @@
+name: en_cl_fix_resize
+namespace: enclustra
+version: d2ce1a617bc8
+commit_sha: d2ce1a617bc8ba466244a4e500a6edbeea6dba7a
+published_at: '2026-04-13T08:56:36+02:00'
+description: Resizes fixed-point data between formats with optional rounding, saturation,
+  and metadata pass-through.
+license: MIT
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/enclustra/en_cl_fix.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: d2ce1a617bc8ba466244a4e500a6edbeea6dba7a
+routertl_compat:
+  language: vhdl-2008
+  library: en_tb
+  files:
+  - hdl/en_cl_fix_private_pkg.vhd
+  - hdl/en_cl_fix_pkg.vhd
+  - hdl/en_cl_fix_round.vhd
+  - hdl/en_cl_fix_saturate.vhd
+  - hdl/en_cl_fix_resize.vhd
+tags:
+- cl
+- en
+- fix
+- resize
+role: top
+components:
+- en_cl_fix_round
+- en_cl_fix_saturate

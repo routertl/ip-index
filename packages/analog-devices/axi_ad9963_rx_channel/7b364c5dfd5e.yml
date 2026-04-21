@@ -1,0 +1,39 @@
+name: axi_ad9963_rx_channel
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: Receives and processes AD9963 ADC data with DC filtering, IQ correction,
+  and scale correction capabilities.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_datafmt.v
+  - library/xilinx/common/ad_dcfilter.v
+  - library/xilinx/common/ad_mul.v
+  - library/common/ad_iqcor.v
+  - library/common/ad_pnmon.v
+  - library/axi_ad9963/axi_ad9963_rx_pnmon.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
+  - library/common/up_adc_channel.v
+  - library/axi_ad9963/axi_ad9963_rx_channel.v
+tags:
+- ad9963
+- amba
+- axi
+- bus
+- channel
+- receive
+- receiver
+- rx
+role: component

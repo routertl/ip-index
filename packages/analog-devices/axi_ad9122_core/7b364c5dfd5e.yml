@@ -1,0 +1,40 @@
+name: axi_ad9122_core
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: Axi IP core with ready/valid handshake and memory interface
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/xilinx/common/ad_mul.v
+  - library/common/ad_dds_sine.v
+  - library/common/ad_dds_cordic_pipe.v
+  - library/common/ad_dds_sine_cordic.v
+  - library/common/ad_dds_1.v
+  - library/common/ad_dds_2.v
+  - library/common/ad_dds.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_dac_channel.v
+  - library/axi_ad9122/axi_ad9122_channel.v
+  - library/common/ad_rst.v
+  - library/common/up_clock_mon.v
+  - library/common/up_xfer_status.v
+  - library/common/up_dac_common.v
+  - library/axi_ad9122/axi_ad9122_core.v
+tags:
+- ad9122
+- amba
+- axi
+- bus
+- core
+role: component

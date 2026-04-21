@@ -1,0 +1,29 @@
+name: axi_dmac_reset_manager
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: Manages reset and enable signals across multiple clock domains for AXI
+  DMA controller request, destination, source, a...
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/util_cdc/sync_bits.v
+  - library/axi_dmac/axi_dmac_reset_manager.v
+tags:
+- amba
+- axi
+- bus
+- dmac
+- manager
+- reset
+role: component

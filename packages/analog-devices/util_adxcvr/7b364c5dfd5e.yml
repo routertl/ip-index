@@ -1,0 +1,68 @@
+name: util_adxcvr
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: Util IP core with memory interface and configurable parameters
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/util_cdc/sync_bits.v
+  - library/jesd204/jesd204_common/sync_header_align.v
+  - library/xilinx/util_adxcvr/util_adxcvr_xch.v
+  - library/xilinx/util_adxcvr/util_adxcvr_xcm.v
+  - library/xilinx/util_adxcvr/util_adxcvr.v
+tags:
+- adxcvr
+- util
+role: top
+components:
+- ad408x_phy
+- ad_serdes_in
+- axi_ad9434_if
+- axi_ad9684_if
+- axi_ada4355_if
+- axi_ada4355_regmap
+- axi_adrv9001_core
+- axi_adrv9001_tx
+- axi_dmac_burst_memory
+- axi_dmac_ext_sync
+- axi_dmac_regmap
+- axi_dmac_regmap_request
+- axi_dmac_reset_manager
+- axi_dmac_response_manager
+- axi_dmac_transfer
+- axi_laser_driver_regmap
+- axi_pulse_gen_regmap
+- axi_pwm_gen_regmap
+- axi_tdd_regmap
+- axi_xcvrlb_1
+- data_offload_fsm
+- data_offload_regmap
+- dmac_sg
+- i3c_controller_regmap
+- jesd204_tx_ctrl
+- jesd204_tx_gearbox
+- jesd204_up_ilas_mem
+- jesd204_up_rx
+- jesd204_up_rx_lane
+- jesd204_up_sysref
+- jesd204_up_tx
+- request_arb
+- sync_bits
+- sync_data
+- sync_event
+- sync_header_align
+- util_adxcvr_xch
+- util_adxcvr_xcm
+- util_axis_fifo
+- util_axis_fifo_asym

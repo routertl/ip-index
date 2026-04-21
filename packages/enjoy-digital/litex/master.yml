@@ -1,6 +1,8 @@
 name: litex
 namespace: enjoy-digital
 version: master
+commit_sha: 143049d0b5ce00c3461ea9500c77d9636dd1e7a5
+published_at: '2026-04-20T22:10:13+02:00'
 description: The LiteX framework provides a convenient and efficient infrastructure
   to create FPGA Cores/SoCs, to explore various digital design architectures and create
   [full FPGA based  systems](https://github.com/enjoy-digital/litex/wiki/Projects).
@@ -11,6 +13,7 @@ source:
   url: https://github.com/enjoy-digital/litex.git
   tag: master
   ip_yml_path: .
+  resolved_commit: 143049d0b5ce00c3461ea9500c77d9636dd1e7a5
 routertl_compat:
   language: verilog
   library: work

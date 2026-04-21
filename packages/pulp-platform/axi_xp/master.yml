@@ -1,6 +1,8 @@
 name: axi_xp
 namespace: pulp-platform
 version: master
+commit_sha: 3fafe2496243a88cfa2a778921f0e7f71a6a2d9d
+published_at: '2026-04-15T10:26:08+02:00'
 description: AXI4+ATOP crossbar interconnect that routes transactions from multiple
   slave ports to master ports based on configurable address maps and connectivity.
 license: Apache-2.0
@@ -10,6 +12,7 @@ source:
   url: https://github.com/pulp-platform/axi.git
   tag: master
   ip_yml_path: .
+  resolved_commit: 3fafe2496243a88cfa2a778921f0e7f71a6a2d9d
 routertl_compat:
   language: systemverilog
   library: work

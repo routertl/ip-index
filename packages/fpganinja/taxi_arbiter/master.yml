@@ -1,6 +1,8 @@
 name: taxi_arbiter
 namespace: fpganinja
 version: master
+commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
+published_at: '2026-04-06T23:59:16-07:00'
 description: Arbitrates access to a shared resource among multiple requesters using
   configurable round-robin or priority selection.
 license: CERN-OHL-S-2.0
@@ -10,6 +12,7 @@ source:
   url: https://github.com/fpganinja/taxi.git
   tag: master
   ip_yml_path: .
+  resolved_commit: 1fe508a6bf17edbb29bce9a8477be615b1012789
 routertl_compat:
   language: systemverilog
   library: work

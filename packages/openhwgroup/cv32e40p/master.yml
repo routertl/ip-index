@@ -1,6 +1,8 @@
 name: cv32e40p
 namespace: openhwgroup
 version: master
+commit_sha: 6033d2b1be3295ec774d17ac4cf226faacfdeb08
+published_at: '2026-04-17T09:34:04-04:00'
 description: CV32E40P is a small and efficient, 32-bit, in-order RISC-V core with
   a 4-stage pipeline that implements the RV32IM\[F|Zfinx\]C instruction set architecture,
   and the PULP custom extensions for achieving higher code density, performance, a...
@@ -11,6 +13,7 @@ source:
   url: https://github.com/openhwgroup/cv32e40p.git
   tag: master
   ip_yml_path: .
+  resolved_commit: 6033d2b1be3295ec774d17ac4cf226faacfdeb08
 routertl_compat:
   language: systemverilog
   library: work

@@ -1,0 +1,37 @@
+name: hsci_master_top
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: SPI master with configurable parameters
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - library/axi_hsci/hsci_master_regs_defs.vh
+  - library/common/ad_rst.v
+  - library/axi_hsci/axi4_lite.sv
+  - library/axi_hsci/hsci_master_axi_slave.sv
+  - library/axi_hsci/hsci_master_regs_regs.sv
+  - library/axi_hsci/hsci_master_logic.sv
+  - library/axi_hsci/hsci_mdec.sv
+  - library/axi_hsci/hsci_menc.sv
+  - library/axi_hsci/hsci_mfrm_det.v
+  - library/axi_hsci/lfsr15_8.v
+  - library/axi_hsci/hsci_mlink_ctrl.sv
+  - library/axi_hsci/hsci_mcore.v
+  - library/axi_hsci/pulse_sync.v
+  - library/axi_hsci/hsci_master_top.sv
+tags:
+- hsci
+- master
+- top
+role: component

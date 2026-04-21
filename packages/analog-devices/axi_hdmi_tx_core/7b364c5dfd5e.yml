@@ -1,0 +1,35 @@
+name: axi_hdmi_tx_core
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: HDMI transmitter core that converts video data to multiple output interface
+  formats (16/24/36-bit HDMI and VGA) with sync control.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_csc.v
+  - library/common/ad_csc_RGB2CrYCb.v
+  - library/common/ad_mem.v
+  - library/common/ad_ss_444to422.v
+  - library/axi_hdmi_tx/axi_hdmi_tx_es.v
+  - library/axi_hdmi_tx/axi_hdmi_tx_core.v
+tags:
+- amba
+- axi
+- bus
+- core
+- hdmi
+- transmit
+- transmitter
+- tx
+role: component

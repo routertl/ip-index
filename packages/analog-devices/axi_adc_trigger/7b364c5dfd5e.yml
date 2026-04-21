@@ -1,0 +1,90 @@
+name: axi_adc_trigger
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: Generates ADC trigger signals based on configurable conditions and provides
+  AXI-Lite control interface for dual-channel data acquisition.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/up_xfer_cntrl.v
+  - library/axi_adc_trigger/axi_adc_trigger_reg.v
+  - library/common/up_axi.v
+  - library/axi_adc_trigger/axi_adc_trigger.v
+tags:
+- adc
+- amba
+- analog
+- axi
+- bus
+- converter
+- digital
+- trigger
+role: top
+components:
+- ad_ip_jesd204_tpl_adc
+- ad_ip_jesd204_tpl_adc_regmap
+- ad_ip_jesd204_tpl_dac_regmap
+- axi_ad35xxr_channel
+- axi_ad35xxr_core
+- axi_ad485x_16b_channel
+- axi_ad485x_20b_channel
+- axi_ad9122_channel
+- axi_ad9122_core
+- axi_ad9265_channel
+- axi_ad9361_rx
+- axi_ad9361_rx_channel
+- axi_ad9361_tdd
+- axi_ad9361_tx
+- axi_ad9361_tx_channel
+- axi_ad9434_core
+- axi_ad9467_channel
+- axi_ad9625_channel
+- axi_ad9671_channel
+- axi_ad9684_channel
+- axi_ad9739a_channel
+- axi_ad9739a_core
+- axi_ad9740_channel
+- axi_ad9740_core
+- axi_ad9783_channel
+- axi_ad9783_core
+- axi_ad9963_rx
+- axi_ad9963_rx_channel
+- axi_ad9963_tx
+- axi_ad9963_tx_channel
+- axi_adaq8092_channel
+- axi_adc_decimate_reg
+- axi_adc_trigger_reg
+- axi_adrv9001_core
+- axi_adrv9001_rx
+- axi_adrv9001_rx_channel
+- axi_adrv9001_sync_ctrl
+- axi_adrv9001_tdd
+- axi_adrv9001_tx
+- axi_adrv9001_tx_channel
+- axi_dac_interpolate_reg
+- axi_dmac_regmap
+- axi_logic_analyzer_reg
+- axi_ltc2387_channel
+- axi_pulsar_lvds_channel
+- i3c_controller_regmap
+- up_ad5766_sequencer
+- up_adc_channel
+- up_adc_common
+- up_axi
+- up_dac_channel
+- up_dac_common
+- up_hdmi_rx
+- up_hdmi_tx
+- up_tdd_cntrl
+- up_xfer_cntrl

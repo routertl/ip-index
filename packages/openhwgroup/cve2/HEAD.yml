@@ -1,6 +1,8 @@
 name: cve2
 namespace: openhwgroup
 version: HEAD
+commit_sha: e35390a7754f4e9acbce22840835a7a0f045ddc7
+published_at: '2026-04-03T11:00:29-04:00'
 description: CVE2 is a class of 2-stage pipeline OpenHW Foundation cores. Currently,
   the only core in this class is the CV32E20. CV32E20 is a fork of the [Ibex](https://github.com/lowRISC/ibex)
   core.

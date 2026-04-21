@@ -1,6 +1,8 @@
 name: olo_axi_master_simple
 namespace: open-logic
 version: 4.4.1
+commit_sha: d1407a7427d9201a7bcd8c37749ec083b13006dc
+published_at: '2026-03-10T06:51:30+01:00'
 description: 'This entity implements a simple AXI master. Simple means: It does not
   support any unaligned reads/writes and it does not do any width conversions.'
 license: ''
@@ -10,6 +12,7 @@ source:
   url: https://github.com/open-logic/open-logic.git
   tag: 4.4.1
   ip_yml_path: .
+  resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
   language: vhdl-2008-relaxed
   library: olo

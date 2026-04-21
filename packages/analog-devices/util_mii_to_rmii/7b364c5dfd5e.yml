@@ -1,0 +1,33 @@
+name: util_mii_to_rmii
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: Converts MII (4-bit parallel) Ethernet interface to RMII (2-bit parallel)
+  for reduced-pin PHY connectivity.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/util_mii_to_rmii/mac_phy_link.v
+  - library/util_mii_to_rmii/phy_mac_link.v
+  - library/util_mii_to_rmii/util_mii_to_rmii.v
+tags:
+- independent
+- interface
+- media
+- mii
+- rmii
+- util
+role: top
+components:
+- mac_phy_link
+- phy_mac_link

@@ -1,6 +1,8 @@
 name: boxcar
 namespace: pulp-platform
 version: master
+commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
+published_at: '2026-04-17T14:02:22+00:00'
 description: This module can be used to generate any mask that can be obtained
 license: Apache-2.0
 license_class: permissive
@@ -9,6 +11,7 @@ source:
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
   ip_yml_path: .
+  resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
   language: systemverilog
   library: work

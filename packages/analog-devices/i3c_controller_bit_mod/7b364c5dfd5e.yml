@@ -1,0 +1,28 @@
+name: i3c_controller_bit_mod
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: 'Modulates the SDA and SCL lanes. SCL high time is fixed at 40ns in I3C
+  mode: * 4 clock cycles at 100MHz clk. * 2 clock cycles at 50MHz clk. I3C Open drain
+  is 1.5625MHz,while I2C speed depends on I2C_MOD, e.g.: * I2C_MOD = 0 : 1.'
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/i3c_controller/i3c_controller_core/i3c_controller_bit_mod.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_bit_mod.v
+tags:
+- bit
+- controller
+- i3c
+- mod
+role: component

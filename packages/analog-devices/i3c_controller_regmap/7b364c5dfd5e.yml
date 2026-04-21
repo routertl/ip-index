@@ -1,0 +1,33 @@
+name: i3c_controller_regmap
+namespace: analog-devices
+version: 7b364c5dfd5e
+commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+published_at: '2026-04-15T16:15:19+03:00'
+description: AXI4-Lite controller with SPI interface and ready/valid handshake
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
+  - library/common/ad_mem_dual.v
+  - library/common/ad_rst.v
+  - library/util_cdc/sync_bits.v
+  - library/common/up_axi.v
+  - library/common/ad_mem.v
+  - library/util_cdc/sync_gray.v
+  - library/util_axis_fifo/util_axis_fifo_address_generator.v
+  - library/util_axis_fifo/util_axis_fifo.v
+  - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.v
+tags:
+- controller
+- i3c
+- regmap
+role: component
