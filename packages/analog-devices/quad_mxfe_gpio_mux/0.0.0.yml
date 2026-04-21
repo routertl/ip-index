@@ -1,8 +1,8 @@
 name: quad_mxfe_gpio_mux
 namespace: analog-devices
 version: 0.0.0
-description: Multiplexes GPIO and synchronization signals across four MXFE (Mixed-Signal
-  Front-End) devices.
+description: Multiplexes GPIO and synchronization signals across four MXFE mixed-signal
+  front-end devices.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

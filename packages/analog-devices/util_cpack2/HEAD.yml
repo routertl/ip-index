@@ -1,8 +1,8 @@
 name: util_cpack2
 namespace: analog-devices
 version: HEAD
-description: Packs multiple parallel data channels into a serialized output stream
-  with configurable channel count and sample width.
+description: Packs multi-channel sample data from parallel inputs into a serialized
+  output stream with configurable channel and sample widths.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

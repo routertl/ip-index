@@ -1,8 +1,8 @@
 name: axi_logic_analyzer
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite configurable logic analyzer capturing 16-bit data streams with
-  programmable triggering and sampling rate control.
+description: AXI4-Lite controlled logic analyzer with configurable triggering, sampling
+  rates, and dual data path (ADC/DAC) support.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

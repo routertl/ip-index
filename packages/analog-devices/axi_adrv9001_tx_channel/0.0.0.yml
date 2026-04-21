@@ -2,7 +2,7 @@ name: axi_adrv9001_tx_channel
 namespace: analog-devices
 version: 0.0.0
 description: AXI-controlled transmit channel for ADRV9001 RF transceiver with DDS,
-  IQ correction, and data routing capabilities.
+  IQ correction, and data routing.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

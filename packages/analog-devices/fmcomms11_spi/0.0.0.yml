@@ -1,8 +1,8 @@
 name: fmcomms11_spi
 namespace: analog-devices
 version: 0.0.0
-description: Multiplexes SPI communication between a 4-wire interface and multiple
-  3-wire slave devices on the FMCOMMS11 board.
+description: Bridges standard 4-wire SPI to dual-protocol interface supporting 4-wire
+  and 3-wire SPI modes for multi-device FMCOMMS11 RF board control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

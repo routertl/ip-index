@@ -2,7 +2,7 @@ name: axi_ad7616
 namespace: analog-devices
 version: HEAD
 description: AXI4-Lite interface controller for the AD7616 16-channel simultaneous
-  sampling ADC with SPI-like physical data and control interfaces.
+  sampling analog-to-digital converter.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

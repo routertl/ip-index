@@ -1,8 +1,8 @@
 name: axi_hdmi_rx_core
 namespace: analog-devices
 version: HEAD
-description: Receives HDMI video data and converts it to AXI DMA format with synchronization
-  and color space conversion.
+description: Receives and processes HDMI video data, converting it to DMA-compatible
+  format with synchronization monitoring.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

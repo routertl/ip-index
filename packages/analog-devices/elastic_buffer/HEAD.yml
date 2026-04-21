@@ -1,8 +1,8 @@
 name: elastic_buffer
 namespace: analog-devices
 version: HEAD
-description: Buffers data with configurable width conversion and optional asynchronous
-  clock domain crossing.
+description: Buffers variable-width data between asynchronous clock domains with configurable
+  storage and release control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: fmcomms8_spi
 namespace: analog-devices
 version: 0.0.0
-description: Multiplexes SPI communication with shared SDIO line for fmcomms8 RF transceiver
-  control.
+description: Multiplexes SPI communication with configurable chip select for multi-device
+  FMCOMMS8 transceiver control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

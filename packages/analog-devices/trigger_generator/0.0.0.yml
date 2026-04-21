@@ -1,8 +1,8 @@
 name: trigger_generator
 namespace: analog-devices
 version: 0.0.0
-description: Generates trigger signals synchronized to system reference, device clock,
-  or GPIO input with reset control.
+description: Generates trigger pulses based on system reference, device clock, GPIO
+  input, and reset control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: axi_ad485x_lvds
 namespace: analog-devices
 version: 0.0.0
-description: LVDS interface controller for AD485x ADC that deserializes serial data
-  and outputs parallel ADC samples with optional CRC validation.
+description: Interfaces with AD485x LVDS ADC, deserializes serial data from multiple
+  channels, and outputs parallel ADC samples with optional CRC validation.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

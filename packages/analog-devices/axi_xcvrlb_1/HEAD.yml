@@ -1,8 +1,8 @@
 name: axi_xcvrlb_1
 namespace: analog-devices
 version: HEAD
-description: Configurable high-speed transceiver with PLL control and AXI processor
-  interface for serial data transmission and rec...
+description: Transceiver interface module that converts differential high-speed serial
+  signals with PLL locking and status monitoring capabilities.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

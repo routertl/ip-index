@@ -1,8 +1,8 @@
 name: adrv9009zu11eg_spi
 namespace: analog-devices
 version: HEAD
-description: Provides SPI interface bridge for ADRV9009ZU11EG RF transceiver with
-  multi-chip select and bidirectional data support.
+description: SPI interface controller for ADRV9009ZU11EG transceiver with multi-chip
+  select support and bidirectional data line.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

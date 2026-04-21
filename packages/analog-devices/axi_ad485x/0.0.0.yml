@@ -1,8 +1,8 @@
 name: axi_ad485x
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite interface controller for AD485x multi-channel analog-to-digital
-  converter with configurable LVDS/CMOS data lanes.
+description: AXI4-Lite interface controller for AD485x high-speed analog-to-digital
+  converter with configurable LVDS/CMOS lanes and timing control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

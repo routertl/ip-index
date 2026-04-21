@@ -1,8 +1,8 @@
 name: axi_ad9783_core
 namespace: analog-devices
 version: 0.0.0
-description: AXI-based control interface for AD9783 dual-channel DAC with DDS and
-  data path processing.
+description: AXI-based DAC controller for AD9783 that generates dual-channel waveforms
+  with DDS and processes DMA data streams.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: ad_serdes_clk
 namespace: analog-devices
 version: HEAD
-description: Generates and conditions differential/single-ended input clock with programmable
-  MMCM/BUFR-based multiplication, division, and DRP configuration interface.
+description: Generates and distributes differential clock signals with configurable
+  SERDES and MMCM parameters for high-speed serializer/deserializer applications.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: axi_ad9684
 namespace: analog-devices
 version: HEAD
-description: AXI4-Lite controlled interface for AD9684 dual-channel 14-bit ADC with
-  configurable I/O delays and DMA integration.
+description: AXI interface for AD9684 14-bit dual-channel ADC with configurable I/O
+  delays and overflow status monitoring.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

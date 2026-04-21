@@ -1,8 +1,8 @@
 name: ad_ip_jesd204_tpl_dac_channel
 namespace: analog-devices
 version: 0.0.0
-description: JESD204B DAC channel processor with configurable DDS, IQ correction,
-  and data path selection for multi-sample digital-to-analog conversion.
+description: JESD204 DAC channel processor that selects between DMA data, DDS-generated
+  signals, and test patterns, with optional IQ correction and masking.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

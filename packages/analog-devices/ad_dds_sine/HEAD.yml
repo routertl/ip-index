@@ -1,8 +1,7 @@
 name: ad_dds_sine
 namespace: analog-devices
 version: HEAD
-description: Computes sine values from input angles with optional delay-matched data
-  passthrough.
+description: Computes sine values from phase angles with optional delay data passthrough.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

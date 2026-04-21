@@ -1,8 +1,8 @@
 name: axi_ad35xxr_core
 namespace: analog-devices
 version: 0.0.0
-description: AXI-based DAC controller core for AD35xx devices with integrated DDS,
-  supporting dual-channel ADC input and DMA data processing with ready/valid handshaking.
+description: AXI interface core for AD35xx DAC with DDS signal generation, ADC input
+  multiplexing, and DMA data integration.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

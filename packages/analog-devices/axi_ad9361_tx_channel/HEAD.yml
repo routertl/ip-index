@@ -1,8 +1,8 @@
 name: axi_ad9361_tx_channel
 namespace: analog-devices
 version: HEAD
-description: AD9361 transmit channel with DDS, IQ correction, and DMA data processing
-  for DAC output.
+description: Transmit channel for AD9361 RF transceiver with DDS, IQ correction, and
+  AXI control interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

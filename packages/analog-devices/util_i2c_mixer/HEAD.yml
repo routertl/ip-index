@@ -2,7 +2,7 @@ name: util_i2c_mixer
 namespace: analog-devices
 version: HEAD
 description: Multiplexes multiple downstream I2C buses to a single upstream I2C interface
-  using open-drain arbitration.
+  with open-drain line arbitration.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: axi_ada4355
 namespace: analog-devices
 version: HEAD
-description: Interfaces an ADA4355 ADC to an AXI4-Lite bus with data capture and delay
-  control.
+description: Interfaces an ADA4355 ADC to an AXI4-Lite bus, capturing differential
+  ADC data and providing register-based control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

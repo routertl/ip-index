@@ -1,8 +1,8 @@
 name: axi_ltc2387
 namespace: analog-devices
 version: HEAD
-description: AXI interface for the LTC2387 18-bit ADC with dual-lane LVDS input and
-  configurable output resolution.
+description: AXI-based interface controller for LTC2387 high-speed ADC with configurable
+  resolution and dual-lane support.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: util_clkdiv
 namespace: analog-devices
 version: 0.0.0
-description: Selects and divides an input clock based on a selection signal to produce
-  a divided output clock.
+description: Divides or selects between clock signals based on a control input to
+  produce an output clock.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

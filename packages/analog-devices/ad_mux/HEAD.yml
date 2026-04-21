@@ -1,7 +1,7 @@
 name: ad_mux
 namespace: analog-devices
 version: HEAD
-description: Multiplexes one of up to 64 input channels based on selection signal
+description: Multiplexes one of 64 parallel input channels based on a selection signal
   and outputs the selected channel data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive

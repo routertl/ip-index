@@ -1,8 +1,8 @@
 name: hsci_mcore
 namespace: analog-devices
 version: 0.0.0
-description: SPI master controller managing link synchronization, data transfers,
-  and error monitoring with configurable address/t...
+description: FPGA SPI master controller managing data transfers with link synchronization,
+  error detection, and test/capture modes.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

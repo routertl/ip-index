@@ -1,8 +1,8 @@
 name: axi_gpreg_clock_mon
 namespace: analog-devices
 version: HEAD
-description: Monitors clock frequency and provides AXI register interface for read/write
-  access to clock monitoring data.
+description: Monitors and exposes clock frequency metrics via AXI register interface
+  for real-time clock health observation.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

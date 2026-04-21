@@ -1,8 +1,8 @@
 name: util_fir_int
 namespace: analog-devices
 version: 0.0.0
-description: Applies FIR filtering and interpolation to streaming input data, outputting
-  dual-channel results via AXI4-Stream.
+description: Implements an AXI4-Stream FIR interpolation filter with dual-channel
+  16-bit output and configurable interpolation mode.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

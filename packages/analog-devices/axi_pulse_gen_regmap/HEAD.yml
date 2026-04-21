@@ -1,8 +1,8 @@
 name: axi_pulse_gen_regmap
 namespace: analog-devices
 version: HEAD
-description: Provides AXI register interface for configurable pulse generation with
-  width and period control.
+description: AXI register map interface for controlling and configuring a pulse generator
+  with programmable width and period.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

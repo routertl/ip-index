@@ -1,8 +1,8 @@
 name: up_pmod
 namespace: analog-devices
 version: 0.0.0
-description: Manages PMOD interface control and signal frequency configuration via
-  AXI-Lite register access.
+description: PMOD interface controller that manages clock, reset, and frequency configuration
+  via AXI-Lite register access.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

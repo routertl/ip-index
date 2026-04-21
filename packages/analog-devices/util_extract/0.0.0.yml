@@ -1,8 +1,8 @@
 name: util_extract
 namespace: analog-devices
 version: 0.0.0
-description: Extracts and conditionally routes multi-channel packed data based on
-  trigger conditions.
+description: Extracts and conditionally routes multi-channel input data based on trigger
+  signals while maintaining validity flags.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

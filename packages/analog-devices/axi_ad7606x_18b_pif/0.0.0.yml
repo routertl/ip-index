@@ -1,8 +1,8 @@
 name: axi_ad7606x_18b_pif
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces an AD7606x 18-bit ADC to an AXI system via parallel data bus,
-  converting physical signals into multi-channel ADC data with status and CRC validation.
+description: Interfaces AD7606X 18-bit ADC parallel port to AXI, converting physical
+  signals to multi-channel sampled data with CRC validation.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

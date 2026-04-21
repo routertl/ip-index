@@ -1,8 +1,8 @@
 name: axi_ad9739a_core
 namespace: analog-devices
 version: 0.0.0
-description: AXI interface controller for AD9739A DAC with DDS signal generation and
-  data path management.
+description: AXI AD9739A DAC core that generates or processes 16 parallel 16-bit DAC
+  output channels with optional DDS and DMA interface support.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

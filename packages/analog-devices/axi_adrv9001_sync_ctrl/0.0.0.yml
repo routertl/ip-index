@@ -1,8 +1,8 @@
 name: axi_adrv9001_sync_ctrl
 namespace: analog-devices
 version: 0.0.0
-description: AXI register controller for ADRV9001 multi-chip synchronization pulse
-  timing and configuration.
+description: AXI-controlled synchronization controller for ADRV9001 multi-channel
+  RF transceiver with configurable MCS sync pulse timing and delays.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

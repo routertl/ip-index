@@ -1,7 +1,7 @@
 name: util_bsplit
 namespace: analog-devices
 version: HEAD
-description: Splits a multi-channel packed data input into eight separate channel
+description: Splits a multiplexed multi-channel data input into eight separate channel
   outputs.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive

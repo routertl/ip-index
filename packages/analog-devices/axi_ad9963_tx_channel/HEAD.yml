@@ -1,8 +1,8 @@
 name: axi_ad9963_tx_channel
 namespace: analog-devices
 version: HEAD
-description: Transmit channel for AD9963 DAC with DDS synthesis, DMA data path, and
-  memory-mapped control interface.
+description: Transmit channel for AD9963 DAC with DDS, DMA data path, and AXI register
+  interface control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

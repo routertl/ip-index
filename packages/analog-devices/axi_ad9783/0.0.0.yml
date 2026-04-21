@@ -1,8 +1,8 @@
 name: axi_ad9783
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite controlled DAC interface module for the AD9783 dual-channel
-  16-bit DAC with DDS capability.
+description: AXI4-Lite controlled interface for AD9783 dual-channel DAC with DDS and
+  configurable datapath.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

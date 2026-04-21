@@ -1,8 +1,8 @@
 name: axi_ad7606x
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite interface controller for AD7606x analog-to-digital converter
-  with parallel data acquisition and DMA integration.
+description: AXI4-Lite interface controller for the AD7606X analog-to-digital converter
+  with configurable data width and DMA integration.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

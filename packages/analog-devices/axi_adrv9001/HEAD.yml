@@ -1,8 +1,8 @@
 name: axi_adrv9001
 namespace: analog-devices
 version: HEAD
-description: AXI interface controller for the ADRV9001 RF transceiver supporting dual-channel
-  TDD operation with configurable CMOS/LVDS signaling.
+description: AXI4-Lite interface for ADRV9001 RF transceiver with configurable dual-channel
+  RX/TX SSI data paths and synchronization.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

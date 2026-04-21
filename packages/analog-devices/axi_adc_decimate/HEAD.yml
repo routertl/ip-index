@@ -1,8 +1,8 @@
 name: axi_adc_decimate
 namespace: analog-devices
 version: HEAD
-description: Decimates dual-channel 16-bit ADC data with configurable rate via AXI4-Lite
-  control interface.
+description: Decimates dual-channel ADC data streams with configurable sampling rates
+  via AXI4-Lite control interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

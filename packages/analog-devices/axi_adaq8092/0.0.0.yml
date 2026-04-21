@@ -1,7 +1,7 @@
 name: axi_adaq8092
 namespace: analog-devices
 version: 0.0.0
-description: AXI-controlled interface for the ADAQ8092 dual-channel ADC with LVDS/CMOS
+description: AXI4-Lite interface controller for dual-channel ADAQ8092 ADC with LVDS/CMOS
   input support and configurable data path processing.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive

@@ -1,8 +1,8 @@
 name: axi_hdmi_tx_core
 namespace: analog-devices
 version: HEAD
-description: Transmits video data to HDMI/VGA outputs with configurable 16/24/36-bit
-  interfaces and optional embedded sync.
+description: HDMI transmitter core that converts video data to multiple output interface
+  formats (16/24/36-bit HDMI and VGA) with sync control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

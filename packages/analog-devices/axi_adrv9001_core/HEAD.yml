@@ -1,8 +1,8 @@
 name: axi_adrv9001_core
 namespace: analog-devices
 version: HEAD
-description: AXI-based RF transceiver interface controller for AD9001 supporting dual-channel
-  RX/TX with configurable clocking, DDS, and TDD modes.
+description: AXI-controlled RF transceiver interface for the ADRV9001 dual-channel
+  radio with configurable clock, DDS, and TDD support.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

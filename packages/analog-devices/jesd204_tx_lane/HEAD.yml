@@ -1,8 +1,8 @@
 name: jesd204_tx_lane
 namespace: analog-devices
 version: HEAD
-description: Transmit lane processor for JESD204 that multiplexes test/ILAS/payload
-  data and manages character replacement and scrambling.
+description: Serializes and transmits JESD204B lane data with character replacement,
+  scrambling, and initialization sequence control.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: axi_adc_decimate_filter
 namespace: analog-devices
 version: HEAD
-description: Decimates and filters dual-channel 12-bit ADC data with optional correction
-  coefficients.
+description: Decimates and filters dual-channel 12-bit ADC data with optional per-channel
+  gain correction.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
