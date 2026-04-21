@@ -14,9 +14,9 @@ routertl_compat:
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
-  - src/dma/rtl/taxi_dma_ram_if.sv
-  - src/dma/rtl/taxi_dma_desc_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
+  - src/dma/rtl/taxi_dma_desc_if.sv
+  - src/dma/rtl/taxi_dma_ram_if.sv
   - src/dma/rtl/taxi_dma_if_pcie_us_rd.sv
 tags:
 - access

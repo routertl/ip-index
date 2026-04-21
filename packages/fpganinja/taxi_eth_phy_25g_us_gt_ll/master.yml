@@ -13,12 +13,12 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/sync/rtl/taxi_sync_signal.sv
   - src/apb/rtl/taxi_apb_if.sv
+  - src/sync/rtl/taxi_sync_signal.sv
   - src/eth/rtl/us/taxi_eth_phy_25g_us_gt_apb.sv
+  - src/hip/rtl/us/taxi_gt_qpll_reset.sv
   - src/sync/rtl/taxi_sync_reset.sv
   - src/hip/rtl/us/taxi_gt_rx_reset.sv
-  - src/hip/rtl/us/taxi_gt_qpll_reset.sv
   - src/hip/rtl/us/taxi_gt_tx_reset.sv
   - src/eth/rtl/us/taxi_eth_phy_25g_us_gt_ll.sv
 tags:

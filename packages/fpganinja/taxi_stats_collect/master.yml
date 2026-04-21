@@ -1,8 +1,8 @@
 name: taxi_stats_collect
 namespace: fpganinja
 version: master
-description: Collects and periodically reports statistics from multiple channels as
-  incremented counter values.
+description: Collects and periodically reports statistics from multiple channels by
+  accumulating increments and outputting them via AXI stream interface.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

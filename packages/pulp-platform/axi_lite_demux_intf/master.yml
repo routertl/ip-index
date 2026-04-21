@@ -2,7 +2,7 @@ name: axi_lite_demux_intf
 namespace: pulp-platform
 version: master
 description: Demultiplexes a single AXI4-Lite slave port to multiple master ports
-  based on address channel select signals.
+  based on address-phase select signals.
 license: Apache-2.0
 license_class: permissive
 source:

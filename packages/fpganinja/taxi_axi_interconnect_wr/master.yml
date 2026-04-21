@@ -1,7 +1,8 @@
 name: taxi_axi_interconnect_wr
 namespace: fpganinja
 version: master
-description: Routes AXI write transactions.
+description: Interconnect that routes AXI write transactions from multiple slave interfaces
+  to multiple master interfaces with address-based decoding.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

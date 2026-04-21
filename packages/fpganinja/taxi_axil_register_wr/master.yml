@@ -1,7 +1,8 @@
 name: taxi_axil_register_wr
 namespace: fpganinja
 version: master
-description: Wraps AXI4-Lite write transactions.
+description: Registers AXI4-Lite write channels with configurable pipeline stages
+  between slave and master interfaces.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

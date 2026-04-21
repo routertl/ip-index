@@ -1,8 +1,8 @@
 name: taxi_axil_interconnect_rd
 namespace: fpganinja
 version: master
-description: Routes AXI4-Lite read requests from multiple slave interfaces to multiple
-  master interfaces with address-based decodi...
+description: Routes read requests from multiple AXI4-Lite slave interfaces to multiple
+  master interfaces with configurable address-based arbitration.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -14,9 +14,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi/rtl/taxi_axil_if.sv
   - src/prim/rtl/taxi_penc.sv
   - src/prim/rtl/taxi_arbiter.sv
+  - src/axi/rtl/taxi_axil_if.sv
   - src/axi/rtl/taxi_axil_interconnect_rd.sv
 tags:
 - axil

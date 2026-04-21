@@ -1,8 +1,8 @@
 name: counter
 namespace: pulp-platform
 version: master
-description: A configurable up/down counter with programmable width, synchronous clear,
-  load capability, and optional sticky overf...
+description: Counts up or down with programmable width, supporting synchronous load,
+  clear, and optional sticky overflow detection.
 license: Apache-2.0
 license_class: permissive
 source:

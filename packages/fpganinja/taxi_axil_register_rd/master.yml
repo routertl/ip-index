@@ -1,8 +1,8 @@
 name: taxi_axil_register_rd
 namespace: fpganinja
 version: master
-description: Implements an AXI4-Lite read channel with configurable pipeline registers
-  for address and data paths.
+description: Implements an AXI4-Lite read channel register stage with configurable
+  pipeline buffering for address and data paths.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

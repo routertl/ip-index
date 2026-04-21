@@ -1,8 +1,8 @@
 name: exp_backoff
 namespace: pulp-platform
 version: master
-description: Generates exponentially increasing random backoff delays to space out
-  retry attempts following failed trials.
+description: Implements exponential backoff with configurable maximum range using
+  a 16-bit LFSR for randomized retry delays.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: taxi_axil_tie_rd
 namespace: fpganinja
 version: master
-description: Connects AXI4-Lite read slave interface to read master interface with
-  tie-off logic.
+description: Bridges AXI4-Lite read transactions from a slave interface to a master
+  interface.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -14,9 +14,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi/rtl/taxi_axil_if.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
+  - src/axi/rtl/taxi_axil_if.sv
   - src/axi/rtl/taxi_axil_tie_rd.sv
 tags:
 - axil

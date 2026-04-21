@@ -1,7 +1,8 @@
 name: taxi_arbiter
 namespace: fpganinja
 version: master
-description: Arbitrates requests from multiple ports.
+description: Arbitrates access to a shared resource among multiple requesters using
+  configurable priority and blocking schemes.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -1,8 +1,8 @@
 name: axi_chan_compare
 namespace: pulp-platform
 version: master
-description: Compares two AXI interfaces for functional equivalence across clock domains
-  with configurable ID matching and respons...
+description: Compares two AXI interfaces for equivalence, optionally ignoring ID fields
+  or allowing reordered responses across clock domains.
 license: Apache-2.0
 license_class: permissive
 source:

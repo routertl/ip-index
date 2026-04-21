@@ -1,8 +1,8 @@
 name: taxi_i2c_single_reg
 namespace: fpganinja
 version: master
-description: I2C slave controller that reads/writes a single 8-bit register at a configurable
-  device address with input filtering.
+description: I2C slave interface for reading/writing a single 8-bit register with
+  configurable device address and input filtering.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -16,8 +16,8 @@ routertl_compat:
   - src/axi/rtl/taxi_axi_if.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
-  - src/axi/rtl/taxi_axi_ram_if_wr.sv
   - src/axi/rtl/taxi_axi_ram_if_rd.sv
+  - src/axi/rtl/taxi_axi_ram_if_wr.sv
   - src/axi/rtl/taxi_axi_ram_if_rdwr.sv
 tags:
 - access

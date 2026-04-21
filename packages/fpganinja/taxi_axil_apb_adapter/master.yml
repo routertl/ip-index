@@ -13,8 +13,8 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi/rtl/taxi_axil_if.sv
   - src/apb/rtl/taxi_apb_if.sv
+  - src/axi/rtl/taxi_axil_if.sv
   - src/axi/rtl/taxi_axil_apb_adapter.sv
 tags:
 - adapter

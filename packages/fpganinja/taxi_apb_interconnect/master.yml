@@ -1,7 +1,8 @@
 name: taxi_apb_interconnect
 namespace: fpganinja
 version: master
-description: Routes APB traffic between masters and slaves.
+description: Interconnects multiple APB slave interfaces to multiple APB master interfaces
+  with configurable address decoding and access control.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -13,9 +14,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
+  - src/apb/rtl/taxi_apb_if.sv
   - src/prim/rtl/taxi_penc.sv
   - src/prim/rtl/taxi_arbiter.sv
-  - src/apb/rtl/taxi_apb_if.sv
   - src/apb/rtl/taxi_apb_interconnect.sv
 tags:
 - advanced

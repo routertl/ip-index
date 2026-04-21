@@ -1,8 +1,8 @@
 name: prioarbiter
 namespace: pulp-platform
 version: master
-description: Arbitrates multiple concurrent requests using fixed priority, outputting
-  the index and acknowledgment of the highest-...
+description: Prioritizes and arbitrates multiple requests, outputting the index of
+  the highest-priority granted request.
 license: Apache-2.0
 license_class: permissive
 source:

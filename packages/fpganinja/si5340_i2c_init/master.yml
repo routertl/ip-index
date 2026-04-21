@@ -1,7 +1,8 @@
 name: si5340_i2c_init
 namespace: fpganinja
 version: master
-description: Initializes SI5340 via I2C.
+description: Initializes Si5340 clock generator via I2C by sequencing configuration
+  commands and transmit data.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

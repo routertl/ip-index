@@ -15,44 +15,44 @@ routertl_compat:
   files:
   - src/prim/rtl/taxi_penc.sv
   - src/prim/rtl/taxi_arbiter.sv
-  - src/dma/rtl/taxi_dma_desc_if.sv
-  - src/dma/rtl/taxi_dma_desc_mux.sv
-  - src/dma/rtl/taxi_dma_ram_if.sv
-  - src/dma/rtl/taxi_dma_ram_demux_rd.sv
-  - src/dma/rtl/taxi_dma_if_mux_wr.sv
-  - src/sync/rtl/taxi_sync_reset.sv
-  - src/sync/rtl/taxi_sync_signal.sv
   - src/axis/rtl/taxi_axis_if.sv
-  - src/lss/rtl/taxi_i2c_slave.sv
-  - src/axis/rtl/taxi_axis_async_fifo.sv
-  - src/dma/rtl/taxi_dma_ram_demux_wr.sv
-  - src/dma/rtl/taxi_dma_if_mux_rd.sv
   - src/axis/rtl/taxi_axis_arb_mux.sv
+  - src/dma/rtl/taxi_dma_desc_if.sv
+  - src/dma/rtl/taxi_dma_ram_if.sv
   - src/cndm_proto/rtl/cndm_proto_cpl_wr.sv
-  - src/dma/rtl/taxi_dma_psdpram.sv
+  - src/axis/rtl/taxi_axis_demux.sv
+  - src/lss/rtl/taxi_i2c_slave.sv
   - src/dma/rtl/taxi_dma_client_axis_source.sv
-  - src/cndm_proto/rtl/cndm_proto_tx.sv
-  - src/axi/rtl/taxi_axil_if.sv
+  - src/dma/rtl/taxi_dma_psdpram.sv
+  - src/cndm_proto/rtl/cndm_proto_desc_rd.sv
   - src/dma/rtl/taxi_dma_client_axis_sink.sv
   - src/cndm_proto/rtl/cndm_proto_rx.sv
-  - src/axis/rtl/taxi_axis_demux.sv
-  - src/cndm_proto/rtl/cndm_proto_desc_rd.sv
+  - src/cndm_proto/rtl/cndm_proto_tx.sv
+  - src/axi/rtl/taxi_axil_if.sv
+  - src/sync/rtl/taxi_sync_reset.sv
+  - src/sync/rtl/taxi_sync_signal.sv
+  - src/axis/rtl/taxi_axis_async_fifo.sv
+  - src/dma/rtl/taxi_dma_desc_mux.sv
+  - src/dma/rtl/taxi_dma_ram_demux_wr.sv
+  - src/dma/rtl/taxi_dma_if_mux_rd.sv
+  - src/dma/rtl/taxi_dma_ram_demux_rd.sv
+  - src/dma/rtl/taxi_dma_if_mux_wr.sv
   - src/cndm_proto/rtl/cndm_proto_port.sv
   - src/axi/rtl/taxi_axil_interconnect_rd.sv
   - src/axi/rtl/taxi_axil_tie_rd.sv
   - src/axi/rtl/taxi_axil_interconnect_1s_rd.sv
-  - src/axi/rtl/taxi_axil_tie_wr.sv
   - src/axi/rtl/taxi_axil_interconnect_wr.sv
+  - src/axi/rtl/taxi_axil_tie_wr.sv
   - src/axi/rtl/taxi_axil_interconnect_1s_wr.sv
   - src/axi/rtl/taxi_axil_interconnect_1s.sv
   - src/dma/rtl/taxi_dma_if_mux.sv
   - src/cndm_proto/rtl/cndm_proto_core.sv
-  - src/pcie/rtl/taxi_pcie_us_msi.sv
-  - src/pcie/rtl/taxi_pcie_us_cfg.sv
-  - src/pcie/rtl/taxi_pcie_us_axil_master.sv
   - src/dma/rtl/taxi_dma_if_pcie_us_rd.sv
   - src/dma/rtl/taxi_dma_if_pcie_us_wr.sv
   - src/dma/rtl/taxi_dma_if_pcie_us.sv
+  - src/pcie/rtl/taxi_pcie_us_axil_master.sv
+  - src/pcie/rtl/taxi_pcie_us_cfg.sv
+  - src/pcie/rtl/taxi_pcie_us_msi.sv
   - src/cndm_proto/rtl/cndm_proto_pcie_us.sv
 tags:
 - cndm

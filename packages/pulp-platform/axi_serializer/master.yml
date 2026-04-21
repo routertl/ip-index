@@ -1,8 +1,8 @@
 name: axi_serializer
 namespace: pulp-platform
 version: master
-description: Serializes concurrent AXI read and write transactions while respecting
-  per-ID transaction limits.
+description: Serializes concurrent AXI read and write transactions to enforce ordering
+  constraints between master and slave ports.
 license: Apache-2.0
 license_class: permissive
 source:

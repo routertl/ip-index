@@ -1,8 +1,8 @@
 name: taxi_gmii_phy_if
 namespace: fpganinja
 version: master
-description: Interfaces a MAC to a GMII PHY with clock domain crossing and link speed
-  adaptation.
+description: Bridges a MAC and PHY with GMII interface adaptation, clock domain crossing,
+  and link speed reporting.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -14,11 +14,11 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/sync/rtl/taxi_sync_reset.sv
-  - src/sync/rtl/taxi_sync_signal.sv
+  - src/io/rtl/taxi_ssio_sdr_in.sv
   - src/io/rtl/taxi_oddr.sv
   - src/io/rtl/taxi_ssio_sdr_out.sv
-  - src/io/rtl/taxi_ssio_sdr_in.sv
+  - src/sync/rtl/taxi_sync_reset.sv
+  - src/sync/rtl/taxi_sync_signal.sv
   - src/eth/rtl/taxi_gmii_phy_if.sv
 tags:
 - gigabit

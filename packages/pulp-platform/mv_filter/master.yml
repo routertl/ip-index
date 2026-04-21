@@ -1,8 +1,8 @@
 name: mv_filter
 namespace: pulp-platform
 version: master
-description: Filters input signals using a majority voting mechanism with configurable
-  threshold and width parameters.
+description: Median-voting filter that outputs a filtered digital signal based on
+  majority consensus of input samples.
 license: Apache-2.0
 license_class: permissive
 source:

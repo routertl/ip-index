@@ -1,8 +1,8 @@
 name: axi_dw_converter
 namespace: pulp-platform
 version: master
-description: Converts AXI transactions between different data widths on slave and
-  master ports.
+description: Converts AXI transactions between slave and master ports with different
+  data widths.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -13,8 +13,8 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/lfsr/rtl/taxi_lfsr.sv
   - src/axis/rtl/taxi_axis_if.sv
+  - src/lfsr/rtl/taxi_lfsr.sv
   - src/eth/rtl/taxi_axis_gmii_rx.sv
 tags:
 - axi

@@ -1,8 +1,8 @@
 name: taxi_uart
 namespace: fpganinja
 version: master
-description: UART transceiver with AXI4-Stream interfaces for serial data transmission
-  and reception.
+description: UART transceiver with AXI4-Stream interfaces for transmitting and receiving
+  serial data.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -15,9 +15,9 @@ routertl_compat:
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
-  - src/lss/rtl/taxi_uart_tx.sv
-  - src/lss/rtl/taxi_uart_rx.sv
   - src/lss/rtl/taxi_uart_brg.sv
+  - src/lss/rtl/taxi_uart_rx.sv
+  - src/lss/rtl/taxi_uart_tx.sv
   - src/lss/rtl/taxi_uart.sv
 tags:
 - asynchronous

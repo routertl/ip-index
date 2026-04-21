@@ -13,10 +13,10 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/sync/rtl/taxi_sync_reset.sv
-  - src/sync/rtl/taxi_sync_signal.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
+  - src/sync/rtl/taxi_sync_reset.sv
+  - src/sync/rtl/taxi_sync_signal.sv
   - src/axis/rtl/taxi_axis_async_fifo.sv
 tags:
 - async

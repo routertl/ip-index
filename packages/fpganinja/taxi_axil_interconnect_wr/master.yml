@@ -1,8 +1,8 @@
 name: taxi_axil_interconnect_wr
 namespace: fpganinja
 version: master
-description: Interconnect that routes AXI4-Lite write transactions from multiple slave
-  ports to multiple master ports with configu...
+description: Interconnects multiple AXI4-lite write slave ports to multiple master
+  ports with configurable address decoding and routing.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -14,9 +14,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi/rtl/taxi_axil_if.sv
   - src/prim/rtl/taxi_penc.sv
   - src/prim/rtl/taxi_arbiter.sv
+  - src/axi/rtl/taxi_axil_if.sv
   - src/axi/rtl/taxi_axil_interconnect_wr.sv
 tags:
 - axil

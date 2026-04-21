@@ -13,9 +13,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/sub_per_hash.sv
   - src/delta_counter.sv
   - src/counter.sv
+  - src/sub_per_hash.sv
   - src/cb_filter.sv
 tags:
 - cb

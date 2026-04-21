@@ -1,8 +1,8 @@
 name: taxi_xfcp_mod_apb
 namespace: fpganinja
 version: master
-description: Bridges XFCP protocol traffic to APB master interface for remote register
-  access over a transport layer.
+description: Bridges XFCP protocol commands to APB master transactions for register
+  access over a packet-based interface.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

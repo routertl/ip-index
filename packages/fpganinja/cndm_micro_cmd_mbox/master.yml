@@ -13,10 +13,10 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi/rtl/taxi_axil_if.sv
-  - src/prim/rtl/taxi_ram_2rw_1c.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
+  - src/axi/rtl/taxi_axil_if.sv
+  - src/prim/rtl/taxi_ram_2rw_1c.sv
   - src/cndm/rtl/cndm_micro_cmd_mbox.sv
 tags:
 - cmd

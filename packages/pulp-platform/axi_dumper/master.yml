@@ -1,8 +1,7 @@
 name: axi_dumper
 namespace: pulp-platform
 version: master
-description: Captures and logs AXI bus transactions for debugging and verification
-  purposes.
+description: Monitors and logs AXI bus transactions with configurable channel tracing.
 license: Apache-2.0
 license_class: permissive
 source:

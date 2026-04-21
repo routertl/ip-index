@@ -13,12 +13,12 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axis/rtl/taxi_axis_if.sv
   - src/prim/rtl/taxi_penc.sv
   - src/prim/rtl/taxi_arbiter.sv
+  - src/axis/rtl/taxi_axis_if.sv
   - src/axis/rtl/taxi_axis_arb_mux.sv
-  - src/dma/rtl/taxi_dma_ram_if.sv
   - src/dma/rtl/taxi_dma_desc_if.sv
+  - src/dma/rtl/taxi_dma_ram_if.sv
   - src/cndm_proto/rtl/cndm_proto_cpl_wr.sv
 tags:
 - cndm

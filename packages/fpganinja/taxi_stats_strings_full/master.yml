@@ -1,7 +1,8 @@
 name: taxi_stats_strings_full
 namespace: fpganinja
 version: master
-description: Processes taxi statistics.
+description: Collects taxi statistics from AXI-Stream input and exposes them via AXI-Lite
+  registers with configurable pipeline depth.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

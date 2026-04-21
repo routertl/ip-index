@@ -1,9 +1,7 @@
 name: stream_fifo_optimal_wrap
 namespace: pulp-platform
 version: master
-description: Thomas Benz <tbenz@ethz.ch> Optimal implementation of a stream FIFO based
-  on the common cells modules. Selects the smaller and faster spill register if the
-  depth is 2 and the FIFO if the depth is >...
+description: FIFO buffer with ready/valid handshake
 license: Apache-2.0
 license_class: permissive
 source:
@@ -15,9 +13,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
+  - src/spill_register_flushable.sv
   - src/fifo_v3.sv
   - src/stream_fifo.sv
-  - src/spill_register_flushable.sv
   - src/stream_fifo_optimal_wrap.sv
 tags:
 - buffer

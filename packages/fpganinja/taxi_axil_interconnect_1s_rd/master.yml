@@ -1,8 +1,8 @@
 name: taxi_axil_interconnect_1s_rd
 namespace: fpganinja
 version: master
-description: Routes read requests from a single AXI4-Lite slave to multiple AXI4-Lite
-  masters based on address decoding.
+description: Routes AXI4-Lite read requests from a single slave to multiple masters
+  based on address decoding.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

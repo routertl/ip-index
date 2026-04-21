@@ -1,8 +1,8 @@
 name: taxi_axis_concat
 namespace: fpganinja
 version: master
-description: Concatenates multiple AXI4-Stream input channels into a single output
-  stream.
+description: Concatenates multiple AXI4-Stream input channels into a single AXI4-Stream
+  output channel.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -1,8 +1,8 @@
 name: sync_wedge
 namespace: pulp-platform
 version: master
-description: Synchronizes serial input across clock domains and detects rising/falling
-  edges.
+description: Synchronizes an asynchronous serial input across clock domains and detects
+  rising/falling edges.
 license: Apache-2.0
 license_class: permissive
 source:

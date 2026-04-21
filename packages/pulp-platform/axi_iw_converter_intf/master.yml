@@ -1,8 +1,8 @@
 name: axi_iw_converter_intf
 namespace: pulp-platform
 version: master
-description: Converts AXI4+ATOP transactions between different ID widths on slave
-  and master ports.
+description: Converts AXI4+ATOP transactions between different ID widths while managing
+  in-flight transaction limits.
 license: Apache-2.0
 license_class: permissive
 source:
@@ -14,15 +14,15 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
+  - src/axi_intf.sv
   - src/axi_id_prepend.sv
+  - src/axi_id_remap.sv
   - src/axi_demux_id_counters.sv
   - src/axi_demux_simple.sv
-  - src/axi_intf.sv
   - src/axi_demux.sv
-  - src/axi_serializer.sv
   - src/axi_mux.sv
+  - src/axi_serializer.sv
   - src/axi_id_serialize.sv
-  - src/axi_id_remap.sv
   - src/axi_iw_converter.sv
 tags:
 - amba

@@ -1,7 +1,8 @@
 name: taxi_axi_ram_if_rd
 namespace: fpganinja
 version: master
-description: Reads data from RAM.
+description: Bridges AXI4 read requests to RAM interface, translating slave read commands
+  and responses.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -13,9 +14,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi/rtl/taxi_axi_if.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
+  - src/axi/rtl/taxi_axi_if.sv
   - src/axi/rtl/taxi_axi_ram_if_rd.sv
 tags:
 - access

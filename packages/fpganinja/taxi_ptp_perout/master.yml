@@ -1,7 +1,7 @@
 name: taxi_ptp_perout
 namespace: fpganinja
 version: master
-description: Generates periodic PTP-synchronized pulse outputs with configurable start
+description: Generates periodic PTP-synchronized output pulses with configurable start
   time, period, and pulse width.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft

@@ -13,9 +13,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
+  - src/dma/rtl/taxi_dma_desc_if.sv
   - src/prim/rtl/taxi_penc.sv
   - src/prim/rtl/taxi_arbiter.sv
-  - src/dma/rtl/taxi_dma_desc_if.sv
   - src/dma/rtl/taxi_dma_desc_mux.sv
   - src/dma/rtl/taxi_dma_ram_if.sv
   - src/dma/rtl/taxi_dma_ram_demux_rd.sv

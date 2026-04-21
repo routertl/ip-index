@@ -1,7 +1,8 @@
 name: taxi_axi_register_rd
 namespace: fpganinja
 version: master
-description: Registers AXI read transactions.
+description: Registers AXI4 read channels with configurable buffer types for AR and
+  R signals.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

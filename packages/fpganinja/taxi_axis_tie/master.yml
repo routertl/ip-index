@@ -1,7 +1,7 @@
 name: taxi_axis_tie
 namespace: fpganinja
 version: master
-description: Passes AXI4-Stream data.
+description: Passes through AXI4-Stream data from input to output without modification.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -13,9 +13,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
+  - src/axi_intf.sv
   - src/axi_demux_id_counters.sv
   - src/axi_demux_simple.sv
-  - src/axi_intf.sv
   - src/axi_demux.sv
   - src/axi_atop_filter.sv
   - src/axi_err_slv.sv

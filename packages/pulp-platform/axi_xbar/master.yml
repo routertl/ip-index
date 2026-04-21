@@ -13,16 +13,16 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi_id_prepend.sv
   - src/axi_intf.sv
+  - src/axi_id_prepend.sv
   - src/axi_mux.sv
   - src/axi_demux_id_counters.sv
   - src/axi_demux_simple.sv
   - src/axi_demux.sv
-  - src/axi_cut.sv
-  - src/axi_multicut.sv
   - src/axi_atop_filter.sv
   - src/axi_err_slv.sv
+  - src/axi_cut.sv
+  - src/axi_multicut.sv
   - src/axi_xbar_unmuxed.sv
   - src/axi_xbar.sv
 tags:

@@ -1,8 +1,8 @@
 name: axi_multicut_intf
 namespace: pulp-platform
 version: master
-description: Inserts configurable pipeline stages on AXI slave-to-master path to break
-  combinational timing paths.
+description: Decouples AXI master and slave ports with configurable pipeline stages
+  to reduce combinational delay.
 license: Apache-2.0
 license_class: permissive
 source:

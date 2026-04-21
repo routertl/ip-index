@@ -2,7 +2,7 @@ name: lossy_valid_to_stream
 namespace: pulp-platform
 version: master
 description: Converts a valid-only input interface to a ready/valid handshake output
-  stream, discarding data when output is not re...
+  stream, dropping data when output is not ready.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: axi_isolate_intf
 namespace: pulp-platform
 version: master
-description: Isolates an AXI slave port from its master port, blocking transactions
-  and optionally returning error responses.
+description: Isolates an AXI master port from a slave port, blocking transactions
+  and optionally returning error responses when isolated.
 license: Apache-2.0
 license_class: permissive
 source:
@@ -14,9 +14,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
+  - src/axi_intf.sv
   - src/axi_demux_id_counters.sv
   - src/axi_demux_simple.sv
-  - src/axi_intf.sv
   - src/axi_demux.sv
   - src/axi_atop_filter.sv
   - src/axi_err_slv.sv

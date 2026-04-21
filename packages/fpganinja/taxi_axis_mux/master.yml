@@ -1,7 +1,8 @@
 name: taxi_axis_mux
 namespace: fpganinja
 version: master
-description: Multiplexes AXI streams.
+description: Multiplexes multiple AXI4-Stream inputs to a single output based on a
+  select signal.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

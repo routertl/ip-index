@@ -1,7 +1,8 @@
 name: taxi_axi_dma_wr
 namespace: fpganinja
 version: master
-description: Writes data via AXI using DMA.
+description: DMA write engine that transfers AXI stream data to memory via AXI4 master
+  interface with configurable burst length and optional unaligned transfer support.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -14,9 +15,9 @@ routertl_compat:
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
+  - src/lss/rtl/taxi_i2c_slave.sv
   - src/axi/rtl/taxi_axi_if.sv
   - src/dma/rtl/taxi_dma_desc_if.sv
-  - src/lss/rtl/taxi_i2c_slave.sv
   - src/dma/rtl/taxi_axi_dma_wr.sv
 tags:
 - access

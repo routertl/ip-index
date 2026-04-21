@@ -13,11 +13,11 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/gray_to_binary.sv
-  - src/sync.sv
   - src/binary_to_gray.sv
+  - src/gray_to_binary.sv
   - src/spill_register_flushable.sv
   - src/spill_register.sv
+  - src/sync.sv
   - src/cdc_fifo_gray.sv
 tags:
 - buffer

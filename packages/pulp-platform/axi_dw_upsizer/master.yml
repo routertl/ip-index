@@ -1,8 +1,8 @@
 name: axi_dw_upsizer
 namespace: pulp-platform
 version: master
-description: Converts AXI transactions from narrower slave port data width to wider
-  master port data width.
+description: Converts AXI transactions from a narrower slave port to a wider master
+  port with data width upsizing.
 license: Apache-2.0
 license_class: permissive
 source:
@@ -15,9 +15,9 @@ routertl_compat:
   library: work
   files:
   - src/axi_pkg.sv
+  - src/axi_intf.sv
   - src/axi_demux_id_counters.sv
   - src/axi_demux_simple.sv
-  - src/axi_intf.sv
   - src/axi_demux.sv
   - src/axi_atop_filter.sv
   - src/axi_err_slv.sv

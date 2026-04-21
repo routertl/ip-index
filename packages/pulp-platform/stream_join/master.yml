@@ -1,8 +1,8 @@
 name: stream_join
 namespace: pulp-platform
 version: master
-description: Combines multiple input streams into a single output stream using ready-valid
-  handshakes.
+description: Synchronizes multiple input streams and produces a single output stream
+  when all inputs are valid.
 license: Apache-2.0
 license_class: permissive
 source:

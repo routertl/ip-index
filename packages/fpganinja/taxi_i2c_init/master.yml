@@ -1,7 +1,8 @@
 name: taxi_i2c_init
 namespace: fpganinja
 version: master
-description: Initializes I2C transactions.
+description: Generates I2C initialization command sequences for device configuration
+  upon start request.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

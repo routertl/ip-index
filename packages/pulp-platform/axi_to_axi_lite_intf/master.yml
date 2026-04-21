@@ -1,8 +1,8 @@
 name: axi_to_axi_lite_intf
 namespace: pulp-platform
 version: master
-description: Converts full AXI4+ATOP protocol transactions to AXI4-Lite protocol with
-  configurable buffering and transaction manag...
+description: Converts full AXI4+ATOP transactions to AXI4-Lite protocol while managing
+  burst splitting and transaction queuing.
 license: Apache-2.0
 license_class: permissive
 source:
@@ -18,9 +18,9 @@ routertl_compat:
   - src/axi_atop_filter.sv
   - src/axi_demux_id_counters.sv
   - src/axi_demux_simple.sv
+  - src/axi_err_slv.sv
   - src/axi_cut.sv
   - src/axi_multicut.sv
-  - src/axi_err_slv.sv
   - src/axi_burst_splitter_gran.sv
   - src/axi_burst_splitter.sv
   - src/axi_to_axi_lite.sv

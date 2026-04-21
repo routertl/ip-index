@@ -1,7 +1,7 @@
 name: axi_delayer
 namespace: pulp-platform
 version: master
-description: Introduces configurable fixed or random delays on AXI request and response
+description: Inserts configurable fixed or random delays on AXI request and response
   channels between slave and master ports.
 license: Apache-2.0
 license_class: permissive

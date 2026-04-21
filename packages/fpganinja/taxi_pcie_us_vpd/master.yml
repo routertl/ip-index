@@ -1,8 +1,8 @@
 name: taxi_pcie_us_vpd
 namespace: fpganinja
 version: master
-description: Bridges PCIe Extended Configuration space VPD capability requests to
-  an APB slave interface for read/write operations.
+description: Implements a PCIe VPD (Vital Product Data) capability bridge, translating
+  extended configuration requests to APB memory accesses.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

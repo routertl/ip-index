@@ -1,8 +1,8 @@
 name: axi_xp_intf
 namespace: pulp-platform
 version: master
-description: AXI crossbar interconnect that routes transactions from slave ports to
-  master ports based on address map with atomic ...
+description: AXI crossbar interconnect that routes transactions from multiple slave
+  ports to master ports based on address mapping with atomic operation support.
 license: Apache-2.0
 license_class: permissive
 source:
@@ -14,19 +14,19 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi_id_prepend.sv
   - src/axi_intf.sv
+  - src/axi_id_remap.sv
+  - src/axi_id_prepend.sv
   - src/axi_mux.sv
   - src/axi_demux_id_counters.sv
   - src/axi_demux_simple.sv
   - src/axi_demux.sv
-  - src/axi_cut.sv
-  - src/axi_multicut.sv
   - src/axi_atop_filter.sv
   - src/axi_err_slv.sv
+  - src/axi_cut.sv
+  - src/axi_multicut.sv
   - src/axi_xbar_unmuxed.sv
   - src/axi_xbar.sv
-  - src/axi_id_remap.sv
   - src/axi_xp.sv
 tags:
 - amba

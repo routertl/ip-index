@@ -1,7 +1,8 @@
 name: taxi_axi_adapter
 namespace: fpganinja
 version: master
-description: Adapts AXI interfaces.
+description: Adapts AXI4 transactions between slave and master interfaces with optional
+  burst repacking for bus width conversion.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -14,8 +15,8 @@ routertl_compat:
   library: work
   files:
   - src/axi/rtl/taxi_axi_if.sv
-  - src/axi/rtl/taxi_axi_adapter_wr.sv
   - src/axi/rtl/taxi_axi_adapter_rd.sv
+  - src/axi/rtl/taxi_axi_adapter_wr.sv
   - src/axi/rtl/taxi_axi_adapter.sv
 tags:
 - adapter

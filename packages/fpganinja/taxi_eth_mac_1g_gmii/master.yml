@@ -13,30 +13,30 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/sync/rtl/taxi_sync_reset.sv
-  - src/sync/rtl/taxi_sync_signal.sv
-  - src/io/rtl/taxi_oddr.sv
-  - src/io/rtl/taxi_ssio_sdr_out.sv
-  - src/io/rtl/taxi_ssio_sdr_in.sv
-  - src/eth/rtl/taxi_gmii_phy_if.sv
   - src/axis/rtl/taxi_axis_if.sv
-  - src/axis/rtl/taxi_axis_null_src.sv
-  - src/lss/rtl/taxi_i2c_slave.sv
-  - src/eth/rtl/taxi_mac_ctrl_rx.sv
-  - src/eth/rtl/taxi_mac_pause_ctrl_tx.sv
   - src/lfsr/rtl/taxi_lfsr.sv
+  - src/eth/rtl/taxi_axis_gmii_rx.sv
   - src/eth/rtl/taxi_axis_gmii_tx.sv
-  - src/axis/rtl/taxi_axis_async_fifo.sv
-  - src/stats/rtl/taxi_stats_collect.sv
+  - src/axis/rtl/taxi_axis_null_src.sv
+  - src/axis/rtl/taxi_axis_tie.sv
   - src/prim/rtl/taxi_penc.sv
   - src/prim/rtl/taxi_arbiter.sv
   - src/axis/rtl/taxi_axis_arb_mux.sv
+  - src/lss/rtl/taxi_i2c_slave.sv
+  - src/sync/rtl/taxi_sync_reset.sv
+  - src/sync/rtl/taxi_sync_signal.sv
+  - src/axis/rtl/taxi_axis_async_fifo.sv
+  - src/stats/rtl/taxi_stats_collect.sv
   - src/eth/rtl/taxi_eth_mac_stats.sv
-  - src/axis/rtl/taxi_axis_tie.sv
-  - src/eth/rtl/taxi_mac_pause_ctrl_rx.sv
-  - src/eth/rtl/taxi_axis_gmii_rx.sv
+  - src/eth/rtl/taxi_mac_ctrl_rx.sv
   - src/eth/rtl/taxi_mac_ctrl_tx.sv
+  - src/eth/rtl/taxi_mac_pause_ctrl_rx.sv
+  - src/eth/rtl/taxi_mac_pause_ctrl_tx.sv
   - src/eth/rtl/taxi_eth_mac_1g.sv
+  - src/io/rtl/taxi_ssio_sdr_in.sv
+  - src/io/rtl/taxi_oddr.sv
+  - src/io/rtl/taxi_ssio_sdr_out.sv
+  - src/eth/rtl/taxi_gmii_phy_if.sv
   - src/eth/rtl/taxi_eth_mac_1g_gmii.sv
 tags:
 - 1g

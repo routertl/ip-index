@@ -13,10 +13,10 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/sync.sv
   - src/cdc_reset_ctrlr_pkg.sv
   - src/spill_register_flushable.sv
   - src/spill_register.sv
+  - src/sync.sv
   - src/cdc_4phase.sv
   - src/cdc_reset_ctrlr.sv
   - src/cdc_2phase_clearable.sv

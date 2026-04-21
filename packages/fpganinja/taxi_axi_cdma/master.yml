@@ -1,7 +1,9 @@
 name: taxi_axi_cdma
 namespace: fpganinja
 version: master
-description: Drives AXI transactions from DMA descriptors.
+description: AXI coherent DMA engine that transfers data between memory locations
+  using AXI master interfaces with configurable burst lengths and unaligned transfer
+  support.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -13,10 +15,10 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi/rtl/taxi_axi_if.sv
-  - src/dma/rtl/taxi_dma_desc_if.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
+  - src/axi/rtl/taxi_axi_if.sv
+  - src/dma/rtl/taxi_dma_desc_if.sv
   - src/dma/rtl/taxi_axi_cdma.sv
 tags:
 - amba

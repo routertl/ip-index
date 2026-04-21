@@ -1,7 +1,8 @@
 name: taxi_axi_register
 namespace: fpganinja
 version: master
-description: Registers AXI transactions.
+description: Registers AXI4 write and read channels with configurable buffering stages
+  between slave and master interfaces.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -14,8 +15,8 @@ routertl_compat:
   library: work
   files:
   - src/axi/rtl/taxi_axi_if.sv
-  - src/axi/rtl/taxi_axi_register_wr.sv
   - src/axi/rtl/taxi_axi_register_rd.sv
+  - src/axi/rtl/taxi_axi_register_wr.sv
   - src/axi/rtl/taxi_axi_register.sv
 tags:
 - amba

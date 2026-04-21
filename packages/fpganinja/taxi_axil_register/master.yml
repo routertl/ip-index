@@ -1,8 +1,8 @@
 name: taxi_axil_register
 namespace: fpganinja
 version: master
-description: Registers AXI4-Lite transaction channels with configurable pipeline stages
-  for timing closure.
+description: Registers AXI4-Lite transactions across five channels with configurable
+  buffering for timing optimization.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -15,8 +15,8 @@ routertl_compat:
   library: work
   files:
   - src/axi/rtl/taxi_axil_if.sv
-  - src/axi/rtl/taxi_axil_register_wr.sv
   - src/axi/rtl/taxi_axil_register_rd.sv
+  - src/axi/rtl/taxi_axil_register_wr.sv
   - src/axi/rtl/taxi_axil_register.sv
 tags:
 - axil

@@ -13,60 +13,60 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/ptp/rtl/taxi_ptp_td_leaf.sv
-  - src/ptp/rtl/taxi_ptp_td_phc.sv
-  - src/apb/rtl/taxi_apb_if.sv
-  - src/ptp/rtl/taxi_ptp_td_phc_apb.sv
-  - src/apb/rtl/taxi_apb_interconnect_1s.sv
   - src/axis/rtl/taxi_axis_if.sv
-  - src/pcie/rtl/taxi_irq_rate_limit.sv
-  - src/cndm/rtl/cndm_micro_dp_mgr.sv
-  - src/prim/rtl/taxi_penc.sv
-  - src/prim/rtl/taxi_arbiter.sv
-  - src/axis/rtl/taxi_axis_arb_mux.sv
-  - src/axi/rtl/taxi_axil_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
-  - src/axi/rtl/taxi_axil_tie_wr.sv
-  - src/axi/rtl/taxi_axil_register_wr.sv
-  - src/axi/rtl/taxi_axil_crossbar_addr.sv
-  - src/axi/rtl/taxi_axil_crossbar_wr.sv
-  - src/axi/rtl/taxi_axil_crossbar_1s_wr.sv
-  - src/axi/rtl/taxi_axil_register_rd.sv
-  - src/axi/rtl/taxi_axil_crossbar_rd.sv
-  - src/axi/rtl/taxi_axil_tie_rd.sv
-  - src/axi/rtl/taxi_axil_crossbar_1s_rd.sv
-  - src/axi/rtl/taxi_axil_crossbar_1s.sv
+  - src/axi/rtl/taxi_axil_if.sv
   - src/prim/rtl/taxi_ram_2rw_1c.sv
   - src/cndm/rtl/cndm_micro_cmd_mbox.sv
-  - src/dma/rtl/taxi_dma_ram_if.sv
+  - src/apb/rtl/taxi_apb_if.sv
+  - src/cndm/rtl/cndm_micro_dp_mgr.sv
+  - src/cndm/rtl/cndm_micro_queue_state.sv
   - src/dma/rtl/taxi_dma_desc_if.sv
-  - src/dma/rtl/taxi_dma_desc_mux.sv
-  - src/dma/rtl/taxi_dma_ram_demux_rd.sv
-  - src/dma/rtl/taxi_dma_if_mux_wr.sv
-  - src/dma/rtl/taxi_dma_ram_demux_wr.sv
-  - src/dma/rtl/taxi_dma_if_mux_rd.sv
-  - src/dma/rtl/taxi_dma_if_mux.sv
+  - src/dma/rtl/taxi_dma_ram_if.sv
+  - src/cndm/rtl/cndm_micro_cpl_wr.sv
+  - src/dma/rtl/taxi_dma_client_axis_source.sv
   - src/dma/rtl/taxi_dma_psdpram.sv
-  - src/ptp/rtl/taxi_ptp_td_rel2tod.sv
+  - src/cndm/rtl/cndm_micro_desc_rd.sv
   - src/dma/rtl/taxi_dma_client_axis_sink.sv
+  - src/ptp/rtl/taxi_ptp_td_rel2tod.sv
   - src/cndm/rtl/cndm_micro_rx.sv
+  - src/cndm/rtl/cndm_micro_tx.sv
+  - src/apb/rtl/taxi_apb_interconnect_1s.sv
+  - src/prim/rtl/taxi_penc.sv
+  - src/prim/rtl/taxi_arbiter.sv
+  - src/axi/rtl/taxi_axil_interconnect_rd.sv
+  - src/axi/rtl/taxi_axil_tie_rd.sv
+  - src/axi/rtl/taxi_axil_interconnect_1s_rd.sv
+  - src/axi/rtl/taxi_axil_interconnect_wr.sv
+  - src/axi/rtl/taxi_axil_tie_wr.sv
+  - src/axi/rtl/taxi_axil_interconnect_1s_wr.sv
+  - src/axi/rtl/taxi_axil_interconnect_1s.sv
+  - src/axis/rtl/taxi_axis_arb_mux.sv
   - src/sync/rtl/taxi_sync_reset.sv
   - src/sync/rtl/taxi_sync_signal.sv
   - src/axis/rtl/taxi_axis_async_fifo.sv
-  - src/axi/rtl/taxi_axil_interconnect_rd.sv
-  - src/axi/rtl/taxi_axil_interconnect_1s_rd.sv
-  - src/axi/rtl/taxi_axil_interconnect_wr.sv
-  - src/axi/rtl/taxi_axil_interconnect_1s_wr.sv
-  - src/axi/rtl/taxi_axil_interconnect_1s.sv
-  - src/cndm/rtl/cndm_micro_queue_state.sv
-  - src/cndm/rtl/cndm_micro_cpl_wr.sv
-  - src/dma/rtl/taxi_dma_client_axis_source.sv
-  - src/cndm/rtl/cndm_micro_tx.sv
-  - src/cndm/rtl/cndm_micro_desc_rd.sv
-  - src/axis/rtl/taxi_axis_demux.sv
   - src/axis/rtl/taxi_axis_adapter.sv
   - src/axis/rtl/taxi_axis_async_fifo_adapter.sv
+  - src/axis/rtl/taxi_axis_demux.sv
+  - src/dma/rtl/taxi_dma_desc_mux.sv
+  - src/dma/rtl/taxi_dma_ram_demux_wr.sv
+  - src/dma/rtl/taxi_dma_if_mux_rd.sv
+  - src/dma/rtl/taxi_dma_ram_demux_rd.sv
+  - src/dma/rtl/taxi_dma_if_mux_wr.sv
   - src/cndm/rtl/cndm_micro_port.sv
+  - src/axi/rtl/taxi_axil_crossbar_addr.sv
+  - src/axi/rtl/taxi_axil_register_rd.sv
+  - src/axi/rtl/taxi_axil_crossbar_rd.sv
+  - src/axi/rtl/taxi_axil_crossbar_1s_rd.sv
+  - src/axi/rtl/taxi_axil_register_wr.sv
+  - src/axi/rtl/taxi_axil_crossbar_wr.sv
+  - src/axi/rtl/taxi_axil_crossbar_1s_wr.sv
+  - src/axi/rtl/taxi_axil_crossbar_1s.sv
+  - src/dma/rtl/taxi_dma_if_mux.sv
+  - src/pcie/rtl/taxi_irq_rate_limit.sv
+  - src/ptp/rtl/taxi_ptp_td_leaf.sv
+  - src/ptp/rtl/taxi_ptp_td_phc.sv
+  - src/ptp/rtl/taxi_ptp_td_phc_apb.sv
   - src/cndm/rtl/cndm_lite_core.sv
 tags:
 - cndm

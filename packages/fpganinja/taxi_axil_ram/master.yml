@@ -1,7 +1,8 @@
 name: taxi_axil_ram
 namespace: fpganinja
 version: master
-description: Stores and retrieves data.
+description: RAM with AXI4-Lite slave interface supporting configurable address width
+  and optional output pipelining.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -13,9 +14,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi/rtl/taxi_axil_if.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
+  - src/axi/rtl/taxi_axil_if.sv
   - src/axi/rtl/taxi_axil_ram.sv
 tags:
 - access

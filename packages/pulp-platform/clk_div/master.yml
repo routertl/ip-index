@@ -1,8 +1,8 @@
 name: clk_div
 namespace: pulp-platform
 version: master
-description: Divides input clock frequency by a configurable ratio when enabled, with
-  optional test mode bypass.
+description: Divides an input clock by a configurable ratio when enabled, with optional
+  testmode bypass and asynchronous reset.
 license: Apache-2.0
 license_class: permissive
 source:

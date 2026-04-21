@@ -2,7 +2,7 @@ name: axi_to_mem
 namespace: pulp-platform
 version: master
 description: Converts AXI4+ATOP transactions into multi-bank memory requests with
-  configurable address width and response buffering.
+  response buffering and atomic operation support.
 license: Apache-2.0
 license_class: permissive
 source:

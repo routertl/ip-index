@@ -13,9 +13,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/sync.sv
   - src/spill_register_flushable.sv
   - src/spill_register.sv
+  - src/sync.sv
   - src/cdc_4phase.sv
 tags:
 - 4phase

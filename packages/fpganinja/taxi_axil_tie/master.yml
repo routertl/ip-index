@@ -1,8 +1,8 @@
 name: taxi_axil_tie
 namespace: fpganinja
 version: master
-description: Connects AXI4-Lite slave and master interfaces, passing through write
-  and read transactions between them.
+description: Connects AXI4-Lite slave and master interfaces, passing through read
+  and write transactions between them.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -17,8 +17,8 @@ routertl_compat:
   - src/axi/rtl/taxi_axil_if.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
-  - src/axi/rtl/taxi_axil_tie_wr.sv
   - src/axi/rtl/taxi_axil_tie_rd.sv
+  - src/axi/rtl/taxi_axil_tie_wr.sv
   - src/axi/rtl/taxi_axil_tie.sv
 tags:
 - axil

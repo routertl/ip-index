@@ -1,8 +1,8 @@
 name: axi_serializer_intf
 namespace: pulp-platform
 version: master
-description: Serializes concurrent AXI read/write transactions into sequential master
-  port operations while managing in-flight tra...
+description: Serializes concurrent AXI transactions to enforce sequential read and
+  write ordering with configurable transaction limits.
 license: Apache-2.0
 license_class: permissive
 source:

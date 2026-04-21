@@ -1,7 +1,8 @@
 name: taxi_axi_axil_adapter
 namespace: fpganinja
 version: master
-description: Adapts AXI4 to AXI4-Lite.
+description: Adapts AXI4 transactions to AXI4-Lite protocol with optional burst repacking
+  for wider buses.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -13,8 +14,8 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/axi/rtl/taxi_axil_if.sv
   - src/axi/rtl/taxi_axi_if.sv
+  - src/axi/rtl/taxi_axil_if.sv
   - src/axi/rtl/taxi_axi_axil_adapter_rd.sv
   - src/axi/rtl/taxi_axi_axil_adapter_wr.sv
   - src/axi/rtl/taxi_axi_axil_adapter.sv

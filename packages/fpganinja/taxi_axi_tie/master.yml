@@ -1,7 +1,8 @@
 name: taxi_axi_tie
 namespace: fpganinja
 version: master
-description: Transfers data between AXI4 interfaces.
+description: Bridges AXI4 slave and master interfaces by directly connecting corresponding
+  read and write channels.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

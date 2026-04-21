@@ -1,8 +1,8 @@
 name: stream_register
 namespace: pulp-platform
 version: master
-description: Buffers data with ready/valid handshake protocol, decoupling input and
-  output streams.
+description: Buffers streaming data with ready/valid handshake protocol between input
+  and output ports.
 license: Apache-2.0
 license_class: permissive
 source:

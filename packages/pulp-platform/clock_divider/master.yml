@@ -1,8 +1,8 @@
 name: clock_divider
 namespace: pulp-platform
 version: master
-description: Divides input clock frequency by a configurable factor with asynchronous
-  gating and test mode support.
+description: Divides an input clock by a programmable factor and outputs the divided
+  clock with gating and test mode support.
 license: Apache-2.0
 license_class: permissive
 source:
@@ -14,8 +14,6 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/rstgen_bypass.sv
-  - src/rstgen.sv
   - src/clk_int_div.sv
   - src/deprecated/clk_div.sv
   - src/delta_counter.sv
@@ -23,6 +21,8 @@ routertl_compat:
   - src/deprecated/clock_divider_counter.sv
   - src/deprecated/pulp_sync.sv
   - src/deprecated/pulp_sync_wedge.sv
+  - src/rstgen_bypass.sv
+  - src/rstgen.sv
   - src/deprecated/clock_divider.sv
 tags:
 - clock

@@ -13,9 +13,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/pcie/rtl/taxi_pcie_tlp_if.sv
   - src/apb/rtl/taxi_apb_if.sv
   - src/axis/rtl/taxi_axis_if.sv
+  - src/pcie/rtl/taxi_pcie_tlp_if.sv
   - src/pcie/rtl/taxi_pcie_msix_apb.sv
 tags:
 - advanced

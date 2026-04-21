@@ -1,8 +1,8 @@
 name: taxi_axis_register
 namespace: fpganinja
 version: master
-description: Configurable AXI4-Stream register stage that buffers data with selectable
-  bypass, simple buffer, or skid buffer modes.
+description: Registers AXI4-Stream data with configurable buffer type (bypass, simple,
+  or skid buffer).
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

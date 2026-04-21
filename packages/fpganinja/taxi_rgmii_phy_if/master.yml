@@ -1,7 +1,8 @@
 name: taxi_rgmii_phy_if
 namespace: fpganinja
 version: master
-description: Interfaces RGMII PHY to MAC.
+description: Converts between GMII (MAC) and RGMII (PHY) interfaces with clock domain
+  bridging and speed detection.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -13,11 +14,11 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/sync/rtl/taxi_sync_reset.sv
+  - src/io/rtl/taxi_oddr.sv
   - src/io/rtl/taxi_iddr.sv
   - src/io/rtl/taxi_ssio_ddr_in.sv
+  - src/sync/rtl/taxi_sync_reset.sv
   - src/sync/rtl/taxi_sync_signal.sv
-  - src/io/rtl/taxi_oddr.sv
   - src/eth/rtl/taxi_rgmii_phy_if.sv
 tags:
 - gigabit

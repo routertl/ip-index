@@ -1,9 +1,8 @@
 name: axi_throttle
 namespace: pulp-platform
 version: master
-description: 'Authors: - Thomas Benz <tbenz@iis.ee.ethz.ch> Throttles an AXI4+ATOP
-  bus. The maximum number of outstanding transfers have to be set as a compile-time
-  parameter, whereas the number of outstanding t...'
+description: Limits AXI4 read and write request throughput by gating transactions
+  based on configurable maximum pending request counts.
 license: Apache-2.0
 license_class: permissive
 source:

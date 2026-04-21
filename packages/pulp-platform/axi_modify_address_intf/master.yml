@@ -1,8 +1,8 @@
 name: axi_modify_address_intf
 namespace: pulp-platform
 version: master
-description: Transforms AXI slave requests by modifying addresses before forwarding
-  to an AXI master port.
+description: Transforms AXI slave port requests by modifying addresses before forwarding
+  to master port.
 license: Apache-2.0
 license_class: permissive
 source:

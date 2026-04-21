@@ -1,9 +1,8 @@
 name: stream_throttle
 namespace: pulp-platform
 version: master
-description: Thomas Benz <tbenz@ethz.ch> Throttles a ready valid handshaked bus. The
-  maximum number of outstanding transfers have to be set as a compile-time parameter,
-  whereas the number of outstanding transfe...
+description: Throttles downstream requests based on available credits to limit outstanding
+  transactions.
 license: Apache-2.0
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: shift_reg
 namespace: pulp-platform
 version: master
-description: Shifts input data through a parameterizable pipeline of registers on
-  each clock cycle.
+description: Shift register that delays an input signal by a configurable number of
+  stages.
 license: Apache-2.0
 license_class: permissive
 source:

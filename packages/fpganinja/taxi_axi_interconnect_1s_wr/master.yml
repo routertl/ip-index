@@ -1,7 +1,8 @@
 name: taxi_axi_interconnect_1s_wr
 namespace: fpganinja
 version: master
-description: Interconnects AXI slave to multiple masters.
+description: Routes AXI write transactions from a single slave port to multiple master
+  ports based on address decoding.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -13,9 +14,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
+  - src/axi/rtl/taxi_axi_if.sv
   - src/prim/rtl/taxi_penc.sv
   - src/prim/rtl/taxi_arbiter.sv
-  - src/axi/rtl/taxi_axi_if.sv
   - src/axi/rtl/taxi_axi_interconnect_wr.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv

@@ -1,9 +1,7 @@
 name: axi_burst_splitter_gran
 namespace: pulp-platform
 version: master
-description: 'Authors: - Wolfgang Roenninger <wroennin@iis.ee.ethz.ch> - Andreas Kurth
-  <akurth@iis.ee.ethz.ch> - Thomas Benz <tbenz@iis.ee.ethz.ch> Split AXI4 bursts into
-  single-beat transactions. ## Limitations...'
+description: Splitter with ready/valid handshake
 license: Apache-2.0
 license_class: permissive
 source:
@@ -18,10 +16,10 @@ routertl_compat:
   - src/axi_demux_id_counters.sv
   - src/axi_demux_simple.sv
   - src/axi_intf.sv
-  - src/axi_cut.sv
-  - src/axi_multicut.sv
   - src/axi_atop_filter.sv
   - src/axi_err_slv.sv
+  - src/axi_cut.sv
+  - src/axi_multicut.sv
   - src/axi_burst_splitter_gran.sv
 tags:
 - amba

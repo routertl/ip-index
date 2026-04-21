@@ -1,8 +1,8 @@
 name: axi_to_mem_banked
 namespace: pulp-platform
 version: master
-description: Converts AXI4+ATOP transactions to banked memory requests with configurable
-  latency and striping across multiple memo...
+description: Converts AXI4+ATOP protocol requests to interleaved multi-bank memory
+  access with configurable latency and strobe handling.
 license: Apache-2.0
 license_class: permissive
 source:
@@ -15,11 +15,11 @@ routertl_compat:
   library: work
   files:
   - src/axi_intf.sv
-  - src/axi_to_detailed_mem.sv
-  - src/axi_to_mem.sv
   - src/axi_demux_id_counters.sv
   - src/axi_demux_simple.sv
   - src/axi_demux.sv
+  - src/axi_to_detailed_mem.sv
+  - src/axi_to_mem.sv
   - src/axi_to_mem_banked.sv
 tags:
 - amba

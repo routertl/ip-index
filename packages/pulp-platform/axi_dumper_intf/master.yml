@@ -1,8 +1,7 @@
 name: axi_dumper_intf
 namespace: pulp-platform
 version: master
-description: Logs AXI bus transactions to file with configurable channel filtering
-  based on bus name and transaction types.
+description: Logs AXI bus transactions to file with configurable channel filtering.
 license: Apache-2.0
 license_class: permissive
 source:

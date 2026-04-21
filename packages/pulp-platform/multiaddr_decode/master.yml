@@ -1,8 +1,8 @@
 name: multiaddr_decode
 namespace: pulp-platform
 version: master
-description: Identifies which address map rules match a given address set in {addr,
-  mask} representation.
+description: Decodes which address map rules match a given address set specified by
+  address and mask pair.
 license: Apache-2.0
 license_class: permissive
 source:

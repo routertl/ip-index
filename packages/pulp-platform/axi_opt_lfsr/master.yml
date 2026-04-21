@@ -1,8 +1,8 @@
 name: axi_opt_lfsr
 namespace: pulp-platform
 version: master
-description: AXI4-Lite interface to dual independent LFSR with serial shift capability
-  for write and read paths.
+description: AXI4-Lite LFSR controller with serial shift interface for pseudo-random
+  generation and testing.
 license: Apache-2.0
 license_class: permissive
 source:

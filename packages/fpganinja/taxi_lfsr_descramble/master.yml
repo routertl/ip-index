@@ -1,7 +1,8 @@
 name: taxi_lfsr_descramble
 namespace: fpganinja
 version: master
-description: Descrambles LFSR-encrypted data.
+description: Descrambles incoming data using a configurable LFSR with optional bit-reversal
+  and self-synchronization.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -1,7 +1,8 @@
 name: taxi_apb_tie
 namespace: fpganinja
 version: master
-description: Bridges APB slave to master.
+description: Bridges APB slave and master interfaces, routing transactions between
+  them.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -13,9 +14,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/apb/rtl/taxi_apb_if.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/lss/rtl/taxi_i2c_slave.sv
+  - src/apb/rtl/taxi_apb_if.sv
   - src/apb/rtl/taxi_apb_tie.sv
 tags:
 - advanced

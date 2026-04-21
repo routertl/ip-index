@@ -14,8 +14,8 @@ routertl_compat:
   library: work
   files:
   - src/axi/rtl/taxi_axil_if.sv
-  - src/pcie/rtl/taxi_pcie_tlp_if.sv
   - src/axis/rtl/taxi_axis_if.sv
+  - src/pcie/rtl/taxi_pcie_tlp_if.sv
   - src/pcie/rtl/taxi_pcie_msix_axil.sv
 tags:
 - axil

@@ -1,8 +1,8 @@
 name: stream_delay
 namespace: pulp-platform
 version: master
-description: Delays streaming data by a fixed or random number of cycles while maintaining
-  ready/valid handshake protocol.
+description: Delays a data stream by a configurable number of cycles with optional
+  random stalling.
 license: Apache-2.0
 license_class: permissive
 source:
@@ -14,9 +14,9 @@ routertl_compat:
   language: systemverilog
   library: work
   files:
-  - src/lfsr_16bit.sv
   - src/delta_counter.sv
   - src/counter.sv
+  - src/lfsr_16bit.sv
   - src/stream_delay.sv
 tags:
 - delay

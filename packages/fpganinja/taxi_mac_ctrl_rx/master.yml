@@ -1,8 +1,8 @@
 name: taxi_mac_ctrl_rx
 namespace: fpganinja
 version: master
-description: Receives and parses MAC control frames from an AXI4-Stream input, extracting
-  header and parameter fields while option...
+description: Receives and decodes MAC control frames from an AXI4-Stream input, extracting
+  header and parameter data with configurable filtering.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

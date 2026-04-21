@@ -1,9 +1,7 @@
 name: passthrough_stream_fifo
 namespace: pulp-platform
 version: master
-description: 'Authors: - Thomas Benz  <tbenz@iis.ee.ethz.ch> - Tobias Senti <tsenti@ethz.ch>
-  Stream FIFO that does not cut the timing path. When full; pushing data is allowed
-  if in the same cycle data is popped....'
+description: FIFO buffer with ready/valid handshake
 license: Apache-2.0
 license_class: permissive
 source:

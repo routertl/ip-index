@@ -1,8 +1,8 @@
 name: taxi_axis_null_src
 namespace: fpganinja
 version: master
-description: Generates an AXI4-Stream null source that outputs inactive/disabled data
-  transfers.
+description: Generates a null AXI4-Stream source that produces valid data with all
+  payload bits set to zero.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

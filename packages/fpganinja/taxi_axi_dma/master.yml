@@ -1,7 +1,8 @@
 name: taxi_axi_dma
 namespace: fpganinja
 version: master
-description: Performs DMA transfers over AXI.
+description: DMA controller that transfers data between AXI memory and AXI streams
+  with configurable burst lengths and unaligned transfer support.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:
@@ -14,11 +15,11 @@ routertl_compat:
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
+  - src/lss/rtl/taxi_i2c_slave.sv
   - src/axi/rtl/taxi_axi_if.sv
   - src/dma/rtl/taxi_dma_desc_if.sv
-  - src/lss/rtl/taxi_i2c_slave.sv
-  - src/dma/rtl/taxi_axi_dma_wr.sv
   - src/dma/rtl/taxi_axi_dma_rd.sv
+  - src/dma/rtl/taxi_axi_dma_wr.sv
   - src/dma/rtl/taxi_axi_dma.sv
 tags:
 - access
