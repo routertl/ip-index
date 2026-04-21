@@ -3,8 +3,7 @@ namespace: analog-devices
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
-description: Counts TDD frame timing with configurable burst and delay parameters,
-  producing frame position and end-of-frame signals.
+description: Counts TDD frames.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

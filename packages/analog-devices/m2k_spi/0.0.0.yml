@@ -1,8 +1,7 @@
 name: m2k_spi
 namespace: analog-devices
 version: 0.0.0
-description: Multiplexes SPI communication between 4-wire and 3-wire interfaces for
-  AD9963 and ADF4360 devices.
+description: Implements SPI interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

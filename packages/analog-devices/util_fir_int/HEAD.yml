@@ -3,8 +3,7 @@ namespace: analog-devices
 version: HEAD
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
-description: Implements an AXI4-Stream FIR interpolation filter with dual-channel
-  16-bit output and configurable interpolation mode.
+description: Filters input data into two channels.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

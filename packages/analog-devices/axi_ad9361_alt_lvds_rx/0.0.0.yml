@@ -26,7 +26,6 @@ tags:
 - lvds
 - receive
 - receiver
-- rx
 - signaling
 - voltage
 role: top

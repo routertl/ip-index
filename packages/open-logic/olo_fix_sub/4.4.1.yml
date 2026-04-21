@@ -30,7 +30,6 @@ tags:
 - fix
 - olo
 - open
-- sub
 role: top
 components:
 - olo_axi_master_simple

@@ -1,8 +1,7 @@
 name: axi_ada4355
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces an ADA4355 ADC to an AXI4-Lite bus, capturing differential
-  ADC data and providing register-based control.
+description: Drives ADA4355 ADC via AXI4-Lite.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

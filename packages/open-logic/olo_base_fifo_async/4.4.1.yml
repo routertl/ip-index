@@ -29,7 +29,6 @@ routertl_compat:
 tags:
 - async
 - asynchronous
-- base
 - buffer
 - fifo
 - olo

@@ -1,8 +1,7 @@
 name: util_extract
 namespace: analog-devices
 version: 0.0.0
-description: Extracts and conditionally routes multi-channel input data based on trigger
-  signals while maintaining validity flags.
+description: Extracts data from input streams.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,7 @@
 name: jesd204_rx_lane_64b
 namespace: analog-devices
 version: 0.0.0
-description: Receives and processes 64-bit JESD204 serial data with elastic buffering,
-  descrambling, and header extraction for device clock domain alignment.
+description: Receives JESD204 data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -3,8 +3,8 @@ namespace: fpganinja
 version: master
 commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
 published_at: '2026-04-06T23:59:16-07:00'
-description: AXI DMA controller that transfers data between memory locations based
-  on descriptor commands with configurable burst length and alignment support.
+description: DMA controller that transfers data via AXI4 interfaces based on descriptor
+  commands.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

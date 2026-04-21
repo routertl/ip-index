@@ -1,7 +1,7 @@
 name: ad_dds_sine
 namespace: analog-devices
 version: 0.0.0
-description: Computes sine values from phase angles with optional delay data passthrough.
+description: Generates sine values.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

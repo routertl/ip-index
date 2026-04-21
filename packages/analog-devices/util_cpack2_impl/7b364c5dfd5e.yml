@@ -3,8 +3,7 @@ namespace: analog-devices
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
-description: Packs multi-channel sample data into a single FIFO with optional parallel/serial
-  conversion and overflow handling.
+description: Packs channel data into a single stream.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -25,6 +24,5 @@ routertl_compat:
   - library/util_pack/util_cpack2/util_cpack2_impl.v
 tags:
 - cpack2
-- impl
 - util
 role: component

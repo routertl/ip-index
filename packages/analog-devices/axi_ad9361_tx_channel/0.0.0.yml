@@ -1,8 +1,7 @@
 name: axi_ad9361_tx_channel
 namespace: analog-devices
 version: 0.0.0
-description: Transmit channel for AD9361 RF transceiver with DDS, IQ correction, and
-  AXI control interface.
+description: Transmits digital data to DAC.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -20,7 +20,6 @@ routertl_compat:
   - library/util_pack/util_pack_common/pack_shell.v
   - library/util_pack/util_upack2/util_upack2_impl.v
 tags:
-- impl
 - upack2
 - util
 role: component

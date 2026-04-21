@@ -1,8 +1,7 @@
 name: axi_ad7405
 namespace: analog-devices
 version: 0.0.0
-description: AXI4-Lite configurable sigma-delta ADC interface with integrated digital
-  filtering for AD7405 sensor data.
+description: Filters ADC data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

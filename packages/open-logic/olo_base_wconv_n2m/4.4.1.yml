@@ -22,7 +22,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_logic.vhd
   - src/base/vhdl/olo_base_wconv_n2m.vhd
 tags:
-- base
 - converter
 - n2m
 - olo

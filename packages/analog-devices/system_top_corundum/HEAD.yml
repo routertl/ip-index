@@ -22,7 +22,6 @@ routertl_compat:
 tags:
 - corundum
 - system
-- top
 role: top
 components:
 - ad_3w_spi

@@ -53,7 +53,6 @@ tags:
 - ethernet
 - fifo
 - gigabit
-- mac
 - media
 - queue
 - taxi

@@ -22,7 +22,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_logic.vhd
   - src/base/vhdl/olo_base_wconv_xn2n.vhd
 tags:
-- base
 - converter
 - olo
 - open

@@ -26,7 +26,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_pl_stage.vhd
   - src/base/vhdl/olo_base_rate_limit.vhd
 tags:
-- base
 - limit
 - olo
 - open

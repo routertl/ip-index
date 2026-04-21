@@ -3,8 +3,7 @@ namespace: analog-devices
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
-description: Interfaces an AD9434 12-bit ADC to an AXI system, converting differential
-  signals to single-ended data with programmable input delays and clock management.
+description: Drives ADC data interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

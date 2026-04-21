@@ -23,7 +23,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_attribute.vhd
   - src/base/vhdl/olo_base_reset_gen.vhd
 tags:
-- base
 - gen
 - olo
 - open

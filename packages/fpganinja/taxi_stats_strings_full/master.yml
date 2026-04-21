@@ -3,8 +3,8 @@ namespace: fpganinja
 version: master
 commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
 published_at: '2026-04-06T23:59:16-07:00'
-description: Collects and reports taxi statistics via AXI-Lite registers with configurable
-  pipeline depth.
+description: Accumulates packet statistics from monitored traffic and exposes them
+  via AXI-Lite registers with configurable pipeline depth.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -1,8 +1,7 @@
 name: cordic_demod
 namespace: analog-devices
 version: 0.0.0
-description: Demodulates complex input signals using CORDIC algorithm with AXI-Stream
-  interfaces.
+description: Demodulates input data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

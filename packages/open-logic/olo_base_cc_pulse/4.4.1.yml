@@ -23,7 +23,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_cc_reset.vhd
   - src/base/vhdl/olo_base_cc_pulse.vhd
 tags:
-- base
 - cc
 - clock
 - crossing

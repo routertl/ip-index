@@ -3,9 +3,7 @@ namespace: openhwgroup
 version: master
 commit_sha: 6033d2b1be3295ec774d17ac4cf226faacfdeb08
 published_at: '2026-04-17T09:34:04-04:00'
-description: CV32E40P is a small and efficient, 32-bit, in-order RISC-V core with
-  a 4-stage pipeline that implements the RV32IM\[F|Zfinx\]C instruction set architecture,
-  and the PULP custom extensions for achieving higher code density, performance, a...
+description: Cv32e40p IP core with memory interface and interrupt support
 license: Apache-2.0
 license_class: permissive
 source:
@@ -76,43 +74,17 @@ routertl_compat:
   - rtl/cv32e40p_top.sv
 tags:
 - aligner
-- alu
-- apu
 - buffer
 - compressed
 - controller
-- core
-- cs
 - cv32e40p
 - decoder
-- disp
-- div
 - divider
-- ex
-- ff
-- fifo
-- file
-- fp
 - hwloop
-- id
-- int
 - interface
-- load
-- mult
-- obi
-- one
-- popcnt
 - prefetch
-- queue
 - register
 - registers
-- regs
-- sleep
-- stage
-- store
-- top
-- unit
-- wrapper
 role: repo
 top_modules:
 - cv32e40p_top

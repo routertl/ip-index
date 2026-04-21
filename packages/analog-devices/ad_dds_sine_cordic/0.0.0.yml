@@ -1,7 +1,7 @@
 name: ad_dds_sine_cordic
 namespace: analog-devices
 version: 0.0.0
-description: Computes sine and cosine values from an input angle using a CORDIC algorithm.
+description: Generates sine and cosine values.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

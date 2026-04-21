@@ -1,8 +1,7 @@
 name: axi_ad9467_channel
 namespace: analog-devices
 version: 0.0.0
-description: Processes AD9467 ADC channel data with format conversion, PN error detection,
-  and processor register interface control.
+description: Formats ADC data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

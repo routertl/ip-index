@@ -1,8 +1,7 @@
 name: axi_tdd_channel
 namespace: analog-devices
 version: 0.0.0
-description: Manages TDD channel output timing based on counter-driven state transitions
-  and configurable high/low duration parame...
+description: Generates output based on TDD channel data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

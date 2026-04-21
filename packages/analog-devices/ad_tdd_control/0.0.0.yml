@@ -1,8 +1,8 @@
 name: ad_tdd_control
 namespace: analog-devices
 version: 0.0.0
-description: Manages time-division duplex (TDD) switching by generating synchronized
-  control signals for transmit/receive paths ba...
+description: Time-division duplex controller generating synchronized transmit and
+  receive path switching signals based on frame timing.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

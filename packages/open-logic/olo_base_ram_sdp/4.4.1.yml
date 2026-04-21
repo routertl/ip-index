@@ -24,7 +24,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_ram_sdp.vhd
 tags:
 - access
-- base
 - memory
 - olo
 - open

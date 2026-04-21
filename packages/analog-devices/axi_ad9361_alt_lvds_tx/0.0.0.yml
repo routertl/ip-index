@@ -27,7 +27,6 @@ tags:
 - signaling
 - transmit
 - transmitter
-- tx
 - voltage
 role: top
 components:

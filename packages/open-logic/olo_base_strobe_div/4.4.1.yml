@@ -21,7 +21,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_math.vhd
   - src/base/vhdl/olo_base_strobe_div.vhd
 tags:
-- base
 - div
 - divider
 - olo

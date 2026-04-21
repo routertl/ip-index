@@ -4,7 +4,7 @@ version: master
 commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
 published_at: '2026-04-06T23:59:16-07:00'
 description: Receives and decodes MAC control frames from an AXI4-Stream input, extracting
-  headers and parameters while optionally forwarding non-matching frames.
+  Ethernet headers and parameters while optionally forwarding the frame data.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

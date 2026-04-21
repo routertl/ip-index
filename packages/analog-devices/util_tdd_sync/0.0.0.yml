@@ -1,8 +1,7 @@
 name: util_tdd_sync
 namespace: analog-devices
 version: 0.0.0
-description: Synchronizes a TDD (Time Division Duplex) control signal across clock
-  domains with configurable period synchronization.
+description: Synchronizes input signal.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

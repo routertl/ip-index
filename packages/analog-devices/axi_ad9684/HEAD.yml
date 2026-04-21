@@ -3,8 +3,7 @@ namespace: analog-devices
 version: HEAD
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
-description: AXI interface for AD9684 14-bit dual-channel ADC with configurable I/O
-  delays and overflow status monitoring.
+description: AXI wrapper for AD9684 ADC.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,7 @@
 name: axi_ad9265_if
 namespace: analog-devices
 version: 0.0.0
-description: Converts differential AD9265 ADC interface signals to single-ended with
-  configurable I/O delays and clock domain adaptation.
+description: Interfaces with AD9265 ADC.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

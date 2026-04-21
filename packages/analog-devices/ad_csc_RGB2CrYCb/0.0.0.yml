@@ -1,8 +1,7 @@
 name: ad_csc_RGB2CrYCb
 namespace: analog-devices
 version: 0.0.0
-description: Converts RGB color space to CrYCb (YCbCr) color space with configurable
-  synchronization delay.
+description: Converts RGB to CrYCb.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

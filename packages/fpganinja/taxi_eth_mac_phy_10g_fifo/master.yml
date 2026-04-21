@@ -51,19 +51,15 @@ routertl_compat:
   - src/ptp/rtl/taxi_ptp_clock_cdc.sv
   - src/eth/rtl/taxi_eth_mac_phy_10g_fifo.sv
 tags:
-- 10g
 - 10gbe
 - access
 - buffer
 - control
-- eth
 - ethernet
 - fifo
 - gigabit
 - layer
-- mac
 - media
-- phy
 - physical
 - queue
 - taxi

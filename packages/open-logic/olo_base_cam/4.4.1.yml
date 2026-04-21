@@ -26,7 +26,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_cam.vhd
 tags:
 - addressable
-- base
 - cam
 - content
 - memory

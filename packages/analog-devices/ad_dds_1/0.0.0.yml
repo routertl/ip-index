@@ -1,8 +1,7 @@
 name: ad_dds_1
 namespace: analog-devices
 version: 0.0.0
-description: Generates scaled sinusoidal output based on input phase angle at each
-  clock cycle.
+description: Generates DDS output data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

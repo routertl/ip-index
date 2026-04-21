@@ -26,14 +26,12 @@ routertl_compat:
   - library/common/util_ext_sync.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_core.v
 tags:
-- ad
 - adc
 - analog
 - converter
 - core
 - digital
 - internet
-- ip
 - jesd204
 - layer
 - network

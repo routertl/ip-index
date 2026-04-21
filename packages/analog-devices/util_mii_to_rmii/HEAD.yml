@@ -3,8 +3,7 @@ namespace: analog-devices
 version: HEAD
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
-description: Converts MII (4-bit parallel) Ethernet interface to RMII (2-bit parallel)
-  for reduced-pin PHY connectivity.
+description: MII to RMII converter.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,8 @@
 name: hsci_master_regs_regs
 namespace: analog-devices
 version: 0.0.0
-description: +----------+----------------------------+---------+-----------------------------------------------------------------------+
-  |  ADDRESS | REG NAME                   |  BITS   |  BITFIELD...
+description: Register bank for the HSCI master controller, exposing configuration
+  and status fields over the processor interface.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -19,5 +19,4 @@ routertl_compat:
 tags:
 - hsci
 - master
-- regs
 role: component

@@ -25,7 +25,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_fifo_sync.vhd
   - src/base/vhdl/olo_base_fifo_packet.vhd
 tags:
-- base
 - buffer
 - fifo
 - olo

@@ -1,8 +1,7 @@
 name: cic_decim
 namespace: analog-devices
 version: 0.0.0
-description: Decimates input signal by selectable rates while filtering, with multi-stage
-  CIC architecture and clock enable control.
+description: Decimates input signal.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

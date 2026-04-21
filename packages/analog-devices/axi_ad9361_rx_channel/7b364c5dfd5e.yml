@@ -3,8 +3,7 @@ namespace: analog-devices
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
-description: Configurable AXI AD9361 receiver channel with DC filtering, IQ correction,
-  and PN monitoring for I/Q data acquisition.
+description: Receives analog data from ADC.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

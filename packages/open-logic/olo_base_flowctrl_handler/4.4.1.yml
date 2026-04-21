@@ -25,7 +25,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_fifo_sync.vhd
   - src/base/vhdl/olo_base_flowctrl_handler.vhd
 tags:
-- base
 - flowctrl
 - handler
 - olo

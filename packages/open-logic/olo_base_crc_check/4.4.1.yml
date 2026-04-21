@@ -29,7 +29,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_pl_stage.vhd
   - src/base/vhdl/olo_base_crc_check.vhd
 tags:
-- base
 - check
 - crc
 - cyclic

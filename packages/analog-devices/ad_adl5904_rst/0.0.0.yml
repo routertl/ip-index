@@ -1,8 +1,7 @@
 name: ad_adl5904_rst
 namespace: analog-devices
 version: 0.0.0
-description: Generates a reset signal for RF peak detector based on peak detection
-  input and system clock.
+description: Generates reset signal.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

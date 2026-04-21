@@ -23,7 +23,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_string.vhd
   - src/base/vhdl/olo_base_dyn_sft.vhd
 tags:
-- base
 - dyn
 - olo
 - open

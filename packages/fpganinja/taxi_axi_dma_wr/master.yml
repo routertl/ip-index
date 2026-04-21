@@ -3,8 +3,8 @@ namespace: fpganinja
 version: master
 commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
 published_at: '2026-04-06T23:59:16-07:00'
-description: Transfers data from an AXI Stream input to system memory via an AXI4
-  write master interface using DMA descriptors.
+description: Converts DMA write descriptors and AXI stream data into AXI4 write transactions
+  with configurable burst lengths and alignment support.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

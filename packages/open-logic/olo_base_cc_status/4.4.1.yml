@@ -3,10 +3,8 @@ namespace: open-logic
 version: 4.4.1
 commit_sha: d1407a7427d9201a7bcd8c37749ec083b13006dc
 published_at: '2026-03-10T06:51:30+01:00'
-description: This is a very basic clock crossing that allows passing of static-data
-  (i.e. data that is not sample based) from one clock domain to another. This entity
-  ensures that the data is passed correctly at some point of time but it does not
-  spe...
+description: Synchronizes status signals and reset signals across two independent
+  clock domains with configurable synchronization stages.
 license: ''
 license_class: unknown
 source:
@@ -26,7 +24,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_cc_simple.vhd
   - src/base/vhdl/olo_base_cc_status.vhd
 tags:
-- base
 - cc
 - clock
 - crossing

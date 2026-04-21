@@ -1,8 +1,7 @@
 name: axi_ad35xxr_channel
 namespace: analog-devices
 version: 0.0.0
-description: DAC channel controller that multiplexes DMA and ADC data sources with
-  optional DDS signal generation and formats output for DAC transmission.
+description: Generates DAC data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

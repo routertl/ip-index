@@ -3,8 +3,8 @@ namespace: fpganinja
 version: master
 commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
 published_at: '2026-04-06T23:59:16-07:00'
-description: Transmit MAC control frame controller that arbitrates between normal
-  AXI4-Stream traffic and MAC control frames with pause support.
+description: Multiplexes MAC control frames with regular transmit traffic, prioritizing
+  pause requests and forwarding data via AXI4-Stream.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

@@ -26,7 +26,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_crc_append.vhd
 tags:
 - append
-- base
 - check
 - crc
 - cyclic

@@ -20,5 +20,4 @@ routertl_compat:
   - projects/ad9783_ebz/zcu102/system_top.v
 tags:
 - system
-- top
 role: top

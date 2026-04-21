@@ -22,7 +22,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_logic.vhd
   - src/base/vhdl/olo_base_prbs.vhd
 tags:
-- base
 - olo
 - open
 - prbs

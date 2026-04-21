@@ -21,9 +21,7 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_attribute.vhd
   - src/base/vhdl/olo_base_pl_stage.vhd
 tags:
-- base
 - olo
 - open
 - pl
-- stage
 role: component

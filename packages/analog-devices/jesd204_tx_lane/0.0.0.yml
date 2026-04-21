@@ -1,8 +1,7 @@
 name: jesd204_tx_lane
 namespace: analog-devices
 version: 0.0.0
-description: Serializes and transmits JESD204B lane data with character replacement,
-  scrambling, and initialization sequence control.
+description: Transmits JESD204 data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

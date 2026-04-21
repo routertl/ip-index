@@ -20,7 +20,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_math.vhd
   - src/base/vhdl/olo_base_tdm_mux.vhd
 tags:
-- base
 - multiplexer
 - mux
 - olo

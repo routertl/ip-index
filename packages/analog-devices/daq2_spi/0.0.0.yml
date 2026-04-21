@@ -1,8 +1,7 @@
 name: daq2_spi
 namespace: analog-devices
 version: 0.0.0
-description: Manages SPI communication with multiplexed chip select control and bidirectional
-  data line direction handling.
+description: SPI interface controller.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

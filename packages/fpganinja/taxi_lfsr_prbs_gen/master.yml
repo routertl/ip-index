@@ -3,8 +3,8 @@ namespace: fpganinja
 version: master
 commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
 published_at: '2026-04-06T23:59:16-07:00'
-description: Generates pseudo-random bit sequences using a configurable LFSR with
-  selectable Fibonacci or Galois topology and optional bit reversal/inversion.
+description: Generates pseudo-random bit sequences using configurable LFSR with selectable
+  Fibonacci or Galois topology.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

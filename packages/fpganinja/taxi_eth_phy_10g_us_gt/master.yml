@@ -3,8 +3,8 @@ namespace: fpganinja
 version: master
 commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
 published_at: '2026-04-06T23:59:16-07:00'
-description: 10G Ethernet transceiver PHY for Xilinx Virtex UltraScale FPGA with configurable
-  GT SerDes and dual QPLL support.
+description: 10G Ethernet transceiver PHY using Xilinx GTY with dual QPLL support
+  and APB control interface.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

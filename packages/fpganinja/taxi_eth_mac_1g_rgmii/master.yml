@@ -42,7 +42,6 @@ routertl_compat:
   - src/eth/rtl/taxi_rgmii_phy_if.sv
   - src/eth/rtl/taxi_eth_mac_1g_rgmii.sv
 tags:
-- 1g
 - access
 - control
 - eth

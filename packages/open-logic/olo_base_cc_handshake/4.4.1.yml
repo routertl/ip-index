@@ -25,7 +25,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_cc_simple.vhd
   - src/base/vhdl/olo_base_cc_handshake.vhd
 tags:
-- base
 - cc
 - clock
 - crossing

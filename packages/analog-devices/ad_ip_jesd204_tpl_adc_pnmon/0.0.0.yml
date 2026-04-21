@@ -1,8 +1,7 @@
 name: ad_ip_jesd204_tpl_adc_pnmon
 namespace: analog-devices
 version: 0.0.0
-description: Monitors JESD204 ADC data streams against selectable PN sequences (PN7/PN15/PN23/PN9)
-  to detect synchronization loss and bit errors.
+description: Monitors JESD204 ADC PN sequences.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:
@@ -17,13 +16,11 @@ routertl_compat:
   - library/common/ad_pnmon.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_pnmon.v
 tags:
-- ad
 - adc
 - analog
 - converter
 - digital
 - internet
-- ip
 - jesd204
 - layer
 - network

@@ -1,8 +1,7 @@
 name: axi_ad9361_lvds_if_10
 namespace: analog-devices
 version: 0.0.0
-description: Interfaces AD9361 RF transceiver LVDS signals, converting differential
-  pairs to single-ended data with clock and control outputs.
+description: Interfaces AD9361 with AXI.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

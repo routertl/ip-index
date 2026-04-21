@@ -3,8 +3,7 @@ namespace: analog-devices
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
-description: Synchronizes a TDD (Time Division Duplex) control signal across clock
-  domains with configurable period synchronization.
+description: Synchronizes input signal.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

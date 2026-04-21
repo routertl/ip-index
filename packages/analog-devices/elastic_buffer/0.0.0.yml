@@ -1,8 +1,7 @@
 name: elastic_buffer
 namespace: analog-devices
 version: 0.0.0
-description: Buffers variable-width data between asynchronous clock domains with configurable
-  storage and release control.
+description: Buffers data between clocks.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -1,8 +1,7 @@
 name: ad_serdes_in
 namespace: analog-devices
 version: 0.0.0
-description: Deserializes high-speed differential or single-ended input data into
-  multiple parallel words with configurable delay adjustment.
+description: Deserializes input data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

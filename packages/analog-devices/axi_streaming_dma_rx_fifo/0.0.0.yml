@@ -21,12 +21,10 @@ tags:
 - buffer
 - bus
 - direct
-- dma
 - fifo
 - memory
 - queue
 - receive
 - receiver
-- rx
 - streaming
 role: top

@@ -3,8 +3,7 @@ namespace: analog-devices
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
-description: Interfaces AD9361 RF transceiver LVDS signals, converting differential
-  pairs to single-ended data with clock and control outputs.
+description: Interfaces AD9361 with AXI.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -26,7 +26,6 @@ tags:
 - olo
 - open
 - pl
-- stage
 role: top
 components:
 - olo_axi_master_simple

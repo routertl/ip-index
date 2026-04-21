@@ -17,14 +17,12 @@ routertl_compat:
   - library/common/ad_xcvr_rx_if.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_deframer.v
 tags:
-- ad
 - adc
 - analog
 - converter
 - deframer
 - digital
 - internet
-- ip
 - jesd204
 - layer
 - network

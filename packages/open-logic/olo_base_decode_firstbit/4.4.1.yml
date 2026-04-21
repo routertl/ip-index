@@ -22,7 +22,6 @@ routertl_compat:
   - src/base/vhdl/olo_base_pkg_logic.vhd
   - src/base/vhdl/olo_base_decode_firstbit.vhd
 tags:
-- base
 - decode
 - firstbit
 - olo

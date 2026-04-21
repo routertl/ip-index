@@ -27,16 +27,12 @@ tags:
 - 10gbe
 - access
 - control
-- eth
 - ethernet
 - gigabit
 - layer
-- mac
 - media
-- phy
 - physical
 - taxi
 - transmit
 - transmitter
-- tx
 role: component

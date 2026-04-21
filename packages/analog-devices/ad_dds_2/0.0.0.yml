@@ -1,8 +1,7 @@
 name: ad_dds_2
 namespace: analog-devices
 version: 0.0.0
-description: Generates digitally synthesized sine/cosine signals from phase inputs
-  with independent scaling and format selection.
+description: Generates digital signal.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -26,13 +26,11 @@ routertl_compat:
   - library/jesd204/ad_ip_jesd204_tpl_common/up_tpl_common.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_regmap.v
 tags:
-- ad
 - adc
 - analog
 - converter
 - digital
 - internet
-- ip
 - jesd204
 - layer
 - network

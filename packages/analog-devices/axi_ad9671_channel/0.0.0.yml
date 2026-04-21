@@ -1,8 +1,7 @@
 name: axi_ad9671_channel
 namespace: analog-devices
 version: 0.0.0
-description: ADC channel interface for AD9671 with data formatting, PN sequence checking,
-  and processor register control.
+description: Formats ADC data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

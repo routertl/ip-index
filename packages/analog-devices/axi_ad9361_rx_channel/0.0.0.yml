@@ -1,8 +1,7 @@
 name: axi_ad9361_rx_channel
 namespace: analog-devices
 version: 0.0.0
-description: Configurable AXI AD9361 receiver channel with DC filtering, IQ correction,
-  and PN monitoring for I/Q data acquisition.
+description: Receives analog data from ADC.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

@@ -3,8 +3,8 @@ namespace: fpganinja
 version: master
 commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
 published_at: '2026-04-06T23:59:16-07:00'
-description: Verifies incoming data against a pseudo-random bit sequence (PRBS) generated
-  by an LFSR and outputs the syndrome/error bits.
+description: Validates incoming data against a pseudo-random bit sequence generated
+  by a configurable LFSR and outputs check results.
 license: CERN-OHL-S-2.0
 license_class: strong-copyleft
 source:

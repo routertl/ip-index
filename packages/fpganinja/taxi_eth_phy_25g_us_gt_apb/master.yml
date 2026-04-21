@@ -27,11 +27,9 @@ tags:
 - bus
 - eth
 - ethernet
-- gt
 - layer
 - peripheral
 - phy
 - physical
 - taxi
-- us
 role: component

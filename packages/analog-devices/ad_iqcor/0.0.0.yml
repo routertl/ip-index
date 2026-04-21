@@ -1,8 +1,7 @@
 name: ad_iqcor
 namespace: analog-devices
 version: 0.0.0
-description: IQ imbalance corrector applying configurable coefficients to compensate
-  for I/Q gain and phase mismatches in receiver...
+description: Corrects IQ imbalance in analog-to-digital data.
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
 source:

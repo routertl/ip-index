@@ -45,18 +45,15 @@ routertl_compat:
   - src/eth/rtl/taxi_eth_mac_1g_gmii.sv
   - src/eth/rtl/taxi_eth_mac_1g_gmii_fifo.sv
 tags:
-- 1g
 - access
 - buffer
 - control
-- eth
 - ethernet
 - fifo
 - gigabit
 - gmii
 - independent
 - interface
-- mac
 - media
 - queue
 - taxi
