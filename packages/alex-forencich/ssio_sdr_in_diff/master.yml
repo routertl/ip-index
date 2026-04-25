@@ -1,0 +1,33 @@
+name: ssio_sdr_in_diff
+namespace: alex-forencich
+version: master
+commit_sha: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+published_at: '2025-02-27T15:50:25-08:00'
+description: Generic source synchronous SDR input
+license: MIT
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/alexforencich/verilog-ethernet.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/ssio_sdr_in.v
+  - rtl/ssio_sdr_in_diff.v
+tags:
+- diff
+- sdr
+- ssio
+role: top
+components:
+- eth_mac_1g_gmii
+- eth_mac_mii
+- gmii_phy_if
+- mii_phy_if
+- ssio_sdr_in
+status: deprecated-upstream
+successor: fpganinja/taxi

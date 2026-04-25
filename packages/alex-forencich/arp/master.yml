@@ -1,0 +1,31 @@
+name: arp
+namespace: alex-forencich
+version: master
+commit_sha: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+published_at: '2025-02-27T15:50:25-08:00'
+description: ARP block for IPv4, ethernet frame interface
+license: MIT
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/alexforencich/verilog-ethernet.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/lfsr.v
+  - rtl/arp_cache.v
+  - rtl/arp_eth_rx.v
+  - rtl/arp_eth_tx.v
+  - rtl/arp.v
+tags:
+- address
+- network
+- protocol
+- resolution
+role: component
+status: deprecated-upstream
+successor: fpganinja/taxi

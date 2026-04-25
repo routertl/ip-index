@@ -1,0 +1,29 @@
+name: ptp_perout
+namespace: alex-forencich
+version: master
+commit_sha: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+published_at: '2025-02-27T15:50:25-08:00'
+description: Generates periodic output pulses synchronized to a PTP clock with configurable
+  start time, period, and pulse width.
+license: MIT
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/alexforencich/verilog-ethernet.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/ptp_perout.v
+tags:
+- perout
+- precision
+- protocol
+- ptp
+- time
+role: top
+status: deprecated-upstream
+successor: fpganinja/taxi

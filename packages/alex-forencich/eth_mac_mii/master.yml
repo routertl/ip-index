@@ -1,0 +1,42 @@
+name: eth_mac_mii
+namespace: alex-forencich
+version: master
+commit_sha: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+published_at: '2025-02-27T15:50:25-08:00'
+description: 10M/100M Ethernet MAC with MII interface
+license: MIT
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/alexforencich/verilog-ethernet.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/lfsr.v
+  - rtl/axis_gmii_rx.v
+  - rtl/axis_gmii_tx.v
+  - rtl/mac_ctrl_rx.v
+  - rtl/mac_ctrl_tx.v
+  - rtl/mac_pause_ctrl_rx.v
+  - rtl/mac_pause_ctrl_tx.v
+  - rtl/eth_mac_1g.v
+  - rtl/ssio_sdr_in.v
+  - rtl/mii_phy_if.v
+  - rtl/eth_mac_mii.v
+tags:
+- access
+- control
+- eth
+- ethernet
+- independent
+- interface
+- mac
+- media
+- mii
+role: component
+status: deprecated-upstream
+successor: fpganinja/taxi

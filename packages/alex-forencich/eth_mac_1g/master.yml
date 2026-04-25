@@ -1,0 +1,38 @@
+name: eth_mac_1g
+namespace: alex-forencich
+version: master
+commit_sha: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+published_at: '2025-02-27T15:50:25-08:00'
+description: AXI4-Stream with UART interface and configurable parameters
+license: MIT
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/alexforencich/verilog-ethernet.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/lfsr.v
+  - rtl/axis_gmii_rx.v
+  - rtl/axis_gmii_tx.v
+  - rtl/mac_ctrl_rx.v
+  - rtl/mac_ctrl_tx.v
+  - rtl/mac_pause_ctrl_rx.v
+  - rtl/mac_pause_ctrl_tx.v
+  - rtl/eth_mac_1g.v
+tags:
+- 1g
+- access
+- control
+- eth
+- ethernet
+- gigabit
+- mac
+- media
+role: component
+status: deprecated-upstream
+successor: fpganinja/taxi
