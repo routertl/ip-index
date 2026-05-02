@@ -36317,5 +36317,976 @@
     "library_deps": [],
     "created_at": "2026-04-15T23:18:14Z",
     "updated_at": "2026-04-17T14:02:22+00:00"
+  },
+  {
+    "namespace": "opencores",
+    "name": "fault_sm",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Detects and reports local and remote Ethernet link faults based on incoming fault messages.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "fault",
+      "sm"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "generic_fifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "FIFO buffer with FIFO interface and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "buffer",
+      "fifo",
+      "queue"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "meta_sync",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Synchronizes an asynchronous input signal to a clock domain using metastability-hardened flip-flops.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "meta",
+      "sync",
+      "synchronizer",
+      "synchronous"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "rx_data_fifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Ethernet FIFO buffer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "buffer",
+      "data",
+      "fifo",
+      "queue",
+      "receive",
+      "receiver",
+      "rx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "rx_dequeue",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Dequeues received packets from RX FIFO and provides formatted output with packet boundaries, error status, and underflow detection.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "dequeue",
+      "receive",
+      "receiver",
+      "rx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "rx_enqueue",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Enqueues received Ethernet frames from XGMII interface into separate data and header FIFOs while detecting errors and fault conditions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "enqueue",
+      "receive",
+      "receiver",
+      "rx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "rx_hold_fifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Ethernet FIFO buffer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "buffer",
+      "fifo",
+      "hold",
+      "queue",
+      "receive",
+      "receiver",
+      "rx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "sync_clk_core",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Ethernet synchronizer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "clk",
+      "clock",
+      "core",
+      "sync",
+      "synchronizer",
+      "synchronous"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "sync_clk_wb",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Wishbone synchronizer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "bus",
+      "clk",
+      "clock",
+      "sync",
+      "synchronizer",
+      "synchronous",
+      "wb",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "sync_clk_xgmii_tx",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Ethernet synchronizer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "clk",
+      "clock",
+      "gigabit",
+      "independent",
+      "interface",
+      "media",
+      "sync",
+      "synchronizer",
+      "synchronous",
+      "transmit",
+      "transmitter",
+      "xgmii"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "tx_data_fifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Ethernet FIFO buffer with FIFO interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "buffer",
+      "data",
+      "fifo",
+      "queue",
+      "transmit",
+      "transmitter",
+      "tx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "tx_dequeue",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Ethernet with FIFO interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "dequeue",
+      "transmit",
+      "transmitter",
+      "tx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "tx_enqueue",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Enqueues transmit packet data into a FIFO with flow control and overflow detection.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "enqueue",
+      "transmit",
+      "transmitter",
+      "tx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "tx_hold_fifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Ethernet FIFO buffer with FIFO interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "buffer",
+      "fifo",
+      "hold",
+      "queue",
+      "transmit",
+      "transmitter",
+      "tx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wishbone_if",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Wishbone slave interface that bridges control/status signals between a Wishbone master and an Ethernet MAC controller.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "xge_mac",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
+    "published_at": "2008-06-07T02:59:56+00:00",
+    "description": "Wishbone with UART interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/xge_mac.git",
+    "tags": [
+      "access",
+      "control",
+      "mac",
+      "media",
+      "xge"
+    ],
+    "role": "top",
+    "components": [
+      "fault_sm",
+      "generic_fifo",
+      "generic_fifo_ctrl",
+      "generic_mem_medium",
+      "generic_mem_small",
+      "meta_sync",
+      "meta_sync_single",
+      "rx_data_fifo",
+      "rx_dequeue",
+      "rx_enqueue",
+      "rx_hold_fifo",
+      "sync_clk_core",
+      "sync_clk_wb",
+      "sync_clk_xgmii_tx",
+      "tx_data_fifo",
+      "tx_dequeue",
+      "tx_enqueue",
+      "tx_hold_fifo",
+      "wishbone_if"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_clockgen",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Ethernet generator",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "clockgen",
+      "eth",
+      "ethernet"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_cop",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Wishbone crossbar interconnect that arbitrates and routes bus transactions between two masters and two slave peripherals.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "cop",
+      "eth",
+      "ethernet"
+    ],
+    "role": "top",
+    "components": [
+      "eth_clockgen",
+      "eth_crc",
+      "eth_fifo",
+      "eth_maccontrol",
+      "eth_macstatus",
+      "eth_miim",
+      "eth_outputcontrol",
+      "eth_random",
+      "eth_receivecontrol",
+      "eth_register",
+      "eth_registers",
+      "eth_rxaddrcheck",
+      "eth_rxcounters",
+      "eth_rxethmac",
+      "eth_rxstatem",
+      "eth_shiftreg",
+      "eth_spram_256x32",
+      "eth_transmitcontrol",
+      "eth_txcounters",
+      "eth_txethmac",
+      "eth_txstatem",
+      "eth_wishbone",
+      "ethmac"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_crc",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Computes and validates Ethernet CRC checksums on streaming data with initialization and error detection capabilities.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "check",
+      "crc",
+      "cyclic",
+      "eth",
+      "ethernet",
+      "redundancy"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_fifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Ethernet FIFO buffer with FIFO interface and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "buffer",
+      "eth",
+      "ethernet",
+      "fifo",
+      "queue"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_maccontrol",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "opencores IP: eth_maccontrol",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "maccontrol"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_macstatus",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Monitors and tracks Ethernet MAC receive and transmit status, including frame validation, collision detection, and error conditions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "macstatus"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_miim",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "opencores IP: eth_miim",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "miim"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_outputcontrol",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "opencores IP: eth_outputcontrol",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "outputcontrol"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_random",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Generates Ethernet collision backoff random delays based on retry count and state.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "random"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_receivecontrol",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "opencores IP: eth_receivecontrol",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "receivecontrol"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_register",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Stores and retrieves Ethernet data with synchronous and asynchronous reset capabilities.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "register"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_registers",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Ethernet with interrupt support",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "registers"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_rxaddrcheck",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Validates incoming Ethernet frame MAC addresses against configured filters and generates match signals for broadcast, multicast, and unicast frames.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "rxaddrcheck"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_rxcounters",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Ethernet counter",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "rxcounters"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_rxethmac",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Receives and decodes Ethernet frames from MII interface, validates MAC addresses and CRC, and outputs frame data with status signals.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "rxethmac"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_rxstatem",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "opencores IP: eth_rxstatem",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "rxstatem"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_shiftreg",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "opencores IP: eth_shiftreg",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "shiftreg"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_spram_256x32",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Ethernet RAM",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "256x32",
+      "eth",
+      "ethernet",
+      "spram"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Wishbone with configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet"
+    ],
+    "role": "top",
+    "components": [
+      "eth_clockgen",
+      "eth_crc",
+      "eth_fifo",
+      "eth_maccontrol",
+      "eth_macstatus",
+      "eth_miim",
+      "eth_outputcontrol",
+      "eth_random",
+      "eth_receivecontrol",
+      "eth_register",
+      "eth_registers",
+      "eth_rxaddrcheck",
+      "eth_rxcounters",
+      "eth_rxethmac",
+      "eth_rxstatem",
+      "eth_shiftreg",
+      "eth_spram_256x32",
+      "eth_transmitcontrol",
+      "eth_txcounters",
+      "eth_txethmac",
+      "eth_txstatem",
+      "eth_wishbone",
+      "ethmac",
+      "xilinx_dist_ram_16x32"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_transmitcontrol",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "opencores IP: eth_transmitcontrol",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "transmitcontrol"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_txcounters",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Ethernet counter",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "txcounters"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_txethmac",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Ethernet MAC transmitter that frames, pads, checksums, and transmits data while managing collisions and retry logic.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "txethmac"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_txstatem",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "opencores IP: eth_txstatem",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "txstatem"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "eth_wishbone",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Wishbone with interrupt support and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [
+      "eth",
+      "ethernet",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "ethmac",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
+    "description": "Wishbone with configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethmac.git",
+    "tags": [],
+    "role": "component"
   }
 ]

@@ -1,0 +1,30 @@
+name: rx_enqueue
+namespace: opencores
+version: master
+commit_sha: 28fed5358be17637bd8d94aefd04fb26cbcadd0f
+published_at: '2008-06-07T02:59:56+00:00'
+description: Enqueues received Ethernet frames from XGMII interface into separate
+  data and header FIFOs while detecting errors and fault conditions.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/xge_mac.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 28fed5358be17637bd8d94aefd04fb26cbcadd0f
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/include/defines.v
+  - rtl/include/CRC32_D64.v
+  - rtl/include/CRC32_D8.v
+  - rtl/include/utils.v
+  - rtl/verilog/rx_enqueue.v
+tags:
+- enqueue
+- receive
+- receiver
+- rx
+role: component

@@ -1,0 +1,26 @@
+name: eth_rxaddrcheck
+namespace: opencores
+version: master
+commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
+published_at: '2019-09-30T10:29:44+02:00'
+description: Validates incoming Ethernet frame MAC addresses against configured filters
+  and generates match signals for broadcast, multicast, and unicast frames.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/ethmac.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: dd26899086edf3b797d2775ef9502d204a9a8149
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/timescale.v
+  - rtl/verilog/eth_rxaddrcheck.v
+tags:
+- eth
+- ethernet
+- rxaddrcheck
+role: component

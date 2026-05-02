@@ -1,0 +1,29 @@
+name: eth_crc
+namespace: opencores
+version: master
+commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
+published_at: '2019-09-30T10:29:44+02:00'
+description: Computes and validates Ethernet CRC checksums on streaming data with
+  initialization and error detection capabilities.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/ethmac.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: dd26899086edf3b797d2775ef9502d204a9a8149
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/timescale.v
+  - rtl/verilog/eth_crc.v
+tags:
+- check
+- crc
+- cyclic
+- eth
+- ethernet
+- redundancy
+role: component

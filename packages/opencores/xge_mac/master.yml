@@ -1,0 +1,69 @@
+name: xge_mac
+namespace: opencores
+version: master
+commit_sha: 28fed5358be17637bd8d94aefd04fb26cbcadd0f
+published_at: '2008-06-07T02:59:56+00:00'
+description: Wishbone with UART interface
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/xge_mac.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 28fed5358be17637bd8d94aefd04fb26cbcadd0f
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/include/defines.v
+  - rtl/verilog/fault_sm.v
+  - rtl/verilog/generic_fifo_ctrl.v
+  - rtl/verilog/generic_mem_medium.v
+  - rtl/verilog/generic_mem_small.v
+  - rtl/verilog/generic_fifo.v
+  - rtl/verilog/rx_data_fifo.v
+  - rtl/verilog/rx_dequeue.v
+  - rtl/include/CRC32_D64.v
+  - rtl/include/CRC32_D8.v
+  - rtl/include/utils.v
+  - rtl/verilog/rx_enqueue.v
+  - rtl/verilog/rx_hold_fifo.v
+  - rtl/verilog/sync_clk_core.v
+  - rtl/verilog/meta_sync_single.v
+  - rtl/verilog/meta_sync.v
+  - rtl/verilog/sync_clk_wb.v
+  - rtl/verilog/sync_clk_xgmii_tx.v
+  - rtl/verilog/tx_data_fifo.v
+  - rtl/verilog/tx_dequeue.v
+  - rtl/verilog/tx_enqueue.v
+  - rtl/verilog/tx_hold_fifo.v
+  - rtl/verilog/wishbone_if.v
+  - rtl/verilog/xge_mac.v
+tags:
+- access
+- control
+- mac
+- media
+- xge
+role: top
+components:
+- fault_sm
+- generic_fifo
+- generic_fifo_ctrl
+- generic_mem_medium
+- generic_mem_small
+- meta_sync
+- meta_sync_single
+- rx_data_fifo
+- rx_dequeue
+- rx_enqueue
+- rx_hold_fifo
+- sync_clk_core
+- sync_clk_wb
+- sync_clk_xgmii_tx
+- tx_data_fifo
+- tx_dequeue
+- tx_enqueue
+- tx_hold_fifo
+- wishbone_if

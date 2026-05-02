@@ -1,0 +1,74 @@
+name: eth_top
+namespace: opencores
+version: master
+commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
+published_at: '2019-09-30T10:29:44+02:00'
+description: Wishbone with configurable parameters
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/ethmac.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: dd26899086edf3b797d2775ef9502d204a9a8149
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/ethmac_defines.v
+  - rtl/verilog/timescale.v
+  - rtl/verilog/eth_receivecontrol.v
+  - rtl/verilog/eth_transmitcontrol.v
+  - rtl/verilog/eth_maccontrol.v
+  - rtl/verilog/eth_macstatus.v
+  - rtl/verilog/eth_clockgen.v
+  - rtl/verilog/eth_outputcontrol.v
+  - rtl/verilog/eth_shiftreg.v
+  - rtl/verilog/eth_miim.v
+  - rtl/verilog/eth_register.v
+  - rtl/verilog/eth_registers.v
+  - rtl/verilog/eth_crc.v
+  - rtl/verilog/eth_rxaddrcheck.v
+  - rtl/verilog/eth_rxcounters.v
+  - rtl/verilog/eth_rxstatem.v
+  - rtl/verilog/eth_rxethmac.v
+  - rtl/verilog/eth_random.v
+  - rtl/verilog/eth_txcounters.v
+  - rtl/verilog/eth_txstatem.v
+  - rtl/verilog/eth_txethmac.v
+  - rtl/verilog/xilinx_dist_ram_16x32.v
+  - rtl/verilog/eth_fifo.v
+  - rtl/verilog/eth_spram_256x32.v
+  - rtl/verilog/eth_wishbone.v
+  - rtl/verilog/ethmac.v
+  - rtl/verilog/eth_top.v
+tags:
+- eth
+- ethernet
+role: top
+components:
+- eth_clockgen
+- eth_crc
+- eth_fifo
+- eth_maccontrol
+- eth_macstatus
+- eth_miim
+- eth_outputcontrol
+- eth_random
+- eth_receivecontrol
+- eth_register
+- eth_registers
+- eth_rxaddrcheck
+- eth_rxcounters
+- eth_rxethmac
+- eth_rxstatem
+- eth_shiftreg
+- eth_spram_256x32
+- eth_transmitcontrol
+- eth_txcounters
+- eth_txethmac
+- eth_txstatem
+- eth_wishbone
+- ethmac
+- xilinx_dist_ram_16x32
