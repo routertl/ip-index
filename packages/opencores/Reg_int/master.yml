@@ -1,0 +1,26 @@
+name: Reg_int
+namespace: opencores
+version: master
+commit_sha: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
+published_at: '2009-01-08T13:53:34+00:00'
+description: 'opencores IP: Reg_int'
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/ethernet_tri_mode.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/reg_int.v
+tags:
+- int
+- reg
+- register
+role: top
+components:
+- RegCPUData

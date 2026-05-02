@@ -1,0 +1,82 @@
+name: MAC_top
+namespace: opencores
+version: master
+commit_sha: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
+published_at: '2009-01-08T13:53:34+00:00'
+description: 'opencores IP: MAC_top'
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/ethernet_tri_mode.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/TECH/altera/CLK_DIV2.v
+  - rtl/verilog/TECH/altera/CLK_SWITCH.v
+  - rtl/verilog/Clk_ctrl.v
+  - rtl/verilog/MAC_rx/Broadcast_filter.v
+  - rtl/verilog/MAC_rx/CRC_chk.v
+  - rtl/verilog/TECH/altera/duram.v
+  - rtl/verilog/MAC_rx/MAC_rx_FF.v
+  - rtl/verilog/MAC_rx/MAC_rx_add_chk.v
+  - rtl/verilog/MAC_rx/MAC_rx_ctrl.v
+  - rtl/verilog/MAC_rx.v
+  - rtl/verilog/MAC_tx/CRC_gen.v
+  - rtl/verilog/MAC_tx/MAC_tx_FF.v
+  - rtl/verilog/MAC_tx/MAC_tx_addr_add.v
+  - rtl/verilog/MAC_tx/MAC_tx_Ctrl.v
+  - rtl/verilog/MAC_tx/Ramdon_gen.v
+  - rtl/verilog/MAC_tx/flow_ctrl.v
+  - rtl/verilog/MAC_tx.v
+  - rtl/verilog/Phy_int.v
+  - rtl/verilog/RMON/RMON_ctrl.v
+  - rtl/verilog/RMON/RMON_addr_gen.v
+  - rtl/verilog/RMON/RMON_dpram.v
+  - rtl/verilog/RMON.v
+  - rtl/verilog/reg_int.v
+  - rtl/verilog/afifo.v
+  - rtl/verilog/miim/eth_clockgen.v
+  - rtl/verilog/miim/eth_outputcontrol.v
+  - rtl/verilog/miim/eth_shiftreg.v
+  - rtl/verilog/eth_miim.v
+  - rtl/verilog/MAC_top.v
+tags:
+- access
+- control
+- mac
+- media
+role: top
+components:
+- Broadcast_filter
+- CLK_DIV2
+- CLK_SWITCH
+- CRC_chk
+- CRC_gen
+- Clk_ctrl
+- MAC_rx
+- MAC_rx_FF
+- MAC_rx_add_chk
+- MAC_rx_ctrl
+- MAC_tx
+- MAC_tx_FF
+- MAC_tx_addr_add
+- MAC_tx_ctrl
+- Phy_int
+- RMON
+- RMON_CTRL
+- RMON_addr_gen
+- RMON_dpram
+- Ramdon_gen
+- RegCPUData
+- afifo
+- duram
+- eth_clockgen
+- eth_miim
+- eth_outputcontrol
+- eth_shiftreg
+- flow_ctrl

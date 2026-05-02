@@ -37313,5 +37313,314 @@
       "config": "examples/wishbone_mii.yml",
       "output_subdir": ""
     }
+  },
+  {
+    "namespace": "opencores",
+    "name": "Clk_ctrl",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "opencores IP: Clk_ctrl",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [
+      "clk",
+      "clock",
+      "control",
+      "controller",
+      "ctrl"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "MAC_rx",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "Receive engine",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [
+      "access",
+      "control",
+      "mac",
+      "media",
+      "receive",
+      "receiver",
+      "rx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "MAC_rx_FF",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "opencores IP: MAC_rx_FF",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [
+      "access",
+      "control",
+      "ff",
+      "mac",
+      "media",
+      "receive",
+      "receiver",
+      "rx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "MAC_rx_add_chk",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "opencores IP: MAC_rx_add_chk",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [
+      "access",
+      "add",
+      "chk",
+      "control",
+      "mac",
+      "media",
+      "receive",
+      "receiver",
+      "rx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "MAC_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "opencores IP: MAC_top",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [
+      "access",
+      "control",
+      "mac",
+      "media"
+    ],
+    "role": "top",
+    "components": [
+      "Broadcast_filter",
+      "CLK_DIV2",
+      "CLK_SWITCH",
+      "CRC_chk",
+      "CRC_gen",
+      "Clk_ctrl",
+      "MAC_rx",
+      "MAC_rx_FF",
+      "MAC_rx_add_chk",
+      "MAC_rx_ctrl",
+      "MAC_tx",
+      "MAC_tx_FF",
+      "MAC_tx_addr_add",
+      "MAC_tx_ctrl",
+      "Phy_int",
+      "RMON",
+      "RMON_CTRL",
+      "RMON_addr_gen",
+      "RMON_dpram",
+      "Ramdon_gen",
+      "RegCPUData",
+      "afifo",
+      "duram",
+      "eth_clockgen",
+      "eth_miim",
+      "eth_outputcontrol",
+      "eth_shiftreg",
+      "flow_ctrl"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "MAC_tx",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "Transmit engine",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [
+      "access",
+      "control",
+      "mac",
+      "media",
+      "transmit",
+      "transmitter",
+      "tx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "MAC_tx_FF",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "opencores IP: MAC_tx_FF",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [
+      "access",
+      "control",
+      "ff",
+      "mac",
+      "media",
+      "transmit",
+      "transmitter",
+      "tx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "MAC_tx_addr_add",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "opencores IP: MAC_tx_addr_add",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [
+      "access",
+      "add",
+      "addr",
+      "control",
+      "mac",
+      "media",
+      "transmit",
+      "transmitter",
+      "tx"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "RMON",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "opencores IP: RMON",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "RMON_dpram",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "opencores IP: RMON_dpram",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [
+      "dpram",
+      "rmon"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "Reg_int",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "opencores IP: Reg_int",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [
+      "int",
+      "reg",
+      "register"
+    ],
+    "role": "top",
+    "components": [
+      "RegCPUData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "afifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+    "published_at": "2009-01-08T13:53:34+00:00",
+    "description": "FIFO buffer with FIFO interface and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "tags": [],
+    "role": "component"
   }
 ]
