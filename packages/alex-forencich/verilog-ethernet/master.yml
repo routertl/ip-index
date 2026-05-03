@@ -1,0 +1,241 @@
+name: verilog-ethernet
+namespace: alex-forencich
+version: master
+commit_sha: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+published_at: '2025-02-27T15:50:25-08:00'
+description: "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with\
+  \ both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream \u2014\
+  \ author moved active development to fpganinja/taxi (CERN-OHL-S-2.0); MIT-licensed\
+  \ verilog-ethernet remains freely available here."
+license: MIT
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/alexforencich/verilog-ethernet.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/lfsr.v
+  - rtl/arp_cache.v
+  - rtl/arp_eth_rx.v
+  - rtl/arp_eth_tx.v
+  - rtl/arp.v
+  - rtl/axis_baser_rx_64.v
+  - rtl/axis_baser_tx_64.v
+  - rtl/axis_eth_fcs.v
+  - rtl/axis_eth_fcs_check.v
+  - rtl/axis_eth_fcs_check_64.v
+  - rtl/axis_eth_fcs_insert.v
+  - rtl/axis_eth_fcs_insert_64.v
+  - rtl/axis_gmii_rx.v
+  - rtl/axis_gmii_tx.v
+  - rtl/axis_xgmii_rx_32.v
+  - rtl/axis_xgmii_rx_64.v
+  - rtl/axis_xgmii_tx_32.v
+  - rtl/axis_xgmii_tx_64.v
+  - rtl/eth_arb_mux.v
+  - rtl/eth_axis_rx.v
+  - rtl/eth_axis_tx.v
+  - rtl/eth_demux.v
+  - rtl/mac_ctrl_rx.v
+  - rtl/mac_ctrl_tx.v
+  - rtl/mac_pause_ctrl_rx.v
+  - rtl/mac_pause_ctrl_tx.v
+  - rtl/eth_mac_10g.v
+  - rtl/ptp_clock_cdc.v
+  - rtl/eth_mac_10g_fifo.v
+  - rtl/eth_mac_1g.v
+  - rtl/eth_mac_1g_fifo.v
+  - rtl/ssio_sdr_in.v
+  - rtl/oddr.v
+  - rtl/ssio_sdr_out.v
+  - rtl/gmii_phy_if.v
+  - rtl/eth_mac_1g_gmii.v
+  - rtl/eth_mac_1g_gmii_fifo.v
+  - rtl/iddr.v
+  - rtl/ssio_ddr_in.v
+  - rtl/rgmii_phy_if.v
+  - rtl/eth_mac_1g_rgmii.v
+  - rtl/eth_mac_1g_rgmii_fifo.v
+  - rtl/mii_phy_if.v
+  - rtl/eth_mac_mii.v
+  - rtl/eth_mac_mii_fifo.v
+  - rtl/eth_phy_10g_rx_ber_mon.v
+  - rtl/eth_phy_10g_rx_frame_sync.v
+  - rtl/eth_phy_10g_rx_watchdog.v
+  - rtl/eth_phy_10g_rx_if.v
+  - rtl/eth_mac_phy_10g_rx.v
+  - rtl/eth_phy_10g_tx_if.v
+  - rtl/eth_mac_phy_10g_tx.v
+  - rtl/eth_mac_phy_10g.v
+  - rtl/eth_mac_phy_10g_fifo.v
+  - rtl/eth_mux.v
+  - rtl/xgmii_baser_dec_64.v
+  - rtl/eth_phy_10g_rx.v
+  - rtl/xgmii_baser_enc_64.v
+  - rtl/eth_phy_10g_tx.v
+  - rtl/eth_phy_10g.v
+  - rtl/ip_eth_rx.v
+  - rtl/ip_eth_tx.v
+  - rtl/ip.v
+  - rtl/ip_eth_rx_64.v
+  - rtl/ip_eth_tx_64.v
+  - rtl/ip_64.v
+  - rtl/ip_arb_mux.v
+  - rtl/ip_complete.v
+  - rtl/ip_complete_64.v
+  - rtl/ip_demux.v
+  - rtl/ip_mux.v
+  - rtl/ptp_clock.v
+  - rtl/ptp_perout.v
+  - rtl/ptp_tag_insert.v
+  - rtl/ptp_td_leaf.v
+  - rtl/ptp_td_phc.v
+  - rtl/ptp_td_rel2tod.v
+  - rtl/ptp_ts_extract.v
+  - rtl/ssio_ddr_in_diff.v
+  - rtl/ssio_ddr_out.v
+  - rtl/ssio_ddr_out_diff.v
+  - rtl/ssio_sdr_in_diff.v
+  - rtl/ssio_sdr_out_diff.v
+  - rtl/udp_checksum_gen.v
+  - rtl/udp_ip_rx.v
+  - rtl/udp_ip_tx.v
+  - rtl/udp.v
+  - rtl/udp_checksum_gen_64.v
+  - rtl/udp_ip_rx_64.v
+  - rtl/udp_ip_tx_64.v
+  - rtl/udp_64.v
+  - rtl/udp_arb_mux.v
+  - rtl/udp_complete.v
+  - rtl/udp_complete_64.v
+  - rtl/udp_demux.v
+  - rtl/udp_mux.v
+  - rtl/xgmii_deinterleave.v
+  - rtl/xgmii_interleave.v
+tags:
+- arbitration
+- controller
+- deinterleave
+- demultiplexer
+- independent
+- interface
+- interleave
+- multiplexer
+- resolution
+- synchronizer
+- synchronous
+- transmitter
+role: repo
+top_modules:
+- axis_eth_fcs
+- axis_eth_fcs_check
+- axis_eth_fcs_check_64
+- axis_eth_fcs_insert
+- axis_eth_fcs_insert_64
+- eth_axis_rx
+- eth_axis_tx
+- eth_demux
+- eth_mac_10g_fifo
+- eth_mac_1g_fifo
+- eth_mac_1g_gmii_fifo
+- eth_mac_1g_rgmii_fifo
+- eth_mac_mii_fifo
+- eth_mac_phy_10g_fifo
+- eth_mux
+- eth_phy_10g
+- ip_demux
+- ip_mux
+- ptp_clock
+- ptp_perout
+- ptp_tag_insert
+- ptp_td_leaf
+- ptp_td_phc
+- ptp_td_rel2tod
+- ptp_ts_extract
+- ssio_ddr_in_diff
+- ssio_ddr_out_diff
+- ssio_sdr_in_diff
+- ssio_sdr_out_diff
+- udp_arb_mux
+- udp_complete
+- udp_complete_64
+- udp_demux
+- udp_mux
+- xgmii_deinterleave
+- xgmii_interleave
+components:
+- arp
+- arp_cache
+- arp_eth_rx
+- arp_eth_tx
+- axis_baser_rx_64
+- axis_baser_tx_64
+- axis_gmii_rx
+- axis_gmii_tx
+- axis_xgmii_rx_32
+- axis_xgmii_rx_64
+- axis_xgmii_tx_32
+- axis_xgmii_tx_64
+- eth_arb_mux
+- eth_mac_10g
+- eth_mac_1g
+- eth_mac_1g_gmii
+- eth_mac_1g_rgmii
+- eth_mac_mii
+- eth_mac_phy_10g
+- eth_mac_phy_10g_rx
+- eth_mac_phy_10g_tx
+- eth_phy_10g_rx
+- eth_phy_10g_rx_ber_mon
+- eth_phy_10g_rx_frame_sync
+- eth_phy_10g_rx_if
+- eth_phy_10g_rx_watchdog
+- eth_phy_10g_tx
+- eth_phy_10g_tx_if
+- gmii_phy_if
+- iddr
+- ip
+- ip_64
+- ip_arb_mux
+- ip_complete
+- ip_complete_64
+- ip_eth_rx
+- ip_eth_rx_64
+- ip_eth_tx
+- ip_eth_tx_64
+- lfsr
+- mac_ctrl_rx
+- mac_ctrl_tx
+- mac_pause_ctrl_rx
+- mac_pause_ctrl_tx
+- mii_phy_if
+- oddr
+- ptp_clock_cdc
+- rgmii_phy_if
+- ssio_ddr_in
+- ssio_ddr_out
+- ssio_sdr_in
+- ssio_sdr_out
+- udp
+- udp_64
+- udp_checksum_gen
+- udp_checksum_gen_64
+- udp_ip_rx
+- udp_ip_rx_64
+- udp_ip_tx
+- udp_ip_tx_64
+- xgmii_baser_dec_64
+- xgmii_baser_enc_64
+total_entities: 98
+status: deprecated-upstream
+successor: fpganinja/taxi
+contract:
+  traits:
+    rx_strips_fcs: true
+    tx_user_frame_includes_fcs: false
+  defects: []

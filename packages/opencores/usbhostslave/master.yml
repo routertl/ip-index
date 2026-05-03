@@ -1,0 +1,180 @@
+name: usbhostslave
+namespace: opencores
+version: master
+commit_sha: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
+published_at: '2011-03-18T17:52:17+00:00'
+description: USB 1.1 host and slave controller in one package, with serial interface
+  engine, host control state machine, and slave endpoint logic. Wishbone bus interface.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/usbhostslave.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - RTL/include/timescale.v
+  - RTL/include/wishBoneBus_h.v
+  - RTL/include/usbHostSlave_h.v
+  - usbDevice/RTL/usbHostSlaveReg_define.v
+  - usbDevice/RTL/usbDevice_define.v
+  - usbDevice/RTL/EP0.v
+  - usbDevice/RTL/EP1Mouse.v
+  - RTL/hostController/hctxportarbiter.v
+  - RTL/buffers/RxFifoBI.v
+  - RTL/buffers/dpMem_dc.v
+  - RTL/buffers/fifoRTL.v
+  - RTL/buffers/RxFifo.v
+  - RTL/slaveController/sctxportarbiter.v
+  - RTL/include/usbSerialInterfaceEngine_h.v
+  - RTL/serialInterfaceEngine/siereceiver.v
+  - RTL/include/usbConstants_h.v
+  - RTL/serialInterfaceEngine/SIETransmitter.v
+  - RTL/hostController/sofcontroller.v
+  - RTL/include/usbHostControl_h.v
+  - RTL/hostController/softransmit.v
+  - RTL/buffers/TxFifoBI.v
+  - RTL/buffers/TxFifo.v
+  - RTL/hostController/USBHostControlBI.v
+  - RTL/include/usbSlaveControl_h.v
+  - RTL/slaveController/USBSlaveControlBI.v
+  - RTL/serialInterfaceEngine/usbTxWireArbiter.v
+  - usbDevice/RTL/checkLineState.v
+  - RTL/hostController/directcontrol.v
+  - RTL/slaveController/endpMux.v
+  - RTL/slaveController/fifoMux.v
+  - RTL/hostController/getpacket.v
+  - RTL/hostSlaveMux/hostSlaveMuxBI.v
+  - RTL/hostSlaveMux/hostSlaveMux.v
+  - RTL/hostController/hostcontroller.v
+  - RTL/serialInterfaceEngine/lineControlUpdate.v
+  - usbDevice/RTL/pll_48MHz.v
+  - usbDevice/syn/xilinx/usbDeviceXilinxTop/pll_48MHz_xilinx.v
+  - RTL/serialInterfaceEngine/processRxBit.v
+  - RTL/serialInterfaceEngine/processRxByte.v
+  - RTL/serialInterfaceEngine/processTxByte.v
+  - RTL/serialInterfaceEngine/readUSBWireData.v
+  - RTL/hostController/rxStatusMonitor.v
+  - RTL/hostController/sendpacket.v
+  - RTL/hostController/sendpacketarbiter.v
+  - RTL/hostController/sendpacketcheckpreamble.v
+  - RTL/slaveController/slaveDirectcontrol.v
+  - RTL/slaveController/slaveGetpacket.v
+  - RTL/slaveController/slaveRxStatusMonitor.v
+  - RTL/slaveController/slaveSendpacket.v
+  - RTL/slaveController/slavecontroller.v
+  - RTL/hostController/speedCtrlMux.v
+  - usbDevice/bench/usbHostSlaveTB_defines.v
+  - usbDevice/RTL/usbROM_logitech_mouse.v
+  - RTL/serialInterfaceEngine/updateCRC16.v
+  - RTL/serialInterfaceEngine/updateCRC5.v
+  - RTL/serialInterfaceEngine/writeUSBWireData.v
+  - RTL/serialInterfaceEngine/usbSerialInterfaceEngine.v
+  - RTL/slaveController/usbSlaveControl.v
+  - RTL/busInterface/wishBoneBI.v
+  - RTL/wrapper/usbSlave.v
+  - usbDevice/RTL/wishboneArb.v
+  - usbDevice/RTL/usbDevice.v
+  - RTL/hostController/usbHostControl.v
+  - RTL/wrapper/usbHost.v
+  - model/wb_master_model.v
+  - usbDevice/bench/testHarness.v
+  - usbDevice/bench/testCase0.v
+  - usbDevice/RTL/usbDeviceActelTop.v
+  - usbDevice/RTL/usbDeviceAlteraTop.v
+  - usbDevice/RTL/usbDeviceXilinxTop.v
+  - RTL/wrapper/usbHostCyc2Wrap.v
+  - RTL/wrapper/usbHostCyc2Wrap_usb1t11.v
+  - RTL/wrapper/usbHostSlave.v
+  - RTL/wrapper/usbHostSlaveAvalonWrap.v
+  - RTL/wrapper/usbHostSlaveCyc2Wrap.v
+  - RTL/wrapper/usbSlaveCyc2Wrap.v
+  - RTL/wrapper/usbSlaveCyc2Wrap_usb1t11.v
+tags:
+- 48mhz
+- clock
+- dpmem
+- locked
+- master
+- model
+- phase
+- usb1t11
+- usbhostcyc2wrap
+- usbslavecyc2wrap
+- wishbone
+- xilinx
+role: repo
+top_modules:
+- speedCtrlMux
+- testCase0
+- usbDeviceActelTop
+- usbDeviceAlteraTop
+- usbDeviceXilinxTop
+- usbHostCyc2Wrap
+- usbHostCyc2Wrap_usb1t11
+- usbHostSlaveAvalonWrap
+- usbHostSlaveCyc2Wrap
+- usbSlaveCyc2Wrap
+- usbSlaveCyc2Wrap_usb1t11
+components:
+- EP0
+- EP1Mouse
+- HCTxPortArbiter
+- RxFifo
+- RxfifoBI
+- SCTxPortArbiter
+- SIEReceiver
+- SIETransmitter
+- SOFController
+- SOFTransmit
+- TxFifo
+- TxfifoBI
+- USBHostControlBI
+- USBSlaveControlBI
+- USBTxWireArbiter
+- checkLineState
+- directControl
+- dpMem_dc
+- endpMux
+- fifoMux
+- fifoRTL
+- getPacket
+- hostSlaveMux
+- hostSlaveMuxBI
+- hostcontroller
+- lineControlUpdate
+- pll_48MHz
+- pll_48MHz_xilinx
+- processRxBit
+- processRxByte
+- processTxByte
+- readUSBWireData
+- rxStatusMonitor
+- sendPacket
+- sendPacketArbiter
+- sendPacketCheckPreamble
+- slaveDirectControl
+- slaveGetPacket
+- slaveRxStatusMonitor
+- slaveSendPacket
+- slavecontroller
+- testHarness
+- updateCRC16
+- updateCRC5
+- usbDevice
+- usbHost
+- usbHostControl
+- usbHostSlave
+- usbROM
+- usbSerialInterfaceEngine
+- usbSlave
+- usbSlaveControl
+- wb_master_model
+- wishBoneBI
+- wishboneArb
+- writeUSBWireData
+total_entities: 67

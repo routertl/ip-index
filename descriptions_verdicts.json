@@ -316,6 +316,62 @@
       "reviewed_at": "2026-05-03",
       "reviewed_by": "dmazure",
       "notes": "hand-written; final straggler in RTL-P3.321/322/323/324 batch ingest."
+    },
+    "opencores/amber": {
+      "verdict": "good",
+      "locked_text": "ARMv2-compatible 32-bit RISC processor with Wishbone bus (Conor Santifort 2010+). Two pipeline variants: a23 (3-stage) and a25 (5-stage), shared register file, MMU, caches.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+    },
+    "opencores/copyblaze": {
+      "verdict": "good",
+      "locked_text": "PicoBlaze-compatible 8-bit microcontroller in VHDL-2008 (Adrien Trousson 2015+). Compact softcore with peripheral ecosystem (UART, GPIO) over Wishbone.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+    },
+    "opencores/ethernet_tri_mode": {
+      "verdict": "good",
+      "locked_text": "Tri-mode 10/100/1000 Mbps Ethernet MAC with GMII PHY interface (Jon Gao 2001+). 32-bit OpenCores streaming user bus, Wishbone-style CSR access, includes RMON statistics.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+    },
+    "opencores/ethmac": {
+      "verdict": "good",
+      "locked_text": "10/100 Mbps Ethernet MAC with MII PHY interface and Wishbone host bus (Igor Mohor + Olof Kindgren 2001-2002). Includes flow control, MIIM management, and optional traffic coprocessor.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+    },
+    "opencores/pci": {
+      "verdict": "good",
+      "locked_text": "Bidirectional 32-bit PCI ↔ Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc 2002+).",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+    },
+    "opencores/usbhostslave": {
+      "verdict": "good",
+      "locked_text": "USB 1.1 host and slave controller in one package, with serial interface engine, host control state machine, and slave endpoint logic. Wishbone bus interface.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+    },
+    "opencores/xge_mac": {
+      "verdict": "good",
+      "locked_text": "10 Gigabit Ethernet MAC with XGMII PHY interface and Wishbone bus (A. Tanguay 2008). Packet-level pkt_tx/pkt_rx user interface, includes generic FIFOs and clock-domain-crossing utilities.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+    },
+    "alex-forencich/verilog-ethernet": {
+      "verdict": "good",
+      "locked_text": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream — author moved active development to fpganinja/taxi (CERN-OHL-S-2.0); MIT-licensed verilog-ethernet remains freely available here.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
     }
   }
 }

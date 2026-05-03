@@ -3,7 +3,9 @@ namespace: opencores
 version: master
 commit_sha: 28fed5358be17637bd8d94aefd04fb26cbcadd0f
 published_at: '2008-06-07T02:59:56+00:00'
-description: Wishbone with UART interface
+description: 10 Gigabit Ethernet MAC with XGMII PHY interface and Wishbone bus (A.
+  Tanguay 2008). Packet-level pkt_tx/pkt_rx user interface, includes generic FIFOs
+  and clock-domain-crossing utilities.
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:
@@ -22,6 +24,8 @@ routertl_compat:
   - rtl/verilog/generic_mem_medium.v
   - rtl/verilog/generic_mem_small.v
   - rtl/verilog/generic_fifo.v
+  - rtl/verilog/meta_sync_single.v
+  - rtl/verilog/meta_sync.v
   - rtl/verilog/rx_data_fifo.v
   - rtl/verilog/rx_dequeue.v
   - rtl/include/CRC32_D64.v
@@ -30,8 +34,6 @@ routertl_compat:
   - rtl/verilog/rx_enqueue.v
   - rtl/verilog/rx_hold_fifo.v
   - rtl/verilog/sync_clk_core.v
-  - rtl/verilog/meta_sync_single.v
-  - rtl/verilog/meta_sync.v
   - rtl/verilog/sync_clk_wb.v
   - rtl/verilog/sync_clk_xgmii_tx.v
   - rtl/verilog/tx_data_fifo.v
@@ -41,12 +43,21 @@ routertl_compat:
   - rtl/verilog/wishbone_if.v
   - rtl/verilog/xge_mac.v
 tags:
-- access
 - control
-- mac
-- media
-- xge
-role: top
+- controller
+- dequeue
+- enqueue
+- independent
+- interface
+- receiver
+- synchronizer
+- synchronous
+- transmit
+- transmitter
+- wishbone
+role: repo
+top_modules:
+- xge_mac
 components:
 - fault_sm
 - generic_fifo
@@ -67,3 +78,4 @@ components:
 - tx_enqueue
 - tx_hold_fifo
 - wishbone_if
+total_entities: 20

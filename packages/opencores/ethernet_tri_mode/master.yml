@@ -1,0 +1,123 @@
+name: ethernet_tri_mode
+namespace: opencores
+version: master
+commit_sha: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
+published_at: '2009-01-08T13:53:34+00:00'
+description: Tri-mode 10/100/1000 Mbps Ethernet MAC with GMII PHY interface (Jon Gao
+  2001+). 32-bit OpenCores streaming user bus, Wishbone-style CSR access, includes
+  RMON statistics.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/ethernet_tri_mode.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/MAC_rx/Broadcast_filter.v
+  - rtl/verilog/TECH/altera/CLK_DIV2.v
+  - rtl/verilog/TECH/altera/CLK_SWITCH.v
+  - rtl/verilog/MAC_rx/CRC_chk.v
+  - rtl/verilog/MAC_tx/CRC_gen.v
+  - rtl/verilog/Clk_ctrl.v
+  - rtl/verilog/TECH/altera/duram.v
+  - rtl/verilog/MAC_rx/MAC_rx_FF.v
+  - rtl/verilog/MAC_rx/MAC_rx_add_chk.v
+  - rtl/verilog/MAC_rx/MAC_rx_ctrl.v
+  - rtl/verilog/MAC_rx.v
+  - rtl/verilog/MAC_tx/MAC_tx_FF.v
+  - rtl/verilog/MAC_tx/MAC_tx_addr_add.v
+  - rtl/verilog/MAC_tx/MAC_tx_Ctrl.v
+  - rtl/verilog/MAC_tx/Ramdon_gen.v
+  - rtl/verilog/MAC_tx/flow_ctrl.v
+  - rtl/verilog/MAC_tx.v
+  - rtl/verilog/Phy_int.v
+  - rtl/verilog/RMON/RMON_ctrl.v
+  - rtl/verilog/RMON/RMON_addr_gen.v
+  - rtl/verilog/RMON/RMON_dpram.v
+  - rtl/verilog/RMON.v
+  - rtl/verilog/reg_int.v
+  - rtl/verilog/afifo.v
+  - rtl/verilog/MAC_top.v
+tags:
+- access
+- broadcast
+- control
+- controller
+- cyclic
+- physical
+- receive
+- receiver
+- redundancy
+- register
+- transmit
+- transmitter
+role: repo
+top_modules:
+- MAC_top
+- Reg_int
+components:
+- Broadcast_filter
+- CLK_DIV2
+- CLK_SWITCH
+- CRC_chk
+- CRC_gen
+- Clk_ctrl
+- MAC_rx
+- MAC_rx_FF
+- MAC_rx_add_chk
+- MAC_rx_ctrl
+- MAC_tx
+- MAC_tx_FF
+- MAC_tx_addr_add
+- MAC_tx_ctrl
+- Phy_int
+- RMON
+- RMON_CTRL
+- RMON_addr_gen
+- RMON_dpram
+- Ramdon_gen
+- RegCPUData
+- afifo
+- duram
+- flow_ctrl
+total_entities: 26
+contract:
+  traits:
+    rx_strips_fcs: true
+    tx_user_frame_includes_fcs: false
+    tx_hwmark_default_safe: false
+    back_to_back_rx_requires_rd_pulse: true
+    requires_csr_init_before_tx: true
+  defects:
+  - id: OC-TRIMODE-TX-HWMARK
+    severity: critical
+    kind: underrun-on-low-hwmark
+    discovered: '2026-05-03'
+    provenance: RTL-T2
+    evidence: "Tx_Hwmark default 9 entries; >512 B frames hit underrun before frame\
+      \ fully buffered, deliver as constant ~2,560 B GIANT wire frames regardless\
+      \ of input size. VCD-confirmed (Tx_en stays HIGH continuously through full 20.4-20.5\
+      \ \xB5s span) and lever-experiment-confirmed (HWM = 31 collapses 4 GIANTs to\
+      \ 0)."
+    recoverable: true
+    workaround: CSR-write Tx_Hwmark >= 31 entries (5'h1F) before any TX traffic
+    fix_pr: null
+    review_after: '2026-08-03'
+  - id: OC-TRIMODE-RX-WAIT-END
+    severity: major
+    kind: protocol-handshake-mismatch
+    discovered: '2026-05-03'
+    provenance: RTL-T3
+    evidence: "MAC_rx_FF.v SYS_wait_end \u2192 SYS_idle requires !Rx_mac_rd; perpetual-ready\
+      \ hosts (modern AXI-Stream-style ingress) wedge after frame 0 EOP and never\
+      \ receive subsequent frames. VCD-confirmed (FSM transitions from SYS_read \u2192\
+      \ SYS_wait_end at first EOP and never moves again across 1.4 Mns sim)."
+    recoverable: true
+    workaround: BFM/host pulses Rx_mac_rd low for one cycle after each EOP
+    fix_pr: null
+    review_after: '2026-08-03'
