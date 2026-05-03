@@ -3,7 +3,8 @@ namespace: opencores
 version: master
 commit_sha: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
 published_at: '2009-01-08T13:53:34+00:00'
-description: 'opencores IP: MAC_rx_FF'
+description: Buffers MAC receive data between MAC clock domain and system clock domain
+  using a FIFO, with watermark-based flow control.
 license: ''
 license_class: unknown
 source:

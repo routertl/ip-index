@@ -3,7 +3,8 @@ namespace: opencores
 version: master
 commit_sha: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
 published_at: '2009-01-08T13:53:34+00:00'
-description: 'opencores IP: MAC_tx_FF'
+description: MAC transmit FIFO that bridges user data to MAC controller with clock
+  domain crossing and flow control.
 license: ''
 license_class: unknown
 source:

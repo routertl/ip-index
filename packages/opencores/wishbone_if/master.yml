@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: 28fed5358be17637bd8d94aefd04fb26cbcadd0f
 published_at: '2008-06-07T02:59:56+00:00'
-description: Wishbone slave interface that bridges control/status signals between
-  a Wishbone master and an Ethernet MAC controller.
+description: Wishbone slave interface that monitors Ethernet MAC status signals and
+  provides control/data access.
 license: ''
 license_class: unknown
 source:

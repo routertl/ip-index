@@ -36,6 +36,69 @@
       "reviewed_at": "2026-04-21",
       "reviewed_by": "dmazure",
       "notes": "hand-written after LLM fell through to auto-filler during P2.396 rescan."
+    },
+    "opencores/eth_maccontrol": {
+      "verdict": "good",
+      "locked_text": "Implements IEEE 802.3x flow control by detecting incoming PAUSE frames and inhibiting transmission for the requested duration.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during RTL-P4.24 / P3.305 ethmac + ethernet_tri_mode rescan; LLM output kept tripping the R10-R14 validator on these state-machine and control-block modules."
+    },
+    "opencores/eth_miim": {
+      "verdict": "good",
+      "locked_text": "MII Management interface controller driving MDC and MDIO for PHY register read and write transactions.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during RTL-P4.24 / P3.305 ethmac + ethernet_tri_mode rescan; LLM output kept tripping the R10-R14 validator on these state-machine and control-block modules."
+    },
+    "opencores/eth_outputcontrol": {
+      "verdict": "good",
+      "locked_text": "Coordinates output control signals between the MAC transmit pipeline and the GMII/MII PHY interface, gating transmissions on link state.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during RTL-P4.24 / P3.305 ethmac + ethernet_tri_mode rescan; LLM output kept tripping the R10-R14 validator on these state-machine and control-block modules."
+    },
+    "opencores/eth_receivecontrol": {
+      "verdict": "good",
+      "locked_text": "Manages receive-side flow control by signalling pause requests upstream when the RX FIFO threshold is crossed.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during RTL-P4.24 / P3.305 ethmac + ethernet_tri_mode rescan; LLM output kept tripping the R10-R14 validator on these state-machine and control-block modules."
+    },
+    "opencores/eth_rxstatem": {
+      "verdict": "good",
+      "locked_text": "Receive-path state machine coordinating preamble detection, frame data capture, and end-of-frame signalling.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during RTL-P4.24 / P3.305 ethmac + ethernet_tri_mode rescan; LLM output kept tripping the R10-R14 validator on these state-machine and control-block modules."
+    },
+    "opencores/eth_shiftreg": {
+      "verdict": "good",
+      "locked_text": "Parameterized shift register used to serialise and deserialise data within the MAC pipeline.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during RTL-P4.24 / P3.305 ethmac + ethernet_tri_mode rescan; LLM output kept tripping the R10-R14 validator on these state-machine and control-block modules."
+    },
+    "opencores/eth_transmitcontrol": {
+      "verdict": "good",
+      "locked_text": "Manages transmit-side coordination including collision detection responses, deferral, and retransmit triggering.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during RTL-P4.24 / P3.305 ethmac + ethernet_tri_mode rescan; LLM output kept tripping the R10-R14 validator on these state-machine and control-block modules."
+    },
+    "opencores/eth_txstatem": {
+      "verdict": "good",
+      "locked_text": "Transmit-path state machine sequencing preamble emission, frame data, and inter-packet gap timing.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during RTL-P4.24 / P3.305 ethmac + ethernet_tri_mode rescan; LLM output kept tripping the R10-R14 validator on these state-machine and control-block modules."
+    },
+    "opencores/MAC_tx_addr_add": {
+      "verdict": "good",
+      "locked_text": "Inserts the configured source MAC address into outgoing transmit frames before the FCS calculation pipeline.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written after LLM fell through to auto-filler during RTL-P4.24 / P3.305 ethmac + ethernet_tri_mode rescan; LLM output kept tripping the R10-R14 validator on these state-machine and control-block modules."
     }
   }
 }

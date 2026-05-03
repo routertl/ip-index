@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
 published_at: '2019-09-30T10:29:44+02:00'
-description: Wishbone crossbar interconnect that arbitrates and routes bus transactions
-  between two masters and two slave peripherals.
+description: Arbitrates Wishbone bus access between two masters and routes transactions
+  to two slave peripherals.
 license: ''
 license_class: unknown
 source:

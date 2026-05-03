@@ -3,7 +3,8 @@ namespace: opencores
 version: master
 commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
 published_at: '2019-09-30T10:29:44+02:00'
-description: 'opencores IP: eth_receivecontrol'
+description: Manages receive-side flow control by signalling pause requests upstream
+  when the RX FIFO threshold is crossed.
 license: ''
 license_class: unknown
 source:
