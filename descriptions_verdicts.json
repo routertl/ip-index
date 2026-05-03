@@ -442,6 +442,55 @@
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
       "notes": "top-level repo description for P3.334 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/mips32r1": {
+      "verdict": "good",
+      "locked_text": "MIPS32 Release 1 RISC processor implementing the MIPS32R1 ISA with Wishbone bus and 5-stage pipeline.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.335 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/8051": {
+      "verdict": "good",
+      "locked_text": "Intel 8051 / 8052-compatible 8-bit microcontroller with peripheral ecosystem (UART, timers, I2C, SPI) and Wishbone host bus support.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.336 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/cpu65c02_true_cycle": {
+      "verdict": "good",
+      "locked_text": "Cycle-accurate WDC 65C02 8-bit processor recreating the original instruction set with bus timing matching the silicon.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.337 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/ao68000": {
+      "verdict": "good",
+      "locked_text": "Motorola 68000-compatible 16/32-bit processor with Wishbone bus interface, permissively licensed (BSD-2) for embedded use.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.338 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/nextz80": {
+      "verdict": "good",
+      "locked_text": "Z80-compatible 8-bit processor with Wishbone bus interface, suitable for retro-computer reimplementation and embedded controllers.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.339 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/6809_6309_compatible_core": {
+      "verdict": "good",
+      "locked_text": "Motorola 6809 / Hitachi 6309 8/16-bit hybrid processor compatible with both ISAs, 16-bit address space, dual accumulator.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.340 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/Aquarius": {
+      "verdict": "good",
+      "locked_text": "SuperH SH-2-compatible 32-bit RISC processor implementing the SH-2 ISA with 5-stage pipeline and 16-bit instruction encoding.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.341 granularity=repo entry. RTL-P4.32 workaround."
     }
   }
 }

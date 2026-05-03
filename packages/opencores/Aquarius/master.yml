@@ -1,0 +1,71 @@
+name: Aquarius
+namespace: opencores
+version: master
+commit_sha: e59f573a3f4ae8414ad4fde38c778a153e577baf
+published_at: '2003-12-10T16:39:23+00:00'
+description: SuperH SH-2-compatible 32-bit RISC processor implementing the SH-2 ISA
+  with 5-stage pipeline and 16-bit instruction encoding.
+license: GPL-2.0-or-later
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/Aquarius.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: e59f573a3f4ae8414ad4fde38c778a153e577baf
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - verilog/timescale.v
+  - verilog/lib.v
+  - verilog/defines.v
+  - verilog/register.v
+  - verilog/datapath.v
+  - verilog/decode.v
+  - verilog/mem.v
+  - verilog/mult.v
+  - verilog/cpu.v
+  - verilog/memory_fpga.v
+  - verilog/pio.v
+  - verilog/rom.v
+  - verilog/sasc_brg.v
+  - verilog/sasc_fifo4.v
+  - verilog/sasc_top.v
+  - verilog/sys.v
+  - verilog/uart.v
+  - verilog/top.v
+  - verilog/test.v
+tags:
+- asynchronous
+- clock
+- fifo4
+- gate
+- memory
+- only
+- processor
+- read
+- receiver
+- serial
+- transmitter
+- universal
+role: repo
+top_modules:
+- rom
+- test
+components:
+- clk_gate
+- cpu
+- datapath
+- decode
+- mem
+- memory
+- mult
+- pio
+- register
+- sasc_brg
+- sasc_fifo4
+- sasc_top
+- sys
+- uart
+total_entities: 16

@@ -1,0 +1,128 @@
+name: mips32r1
+namespace: opencores
+version: master
+commit_sha: 88ef2a36e601455f1680f49f849c395262d6744b
+published_at: '2014-01-02T00:24:50+00:00'
+description: MIPS32 Release 1 RISC processor implementing the MIPS32R1 ISA with Wishbone
+  bus and 5-stage pipeline.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/mips32r1.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 88ef2a36e601455f1680f49f849c395262d6744b
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/MIPS_Parameters.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/Divide.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/ALU.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/Add.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/BRAM/BRAM_592KB_Wrapper.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/Compare.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/CPZero.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/Control.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Common/Decoder_2to4.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/EXMEM_Stage.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Common/SRAM.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Common/FIFO.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Common/FIFO_Clear.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Common/FIFO_NoFull_Count.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/Hazard_Detection.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/I2C/I2C_Clock.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/I2C/I2C_Phy.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/I2C/I2C_Controller.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/IDEX_Stage.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/IFID_Stage.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/LCD/lcd_ctrl.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/LCD/LCD.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/LED/LED.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/MEMWB_Stage.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/MemControl.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Common/Mux2.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Common/Mux4.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Clocks/PLL_100MHz_to_33MHz_66MHz.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Clocks/PLL_100MHz_to_50MHz_100MHz.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Clocks/PLL_100MHz_to_50MHz_100MHz_66MHz.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Clocks/PLL_100MHz_to_66MHz.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Clocks/PLL_100MHz_to_66MHz_133MHz.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Clocks/PLL_100MHz_to_66MHz_133MHz_266MHz.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Piezo/Piezo.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/Register.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/RegisterFile.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/TrapDetect.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/MIPS32/Processor.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Switches/Switch_Filter.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Switches/Switches.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/UART/uart_clock.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/UART/uart_rx.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/UART/uart_tx.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/UART/uart-min.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/UART/uart_bootloader_v1.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Top.v
+  - Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Simulation/Top_Tester.v
+tags:
+- asynchronous
+- bootloader
+- circuit
+- control
+- controller
+- detection
+- inter-integrated
+- physical
+- receiver
+- transmit
+- transmitter
+- universal
+role: repo
+top_modules:
+- Decoder_2to4
+- PLL_100MHz_to_50MHz_100MHz
+- PLL_100MHz_to_50MHz_100MHz_66MHz
+- PLL_100MHz_to_66MHz
+- PLL_100MHz_to_66MHz_133MHz
+- PLL_100MHz_to_66MHz_133MHz_266MHz
+- Top_Tester
+components:
+- ALU
+- Add
+- BRAM_592KB_Wrapper
+- CPZero
+- Compare
+- Control
+- Divide
+- EXMEM_Stage
+- FIFO
+- FIFO_Clear
+- FIFO_NoFull_Count
+- Hazard_Detection
+- I2C_Clock
+- I2C_Controller
+- I2C_Phy
+- IDEX_Stage
+- IFID_Stage
+- LCD
+- LED
+- MEMWB_Stage
+- MemControl
+- Mux2
+- Mux4
+- PLL_100MHz_to_33MHz_66MHz
+- Piezo_Driver
+- Processor
+- Register
+- RegisterFile
+- SRAM
+- Switch_Filter
+- Switches
+- TrapDetect
+- lcd_ctrl
+- uart_bootloader
+- uart_clock
+- uart_min
+- uart_rx
+- uart_tx
+total_entities: 45

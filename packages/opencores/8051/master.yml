@@ -1,0 +1,222 @@
+name: '8051'
+namespace: opencores
+version: master
+commit_sha: f1a1ce31640c3e5c67935b649235e644462365a5
+published_at: '2003-07-15T09:38:49+00:00'
+description: Intel 8051 / 8052-compatible 8-bit microcontroller with peripheral ecosystem
+  (UART, timers, I2C, SPI) and Wishbone host bus support.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/8051.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: f1a1ce31640c3e5c67935b649235e644462365a5
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/oc8051_timescale.v
+  - rtl/verilog/oc8051_defines.v
+  - rtl/verilog/oc8051_acc.v
+  - rtl/verilog/oc8051_divide.v
+  - rtl/verilog/oc8051_multiply.v
+  - rtl/verilog/oc8051_alu_test.v
+  - rtl/verilog/oc8051_alu_src_sel.v
+  - rtl/verilog/oc8051_b_register.v
+  - rtl/verilog/oc8051_cache_ram.v
+  - rtl/verilog/oc8051_comp.v
+  - rtl/verilog/oc8051_cy_select.v
+  - rtl/verilog/oc8051_decoder.v
+  - rtl/verilog/oc8051_dptr.v
+  - rtl/verilog/oc8051_ram_64x32_dual_bist.v
+  - rtl/verilog/oc8051_icache.v
+  - rtl/verilog/oc8051_indi_addr.v
+  - rtl/verilog/oc8051_int.v
+  - rtl/verilog/oc8051_memory_interface.v
+  - rtl/verilog/oc8051_ports.v
+  - rtl/verilog/oc8051_psw.v
+  - rtl/verilog/oc8051_ram_256x8_two_bist.v
+  - rtl/verilog/oc8051_ram_top.v
+  - rtl/verilog/oc8051_rom.v
+  - rtl/verilog/oc8051_sp.v
+  - rtl/verilog/oc8051_tc.v
+  - rtl/verilog/oc8051_tc2.v
+  - rtl/verilog/oc8051_uart.v
+  - rtl/verilog/oc8051_sfr.v
+  - rtl/verilog/oc8051_wb_iinterface.v
+  - rtl/verilog/oc8051_top.v
+tags:
+- access
+- accumulator
+- asynchronous
+- decoder
+- iinterface
+- interface
+- multiply
+- receiver
+- register
+- transmitter
+- universal
+- wishbone
+role: repo
+top_modules:
+- oc8051_top
+- rom0
+- rom1
+- rom10
+- rom100
+- rom101
+- rom102
+- rom103
+- rom104
+- rom105
+- rom106
+- rom107
+- rom108
+- rom109
+- rom11
+- rom110
+- rom111
+- rom112
+- rom113
+- rom114
+- rom115
+- rom116
+- rom117
+- rom118
+- rom119
+- rom12
+- rom120
+- rom121
+- rom122
+- rom123
+- rom124
+- rom125
+- rom126
+- rom127
+- rom13
+- rom14
+- rom15
+- rom16
+- rom17
+- rom18
+- rom19
+- rom2
+- rom20
+- rom21
+- rom22
+- rom23
+- rom24
+- rom25
+- rom26
+- rom27
+- rom28
+- rom29
+- rom3
+- rom30
+- rom31
+- rom32
+- rom33
+- rom34
+- rom35
+- rom36
+- rom37
+- rom38
+- rom39
+- rom4
+- rom40
+- rom41
+- rom42
+- rom43
+- rom44
+- rom45
+- rom46
+- rom47
+- rom48
+- rom49
+- rom5
+- rom50
+- rom51
+- rom52
+- rom53
+- rom54
+- rom55
+- rom56
+- rom57
+- rom58
+- rom59
+- rom6
+- rom60
+- rom61
+- rom62
+- rom63
+- rom64
+- rom65
+- rom66
+- rom67
+- rom68
+- rom69
+- rom7
+- rom70
+- rom71
+- rom72
+- rom73
+- rom74
+- rom75
+- rom76
+- rom77
+- rom78
+- rom79
+- rom8
+- rom80
+- rom81
+- rom82
+- rom83
+- rom84
+- rom85
+- rom86
+- rom87
+- rom88
+- rom89
+- rom9
+- rom90
+- rom91
+- rom92
+- rom93
+- rom94
+- rom95
+- rom96
+- rom97
+- rom98
+- rom99
+components:
+- oc8051_acc
+- oc8051_alu
+- oc8051_alu_src_sel
+- oc8051_b_register
+- oc8051_cache_ram
+- oc8051_comp
+- oc8051_cy_select
+- oc8051_decoder
+- oc8051_divide
+- oc8051_dptr
+- oc8051_icache
+- oc8051_indi_addr
+- oc8051_int
+- oc8051_memory_interface
+- oc8051_multiply
+- oc8051_ports
+- oc8051_psw
+- oc8051_ram_256x8_two_bist
+- oc8051_ram_64x32_dual_bist
+- oc8051_ram_top
+- oc8051_rom
+- oc8051_sfr
+- oc8051_sp
+- oc8051_tc
+- oc8051_tc2
+- oc8051_uart
+- oc8051_wb_iinterface
+total_entities: 156
