@@ -6,8 +6,8 @@ published_at: '2011-12-25T11:08:26+00:00'
 description: 'Company:       VISENGI S.L. (www.visengi.com) Engineer:      Victor
   Lopez Lorenzo (victor.lopez (at) visengi (dot) com) Create Date:    23:44:13 22/August/2008
   Project Name:   Triple Port WISHBONE SPRAM Wrapper Tool versions:  Xilinx ISE 9.'
-license: ''
-license_class: unknown
+license: LGPL-2.1-only
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/copyblaze.git

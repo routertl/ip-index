@@ -6,8 +6,8 @@ published_at: '2011-03-18T17:52:17+00:00'
 description: 'File        : ../RTL/hostController/sendpacketcheckpreamble.v Generated   :
   11/10/06 05:37:21 From        : ../RTL/hostController/sendpacketcheckpreamble.asf
   By          : FSM2VHDL ver. 5.0.0.9'
-license: ''
-license_class: unknown
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/usbhostslave.git

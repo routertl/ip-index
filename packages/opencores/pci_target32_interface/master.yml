@@ -5,8 +5,8 @@ commit_sha: 6afbb5a067308b9537cbdc683ccb5992358429d8
 published_at: '2009-03-10T08:24:20+00:00'
 description: Top-level 32-bit PCI target interface aggregating DEVSEL#, TRDY#, STOP#,
   and AD-bus drivers for slave-side transactions.
-license: ''
-license_class: unknown
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/pci.git

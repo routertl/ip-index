@@ -3,10 +3,10 @@ namespace: opencores
 version: master
 commit_sha: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
 published_at: '2011-03-18T17:52:17+00:00'
-description: Multiplexes data and control signals between host and slave interfaces
-  with clock domain crossing and reset synchronization.
-license: ''
-license_class: unknown
+description: Multiplexes data and control signals between host and slave interfaces,
+  synchronizing resets across clock domains.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/usbhostslave.git

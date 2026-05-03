@@ -3,10 +3,10 @@ namespace: opencores
 version: master
 commit_sha: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
 published_at: '2011-03-18T17:52:17+00:00'
-description: Computes CRC-5 checksum iteratively on 8-bit input data with enable control
-  and reset functionality.
-license: ''
-license_class: unknown
+description: Computes and updates a 5-bit CRC value for 8-bit input data on each clock
+  cycle.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/usbhostslave.git

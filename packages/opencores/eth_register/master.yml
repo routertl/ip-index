@@ -3,10 +3,10 @@ namespace: opencores
 version: master
 commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
 published_at: '2019-09-30T10:29:44+02:00'
-description: Stores and outputs Ethernet data with synchronous and asynchronous reset
-  capabilities.
-license: ''
-license_class: unknown
+description: Ethernet register that stores and outputs data with synchronous/asynchronous
+  reset control.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/ethmac.git

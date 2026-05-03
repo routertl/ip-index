@@ -5,8 +5,8 @@ commit_sha: 9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9
 published_at: '2013-05-20T21:22:28+00:00'
 description: Fetch - Instantiates the fetch stage sub-modules of         // the Amber
   25 Core                                           //
-license: ''
-license_class: unknown
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/amber.git

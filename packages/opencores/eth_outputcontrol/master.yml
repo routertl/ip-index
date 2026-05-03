@@ -5,8 +5,8 @@ commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
 published_at: '2019-09-30T10:29:44+02:00'
 description: Coordinates output control signals between the MAC transmit pipeline
   and the GMII/MII PHY interface, gating transmissions on link state.
-license: ''
-license_class: unknown
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/ethmac.git

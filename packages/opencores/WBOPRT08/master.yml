@@ -3,10 +3,10 @@ namespace: opencores
 version: master
 commit_sha: 44a9c815b81f209dc02ee51c5c1a80acd9a615dc
 published_at: '2011-12-25T11:08:26+00:00'
-description: 8-bit output port with WISHBONE slave interface for writing data to an
-  external output.
-license: ''
-license_class: unknown
+description: 8-bit Wishbone slave interface that maps write data to a parallel output
+  port.
+license: LGPL-2.1-only
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/copyblaze.git

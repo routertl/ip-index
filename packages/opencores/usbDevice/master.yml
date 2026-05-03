@@ -3,10 +3,10 @@ namespace: opencores
 version: master
 commit_sha: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
 published_at: '2011-03-18T17:52:17+00:00'
-description: USB device controller managing differential signaling, pull-up control,
-  and VBUS detection for full-speed USB communication.
-license: ''
-license_class: unknown
+description: USB device controller managing slave-mode communication with differential
+  signaling and pull-up control.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/usbhostslave.git

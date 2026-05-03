@@ -3,10 +3,10 @@ namespace: opencores
 version: master
 commit_sha: 44a9c815b81f209dc02ee51c5c1a80acd9a615dc
 published_at: '2011-12-25T11:08:26+00:00'
-description: Wishbone-compatible GPIO controller providing 32-bit input/output port
-  access via bus read/write operations.
-license: ''
-license_class: unknown
+description: Wishbone-interfaced GPIO controller providing 32-bit input/output port
+  access via memory-mapped registers.
+license: LGPL-2.1-only
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/copyblaze.git

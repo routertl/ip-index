@@ -4,9 +4,9 @@ version: master
 commit_sha: 6afbb5a067308b9537cbdc683ccb5992358429d8
 published_at: '2009-03-10T08:24:20+00:00'
 description: Synchronizes PCI transaction requests and completions across two clock
-  domains while tracking pending operations.
-license: ''
-license_class: unknown
+  domains while tracking pending operations and buffering address/control signals.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/pci.git

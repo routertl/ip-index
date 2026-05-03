@@ -6,8 +6,8 @@ published_at: '2011-12-25T11:08:26+00:00'
 description: 'Company: File: cp_FullAdder.vhd Description: projet copyblaze 1 bit
   Full adder File history: v1.0: 14/10/11: Creation Targeted device: ProAsic A3P250
   VQFP100'
-license: ''
-license_class: unknown
+license: LGPL-2.1-only
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/copyblaze.git
