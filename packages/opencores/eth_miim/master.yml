@@ -1,25 +1,26 @@
 name: eth_miim
 namespace: opencores
 version: master
-commit_sha: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
-published_at: '2009-01-08T13:53:34+00:00'
+commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
+published_at: '2019-09-30T10:29:44+02:00'
 description: MII Management interface controller driving MDC and MDIO for PHY register
   read and write transactions.
 license: ''
 license_class: unknown
 source:
   type: git
-  url: https://github.com/freecores/ethernet_tri_mode.git
+  url: https://github.com/freecores/ethmac.git
   tag: master
   ip_yml_path: .
-  resolved_commit: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
+  resolved_commit: dd26899086edf3b797d2775ef9502d204a9a8149
 routertl_compat:
   language: verilog
   library: work
   files:
-  - rtl/verilog/miim/eth_clockgen.v
-  - rtl/verilog/miim/eth_outputcontrol.v
-  - rtl/verilog/miim/eth_shiftreg.v
+  - rtl/verilog/timescale.v
+  - rtl/verilog/eth_clockgen.v
+  - rtl/verilog/eth_outputcontrol.v
+  - rtl/verilog/eth_shiftreg.v
   - rtl/verilog/eth_miim.v
 tags:
 - eth

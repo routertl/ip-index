@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
 published_at: '2019-09-30T10:29:44+02:00'
-description: Validates received Ethernet frame MAC addresses against broadcast, multicast,
-  and unicast filters.
+description: Validates received Ethernet frame destination addresses against MAC filters
+  and hash tables.
 license: ''
 license_class: unknown
 source:

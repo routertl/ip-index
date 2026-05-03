@@ -1,0 +1,35 @@
+name: usbSlaveControl
+namespace: opencores
+version: master
+commit_sha: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
+published_at: '2011-03-18T17:52:17+00:00'
+description: USB device-side control logic handling SETUP token responses, endpoint
+  state, and host control transfer phases.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/usbhostslave.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - RTL/include/timescale.v
+  - RTL/slaveController/sctxportarbiter.v
+  - RTL/include/usbSlaveControl_h.v
+  - RTL/slaveController/USBSlaveControlBI.v
+  - RTL/slaveController/endpMux.v
+  - RTL/slaveController/fifoMux.v
+  - RTL/include/usbSerialInterfaceEngine_h.v
+  - RTL/slaveController/slaveDirectcontrol.v
+  - RTL/include/usbConstants_h.v
+  - RTL/slaveController/slaveGetpacket.v
+  - RTL/slaveController/slaveRxStatusMonitor.v
+  - RTL/slaveController/slaveSendpacket.v
+  - RTL/slaveController/slavecontroller.v
+  - RTL/slaveController/usbSlaveControl.v
+tags: []
+role: component

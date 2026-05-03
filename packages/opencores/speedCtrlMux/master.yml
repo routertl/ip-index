@@ -1,0 +1,76 @@
+name: speedCtrlMux
+namespace: opencores
+version: master
+commit_sha: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
+published_at: '2011-03-18T17:52:17+00:00'
+description: Multiplexes speed control signals from three sources (direct control,
+  send packet, full speed) based on selection input.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/usbhostslave.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - RTL/include/timescale.v
+  - RTL/hostController/speedCtrlMux.v
+tags: []
+role: top
+components:
+- EP0
+- EP1Mouse
+- HCTxPortArbiter
+- RxFifo
+- RxfifoBI
+- SCTxPortArbiter
+- SIEReceiver
+- SIETransmitter
+- SOFController
+- SOFTransmit
+- TxFifo
+- TxfifoBI
+- USBHostControlBI
+- USBSlaveControlBI
+- USBTxWireArbiter
+- checkLineState
+- directControl
+- dpMem_dc
+- endpMux
+- fifoMux
+- fifoRTL
+- getPacket
+- hostSlaveMux
+- hostSlaveMuxBI
+- hostcontroller
+- lineControlUpdate
+- processRxBit
+- processRxByte
+- processTxByte
+- readUSBWireData
+- rxStatusMonitor
+- sendPacket
+- sendPacketArbiter
+- sendPacketCheckPreamble
+- slaveDirectControl
+- slaveGetPacket
+- slaveRxStatusMonitor
+- slaveSendPacket
+- slavecontroller
+- testHarness
+- updateCRC16
+- updateCRC5
+- usbDevice
+- usbHost
+- usbHostControl
+- usbHostSlave
+- usbSerialInterfaceEngine
+- usbSlave
+- usbSlaveControl
+- wb_master_model
+- wishBoneBI
+- writeUSBWireData

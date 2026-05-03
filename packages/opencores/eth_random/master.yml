@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
 published_at: '2019-09-30T10:29:44+02:00'
-description: Generates Ethernet collision backoff timing using random delays and retry
-  counters.
+description: Generates Ethernet collision backoff timing using pseudorandom delay
+  based on retry count.
 license: ''
 license_class: unknown
 source:

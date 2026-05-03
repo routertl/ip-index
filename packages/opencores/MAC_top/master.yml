@@ -3,9 +3,8 @@ namespace: opencores
 version: master
 commit_sha: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
 published_at: '2009-01-08T13:53:34+00:00'
-description: MAC_top implements a Ethernet MAC controller that bridges between user
-  data interfaces and PHY layer, handling packet transmission/reception with speed
-  negotiation.
+description: MAC_top integrates Ethernet MAC transmit/receive with user data interfaces,
+  PHY connectivity, and packet length FIFO management.
 license: ''
 license_class: unknown
 source:
@@ -42,10 +41,6 @@ routertl_compat:
   - rtl/verilog/RMON.v
   - rtl/verilog/reg_int.v
   - rtl/verilog/afifo.v
-  - rtl/verilog/miim/eth_clockgen.v
-  - rtl/verilog/miim/eth_outputcontrol.v
-  - rtl/verilog/miim/eth_shiftreg.v
-  - rtl/verilog/eth_miim.v
   - rtl/verilog/MAC_top.v
 tags:
 - access
@@ -77,8 +72,4 @@ components:
 - RegCPUData
 - afifo
 - duram
-- eth_clockgen
-- eth_miim
-- eth_outputcontrol
-- eth_shiftreg
 - flow_ctrl

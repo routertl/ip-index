@@ -1,0 +1,29 @@
+name: wb_ddr3_bridge
+namespace: opencores
+version: master
+commit_sha: 9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9
+published_at: '2013-05-20T21:22:28+00:00'
+description: Wishbone Slave to Xilinx MCB (DDR3 controller) Bridge       //
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/amber.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - hw/vlog/system/wb_ddr3_bridge.v
+tags:
+- adapter
+- bridge
+- bus
+- converter
+- ddr3
+- protocol
+- wb
+- wishbone
+role: top

@@ -1,0 +1,31 @@
+name: pci_conf_space
+namespace: opencores
+version: master
+commit_sha: 6afbb5a067308b9537cbdc683ccb5992358429d8
+published_at: '2009-03-10T08:24:20+00:00'
+description: PCI configuration space holding Type 0 header registers (Vendor/Device
+  ID, command/status, BARs, interrupt config) for host enumeration.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/pci.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 6afbb5a067308b9537cbdc683ccb5992358429d8
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/pci_user_constants.v
+  - rtl/verilog/pci_constants.v
+  - rtl/verilog/timescale.v
+  - rtl/verilog/pci_spoci_ctrl.v
+  - rtl/verilog/pci_synchronizer_flop.v
+  - rtl/verilog/pci_sync_module.v
+  - rtl/verilog/pci_conf_space.v
+tags:
+- conf
+- pci
+- space
+role: component

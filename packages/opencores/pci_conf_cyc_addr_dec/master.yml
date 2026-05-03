@@ -1,0 +1,28 @@
+name: pci_conf_cyc_addr_dec
+namespace: opencores
+version: master
+commit_sha: 6afbb5a067308b9537cbdc683ccb5992358429d8
+published_at: '2009-03-10T08:24:20+00:00'
+description: Decodes PCI configuration cycle addresses from input to output format.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/pci.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 6afbb5a067308b9537cbdc683ccb5992358429d8
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/timescale.v
+  - rtl/verilog/pci_conf_cyc_addr_dec.v
+tags:
+- addr
+- conf
+- cyc
+- dec
+- decoder
+- pci
+role: component

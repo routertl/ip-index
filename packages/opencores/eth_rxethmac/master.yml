@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
 published_at: '2019-09-30T10:29:44+02:00'
-description: Receives and decodes Ethernet frames, filtering by address/protocol and
-  outputting frame data with validity and error signals.
+description: Receives and processes Ethernet frames from MII interface, validating
+  preamble, SFD, CRC, and filtering by MAC address.
 license: ''
 license_class: unknown
 source:

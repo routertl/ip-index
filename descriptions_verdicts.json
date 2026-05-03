@@ -99,6 +99,223 @@
       "reviewed_at": "2026-05-03",
       "reviewed_by": "dmazure",
       "notes": "hand-written after LLM fell through to auto-filler during RTL-P4.24 / P3.305 ethmac + ethernet_tri_mode rescan; LLM output kept tripping the R10-R14 validator on these state-machine and control-block modules."
+    },
+    "opencores/usbHostControl": {
+      "verdict": "good",
+      "locked_text": "USB host-side state machine coordinating control transfers, bulk transfers, and device enumeration with the serial interface engine.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/usbSlaveControl": {
+      "verdict": "good",
+      "locked_text": "USB device-side control logic handling SETUP token responses, endpoint state, and host control transfer phases.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/usbSerialInterfaceEngine": {
+      "verdict": "good",
+      "locked_text": "USB Serial Interface Engine performing NRZI encoding, bit-stuffing, and PID/CRC generation for the bus-level protocol.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/hostcontroller": {
+      "verdict": "good",
+      "locked_text": "USB host controller top-level integrating the SIE, host control state machine, and packet buffer interface.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/EP1Mouse": {
+      "verdict": "good",
+      "locked_text": "Example USB endpoint 1 mouse-class device demonstrating the slave controller with HID report transactions.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_conf_space": {
+      "verdict": "good",
+      "locked_text": "PCI configuration space holding Type 0 header registers (Vendor/Device ID, command/status, BARs, interrupt config) for host enumeration.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_spoci_ctrl": {
+      "verdict": "good",
+      "locked_text": "PCI Special Configuration Interface controller for optional power-management and serial-EEPROM-loaded configuration values.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_rst_int": {
+      "verdict": "good",
+      "locked_text": "Internal PCI reset synchroniser bringing the asynchronous PCI RST# pin into the local clock domain.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_cur_out_reg": {
+      "verdict": "good",
+      "locked_text": "Output register stage for PCI current-cycle bus signals (FRAME#, IRDY#, AD parity) feeding the I/O pads.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_frame_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path variant of the PCI FRAME# signal generator with synthesis-friendly placement for timing closure.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_frame_en_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path enable logic gating the FRAME# output driver during master cycle initiation.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_irdy_out_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path IRDY# output driver indicating master ready state on the PCI bus.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_mas_ad_en_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path enable for the master-side AD[31:0] bus drivers during address and data phases.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_mas_ad_load_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path load logic capturing master-side AD bus values for outgoing transactions.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_perr_en_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path enable for the PERR# (parity error) output driver on detected data-phase parity mismatches.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_serr_en_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path enable for the SERR# (system error) open-drain output indicating address-phase or special-cycle errors.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_target32_devs_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path target-side DEVSEL# generator asserting on positive address decode within the configured BAR ranges.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_target32_stop_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path target-side STOP# generator signalling target abort, retry, or disconnect to the master.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/pci_target32_trdy_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path target-side TRDY# generator indicating target-ready state for data-phase completion.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest; LLM output kept tripping the R10-R14 validator on USB top-level controllers and PCI critical-path bus-signal drivers."
+    },
+    "opencores/USBSlaveControlBI": {
+      "verdict": "good",
+      "locked_text": "Backend interface module bridging the USB slave controller to the user-facing FIFO and register interface.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest follow-up; LLM tripping R10-R14 validator on these final 5."
+    },
+    "opencores/pci_cbe_en_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path enable for the PCI C/BE# (command/byte-enable) bus drivers during master cycles.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest follow-up; LLM tripping R10-R14 validator on these final 5."
+    },
+    "opencores/pci_frame_load_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path FRAME# load-register driving the next bus-cycle FRAME# state for master transactions.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest follow-up; LLM tripping R10-R14 validator on these final 5."
+    },
+    "opencores/pci_serr_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path SERR# generator asserting on detected address-parity or special-cycle error conditions.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest follow-up; LLM tripping R10-R14 validator on these final 5."
+    },
+    "opencores/pci_target32_interface": {
+      "verdict": "good",
+      "locked_text": "Top-level 32-bit PCI target interface aggregating DEVSEL#, TRDY#, STOP#, and AD-bus drivers for slave-side transactions.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest follow-up; LLM tripping R10-R14 validator on these final 5."
+    },
+    "opencores/USBHostControlBI": {
+      "verdict": "good",
+      "locked_text": "Backend interface module bridging the USB host controller to the user-facing FIFO and register interface.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest second follow-up."
+    },
+    "opencores/lineControlUpdate": {
+      "verdict": "good",
+      "locked_text": "Updates USB line control state including bus speed sensing and D+/D- pull-up enable signalling.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest second follow-up."
+    },
+    "opencores/pci_mas_ch_state_crit": {
+      "verdict": "good",
+      "locked_text": "Critical-path PCI master channel state register tracking ongoing transaction phase for downstream bus-signal generation.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest second follow-up."
+    },
+    "opencores/pci_master32_sm": {
+      "verdict": "good",
+      "locked_text": "Top-level 32-bit PCI master state machine sequencing address phase, data phases, and turn-around for outgoing transactions.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written during RTL-P3.321/322/323 batch ingest second follow-up."
+    },
+    "opencores/Clk_ctrl": {
+      "verdict": "good",
+      "locked_text": "Generates and distributes multiple clock signals at different frequencies for the MAC and PHY subsystems.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written; LLM produced this on prior runs but tripped validator on this one — model variance, locking to prevent flapping."
+    },
+    "opencores/pci_target32_sm": {
+      "verdict": "good",
+      "locked_text": "Top-level 32-bit PCI target state machine sequencing address decode, latency timeouts, and data-phase progress for slave-side transactions.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written; companion to pci_master32_sm. LLM tripping validator on this state-machine top."
+    },
+    "opencores/writeUSBWireData": {
+      "verdict": "good",
+      "locked_text": "Drives the USB D+/D- wire signals at NRZI bit timing during outgoing packet transmission from the serial interface engine.",
+      "reviewed_at": "2026-05-03",
+      "reviewed_by": "dmazure",
+      "notes": "hand-written; final straggler in RTL-P3.321/322/323/324 batch ingest."
     }
   }
 }

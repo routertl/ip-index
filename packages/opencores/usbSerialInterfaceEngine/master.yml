@@ -1,0 +1,36 @@
+name: usbSerialInterfaceEngine
+namespace: opencores
+version: master
+commit_sha: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
+published_at: '2011-03-18T17:52:17+00:00'
+description: USB Serial Interface Engine performing NRZI encoding, bit-stuffing, and
+  PID/CRC generation for the bus-level protocol.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/usbhostslave.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - RTL/include/timescale.v
+  - RTL/include/usbSerialInterfaceEngine_h.v
+  - RTL/serialInterfaceEngine/siereceiver.v
+  - RTL/include/usbConstants_h.v
+  - RTL/serialInterfaceEngine/SIETransmitter.v
+  - RTL/serialInterfaceEngine/usbTxWireArbiter.v
+  - RTL/serialInterfaceEngine/lineControlUpdate.v
+  - RTL/serialInterfaceEngine/processRxBit.v
+  - RTL/serialInterfaceEngine/processRxByte.v
+  - RTL/serialInterfaceEngine/processTxByte.v
+  - RTL/serialInterfaceEngine/readUSBWireData.v
+  - RTL/serialInterfaceEngine/updateCRC16.v
+  - RTL/serialInterfaceEngine/updateCRC5.v
+  - RTL/serialInterfaceEngine/writeUSBWireData.v
+  - RTL/serialInterfaceEngine/usbSerialInterfaceEngine.v
+tags: []
+role: component

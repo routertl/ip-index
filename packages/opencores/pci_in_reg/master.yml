@@ -1,0 +1,28 @@
+name: pci_in_reg
+namespace: opencores
+version: master
+commit_sha: 6afbb5a067308b9537cbdc683ccb5992358429d8
+published_at: '2009-03-10T08:24:20+00:00'
+description: Registers and synchronizes PCI bus input signals for internal pipeline
+  processing.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/pci.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 6afbb5a067308b9537cbdc683ccb5992358429d8
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/timescale.v
+  - rtl/verilog/pci_user_constants.v
+  - rtl/verilog/pci_constants.v
+  - rtl/verilog/pci_in_reg.v
+tags:
+- pci
+- reg
+- register
+role: component

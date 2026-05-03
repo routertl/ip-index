@@ -1,0 +1,28 @@
+name: pci_mas_ch_state_crit
+namespace: opencores
+version: master
+commit_sha: 6afbb5a067308b9537cbdc683ccb5992358429d8
+published_at: '2009-03-10T08:24:20+00:00'
+description: Critical-path PCI master channel state register tracking ongoing transaction
+  phase for downstream bus-signal generation.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/pci.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 6afbb5a067308b9537cbdc683ccb5992358429d8
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/timescale.v
+  - rtl/verilog/pci_mas_ch_state_crit.v
+tags:
+- ch
+- crit
+- mas
+- pci
+- state
+role: component

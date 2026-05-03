@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
 published_at: '2009-01-08T13:53:34+00:00'
-description: Validates received MAC addresses against programmed addresses and generates
-  error signals for non-matching frames.
+description: Validates received MAC addresses against programmed MAC address filters
+  and reports mismatches.
 license: ''
 license_class: unknown
 source:

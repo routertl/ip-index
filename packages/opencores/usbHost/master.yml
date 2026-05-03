@@ -1,0 +1,60 @@
+name: usbHost
+namespace: opencores
+version: master
+commit_sha: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
+published_at: '2011-03-18T17:52:17+00:00'
+description: USB host controller that manages device communication, transfers, and
+  interrupt signaling over USB protocol.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/usbhostslave.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - RTL/include/timescale.v
+  - RTL/include/wishBoneBus_h.v
+  - RTL/buffers/RxFifoBI.v
+  - RTL/buffers/dpMem_dc.v
+  - RTL/buffers/fifoRTL.v
+  - RTL/buffers/RxFifo.v
+  - RTL/buffers/TxFifoBI.v
+  - RTL/buffers/TxFifo.v
+  - RTL/include/usbHostSlave_h.v
+  - RTL/hostSlaveMux/hostSlaveMuxBI.v
+  - RTL/hostController/hctxportarbiter.v
+  - RTL/include/usbSerialInterfaceEngine_h.v
+  - RTL/hostController/sofcontroller.v
+  - RTL/include/usbHostControl_h.v
+  - RTL/hostController/softransmit.v
+  - RTL/hostController/USBHostControlBI.v
+  - RTL/hostController/directcontrol.v
+  - RTL/include/usbConstants_h.v
+  - RTL/hostController/getpacket.v
+  - RTL/hostController/hostcontroller.v
+  - RTL/hostController/rxStatusMonitor.v
+  - RTL/hostController/sendpacket.v
+  - RTL/hostController/sendpacketarbiter.v
+  - RTL/hostController/sendpacketcheckpreamble.v
+  - RTL/hostController/usbHostControl.v
+  - RTL/serialInterfaceEngine/siereceiver.v
+  - RTL/serialInterfaceEngine/SIETransmitter.v
+  - RTL/serialInterfaceEngine/usbTxWireArbiter.v
+  - RTL/serialInterfaceEngine/lineControlUpdate.v
+  - RTL/serialInterfaceEngine/processRxBit.v
+  - RTL/serialInterfaceEngine/processRxByte.v
+  - RTL/serialInterfaceEngine/processTxByte.v
+  - RTL/serialInterfaceEngine/readUSBWireData.v
+  - RTL/serialInterfaceEngine/updateCRC16.v
+  - RTL/serialInterfaceEngine/updateCRC5.v
+  - RTL/serialInterfaceEngine/writeUSBWireData.v
+  - RTL/serialInterfaceEngine/usbSerialInterfaceEngine.v
+  - RTL/busInterface/wishBoneBI.v
+  - RTL/wrapper/usbHost.v
+tags: []
+role: component

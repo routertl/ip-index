@@ -4,7 +4,7 @@ version: master
 commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
 published_at: '2019-09-30T10:29:44+02:00'
 description: Monitors and reports MAC layer status signals for Ethernet transmit and
-  receive operations, including frame validity, errors, and collision detection.
+  receive operations including frame validation, collision detection, and error conditions.
 license: ''
 license_class: unknown
 source:

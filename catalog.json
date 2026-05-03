@@ -36368,7 +36368,7 @@
     ],
     "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
     "published_at": "2008-06-07T02:59:56+00:00",
-    "description": "Synchronizes asynchronous input signals to a clock domain using metastability-safe flip-flop chain.",
+    "description": "Synchronizes asynchronous input signals across clock domains using metastability-safe flip-flop stages.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -36415,7 +36415,7 @@
     ],
     "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
     "published_at": "2008-06-07T02:59:56+00:00",
-    "description": "Dequeues packets from RX FIFO and outputs packet data with frame boundaries and status signals.",
+    "description": "Dequeues packets from RX FIFO, extracts packet data/control signals, and reports underflow/availability status.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -36437,7 +36437,7 @@
     ],
     "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
     "published_at": "2008-06-07T02:59:56+00:00",
-    "description": "Enqueues received Ethernet frames from XGMII interface into separate data and header FIFOs with error detection and status tracking.",
+    "description": "Enqueues received Ethernet frames from XGMII interface into separate data and header FIFOs with error detection.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -36611,7 +36611,7 @@
     ],
     "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
     "published_at": "2008-06-07T02:59:56+00:00",
-    "description": "Enqueues transmitted packet data into a TX FIFO with flow control and overflow detection.",
+    "description": "Enqueues transmit packets into a FIFO with flow control and overflow detection.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -36658,7 +36658,7 @@
     ],
     "commit_sha": "28fed5358be17637bd8d94aefd04fb26cbcadd0f",
     "published_at": "2008-06-07T02:59:56+00:00",
-    "description": "Wishbone slave interface that monitors Ethernet MAC status signals and provides control/data access.",
+    "description": "Wishbone interface that translates bus transactions into control signals and aggregates Ethernet MAC status flags.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -36742,7 +36742,7 @@
     ],
     "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
     "published_at": "2019-09-30T10:29:44+02:00",
-    "description": "Arbitrates Wishbone bus access between two masters and routes transactions to two slave peripherals.",
+    "description": "Wishbone bus arbiter that multiplexes two masters to two slave peripherals with request/acknowledge handshaking.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -36788,7 +36788,7 @@
     ],
     "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
     "published_at": "2019-09-30T10:29:44+02:00",
-    "description": "Computes and verifies Ethernet CRC checksums on incoming data streams.",
+    "description": "Computes and validates Ethernet CRC checksums for frame integrity verification.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -36856,7 +36856,7 @@
     ],
     "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
     "published_at": "2019-09-30T10:29:44+02:00",
-    "description": "Monitors and reports MAC layer status signals for Ethernet transmit and receive operations, including frame validity, errors, and collision detection.",
+    "description": "Monitors and reports MAC layer status signals for Ethernet transmit and receive operations including frame validation, collision detection, and error conditions.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -36875,13 +36875,13 @@
     "versions": [
       "master"
     ],
-    "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
-    "published_at": "2009-01-08T13:53:34+00:00",
+    "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
+    "published_at": "2019-09-30T10:29:44+02:00",
     "description": "MII Management interface controller driving MDC and MDIO for PHY register read and write transactions.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
-    "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
+    "source_url": "https://github.com/freecores/ethmac.git",
     "tags": [
       "eth",
       "ethernet",
@@ -36919,7 +36919,7 @@
     ],
     "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
     "published_at": "2019-09-30T10:29:44+02:00",
-    "description": "Generates Ethernet collision backoff timing using random delays and retry counters.",
+    "description": "Generates Ethernet collision backoff timing using pseudorandom delay based on retry count.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37003,7 +37003,7 @@
     ],
     "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
     "published_at": "2019-09-30T10:29:44+02:00",
-    "description": "Validates received Ethernet frame MAC addresses against broadcast, multicast, and unicast filters.",
+    "description": "Validates received Ethernet frame destination addresses against MAC filters and hash tables.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37045,7 +37045,7 @@
     ],
     "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
     "published_at": "2019-09-30T10:29:44+02:00",
-    "description": "Receives and decodes Ethernet frames, filtering by address/protocol and outputting frame data with validity and error signals.",
+    "description": "Receives and processes Ethernet frames from MII interface, validating preamble, SFD, CRC, and filtering by MAC address.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37218,7 +37218,7 @@
     ],
     "commit_sha": "dd26899086edf3b797d2775ef9502d204a9a8149",
     "published_at": "2019-09-30T10:29:44+02:00",
-    "description": "Ethernet MAC transmitter that manages frame transmission, collision handling, and retry logic with configurable padding, CRC, and timing parameters.",
+    "description": "Ethernet MAC transmit controller that manages frame transmission, collision handling, and inter-packet gap timing.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37323,7 +37323,7 @@
     ],
     "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
     "published_at": "2009-01-08T13:53:34+00:00",
-    "description": "Generates and manages multiple clock signals for Ethernet MAC and PHY interface based on speed configuration.",
+    "description": "Generates and distributes multiple clock signals at different frequencies for the MAC and PHY subsystems.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37371,7 +37371,7 @@
     ],
     "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
     "published_at": "2009-01-08T13:53:34+00:00",
-    "description": "Buffers MAC receive data between MAC clock domain and system clock domain using a FIFO, with watermark-based flow control.",
+    "description": "MAC receiver FIFO that bridges MAC clock domain data to system clock domain for user interface delivery.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37397,7 +37397,7 @@
     ],
     "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
     "published_at": "2009-01-08T13:53:34+00:00",
-    "description": "Validates received MAC addresses against programmed addresses and generates error signals for non-matching frames.",
+    "description": "Validates received MAC addresses against programmed MAC address filters and reports mismatches.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37424,7 +37424,7 @@
     ],
     "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
     "published_at": "2009-01-08T13:53:34+00:00",
-    "description": "MAC_top implements a Ethernet MAC controller that bridges between user data interfaces and PHY layer, handling packet transmission/reception with speed negotiation.",
+    "description": "MAC_top integrates Ethernet MAC transmit/receive with user data interfaces, PHY connectivity, and packet length FIFO management.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37460,10 +37460,6 @@
       "RegCPUData",
       "afifo",
       "duram",
-      "eth_clockgen",
-      "eth_miim",
-      "eth_outputcontrol",
-      "eth_shiftreg",
       "flow_ctrl"
     ]
   },
@@ -37501,7 +37497,7 @@
     ],
     "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
     "published_at": "2009-01-08T13:53:34+00:00",
-    "description": "MAC transmit FIFO that bridges user data to MAC controller with clock domain crossing and flow control.",
+    "description": "Transmit FIFO that bridges user data writes to MAC transmit interface with clock domain crossing and flow control.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37554,7 +37550,7 @@
     ],
     "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
     "published_at": "2009-01-08T13:53:34+00:00",
-    "description": "Collects and reports transmit/receive packet statistics for network monitoring and CPU readback.",
+    "description": "Collects and manages packet statistics for transmitted and received frames, providing CPU access to monitoring data.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37571,7 +37567,7 @@
     ],
     "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
     "published_at": "2009-01-08T13:53:34+00:00",
-    "description": "Dual-port RAM for RMON statistics with independent read/write access from RMON and CPU interfaces.",
+    "description": "Dual-port RAM for RMON statistics with asynchronous read port B and synchronous write port A.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37591,7 +37587,7 @@
     ],
     "commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
     "published_at": "2009-01-08T13:53:34+00:00",
-    "description": "Configurable register module that stores and outputs MAC transmit/receive control parameters and monitoring settings based on CPU read/write operations.",
+    "description": "Configurable register module that manages MAC transmit/receive parameters and RMON statistics through memory-mapped I/O interface.",
     "license": "",
     "license_class": "unknown",
     "language": "verilog",
@@ -37622,5 +37618,4440 @@
     "source_url": "https://github.com/freecores/ethernet_tri_mode.git",
     "tags": [],
     "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_alu",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Arithmetic Logic Unit (ALU) for Amber 2 Core                //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "alu"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_barrel_shift",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Barrel Shifter for Amber 2 Core                             //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "barrel",
+      "shift"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_barrel_shift_fpga",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Barrel Shifter for Amber 2 Core                             //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "barrel",
+      "fpga",
+      "shift"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_cache",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "L1 Cache for Amber 2 Core                                   //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "cache"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_core",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Amber 2 Core top-Level module                               //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "core"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_decode",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Decode stage of Amber 2 Core                                //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "decode"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_decompile",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Decompiler for Amber 2 Core                                  //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "decompile"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_execute",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Execute stage of Amber 2 Core                               //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "execute"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_fetch",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Fetch - Instantiates the fetch stage sub-modules of         // the Amber 2 Core                                            //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "fetch"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_multiply",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Multiplication Module for Amber 2 Core                      //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "multiply"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_ram_register_bank",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "RAM-based register Bank for Amber Core                      //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "access",
+      "bank",
+      "memory",
+      "ram",
+      "random",
+      "register"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a23_register_bank",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Register Bank for Amber Core                                //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a23",
+      "bank",
+      "register"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_alu",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Arithmetic Logic Unit (ALU) for Amber 25 Core               //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "alu"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_barrel_shift",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Barrel Shifter for Amber 25 Core                            //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "barrel",
+      "shift"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_core",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Amber 25 Core top-Level module                              //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "core"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_dcache",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "L1 Data Cache for Amber 25 Core                             //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "dcache"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_decode",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Decode stage of Amber 25 Core                               //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "decode"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_decompile",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Decompiler for Amber 25 Core                                //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "decompile"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_execute",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Execute stage of Amber 25 Core                              //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "execute"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_fetch",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Fetch - Instantiates the fetch stage sub-modules of         // the Amber 25 Core                                           //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "fetch"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_icache",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "L1 Instruction Cache for Amber 25 Core                      //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "icache"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_mem",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Memory Access - Instantiates the memory access stage        // sub-modules of the Amber 25 Core                            //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "mem"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_multiply",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Multiplication Module for Amber 25 Core                     //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "multiply"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_register_bank",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Register Bank for Amber 25 Core                             //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "bank",
+      "register"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_shifter",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Barrel Shifter for Amber 25 Core                            //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "shifter"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "a25_wishbone",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Wishbone master interface for the Amber 25 core             //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "a25",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "boot_mem128",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "8KBytes SRAM configured with boot software                  //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "boot",
+      "mem128"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "boot_mem32",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "8KBytes SRAM configured with boot software                  //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "boot",
+      "mem32"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "clocks_resets",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Generates and distributes system clocks and reset signals from differential board clock inputs and DDR calibration status.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "clocks",
+      "resets"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "ddr3_afifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Asynchronous FIFO set for Wishbone to Xilinx Virtex-6       // DDR3 Bridge                                                 //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "afifo",
+      "ddr3"
+    ],
+    "role": "top",
+    "components": [
+      "afifo"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "ethmac_wb",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Ethmac module Wishbone bus width and endian switch          //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "bus",
+      "ethmac",
+      "wb",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "interrupt_controller",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Interrupt Controller for Amber                              //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "controller",
+      "interrupt"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "main_mem",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Main memory for simulations.                                //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "mem"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "system",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Top-level module instantiating the entire Amber 2 system.   //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "timer_module",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Wishbone timer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "timer"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "uart",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Wishbone with UART interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "asynchronous",
+      "receiver",
+      "serial",
+      "transmitter",
+      "universal"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_ddr3_bridge",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Wishbone Slave to Xilinx MCB (DDR3 controller) Bridge       //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "adapter",
+      "bridge",
+      "bus",
+      "converter",
+      "ddr3",
+      "protocol",
+      "wb",
+      "wishbone"
+    ],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_xs6_ddr3_bridge",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Wishbone Slave to Xilinx Spartan-6 MCB (DDR3 controller)    // Bridge                                                      //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "adapter",
+      "bridge",
+      "bus",
+      "converter",
+      "ddr3",
+      "protocol",
+      "wb",
+      "wishbone",
+      "xs6"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wishbone_arbiter",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Wishbone arbiter",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "arbiter",
+      "arbitration",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "xs6_sram_2048x32_byte_en",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Wrapper for Xilinx Spartan-6 RAM Block                      //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "2048x32",
+      "byte",
+      "en",
+      "sram",
+      "xs6"
+    ],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "xs6_sram_512x128_byte_en",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Wrapper for Xilinx Spartan-6 RAM Block                      //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "512x128",
+      "byte",
+      "en",
+      "sram",
+      "xs6"
+    ],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_async_reset_flop",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "$Id: pci_async_reset_flop.v,v 1.1 2003-01-27 16:49:31 mihad Exp $",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "async",
+      "asynchronous",
+      "flop",
+      "pci",
+      "reset"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_bridge32",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Wishbone bridge with I2C interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "bridge32",
+      "pci"
+    ],
+    "role": "top",
+    "components": [
+      "pci_async_reset_flop",
+      "pci_cbe_en_crit",
+      "pci_conf_cyc_addr_dec",
+      "pci_conf_space",
+      "pci_cur_out_reg",
+      "pci_delayed_sync",
+      "pci_delayed_write_reg",
+      "pci_frame_crit",
+      "pci_frame_en_crit",
+      "pci_frame_load_crit",
+      "pci_in_reg",
+      "pci_io_mux",
+      "pci_io_mux_ad_en_crit",
+      "pci_io_mux_ad_load_crit",
+      "pci_irdy_out_crit",
+      "pci_mas_ad_en_crit",
+      "pci_mas_ad_load_crit",
+      "pci_mas_ch_state_crit",
+      "pci_master32_sm",
+      "pci_master32_sm_if",
+      "pci_out_reg",
+      "pci_par_crit",
+      "pci_parity_check",
+      "pci_pci_decoder",
+      "pci_pci_tpram",
+      "pci_pcir_fifo_control",
+      "pci_pciw_fifo_control",
+      "pci_pciw_pcir_fifos",
+      "pci_perr_crit",
+      "pci_perr_en_crit",
+      "pci_ram_16x40d",
+      "pci_rst_int",
+      "pci_serr_crit",
+      "pci_serr_en_crit",
+      "pci_spoci_ctrl",
+      "pci_sync_module",
+      "pci_synchronizer_flop",
+      "pci_target32_clk_en",
+      "pci_target32_devs_crit",
+      "pci_target32_interface",
+      "pci_target32_sm",
+      "pci_target32_stop_crit",
+      "pci_target32_trdy_crit",
+      "pci_target_unit",
+      "pci_wb_addr_mux",
+      "pci_wb_decoder",
+      "pci_wb_master",
+      "pci_wb_slave",
+      "pci_wb_slave_unit",
+      "pci_wb_tpram",
+      "pci_wbr_fifo_control",
+      "pci_wbs_wbb3_2_wbb2",
+      "pci_wbw_fifo_control",
+      "pci_wbw_wbr_fifos"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_cbe_en_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path enable for the PCI C/BE# (command/byte-enable) bus drivers during master cycles.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "cbe",
+      "crit",
+      "en",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_conf_cyc_addr_dec",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Decodes PCI configuration cycle addresses from input to output format.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "addr",
+      "conf",
+      "cyc",
+      "dec",
+      "decoder",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_conf_space",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "PCI configuration space holding Type 0 header registers (Vendor/Device ID, command/status, BARs, interrupt config) for host enumeration.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "conf",
+      "pci",
+      "space"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_cur_out_reg",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Output register stage for PCI current-cycle bus signals (FRAME#, IRDY#, AD parity) feeding the I/O pads.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "cur",
+      "pci",
+      "reg",
+      "register"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_delayed_sync",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Synchronizes PCI transaction requests and completions across two clock domains while tracking pending operations.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "delayed",
+      "pci",
+      "sync",
+      "synchronizer",
+      "synchronous"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_delayed_write_reg",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Buffers and delays write data from request to completion clock domain in PCI interface.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "delayed",
+      "pci",
+      "reg",
+      "register",
+      "write"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_frame_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path variant of the PCI FRAME# signal generator with synthesis-friendly placement for timing closure.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "frame",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_frame_en_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path enable logic gating the FRAME# output driver during master cycle initiation.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "en",
+      "frame",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_frame_load_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path FRAME# load-register driving the next bus-cycle FRAME# state for master transactions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "frame",
+      "load",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_in_reg",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Registers and synchronizes PCI bus input signals for internal pipeline processing.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "pci",
+      "reg",
+      "register"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_io_mux",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Multiplexes PCI bus control and data signals between master and target interfaces, managing output enables and signal routing.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "io",
+      "multiplexer",
+      "mux",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_io_mux_ad_en_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Multiplexer that controls AD bus output enable based on PCI control signals (FRAME, TRDY, STOP).",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "ad",
+      "crit",
+      "en",
+      "io",
+      "multiplexer",
+      "mux",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_io_mux_ad_load_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Multiplexes PCI address/data load signals based on IRDY/TRDY handshake conditions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "ad",
+      "crit",
+      "io",
+      "load",
+      "multiplexer",
+      "mux",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_irdy_out_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path IRDY# output driver indicating master ready state on the PCI bus.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "irdy",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_mas_ad_en_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path enable for the master-side AD[31:0] bus drivers during address and data phases.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "ad",
+      "crit",
+      "en",
+      "mas",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_mas_ad_load_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path load logic capturing master-side AD bus values for outgoing transactions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "ad",
+      "crit",
+      "load",
+      "mas",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_mas_ch_state_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path PCI master channel state register tracking ongoing transaction phase for downstream bus-signal generation.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "ch",
+      "crit",
+      "mas",
+      "pci",
+      "state"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_master32_sm",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Top-level 32-bit PCI master state machine sequencing address phase, data phases, and turn-around for outgoing transactions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "master32",
+      "pci",
+      "sm"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_master32_sm_if",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Module provides interface between PCI bridge internals and PCI master state machine",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "master32",
+      "pci",
+      "sm"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_out_reg",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Registers and outputs PCI data and enable signals synchronized to clock with reset capability.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "pci",
+      "reg",
+      "register"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_par_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Generates PCI parity output by combining data parity and command/byte enable parity signals.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "par",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_parity_check",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Validates and generates PCI bus parity bits, detects parity errors, and manages error signaling on PERR and SERR lines.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "check",
+      "parity",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_pci_decoder",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Decodes PCI addresses and generates hit signals based on configurable base address, mask, and translation parameters.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "decoder",
+      "pci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_pci_tpram",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Generic Two-Port Synchronous RAM                            ////",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "pci",
+      "tpram"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_pcir_fifo_control",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "FIFO_CONTROL module provides read/write address and status generation for FIFOs implemented with standard dual port SRAM cells in ASIC or FPGA designs",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "buffer",
+      "control",
+      "fifo",
+      "pci",
+      "pcir",
+      "queue"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_pciw_fifo_control",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "FIFO_CONTROL module provides read/write address and status generation for FIFOs implemented with standard dual port SRAM cells in ASIC or FPGA designs",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "buffer",
+      "control",
+      "fifo",
+      "pci",
+      "pciw",
+      "queue"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_pciw_pcir_fifos",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "FIFO buffer with FIFO interface and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "fifos",
+      "pci",
+      "pcir",
+      "pciw"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_perr_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Detects and outputs PCI parity errors, distinguishing between critical and non-critical error conditions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "pci",
+      "perr"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_perr_en_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path enable for the PERR# (parity error) output driver on detected data-phase parity mismatches.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "en",
+      "pci",
+      "perr"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_rst_int",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Internal PCI reset synchroniser bringing the asynchronous PCI RST# pin into the local clock domain.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "int",
+      "pci",
+      "reset",
+      "rst"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_serr_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path SERR# generator asserting on detected address-parity or special-cycle error conditions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "pci",
+      "serr"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_serr_en_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path enable for the SERR# (system error) open-drain output indicating address-phase or special-cycle errors.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "en",
+      "pci",
+      "serr"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_spoci_ctrl",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "PCI Special Configuration Interface controller for optional power-management and serial-EEPROM-loaded configuration values.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "control",
+      "controller",
+      "ctrl",
+      "pci",
+      "spoci"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_sync_module",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Synchronizes PCI delete and set signals across clock domains while managing blocking and reset conditions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "pci",
+      "sync",
+      "synchronizer",
+      "synchronous"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_synchronizer_flop",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "$Id: pci_synchronizer_flop.v,v 1.1 2003-08-14 13:08:58 simons Exp $",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "flop",
+      "pci",
+      "synchronizer"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_target32_clk_en",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Generates PCI target clock enable signal based on address phase, configuration access, and FSM states.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "clk",
+      "clock",
+      "en",
+      "pci",
+      "target32"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_target32_devs_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path target-side DEVSEL# generator asserting on positive address decode within the configured BAR ranges.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "devs",
+      "pci",
+      "target32"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_target32_interface",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Top-level 32-bit PCI target interface aggregating DEVSEL#, TRDY#, STOP#, and AD-bus drivers for slave-side transactions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "interface",
+      "pci",
+      "target32"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_target32_sm",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Top-level 32-bit PCI target state machine sequencing address decode, latency timeouts, and data-phase progress for slave-side transactions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "pci",
+      "sm",
+      "target32"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_target32_stop_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path target-side STOP# generator signalling target abort, retry, or disconnect to the master.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "pci",
+      "stop",
+      "target32"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_target32_trdy_crit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Critical-path target-side TRDY# generator indicating target-ready state for data-phase completion.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "crit",
+      "pci",
+      "target32",
+      "trdy"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_target_unit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Wishbone with FIFO interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "pci",
+      "target"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_wb_addr_mux",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Wishbone multiplexer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "addr",
+      "bus",
+      "multiplexer",
+      "mux",
+      "pci",
+      "wb",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_wb_decoder",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Wishbone decoder",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "bus",
+      "decoder",
+      "pci",
+      "wb",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_wb_master",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Wishbone master with FIFO interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "bus",
+      "master",
+      "pci",
+      "wb",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_wb_slave",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Wishbone slave with FIFO interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "bus",
+      "pci",
+      "slave",
+      "wb",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_wb_slave_unit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Wishbone slave with FIFO interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "bus",
+      "pci",
+      "slave",
+      "wb",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_wb_tpram",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "Generic Two-Port Synchronous RAM                            ////",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "bus",
+      "pci",
+      "tpram",
+      "wb",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_wbr_fifo_control",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "FIFO_CONTROL module provides read/write address and status generation for FIFOs implemented with standard dual port SRAM cells in ASIC or FPGA designs",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "buffer",
+      "control",
+      "fifo",
+      "pci",
+      "queue",
+      "wbr"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_wbw_fifo_control",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "FIFO_CONTROL module provides read/write address and status generation for FIFOs implemented with standard dual port SRAM cells in ASIC or FPGA designs",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "buffer",
+      "control",
+      "fifo",
+      "pci",
+      "queue",
+      "wbw"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "pci_wbw_wbr_fifos",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
+    "published_at": "2009-03-10T08:24:20+00:00",
+    "description": "FIFO buffer with FIFO interface and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/pci.git",
+    "tags": [
+      "fifos",
+      "pci",
+      "wbr",
+      "wbw"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "EP0",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "EP0 manages USB endpoint 0 communication with memory access and Wishbone bus interface for control transfers.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "EP1Mouse",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Example USB endpoint 1 mouse-class device demonstrating the slave controller with HID report transactions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "HCTxPortArbiter",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/hostController/hctxportarbiter.v Generated   : 11/10/06 05:37:22 From        : ../RTL/hostController/hctxportarbiter.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "RxFifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "FIFO buffer with configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "RxfifoBI",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "FIFO buffer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "SCTxPortArbiter",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/slaveController/sctxportarbiter.v Generated   : 11/10/06 05:37:24 From        : ../RTL/slaveController/sctxportarbiter.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "SIEReceiver",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/serialInterfaceEngine/siereceiver.v Generated   : 11/10/06 05:37:23 From        : ../RTL/serialInterfaceEngine/siereceiver.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "SIETransmitter",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/serialInterfaceEngine/SIETransmitter.v Generated   : 10/15/06 20:31:22 From        : ../RTL/serialInterfaceEngine/SIETransmitter.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "SOFController",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/hostController/sofcontroller.v Generated   : 11/10/06 05:37:21 From        : ../RTL/hostController/sofcontroller.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "SOFTransmit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/hostController/softransmit.v Generated   : 11/10/06 05:37:21 From        : ../RTL/hostController/softransmit.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "TxFifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "FIFO buffer with configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "TxfifoBI",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "FIFO buffer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "USBHostControlBI",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Backend interface module bridging the USB host controller to the user-facing FIFO and register interface.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "USBSlaveControlBI",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Backend interface module bridging the USB slave controller to the user-facing FIFO and register interface.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "USBTxWireArbiter",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/serialInterfaceEngine/usbTxWireArbiter.v Generated   : 11/10/06 05:37:24 From        : ../RTL/serialInterfaceEngine/usbTxWireArbiter.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "checkLineState",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Monitors USB line state and arbitrates Wishbone bus access for USB reset detection and control register operations.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "directControl",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/hostController/directcontrol.v Generated   : 11/10/06 05:37:19 From        : ../RTL/hostController/directcontrol.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "dpMem_dc",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Dual-port memory with independent read and write clocks for asynchronous data access.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [
+      "dc",
+      "dpmem"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "endpMux",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Multiplexes control, status, and transaction type registers across four USB endpoints, managing error handling and ready signal distribution.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "fifoMux",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Multiplexes transmit and receive FIFO signals between a main bus and four endpoint-specific FIFOs based on the current endpoint selection.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "fifoRTL",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "FIFO buffer with configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "getPacket",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/hostController/getpacket.v Generated   : 11/10/06 05:37:20 From        : ../RTL/hostController/getpacket.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "hostSlaveMux",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Multiplexes control, data, and configuration signals between host and slave USB interfaces to a shared Serial Interface Engine (SIE).",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "hostSlaveMuxBI",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Multiplexes data and control signals between host and slave interfaces with clock domain crossing and reset synchronization.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "hostcontroller",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "USB host controller top-level integrating the SIE, host control state machine, and packet buffer interface.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "lineControlUpdate",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Updates USB line control state including bus speed sensing and D+/D- pull-up enable signalling.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "processRxBit",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/serialInterfaceEngine/processRxBit.v Generated   : 11/10/06 05:37:22 From        : ../RTL/serialInterfaceEngine/processRxBit.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "processRxByte",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/serialInterfaceEngine/processRxByte.v Generated   : 11/10/06 05:37:22 From        : ../RTL/serialInterfaceEngine/processRxByte.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "processTxByte",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/serialInterfaceEngine/processTxByte.v Generated   : 11/10/06 05:37:23 From        : ../RTL/serialInterfaceEngine/processTxByte.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "readUSBWireData",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Receives and buffers USB serial data from the wire interface with activity timeout detection.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "rxStatusMonitor",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Monitors receiver connection state changes and generates interrupts for resume events and state transitions.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "sendPacket",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/hostController/sendpacket.v Generated   : 11/10/06 05:37:20 From        : ../RTL/hostController/sendpacket.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "sendPacketArbiter",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/hostController/sendpacketarbiter.v Generated   : 11/10/06 05:37:20 From        : ../RTL/hostController/sendpacketarbiter.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "sendPacketCheckPreamble",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/hostController/sendpacketcheckpreamble.v Generated   : 11/10/06 05:37:21 From        : ../RTL/hostController/sendpacketcheckpreamble.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "slaveDirectControl",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/slaveController/slaveDirectcontrol.v Generated   : 11/10/06 05:37:25 From        : ../RTL/slaveController/slaveDirectcontrol.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "slaveGetPacket",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/slaveController/slaveGetpacket.v Generated   : 11/10/06 05:37:25 From        : ../RTL/slaveController/slaveGetpacket.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "slaveRxStatusMonitor",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Monitors slave receiver status and generates reset/resume interrupt signals based on connection state and resume detection.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "slaveSendPacket",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/slaveController/slaveSendpacket.v Generated   : 11/10/06 05:37:26 From        : ../RTL/slaveController/slaveSendpacket.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "slavecontroller",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "File        : ../RTL/slaveController/slavecontroller.v Generated   : 11/10/06 05:37:25 From        : ../RTL/slaveController/slavecontroller.asf By          : FSM2VHDL ver. 5.0.0.9",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "speedCtrlMux",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Multiplexes speed control signals from three sources (direct control, send packet, full speed) based on selection input.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "testCase0",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "A test module with no inputs or outputs for verifying hardware designs through simulation.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbROM",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "wishboneArb",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "testHarness",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "testHarness provides a simulation environment for testing FPGA designs without external I/O connections.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "updateCRC16",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Computes CRC16 checksum incrementally on input data with enable control and ready status indication.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "updateCRC5",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Computes CRC-5 checksum iteratively on 8-bit input data with enable control and reset functionality.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbDevice",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "USB device controller managing differential signaling, pull-up control, and VBUS detection for full-speed USB communication.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbDeviceActelTop",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "USB device controller with LED output interface for Actel FPGA evaluation boards.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbROM",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "wishboneArb",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbDeviceAlteraTop",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "USB device controller with integrated SDRAM memory interface and SPI bus connectivity for Altera FPGA platforms.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "pll_48MHz",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbROM",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "wishboneArb",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbDeviceXilinxTop",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "USB device controller for Xilinx FPGA with differential signaling and SPI/SD card interface support.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "pll_48MHz_xilinx",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbROM",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "wishboneArb",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbHost",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "USB host controller that manages device communication, transfers, and interrupt signaling over USB protocol.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbHostControl",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "USB host-side state machine coordinating control transfers, bulk transfers, and device enumeration with the serial interface engine.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbHostCyc2Wrap",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Wrapper with interrupt support and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbHostCyc2Wrap_usb1t11",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Wrapper with interrupt support and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [
+      "usb1t11",
+      "usbhostcyc2wrap"
+    ],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbHostSlave",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Slave with configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbHostSlaveAvalonWrap",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Wrapper with interrupt support and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbHostSlaveCyc2Wrap",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Wrapper with interrupt support and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbROM",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Provides read-only memory access to USB data indexed by address on clock cycles.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbSerialInterfaceEngine",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "USB Serial Interface Engine performing NRZI encoding, bit-stuffing, and PID/CRC generation for the bus-level protocol.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbSlave",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Slave with configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbSlaveControl",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "USB device-side control logic handling SETUP token responses, endpoint state, and host control transfer phases.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbSlaveCyc2Wrap",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Wrapper with interrupt support and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "usbSlaveCyc2Wrap_usb1t11",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Wrapper with interrupt support",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [
+      "usb1t11",
+      "usbslavecyc2wrap"
+    ],
+    "role": "top",
+    "components": [
+      "EP0",
+      "EP1Mouse",
+      "HCTxPortArbiter",
+      "RxFifo",
+      "RxfifoBI",
+      "SCTxPortArbiter",
+      "SIEReceiver",
+      "SIETransmitter",
+      "SOFController",
+      "SOFTransmit",
+      "TxFifo",
+      "TxfifoBI",
+      "USBHostControlBI",
+      "USBSlaveControlBI",
+      "USBTxWireArbiter",
+      "checkLineState",
+      "directControl",
+      "dpMem_dc",
+      "endpMux",
+      "fifoMux",
+      "fifoRTL",
+      "getPacket",
+      "hostSlaveMux",
+      "hostSlaveMuxBI",
+      "hostcontroller",
+      "lineControlUpdate",
+      "processRxBit",
+      "processRxByte",
+      "processTxByte",
+      "readUSBWireData",
+      "rxStatusMonitor",
+      "sendPacket",
+      "sendPacketArbiter",
+      "sendPacketCheckPreamble",
+      "slaveDirectControl",
+      "slaveGetPacket",
+      "slaveRxStatusMonitor",
+      "slaveSendPacket",
+      "slavecontroller",
+      "testHarness",
+      "updateCRC16",
+      "updateCRC5",
+      "usbDevice",
+      "usbHost",
+      "usbHostControl",
+      "usbHostSlave",
+      "usbSerialInterfaceEngine",
+      "usbSlave",
+      "usbSlaveControl",
+      "wb_master_model",
+      "wishBoneBI",
+      "writeUSBWireData"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_master_model",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Wishbone master",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [
+      "bus",
+      "master",
+      "model",
+      "wb",
+      "wishbone"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wishBoneBI",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Wishbone bus interface that multiplexes host and slave USB controller registers and FIFOs for read/write access.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "writeUSBWireData",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3508a22f1c3df7cd3c86fd2e6e6a12e025c90305",
+    "published_at": "2011-03-18T17:52:17+00:00",
+    "description": "Drives the USB D+/D- wire signals at NRZI bit timing during outgoing packet transmission from the serial interface engine.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usbhostslave.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "WBOPRT08",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "8-bit output port with WISHBONE slave interface for writing data to an external output.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_Alu",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_Alu.vhd Description: projet copyblaze Arithmetic, Logic, Shift, Rotate File history: v1.0: 07/10/11: Creation Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "alu",
+      "cp"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_BancRegister",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_BancRegister.vhd Description: projet copyblaze Banc Registers File history: v1.0: 10/10/11: Creation Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "bancregister",
+      "cp"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_CLAAdder",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_CLAAdder.vhd Description: projet copyblaze carry look-ahead adder by recursively expanding the carry term to each stage File history: v1.0: 14/10/11: Creation Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "claadder",
+      "cp"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_DecodeControl",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_DecodeControl.vhd Description: projet copyblaze instruction decoding & Operational control File history: v1.0: 21/10/11: Creation v2.0: 26/10/11: Add Wishbone instructions Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "cp",
+      "decodecontrol"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_Flags",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_Flags.vhd Description: projet copyblaze Flags ZERO & CARRY management File history: v1.0: 10/10/11: Creation Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "cp",
+      "flags"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_FullAdder",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_FullAdder.vhd Description: projet copyblaze 1 bit Full adder File history: v1.0: 14/10/11: Creation Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "cp",
+      "fulladder"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_Interrupt",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_Interrupt.vhd Description: projet copyblaze Interrupt Module File history: v1.0: 17/10/11: Creation Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "cp",
+      "interrupt"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_ProgramCounter",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_ProgramCounter.vhd Description: projet copyblaze Program Counter management File history: v1.0: 04/10/11: Creation v1.1: 12/10/11: Modification du traitement des conditions de saut Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "cp",
+      "programcounter"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_ProgramFlowControl",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_ProgramFlowControl.vhd Description: projet copyblaze Program Flow Control management File history: v1.0: 10/10/11: Creation v1.1: 11/10/11: Add Condionnal management v1.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "cp",
+      "programflowcontrol"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_ScratchPad",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_ScratchPad.vhd Description: projet copyblaze Scratch Pad Memory File history: v1.0: 10/10/11: Creation Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "cp",
+      "scratchpad"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_Stack",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_Stack.vhd Description: projet copyblaze Program Counter stack File history: v1.0: 07/10/11: Creation Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "cp",
+      "stack"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_Toggle",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_Toggle.vhd Description: projet copyblaze Toggle horloge clock (divisor by 2) File history: v1.0: 07/10/11: Creation v2.0: 25/10/11: Add Freeze Management Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "cp",
+      "toggle"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_copyBlaze",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_copyBlaze.vhd Description: projet copyblaze copyBlaze processor File history: v1.0: 10/10/11: Creation v1.1: 24/10/11: Add the \"Decode & Control\" module Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "copyblaze",
+      "cp"
+    ],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cp_copyBlaze_ecoSystem",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: cp_copyBlaze_ecoSystem.vhd Description: projet copyblaze copyBlaze processor + ROM => system File history: v1.0: 11/10/11: Creation Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "copyblaze",
+      "cp",
+      "ecosystem"
+    ],
+    "role": "top",
+    "components": [
+      "cp_Alu",
+      "cp_BancRegister",
+      "cp_CLAAdder",
+      "cp_DecodeControl",
+      "cp_Flags",
+      "cp_FullAdder",
+      "cp_Interrupt",
+      "cp_ProgramCounter",
+      "cp_ProgramFlowControl",
+      "cp_ScratchPad",
+      "cp_Stack",
+      "cp_Toggle",
+      "cp_copyBlaze"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "mux32",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Selects one bit from a 32-bit input vector based on a 5-bit address and outputs it.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "myuart",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "UART controller with configurable baud rate, transmit/receive buffering, and status flags.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [],
+    "role": "component"
+  },
+  {
+    "namespace": "opencores",
+    "name": "sp_ram",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "SINGLE PORT BLOCKRAM INFERENCE --",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "access",
+      "memory",
+      "ram",
+      "random",
+      "sp"
+    ],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_Np_ram",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company:       VISENGI S.L. (www.visengi.com) Engineer:      Victor Lopez Lorenzo (victor.lopez (at) visengi (dot) com) Create Date:    23:44:13 22/August/2008 Project Name:   Triple Port WISHBONE SPRAM Wrapper Tool versions:  Xilinx ISE 9.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "access",
+      "bus",
+      "memory",
+      "np",
+      "ram",
+      "random",
+      "wb",
+      "wishbone"
+    ],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_gpio",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Wishbone-compatible GPIO controller providing 32-bit input/output port access via bus read/write operations.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "bus",
+      "general",
+      "gpio",
+      "input",
+      "output",
+      "purpose",
+      "wb",
+      "wishbone"
+    ],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_gpio_08",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "8-bit GPIO controller with Wishbone bus interface for reading inputs and writing outputs.",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "08",
+      "bus",
+      "general",
+      "gpio",
+      "input",
+      "output",
+      "purpose",
+      "wb",
+      "wishbone"
+    ],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_scope",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Wishbone with interrupt support and configurable parameters",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "bus",
+      "scope",
+      "wb",
+      "wishbone"
+    ],
+    "role": "top",
+    "components": [
+      "bram_dp"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_sram",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Company: File: wb_sram.vhd Description: projet copyblaze wishbone 8bit data Memory File history: v1.0: 08/12/11: Creation Targeted device: ProAsic A3P250 VQFP100",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "bus",
+      "sram",
+      "wb",
+      "wishbone"
+    ],
+    "role": "top",
+    "components": [
+      "cp_Alu",
+      "cp_BancRegister",
+      "cp_CLAAdder",
+      "cp_DecodeControl",
+      "cp_Flags",
+      "cp_FullAdder",
+      "cp_Interrupt",
+      "cp_ProgramCounter",
+      "cp_ProgramFlowControl",
+      "cp_ScratchPad",
+      "cp_Stack",
+      "cp_Toggle",
+      "cp_copyBlaze"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_timer",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Wishbone timer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "bus",
+      "timer",
+      "wb",
+      "wishbone"
+    ],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_timer_8",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Wishbone timer",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "bus",
+      "timer",
+      "wb",
+      "wishbone"
+    ],
+    "role": "top"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_uart",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Wishbone with UART interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "asynchronous",
+      "bus",
+      "receiver",
+      "serial",
+      "transmitter",
+      "uart",
+      "universal",
+      "wb",
+      "wishbone"
+    ],
+    "role": "top",
+    "components": [
+      "myuart",
+      "uart_rx",
+      "uart_tx"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_uart_8",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "44a9c815b81f209dc02ee51c5c1a80acd9a615dc",
+    "published_at": "2011-12-25T11:08:26+00:00",
+    "description": "Wishbone with UART interface",
+    "license": "",
+    "license_class": "unknown",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/copyblaze.git",
+    "tags": [
+      "asynchronous",
+      "bus",
+      "receiver",
+      "serial",
+      "transmitter",
+      "uart",
+      "universal",
+      "wb",
+      "wishbone"
+    ],
+    "role": "top",
+    "components": [
+      "myuart",
+      "uart_rx",
+      "uart_tx"
+    ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "xs6_sram_256x32_byte_en",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9",
+    "published_at": "2013-05-20T21:22:28+00:00",
+    "description": "Wrapper for Xilinx Spartan-6 RAM Block                      //",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/amber.git",
+    "tags": [
+      "256x32",
+      "byte",
+      "en",
+      "sram",
+      "xs6"
+    ],
+    "role": "top"
   }
 ]

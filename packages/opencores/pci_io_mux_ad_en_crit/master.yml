@@ -1,0 +1,30 @@
+name: pci_io_mux_ad_en_crit
+namespace: opencores
+version: master
+commit_sha: 6afbb5a067308b9537cbdc683ccb5992358429d8
+published_at: '2009-03-10T08:24:20+00:00'
+description: Multiplexer that controls AD bus output enable based on PCI control signals
+  (FRAME, TRDY, STOP).
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/pci.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 6afbb5a067308b9537cbdc683ccb5992358429d8
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/timescale.v
+  - rtl/verilog/pci_io_mux_ad_en_crit.v
+tags:
+- ad
+- crit
+- en
+- io
+- multiplexer
+- mux
+- pci
+role: component

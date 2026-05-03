@@ -1,0 +1,36 @@
+name: pci_master32_sm
+namespace: opencores
+version: master
+commit_sha: 6afbb5a067308b9537cbdc683ccb5992358429d8
+published_at: '2009-03-10T08:24:20+00:00'
+description: Top-level 32-bit PCI master state machine sequencing address phase, data
+  phases, and turn-around for outgoing transactions.
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/pci.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 6afbb5a067308b9537cbdc683ccb5992358429d8
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/timescale.v
+  - rtl/verilog/pci_user_constants.v
+  - rtl/verilog/pci_constants.v
+  - rtl/verilog/pci_cbe_en_crit.v
+  - rtl/verilog/pci_frame_crit.v
+  - rtl/verilog/pci_frame_en_crit.v
+  - rtl/verilog/pci_frame_load_crit.v
+  - rtl/verilog/pci_irdy_out_crit.v
+  - rtl/verilog/pci_mas_ad_en_crit.v
+  - rtl/verilog/pci_mas_ad_load_crit.v
+  - rtl/verilog/pci_mas_ch_state_crit.v
+  - rtl/verilog/pci_master32_sm.v
+tags:
+- master32
+- pci
+- sm
+role: component

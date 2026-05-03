@@ -4,7 +4,7 @@ version: master
 commit_sha: 28fed5358be17637bd8d94aefd04fb26cbcadd0f
 published_at: '2008-06-07T02:59:56+00:00'
 description: Enqueues received Ethernet frames from XGMII interface into separate
-  data and header FIFOs with error detection and status tracking.
+  data and header FIFOs with error detection.
 license: ''
 license_class: unknown
 source:
