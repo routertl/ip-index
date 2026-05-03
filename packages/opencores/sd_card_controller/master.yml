@@ -1,0 +1,70 @@
+name: sd_card_controller
+namespace: opencores
+version: master
+commit_sha: d90ec060b47d56e6e055daad76be5ac575cf668c
+published_at: '2013-09-10T16:51:33+00:00'
+description: SD card host controller with Wishbone host bus, supporting standard SD/SDHC
+  commands and SPI-mode interfacing.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/sd_card_controller.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: d90ec060b47d56e6e055daad76be5ac575cf668c
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/generic_dpram.v
+  - rtl/verilog/bistable_domain_cross.v
+  - rtl/verilog/edge_detect.v
+  - rtl/verilog/generic_fifo_dc_gray.v
+  - rtl/verilog/monostable_domain_cross.v
+  - rtl/verilog/sd_clock_divider.v
+  - rtl/verilog/sd_cmd_master.v
+  - rtl/verilog/sd_crc_7.v
+  - rtl/verilog/sd_cmd_serial_host.v
+  - rtl/verilog/sd_controller_wb.v
+  - rtl/verilog/sd_crc_16.v
+  - rtl/verilog/sd_data_master.v
+  - rtl/verilog/sd_data_serial_host.v
+  - rtl/verilog/sd_data_xfer_trig.v
+  - rtl/verilog/sd_fifo_filler.v
+  - rtl/verilog/sdc_controller.v
+tags:
+- access
+- altera
+- bistable
+- buffer
+- controller
+- cyclic
+- datapath
+- detect
+- divider
+- monostable
+- redundancy
+- wishbone
+role: repo
+top_modules:
+- generic_dpram
+- sdc_controller
+- xilinx_ram_dp
+components:
+- altera_ram_dp
+- bistable_domain_cross
+- edge_detect
+- generic_fifo_dc_gray
+- monostable_domain_cross
+- sd_clock_divider
+- sd_cmd_master
+- sd_cmd_serial_host
+- sd_controller_wb
+- sd_crc_16
+- sd_crc_7
+- sd_data_master
+- sd_data_serial_host
+- sd_data_xfer_trig
+- sd_fifo_filler
+total_entities: 18

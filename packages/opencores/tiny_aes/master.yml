@@ -1,0 +1,58 @@
+name: tiny_aes
+namespace: opencores
+version: master
+commit_sha: faf2afb2bcb6c3247c00d6bd7129b31b4fff91fb
+published_at: '2022-10-04T19:37:32+02:00'
+description: AES (Advanced Encryption Standard) symmetric block cipher with 128/192/256-bit
+  key support and configurable round-pipeline (Homer Hsing 2012+). Includes both encryption
+  and decryption cores. Ships a FuseSoC manifest.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/freecores/tiny_aes.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: faf2afb2bcb6c3247c00d6bd7129b31b4fff91fb
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/table.v
+  - rtl/round.v
+  - rtl/aes_128.v
+  - rtl/aes_192.v
+  - rtl/aes_256.v
+tags:
+- '128'
+- '192'
+- '256'
+- aes
+- expand
+- final
+- key
+- lookup
+- round
+- table
+- type
+role: repo
+top_modules:
+- S4
+- T
+- aes_128
+- aes_192
+- aes_256
+- expand_key_128
+- expand_key_type_A_192
+- expand_key_type_A_256
+- expand_key_type_B_192
+- expand_key_type_B_256
+- expand_key_type_C_192
+- expand_key_type_D_192
+- one_round
+- table_lookup
+- xS
+components:
+- S
+- final_round
+total_entities: 17

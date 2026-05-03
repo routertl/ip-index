@@ -1,0 +1,60 @@
+name: versatile_fifo
+namespace: opencores
+version: master
+commit_sha: 3c0ea00773805b3f697583fb2d1e330d6bfe4220
+published_at: '2010-11-04T10:02:53+00:00'
+description: Generic parameterized FIFO library covering single-clock and dual-clock
+  variants with optional almost-full/almost-empty thresholds.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/versatile_fifo.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 3c0ea00773805b3f697583fb2d1e330d6bfe4220
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/async_fifo_dw_simplex_actel.v
+  - rtl/verilog/dff_sr.v
+  - rtl/verilog/versatile_fifo_async_cmp.v
+  - rtl/verilog/versatile_fifo_dual_port_ram_dc_dw.v
+  - rtl/verilog/async_fifo_dw_simplex_top.v
+  - rtl/verilog/versatile_fifo_dual_port_ram_dc_sw.v
+  - rtl/verilog/async_fifo_mq.v
+  - rtl/verilog/async_fifo_mq_md.v
+  - rtl/verilog/sd_fifo.v
+  - rtl/verilog/versatile_fifo_dual_port_ram.v
+  - rtl/verilog/versatile_fifo_dual_port_ram_sc_dw.v
+  - rtl/verilog/versatile_fifo_dual_port_ram_sc_sw.v
+tags:
+- access
+- async
+- asynchronous
+- buffer
+- comparator
+- dual
+- memory
+- queue
+- random
+- simplex
+- versatile
+- vfifo
+role: repo
+top_modules:
+- async_fifo_dw_simplex_top
+- async_fifo_mq
+- async_fifo_mq_md
+- sd_fifo
+- vfifo_dual_port_ram_
+- vfifo_dual_port_ram_sc_dw
+- vfifo_dual_port_ram_sc_sw
+components:
+- adr_gen
+- dff_sr
+- versatile_fifo_async_cmp
+- vfifo_dual_port_ram_dc_dw
+- vfifo_dual_port_ram_dc_sw
+total_entities: 12

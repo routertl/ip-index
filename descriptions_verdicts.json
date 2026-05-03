@@ -372,6 +372,76 @@
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
       "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+    },
+    "opencores/tiny_aes": {
+      "verdict": "good",
+      "locked_text": "AES (Advanced Encryption Standard) symmetric block cipher with 128/192/256-bit key support and configurable round-pipeline (Homer Hsing 2012+). Includes both encryption and decryption cores. Ships a FuseSoC manifest.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.325 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/1000base-x": {
+      "verdict": "good",
+      "locked_text": "1000BASE-X physical coding sublayer (PCS) implementing IEEE 802.3 8b/10b encoding and synchronization for SFP-attached 1G optical transceivers.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.326 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/ha1588": {
+      "verdict": "good",
+      "locked_text": "IEEE 1588 hardware timestamp engine providing precision time protocol (PTP) acceleration with one-step and two-step timestamping at the GMII interface.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.327 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/sdr_ctrl": {
+      "verdict": "good",
+      "locked_text": "Single-data-rate SDRAM controller with Wishbone host bus, supporting standard 16-bit/32-bit memory configurations and bank interleaving.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.328 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/sd_card_controller": {
+      "verdict": "good",
+      "locked_text": "SD card host controller with Wishbone host bus, supporting standard SD/SDHC commands and SPI-mode interfacing.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.329 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/sdcard_mass_storage_controller": {
+      "verdict": "good",
+      "locked_text": "SD card mass-storage controller with FAT16/FAT32 file system support, designed for embedded applications requiring persistent storage.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.330 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/adv_debug_sys": {
+      "verdict": "good",
+      "locked_text": "Advanced debug system providing JTAG-based memory and CPU access for OpenRISC and other Wishbone-based processors. Includes JTAG TAP, debug interface, and Wishbone bridge.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.331 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/vga_lcd": {
+      "verdict": "good",
+      "locked_text": "VGA + LCD display controller generating timing for standard VGA modes and parallel LCD interfaces. Includes pixel clock generator and frame buffer interface.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.332 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/spacewire_light": {
+      "verdict": "good",
+      "locked_text": "Lightweight SpaceWire link interface for aerospace and instrumentation applications. ECSS-E-ST-50-12C-compliant link layer.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.333 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/versatile_fifo": {
+      "verdict": "good",
+      "locked_text": "Generic parameterized FIFO library covering single-clock and dual-clock variants with optional almost-full/almost-empty thresholds.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.334 granularity=repo entry. RTL-P4.32 workaround."
     }
   }
 }

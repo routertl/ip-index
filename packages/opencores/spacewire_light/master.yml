@@ -1,0 +1,53 @@
+name: spacewire_light
+namespace: opencores
+version: master
+commit_sha: d26037ffc408dac1d21bab160e185c4798334681
+published_at: '2013-05-04T20:25:16+00:00'
+description: Lightweight SpaceWire link interface for aerospace and instrumentation
+  applications. ECSS-E-ST-50-12C-compliant link layer.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/spacewire_light.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: d26037ffc408dac1d21bab160e185c4798334681
+routertl_compat:
+  language: vhdl-2008
+  library: grlib
+  files:
+  - rtl/vhdl/spwpkg.vhd
+  - rtl/vhdl/spwambapkg.vhd
+  - rtl/vhdl/spwahbmst.vhd
+  - rtl/vhdl/spwlink.vhd
+  - rtl/vhdl/spwrecv.vhd
+  - rtl/vhdl/spwram.vhd
+  - rtl/vhdl/syncdff.vhd
+  - rtl/vhdl/spwrecvfront_fast.vhd
+  - rtl/vhdl/spwrecvfront_generic.vhd
+  - rtl/vhdl/spwxmit.vhd
+  - rtl/vhdl/spwxmit_fast.vhd
+  - rtl/vhdl/spwamba.vhd
+  - rtl/vhdl/spwstream.vhd
+  - rtl/vhdl/streamtest.vhd
+tags:
+- fast
+- spwrecvfront
+- spwxmit
+role: repo
+top_modules:
+- spwamba
+- streamtest
+components:
+- spwahbmst
+- spwlink
+- spwram
+- spwrecv
+- spwrecvfront_fast
+- spwrecvfront_generic
+- spwstream
+- spwxmit
+- spwxmit_fast
+- syncdff
+total_entities: 12

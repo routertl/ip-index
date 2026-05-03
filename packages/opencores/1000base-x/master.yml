@@ -1,0 +1,59 @@
+name: 1000base-x
+namespace: opencores
+version: master
+commit_sha: 9fe612b16e36bda3372286eef7354e64b52e950d
+published_at: '2012-02-22T23:59:47+00:00'
+description: 1000BASE-X physical coding sublayer (PCS) implementing IEEE 802.3 8b/10b
+  encoding and synchronization for SFP-attached 1G optical transceivers.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/1000base-x.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 9fe612b16e36bda3372286eef7354e64b52e950d
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/timescale.v
+  - rtl/verilog/clean_rst.v
+  - rtl/verilog/decoder_8b10b.v
+  - rtl/verilog/encoder_8b10b.v
+  - rtl/verilog/ge_1000baseX_regs.v
+  - rtl/verilog/ge_1000baseX_constants.v
+  - rtl/verilog/ge_1000baseX_an.v
+  - rtl/verilog/ge_1000baseX_mdio.v
+  - rtl/verilog/ge_1000baseX_rx.v
+  - rtl/verilog/ge_1000baseX_sync.v
+  - rtl/verilog/ge_1000baseX_tx.v
+  - rtl/verilog/ge_1000baseX.v
+  - rtl/verilog/ge_1000baseX_test.v
+tags:
+- 1000basex
+- 8b10b
+- decoder
+- encoder
+- management
+- output
+- receive
+- receiver
+- synchronizer
+- synchronous
+- transmit
+- transmitter
+role: repo
+top_modules:
+- ge_1000baseX_test
+components:
+- clean_rst
+- decoder_8b10b
+- encoder_8b10b
+- ge_1000baseX
+- ge_1000baseX_an
+- ge_1000baseX_mdio
+- ge_1000baseX_rx
+- ge_1000baseX_sync
+- ge_1000baseX_tx
+total_entities: 10

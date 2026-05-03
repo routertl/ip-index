@@ -1,0 +1,56 @@
+name: ha1588
+namespace: opencores
+version: master
+commit_sha: a87db3c6353c09e98280d9e4fea2a4434626fe6e
+published_at: '2014-06-03T04:59:26+00:00'
+description: IEEE 1588 hardware timestamp engine providing precision time protocol
+  (PTP) acceleration with one-step and two-step timestamping at the GMII interface.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/ha1588.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: a87db3c6353c09e98280d9e4fea2a4434626fe6e
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/reg/reg.v
+  - rtl/rtc/rtc.v
+  - rtl/tsu/ptp_parser.v
+  - rtl/tsu/ptp_queue.v
+  - rtl/tsu/tsu.v
+  - rtl/top/ha1588.v
+  - rtl/bus/qsys/ha1588_avl.v
+  - rtl/bus/xps/pcores/ha1588_axi_v1_00_a/hdl/verilog/ha1588_axi.v
+  - rtl/bus/wishbone/wb_slv_wrapper.v
+  - rtl/bus/wishbone/ha1588_wb.v
+tags:
+- amba
+- avl
+- axi
+- bus
+- ha1588
+- parser
+- precision
+- protocol
+- ptp
+- queue
+- time
+- wishbone
+role: repo
+top_modules:
+- ha1588_avl
+- ha1588_axi
+- ha1588_wb
+components:
+- ha1588
+- ptp_parser
+- ptp_queue
+- rgs
+- rtc
+- tsu
+- wb_slv_wrapper
+total_entities: 10
