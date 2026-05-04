@@ -89,5 +89,6 @@ components:
 - ethmac
 - xilinx_dist_ram_16x32
 total_entities: 26
-health_tier: bronze
+health_tier: silver
+contract_url: https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/oc_ethmac.md
 last_verified_at: '2026-05-04'

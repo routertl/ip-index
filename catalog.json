@@ -21766,8 +21766,10 @@
       "tx_hold_fifo",
       "wishbone_if"
     ],
-    "health_tier": "bronze",
-    "last_verified_at": "2026-05-04"
+    "health_tier": "silver",
+    "contract_url": "https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/oc_xge_mac.md",
+    "last_verified_at": "2026-05-04",
+    "desc_source": "verdict"
   },
   {
     "namespace": "opencores",
@@ -21828,8 +21830,10 @@
       "ethmac",
       "xilinx_dist_ram_16x32"
     ],
-    "health_tier": "bronze",
-    "last_verified_at": "2026-05-04"
+    "health_tier": "silver",
+    "contract_url": "https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/oc_ethmac.md",
+    "last_verified_at": "2026-05-04",
+    "desc_source": "verdict"
   },
   {
     "namespace": "opencores",

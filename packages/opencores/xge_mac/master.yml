@@ -79,5 +79,6 @@ components:
 - tx_hold_fifo
 - wishbone_if
 total_entities: 20
-health_tier: bronze
+health_tier: silver
+contract_url: https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/oc_xge_mac.md
 last_verified_at: '2026-05-04'
