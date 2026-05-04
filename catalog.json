@@ -20976,7 +20976,12 @@
         "tx_user_frame_includes_fcs": false
       },
       "defects": []
-    }
+    },
+    "health_tier": "silver",
+    "contract_url": "https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/eth_mac_1g_requirements.yml",
+    "test_status_url": "https://github.com/djmazure/routertl/tree/main/sdk/sim/cocotb/tests/eth_validator",
+    "last_verified_at": "2026-05-04",
+    "desc_source": "preserved"
   },
   {
     "namespace": "fpganinja",
