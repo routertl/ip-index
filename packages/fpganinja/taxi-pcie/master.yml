@@ -1,0 +1,69 @@
+name: taxi-pcie
+namespace: fpganinja
+version: master
+commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
+published_at: '2026-04-06T23:59:16-07:00'
+description: PCIe AXI-Lite masters, MSI / MSI-X controllers, VPD / VSEC programmers,
+  UltraScale/+ wrappers, PCIe-to-DMA bridges.
+license: CERN-OHL-S-2.0
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/fpganinja/taxi.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 1fe508a6bf17edbb29bce9a8477be615b1012789
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - src/axis/rtl/taxi_axis_if.sv
+  - src/dma/rtl/taxi_dma_desc_if.sv
+  - src/lss/rtl/taxi_i2c_slave.sv
+  - src/dma/rtl/taxi_dma_ram_if.sv
+  - src/dma/rtl/taxi_dma_if_pcie_us_rd.sv
+  - src/dma/rtl/taxi_dma_if_pcie_us_wr.sv
+  - src/dma/rtl/taxi_dma_if_pcie_us.sv
+  - src/axi/rtl/taxi_axil_if.sv
+  - src/pcie/rtl/taxi_pcie_tlp_if.sv
+  - src/pcie/rtl/taxi_pcie_axil_master.sv
+  - src/pcie/rtl/taxi_pcie_axil_master_minimal.sv
+  - src/apb/rtl/taxi_apb_if.sv
+  - src/pcie/rtl/taxi_pcie_msix_apb.sv
+  - src/pcie/rtl/taxi_pcie_msix_axil.sv
+  - src/pcie/rtl/taxi_pcie_us_axil_master.sv
+  - src/pcie/rtl/taxi_pcie_us_cfg.sv
+  - src/prim/rtl/taxi_penc.sv
+  - src/prim/rtl/taxi_arbiter.sv
+  - src/pcie/rtl/taxi_pcie_us_msi.sv
+  - src/pcie/rtl/taxi_pcie_us_vpd.sv
+  - src/pcie/rtl/taxi_pcie_us_vsec_axil.sv
+tags:
+- access
+- advanced
+- amba
+- axil
+- direct
+- express
+- master
+- memory
+- minimal
+- msix
+- pcie
+- peripheral
+role: subproject
+top_modules:
+- taxi_pcie_axil_master
+- taxi_pcie_axil_master_minimal
+- taxi_pcie_msix_apb
+- taxi_pcie_msix_axil
+components:
+- taxi_dma_if_pcie_us
+- taxi_dma_if_pcie_us_rd
+- taxi_dma_if_pcie_us_wr
+- taxi_pcie_us_axil_master
+- taxi_pcie_us_cfg
+- taxi_pcie_us_msi
+- taxi_pcie_us_vpd
+- taxi_pcie_us_vsec_apb
+total_entities: 12

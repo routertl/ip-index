@@ -1,0 +1,55 @@
+name: taxi-ssio
+namespace: fpganinja
+version: master
+commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
+published_at: '2026-04-06T23:59:16-07:00'
+description: "Source-synchronous I/O \u2014 DDR / SDR in / out with diff variants,\
+  \ plus the bare IDDR / ODDR I/O DDR-register primitives."
+license: CERN-OHL-S-2.0
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/fpganinja/taxi.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 1fe508a6bf17edbb29bce9a8477be615b1012789
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - src/io/rtl/taxi_ssio_sdr_in.sv
+  - src/io/rtl/taxi_ssio_sdr_in_diff.sv
+  - src/io/rtl/taxi_iddr.sv
+  - src/io/rtl/taxi_oddr.sv
+  - src/io/rtl/taxi_ssio_ddr_in.sv
+  - src/io/rtl/taxi_ssio_ddr_in_diff.sv
+  - src/io/rtl/taxi_ssio_ddr_out.sv
+  - src/io/rtl/taxi_ssio_ddr_out_diff.sv
+  - src/io/rtl/taxi_ssio_sdr_out.sv
+  - src/io/rtl/taxi_ssio_sdr_out_diff.sv
+tags:
+- data
+- ddr
+- diff
+- double
+- iddr
+- memory
+- oddr
+- rate
+- sdr
+- ssio
+- taxi
+role: subproject
+top_modules:
+- ssio_sdr_in_diff
+- taxi_ssio_ddr_in_diff
+- taxi_ssio_ddr_out_diff
+- taxi_ssio_sdr_out_diff
+components:
+- taxi_iddr
+- taxi_oddr
+- taxi_ssio_ddr_in
+- taxi_ssio_ddr_out
+- taxi_ssio_sdr_in
+- taxi_ssio_sdr_out
+total_entities: 10

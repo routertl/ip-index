@@ -1,0 +1,67 @@
+name: taxi-xfcp
+namespace: fpganinja
+version: master
+commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
+published_at: '2026-04-06T23:59:16-07:00'
+description: 'XFCP debug protocol: UART transport, APB / AXI / AXIL / I2C-master modules,
+  stats module, fabric switch.'
+license: CERN-OHL-S-2.0
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/fpganinja/taxi.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 1fe508a6bf17edbb29bce9a8477be615b1012789
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - src/axis/rtl/taxi_axis_if.sv
+  - src/axis/rtl/taxi_axis_cobs_decode.sv
+  - src/lss/rtl/taxi_i2c_slave.sv
+  - src/axis/rtl/taxi_axis_fifo.sv
+  - src/axis/rtl/taxi_axis_cobs_encode.sv
+  - src/lss/rtl/taxi_uart_brg.sv
+  - src/lss/rtl/taxi_uart_rx.sv
+  - src/lss/rtl/taxi_uart_tx.sv
+  - src/lss/rtl/taxi_uart.sv
+  - src/xfcp/rtl/taxi_xfcp_if_uart.sv
+  - src/apb/rtl/taxi_apb_if.sv
+  - src/xfcp/rtl/taxi_xfcp_mod_apb.sv
+  - src/axi/rtl/taxi_axi_if.sv
+  - src/axi/rtl/taxi_axil_if.sv
+  - src/xfcp/rtl/taxi_xfcp_mod_axil.sv
+  - src/xfcp/rtl/taxi_xfcp_mod_axi.sv
+  - src/lss/rtl/taxi_i2c_master.sv
+  - src/xfcp/rtl/taxi_xfcp_mod_i2c_master.sv
+  - src/stats/rtl/taxi_stats_counter.sv
+  - src/stats/rtl/taxi_stats_strings_full.sv
+  - src/prim/rtl/taxi_penc.sv
+  - src/prim/rtl/taxi_arbiter.sv
+  - src/xfcp/rtl/taxi_xfcp_switch.sv
+  - src/xfcp/rtl/taxi_xfcp_mod_stats.sv
+tags:
+- advanced
+- asynchronous
+- circuit
+- inter-integrated
+- master
+- peripheral
+- receiver
+- serial
+- stats
+- switch
+- transmitter
+- universal
+role: subproject
+top_modules:
+- taxi_xfcp_if_uart
+- taxi_xfcp_mod_apb
+- taxi_xfcp_mod_axi
+- taxi_xfcp_mod_i2c_master
+- taxi_xfcp_mod_stats
+components:
+- taxi_xfcp_mod_axil
+- taxi_xfcp_switch
+total_entities: 7

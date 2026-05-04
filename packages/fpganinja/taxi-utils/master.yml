@@ -1,0 +1,85 @@
+name: taxi-utils
+namespace: fpganinja
+version: master
+commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
+published_at: '2026-04-06T23:59:16-07:00'
+description: 'Standalone primitives without a project home: debounce, LFSR + CRC /
+  PRBS / scramble variants, MT19937, IRQ rate-limit, LED shift-reg, MMCM fractional,
+  RAM primitives, stats counters / strings, priority encoder, CDC synchronizers (reset
+  + signal).'
+license: CERN-OHL-S-2.0
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/fpganinja/taxi.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 1fe508a6bf17edbb29bce9a8477be615b1012789
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - src/io/rtl/taxi_debounce_switch.sv
+  - src/axis/rtl/taxi_axis_if.sv
+  - src/pcie/rtl/taxi_irq_rate_limit.sv
+  - src/sync/rtl/taxi_sync_signal.sv
+  - src/io/rtl/taxi_led_sreg.sv
+  - src/lfsr/rtl/taxi_lfsr.sv
+  - src/lfsr/rtl/taxi_lfsr_crc.sv
+  - src/lfsr/rtl/taxi_lfsr_descramble.sv
+  - src/lfsr/rtl/taxi_lfsr_prbs_check.sv
+  - src/lfsr/rtl/taxi_lfsr_prbs_gen.sv
+  - src/lfsr/rtl/taxi_lfsr_scramble.sv
+  - src/lss/rtl/taxi_i2c_slave.sv
+  - src/hip/rtl/us/taxi_mmcm_frac.sv
+  - src/math/rtl/taxi_mt19937.sv
+  - src/prim/rtl/taxi_penc.sv
+  - src/prim/rtl/taxi_ram_1r1w_1c.sv
+  - src/prim/rtl/taxi_ram_1r1w_2c.sv
+  - src/prim/rtl/taxi_ram_1rw.sv
+  - src/prim/rtl/taxi_ram_2rw_1c.sv
+  - src/prim/rtl/taxi_ram_2rw_2c.sv
+  - src/stats/rtl/taxi_stats_collect.sv
+  - src/axi/rtl/taxi_axil_if.sv
+  - src/stats/rtl/taxi_stats_counter.sv
+  - src/stats/rtl/taxi_stats_strings_full.sv
+  - src/sync/rtl/taxi_sync_reset.sv
+tags:
+- collect
+- counter
+- debounce
+- descramble
+- feedback
+- interrupt
+- mt19937
+- redundancy
+- register
+- scramble
+- synchronizer
+- synchronous
+role: subproject
+top_modules:
+- taxi_debounce_switch
+- taxi_led_sreg
+- taxi_lfsr_crc
+- taxi_lfsr_descramble
+- taxi_lfsr_prbs_check
+- taxi_lfsr_prbs_gen
+- taxi_lfsr_scramble
+- taxi_mmcm_frac
+- taxi_mt19937
+- taxi_ram_1r1w_1c
+- taxi_ram_1r1w_2c
+- taxi_ram_1rw
+- taxi_ram_2rw_2c
+components:
+- taxi_irq_rate_limit
+- taxi_lfsr
+- taxi_penc
+- taxi_ram_2rw_1c
+- taxi_stats_collect
+- taxi_stats_counter
+- taxi_stats_strings_full
+- taxi_sync_reset
+- taxi_sync_signal
+total_entities: 22

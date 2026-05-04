@@ -1,0 +1,81 @@
+name: taxi-axis
+namespace: fpganinja
+version: master
+commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
+published_at: '2026-04-06T23:59:16-07:00'
+description: "AXI4-Stream infrastructure: FIFOs (sync/async/pipeline), broadcast,\
+  \ demux/mux, switch, register, COBS encode/decode, null src/snk, tie. Excludes Ethernet\
+  \ PCS streams (BASE-R, XGMII, GMII bridges) \u2014 those live in taxi-ethernet."
+license: CERN-OHL-S-2.0
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/fpganinja/taxi.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 1fe508a6bf17edbb29bce9a8477be615b1012789
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - src/axis/rtl/taxi_axis_if.sv
+  - src/axis/rtl/taxi_axis_adapter.sv
+  - src/prim/rtl/taxi_penc.sv
+  - src/prim/rtl/taxi_arbiter.sv
+  - src/axis/rtl/taxi_axis_arb_mux.sv
+  - src/lss/rtl/taxi_i2c_slave.sv
+  - src/sync/rtl/taxi_sync_reset.sv
+  - src/sync/rtl/taxi_sync_signal.sv
+  - src/axis/rtl/taxi_axis_async_fifo.sv
+  - src/axis/rtl/taxi_axis_async_fifo_adapter.sv
+  - src/axis/rtl/taxi_axis_broadcast.sv
+  - src/axis/rtl/taxi_axis_cobs_decode.sv
+  - src/axis/rtl/taxi_axis_fifo.sv
+  - src/axis/rtl/taxi_axis_cobs_encode.sv
+  - src/axis/rtl/taxi_axis_concat.sv
+  - src/axis/rtl/taxi_axis_demux.sv
+  - src/axis/rtl/taxi_axis_fifo_adapter.sv
+  - src/axis/rtl/taxi_axis_mux.sv
+  - src/axis/rtl/taxi_axis_null_snk.sv
+  - src/axis/rtl/taxi_axis_null_src.sv
+  - src/axis/rtl/taxi_axis_pipeline_fifo.sv
+  - src/axis/rtl/taxi_axis_register.sv
+  - src/axis/rtl/taxi_axis_pipeline_register.sv
+  - src/axis/rtl/taxi_axis_switch.sv
+  - src/axis/rtl/taxi_axis_tie.sv
+tags:
+- adapter
+- arbiter
+- arbitration
+- asynchronous
+- bridge
+- broadcast
+- converter
+- demultiplexer
+- multiplexer
+- pipeline
+- protocol
+- register
+role: subproject
+top_modules:
+- taxi_axis_fifo_adapter
+- taxi_axis_mux
+- taxi_axis_null_snk
+- taxi_axis_pipeline_fifo
+- taxi_axis_pipeline_register
+- taxi_axis_switch
+components:
+- taxi_axis_adapter
+- taxi_axis_arb_mux
+- taxi_axis_async_fifo
+- taxi_axis_async_fifo_adapter
+- taxi_axis_broadcast
+- taxi_axis_cobs_decode
+- taxi_axis_cobs_encode
+- taxi_axis_concat
+- taxi_axis_demux
+- taxi_axis_fifo
+- taxi_axis_null_src
+- taxi_axis_register
+- taxi_axis_tie
+total_entities: 19

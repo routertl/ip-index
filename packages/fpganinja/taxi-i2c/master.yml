@@ -1,0 +1,53 @@
+name: taxi-i2c
+namespace: fpganinja
+version: master
+commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
+published_at: '2026-04-06T23:59:16-07:00'
+description: I2C master, slave (with APB / AXIL bridges), init engine, single-register
+  peripheral.
+license: CERN-OHL-S-2.0
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/fpganinja/taxi.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 1fe508a6bf17edbb29bce9a8477be615b1012789
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - src/axis/rtl/taxi_axis_if.sv
+  - src/cndm/board/NT200A02/fpga/pll/si5340_i2c_init.sv
+  - src/lss/rtl/taxi_i2c_init.sv
+  - src/lss/rtl/taxi_i2c_master.sv
+  - src/lss/rtl/taxi_i2c_single_reg.sv
+  - src/lss/rtl/taxi_i2c_slave.sv
+  - src/apb/rtl/taxi_apb_if.sv
+  - src/lss/rtl/taxi_i2c_slave_apb_master.sv
+  - src/axi/rtl/taxi_axil_if.sv
+  - src/lss/rtl/taxi_i2c_slave_axil_master.sv
+tags:
+- advanced
+- amba
+- axil
+- circuit
+- init
+- inter-integrated
+- master
+- peripheral
+- register
+- si5340
+- single
+- slave
+role: subproject
+top_modules:
+- si5340_i2c_init
+- taxi_i2c_init
+- taxi_i2c_single_reg
+- taxi_i2c_slave_apb_master
+- taxi_i2c_slave_axil_master
+components:
+- taxi_i2c_master
+- taxi_i2c_slave
+total_entities: 7
