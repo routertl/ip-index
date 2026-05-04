@@ -1,0 +1,82 @@
+name: storm_soc
+namespace: opencores
+version: master
+commit_sha: 379b5f678ab020b0c669c0845c9061bd33755d18
+published_at: '2013-02-03T01:33:39+00:00'
+description: "Educational SoC with peripheral suite \u2014 I2C, UART, PS/2, PWM, 7-segment\
+  \ display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented\
+  \ in STORM SoC datasheet PDF."
+license: OpenCores-Permissive-1.0
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/storm_soc.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 379b5f678ab020b0c669c0845c9061bd33755d18
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - components/boot_rom/rtl/BOOT_ROM_FILE.vhd
+  - components/miniuart/rtl/vhdl/utils.vhd
+  - components/io_controller/rtl/GP_IO_CTRL.vhd
+  - components/sram_memory/rtl/MEMORY.vhd
+  - components/miniuart/rtl/vhdl/Rxunit.vhd
+  - components/miniuart/rtl/vhdl/Txunit.vhd
+  - components/miniuart/rtl/vhdl/MINI_UART.vhd
+  - components/pwm_controller/rtl/PWM_CTRL.vhd
+  - components/reset_protector/rtl/RST_PROTECT.vhd
+  - components/seven_segment_controller/rtl/SEVEN_SEG_CTRL.vhd
+  - components/timer/rtl/TIMER.vhd
+  - components/vector_interrupt_controller/rtl/VIC.vhd
+  - components/i2c_controller/rtl/vhdl/i2c_master_bit_ctrl.vhd
+  - components/i2c_controller/rtl/vhdl/i2c_master_byte_ctrl.vhd
+  - components/i2c_controller/rtl/vhdl/i2c_master_top.vhd
+  - components/spi_controller/rtl/verilog/spi_defines.v
+  - components/spi_controller/rtl/verilog/timescale.v
+  - components/spi_controller/rtl/verilog/spi_clgen.v
+  - components/spi_controller/rtl/verilog/spi_shift.v
+  - components/spi_controller/rtl/verilog/spi_top.v
+  - basic_system/rtl/STORM_SoC_basic.vhd
+  - components/ps2core/rtl/vhdl/ps2.vhd
+  - components/ps2core/rtl/vhdl/ps2_wb.vhd
+tags:
+- asynchronous
+- circuit
+- control
+- controller
+- inter-integrated
+- interface
+- modulation
+- peripheral
+- receiver
+- transmitter
+- universal
+- wishbone
+role: repo
+top_modules:
+- Counter
+- SEVEN_SEG_CTRL
+- STORM_SoC_basic
+- ps2_wb
+- synchroniser
+components:
+- BOOT_ROM_FILE
+- GP_IO_CTRL
+- MEMORY
+- MINI_UART
+- PWM_CTRL
+- RST_PROTECT
+- RxUnit
+- TIMER
+- TxUnit
+- VIC
+- i2c_master_bit_ctrl
+- i2c_master_byte_ctrl
+- i2c_master_top
+- ps2
+- spi_clgen
+- spi_shift
+- spi_top
+total_entities: 22

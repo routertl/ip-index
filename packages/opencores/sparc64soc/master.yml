@@ -1,0 +1,616 @@
+name: sparc64soc
+namespace: opencores
+version: master
+commit_sha: 9ed5e6cd18839fc5f2c234d99d6696d4813aee1e
+published_at: '2010-10-08T13:34:49+00:00'
+description: 'Full SoC built around OpenSPARC T1 with floating-point unit, OS2WB Wishbone
+  bridge, and OpenCores peripherals (NOR flash, UART, Ethernet, DRAM controllers).
+  Capable of running Ubuntu Linux 2.6.22+. Authors: Rozhdestvenskiy, Fazzino (2010-2011).'
+license: GPL-2.0-only
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/sparc64soc.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 9ed5e6cd18839fc5f2c234d99d6696d4813aee1e
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - NOR-flash/WBFLASH.v
+  - WB2ALTDDR3/dram_wb.v
+  - OC-Ethernet/eth_defines.v
+  - OC-UART/timescale.v
+  - OC-Ethernet/eth_receivecontrol.v
+  - OC-Ethernet/eth_transmitcontrol.v
+  - OC-Ethernet/eth_maccontrol.v
+  - OC-Ethernet/eth_macstatus.v
+  - OC-Ethernet/eth_clockgen.v
+  - OC-Ethernet/eth_outputcontrol.v
+  - OC-Ethernet/eth_shiftreg.v
+  - OC-Ethernet/eth_miim.v
+  - OC-Ethernet/eth_register.v
+  - OC-Ethernet/eth_registers.v
+  - OC-Ethernet/eth_crc.v
+  - OC-Ethernet/eth_rxaddrcheck.v
+  - OC-Ethernet/eth_rxcounters.v
+  - OC-Ethernet/eth_rxstatem.v
+  - OC-Ethernet/eth_rxethmac.v
+  - OC-Ethernet/eth_random.v
+  - OC-Ethernet/eth_txcounters.v
+  - OC-Ethernet/eth_txstatem.v
+  - OC-Ethernet/eth_txethmac.v
+  - OC-Ethernet/xilinx_dist_ram_16x32.v
+  - OC-Ethernet/eth_fifo.v
+  - OC-Ethernet/eth_spram_256x32.v
+  - OC-Ethernet/eth_wishbone.v
+  - OC-Ethernet/eth_top.v
+  - OC-Ethernet/eth_sgmii.v
+  - T1-common/common/synchronizer_asr.v
+  - T1-common/common/cluster_header.v
+  - T1-FPU/bw_clk_cl_fpu_cmp.v
+  - T1-common/srams/bw_r_rf16x160.v
+  - T1-common/common/swrvr_clib.v
+  - T1-FPU/fpu_add_ctl.v
+  - T1-FPU/fpu_add_exp_dp.v
+  - T1-FPU/fpu_cnt_lead0_lvl1.v
+  - T1-FPU/fpu_cnt_lead0_lvl2.v
+  - T1-FPU/fpu_cnt_lead0_lvl3.v
+  - T1-FPU/fpu_cnt_lead0_lvl4.v
+  - T1-FPU/fpu_cnt_lead0_64b.v
+  - T1-FPU/fpu_denorm_3b.v
+  - T1-FPU/fpu_denorm_3to1.v
+  - T1-FPU/fpu_denorm_frac.v
+  - T1-FPU/fpu_in2_gt_in1_2b.v
+  - T1-FPU/fpu_in2_gt_in1_3b.v
+  - T1-FPU/fpu_in2_gt_in1_3to1.v
+  - T1-FPU/fpu_in2_gt_in1_frac.v
+  - T1-FPU/fpu_add_frac_dp.v
+  - T1-FPU/fpu_add.v
+  - T1-FPU/fpu_div_ctl.v
+  - T1-FPU/fpu_div_exp_dp.v
+  - T1-FPU/fpu_cnt_lead0_53b.v
+  - T1-FPU/fpu_div_frac_dp.v
+  - T1-FPU/fpu_div.v
+  - T1-FPU/fpu_in_ctl.v
+  - T1-FPU/fpu_in_dp.v
+  - T1-FPU/fpu_in.v
+  - T1-FPU/fpu_mul_ctl.v
+  - T1-FPU/fpu_mul_exp_dp.v
+  - T1-FPU/fpu_mul_frac_dp.v
+  - T1-common/common/swrvr_dlib.v
+  - T1-CPU/mul/mul64.v
+  - T1-FPU/fpu_mul.v
+  - T1-FPU/fpu_out_ctl.v
+  - T1-FPU/fpu_out_dp.v
+  - T1-FPU/fpu_out.v
+  - T1-FPU/fpu_rptr_macros.v
+  - T1-FPU/fpu_rptr_min_global.v
+  - T1-FPU/fpu_rptr_groups.v
+  - T1-common/common/test_stub_scan.v
+  - T1-FPU/fpu.v
+  - os2wb/l1ddir.v
+  - os2wb/l1idir.v
+  - os2wb/l1dir.v
+  - os2wb/os2wb_dual.v
+  - os2wb/rst_ctrl.v
+  - T1-CPU/rtl/bw_clk_cl_sparc_cmp.v
+  - T1-CPU/rtl/cpx_spc_buf.v
+  - T1-CPU/lsu/lsu_dc_parity_gen.v
+  - T1-common/srams/bw_r_dcd.v
+  - T1-common/srams/bw_r_idct.v
+  - T1-common/srams/bw_r_rf16x32.v
+  - T1-common/srams/bw_r_rf32x152b.v
+  - T1-common/srams/bw_r_rf32x80.v
+  - T1-common/srams/bw_r_scm.v
+  - T1-common/srams/bw_r_tlb_fpga.v
+  - T1-common/common/cmp_sram_redhdr.v
+  - T1-CPU/lsu/lsu_dcdp.v
+  - T1-CPU/lsu/lsu_asi_decode.v
+  - T1-CPU/lsu/lsu_dcache_lfsr.v
+  - T1-CPU/lsu/lsu_dctl.v
+  - T1-CPU/lsu/lsu_dctldp.v
+  - T1-CPU/lsu/lsu_excpctl.v
+  - T1-CPU/lsu/lsu_pcx_qmon.v
+  - T1-CPU/lsu/lsu_rrobin_picker2.v
+  - T1-CPU/lsu/lsu_qctl1.v
+  - T1-CPU/lsu/lsu_qctl2.v
+  - T1-CPU/lsu/lsu_qdp1.v
+  - T1-CPU/lsu/lsu_qdp2.v
+  - T1-CPU/lsu/lsu_stb_ctl.v
+  - T1-CPU/lsu/lsu_stb_ctldp.v
+  - T1-CPU/lsu/lsu_stb_rwctl.v
+  - T1-CPU/lsu/lsu_stb_rwdp.v
+  - T1-CPU/lsu/lsu_tagdp.v
+  - T1-CPU/lsu/lsu_tlbdp.v
+  - T1-CPU/lsu/lsu.v
+  - T1-CPU/rtl/cpx_spc_rpt.v
+  - T1-common/srams/bw_r_irf_register.v
+  - T1-common/srams/bw_r_irf.v
+  - T1-common/srams/regfile_1w_4r.v
+  - T1-common/srams/bw_r_irf_fpga1.v
+  - T1-CPU/exu/sparc_exu_alu_16eql.v
+  - T1-CPU/exu/sparc_exu_aluadder64.v
+  - T1-CPU/exu/sparc_exu_aluspr.v
+  - T1-CPU/exu/sparc_exu_aluaddsub.v
+  - T1-CPU/exu/sparc_exu_alulogic.v
+  - T1-CPU/exu/sparc_exu_aluor32.v
+  - T1-CPU/exu/sparc_exu_aluzcmp64.v
+  - T1-CPU/exu/sparc_exu_alu.v
+  - T1-CPU/exu/sparc_exu_byp_eccgen.v
+  - T1-CPU/exu/sparc_exu_byp.v
+  - T1-CPU/exu/sparc_exu_div_32eql.v
+  - T1-CPU/exu/sparc_exu_div_yreg.v
+  - T1-CPU/exu/sparc_exu_div.v
+  - T1-CPU/exu/sparc_exu_ecc_dec.v
+  - T1-CPU/exu/sparc_exu_ecc.v
+  - T1-CPU/exu/sparc_exu_ecl_cnt6.v
+  - T1-CPU/exu/sparc_exu_ecl_divcntl.v
+  - T1-CPU/exu/sparc_exu_ecl_eccctl.v
+  - T1-CPU/exu/sparc_exu_ecl_mdqctl.v
+  - T1-CPU/exu/sparc_exu_ecl_wb.v
+  - T1-CPU/exu/sparc_exu_eclcomp7.v
+  - T1-CPU/exu/sparc_exu_eclbyplog.v
+  - T1-CPU/exu/sparc_exu_eclbyplog_rs1.v
+  - T1-CPU/exu/sparc_exu_eclccr.v
+  - T1-CPU/exu/sparc_exu_ecl.v
+  - T1-CPU/exu/sparc_exu_reg.v
+  - T1-CPU/exu/sparc_exu_rndrob.v
+  - T1-CPU/exu/sparc_exu_rml_cwp.v
+  - T1-CPU/exu/sparc_exu_rml_inc3.v
+  - T1-CPU/exu/sparc_exu_rml.v
+  - T1-CPU/exu/sparc_exu_shft.v
+  - T1-CPU/exu/sparc_exu.v
+  - T1-common/srams/bw_r_frf.v
+  - T1-CPU/ffu/sparc_ffu_ctl_visctl.v
+  - T1-CPU/ffu/sparc_ffu_ctl.v
+  - T1-CPU/ffu/sparc_ffu_dp.v
+  - T1-CPU/ffu/sparc_ffu_part_add32.v
+  - T1-CPU/ffu/sparc_ffu_vis.v
+  - T1-CPU/ffu/sparc_ffu.v
+  - T1-common/srams/bw_r_icd.v
+  - T1-CPU/ifu/sparc_ifu_dcl.v
+  - T1-CPU/ifu/sparc_ifu_dec.v
+  - T1-CPU/ifu/sparc_ifu_errctl.v
+  - T1-CPU/ifu/sparc_ifu_par16.v
+  - T1-CPU/ifu/sparc_ifu_par32.v
+  - T1-CPU/ifu/sparc_ifu_par34.v
+  - T1-CPU/ifu/sparc_ifu_errdp.v
+  - T1-CPU/ifu/sparc_ifu_ctr5.v
+  - T1-CPU/ifu/sparc_ifu_fcl.v
+  - T1-CPU/ifu/sparc_ifu_incr46.v
+  - T1-CPU/ifu/sparc_ifu_fdp.v
+  - T1-CPU/ifu/sparc_ifu_lfsr5.v
+  - T1-CPU/ifu/sparc_ifu_milfsm.v
+  - T1-CPU/ifu/sparc_ifu_rndrob.v
+  - T1-CPU/ifu/sparc_ifu_ifqctl.v
+  - T1-CPU/ifu/sparc_ifu_cmp35.v
+  - T1-CPU/ifu/sparc_ifu_swpla.v
+  - T1-CPU/ifu/sparc_ifu_ifqdp.v
+  - T1-CPU/ifu/sparc_ifu_imd.v
+  - T1-CPU/ifu/sparc_ifu_invctl.v
+  - T1-CPU/ifu/sparc_ifu_mbist.v
+  - T1-CPU/ifu/sparc_ifu_sscan.v
+  - T1-CPU/ifu/sparc_ifu_lru4.v
+  - T1-CPU/ifu/sparc_ifu_thrcmpl.v
+  - T1-CPU/ifu/sparc_ifu_thrfsm.v
+  - T1-CPU/ifu/sparc_ifu_swl.v
+  - T1-CPU/ifu/sparc_ifu_wseldp.v
+  - T1-CPU/ifu/sparc_ifu.v
+  - T1-CPU/mul/sparc_mul_cntl.v
+  - T1-CPU/mul/sparc_mul_dp.v
+  - T1-CPU/mul/sparc_mul_top.v
+  - T1-CPU/spu/spu_maaddr.v
+  - T1-CPU/spu/spu_maaeqb.v
+  - T1-CPU/spu/spu_mactl.v
+  - T1-CPU/spu/spu_maexp.v
+  - T1-CPU/spu/spu_mald.v
+  - T1-CPU/spu/spu_mamul.v
+  - T1-CPU/spu/spu_mared.v
+  - T1-CPU/spu/spu_mast.v
+  - T1-CPU/spu/spu_wen.v
+  - T1-CPU/spu/spu_ctl.v
+  - T1-CPU/spu/spu_lsurpt.v
+  - T1-CPU/spu/spu_lsurpt1.v
+  - T1-CPU/spu/spu_madp.v
+  - T1-CPU/spu/spu.v
+  - T1-common/common/test_stub_bist.v
+  - T1-CPU/tlu/sparc_tlu_intctl.v
+  - T1-CPU/tlu/sparc_tlu_dec64.v
+  - T1-CPU/tlu/sparc_tlu_penc64.v
+  - T1-CPU/tlu/sparc_tlu_zcmp64.v
+  - T1-CPU/tlu/sparc_tlu_intdp.v
+  - T1-CPU/tlu/tlu_hyperv.v
+  - T1-CPU/tlu/tlu_incr64.v
+  - T1-CPU/tlu/tlu_misctl.v
+  - T1-CPU/tlu/tlu_mmu_ctl.v
+  - T1-CPU/tlu/tlu_mmu_dp.v
+  - T1-CPU/tlu/tlu_addern_32.v
+  - T1-CPU/tlu/tlu_pib.v
+  - T1-CPU/tlu/tlu_rrobin_picker.v
+  - T1-CPU/tlu/tlu_tcl.v
+  - T1-CPU/tlu/tlu_prencoder16.v
+  - T1-CPU/tlu/tlu_tdp.v
+  - T1-CPU/tlu/tlu.v
+  - T1-CPU/rtl/sparc.v
+  - os2wb/s1_top.v
+  - OC-UART/uart_defines.v
+  - OC-UART/uart_debug_if.v
+  - OC-UART/raminfr.v
+  - OC-UART/uart_rfifo.v
+  - OC-UART/uart_receiver.v
+  - OC-UART/uart_sync_flops.v
+  - OC-UART/uart_tfifo.v
+  - OC-UART/uart_transmitter.v
+  - OC-UART/uart_regs.v
+  - OC-UART/uart_wb.v
+  - OC-UART/uart_top.v
+  - WB/wb_conbus_defines.v
+  - WB/wb_conbus_arb.v
+  - WB/wb_conbus_top.v
+  - Top/W1.v
+  - T1-common/srams/bw_r_cm16x40.v
+  - T1-common/srams/bw_r_cm16x40b.v
+  - T1-common/srams/bw_r_dcm.v
+  - T1-common/srams/bw_r_efa.v
+  - T1-common/srams/bw_r_l2d_32k.v
+  - T1-common/srams/bw_r_l2d_rep_bot.v
+  - T1-common/srams/bw_r_l2d_rep_top.v
+  - T1-common/srams/bw_r_l2d.v
+  - T1-common/srams/bw_r_l2t.v
+  - T1-common/srams/bw_r_rf16x128d.v
+  - T1-common/srams/bw_r_rf32x108.v
+  - T1-common/srams/bw_r_tlb.v
+  - T1-common/srams/bw_rf_16x65.v
+  - T1-common/srams/bw_rf_16x81.v
+  - T1-common/common/cluster_header_ctu.v
+  - T1-common/common/synchronizer_asr_dup.v
+  - T1-common/common/cluster_header_dup.v
+  - T1-common/common/cluster_header_sync.v
+  - T1-common/common/dbl_buf.v
+  - OC-Ethernet/eth_cop.v
+  - os2wb/os2wb.v
+  - T1-CPU/rtl/spc_pcx_buf.v
+  - T1-common/common/sync_pulse_synchronizer.v
+  - T1-common/common/ucb_bus_in.v
+  - T1-common/common/ucb_bus_out.v
+  - T1-common/common/ucb_flow_2buf.v
+  - T1-common/common/ucb_flow_jbi.v
+  - T1-common/common/ucb_flow_spi.v
+  - T1-common/common/ucb_noflow.v
+tags:
+- arbitration
+- asynchronous
+- independent
+- multiplexer
+- outputcontrol
+- prencoder16
+- receivecontrol
+- rxaddrcheck
+- synchronizer
+- synchronous
+- transmitcontrol
+- transmitter
+role: repo
+top_modules:
+- W1
+- bw_r_cm16x40
+- bw_r_cm16x40b
+- bw_r_dcm
+- bw_r_efa
+- bw_r_idct_array
+- bw_r_irf_72_4x1_mux
+- bw_r_irf_core
+- bw_r_irf_register
+- bw_r_l2d
+- bw_r_l2t
+- bw_r_l2t_subbank
+- bw_r_rf16x128d
+- bw_r_rf16x2
+- bw_r_rf32x108
+- bw_r_tlb_data_ram
+- bw_r_tlb_data_ram_fpga
+- bw_r_tlb_tag_ram
+- bw_r_tlb_tag_ram_fpga
+- bw_rf_16x65
+- bw_rf_16x81
+- cluster_header_ctu
+- cluster_header_dup
+- cluster_header_sync
+- dbl_buf
+- dcm_panel
+- dcm_panel_pair
+- dff_ns
+- dff_s
+- dff_sscan
+- dffe_ns
+- dffe_s
+- dffr_async
+- dffr_async_ns
+- dffr_async_ns_cl_r1
+- dffr_async_ns_r1
+- dffr_ns
+- dffr_ns_r1
+- dffr_s
+- dffre_ns
+- dffre_s
+- dffrl_async
+- dffrl_async_ns
+- dffrl_ns
+- dffrl_s
+- dffrle_ns
+- dffrle_s
+- dffsl_async_ns
+- dffsl_ns
+- dp_mux2es
+- dp_mux3ds
+- dp_mux4ds
+- dp_mux5ds
+- dp_mux8ds
+- eth_cop
+- fpu_bufrpt_grp64
+- fpu_rptr_fp_cpx_grp16
+- fpu_rptr_inq
+- fpu_rptr_pcx_fpio_grp16
+- lsu
+- mul_array1
+- mul_array2
+- mul_bodec
+- mul_booth
+- mul_csa32
+- mul_csa42
+- mul_ha
+- mul_mux2
+- mul_negen
+- mul_ppgen
+- mul_ppgen3
+- mul_ppgen3lsb4
+- mul_ppgen3sign
+- mul_ppgenrow3
+- mul_ppgensign
+- mux2ds
+- mux3ds
+- mux4ds
+- os2wb
+- sink
+- source
+- spc_pcx_buf
+- sync_pulse_synchronizer
+- ucb_flow_2buf
+- ucb_flow_jbi
+- ucb_flow_spi
+- ucb_noflow
+components:
+- WBFLASH
+- bw_clk_cl_fpu_cmp
+- bw_clk_cl_sparc_cmp
+- bw_r_dcd
+- bw_r_frf
+- bw_r_icd
+- bw_r_idct
+- bw_r_irf
+- bw_r_irf_72_2x1_mux
+- bw_r_irf_fpga1
+- bw_r_l2d_32k
+- bw_r_l2d_rep_bot
+- bw_r_l2d_rep_top
+- bw_r_rf16x160
+- bw_r_rf16x32
+- bw_r_rf32x152b
+- bw_r_rf32x80
+- bw_r_scm
+- bw_r_tlb
+- bw_r_tlb_fpga
+- clken_buf
+- cluster_header
+- cmp_sram_redhdr
+- cpx_spc_buf
+- cpx_spc_rpt
+- dp_buffer
+- dram_wb
+- eth_clockgen
+- eth_crc
+- eth_fifo
+- eth_maccontrol
+- eth_macstatus
+- eth_miim
+- eth_outputcontrol
+- eth_random
+- eth_receivecontrol
+- eth_register
+- eth_registers
+- eth_rxaddrcheck
+- eth_rxcounters
+- eth_rxethmac
+- eth_rxstatem
+- eth_sgmii
+- eth_shiftreg
+- eth_spram_256x32
+- eth_top
+- eth_transmitcontrol
+- eth_txcounters
+- eth_txethmac
+- eth_txstatem
+- eth_wishbone
+- fpu
+- fpu_add
+- fpu_add_ctl
+- fpu_add_exp_dp
+- fpu_add_frac_dp
+- fpu_bufrpt_grp32
+- fpu_bufrpt_grp4
+- fpu_cnt_lead0_53b
+- fpu_cnt_lead0_64b
+- fpu_cnt_lead0_lvl1
+- fpu_cnt_lead0_lvl2
+- fpu_cnt_lead0_lvl3
+- fpu_cnt_lead0_lvl4
+- fpu_denorm_3b
+- fpu_denorm_3to1
+- fpu_denorm_frac
+- fpu_div
+- fpu_div_ctl
+- fpu_div_exp_dp
+- fpu_div_frac_dp
+- fpu_in
+- fpu_in2_gt_in1_2b
+- fpu_in2_gt_in1_3b
+- fpu_in2_gt_in1_3to1
+- fpu_in2_gt_in1_frac
+- fpu_in_ctl
+- fpu_in_dp
+- fpu_mul
+- fpu_mul_ctl
+- fpu_mul_exp_dp
+- fpu_mul_frac_dp
+- fpu_out
+- fpu_out_ctl
+- fpu_out_dp
+- fpu_rptr_groups
+- l1ddir
+- l1dir
+- l1idir
+- lsu_asi_decode
+- lsu_dc_parity_gen
+- lsu_dcache_lfsr
+- lsu_dcdp
+- lsu_dctl
+- lsu_dctldp
+- lsu_excpctl
+- lsu_pcx_qmon
+- lsu_qctl1
+- lsu_qctl2
+- lsu_qdp1
+- lsu_qdp2
+- lsu_rrobin_picker2
+- lsu_stb_ctl
+- lsu_stb_ctldp
+- lsu_stb_rwctl
+- lsu_stb_rwdp
+- lsu_tagdp
+- lsu_tlbdp
+- mul64
+- os2wb_dual
+- raminfr
+- regfile_1w_4r
+- rst_ctrl
+- s1_top
+- sparc
+- sparc_exu
+- sparc_exu_alu
+- sparc_exu_alu_16eql
+- sparc_exu_aluadder64
+- sparc_exu_aluaddsub
+- sparc_exu_alulogic
+- sparc_exu_aluor32
+- sparc_exu_aluspr
+- sparc_exu_aluzcmp64
+- sparc_exu_byp
+- sparc_exu_byp_eccgen
+- sparc_exu_div
+- sparc_exu_div_32eql
+- sparc_exu_div_yreg
+- sparc_exu_ecc
+- sparc_exu_ecc_dec
+- sparc_exu_ecl
+- sparc_exu_ecl_cnt6
+- sparc_exu_ecl_divcntl
+- sparc_exu_ecl_eccctl
+- sparc_exu_ecl_mdqctl
+- sparc_exu_ecl_wb
+- sparc_exu_eclbyplog
+- sparc_exu_eclbyplog_rs1
+- sparc_exu_eclccr
+- sparc_exu_eclcomp7
+- sparc_exu_reg
+- sparc_exu_rml
+- sparc_exu_rml_cwp
+- sparc_exu_rml_inc3
+- sparc_exu_rndrob
+- sparc_exu_shft
+- sparc_ffu
+- sparc_ffu_ctl
+- sparc_ffu_ctl_visctl
+- sparc_ffu_dp
+- sparc_ffu_part_add32
+- sparc_ffu_vis
+- sparc_ifu
+- sparc_ifu_cmp35
+- sparc_ifu_ctr5
+- sparc_ifu_dcl
+- sparc_ifu_dec
+- sparc_ifu_errctl
+- sparc_ifu_errdp
+- sparc_ifu_fcl
+- sparc_ifu_fdp
+- sparc_ifu_ifqctl
+- sparc_ifu_ifqdp
+- sparc_ifu_imd
+- sparc_ifu_incr46
+- sparc_ifu_invctl
+- sparc_ifu_lfsr5
+- sparc_ifu_lru4
+- sparc_ifu_mbist
+- sparc_ifu_milfsm
+- sparc_ifu_par16
+- sparc_ifu_par32
+- sparc_ifu_par34
+- sparc_ifu_rndrob
+- sparc_ifu_sscan
+- sparc_ifu_swl
+- sparc_ifu_swpla
+- sparc_ifu_thrcmpl
+- sparc_ifu_thrfsm
+- sparc_ifu_wseldp
+- sparc_mul_cntl
+- sparc_mul_dp
+- sparc_mul_top
+- sparc_tlu_dec64
+- sparc_tlu_intctl
+- sparc_tlu_intdp
+- sparc_tlu_penc64
+- sparc_tlu_zcmp64
+- spu
+- spu_ctl
+- spu_lsurpt
+- spu_lsurpt1
+- spu_maaddr
+- spu_maaeqb
+- spu_mactl
+- spu_madp
+- spu_maexp
+- spu_mald
+- spu_mamul
+- spu_mared
+- spu_mast
+- spu_wen
+- synchronizer_asr
+- synchronizer_asr_dup
+- tlu
+- tlu_addern_32
+- tlu_hyperv
+- tlu_incr64
+- tlu_misctl
+- tlu_mmu_ctl
+- tlu_mmu_dp
+- tlu_pib
+- tlu_prencoder16
+- tlu_rrobin_picker
+- tlu_tcl
+- tlu_tdp
+- uart_debug_if
+- uart_receiver
+- uart_regs
+- uart_rfifo
+- uart_sync_flops
+- uart_tfifo
+- uart_top
+- uart_transmitter
+- uart_wb
+- ucb_bus_in
+- ucb_bus_out
+- wb_conbus_arb
+- wb_conbus_top
+- xilinx_dist_ram_16x32
+total_entities: 318

@@ -533,6 +533,34 @@
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
       "notes": "top-level repo description for P3.347 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/minsoc": {
+      "verdict": "good",
+      "locked_text": "Minimal OpenRISC 1200 system-on-chip — OR1200 CPU with Wishbone-attached on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera). Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013).",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.348 granularity=repo entry. RTL-P4.32 workaround. Authors/dates cross-checked against opencores.org/projects/minsoc."
+    },
+    "opencores/storm_soc": {
+      "verdict": "good",
+      "locked_text": "Educational SoC with peripheral suite — I2C, UART, PS/2, PWM, 7-segment display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented in STORM SoC datasheet PDF.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.349 granularity=repo entry. RTL-P4.32 workaround. Authors/dates cross-checked against opencores.org/projects/storm_soc."
+    },
+    "opencores/s1_core": {
+      "verdict": "good",
+      "locked_text": "Streamlined adaptation of Sun's OpenSPARC T1 — single 64-bit SPARC v9 core supporting 1-4 concurrent threads, with Wishbone master interface. Authors: Watson, Rozhdestvenskiy, Luzzu, Fazzino (2007-2018).",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.350 granularity=repo entry. RTL-P4.32 workaround. Authors/dates cross-checked against opencores.org/projects/s1_core."
+    },
+    "opencores/sparc64soc": {
+      "verdict": "good",
+      "locked_text": "Full SoC built around OpenSPARC T1 with floating-point unit, OS2WB Wishbone bridge, and OpenCores peripherals (NOR flash, UART, Ethernet, DRAM controllers). Capable of running Ubuntu Linux 2.6.22+. Authors: Rozhdestvenskiy, Fazzino (2010-2011).",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.351 granularity=repo entry. RTL-P4.32 workaround. Authors/dates cross-checked against opencores.org/projects/sparc64soc."
     }
   }
 }

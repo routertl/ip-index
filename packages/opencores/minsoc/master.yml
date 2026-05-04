@@ -1,0 +1,67 @@
+name: minsoc
+namespace: opencores
+version: master
+commit_sha: 3c9f36dc9de929c6e057fdb1cc322ce2cded4296
+published_at: '2013-05-12T18:51:08+00:00'
+description: "Minimal OpenRISC 1200 system-on-chip \u2014 OR1200 CPU with Wishbone-attached\
+  \ on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera).\
+  \ Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013)."
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/minsoc.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 3c9f36dc9de929c6e057fdb1cc322ce2cded4296
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/minsoc_startup/OR1K_startup_generic.v
+  - rtl/verilog/altera_pll.v
+  - rtl/verilog/xilinx_dcm.v
+  - rtl/verilog/minsoc_clock_manager.v
+  - rtl/verilog/timescale.v
+  - rtl/verilog/minsoc_onchip_ram.v
+  - rtl/verilog/minsoc_onchip_ram_top.v
+  - rtl/verilog/minsoc_tc_top.v
+  - rtl/verilog/interconnect_defines.v
+  - rtl/verilog/minsoc_xilinx_internal_jtag.v
+  - rtl/verilog/minsoc_startup/spi_defines.v
+  - rtl/verilog/minsoc_startup/spi_clgen.v
+  - rtl/verilog/minsoc_startup/spi_shift.v
+  - rtl/verilog/minsoc_startup/spi_top.v
+  - rtl/verilog/minsoc_top.v
+tags:
+- access
+- action
+- altera
+- interface
+- internal
+- locked
+- manager
+- memory
+- minsoc
+- onchip
+- peripheral
+- startup
+role: repo
+top_modules:
+- minsoc_top
+- mux2
+- tc_mi_to_st
+- tc_si_to_mt
+components:
+- OR1K_startup
+- altera_pll
+- minsoc_clock_manager
+- minsoc_onchip_ram
+- minsoc_onchip_ram_top
+- minsoc_tc_top
+- minsoc_xilinx_internal_jtag
+- spi_flash_clgen
+- spi_flash_shift
+- spi_flash_top
+- xilinx_dcm
+total_entities: 15
