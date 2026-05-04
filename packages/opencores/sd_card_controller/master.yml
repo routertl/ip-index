@@ -68,3 +68,5 @@ components:
 - sd_data_xfer_trig
 - sd_fifo_filler
 total_entities: 18
+health_tier: bronze
+last_verified_at: '2026-05-04'

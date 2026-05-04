@@ -93,3 +93,5 @@ components:
 - register_file
 - sad_selector
 total_entities: 29
+health_tier: bronze
+last_verified_at: '2026-05-04'

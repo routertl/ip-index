@@ -148,3 +148,5 @@ components:
 - pci_wbw_fifo_control
 - pci_wbw_wbr_fifos
 total_entities: 55
+health_tier: bronze
+last_verified_at: '2026-05-04'

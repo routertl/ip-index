@@ -65,3 +65,5 @@ components:
 - spi_flash_top
 - xilinx_dcm
 total_entities: 15
+health_tier: bronze
+last_verified_at: '2026-05-04'

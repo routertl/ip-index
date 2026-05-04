@@ -28,3 +28,5 @@ top_modules:
 components:
 - registerDelay
 total_entities: 4
+health_tier: bronze
+last_verified_at: '2026-05-04'

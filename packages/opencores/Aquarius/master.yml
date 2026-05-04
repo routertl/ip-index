@@ -69,3 +69,5 @@ components:
 - sys
 - uart
 total_entities: 16
+health_tier: bronze
+last_verified_at: '2026-05-04'

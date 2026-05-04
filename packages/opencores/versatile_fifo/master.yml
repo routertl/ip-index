@@ -58,3 +58,5 @@ components:
 - vfifo_dual_port_ram_dc_dw
 - vfifo_dual_port_ram_dc_sw
 total_entities: 12
+health_tier: bronze
+last_verified_at: '2026-05-04'

@@ -74,3 +74,5 @@ components:
 - sd_tx_fifo
 - versatile_fifo_dptam_dw
 total_entities: 23
+health_tier: bronze
+last_verified_at: '2026-05-04'

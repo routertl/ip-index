@@ -178,3 +178,5 @@ components:
 - wishboneArb
 - writeUSBWireData
 total_entities: 67
+health_tier: bronze
+last_verified_at: '2026-05-04'

@@ -79,3 +79,5 @@ components:
 - tx_hold_fifo
 - wishbone_if
 total_entities: 20
+health_tier: bronze
+last_verified_at: '2026-05-04'

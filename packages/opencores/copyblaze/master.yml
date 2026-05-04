@@ -95,3 +95,5 @@ components:
 - uart_rx
 - uart_tx
 total_entities: 30
+health_tier: bronze
+last_verified_at: '2026-05-04'

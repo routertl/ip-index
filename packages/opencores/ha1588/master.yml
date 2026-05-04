@@ -54,3 +54,5 @@ components:
 - tsu
 - wb_slv_wrapper
 total_entities: 10
+health_tier: bronze
+last_verified_at: '2026-05-04'

@@ -118,3 +118,5 @@ components:
 - WishBoneMasterUnit
 - WishBoneSlaveUnit
 total_entities: 53
+health_tier: bronze
+last_verified_at: '2026-05-04'

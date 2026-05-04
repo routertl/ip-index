@@ -220,3 +220,5 @@ components:
 - oc8051_uart
 - oc8051_wb_iinterface
 total_entities: 156
+health_tier: bronze
+last_verified_at: '2026-05-04'

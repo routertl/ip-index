@@ -645,3 +645,5 @@ components:
 - tlu_tdp
 - zzadd13
 total_entities: 474
+health_tier: bronze
+last_verified_at: '2026-05-04'

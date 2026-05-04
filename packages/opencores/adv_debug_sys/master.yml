@@ -96,3 +96,5 @@ components:
 - tap_top
 - wb_slave_behavioral
 total_entities: 26
+health_tier: bronze
+last_verified_at: '2026-05-04'

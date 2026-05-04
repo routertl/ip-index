@@ -51,3 +51,5 @@ components:
 - spwxmit_fast
 - syncdff
 total_entities: 12
+health_tier: bronze
+last_verified_at: '2026-05-04'

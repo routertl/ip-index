@@ -80,3 +80,5 @@ components:
 - spi_shift
 - spi_top
 total_entities: 22
+health_tier: bronze
+last_verified_at: '2026-05-04'

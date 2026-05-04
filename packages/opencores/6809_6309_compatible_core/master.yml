@@ -50,3 +50,5 @@ components:
 - calc_ea
 - decode_alu
 total_entities: 15
+health_tier: bronze
+last_verified_at: '2026-05-04'

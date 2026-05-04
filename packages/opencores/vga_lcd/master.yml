@@ -101,3 +101,5 @@ components:
 - wb_master
 - wb_slave
 total_entities: 36
+health_tier: bronze
+last_verified_at: '2026-05-04'

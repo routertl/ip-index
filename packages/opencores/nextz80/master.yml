@@ -33,3 +33,5 @@ components:
 - ALU16
 - RAM16X8D_regs
 total_entities: 7
+health_tier: bronze
+last_verified_at: '2026-05-04'

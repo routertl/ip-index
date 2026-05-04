@@ -64,3 +64,5 @@ components:
 - rom
 - v0
 total_entities: 20
+health_tier: bronze
+last_verified_at: '2026-05-04'

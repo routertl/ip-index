@@ -89,3 +89,5 @@ components:
 - ethmac
 - xilinx_dist_ram_16x32
 total_entities: 26
+health_tier: bronze
+last_verified_at: '2026-05-04'

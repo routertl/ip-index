@@ -160,3 +160,5 @@ components:
 - xs6_sram_256x21_line_en
 - xs6_sram_4096x32_byte_en
 total_entities: 56
+health_tier: bronze
+last_verified_at: '2026-05-04'

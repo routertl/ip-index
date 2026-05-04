@@ -121,3 +121,5 @@ contract:
     workaround: BFM/host pulses Rx_mac_rd low for one cycle after each EOP
     fix_pr: null
     review_after: '2026-08-03'
+health_tier: bronze
+last_verified_at: '2026-05-04'
