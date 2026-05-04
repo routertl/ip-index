@@ -1,0 +1,54 @@
+name: viterbi_decoder_axi4s
+namespace: opencores
+version: master
+commit_sha: 53cc354ee993097882a6b782c61a0dbaa6aa29be
+published_at: '2014-02-17T08:50:43+00:00'
+description: Viterbi maximum-likelihood decoder for forward error correction with
+  AXI4-Stream input and output interfaces.
+license: GPL-2.0-only
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/viterbi_decoder_axi4s.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 53cc354ee993097882a6b782c61a0dbaa6aa29be
+routertl_compat:
+  language: vhdl-2008
+  library: dec_viterbi
+  files:
+  - src/acs.vhd
+  - src/axi4s_buffer.vhd
+  - src/branch_distance.vhd
+  - src/generic_sp_ram.vhd
+  - src/ram_ctrl.vhd
+  - src/recursion.vhd
+  - src/reorder.vhd
+  - src/traceback.vhd
+  - src/dec_viterbi.vhd
+tags:
+- access
+- branch
+- buffer
+- control
+- controller
+- decoder
+- distance
+- memory
+- random
+- traceback
+- trellis
+- viterbi
+role: repo
+top_modules:
+- dec_viterbi
+components:
+- acs
+- axi4s_buffer
+- branch_distance
+- generic_sp_ram
+- ram_ctrl
+- recursion
+- reorder
+- trellis_traceback
+total_entities: 9

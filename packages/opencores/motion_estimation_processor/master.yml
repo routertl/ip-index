@@ -1,0 +1,95 @@
+name: motion_estimation_processor
+namespace: opencores
+version: master
+commit_sha: 14dc60a686d0ce88a18fae234b420f074d11e5ff
+published_at: '2009-10-11T12:04:00+00:00'
+description: Motion estimation engine computing block-matching displacement vectors
+  for video compression workflows.
+license: GPL-2.0-or-later
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/motion_estimation_processor.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 14dc60a686d0ce88a18fae234b420f074d11e5ff
+routertl_compat:
+  language: vhdl-2008
+  library: xilinxcorelib
+  files:
+  - src_me/concatenate64.vhd
+  - src_me/current_macroblock_memory64.vhd
+  - src_me/config.vhd
+  - src_me/distance_engine64.vhd
+  - src_me/dual_port_component.vhd
+  - src_me/forward_engine.vhd
+  - src_me/macroblock_data0.vhd
+  - src_me/macroblock_data1.vhd
+  - src_me/macroblock_data2.vhd
+  - src_me/macroblock_data3.vhd
+  - src_me/macroblock_data4.vhd
+  - src_me/macroblock_data5.vhd
+  - src_me/macroblock_data6.vhd
+  - src_me/macroblock_data7.vhd
+  - src_me/me_control_unit.vhd
+  - src_me/phy_address.vhd
+  - src_me/point_memory.vhd
+  - src_me/program_memory.vhd
+  - src_me/reg_memory_dp.vhd
+  - src_me/register_file.vhd
+  - src_me/sad_selector.vhd
+  - src_me/me_top.vhd
+  - src_me/range_checker.vhd
+  - src_me/reference_data0.vhd
+  - src_me/reference_data1.vhd
+  - src_me/reference_data2.vhd
+  - src_me/reference_data3.vhd
+  - src_me/reference_macroblock_memory64.vhd
+  - src_me/reference_memory64_dp_large.vhd
+  - src_me/reference_memory64_remap.vhd
+tags:
+- address
+- checker
+- component
+- datapath
+- distance
+- engine64
+- macroblock
+- memory64
+- physical
+- reference
+- register
+- selector
+role: repo
+top_modules:
+- concatenate64
+- current_macroblock_memory64
+- macroblock_data0
+- macroblock_data1
+- macroblock_data2
+- macroblock_data3
+- macroblock_data4
+- macroblock_data5
+- macroblock_data6
+- macroblock_data7
+- me_top
+- range_checker
+- reference_data0
+- reference_data1
+- reference_data2
+- reference_data3
+- reference_macroblock_memory64
+- reference_memory64_remap
+components:
+- distance_engine64
+- dual_port_component
+- forward_engine
+- me_control_unit
+- phy_address
+- point_memory
+- program_memory
+- reference_memory64_dp_large
+- reg_memory_dp
+- register_file
+- sad_selector
+total_entities: 29

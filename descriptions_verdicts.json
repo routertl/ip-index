@@ -491,6 +491,48 @@
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
       "notes": "top-level repo description for P3.341 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/theia_gpu": {
+      "verdict": "good",
+      "locked_text": "GPU core implementing a 3D graphics rendering pipeline with programmable shading.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.342 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/raytrac": {
+      "verdict": "good",
+      "locked_text": "Ray tracing accelerator computing intersection tests with floating-point arithmetic for visibility, shadow, and reflection calculations.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.343 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/motion_estimation_processor": {
+      "verdict": "good",
+      "locked_text": "Motion estimation engine computing block-matching displacement vectors for video compression workflows.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.344 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/viterbi_decoder_axi4s": {
+      "verdict": "good",
+      "locked_text": "Viterbi maximum-likelihood decoder for forward error correction with AXI4-Stream input and output interfaces.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.345 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/tiny_tate_bilinear_pairing": {
+      "verdict": "good",
+      "locked_text": "Tate pairing engine for elliptic-curve pairing-based cryptography over 256-bit prime fields.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.346 granularity=repo entry. RTL-P4.32 workaround."
+    },
+    "opencores/bilinear_demosaic": {
+      "verdict": "good",
+      "locked_text": "Bilinear-interpolation Bayer demosaicing block for camera image-sensor pipelines, converting raw mosaic data to RGB.",
+      "reviewed_at": "2026-05-04",
+      "reviewed_by": "dmazure",
+      "notes": "top-level repo description for P3.347 granularity=repo entry. RTL-P4.32 workaround."
     }
   }
 }

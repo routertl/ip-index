@@ -1,0 +1,120 @@
+name: theia_gpu
+namespace: opencores
+version: master
+commit_sha: 032c448aec59a2182f50a1c2a6012e78c7a3d332
+published_at: '2011-08-22T03:28:39+00:00'
+description: GPU core implementing a 3D graphics rendering pipeline with programmable
+  shading.
+license: GPL-2.0-or-later
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/theia_gpu.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 032c448aec59a2182f50a1c2a6012e78c7a3d332
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/aDefinitions.v
+  - rtl/Module_ArithmeticComparison.v
+  - rtl/Collaterals.v
+  - rtl/Module_ControlRegister.v
+  - rtl/Unit_Control.v
+  - rtl/Module_ExecutionFSM.v
+  - rtl/Module_InstructionDecode.v
+  - rtl/Module_InstructionEntryPoint.v
+  - rtl/Module_FixedPointAddtionSubstraction.v
+  - rtl/Module_InstructionFetch.v
+  - rtl/Module_FixedPointSquareRoot.v
+  - rtl/Module_RadixRMul.v
+  - rtl/Module_FixedPointDivision.v
+  - rtl/Module_Swizzle.v
+  - rtl/Module_VectorALU.v
+  - rtl/Unit_EXE.v
+  - rtl/Module_MEM2WBM.v
+  - rtl/Module_OMemInterface.v
+  - rtl/Module_TMemInterface.v
+  - rtl/Module_WishBoneMaster.v
+  - rtl/Module_WishBoneSlave.v
+  - rtl/Unit_IO.v
+  - rtl/Module_RAM.v
+  - rtl/Module_ROM.v
+  - rtl/Module_SwapMemory.v
+  - rtl/Unit_MEM.v
+  - rtl/Module_BusArbitrer.v
+  - rtl/Theia_Core.v
+  - rtl/Theia.v
+  - rtl/Module_HostWBM.v
+  - rtl/Module_Host.v
+tags:
+- asynchronous
+- busarbitrer
+- fftoggleonce
+- fullparallel
+- multiplexer
+- muxfullparalell
+- omeminterface
+- shiftleft
+- syncronous
+- tmeminterface
+- upcounter
+- walkingone
+role: repo
+top_modules:
+- CIRCULAR_SHIFTLEFT_POSEDGE_EX
+- FFD32_POSEDGE
+- FFD_POSEDGE_ASYNC_RESET
+- FFD_POSEDGE_SYNCRONOUS_RESET
+- FFT1
+- FFToggleOnce_1Bit
+- INCREMENT
+- MUXFULLPARALELL_16bits_2SEL
+- MUXFULLPARALELL_16bits_2SEL_X
+- MUXFULLPARALELL_2SEL_GENERIC
+- MUXFULLPARALELL_3SEL_WALKINGONE
+- MUXFULLPARALELL_96bits_2SEL
+- Module_Host
+- RADIX_R_MUL_32_FULL_PARALLEL
+- RAM_SINGLE_READ_PORT
+- SELECT_1_TO_N
+- SHIFTER2_16_BITS
+- SHIFTLEFT_POSEDGE
+- SignedIntegerDivision
+- UPCOUNTER_POSEDGE
+- UnsignedIntegerDivision
+- UpCounter_16E
+- UpCounter_3
+- UpCounter_32
+components:
+- ArithmeticComparison
+- CIRCULAR_SHIFTLEFT_POSEDGE
+- ControlRegister
+- ControlUnit
+- ExecutionFSM
+- ExecutionUnit
+- FixedAddSub
+- FixedPointSquareRoot
+- IO_Unit
+- InstructionDecode
+- InstructionEntryPoint
+- InstructionFetch
+- MEM2WBMUnitB
+- MUX_4_TO_1_32Bits_FullParallel
+- MemoryUnit
+- Module_BusArbitrer
+- Module_OMemInterface
+- Module_TMemInterface
+- Modulus2N
+- RAM_DUAL_READ_PORT
+- ROM
+- SWAP_MEM
+- Swizzle3D
+- THEIA
+- THEIACORE
+- VectorALU
+- WBMaster
+- WishBoneMasterUnit
+- WishBoneSlaveUnit
+total_entities: 53

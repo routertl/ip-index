@@ -1,0 +1,66 @@
+name: raytrac
+namespace: opencores
+version: master
+commit_sha: d87c7de539eb19daa5fb677c3a97af62e37da743
+published_at: '2011-08-05T00:09:00+00:00'
+description: Ray tracing accelerator computing intersection tests with floating-point
+  arithmetic for visibility, shadow, and reflection calculations.
+license: GPL-3.0-or-later
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/raytrac.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: d87c7de539eb19daa5fb677c3a97af62e37da743
+routertl_compat:
+  language: vhdl-2008
+  library: altera_mf
+  files:
+  - sqrtdiv/RLshifter.vhd
+  - fpbranch/arithpack.vhd
+  - cla_logic_block.vhd
+  - rca_logic_block.vhd
+  - adder.vhd
+  - fpbranch/unrm/shftr.vhd
+  - fpbranch/add/ema32x3.vhd
+  - fastmux.vhd
+  - sqrtdiv/funcsqrt.vhd
+  - fpbranch/invr/invr32.vhd
+  - fpbranch/memblock/memblock.vhd
+  - fpbranch/mul/mul2.vhd
+  - fpbranch/cntrl/opcoder.vhd
+  - uf.vhd
+  - raytrac.vhd
+  - sqrtdiv/shift.vhd
+  - sqrtdiv/shifter2xstage.vhd
+  - fpbranch/sqrt/sqrt32.vhd
+  - sqrtdiv/sqrtdiv.vhd
+  - fpbranch/unrm/unrm1.vhd
+tags:
+- block
+- cla
+- rca
+role: repo
+top_modules:
+- ema32x2
+- ema32x3
+- func
+- invr32
+- memblock
+- mul2
+- raytrac
+- sqrt32
+- sqrtdiv
+- unrm1
+components:
+- RLshifter
+- adder
+- cla_logic_block
+- fastmux
+- opcoder
+- rca_logic_block
+- shifter
+- shifter2xstage
+- uf
+total_entities: 19

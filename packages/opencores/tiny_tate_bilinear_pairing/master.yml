@@ -1,0 +1,66 @@
+name: tiny_tate_bilinear_pairing
+namespace: opencores
+version: master
+commit_sha: 1e2478eee1cf7e7b43a49f90cd1ccda4a514f61a
+published_at: '2012-11-14T00:26:40+00:00'
+description: Tate pairing engine for elliptic-curve pairing-based cryptography over
+  256-bit prime fields.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/freecores/tiny_tate_bilinear_pairing.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 1e2478eee1cf7e7b43a49f90cd1ccda4a514f61a
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - group_size_is_151_bits/rtl/fsm.v
+  - group_size_is_151_bits/rtl/cubic.v
+  - group_size_is_151_bits/rtl/pe.v
+  - group_size_is_151_bits/rtl/const.v
+  - group_size_is_911_bits/rtl/const.v
+  - group_size_is_911_bits/rtl/pe.v
+  - group_size_is_151_bits/rtl/ram.v
+  - group_size_is_151_bits/rtl/rom.v
+  - group_size_is_151_bits/rtl/tiny.v
+  - group_size_is_151_bits/rtl/pairing.v
+  - group_size_is_697_bits/rtl/cubic.v
+tags:
+- access
+- add
+- const
+- f3
+- f3m
+- memory
+- mod
+- mult
+- only
+- random
+- read
+role: repo
+top_modules:
+- PPG
+- const_
+- f3_add
+- f3_mult
+- f3_sub
+- f3m_add
+- mod_p
+- pairing
+- select
+- tiny
+- v1
+- v2
+- v3
+components:
+- FSM
+- PE
+- const
+- muxer
+- ram
+- rom
+- v0
+total_entities: 20
