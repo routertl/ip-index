@@ -333,10 +333,10 @@
     },
     "opencores/ethernet_tri_mode": {
       "verdict": "good",
-      "locked_text": "Tri-mode 10/100/1000 Mbps Ethernet MAC with GMII PHY interface (Jon Gao 2001+). 32-bit OpenCores streaming user bus, Wishbone-style CSR access, includes RMON statistics.",
+      "locked_text": "Tri-mode 10/100/1000 Mbps Ethernet MAC with GMII PHY interface (Jon Gao, OpenCores 2005-2018). 32-bit OpenCores streaming user bus, Wishbone-style CSR access, includes RMON statistics.",
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
-      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary. Metadata-sweep correction 2026-05-04: dates re-anchored to opencores.org/projects/<slug> canonical."
     },
     "opencores/ethmac": {
       "verdict": "good",
@@ -347,10 +347,10 @@
     },
     "opencores/pci": {
       "verdict": "good",
-      "locked_text": "Bidirectional 32-bit PCI ↔ Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc 2002+).",
+      "locked_text": "Bidirectional 32-bit PCI ↔ Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006).",
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
-      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary. Metadata-sweep correction 2026-05-04: dates re-anchored to opencores.org/projects/<slug> canonical."
     },
     "opencores/usbhostslave": {
       "verdict": "good",

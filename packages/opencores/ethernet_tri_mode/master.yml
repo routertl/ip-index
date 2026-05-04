@@ -3,9 +3,9 @@ namespace: opencores
 version: master
 commit_sha: fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4
 published_at: '2009-01-08T13:53:34+00:00'
-description: Tri-mode 10/100/1000 Mbps Ethernet MAC with GMII PHY interface (Jon Gao
-  2001+). 32-bit OpenCores streaming user bus, Wishbone-style CSR access, includes
-  RMON statistics.
+description: Tri-mode 10/100/1000 Mbps Ethernet MAC with GMII PHY interface (Jon Gao,
+  OpenCores 2005-2018). 32-bit OpenCores streaming user bus, Wishbone-style CSR access,
+  includes RMON statistics.
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:

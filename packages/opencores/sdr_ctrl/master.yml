@@ -5,8 +5,8 @@ commit_sha: 4f3f0b4e000039e09bacbae41fe7db5a7309b5a8
 published_at: '2013-06-17T04:44:18+00:00'
 description: Single-data-rate SDRAM controller with Wishbone host bus, supporting
   standard 16-bit/32-bit memory configurations and bank interleaving.
-license: LGPL-2.1-or-later
-license_class: weak-copyleft
+license: GPL-2.0-or-later
+license_class: strong-copyleft
 source:
   type: git
   url: https://github.com/freecores/sdr_ctrl.git

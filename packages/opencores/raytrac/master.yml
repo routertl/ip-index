@@ -5,8 +5,8 @@ commit_sha: d87c7de539eb19daa5fb677c3a97af62e37da743
 published_at: '2011-08-05T00:09:00+00:00'
 description: Ray tracing accelerator computing intersection tests with floating-point
   arithmetic for visibility, shadow, and reflection calculations.
-license: GPL-3.0-or-later
-license_class: strong-copyleft
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
 source:
   type: git
   url: https://github.com/freecores/raytrac.git

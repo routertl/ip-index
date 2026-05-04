@@ -6,8 +6,8 @@ published_at: '2013-02-03T01:33:39+00:00'
 description: "Educational SoC with peripheral suite \u2014 I2C, UART, PS/2, PWM, 7-segment\
   \ display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented\
   \ in STORM SoC datasheet PDF."
-license: OpenCores-Permissive-1.0
-license_class: unknown
+license: GPL-2.0-or-later
+license_class: strong-copyleft
 source:
   type: git
   url: https://github.com/freecores/storm_soc.git

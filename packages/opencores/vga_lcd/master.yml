@@ -5,8 +5,8 @@ commit_sha: 6baa0f08e50457dc528ec877420e97e3eea68233
 published_at: '2003-09-23T13:09:26+00:00'
 description: VGA + LCD display controller generating timing for standard VGA modes
   and parallel LCD interfaces. Includes pixel clock generator and frame buffer interface.
-license: OpenCores-Permissive-1.0
-license_class: unknown
+license: GPL-2.0-or-later
+license_class: strong-copyleft
 source:
   type: git
   url: https://github.com/freecores/vga_lcd.git
