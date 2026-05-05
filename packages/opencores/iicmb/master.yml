@@ -1,0 +1,67 @@
+name: iicmb
+namespace: opencores
+version: master
+commit_sha: c5723887
+published_at: '2024-10-01T21:23:24+03:00'
+description: I2C with interrupt support
+license: BSD-2-Clause
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/sshuv/iicmb.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: c5723887
+routertl_compat:
+  language: vhdl-2008
+  library: iicmb
+  files:
+  - src/avalon_mm.vhd
+  - src/bus_state.vhd
+  - src/filter.vhd
+  - src/conditioner.vhd
+  - src/conditioner_mux.vhd
+  - src/iicmb_pkg.vhd
+  - src/iicmb_int_pkg.vhd
+  - src/mbit.vhd
+  - src/mbyte.vhd
+  - src/iicmb_m.vhd
+  - src/regblock.vhd
+  - src/iicmb_m_av.vhd
+  - src/sequencer.vhd
+  - src/iicmb_m_sq.vhd
+  - src/wishbone.vhd
+  - src/iicmb_m_wb.vhd
+tags:
+- av
+- avalon
+- bus
+- conditioner
+- iicmb
+- mm
+- multiplexer
+- mux
+- sq
+- state
+- wb
+- wishbone
+role: repo
+top_modules:
+- iicmb_m_av
+- iicmb_m_sq
+- iicmb_m_wb
+components:
+- avalon_mm
+- bus_state
+- conditioner
+- conditioner_mux
+- filter
+- iicmb_m
+- mbit
+- mbyte
+- regblock
+- sequencer
+- wishbone
+total_entities: 14
+health_tier: bronze
+last_verified_at: '2026-05-05'

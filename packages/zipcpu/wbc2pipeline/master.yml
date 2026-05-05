@@ -1,0 +1,24 @@
+name: wbc2pipeline
+namespace: zipcpu
+version: master
+commit_sha: df8e7649acf68544a152e39a4589c8e894a4cd0b
+published_at: '2026-03-10T13:49:52-04:00'
+description: Converts Wishbone classic protocol transactions to pipelined protocol
+  transactions with configurable address and data widths.
+license: GPL-3.0-or-later
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/ZipCPU/wb2axip.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: df8e7649acf68544a152e39a4589c8e894a4cd0b
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/wbc2pipeline.v
+tags: []
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'

@@ -1,0 +1,38 @@
+name: axi2axilsub
+namespace: zipcpu
+version: master
+commit_sha: df8e7649acf68544a152e39a4589c8e894a4cd0b
+published_at: '2026-03-10T13:49:52-04:00'
+description: AXI4 with configurable parameters
+license: GPL-3.0-or-later
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/ZipCPU/wb2axip.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: df8e7649acf68544a152e39a4589c8e894a4cd0b
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/axi_addr.v
+  - rtl/sfifo.v
+  - rtl/skidbuffer.v
+  - rtl/axi2axilite.v
+  - rtl/axi2axilsub.v
+tags: []
+role: top
+components:
+- axi2axilite
+- axi3reorder
+- axi_addr
+- axidma
+- axilfetch
+- aximrd2wbsp
+- aximwr2wbsp
+- sfifo
+- skidbuffer
+- wbm2axisp
+health_tier: bronze
+last_verified_at: '2026-05-05'
