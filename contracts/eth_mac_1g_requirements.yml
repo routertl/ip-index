@@ -1,0 +1,143 @@
+# IEEE 802.3 1 Gbit/s Ethernet MAC — eth-validator contract anchor
+#
+# Source spec: IEEE 802.3-2018 §3 (MAC frame structure) + §4 (MAC operation)
+# Reference baseline: Fibich, Schmitt, Höller, Rössler (2023)
+#                     doi:10.1155/2023/9222318  (CC-BY 4.0)
+# Companion contract docs:
+#   - tb/contracts/gmii.md          — bus-level GMII protocol
+#   - tb/contracts/eth_mac.md       — frame-level + REQ-1/2/3 spec
+#   - tb/contracts/eth_mac_1g_fifo_baselines.py — Fibich Table 15 numbers
+#
+# This file anchors @requires(REQ-N) tags in eth-validator tests
+# (sim/cocotb/tests/eth_validator/) — RTL-P3.299 Stage 2 of the
+# eth-validator roadmap.
+
+ip: eth_mac_1g
+version: 0.1
+
+# ──────────────────────────────────────────────────────────────
+# Port contract — generic IEEE 802.3 1G MAC service interface.
+# DUT-specific overrides (e.g. Forencich's eth_mac_1g_fifo) live
+# in their own per-DUT requirements.yml files that compose this.
+# ──────────────────────────────────────────────────────────────
+port_contract:
+  slaves:
+    - { name: s_axis_tx,  protocol: axi-stream }   # User → MAC TX
+    - { name: gmii_rx,    protocol: gmii }         # PHY → MAC RX
+  masters:
+    - { name: m_axis_rx,  protocol: axi-stream }   # MAC → User RX
+    - { name: gmii_tx,    protocol: gmii }         # MAC → PHY TX
+  scalars:
+    - { name: cfg_promisc,    dir: input,  width: "1" }
+    - { name: cfg_mtu_jumbo,  dir: input,  width: "1" }
+    - { name: stats_drops,    dir: output, width: "32" }
+  clocks:
+    - { name: logic_clk }       # User-side AXI-Stream clock
+    - { name: gmii_tx_clk }     # MAC sources TX clock to PHY
+    - { name: gmii_rx_clk }     # PHY sources RX clock to MAC
+  resets:
+    - { name: rst, polarity: active_high }
+
+parameters:
+  - { name: TARGET_DUT,        default: "verilog-ethernet" }
+  - { name: FRAME_COUNT_PER_SIZE, default: 100000 }
+  - { name: LATENCY_TOLERANCE_CYCLES, default: 2 }
+  - { name: MAX_FRAME_BYTES,   default: 1518 }   # 9000 for jumbo
+  - { name: MIN_FRAME_BYTES,   default: 64 }
+
+# ──────────────────────────────────────────────────────────────
+# Functional contract — REQ-N anchors for eth-validator tests.
+# Every claim here must have a falsifiable test attacking it; tests
+# carry @requires(REQ-N) tags resolved against this list.
+# ──────────────────────────────────────────────────────────────
+functional_contract:
+  - id: REQ-1
+    kind: behavioral
+    title: Zero core-dropped frames over Fibich §5 sweep
+    desc: >-
+      Over a 100 000 frame × 8 size loopback (sizes
+      {64, 128, 256, 512, 1024, 1280, 1400, 1518}) at line rate, the
+      count of frames dropped by the MAC core (i.e. attribution
+      "Core" per Fibich §5 — kernel and interface drops excluded)
+      shall be zero. Methodology lifted from Fibich §5; LMAC1
+      (Fibich Table 14) is the negative reference (rejected for
+      0.05–1.3% Core drops at 1 G).
+    monitor: tb.monitors.eth_integrity_monitor.EthIntegrityMonitor
+    scoreboard: deferred  # Stage 2 follow-up — frame-id matcher
+    clauses_attacked:
+      - ETH_LOSS_ATTRIBUTION
+    measurement:
+      sweep_sizes: [64, 128, 256, 512, 1024, 1280, 1400, 1518]
+      frames_per_size: 100000
+      core_drop_budget: 0
+    source: Fibich 2023 §5
+
+  - id: REQ-2
+    kind: latency
+    title: TX/RX average latency matches Fibich Table 15 within ±2 cycles
+    desc: >-
+      Average TX latency (user-side AXI-S TX ingress → first GMII TX
+      byte) and average RX latency (first GMII RX byte → user-side
+      AXI-S RX valid) measured over the same 100k×8-size sweep as
+      REQ-1, in 125 MHz clock cycles, must match the published
+      Fibich Table 15 averages for the target DUT within
+      ±LATENCY_TOLERANCE_CYCLES (default 2). For the
+      verilog-ethernet eth_mac_1g_fifo DUT the published numbers are
+      TX = 11.00 ± 0.00 cycles, RX = 13.97 ± 0.17 cycles.
+    monitor: tb.monitors.eth_latency_monitor.EthLatencyMonitor
+    baseline: tb.contracts.eth_mac_1g_fifo_baselines.FIBICH_TABLE_15
+    clauses_attacked:
+      - ETH_LATENCY_BOUND
+    measurement:
+      direction: [tx, rx]
+      tolerance_cycles: 2
+      clock_period_ps: 8000        # 125 MHz GMII reference
+    source: Fibich 2023 Table 15
+
+  - id: REQ-3
+    kind: integrity
+    title: FCS preserved end-to-end under loopback
+    desc: >-
+      For every frame entering the DUT at the user-side AXI-Stream
+      TX port and exiting at the user-side AXI-Stream RX port
+      (via PHY loopback), the captured FCS at egress equals the
+      computed FCS at ingress. End-to-end FCS preservation; sweeps
+      with REQ-1.
+    monitor: tb.monitors.eth_integrity_monitor.EthIntegrityMonitor
+    scoreboard: deferred  # Stage 2 follow-up — pairs with REQ-1 matcher
+    clauses_attacked:
+      - ETH_FCS_VALID
+      - ETH_FCS_PRESERVED
+    measurement:
+      sweep_sizes: [64, 128, 256, 512, 1024, 1280, 1400, 1518]
+      frames_per_size: 100000
+      mismatch_budget: 0
+    source: IEEE 802.3 §3.2.9
+
+# ──────────────────────────────────────────────────────────────
+# Adversarial fixture coverage — what each clause must survive.
+# These are NOT invariants — they're attack vectors the test
+# orchestrator MUST exercise against the spine to confirm the
+# monitor catches them. Per project_rr_adversarial_rule memory.
+# ──────────────────────────────────────────────────────────────
+adversarial_coverage:
+  - clause: GMII_RST
+    attack: GmiiSource.inject_drive_during_reset
+  - clause: GMII_VALID_QUALIFICATION
+    attack: GmiiSource.inject_unqualified_error
+  - clause: GMII_IFG_MIN
+    attack: GmiiSource.inject_short_ifg
+  - clause: ETH_PREAMBLE
+    attack: build a frame with byte[0] != 0x55
+  - clause: ETH_SFD
+    attack: build a frame with byte[7] != 0xD5
+  - clause: ETH_FRAME_LEN_MIN
+    attack: EthPacketGen.send_runt
+  - clause: ETH_FRAME_LEN_MAX
+    attack: build a frame > MAX_FRAME_BYTES
+  - clause: ETH_FCS_VALID
+    attack: EthPacketGen.send_corrupted_fcs
+  - clause: ETH_LATENCY_BOUND
+    attack: tighten LATENCY_TOLERANCE_CYCLES to 0 and confirm fire
+  - clause: ETH_LATENCY_NEGATIVE
+    attack: insert a GMII frame without an AXI counterpart
