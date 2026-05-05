@@ -28543,5 +28543,61 @@
     "upstream_url": "https://opencores.org/projects/viterbi_decoder_soft_decision",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "lxp32",
+    "name": "lxp32-cpu",
+    "latest": "develop",
+    "versions": [
+      "develop"
+    ],
+    "commit_sha": "569f3b032acd6d43674f70779dd2aa5d0ff44b57",
+    "published_at": "2025-05-29T13:01:35+02:00",
+    "description": "LXP32 is a small and FPGA friendly 32-bit CPU IP core based on a simple, original instruction set. Its key features include",
+    "license": "MIT",
+    "license_class": "permissive",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/lxp32/lxp32-cpu.git",
+    "tags": [
+      "decode",
+      "digital",
+      "divider",
+      "execute",
+      "interrupt",
+      "mul16x16",
+      "multiplexer",
+      "processing",
+      "processor",
+      "ram256x32",
+      "scratchpad",
+      "shifter"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "lxp32c_top",
+      "lxp32u_top"
+    ],
+    "components": [
+      "lxp32_alu",
+      "lxp32_compl",
+      "lxp32_cpu",
+      "lxp32_dbus",
+      "lxp32_decode",
+      "lxp32_divider",
+      "lxp32_execute",
+      "lxp32_fetch",
+      "lxp32_icache",
+      "lxp32_interrupt_mux",
+      "lxp32_mul16x16",
+      "lxp32_mul_dsp",
+      "lxp32_mul_opt",
+      "lxp32_mul_seq",
+      "lxp32_ram256x32",
+      "lxp32_scratchpad",
+      "lxp32_shifter",
+      "lxp32_ubuf"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   }
 ]
