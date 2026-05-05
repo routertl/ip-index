@@ -166,3 +166,7 @@ components:
 - taxi_xgmii_baser_dec
 - taxi_xgmii_baser_enc
 total_entities: 54
+health_tier: silver
+contract_url: https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/eth_mac_1g_requirements.yml
+test_status_url: https://github.com/djmazure/routertl/tree/main/sdk/sim/cocotb/tests/eth_validator
+last_verified_at: '2026-05-05'
