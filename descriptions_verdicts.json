@@ -757,6 +757,20 @@
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.364 ingest. Direct upstream (RetroPM/m32632, no fork-curate). LLM produced the literal GitHub one-line description (\"Udo Möller's description\") which echos the repo's own about-text; rubric-locked."
+    },
+    "opencores/pci32tlite_oc": {
+      "verdict": "good",
+      "locked_text": "PCI 32-bit Lite Target controller — minimal PCI target-mode interface in VHDL, useful for Wishbone-bus designs needing a PCI front-end.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P4.33 ingest. LLM picked a banner-box of dashes/pipes as the description; rubric-locked."
+    },
+    "opencores/sap_1_nanoprogrammed_processor": {
+      "verdict": "good",
+      "locked_text": "SAP-1 (Simple-As-Possible) educational processor with nanoprogrammed control unit, following the Malvino reference design — pedagogical CPU implementation in Verilog.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P4.34 ingest. LLM picked Vivado tool-template header (Company:/Engineer:/Create Date:); rubric-locked."
     }
   }
 }

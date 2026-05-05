@@ -1,0 +1,56 @@
+name: sap_1_nanoprogrammed_processor
+namespace: opencores
+version: 0608d0daaf4b
+commit_sha: 0608d0daaf4b5a357eaeec5e794a3f6ef35e4fdb
+published_at: '2026-05-05T13:55:41+02:00'
+description: SAP-1 (Simple-As-Possible) educational processor with nanoprogrammed
+  control unit, following the Malvino reference design — pedagogical CPU implementation
+  in Verilog.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/routertl-mirrors/sap_1_nanoprogrammed_processor.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 0608d0daaf4b5a357eaeec5e794a3f6ef35e4fdb
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - M3CPU8.v
+tags:
+- accumulator
+- addr
+- counter
+- decoder
+- memory
+- micro
+- microcode
+- nano
+- nanocode
+- only
+- prog
+- read
+role: repo
+top_modules:
+- ACC
+- ADDR_ROM
+- ALU
+- BREG
+- IR
+- M3CPU8
+- MAR
+- MICROCODE_ROM
+- MICRO_PROG_COUNTER
+- NANOCODE_DECODER
+- NANOCODE_ROM
+- NANO_PROG_COUNTER
+- OREG
+- PC
+- SRAM
+total_entities: 15
+mirror_status: curated-mirror
+upstream_url: https://opencores.org/projects/sap_1_nanoprogrammed_processor
+health_tier: bronze
+last_verified_at: '2026-05-05'
