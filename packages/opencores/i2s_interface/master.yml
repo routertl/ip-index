@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: a34bb4d1683b024e697cf0a35344583fcd74a7d0
 published_at: '2007-10-09T20:13:08+00:00'
-description: I²S audio bus interface controller with Wishbone control port — VHDL
-  bridge between FPGA and external audio codecs.
+description: "I\xB2S audio bus interface controller with Wishbone control port \u2014\
+  \ VHDL bridge between FPGA and external audio codecs."
 license: GPL-2.0-or-later
 license_class: strong-copyleft
 source:
@@ -51,5 +51,6 @@ components:
 - rx_i2s_wbd
 - tx_i2s_wbd
 total_entities: 8
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

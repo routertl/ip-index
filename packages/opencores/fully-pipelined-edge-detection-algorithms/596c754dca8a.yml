@@ -3,8 +3,8 @@ namespace: opencores
 version: 596c754dca8a
 commit_sha: 596c754dca8ad85a2af9e01086fc791fa8c75ee8
 published_at: '2026-05-05T12:54:17+02:00'
-description: Fully-pipelined image edge-detection algorithms — Sobel and Canny family
-  operators in mature Verilog form, ready for streaming raster pixel inputs.
+description: "Fully-pipelined image edge-detection algorithms \u2014 Sobel and Canny\
+  \ family operators in mature Verilog form, ready for streaming raster pixel inputs."
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:
@@ -37,6 +37,7 @@ components:
 - ScharrFilter
 - SobelFilter
 total_entities: 5
+desc_source: verdict
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/fully-pipelined-edge-detection-algorithms
 health_tier: bronze

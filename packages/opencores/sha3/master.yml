@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: c25a5befc75e8f8392fdbff040165428b2f54bfd
 published_at: '2013-01-29T07:40:49+00:00'
-description: Keccak / SHA-3 cryptographic hash family — Apache-2.0 Verilog implementation
-  with ack/in handshake interface.
+description: "Keccak / SHA-3 cryptographic hash family \u2014 Apache-2.0 Verilog implementation\
+  \ with ack/in handshake interface."
 license: Apache-2.0
 license_class: permissive
 source:
@@ -39,5 +39,6 @@ components:
 - rconst
 - round
 total_entities: 8
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

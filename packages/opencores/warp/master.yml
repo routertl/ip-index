@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: 7e4e8ed164356ae0906752eb7099204c16a5d3b5
 published_at: '2008-06-26T20:11:33+00:00'
-description: Image warping pipeline with image-decay / temporal-aging effect — geometric
-  distortion + temporal modulation.
+description: "Image warping pipeline with image-decay / temporal-aging effect \u2014\
+  \ geometric distortion + temporal modulation."
 license: OpenCores-Permissive-1.0
 license_class: unknown
 source:
@@ -50,5 +50,6 @@ components:
 - warpreg
 - writedest
 total_entities: 14
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

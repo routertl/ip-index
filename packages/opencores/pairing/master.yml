@@ -88,5 +88,6 @@ components:
 - f3m_add
 - func6
 total_entities: 46
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

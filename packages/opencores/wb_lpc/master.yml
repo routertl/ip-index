@@ -3,8 +3,9 @@ namespace: opencores
 version: master
 commit_sha: 485adf16ad90821170c3b52f2965c0ae7d914c9c
 published_at: '2008-12-27T19:46:18+00:00'
-description: Wishbone-controlled LPC (Low Pin Count) bus interface — bridges Wishbone
-  to LPC for x86-class designs needing legacy device buses (serial, KBD, BMC).
+description: "Wishbone-controlled LPC (Low Pin Count) bus interface \u2014 bridges\
+  \ Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD,\
+  \ BMC)."
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:
@@ -47,5 +48,6 @@ top_modules:
 - wb_lpc_periph
 - wb_regfile
 total_entities: 7
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

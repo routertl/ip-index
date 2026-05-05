@@ -56,5 +56,6 @@ components:
 - S
 - final_round
 total_entities: 17
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

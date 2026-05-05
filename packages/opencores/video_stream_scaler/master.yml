@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: 8063961cee8ac56934ca647c9b20ad2c8c5740bf
 published_at: '2011-02-25T03:54:56+00:00'
-description: Video stream scaler — line-buffer-based filtering pipeline that resamples
-  raster video streams to a target output resolution. LGPL-2.1+ Verilog.
+description: "Video stream scaler \u2014 line-buffer-based filtering pipeline that\
+  \ resamples raster video streams to a target output resolution. LGPL-2.1+ Verilog."
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:
@@ -25,5 +25,6 @@ top_modules:
 - ramFifo
 - streamScaler
 total_entities: 3
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

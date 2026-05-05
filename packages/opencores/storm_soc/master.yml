@@ -18,6 +18,7 @@ routertl_compat:
   language: vhdl-2008
   library: work
   files:
+  - components/spi_controller/rtl/verilog/spi_defines.v
   - components/boot_rom/rtl/BOOT_ROM_FILE.vhd
   - components/miniuart/rtl/vhdl/utils.vhd
   - components/io_controller/rtl/GP_IO_CTRL.vhd
@@ -33,7 +34,6 @@ routertl_compat:
   - components/i2c_controller/rtl/vhdl/i2c_master_bit_ctrl.vhd
   - components/i2c_controller/rtl/vhdl/i2c_master_byte_ctrl.vhd
   - components/i2c_controller/rtl/vhdl/i2c_master_top.vhd
-  - components/spi_controller/rtl/verilog/spi_defines.v
   - components/spi_controller/rtl/verilog/timescale.v
   - components/spi_controller/rtl/verilog/spi_clgen.v
   - components/spi_controller/rtl/verilog/spi_shift.v
@@ -80,5 +80,6 @@ components:
 - spi_shift
 - spi_top
 total_entities: 22
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

@@ -45,6 +45,7 @@ components:
 - gng_smul_16_18
 - gng_smul_16_18_sadd_37
 total_entities: 7
+desc_source: readme
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/gng
 health_tier: bronze

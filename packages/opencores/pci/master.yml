@@ -17,9 +17,10 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - rtl/verilog/timescale.v
-  - rtl/verilog/pci_user_constants.v
+  - rtl/verilog/bus_commands.v
   - rtl/verilog/pci_constants.v
+  - rtl/verilog/pci_user_constants.v
+  - rtl/verilog/timescale.v
   - rtl/verilog/pci_async_reset_flop.v
   - rtl/verilog/pci_spoci_ctrl.v
   - rtl/verilog/pci_synchronizer_flop.v
@@ -31,7 +32,6 @@ routertl_compat:
   - rtl/verilog/pci_io_mux_ad_load_crit.v
   - rtl/verilog/pci_out_reg.v
   - rtl/verilog/pci_io_mux.v
-  - rtl/verilog/bus_commands.v
   - rtl/verilog/pci_par_crit.v
   - rtl/verilog/pci_perr_crit.v
   - rtl/verilog/pci_perr_en_crit.v
@@ -148,5 +148,6 @@ components:
 - pci_wbw_fifo_control
 - pci_wbw_wbr_fifos
 total_entities: 55
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

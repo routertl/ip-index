@@ -18,13 +18,16 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - hw/vlog/amber23/a23_config_defines.v
+  - hw/vlog/amber25/a25_config_defines.v
+  - hw/vlog/ethmac/eth_defines.v
+  - hw/vlog/system/system_config_defines.v
+  - hw/vlog/tb/global_defines.v
   - hw/vlog/lib/xs6_addsub_n.v
   - hw/vlog/amber23/a23_alu.v
   - hw/vlog/amber23/a23_localparams.v
   - hw/vlog/amber23/a23_barrel_shift.v
   - hw/vlog/amber23/a23_barrel_shift_fpga.v
-  - hw/vlog/tb/global_defines.v
-  - hw/vlog/amber23/a23_config_defines.v
   - hw/vlog/amber23/a23_functions.v
   - hw/vlog/lib/generic_sram_byte_en.v
   - hw/vlog/lib/generic_sram_line_en.v
@@ -49,7 +52,6 @@ routertl_compat:
   - hw/vlog/amber25/a25_barrel_shift.v
   - hw/vlog/amber25/a25_coprocessor.v
   - hw/vlog/amber25/a25_functions.v
-  - hw/vlog/amber25/a25_config_defines.v
   - hw/vlog/amber25/a25_decompile.v
   - hw/vlog/amber25/a25_decode.v
   - hw/vlog/amber25/a25_multiply.v
@@ -68,7 +70,6 @@ routertl_compat:
   - hw/vlog/system/boot_mem128.v
   - hw/vlog/lib/xs6_sram_4096x32_byte_en.v
   - hw/vlog/system/boot_mem32.v
-  - hw/vlog/system/system_config_defines.v
   - hw/vlog/system/clocks_resets.v
   - hw/vlog/system/ddr3_afifo.v
   - hw/vlog/system/system_functions.v
@@ -160,5 +161,6 @@ components:
 - xs6_sram_256x21_line_en
 - xs6_sram_4096x32_byte_en
 total_entities: 56
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

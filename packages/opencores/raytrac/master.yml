@@ -64,5 +64,6 @@ components:
 - shifter2xstage
 - uf
 total_entities: 19
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

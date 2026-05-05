@@ -21770,10 +21770,10 @@
       "tx_hold_fifo",
       "wishbone_if"
     ],
+    "desc_source": "verdict",
     "health_tier": "silver",
     "contract_url": "https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/oc_xge_mac.md",
-    "last_verified_at": "2026-05-04",
-    "desc_source": "verdict"
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21834,10 +21834,10 @@
       "ethmac",
       "xilinx_dist_ram_16x32"
     ],
+    "desc_source": "verdict",
     "health_tier": "silver",
     "contract_url": "https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/oc_ethmac.md",
-    "last_verified_at": "2026-05-04",
-    "desc_source": "verdict"
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21898,6 +21898,7 @@
       "duram",
       "flow_ctrl"
     ],
+    "desc_source": "verdict",
     "contract": {
       "traits": {
         "rx_strips_fcs": true,
@@ -21933,8 +21934,27 @@
         }
       ]
     },
-    "health_tier": "bronze",
-    "last_verified_at": "2026-05-04"
+    "health_tier": "silver",
+    "last_verified_at": "2026-05-05",
+    "hdl": {
+      "vendor_variants": {
+        "generic": [
+          "rtl/verilog/TECH/CLK_DIV2.v",
+          "rtl/verilog/TECH/CLK_SWITCH.v",
+          "rtl/verilog/TECH/duram.v"
+        ],
+        "intel": [
+          "rtl/verilog/TECH/altera/CLK_DIV2.v",
+          "rtl/verilog/TECH/altera/CLK_SWITCH.v",
+          "rtl/verilog/TECH/altera/duram.v"
+        ],
+        "xilinx": [
+          "rtl/verilog/TECH/xilinx/CLK_DIV2.v",
+          "rtl/verilog/TECH/xilinx/CLK_SWITCH.v",
+          "rtl/verilog/TECH/xilinx/duram.v"
+        ]
+      }
+    }
   },
   {
     "namespace": "opencores",
@@ -22025,6 +22045,7 @@
       "xs6_sram_256x21_line_en",
       "xs6_sram_4096x32_byte_en"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22116,6 +22137,7 @@
       "pci_wbw_fifo_control",
       "pci_wbw_wbr_fifos"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22219,6 +22241,7 @@
       "wishboneArb",
       "writeUSBWireData"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22285,6 +22308,7 @@
       "uart_rx",
       "uart_tx"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22337,6 +22361,7 @@
       "S",
       "final_round"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22383,6 +22408,7 @@
       "ge_1000baseX_sync",
       "ge_1000baseX_tx"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22429,6 +22455,7 @@
       "tsu",
       "wb_slv_wrapper"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22475,6 +22502,7 @@
       "sdrc_xfr_ctl",
       "wb2sdrc"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22529,6 +22557,7 @@
       "sd_data_xfer_trig",
       "sd_fifo_filler"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22588,8 +22617,16 @@
       "sd_tx_fifo",
       "versatile_fifo_dptam_dw"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
-    "last_verified_at": "2026-05-04"
+    "last_verified_at": "2026-05-04",
+    "hdl": {
+      "vendor_variants": {
+        "microchip": [
+          "rtl/sdc_fifo/verilog/sd_controller_fifo_actel.v"
+        ]
+      }
+    }
   },
   {
     "namespace": "opencores",
@@ -22650,6 +22687,7 @@
       "tap_top",
       "wb_slave_behavioral"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22722,6 +22760,7 @@
       "wb_master",
       "wb_slave"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -22761,8 +22800,16 @@
       "spwxmit_fast",
       "syncdff"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
-    "last_verified_at": "2026-05-04"
+    "last_verified_at": "2026-05-04",
+    "hdl": {
+      "vendor_variants": {
+        "generic": [
+          "rtl/vhdl/spwrecvfront_generic.vhd"
+        ]
+      }
+    }
   },
   {
     "namespace": "opencores",
@@ -22809,8 +22856,16 @@
       "vfifo_dual_port_ram_dc_dw",
       "vfifo_dual_port_ram_dc_sw"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
-    "last_verified_at": "2026-05-04"
+    "last_verified_at": "2026-05-04",
+    "hdl": {
+      "vendor_variants": {
+        "microchip": [
+          "rtl/verilog/async_fifo_dw_simplex_actel.v"
+        ]
+      }
+    }
   },
   {
     "namespace": "opencores",
@@ -22890,6 +22945,7 @@
       "uart_rx",
       "uart_tx"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23082,6 +23138,7 @@
       "oc8051_uart",
       "oc8051_wb_iinterface"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23124,6 +23181,7 @@
       "reg_sp",
       "regbank_axy"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23160,6 +23218,7 @@
       "microcode_branch",
       "registers"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23192,6 +23251,7 @@
       "ALU16",
       "RAM16X8D_regs"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23239,6 +23299,7 @@
       "calc_ea",
       "decode_alu"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23291,6 +23352,7 @@
       "sys",
       "uart"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23380,6 +23442,7 @@
       "WishBoneMasterUnit",
       "WishBoneSlaveUnit"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23426,6 +23489,7 @@
       "shifter2xstage",
       "uf"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23491,6 +23555,7 @@
       "register_file",
       "sad_selector"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23536,6 +23601,7 @@
       "reorder",
       "trellis_traceback"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23591,6 +23657,7 @@
       "rom",
       "v0"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23618,6 +23685,7 @@
     "components": [
       "registerDelay"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -23669,8 +23737,19 @@
       "spi_flash_top",
       "xilinx_dcm"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
-    "last_verified_at": "2026-05-04"
+    "last_verified_at": "2026-05-04",
+    "hdl": {
+      "vendor_variants": {
+        "intel": [
+          "utils/contributions/initialized_onchip_ram/minsoc_onchip_ram_top_altera.v"
+        ],
+        "xilinx": [
+          "utils/contributions/initialized_onchip_ram/minsoc_onchip_ram_top_xilinx.v"
+        ]
+      }
+    }
   },
   {
     "namespace": "opencores",
@@ -23727,6 +23806,7 @@
       "spi_shift",
       "spi_top"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -24237,6 +24317,7 @@
       "tlu_tdp",
       "zzadd13"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -24591,6 +24672,7 @@
       "wb_conbus_top",
       "xilinx_dist_ram_16x32"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26215,7 +26297,7 @@
     "versions": [
       "master"
     ],
-    "commit_sha": "c5723887",
+    "commit_sha": "c57238879332826f8e57744dabdb6e7ad86cbb2a",
     "published_at": "2024-10-01T21:23:24+03:00",
     "description": "I2C with interrupt support",
     "license": "BSD-2-Clause",
@@ -26255,6 +26337,7 @@
       "sequencer",
       "wishbone"
     ],
+    "desc_source": "ports",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -26337,6 +26420,7 @@
       "f3m_add",
       "func6"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26410,6 +26494,7 @@
       "G729A_CODEC_SDP",
       "G729_ASIP_RAM_1RW"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26476,6 +26561,7 @@
       "f3m_add",
       "func6"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26541,6 +26627,7 @@
       "t8243_async_notri",
       "t8243_core"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26603,6 +26690,7 @@
       "soc_pif8",
       "timer_periph"
     ],
+    "desc_source": "readme",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26653,6 +26741,7 @@
       "renvoi",
       "syscop"
     ],
+    "desc_source": "preserved",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26706,6 +26795,7 @@
       "fifo_register",
       "gfadder"
     ],
+    "desc_source": "preserved",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26759,6 +26849,7 @@
       "xgate_wbm_bus",
       "xgate_wbs_bus"
     ],
+    "desc_source": "header",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26805,6 +26896,7 @@
       "snespad_ctrl",
       "snespad_pad"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26849,6 +26941,7 @@
       "oc_fifo_basic",
       "random_ff"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -26891,6 +26984,7 @@
       "subbytes",
       "word_mixcolum"
     ],
+    "desc_source": "preserved",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-04"
   },
@@ -27003,6 +27097,7 @@
     "components": [
       "cfi_ctrl_engine"
     ],
+    "desc_source": "header",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27035,6 +27130,7 @@
       "srl_fifo_32",
       "srl_fifo_64"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27059,6 +27155,7 @@
       "sha256",
       "sha512"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27100,6 +27197,7 @@
       "ps2_host_tx",
       "ps2_host_watchdog"
     ],
+    "desc_source": "preserved",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27137,6 +27235,7 @@
       "warpreg",
       "writedest"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27163,6 +27262,7 @@
       "bcd_to_binary",
       "binary_to_bcd"
     ],
+    "desc_source": "header",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27190,6 +27290,7 @@
     "top_modules": [
       "wb_mcs51"
     ],
+    "desc_source": "header",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27229,6 +27330,7 @@
     "components": [
       "wb_size_bridge"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27263,6 +27365,7 @@
       "f_fun",
       "key_schedule"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27307,6 +27410,7 @@
       "mux3",
       "sbox"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27341,6 +27445,7 @@
       "f_fun",
       "key_schedule"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27389,6 +27494,7 @@
       "out_stage",
       "transport_in2out"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27414,6 +27520,7 @@
     "top_modules": [
       "fifo"
     ],
+    "desc_source": "ports",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27453,6 +27560,7 @@
       "usb_rx_phy",
       "usb_tx_phy"
     ],
+    "desc_source": "preserved",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27480,6 +27588,7 @@
     "top_modules": [
       "wb_flash"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27510,6 +27619,7 @@
       "key_schedule",
       "round_f"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27534,6 +27644,7 @@
       "ramFifo",
       "streamScaler"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27568,6 +27679,7 @@
       "f_fun",
       "key_schedule"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27594,6 +27706,7 @@
     "top_modules": [
       "cordic_iterative_int"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27633,6 +27746,7 @@
       "graycntr",
       "prim_dffe"
     ],
+    "desc_source": "header",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27669,6 +27783,7 @@
       "sine_lut",
       "tangent_lut"
     ],
+    "desc_source": "header",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27703,6 +27818,7 @@
       "f_fun",
       "key_schedule"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27737,6 +27853,7 @@
     "components": [
       "serial_divide_uu"
     ],
+    "desc_source": "header",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27792,6 +27909,7 @@
       "y_quantizer",
       "yd_q_h"
     ],
+    "desc_source": "header",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27831,6 +27949,7 @@
       "wb_lpc_periph",
       "wb_regfile"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27874,6 +27993,7 @@
       "rx_i2s_wbd",
       "tx_i2s_wbd"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27907,6 +28027,7 @@
       "rconst",
       "round"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -27935,6 +28056,7 @@
       "randomwalkfilter",
       "variableresetrandomwalkfilter"
     ],
+    "desc_source": "preserved",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/dpll-isdn",
     "health_tier": "bronze",
@@ -27969,6 +28091,7 @@
       "bnet_find_target",
       "concentrator_switch"
     ],
+    "desc_source": "preserved",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/xconcentrator",
     "health_tier": "bronze",
@@ -28012,6 +28135,7 @@
       "vedic2x2",
       "vedic4x4"
     ],
+    "desc_source": "preserved",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/8bit_vedic_multiplier",
     "health_tier": "bronze",
@@ -28047,6 +28171,7 @@
       "latch_unit",
       "nand_master"
     ],
+    "desc_source": "preserved",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/nand_controller",
     "health_tier": "bronze",
@@ -28074,6 +28199,7 @@
     "components": [
       "dff"
     ],
+    "desc_source": "readme",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/nlprg",
     "health_tier": "bronze",
@@ -28164,6 +28290,7 @@
       "RD_ALIGNER",
       "STEUERUNG"
     ],
+    "desc_source": "verdict",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
   },
@@ -28208,6 +28335,7 @@
       "table_reader",
       "window"
     ],
+    "desc_source": "preserved",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/linkruncca",
     "health_tier": "bronze",
@@ -28257,6 +28385,7 @@
       "sBox_8",
       "shift_rows"
     ],
+    "desc_source": "verdict",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/apbtoaes128",
     "health_tier": "bronze",
@@ -28281,6 +28410,7 @@
     "top_modules": [
       "wbfmtxhack"
     ],
+    "desc_source": "verdict",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/wbfmtx",
     "health_tier": "bronze",
@@ -28324,6 +28454,7 @@
       "gng_smul_16_18",
       "gng_smul_16_18_sadd_37"
     ],
+    "desc_source": "readme",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/gng",
     "health_tier": "bronze",
@@ -28358,6 +28489,7 @@
       "carry_generate",
       "propagate_generate"
     ],
+    "desc_source": "preserved",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/generic_parameterized_carry_lookahead_adder",
     "health_tier": "bronze",
@@ -28404,6 +28536,7 @@
       "sha256_padding",
       "sha256_regs"
     ],
+    "desc_source": "verdict",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/sha256_hash_core",
     "health_tier": "bronze",
@@ -28438,6 +28571,7 @@
       "ScharrFilter",
       "SobelFilter"
     ],
+    "desc_source": "verdict",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/fully-pipelined-edge-detection-algorithms",
     "health_tier": "bronze",
@@ -28498,6 +28632,7 @@
       "fm_ras_state",
       "fm_sys"
     ],
+    "desc_source": "preserved",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/wf3d",
     "health_tier": "bronze",
@@ -28539,6 +28674,7 @@
       "vit_fsm",
       "vit_tbu"
     ],
+    "desc_source": "preserved",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/viterbi_decoder_soft_decision",
     "health_tier": "bronze",
@@ -28640,6 +28776,7 @@
       "pciregs",
       "pciwbsequ"
     ],
+    "desc_source": "verdict",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/pci32tlite_oc",
     "health_tier": "bronze",
@@ -28691,6 +28828,7 @@
       "PC",
       "SRAM"
     ],
+    "desc_source": "verdict",
     "mirror_status": "curated-mirror",
     "upstream_url": "https://opencores.org/projects/sap_1_nanoprogrammed_processor",
     "health_tier": "bronze",

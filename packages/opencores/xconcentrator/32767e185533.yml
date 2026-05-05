@@ -35,6 +35,7 @@ components:
 - bnet_find_target
 - concentrator_switch
 total_entities: 3
+desc_source: preserved
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/xconcentrator
 health_tier: bronze

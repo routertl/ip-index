@@ -26,5 +26,6 @@ role: repo
 top_modules:
 - wb_mcs51
 total_entities: 1
+desc_source: header
 health_tier: bronze
 last_verified_at: '2026-05-05'

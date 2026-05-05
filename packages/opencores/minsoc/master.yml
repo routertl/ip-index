@@ -18,6 +18,8 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - rtl/verilog/interconnect_defines.v
+  - rtl/verilog/minsoc_startup/spi_defines.v
   - rtl/verilog/minsoc_startup/OR1K_startup_generic.v
   - rtl/verilog/altera_pll.v
   - rtl/verilog/xilinx_dcm.v
@@ -26,9 +28,7 @@ routertl_compat:
   - rtl/verilog/minsoc_onchip_ram.v
   - rtl/verilog/minsoc_onchip_ram_top.v
   - rtl/verilog/minsoc_tc_top.v
-  - rtl/verilog/interconnect_defines.v
   - rtl/verilog/minsoc_xilinx_internal_jtag.v
-  - rtl/verilog/minsoc_startup/spi_defines.v
   - rtl/verilog/minsoc_startup/spi_clgen.v
   - rtl/verilog/minsoc_startup/spi_shift.v
   - rtl/verilog/minsoc_startup/spi_top.v
@@ -65,5 +65,12 @@ components:
 - spi_flash_top
 - xilinx_dcm
 total_entities: 15
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+hdl:
+  vendor_variants:
+    intel:
+    - utils/contributions/initialized_onchip_ram/minsoc_onchip_ram_top_altera.v
+    xilinx:
+    - utils/contributions/initialized_onchip_ram/minsoc_onchip_ram_top_xilinx.v

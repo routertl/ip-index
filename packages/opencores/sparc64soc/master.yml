@@ -18,9 +18,10 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - OC-Ethernet/eth_defines.v
+  - OC-UART/uart_defines.v
   - NOR-flash/WBFLASH.v
   - WB2ALTDDR3/dram_wb.v
-  - OC-Ethernet/eth_defines.v
   - OC-UART/timescale.v
   - OC-Ethernet/eth_receivecontrol.v
   - OC-Ethernet/eth_transmitcontrol.v
@@ -235,7 +236,6 @@ routertl_compat:
   - T1-CPU/tlu/tlu.v
   - T1-CPU/rtl/sparc.v
   - os2wb/s1_top.v
-  - OC-UART/uart_defines.v
   - OC-UART/uart_debug_if.v
   - OC-UART/raminfr.v
   - OC-UART/uart_rfifo.v
@@ -614,5 +614,6 @@ components:
 - wb_conbus_top
 - xilinx_dist_ram_16x32
 total_entities: 318
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

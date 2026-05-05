@@ -113,5 +113,6 @@ components:
 - G729A_CODEC_SDP
 - G729_ASIP_RAM_1RW
 total_entities: 37
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

@@ -3,8 +3,8 @@ namespace: opencores
 version: HEAD
 commit_sha: 3f7adf4b32ae5cc3843d71840efe76132f2e7daa
 published_at: '2024-08-02T14:57:07+01:00'
-description: National Semiconductor NS32000-series 32-bit CPU implementation in Verilog
-  (Udo Möller). Maintained at RetroPM/m32632; LGPL-2.1.
+description: "National Semiconductor NS32000-series 32-bit CPU implementation in Verilog\
+  \ (Udo M\xF6ller). Maintained at RetroPM/m32632; LGPL-2.1."
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:
@@ -102,5 +102,6 @@ components:
 - RD_ALIGNER
 - STEUERUNG
 total_entities: 52
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

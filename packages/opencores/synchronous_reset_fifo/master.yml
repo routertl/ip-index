@@ -24,5 +24,6 @@ role: repo
 top_modules:
 - fifo
 total_entities: 1
+desc_source: ports
 health_tier: bronze
 last_verified_at: '2026-05-05'

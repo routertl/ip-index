@@ -44,6 +44,7 @@ components:
 - vit_fsm
 - vit_tbu
 total_entities: 7
+desc_source: preserved
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/viterbi_decoder_soft_decision
 health_tier: bronze

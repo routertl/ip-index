@@ -17,8 +17,8 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - rtl/verilog/oc8051_timescale.v
   - rtl/verilog/oc8051_defines.v
+  - rtl/verilog/oc8051_timescale.v
   - rtl/verilog/oc8051_acc.v
   - rtl/verilog/oc8051_divide.v
   - rtl/verilog/oc8051_multiply.v
@@ -220,5 +220,6 @@ components:
 - oc8051_uart
 - oc8051_wb_iinterface
 total_entities: 156
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

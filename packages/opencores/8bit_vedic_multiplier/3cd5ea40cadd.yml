@@ -47,6 +47,7 @@ components:
 - vedic2x2
 - vedic4x4
 total_entities: 9
+desc_source: preserved
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/8bit_vedic_multiplier
 health_tier: bronze

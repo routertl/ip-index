@@ -55,5 +55,6 @@ components:
 - fifo_register
 - gfadder
 total_entities: 17
+desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-04'

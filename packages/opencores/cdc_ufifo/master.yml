@@ -44,5 +44,6 @@ components:
 - graycntr
 - prim_dffe
 total_entities: 5
+desc_source: header
 health_tier: bronze
 last_verified_at: '2026-05-05'

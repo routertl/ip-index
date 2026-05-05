@@ -3,8 +3,8 @@ namespace: opencores
 version: HEAD
 commit_sha: 74ca9275976b427baf2fccd052cffbc7763e7b16
 published_at: '2026-05-05T12:54:29+02:00'
-description: APB-to-AES-128 bridge — exposes an AES-128 cipher core through the AMBA
-  APB peripheral bus for register-mapped key/data access.
+description: "APB-to-AES-128 bridge \u2014 exposes an AES-128 cipher core through\
+  \ the AMBA APB peripheral bus for register-mapped key/data access."
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:
@@ -56,6 +56,7 @@ components:
 - sBox_8
 - shift_rows
 total_entities: 11
+desc_source: verdict
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/apbtoaes128
 health_tier: bronze

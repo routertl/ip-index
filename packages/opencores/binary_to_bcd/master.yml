@@ -27,5 +27,6 @@ top_modules:
 - bcd_to_binary
 - binary_to_bcd
 total_entities: 2
+desc_source: header
 health_tier: bronze
 last_verified_at: '2026-05-05'

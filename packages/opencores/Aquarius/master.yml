@@ -17,9 +17,9 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - verilog/defines.v
   - verilog/timescale.v
   - verilog/lib.v
-  - verilog/defines.v
   - verilog/register.v
   - verilog/datapath.v
   - verilog/decode.v
@@ -69,5 +69,6 @@ components:
 - sys
 - uart
 total_entities: 16
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: eafb83d652990c7afe6862deea87093e8c609902
 published_at: '2014-03-30T09:58:35+00:00'
-description: Yet Another CORDIC — generic iterative CORDIC pipeline for trigonometric
-  and hyperbolic functions with parameterised data width.
+description: "Yet Another CORDIC \u2014 generic iterative CORDIC pipeline for trigonometric\
+  \ and hyperbolic functions with parameterised data width."
 license: LGPL-3.0-or-later
 license_class: weak-copyleft
 source:
@@ -27,5 +27,6 @@ role: repo
 top_modules:
 - cordic_iterative_int
 total_entities: 1
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: 244a030ec8bdba85fed53e9612ca069c33350dfb
 published_at: '2013-08-10T10:19:23+00:00'
-description: DES (Data Encryption Standard) cipher core — 56-bit key, 64-bit block.
-  GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants.
+description: "DES (Data Encryption Standard) cipher core \u2014 56-bit key, 64-bit\
+  \ block. GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants."
 license: GPL-3.0-or-later
 license_class: strong-copyleft
 source:
@@ -36,5 +36,6 @@ components:
 - f_fun
 - key_schedule
 total_entities: 4
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

@@ -51,6 +51,7 @@ components:
 - table_reader
 - window
 total_entities: 8
+desc_source: preserved
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/linkruncca
 health_tier: bronze

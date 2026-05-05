@@ -3,8 +3,8 @@ namespace: opencores
 version: 1685821cee9f
 commit_sha: 1685821cee9f14177b334c656626480cc11a019c
 published_at: '2026-05-05T13:55:35+02:00'
-description: PCI 32-bit Lite Target controller — minimal PCI target-mode interface
-  in VHDL, useful for Wishbone-bus designs needing a PCI front-end.
+description: "PCI 32-bit Lite Target controller \u2014 minimal PCI target-mode interface\
+  \ in VHDL, useful for Wishbone-bus designs needing a PCI front-end."
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:
@@ -48,6 +48,7 @@ components:
 - pciregs
 - pciwbsequ
 total_entities: 17
+desc_source: verdict
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/pci32tlite_oc
 health_tier: bronze

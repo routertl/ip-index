@@ -17,12 +17,12 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - rtl/verilog/ge_1000baseX_constants.v
+  - rtl/verilog/ge_1000baseX_regs.v
   - rtl/verilog/timescale.v
   - rtl/verilog/clean_rst.v
   - rtl/verilog/decoder_8b10b.v
   - rtl/verilog/encoder_8b10b.v
-  - rtl/verilog/ge_1000baseX_regs.v
-  - rtl/verilog/ge_1000baseX_constants.v
   - rtl/verilog/ge_1000baseX_an.v
   - rtl/verilog/ge_1000baseX_mdio.v
   - rtl/verilog/ge_1000baseX_rx.v
@@ -57,5 +57,6 @@ components:
 - ge_1000baseX_sync
 - ge_1000baseX_tx
 total_entities: 10
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

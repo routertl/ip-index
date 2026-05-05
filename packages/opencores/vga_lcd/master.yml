@@ -17,6 +17,7 @@ routertl_compat:
   language: verilog
   library: count
   files:
+  - rtl/verilog/vga_defines.v
   - rtl/vhdl/fifo.vhd
   - rtl/vhdl/dpm.vhd
   - rtl/vhdl/fifo_dc.vhd
@@ -34,7 +35,6 @@ routertl_compat:
   - rtl/vhdl/csm_pb.vhd
   - rtl/vhdl/vga_and_clut.vhd
   - rtl/vhdl/vga_and_clut_tstbench.vhd
-  - rtl/verilog/vga_defines.v
   - rtl/verilog/vga_clkgen.v
   - rtl/verilog/vga_colproc.v
   - rtl/verilog/vga_csm_pb.v
@@ -101,5 +101,6 @@ components:
 - wb_master
 - wb_slave
 total_entities: 36
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

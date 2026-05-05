@@ -58,5 +58,6 @@ components:
 - out_stage
 - transport_in2out
 total_entities: 12
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

@@ -91,5 +91,6 @@ components:
 - soc_pif8
 - timer_periph
 total_entities: 26
+desc_source: readme
 health_tier: bronze
 last_verified_at: '2026-05-04'

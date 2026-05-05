@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: 4d2f19cbf9ddb28a05cec589a96436b404601edd
 published_at: '2009-03-10T09:35:24+00:00'
-description: Xilinx SRL16/SRL32-based compact FIFO — uses SRL shift-register primitives
-  for storage on Xilinx FPGA targets. VHDL utility primitive.
+description: "Xilinx SRL16/SRL32-based compact FIFO \u2014 uses SRL shift-register\
+  \ primitives for storage on Xilinx FPGA targets. VHDL utility primitive."
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:
@@ -34,5 +34,6 @@ top_modules:
 - srl_fifo_32
 - srl_fifo_64
 total_entities: 3
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

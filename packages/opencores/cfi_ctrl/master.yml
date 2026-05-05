@@ -31,5 +31,6 @@ top_modules:
 components:
 - cfi_ctrl_engine
 total_entities: 2
+desc_source: header
 health_tier: bronze
 last_verified_at: '2026-05-05'

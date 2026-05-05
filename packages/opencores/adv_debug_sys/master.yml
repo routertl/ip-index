@@ -18,6 +18,13 @@ routertl_compat:
   language: verilog
   library: altera_mf
   files:
+  - Hardware/adv_dbg_if/bench/full_system/xsv_fpga_defines.v
+  - Hardware/adv_dbg_if/bench/simulated_system/wb_model_defines.v
+  - Hardware/adv_dbg_if/rtl/verilog/adbg_defines.v
+  - Hardware/adv_dbg_if/rtl/verilog/adbg_or1k_defines.v
+  - Hardware/adv_dbg_if/rtl/verilog/adbg_wb_defines.v
+  - Hardware/jtag/tap/rtl/verilog/tap_defines.v
+  - Hardware/xilinx_internal_jtag/rtl/verilog/xilinx_internal_jtag_options.v
   - Hardware/jtag/cells/rtl/verilog/BiDirectionalCell.v
   - Hardware/jtag/cells/rtl/verilog/ControlCell.v
   - Hardware/jtag/cells/rtl/verilog/InputCell.v
@@ -28,13 +35,10 @@ routertl_compat:
   - Hardware/adv_dbg_if/rtl/verilog/syncflop.v
   - Hardware/adv_dbg_if/rtl/verilog/syncreg.v
   - Hardware/adv_dbg_if/rtl/verilog/adbg_jsp_biu.v
-  - Hardware/adv_dbg_if/rtl/verilog/adbg_defines.v
   - Hardware/adv_dbg_if/rtl/verilog/adbg_jsp_module.v
   - Hardware/adv_dbg_if/rtl/verilog/adbg_or1k_biu.v
-  - Hardware/adv_dbg_if/rtl/verilog/adbg_or1k_defines.v
   - Hardware/adv_dbg_if/rtl/verilog/adbg_or1k_status_reg.v
   - Hardware/adv_dbg_if/rtl/verilog/adbg_or1k_module.v
-  - Hardware/adv_dbg_if/rtl/verilog/adbg_wb_defines.v
   - Hardware/adv_dbg_if/rtl/verilog/adbg_wb_biu.v
   - Hardware/adv_dbg_if/rtl/verilog/adbg_wb_module.v
   - Hardware/adv_dbg_if/rtl/verilog/adbg_top.v
@@ -44,13 +48,9 @@ routertl_compat:
   - Software/adv_jtag_bridge/sim_rtl/dbg_comm.v
   - Software/adv_jtag_bridge/sim_rtl/dbg_comm_vpi.v
   - Hardware/adv_dbg_if/bench/full_system/onchip_ram_top.v
-  - Hardware/jtag/tap/rtl/verilog/tap_defines.v
   - Hardware/jtag/tap/rtl/verilog/tap_top.v
-  - Hardware/adv_dbg_if/bench/simulated_system/wb_model_defines.v
   - Hardware/adv_dbg_if/bench/simulated_system/wb_slave_behavioral.v
-  - Hardware/xilinx_internal_jtag/rtl/verilog/xilinx_internal_jtag_options.v
   - Hardware/xilinx_internal_jtag/rtl/verilog/xilinx_internal_jtag.v
-  - Hardware/adv_dbg_if/bench/full_system/xsv_fpga_defines.v
   - Hardware/adv_dbg_if/bench/simulated_system/adv_dbg_tb.v
   - Hardware/adv_dbg_if/bench/full_system/xsv_fpga_top.v
 tags:
@@ -96,5 +96,6 @@ components:
 - tap_top
 - wb_slave_behavioral
 total_entities: 26
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

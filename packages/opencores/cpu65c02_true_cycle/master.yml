@@ -47,5 +47,6 @@ components:
 - reg_sp
 - regbank_axy
 total_entities: 7
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

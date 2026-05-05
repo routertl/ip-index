@@ -27,5 +27,6 @@ role: repo
 top_modules:
 - wb_flash
 total_entities: 1
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

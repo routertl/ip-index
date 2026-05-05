@@ -17,7 +17,8 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - rtl/verilog/async_fifo_dw_simplex_actel.v
+  - rtl/verilog/gray_counter_defines.v
+  - rtl/verilog/sd_counter_defines.v
   - rtl/verilog/dff_sr.v
   - rtl/verilog/versatile_fifo_async_cmp.v
   - rtl/verilog/versatile_fifo_dual_port_ram_dc_dw.v
@@ -58,5 +59,10 @@ components:
 - vfifo_dual_port_ram_dc_dw
 - vfifo_dual_port_ram_dc_sw
 total_entities: 12
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+hdl:
+  vendor_variants:
+    microchip:
+    - rtl/verilog/async_fifo_dw_simplex_actel.v

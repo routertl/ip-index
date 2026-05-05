@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: f1c4840940a3e22e3c34a6ee78cbfc3021e0d02e
 published_at: '2013-08-10T10:22:38+00:00'
-description: DESL (DES-Lightweight) variant — area-optimised DES with a single shared
-  S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore.
+description: "DESL (DES-Lightweight) variant \u2014 area-optimised DES with a single\
+  \ shared S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore."
 license: GPL-3.0-or-later
 license_class: strong-copyleft
 source:
@@ -36,5 +36,6 @@ components:
 - f_fun
 - key_schedule
 total_entities: 4
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

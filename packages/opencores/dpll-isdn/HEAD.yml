@@ -32,6 +32,7 @@ components:
 - randomwalkfilter
 - variableresetrandomwalkfilter
 total_entities: 5
+desc_source: preserved
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/dpll-isdn
 health_tier: bronze

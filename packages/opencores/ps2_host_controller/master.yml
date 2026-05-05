@@ -46,5 +46,6 @@ components:
 - ps2_host_tx
 - ps2_host_watchdog
 total_entities: 5
+desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-05'

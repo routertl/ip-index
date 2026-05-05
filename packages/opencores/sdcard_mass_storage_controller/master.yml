@@ -17,9 +17,9 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - rtl/sdc_fifo/verilog/versatile_fifo_dptam_dw.v
-  - rtl/sdc_fifo/verilog/sd_controller_fifo_actel.v
   - rtl/sdc_dma/verilog/sd_defines.v
+  - rtl/sdc_fifo/verilog/sd_defines.v
+  - rtl/sdc_fifo/verilog/versatile_fifo_dptam_dw.v
   - rtl/sdc_dma/verilog/sd_bd.v
   - rtl/sdc_dma/verilog/sd_clock_divider.v
   - rtl/sdc_dma/verilog/sd_cmd_master.v
@@ -74,5 +74,10 @@ components:
 - sd_tx_fifo
 - versatile_fifo_dptam_dw
 total_entities: 23
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+hdl:
+  vendor_variants:
+    microchip:
+    - rtl/sdc_fifo/verilog/sd_controller_fifo_actel.v

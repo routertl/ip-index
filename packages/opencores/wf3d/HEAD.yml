@@ -79,6 +79,7 @@ components:
 - fm_ras_state
 - fm_sys
 total_entities: 22
+desc_source: preserved
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/wf3d
 health_tier: bronze

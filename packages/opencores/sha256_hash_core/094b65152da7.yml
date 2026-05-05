@@ -3,8 +3,8 @@ namespace: opencores
 version: 094b65152da7
 commit_sha: 094b65152da7e696ccbbe5a58851c1391a5b02c7
 published_at: '2026-05-05T12:54:40+02:00'
-description: SHA-256 cryptographic hash core — single-block 256-bit Secure Hash Algorithm
-  2 implementation with synchronous control interface.
+description: "SHA-256 cryptographic hash core \u2014 single-block 256-bit Secure Hash\
+  \ Algorithm 2 implementation with synchronous control interface."
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:
@@ -50,6 +50,7 @@ components:
 - sha256_padding
 - sha256_regs
 total_entities: 8
+desc_source: verdict
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/sha256_hash_core
 health_tier: bronze

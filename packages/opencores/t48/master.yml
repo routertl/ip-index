@@ -103,5 +103,6 @@ components:
 - t8243_async_notri
 - t8243_core
 total_entities: 29
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

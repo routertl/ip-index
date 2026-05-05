@@ -18,11 +18,11 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - rtl/verilog/ethmac_defines.v
   - rtl/verilog/timescale.v
   - rtl/verilog/eth_clockgen.v
   - rtl/verilog/eth_cop.v
   - rtl/verilog/eth_crc.v
-  - rtl/verilog/ethmac_defines.v
   - rtl/verilog/xilinx_dist_ram_16x32.v
   - rtl/verilog/eth_fifo.v
   - rtl/verilog/eth_receivecontrol.v
@@ -89,6 +89,7 @@ components:
 - ethmac
 - xilinx_dist_ram_16x32
 total_entities: 26
+desc_source: verdict
 health_tier: silver
 contract_url: https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/oc_ethmac.md
 last_verified_at: '2026-05-04'

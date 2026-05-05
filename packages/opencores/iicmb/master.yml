@@ -1,7 +1,7 @@
 name: iicmb
 namespace: opencores
 version: master
-commit_sha: c5723887
+commit_sha: c57238879332826f8e57744dabdb6e7ad86cbb2a
 published_at: '2024-10-01T21:23:24+03:00'
 description: I2C with interrupt support
 license: BSD-2-Clause
@@ -11,7 +11,7 @@ source:
   url: https://github.com/sshuv/iicmb.git
   tag: master
   ip_yml_path: .
-  resolved_commit: c5723887
+  resolved_commit: c57238879332826f8e57744dabdb6e7ad86cbb2a
 routertl_compat:
   language: vhdl-2008
   library: iicmb
@@ -63,5 +63,6 @@ components:
 - sequencer
 - wishbone
 total_entities: 14
+desc_source: ports
 health_tier: bronze
 last_verified_at: '2026-05-05'

@@ -17,8 +17,8 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - rtl/lib/async_fifo.v
   - rtl/core/sdrc_define.v
+  - rtl/lib/async_fifo.v
   - rtl/core/sdrc_bank_fsm.v
   - rtl/core/sdrc_bank_ctl.v
   - rtl/core/sdrc_bs_convert.v
@@ -55,5 +55,6 @@ components:
 - sdrc_xfr_ctl
 - wb2sdrc
 total_entities: 10
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

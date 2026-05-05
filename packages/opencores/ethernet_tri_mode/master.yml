@@ -18,13 +18,11 @@ routertl_compat:
   language: verilog
   library: work
   files:
+  - rtl/verilog/header.v
   - rtl/verilog/MAC_rx/Broadcast_filter.v
-  - rtl/verilog/TECH/altera/CLK_DIV2.v
-  - rtl/verilog/TECH/altera/CLK_SWITCH.v
   - rtl/verilog/MAC_rx/CRC_chk.v
   - rtl/verilog/MAC_tx/CRC_gen.v
   - rtl/verilog/Clk_ctrl.v
-  - rtl/verilog/TECH/altera/duram.v
   - rtl/verilog/MAC_rx/MAC_rx_FF.v
   - rtl/verilog/MAC_rx/MAC_rx_add_chk.v
   - rtl/verilog/MAC_rx/MAC_rx_ctrl.v
@@ -86,6 +84,7 @@ components:
 - duram
 - flow_ctrl
 total_entities: 26
+desc_source: verdict
 contract:
   traits:
     rx_strips_fcs: true
@@ -121,5 +120,19 @@ contract:
     workaround: BFM/host pulses Rx_mac_rd low for one cycle after each EOP
     fix_pr: null
     review_after: '2026-08-03'
-health_tier: bronze
-last_verified_at: '2026-05-04'
+health_tier: silver
+last_verified_at: '2026-05-05'
+hdl:
+  vendor_variants:
+    generic:
+    - rtl/verilog/TECH/CLK_DIV2.v
+    - rtl/verilog/TECH/CLK_SWITCH.v
+    - rtl/verilog/TECH/duram.v
+    intel:
+    - rtl/verilog/TECH/altera/CLK_DIV2.v
+    - rtl/verilog/TECH/altera/CLK_SWITCH.v
+    - rtl/verilog/TECH/altera/duram.v
+    xilinx:
+    - rtl/verilog/TECH/xilinx/CLK_DIV2.v
+    - rtl/verilog/TECH/xilinx/CLK_SWITCH.v
+    - rtl/verilog/TECH/xilinx/duram.v

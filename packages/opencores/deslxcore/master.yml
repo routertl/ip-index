@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: ca3416cec8d26472d0ccdd4f9e0c9a379a983e1d
 published_at: '2013-08-10T10:28:40+00:00'
-description: DESLX variant — combines the DES-Lightweight S-box optimisation with
-  DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore.
+description: "DESLX variant \u2014 combines the DES-Lightweight S-box optimisation\
+  \ with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore."
 license: GPL-3.0-or-later
 license_class: strong-copyleft
 source:
@@ -36,5 +36,6 @@ components:
 - f_fun
 - key_schedule
 total_entities: 4
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

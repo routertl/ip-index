@@ -36,6 +36,7 @@ components:
 - latch_unit
 - nand_master
 total_entities: 4
+desc_source: preserved
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/nand_controller
 health_tier: bronze

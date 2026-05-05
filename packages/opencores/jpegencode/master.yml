@@ -73,5 +73,6 @@ components:
 - y_quantizer
 - yd_q_h
 total_entities: 19
+desc_source: header
 health_tier: bronze
 last_verified_at: '2026-05-05'

@@ -57,5 +57,6 @@ components:
 - xgate_wbm_bus
 - xgate_wbs_bus
 total_entities: 17
+desc_source: header
 health_tier: bronze
 last_verified_at: '2026-05-04'

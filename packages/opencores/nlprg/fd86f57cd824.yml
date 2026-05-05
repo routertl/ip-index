@@ -27,6 +27,7 @@ top_modules:
 components:
 - dff
 total_entities: 2
+desc_source: readme
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/nlprg
 health_tier: bronze

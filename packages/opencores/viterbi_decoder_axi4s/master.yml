@@ -52,5 +52,6 @@ components:
 - reorder
 - trellis_traceback
 total_entities: 9
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

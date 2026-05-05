@@ -17,11 +17,25 @@ routertl_compat:
   language: verilog
   library: work
   files:
-  - RTL/include/timescale.v
-  - RTL/include/wishBoneBus_h.v
+  - RTL/include/usbConstants_h.v
+  - RTL/include/usbHostControl_h.v
   - RTL/include/usbHostSlave_h.v
-  - usbDevice/RTL/usbHostSlaveReg_define.v
+  - RTL/include/usbSerialInterfaceEngine_h.v
+  - RTL/include/usbSlaveControl_h.v
+  - RTL/include/wishBoneBus_h.v
+  - bench/usbHostSlaveTB_defines.v
   - usbDevice/RTL/usbDevice_define.v
+  - usbDevice/RTL/usbHostSlaveReg_define.v
+  - usbDevice/bench/usbHostSlaveTB_defines.v
+  - usbDevice/syn/Actel/usbDeviceActelTop/hdl/usbConstants_h.v
+  - usbDevice/syn/Actel/usbDeviceActelTop/hdl/usbDevice_define.v
+  - usbDevice/syn/Actel/usbDeviceActelTop/hdl/usbHostControl_h.v
+  - usbDevice/syn/Actel/usbDeviceActelTop/hdl/usbHostSlaveReg_define.v
+  - usbDevice/syn/Actel/usbDeviceActelTop/hdl/usbHostSlave_h.v
+  - usbDevice/syn/Actel/usbDeviceActelTop/hdl/usbSerialInterfaceEngine_h.v
+  - usbDevice/syn/Actel/usbDeviceActelTop/hdl/usbSlaveControl_h.v
+  - usbDevice/syn/Actel/usbDeviceActelTop/hdl/wishBoneBus_h.v
+  - RTL/include/timescale.v
   - usbDevice/RTL/EP0.v
   - usbDevice/RTL/EP1Mouse.v
   - RTL/hostController/hctxportarbiter.v
@@ -30,17 +44,13 @@ routertl_compat:
   - RTL/buffers/fifoRTL.v
   - RTL/buffers/RxFifo.v
   - RTL/slaveController/sctxportarbiter.v
-  - RTL/include/usbSerialInterfaceEngine_h.v
   - RTL/serialInterfaceEngine/siereceiver.v
-  - RTL/include/usbConstants_h.v
   - RTL/serialInterfaceEngine/SIETransmitter.v
   - RTL/hostController/sofcontroller.v
-  - RTL/include/usbHostControl_h.v
   - RTL/hostController/softransmit.v
   - RTL/buffers/TxFifoBI.v
   - RTL/buffers/TxFifo.v
   - RTL/hostController/USBHostControlBI.v
-  - RTL/include/usbSlaveControl_h.v
   - RTL/slaveController/USBSlaveControlBI.v
   - RTL/serialInterfaceEngine/usbTxWireArbiter.v
   - usbDevice/RTL/checkLineState.v
@@ -68,7 +78,6 @@ routertl_compat:
   - RTL/slaveController/slaveSendpacket.v
   - RTL/slaveController/slavecontroller.v
   - RTL/hostController/speedCtrlMux.v
-  - usbDevice/bench/usbHostSlaveTB_defines.v
   - usbDevice/RTL/usbROM_logitech_mouse.v
   - RTL/serialInterfaceEngine/updateCRC16.v
   - RTL/serialInterfaceEngine/updateCRC5.v
@@ -178,5 +187,6 @@ components:
 - wishboneArb
 - writeUSBWireData
 total_entities: 67
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

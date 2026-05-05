@@ -41,5 +41,6 @@ components:
 - usb_rx_phy
 - usb_tx_phy
 total_entities: 3
+desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-05'

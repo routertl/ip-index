@@ -54,5 +54,6 @@ top_modules:
 - oc_fifo_basic
 - random_ff
 total_entities: 10
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

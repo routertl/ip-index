@@ -3,9 +3,9 @@ namespace: opencores
 version: 0608d0daaf4b
 commit_sha: 0608d0daaf4b5a357eaeec5e794a3f6ef35e4fdb
 published_at: '2026-05-05T13:55:41+02:00'
-description: SAP-1 (Simple-As-Possible) educational processor with nanoprogrammed
-  control unit, following the Malvino reference design — pedagogical CPU implementation
-  in Verilog.
+description: "SAP-1 (Simple-As-Possible) educational processor with nanoprogrammed\
+  \ control unit, following the Malvino reference design \u2014 pedagogical CPU implementation\
+  \ in Verilog."
 license: LGPL-2.1-or-later
 license_class: weak-copyleft
 source:
@@ -50,6 +50,7 @@ top_modules:
 - PC
 - SRAM
 total_entities: 15
+desc_source: verdict
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/sap_1_nanoprogrammed_processor
 health_tier: bronze

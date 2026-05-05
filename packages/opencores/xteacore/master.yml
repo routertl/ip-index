@@ -3,8 +3,8 @@ namespace: opencores
 version: master
 commit_sha: 16f8a4630851e7b69bcd83b4f1bb40644bf6a02d
 published_at: '2013-07-27T12:19:23+00:00'
-description: XTEA (eXtended Tiny Encryption Algorithm) cipher core — 128-bit key,
-  64-bit block, 64 Feistel rounds. GPL-3+ VHDL.
+description: "XTEA (eXtended Tiny Encryption Algorithm) cipher core \u2014 128-bit\
+  \ key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL."
 license: GPL-3.0-or-later
 license_class: strong-copyleft
 source:
@@ -31,5 +31,6 @@ components:
 - key_schedule
 - round_f
 total_entities: 3
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'

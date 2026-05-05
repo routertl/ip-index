@@ -36,5 +36,6 @@ top_modules:
 - microcode_branch
 - registers
 total_entities: 8
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'

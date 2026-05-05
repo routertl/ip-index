@@ -41,5 +41,6 @@ top_modules:
 - sine_lut
 - tangent_lut
 total_entities: 7
+desc_source: header
 health_tier: bronze
 last_verified_at: '2026-05-05'

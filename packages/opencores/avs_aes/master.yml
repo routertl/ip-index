@@ -3,8 +3,9 @@ namespace: opencores
 version: master
 commit_sha: b1c1fce84629551eab88c1dc8cfcf7eea121622e
 published_at: '2014-04-19T21:02:24+00:00'
-description: AES (Advanced Encryption Standard) 128-bit encryption/decryption block
-  (AVS variant) — BSD-2-Clause Verilog primitive with synchronous load/ready handshake.
+description: "AES (Advanced Encryption Standard) 128-bit encryption/decryption block\
+  \ (AVS variant) \u2014 BSD-2-Clause Verilog primitive with synchronous load/ready\
+  \ handshake."
 license: BSD-2-Clause
 license_class: permissive
 source:
@@ -55,5 +56,6 @@ components:
 - mux3
 - sbox
 total_entities: 12
+desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'
