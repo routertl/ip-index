@@ -1,0 +1,59 @@
+name: rs_decoder_31_19_6
+namespace: opencores
+version: master
+commit_sha: 06190eed9f10a429d311bb77b5bf48db4210c3a6
+published_at: '2006-02-09T06:06:28+00:00'
+description: Decodes Reed-Solomon encoded words and corrects errors in received data.
+license: OpenCores-Permissive-1.0
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/rs_decoder_31_19_6.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 06190eed9f10a429d311bb77b5bf48db4210c3a6
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - common_modules.v
+  - cseeblock.v
+  - controller.v
+  - fifo_register.v
+  - RSDecoder.v
+tags:
+- buffer
+- degree0
+- degree1
+- degree2
+- degree3
+- degree4
+- degree5
+- degree6
+- fifo
+- queue
+- register
+- register5
+role: repo
+top_modules:
+- RSDecoder
+- degree0_cell
+- degree1_cell
+- degree2_cell
+- degree3_cell
+- degree4_cell
+- degree5_cell
+- degree6_cell
+- inverscomb
+- lcpmult
+- mux2_to_1
+- register5_wl
+- register5_wlh
+components:
+- CSEEblock
+- MainControl
+- fifo_register
+- gfadder
+total_entities: 17
+health_tier: bronze
+last_verified_at: '2026-05-04'

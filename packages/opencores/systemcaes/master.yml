@@ -1,0 +1,55 @@
+name: systemcaes
+namespace: opencores
+version: master
+commit_sha: 46f91d7e1fc163d58dd08db8c33b64e102e38e9b
+published_at: '2005-09-19T09:15:18+00:00'
+description: Encrypts or decrypts 128-bit AES data blocks using a provided key with
+  configurable operation mode.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/systemcaes.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 46f91d7e1fc163d58dd08db8c33b64e102e38e9b
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/aes192lowarea/timescale.v
+  - rtl/verilog/aes128lowarea/keysched.v
+  - rtl/verilog/aes192lowarea/byte_mixcolum.v
+  - rtl/verilog/aes192lowarea/word_mixcolum.v
+  - rtl/verilog/aes192lowarea/mixcolum.v
+  - rtl/verilog/aes192lowarea/sbox.v
+  - rtl/verilog/aes192lowarea/subbytes.v
+  - rtl/verilog/aes128lowarea/aes.v
+  - rtl/verilog/aes192lowarea/keysched192.v
+  - rtl/verilog/aes192lowarea/aes192.v
+  - rtl/verilog/aes128lowarea/wb_aescontroller.v
+tags:
+- aes
+- bus
+- byte
+- controller
+- mixcolum
+- wb
+- wishbone
+- word
+role: repo
+top_modules:
+- aes
+- aes192
+- wb_aes_controller
+components:
+- byte_mixcolum
+- keysched
+- keysched192
+- mixcolum
+- sbox
+- subbytes
+- word_mixcolum
+total_entities: 10
+health_tier: bronze
+last_verified_at: '2026-05-04'

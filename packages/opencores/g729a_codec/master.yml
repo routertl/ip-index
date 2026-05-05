@@ -1,0 +1,117 @@
+name: g729a_codec
+namespace: opencores
+version: master
+commit_sha: ad76e52e443819aaf7484235721fd7bfc0cc41f1
+published_at: '2014-02-15T15:21:12+00:00'
+description: ITU-T G.729 Annex A voice codec implementing 8 kbit/s speech compression
+  with 10 ms frames for low-bandwidth telephony applications.
+license: OpenCores-Permissive-1.0
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/g729a_codec.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: ad76e52e443819aaf7484235721fd7bfc0cc41f1
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - VHDL/G729A_asip_pkg.vhd
+  - VHDL/G729A_asip_basic_pkg.vhd
+  - VHDL/G729A_asip_arith_pkg.vhd
+  - VHDL/G729A_asip_adder.vhd
+  - VHDL/G729A_asip_adder_f.vhd
+  - VHDL/G729A_asip_addsub_pipeb.vhd
+  - VHDL/G729A_asip_op_pkg.vhd
+  - VHDL/G729A_asip_bjxlog.vhd
+  - VHDL/G729A_asip_idec_2w_pkg.vhd
+  - VHDL/G729A_asip_cfg_pkg.vhd
+  - VHDL/G729A_asip_ftchlog_2w.vhd
+  - VHDL/G729A_asip_fwdlog_2w_p6.vhd
+  - VHDL/G729A_asip_idec_2w.vhd
+  - VHDL/G729A_asip_idec.vhd
+  - VHDL/G729A_asip_ifq.vhd
+  - VHDL/G729A_asip_lcstk.vhd
+  - VHDL/G729A_asip_lcstklog_2w.vhd
+  - VHDL/G729A_asip_lcstklog_ix.vhd
+  - VHDL/G729A_asip_lsu.vhd
+  - VHDL/G729A_asip_lu.vhd
+  - VHDL/G729A_asip_pipe_a_2w.vhd
+  - VHDL/G729A_asip_logic.vhd
+  - VHDL/G729A_asip_mulu_pipeb.vhd
+  - VHDL/G729A_asip_shftu.vhd
+  - VHDL/G729A_asip_pipe_b.vhd
+  - VHDL/G729A_asip_pstllog_2w_p6.vhd
+  - VHDL/G729A_asip_pxlog.vhd
+  - VHDL/G729A_asip_regfile_16x16_2w.vhd
+  - VHDL/G729A_asip_cpu_2w_p6.vhd
+  - VHDL/G729A_asip_romi_pkg.vhd
+  - VHDL/G729A_asip_romd_pkg.vhd
+  - VHDL/G729A_asip_roms.vhd
+  - VHDL/G729A_asip_roms_mif.vhd
+  - VHDL/G729A_codec_intf_pkg.vhd
+  - VHDL/G729A_asip_spc.vhd
+  - VHDL/SELF_TEST/G729A_codec_st_rom_pkg.vhd
+  - VHDL/SELF_TEST/G729A_codec_st_roms.vhd
+  - VHDL/G729A_asip_rams.vhd
+  - VHDL/G729A_asip_top_2w.vhd
+  - VHDL/G729A_codec_sdp.vhd
+  - VHDL/G729A_codec_sdp_SYN.vhd
+  - VHDL/SELF_TEST/G729A_codec_selftest.vhd
+tags:
+- access
+- addsub
+- bjxlog
+- decoder
+- ftchlog
+- fwdlog
+- lcstklog
+- memory
+- processor
+- pstllog
+- regfile
+- selftest
+role: repo
+top_modules:
+- G729A_ASIP_ADDER
+- G729A_ASIP_PIPE_A_DEC_2W
+- G729A_ASIP_ROMI
+- G729A_ASIP_ROM_MIF_2R
+- G729A_ASIP_STO_ROM
+- G729A_CODEC_SDP_SYN
+- G729A_CODEC_SELFTEST
+- G729_ASIP_RAM_1RW1R
+components:
+- G729A_ASIP_ADDER_F
+- G729A_ASIP_ADDSUB_PIPEB
+- G729A_ASIP_BJXLOG
+- G729A_ASIP_CPU_2W
+- G729A_ASIP_FTCHLOG_2W
+- G729A_ASIP_FWDLOG_2W_P6
+- G729A_ASIP_IDEC1_2W
+- G729A_ASIP_IDEC2
+- G729A_ASIP_IFQ
+- G729A_ASIP_LCSTK
+- G729A_ASIP_LCSTKLOG_2W
+- G729A_ASIP_LCSTKLOG_IX
+- G729A_ASIP_LOGIC
+- G729A_ASIP_LSU
+- G729A_ASIP_LU
+- G729A_ASIP_MULU_PIPEB
+- G729A_ASIP_PIPE_A_2W
+- G729A_ASIP_PIPE_B
+- G729A_ASIP_PSTLLOG_2W_P6
+- G729A_ASIP_PXLOG
+- G729A_ASIP_REGFILE_16X16_2W
+- G729A_ASIP_ROMD
+- G729A_ASIP_ROM_MIF
+- G729A_ASIP_SHFT
+- G729A_ASIP_SPC
+- G729A_ASIP_STI_ROM
+- G729A_ASIP_TOP_2W
+- G729A_CODEC_SDP
+- G729_ASIP_RAM_1RW
+total_entities: 37
+health_tier: bronze
+last_verified_at: '2026-05-04'

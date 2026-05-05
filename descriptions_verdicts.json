@@ -561,6 +561,48 @@
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
       "notes": "top-level repo description for P3.351 granularity=repo entry. RTL-P4.32 workaround. Authors/dates cross-checked against opencores.org/projects/sparc64soc."
+    },
+    "opencores/boundaries": {
+      "verdict": "good",
+      "locked_text": "Clock-domain-boundary primitive library covering arbiter, basic FIFOs, clock detection, clock switching (2/3/4/8 sources), and debouncer for safe cross-domain glue.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.360 ingest. LLM rollup picked only the alphabetically-first sub-IP (arbiter) and missed that the repo is a CDC primitives library."
+    },
+    "opencores/ecg": {
+      "verdict": "good",
+      "locked_text": "Elliptic Curve Group operations over the F_3^m characteristic-3 extension field, companion to the Tate bilinear pairing core (Homer Hsing, 2011).",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.360 ingest. Despite the slug 'ecg', this is Elliptic Curve Group — pairing-friendly crypto, NOT electrocardiogram signal processing. LLM cross-contaminated description with the sibling 'pairing' repo's headers."
+    },
+    "opencores/g729a_codec": {
+      "verdict": "good",
+      "locked_text": "ITU-T G.729 Annex A voice codec implementing 8 kbit/s speech compression with 10 ms frames for low-bandwidth telephony applications.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.360 ingest. Auto-tier holdout after LLM rollup; rubric-locked."
+    },
+    "opencores/gamepads": {
+      "verdict": "good",
+      "locked_text": "Game-controller serial protocol cores covering NES, SNES, and Sega Genesis pad interfaces for retro-console replica designs.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.360 ingest. LLM picked up CVS $Id: header metadata; rubric-locked."
+    },
+    "opencores/pairing": {
+      "verdict": "good",
+      "locked_text": "Tate bilinear pairing computation over the F_3^m characteristic-3 extension field for pairing-based cryptography (Homer Hsing, 2011).",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.360 ingest. LLM lifted to author-attribution boilerplate; rubric-locked. Sibling to opencores/ecg."
+    },
+    "opencores/t48": {
+      "verdict": "good",
+      "locked_text": "Intel MCS-48 / 8048-family 8-bit microcontroller core in VHDL, implementing the original instruction set with on-chip ROM and RAM.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.360 ingest. LLM picked up README boilerplate with $Date: CVS metadata; rubric-locked."
     }
   }
 }

@@ -1,0 +1,73 @@
+name: ecg
+namespace: opencores
+version: master
+commit_sha: 52dee5f8b3ed18715dff2bd9e1d8fe1ebb75b82a
+published_at: '2012-03-04T09:06:53+00:00'
+description: Elliptic Curve Group operations over the F_3^m characteristic-3 extension
+  field, companion to the Tate bilinear pairing core (Homer Hsing, 2011).
+license: LGPL-3.0-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/ecg.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 52dee5f8b3ed18715dff2bd9e1d8fe1ebb75b82a
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/inc.v
+  - rtl/f3.v
+  - rtl/fun.v
+  - rtl/f3m.v
+  - rtl/ecg.v
+tags:
+- add1
+- add3
+- add4
+- cubic
+- mult
+- mult3
+- mux3
+- mux6
+- nine
+- point
+- scalar
+- sub1
+role: repo
+top_modules:
+- f3_add1
+- f3_mult
+- f3_sub
+- f3_sub1
+- f3m_add3
+- f3m_add4
+- f3m_cubic
+- f3m_inv
+- f3m_mult
+- f3m_mult3
+- f3m_mux3
+- f3m_mux6
+- f3m_neg
+- f3m_nine
+- f3m_sub
+- func1
+- func10
+- func11
+- func2
+- func3
+- func4
+- func5
+- func7
+- func8
+- func9
+- point_add
+- point_scalar_mult
+components:
+- f3_add
+- f3m_add
+- func6
+total_entities: 30
+health_tier: bronze
+last_verified_at: '2026-05-04'

@@ -1,0 +1,107 @@
+name: t48
+namespace: opencores
+version: master
+commit_sha: f77d2f97eb831dba488f42fbde3ef55dec83066e
+published_at: '2008-05-02T21:20:41+00:00'
+description: Intel MCS-48 / 8048-family 8-bit microcontroller core in VHDL, implementing
+  the original instruction set with on-chip ROM and RAM.
+license: BSD-2-Clause
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/freecores/t48.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: f77d2f97eb831dba488f42fbde3ef55dec83066e
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - rtl/vhdl/system/lpm_ram_dq.vhd
+  - rtl/vhdl/system/lpm_rom.vhd
+  - rtl/vhdl/system/generic_ram_ena.vhd
+  - rtl/vhdl/t48_pack-p.vhd
+  - rtl/vhdl/alu_pack-p.vhd
+  - rtl/vhdl/t48_tb_pack-p.vhd
+  - rtl/vhdl/alu.vhd
+  - rtl/vhdl/bus_mux.vhd
+  - rtl/vhdl/clock_ctrl.vhd
+  - rtl/vhdl/cond_branch_pack-p.vhd
+  - rtl/vhdl/cond_branch.vhd
+  - rtl/vhdl/dmem_ctrl_pack-p.vhd
+  - rtl/vhdl/pmem_ctrl_pack-p.vhd
+  - rtl/vhdl/decoder_pack-p.vhd
+  - rtl/vhdl/t48_comp_pack-p.vhd
+  - rtl/vhdl/db_bus.vhd
+  - rtl/vhdl/int.vhd
+  - rtl/vhdl/decoder.vhd
+  - rtl/vhdl/dmem_ctrl.vhd
+  - rtl/vhdl/p1.vhd
+  - rtl/vhdl/p2.vhd
+  - rtl/vhdl/pmem_ctrl.vhd
+  - rtl/vhdl/psw.vhd
+  - rtl/vhdl/timer.vhd
+  - rtl/vhdl/t48_core.vhd
+  - rtl/vhdl/system/t48_rom-e.vhd
+  - rtl/vhdl/system/wb_master.vhd
+  - rtl/vhdl/system/t49_rom-e.vhd
+  - rtl/vhdl/system/t48_system_comp_pack-p.vhd
+  - rtl/vhdl/t48_core_comp_pack-p.vhd
+  - rtl/vhdl/system/t8039_notri.vhd
+  - rtl/vhdl/system/t8039.vhd
+  - rtl/vhdl/system/t8048_notri.vhd
+  - rtl/vhdl/system/t8048.vhd
+  - rtl/vhdl/system/t8050_wb.vhd
+  - rtl/vhdl/t8243/t8243_comp_pack-p.vhd
+  - rtl/vhdl/t8243/t8243_core.vhd
+  - rtl/vhdl/t8243/t8243_async_notri.vhd
+  - rtl/vhdl/t8243/t8243.vhd
+  - rtl/vhdl/t8243/t8243_sync_notri.vhd
+tags:
+- access
+- asynchronous
+- branch
+- control
+- controller
+- decoder
+- master
+- memory
+- multiplexer
+- synchronizer
+- synchronous
+- wishbone
+role: repo
+top_modules:
+- LPM_RAM_DQ
+- LPM_ROM
+- t49_rom
+- t8039
+- t8048
+- t8050_wb
+- t8243
+- t8243_sync_notri
+components:
+- generic_ram_ena
+- t48_alu
+- t48_bus_mux
+- t48_clock_ctrl
+- t48_cond_branch
+- t48_core
+- t48_db_bus
+- t48_decoder
+- t48_dmem_ctrl
+- t48_int
+- t48_p1
+- t48_p2
+- t48_pmem_ctrl
+- t48_psw
+- t48_rom
+- t48_timer
+- t48_wb_master
+- t8039_notri
+- t8048_notri
+- t8243_async_notri
+- t8243_core
+total_entities: 29
+health_tier: bronze
+last_verified_at: '2026-05-04'

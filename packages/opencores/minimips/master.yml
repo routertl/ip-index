@@ -1,0 +1,66 @@
+name: minimips
+namespace: opencores
+version: master
+commit_sha: 77b142dbd5171770bfc527ea6d49fe26091b0db0
+published_at: '2006-03-23T16:34:22+00:00'
+description: A 32-bit MIPS processor core with RAM interface and interrupt support.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/minimips.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 77b142dbd5171770bfc527ea6d49fe26091b0db0
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - miniMIPS/src/pack_mips.vhd
+  - miniMIPS/src/alu.vhd
+  - miniMIPS/src/banc.vhd
+  - miniMIPS/src/bus_ctrl.vhd
+  - miniMIPS/src/pps_di.vhd
+  - miniMIPS/src/pps_ei.vhd
+  - miniMIPS/src/pps_ex.vhd
+  - miniMIPS/src/pps_mem.vhd
+  - miniMIPS/src/pps_pf.vhd
+  - miniMIPS/src/predict.vhd
+  - miniMIPS/src/renvoi.vhd
+  - miniMIPS/src/syscop.vhd
+  - miniMIPS/src/minimips.vhd
+  - miniMIPS/bench/ram.vhd
+  - miniMIPS/bench/rom.vhd
+tags:
+- access
+- bus
+- control
+- controller
+- ctrl
+- di
+- mem
+- memory
+- only
+- pps
+- random
+- read
+role: repo
+top_modules:
+- minimips
+- ram
+- rom
+components:
+- alu
+- banc
+- bus_ctrl
+- pps_di
+- pps_ei
+- pps_ex
+- pps_mem
+- pps_pf
+- predict
+- renvoi
+- syscop
+total_entities: 14
+health_tier: bronze
+last_verified_at: '2026-05-04'

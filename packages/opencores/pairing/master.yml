@@ -1,0 +1,92 @@
+name: pairing
+namespace: opencores
+version: master
+commit_sha: 838f880100c54c5ab303fe86fef7e915820abcea
+published_at: '2012-03-04T09:06:24+00:00'
+description: Tate bilinear pairing computation over the F_3^m characteristic-3 extension
+  field for pairing-based cryptography (Homer Hsing, 2011).
+license: LGPL-3.0-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/pairing.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 838f880100c54c5ab303fe86fef7e915820abcea
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/inc.v
+  - rtl/f3.v
+  - rtl/fun.v
+  - rtl/f3m.v
+  - rtl/f32m.v
+  - rtl/f33m.v
+  - rtl/f36m.v
+  - rtl/tate_pairing.v
+tags:
+- add1
+- add3
+- add4
+- algo
+- cubic
+- duursma
+- f32m
+- f33m
+- mult2
+- mult3
+- pairing
+- second
+role: repo
+top_modules:
+- duursma_lee_algo
+- f32m_add3
+- f32m_add4
+- f32m_cubic
+- f32m_mult
+- f32m_mux6
+- f32m_neg
+- f32m_sub
+- f33m_inv
+- f33m_mult
+- f33m_mult2
+- f33m_mult3
+- f33m_mux2
+- f33m_mux3
+- f33m_neg
+- f36m_mult
+- f3_add1
+- f3_mult
+- f3_sub
+- f3_sub1
+- f3m_add3
+- f3m_add4
+- f3m_cubic
+- f3m_inv
+- f3m_mult
+- f3m_mult3
+- f3m_mux3
+- f3m_mux6
+- f3m_neg
+- f3m_nine
+- f3m_sub
+- func1
+- func2
+- func3
+- func4
+- func5
+- func7
+- func8
+- second_part
+- tate_pairing
+components:
+- f32m_add
+- f33m_add
+- f36m_cubic
+- f3_add
+- f3m_add
+- func6
+total_entities: 46
+health_tier: bronze
+last_verified_at: '2026-05-04'

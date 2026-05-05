@@ -1,0 +1,61 @@
+name: xgate
+namespace: opencores
+version: master
+commit_sha: 37e26eda14784c531c6b1af84d6900ab99179ee9
+published_at: '2013-01-27T16:52:29+00:00'
+description: XGATE Coprocessor - XGATE JTAG Module
+license: LGPL-3.0-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/xgate.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 37e26eda14784c531c6b1af84d6900ab99179ee9
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/xgate_jtag.v
+  - rtl/verilog/xgate_risc.v
+  - rtl/verilog/xgate_irq_encode.v
+  - rtl/verilog/xgate_regs.v
+  - rtl/verilog/xgate_wbm_bus.v
+  - rtl/verilog/xgate_wbs_bus.v
+  - rtl/verilog/xgate_top.v
+tags:
+- action
+- barrel
+- bypass
+- debug
+- decode
+- encode
+- group
+- instr
+- interrupt
+- multiplexer
+- register
+- semaphore
+role: repo
+top_modules:
+- bc_2
+- bc_7
+- xgate_barrel_shift
+- xgate_bypass_reg
+- xgate_id_reg
+- xgate_instr_decode
+- xgate_jtag
+- xgate_jtag_ir
+- xgate_jtag_sm
+- xgate_risc
+- xgate_tdo_mux
+- xgate_top
+components:
+- semaphore_bit
+- xgate_irq_encode
+- xgate_regs
+- xgate_wbm_bus
+- xgate_wbs_bus
+total_entities: 17
+health_tier: bronze
+last_verified_at: '2026-05-04'

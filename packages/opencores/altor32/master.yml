@@ -1,0 +1,95 @@
+name: altor32
+namespace: opencores
+version: master
+commit_sha: 6d44db41cbfb3460f90c5c3e93e6032fcc2eba62
+published_at: '2014-08-10T17:49:04+01:00'
+description: AltOr32 - Alternative Lightweight OpenRisc CPU
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/altor32.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 6d44db41cbfb3460f90c5c3e93e6032fcc2eba62
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/cpu/altor32_defs.v
+  - rtl/cpu_lite/altor32_defs.v
+  - rtl/peripheral/intr_defs.v
+  - rtl/peripheral/timer_defs.v
+  - rtl/cpu/altor32_funcs.v
+  - rtl/cpu/altor32_alu.v
+  - rtl/cpu/altor32_dcache_mem_if.v
+  - rtl/sim/ram_dp8.v
+  - rtl/sim/ram.v
+  - rtl/cpu/altor32_ram_dp.v
+  - rtl/cpu/altor32_ram_sp.v
+  - rtl/cpu/altor32_dcache.v
+  - rtl/cpu/altor32_dfu.v
+  - rtl/cpu/altor32_lfu.v
+  - rtl/cpu/altor32_lsu.v
+  - rtl/cpu/altor32_exec.v
+  - rtl/cpu/altor32_fetch.v
+  - rtl/cpu/altor32_wb_fetch.v
+  - rtl/cpu/altor32_icache.v
+  - rtl/cpu/altor32_regfile_alt.v
+  - rtl/cpu/altor32_regfile_sim.v
+  - rtl/cpu/altor32_regfile_xil.v
+  - rtl/cpu_lite/altor32_lite.v
+  - rtl/cpu/altor32_noicache.v
+  - rtl/cpu/altor32_writeback.v
+  - rtl/cpu/altor32.v
+  - rtl/soc/dmem_mux3.v
+  - rtl/soc/cpu_if.v
+  - rtl/peripheral/intr_periph.v
+  - rtl/soc/soc_pif8.v
+  - rtl/peripheral/timer_periph.v
+  - rtl/soc/soc.v
+tags:
+- access
+- altor32
+- datapath
+- dcache
+- icache
+- lightweight
+- memory
+- noicache
+- processor
+- regfile
+- wishbone
+- writeback
+role: repo
+top_modules:
+- altor32_lite
+- cpu_if
+- soc
+components:
+- altor32_alu
+- altor32_dcache
+- altor32_dcache_mem_if
+- altor32_dfu
+- altor32_exec
+- altor32_fetch
+- altor32_icache
+- altor32_lfu
+- altor32_lsu
+- altor32_noicache
+- altor32_ram_dp
+- altor32_ram_sp
+- altor32_regfile_alt
+- altor32_regfile_xil
+- altor32_wb_fetch
+- altor32_writeback
+- cpu
+- dmem_mux3
+- intr_periph
+- ram
+- ram_dp8
+- soc_pif8
+- timer_periph
+total_entities: 26
+health_tier: bronze
+last_verified_at: '2026-05-04'

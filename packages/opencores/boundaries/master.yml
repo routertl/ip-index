@@ -1,0 +1,58 @@
+name: boundaries
+namespace: opencores
+version: master
+commit_sha: 1fc5cc5edec3ea7f97af737962b97c4cc1e54936
+published_at: '2004-07-07T12:41:55+00:00'
+description: Clock-domain-boundary primitive library covering arbiter, basic FIFOs,
+  clock detection, clock switching (2/3/4/8 sources), and debouncer for safe cross-domain
+  glue.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/boundaries.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 1fc5cc5edec3ea7f97af737962b97c4cc1e54936
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/arbiter.v
+  - rtl/verilog/bc_fifo_basic.v
+  - rtl/verilog/clock_detect.v
+  - rtl/verilog/clock_switch2_basic.v
+  - rtl/verilog/clock_switch3_basic.v
+  - rtl/verilog/clock_switch4_basic.v
+  - rtl/verilog/clock_switch8_basic.v
+  - rtl/verilog/debouncer.v
+  - rtl/verilog/oc_fifo_basic.v
+  - rtl/verilog/random_ff.v
+tags:
+- arbitration
+- basic
+- buffer
+- clock
+- detect
+- fifo
+- queue
+- random
+- switch2
+- switch3
+- switch4
+- switch8
+role: repo
+top_modules:
+- arbiter
+- bc_fifo_basic
+- clock_detect
+- clock_switch2_basic
+- clock_switch3_basic
+- clock_switch4_basic
+- clock_switch8_basic
+- debouncer
+- oc_fifo_basic
+- random_ff
+total_entities: 10
+health_tier: bronze
+last_verified_at: '2026-05-04'
