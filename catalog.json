@@ -20846,7 +20846,7 @@
     ],
     "commit_sha": "77320a9471d19c7dd383914bc049e02d9f4f1ffb",
     "published_at": "2025-02-27T15:50:25-08:00",
-    "description": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream \u2014 author moved active development to fpganinja/taxi (CERN-OHL-S-2.0); MIT-licensed verilog-ethernet remains freely available here.",
+    "description": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream — author moved active development to fpganinja/taxi (CERN-OHL-S-2.0); MIT-licensed verilog-ethernet remains freely available here.",
     "license": "MIT",
     "license_class": "permissive",
     "language": "verilog",
@@ -21099,7 +21099,7 @@
     ],
     "commit_sha": "1fe508a6bf17edbb29bce9a8477be615b1012789",
     "published_at": "2026-04-06T23:59:16-07:00",
-    "description": "AXI4-Stream infrastructure: FIFOs (sync/async/pipeline), broadcast, demux/mux, switch, register, COBS encode/decode, null src/snk, tie. Excludes Ethernet PCS streams (BASE-R, XGMII, GMII bridges) \u2014 those live in taxi-ethernet.",
+    "description": "AXI4-Stream infrastructure: FIFOs (sync/async/pipeline), broadcast, demux/mux, switch, register, COBS encode/decode, null src/snk, tie. Excludes Ethernet PCS streams (BASE-R, XGMII, GMII bridges) — those live in taxi-ethernet.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -21498,7 +21498,7 @@
     ],
     "commit_sha": "1fe508a6bf17edbb29bce9a8477be615b1012789",
     "published_at": "2026-04-06T23:59:16-07:00",
-    "description": "Source-synchronous I/O \u2014 DDR / SDR in / out with diff variants, plus the bare IDDR / ODDR I/O DDR-register primitives.",
+    "description": "Source-synchronous I/O — DDR / SDR in / out with diff variants, plus the bare IDDR / ODDR I/O DDR-register primitives.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -21651,7 +21651,7 @@
     ],
     "commit_sha": "1fe508a6bf17edbb29bce9a8477be615b1012789",
     "published_at": "2026-04-06T23:59:16-07:00",
-    "description": "Zircon IP packet processor \u2014 RX parse / ingress / egress and TX buffer / deparse / ingress / egress, plus length+checksum core.",
+    "description": "Zircon IP packet processor — RX parse / ingress / egress and TX buffer / deparse / ingress / egress, plus length+checksum core.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -21693,7 +21693,7 @@
     ],
     "commit_sha": "1fe508a6bf17edbb29bce9a8477be615b1012789",
     "published_at": "2026-04-06T23:59:16-07:00",
-    "description": "Pyrite PCIe configuration programmers \u2014 VPD (Vital Product Data) and VSEC (Vendor-Specific Extended Capability) over BPI flash and QSPI flash, UltraScale variants.",
+    "description": "Pyrite PCIe configuration programmers — VPD (Vital Product Data) and VSEC (Vendor-Specific Extended Capability) over BPI flash and QSPI flash, UltraScale variants.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -21913,7 +21913,7 @@
           "kind": "underrun-on-low-hwmark",
           "discovered": "2026-05-03",
           "provenance": "RTL-T2",
-          "evidence": "Tx_Hwmark default 9 entries; >512 B frames hit underrun before frame fully buffered, deliver as constant ~2,560 B GIANT wire frames regardless of input size. VCD-confirmed (Tx_en stays HIGH continuously through full 20.4-20.5 \u00b5s span) and lever-experiment-confirmed (HWM = 31 collapses 4 GIANTs to 0).",
+          "evidence": "Tx_Hwmark default 9 entries; >512 B frames hit underrun before frame fully buffered, deliver as constant ~2,560 B GIANT wire frames regardless of input size. VCD-confirmed (Tx_en stays HIGH continuously through full 20.4-20.5 µs span) and lever-experiment-confirmed (HWM = 31 collapses 4 GIANTs to 0).",
           "recoverable": true,
           "workaround": "CSR-write Tx_Hwmark >= 31 entries (5'h1F) before any TX traffic",
           "fix_pr": null,
@@ -21925,7 +21925,7 @@
           "kind": "protocol-handshake-mismatch",
           "discovered": "2026-05-03",
           "provenance": "RTL-T3",
-          "evidence": "MAC_rx_FF.v SYS_wait_end \u2192 SYS_idle requires !Rx_mac_rd; perpetual-ready hosts (modern AXI-Stream-style ingress) wedge after frame 0 EOP and never receive subsequent frames. VCD-confirmed (FSM transitions from SYS_read \u2192 SYS_wait_end at first EOP and never moves again across 1.4 Mns sim).",
+          "evidence": "MAC_rx_FF.v SYS_wait_end → SYS_idle requires !Rx_mac_rd; perpetual-ready hosts (modern AXI-Stream-style ingress) wedge after frame 0 EOP and never receive subsequent frames. VCD-confirmed (FSM transitions from SYS_read → SYS_wait_end at first EOP and never moves again across 1.4 Mns sim).",
           "recoverable": true,
           "workaround": "BFM/host pulses Rx_mac_rd low for one cycle after each EOP",
           "fix_pr": null,
@@ -22037,7 +22037,7 @@
     ],
     "commit_sha": "6afbb5a067308b9537cbdc683ccb5992358429d8",
     "published_at": "2009-03-10T08:24:20+00:00",
-    "description": "Bidirectional 32-bit PCI \u2194 Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006).",
+    "description": "Bidirectional 32-bit PCI ↔ Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006).",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -23630,7 +23630,7 @@
     ],
     "commit_sha": "3c9f36dc9de929c6e057fdb1cc322ce2cded4296",
     "published_at": "2013-05-12T18:51:08+00:00",
-    "description": "Minimal OpenRISC 1200 system-on-chip \u2014 OR1200 CPU with Wishbone-attached on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera). Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013).",
+    "description": "Minimal OpenRISC 1200 system-on-chip — OR1200 CPU with Wishbone-attached on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera). Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013).",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -23681,7 +23681,7 @@
     ],
     "commit_sha": "379b5f678ab020b0c669c0845c9061bd33755d18",
     "published_at": "2013-02-03T01:33:39+00:00",
-    "description": "Educational SoC with peripheral suite \u2014 I2C, UART, PS/2, PWM, 7-segment display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented in STORM SoC datasheet PDF.",
+    "description": "Educational SoC with peripheral suite — I2C, UART, PS/2, PWM, 7-segment display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented in STORM SoC datasheet PDF.",
     "license": "GPL-2.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -23739,7 +23739,7 @@
     ],
     "commit_sha": "266de03eb9d208a4e1003687d51be57b66f7c63d",
     "published_at": "2008-12-03T13:52:34+00:00",
-    "description": "Streamlined adaptation of Sun's OpenSPARC T1 \u2014 single 64-bit SPARC v9 core supporting 1-4 concurrent threads, with Wishbone master interface. Authors: Watson, Rozhdestvenskiy, Luzzu, Fazzino (2007-2018).",
+    "description": "Streamlined adaptation of Sun's OpenSPARC T1 — single 64-bit SPARC v9 core supporting 1-4 concurrent threads, with Wishbone master interface. Authors: Watson, Rozhdestvenskiy, Luzzu, Fazzino (2007-2018).",
     "license": "GPL-2.0-only",
     "license_class": "strong-copyleft",
     "language": "verilog",
@@ -26974,5 +26974,940 @@
       "pfpu32_rnd",
       "pfpu32_top"
     ]
+  },
+  {
+    "namespace": "opencores",
+    "name": "cfi_ctrl",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "5c9b818aa0ef2ea3b5b14c06e016e6f3fc677e74",
+    "published_at": "2011-10-23T12:05:51+00:00",
+    "description": "Top level of CFI controller with 32-bit Wishbone classic interface Intended to be used at about 66MHz with a 32MB CFI flash part with 16-bit data interface.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/cfi_ctrl.git",
+    "tags": [
+      "cfi",
+      "control",
+      "controller",
+      "ctrl",
+      "engine"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "cfi_ctrl"
+    ],
+    "components": [
+      "cfi_ctrl_engine"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "srl_fifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "4d2f19cbf9ddb28a05cec589a96436b404601edd",
+    "published_at": "2009-03-10T09:35:24+00:00",
+    "description": "Xilinx SRL16/SRL32-based compact FIFO — uses SRL shift-register primitives for storage on Xilinx FPGA targets. VHDL utility primitive.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/srl_fifo.git",
+    "tags": [
+      "16",
+      "32",
+      "64",
+      "buffer",
+      "fifo",
+      "queue",
+      "srl"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "srl_fifo_16",
+      "srl_fifo_32",
+      "srl_fifo_64"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "sha_core",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "f90e67a6040d7dd5de54188ed0b8b7ec05d4ac85",
+    "published_at": "2004-05-20T12:42:31+00:00",
+    "description": "SHA-1 (160-bit Secure Hash Algorithm) cryptographic hash core — single-block hashing primitive.",
+    "license": "OpenCores-Permissive-1.0",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/sha_core.git",
+    "tags": [],
+    "role": "repo",
+    "top_modules": [
+      "sha1",
+      "sha256",
+      "sha512"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "ps2_host_controller",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "4707b69862d7760b360363c2f52b9fbc754946bd",
+    "published_at": "2011-12-19T02:13:20+00:00",
+    "description": "PS/2 host controller that transmits and receives 8-bit data over PS/2 clock and data lines with status indication.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/ps2_host_controller.git",
+    "tags": [
+      "clk",
+      "clock",
+      "control",
+      "controller",
+      "ctrl",
+      "host",
+      "ps2",
+      "receive",
+      "receiver",
+      "transmit",
+      "transmitter",
+      "watchdog"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "ps2_host"
+    ],
+    "components": [
+      "ps2_host_clk_ctrl",
+      "ps2_host_rx",
+      "ps2_host_tx",
+      "ps2_host_watchdog"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "warp",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "7e4e8ed164356ae0906752eb7099204c16a5d3b5",
+    "published_at": "2008-06-26T20:11:33+00:00",
+    "description": "Image warping pipeline with image-decay / temporal-aging effect — geometric distortion + temporal modulation.",
+    "license": "OpenCores-Permissive-1.0",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/warp.git",
+    "tags": [],
+    "role": "repo",
+    "top_modules": [
+      "warp"
+    ],
+    "components": [
+      "arbiter3",
+      "boundarycheck",
+      "bresenham",
+      "decay",
+      "divider10",
+      "fetchmesh",
+      "fetchsource",
+      "pixeladdresses",
+      "roundrobin3",
+      "triangle",
+      "triangleany",
+      "warpreg",
+      "writedest"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "binary_to_bcd",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "f1629717feae3b12a5519c2c81f34c9249013bcf",
+    "published_at": "2005-10-25T06:18:50+00:00",
+    "description": "BCD to binary converter, serial implementation, 1 clock per input bit. Description: See description below (which suffices for IP core specification document.)",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/binary_to_bcd.git",
+    "tags": [
+      "bcd",
+      "binary"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "bcd_to_binary",
+      "binary_to_bcd"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_mcs51",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "fed5cdbbd07523dff528e9dcb7d8f36056043987",
+    "published_at": "2008-03-10T13:58:10+00:00",
+    "description": "MCS51 to Wishbone Interface                                 ////",
+    "license": "OpenCores-Permissive-1.0",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/wb_mcs51.git",
+    "tags": [
+      "bus",
+      "mcs51",
+      "wb",
+      "wishbone"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "wb_mcs51"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_size_bridge",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "b550232886547e5e24d4f0db6382da3b1f70506d",
+    "published_at": "2011-03-29T01:42:07+00:00",
+    "description": "Wishbone bus width-resize bridge — connects masters and slaves with mismatched data widths via byte-lane steering.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/wb_size_bridge.git",
+    "tags": [
+      "adapter",
+      "asram",
+      "async",
+      "asynchronous",
+      "bridge",
+      "bus",
+      "converter",
+      "mem",
+      "protocol",
+      "size",
+      "wb",
+      "wishbone"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "asram_if",
+      "async_mem_if"
+    ],
+    "components": [
+      "wb_size_bridge"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "deslcore",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "f1c4840940a3e22e3c34a6ee78cbfc3021e0d02e",
+    "published_at": "2013-08-10T10:22:38+00:00",
+    "description": "DESL (DES-Lightweight) variant — area-optimised DES with a single shared S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore.",
+    "license": "GPL-3.0-or-later",
+    "license_class": "strong-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/deslcore.git",
+    "tags": [
+      "des",
+      "fun",
+      "key",
+      "loop",
+      "round",
+      "schedule"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "des_loop"
+    ],
+    "components": [
+      "des_round",
+      "f_fun",
+      "key_schedule"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "avs_aes",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "b1c1fce84629551eab88c1dc8cfcf7eea121622e",
+    "published_at": "2014-04-19T21:02:24+00:00",
+    "description": "AES (Advanced Encryption Standard) 128-bit encryption/decryption block (AVS variant) — BSD-2-Clause Verilog primitive with synchronous load/ready handshake.",
+    "license": "BSD-2-Clause",
+    "license_class": "permissive",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/avs_aes.git",
+    "tags": [
+      "aes",
+      "avs",
+      "core",
+      "decrypt",
+      "encrypt",
+      "fsm",
+      "memory",
+      "word"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "aes_fsm_decrypt",
+      "aes_fsm_encrypt",
+      "avs_AES"
+    ],
+    "components": [
+      "AES_CORE",
+      "AddRoundKey",
+      "Mixcol",
+      "Shiftrow",
+      "keyexpansionV2",
+      "memory_word",
+      "mux2",
+      "mux3",
+      "sbox"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "deslxcore",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "ca3416cec8d26472d0ccdd4f9e0c9a379a983e1d",
+    "published_at": "2013-08-10T10:28:40+00:00",
+    "description": "DESLX variant — combines the DES-Lightweight S-box optimisation with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore.",
+    "license": "GPL-3.0-or-later",
+    "license_class": "strong-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/deslxcore.git",
+    "tags": [
+      "des",
+      "fun",
+      "key",
+      "loop",
+      "round",
+      "schedule"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "des_loop"
+    ],
+    "components": [
+      "des_round",
+      "f_fun",
+      "key_schedule"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "reed_solomon_decoder",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "2d581673ad7d3a97bca63c674b867ec80db0e2c6",
+    "published_at": "2010-04-11T14:41:07+00:00",
+    "description": "Generic Reed-Solomon decoder pipeline with configurable code parameters. Sibling to opencores/rs_decoder_31_19_6 (specific to the (31,19,6) code).",
+    "license": "GPL-3.0-or-later",
+    "license_class": "strong-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/reed_solomon_decoder.git",
+    "tags": [
+      "access",
+      "ascending",
+      "binary",
+      "correction",
+      "datapath",
+      "decoder",
+      "in2out",
+      "matrix",
+      "memory",
+      "physical",
+      "syndromes",
+      "transport"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "RS_dec"
+    ],
+    "components": [
+      "BM_lamda",
+      "DP_RAM",
+      "GF_matrix_ascending_binary",
+      "GF_matrix_dec",
+      "GF_mult_add_syndromes",
+      "Omega_Phy",
+      "error_correction",
+      "input_syndromes",
+      "lamda_roots",
+      "out_stage",
+      "transport_in2out"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "synchronous_reset_fifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "88cad31ca0a18b7c24a8995176b54a6461e8898e",
+    "published_at": "2011-12-19T18:38:18+00:00",
+    "description": "FIFO buffer with FIFO interface and configurable parameters",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/synchronous_reset_fifo.git",
+    "tags": [
+      "buffer",
+      "queue"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "fifo"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "usb_phy",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "7df8e0f3a9306ee5423216abea29baf7d140206c",
+    "published_at": "2004-10-19T09:29:07+00:00",
+    "description": "Interfaces a USB transceiver with UTMI protocol, handling signal transmission, reception, and line state management.",
+    "license": "OpenCores-Permissive-1.0",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/usb_phy.git",
+    "tags": [
+      "bus",
+      "layer",
+      "phy",
+      "physical",
+      "receive",
+      "receiver",
+      "rx",
+      "serial",
+      "transmit",
+      "transmitter",
+      "universal",
+      "usb"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "usb_phy"
+    ],
+    "components": [
+      "usb_rx_phy",
+      "usb_tx_phy"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_flash",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "e4025107be7d9084588350302272a6d591061358",
+    "published_at": "2008-06-04T06:10:35+00:00",
+    "description": "Wishbone-controlled parallel flash memory controller (CFI/JEDEC compatible). Verilog.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/wb_flash.git",
+    "tags": [
+      "bus",
+      "flash",
+      "wb",
+      "wishbone"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "wb_flash"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "xteacore",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "16f8a4630851e7b69bcd83b4f1bb40644bf6a02d",
+    "published_at": "2013-07-27T12:19:23+00:00",
+    "description": "XTEA (eXtended Tiny Encryption Algorithm) cipher core — 128-bit key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL.",
+    "license": "GPL-3.0-or-later",
+    "license_class": "strong-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/xteacore.git",
+    "tags": [
+      "key",
+      "round",
+      "schedule"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "xtea"
+    ],
+    "components": [
+      "key_schedule",
+      "round_f"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "video_stream_scaler",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "8063961cee8ac56934ca647c9b20ad2c8c5740bf",
+    "published_at": "2011-02-25T03:54:56+00:00",
+    "description": "Video stream scaler — line-buffer-based filtering pipeline that resamples raster video streams to a target output resolution. LGPL-2.1+ Verilog.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/video_stream_scaler.git",
+    "tags": [],
+    "role": "repo",
+    "top_modules": [
+      "ramDualPort",
+      "ramFifo",
+      "streamScaler"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "desxcore",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "3beddf7a023ee89d1274ef24719894ed20a2f4d4",
+    "published_at": "2013-08-10T10:26:10+00:00",
+    "description": "DES-X variant — adds XOR pre/post-whitening keys to standard DES (Rivest 1984), strengthening against brute-force. GPL-3+ VHDL.",
+    "license": "GPL-3.0-or-later",
+    "license_class": "strong-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/desxcore.git",
+    "tags": [
+      "des",
+      "fun",
+      "key",
+      "loop",
+      "round",
+      "schedule"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "des_loop"
+    ],
+    "components": [
+      "des_round",
+      "f_fun",
+      "key_schedule"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "yac",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "eafb83d652990c7afe6862deea87093e8c609902",
+    "published_at": "2014-03-30T09:58:35+00:00",
+    "description": "Yet Another CORDIC — generic iterative CORDIC pipeline for trigonometric and hyperbolic functions with parameterised data width.",
+    "license": "LGPL-3.0-or-later",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/yac.git",
+    "tags": [
+      "cordic",
+      "int",
+      "iterative"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "cordic_iterative_int"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "cdc_ufifo",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "f7725690df3ba5f00345203980bb03251bbabac4",
+    "published_at": "2010-12-02T13:30:18+00:00",
+    "description": "cdc_ufifo generate an minimalist fifo. it can be 4 cells minimum. by default used implementation without ram only standart cells used , and it can be selected if need. most slowest stage is the output multiplexor.",
+    "license": "Apache-2.0",
+    "license_class": "permissive",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/cdc_ufifo.git",
+    "tags": [
+      "cdc",
+      "clock",
+      "crossing",
+      "delay",
+      "dffe",
+      "domain",
+      "ff",
+      "prim",
+      "pulse",
+      "ufifo"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "cdc_ufifo",
+      "gray2bin"
+    ],
+    "components": [
+      "delay_pulse_ff",
+      "graycntr",
+      "prim_dffe"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "trigonometric_functions_in_double_fpu",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "428f254c09b173e9f7e8853102d2d6edc0b19dc8",
+    "published_at": "2013-07-18T15:04:17+00:00",
+    "description": "Trigonometric functions using double precision Floating Point Unit        ////",
+    "license": "OpenCores-Permissive-1.0",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/trigonometric_functions_in_double_fpu.git",
+    "tags": [
+      "cosecant",
+      "cosine",
+      "cotangent",
+      "lut",
+      "secant",
+      "sine",
+      "tangent"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "cosecant_lut",
+      "cosine_lut",
+      "cotangent_lut",
+      "dividor",
+      "secant_lut",
+      "sine_lut",
+      "tangent_lut"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "descore",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "244a030ec8bdba85fed53e9612ca069c33350dfb",
+    "published_at": "2013-08-10T10:19:23+00:00",
+    "description": "DES (Data Encryption Standard) cipher core — 56-bit key, 64-bit block. GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants.",
+    "license": "GPL-3.0-or-later",
+    "license_class": "strong-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/descore.git",
+    "tags": [
+      "des",
+      "fun",
+      "key",
+      "loop",
+      "round",
+      "schedule"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "des_loop"
+    ],
+    "components": [
+      "des_round",
+      "f_fun",
+      "key_schedule"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "serial_div_uu",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "2d99c8360df6e7009eee2aee1719ce2b9c82a316",
+    "published_at": "2005-10-25T06:23:36+00:00",
+    "description": "PWM reader ...for variable frequency PWM signals from real world sensors. Description: See description below (which suffices for IP core specification document.)",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/serial_div_uu.git",
+    "tags": [
+      "divide",
+      "modulation",
+      "pulse",
+      "pwm",
+      "reader",
+      "serial",
+      "uu",
+      "width"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "pwm_reader"
+    ],
+    "components": [
+      "serial_divide_uu"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "jpegencode",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "1cd7f75b5f7f2c2e99640b1fd42f7f875b081044",
+    "published_at": "2022-10-31T01:41:03+01:00",
+    "description": "This is the top level module of the JPEG Encoder Core. This module takes the output from the fifo_out module and sends it to the ff_checker module to check for FF's in the bitstream.",
+    "license": "OpenCores-Permissive-1.0",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/jpegencode.git",
+    "tags": [
+      "buffer",
+      "cbd",
+      "checker",
+      "crd",
+      "fifo",
+      "huff",
+      "jpeg",
+      "quantizer",
+      "queue",
+      "sync",
+      "synchronizer",
+      "synchronous"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "jpeg_top"
+    ],
+    "components": [
+      "RGB2YCBCR",
+      "cb_dct",
+      "cb_huff",
+      "cb_quantizer",
+      "cbd_q_h",
+      "cr_dct",
+      "cr_huff",
+      "cr_quantizer",
+      "crd_q_h",
+      "ff_checker",
+      "fifo_out",
+      "pre_fifo",
+      "sync_fifo_32",
+      "sync_fifo_ff",
+      "y_dct",
+      "y_huff",
+      "y_quantizer",
+      "yd_q_h"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wb_lpc",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "485adf16ad90821170c3b52f2965c0ae7d914c9c",
+    "published_at": "2008-12-27T19:46:18+00:00",
+    "description": "Wishbone-controlled LPC (Low Pin Count) bus interface — bridges Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD, BMC).",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/wb_lpc.git",
+    "tags": [
+      "bus",
+      "dreq",
+      "host",
+      "lpc",
+      "periph",
+      "regfile",
+      "serirq",
+      "slave",
+      "wb",
+      "wishbone"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "serirq_host",
+      "serirq_slave",
+      "wb_dreq_host",
+      "wb_dreq_periph",
+      "wb_lpc_host",
+      "wb_lpc_periph",
+      "wb_regfile"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "i2s_interface",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "a34bb4d1683b024e697cf0a35344583fcd74a7d0",
+    "published_at": "2007-10-09T20:13:08+00:00",
+    "description": "I²S audio bus interface controller with Wishbone control port — VHDL bridge between FPGA and external audio codecs.",
+    "license": "GPL-2.0-or-later",
+    "license_class": "strong-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/freecores/i2s_interface.git",
+    "tags": [
+      "codec",
+      "i2s",
+      "receive",
+      "receiver",
+      "rx",
+      "topm",
+      "tops",
+      "transmit",
+      "transmitter",
+      "tx",
+      "wbd"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "rx_i2s_topm",
+      "rx_i2s_tops",
+      "tx_i2s_topm",
+      "tx_i2s_tops"
+    ],
+    "components": [
+      "i2s_codec",
+      "i2s_version",
+      "rx_i2s_wbd",
+      "tx_i2s_wbd"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "sha3",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "c25a5befc75e8f8392fdbff040165428b2f54bfd",
+    "published_at": "2013-01-29T07:40:49+00:00",
+    "description": "Keccak / SHA-3 cryptographic hash family — Apache-2.0 Verilog implementation with ack/in handshake interface.",
+    "license": "Apache-2.0",
+    "license_class": "permissive",
+    "language": "verilog",
+    "source_url": "https://github.com/freecores/sha3.git",
+    "tags": [
+      "permutation"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "keccak",
+      "rconst2in1",
+      "round2in1"
+    ],
+    "components": [
+      "f_permutation",
+      "padder",
+      "padder1",
+      "rconst",
+      "round"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   }
 ]

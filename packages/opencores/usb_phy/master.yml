@@ -1,0 +1,45 @@
+name: usb_phy
+namespace: opencores
+version: master
+commit_sha: 7df8e0f3a9306ee5423216abea29baf7d140206c
+published_at: '2004-10-19T09:29:07+00:00'
+description: Interfaces a USB transceiver with UTMI protocol, handling signal transmission,
+  reception, and line state management.
+license: OpenCores-Permissive-1.0
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/usb_phy.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 7df8e0f3a9306ee5423216abea29baf7d140206c
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/timescale.v
+  - rtl/verilog/usb_rx_phy.v
+  - rtl/verilog/usb_tx_phy.v
+  - rtl/verilog/usb_phy.v
+tags:
+- bus
+- layer
+- phy
+- physical
+- receive
+- receiver
+- rx
+- serial
+- transmit
+- transmitter
+- universal
+- usb
+role: repo
+top_modules:
+- usb_phy
+components:
+- usb_rx_phy
+- usb_tx_phy
+total_entities: 3
+health_tier: bronze
+last_verified_at: '2026-05-05'

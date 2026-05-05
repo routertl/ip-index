@@ -1,0 +1,48 @@
+name: cdc_ufifo
+namespace: opencores
+version: master
+commit_sha: f7725690df3ba5f00345203980bb03251bbabac4
+published_at: '2010-12-02T13:30:18+00:00'
+description: cdc_ufifo generate an minimalist fifo. it can be 4 cells minimum. by
+  default used implementation without ram only standart cells used , and it can be
+  selected if need. most slowest stage is the output multiplexor.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/freecores/cdc_ufifo.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: f7725690df3ba5f00345203980bb03251bbabac4
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - StdUtils.vh
+  - delay_pulse_ff.v
+  - graycntr.v
+  - prim_dffe.v
+  - cdc_ufifo.sv
+  - gray2bin.v
+tags:
+- cdc
+- clock
+- crossing
+- delay
+- dffe
+- domain
+- ff
+- prim
+- pulse
+- ufifo
+role: repo
+top_modules:
+- cdc_ufifo
+- gray2bin
+components:
+- delay_pulse_ff
+- graycntr
+- prim_dffe
+total_entities: 5
+health_tier: bronze
+last_verified_at: '2026-05-05'

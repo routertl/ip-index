@@ -1,0 +1,45 @@
+name: trigonometric_functions_in_double_fpu
+namespace: opencores
+version: master
+commit_sha: 428f254c09b173e9f7e8853102d2d6edc0b19dc8
+published_at: '2013-07-18T15:04:17+00:00'
+description: Trigonometric functions using double precision Floating Point Unit        ////
+license: OpenCores-Permissive-1.0
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/trigonometric_functions_in_double_fpu.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 428f254c09b173e9f7e8853102d2d6edc0b19dc8
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - verilog/cosecant.v
+  - verilog/cosine.v
+  - verilog/cotangent.v
+  - verilog/divider.v
+  - verilog/secant.v
+  - verilog/sine.v
+  - verilog/tangent.v
+tags:
+- cosecant
+- cosine
+- cotangent
+- lut
+- secant
+- sine
+- tangent
+role: repo
+top_modules:
+- cosecant_lut
+- cosine_lut
+- cotangent_lut
+- dividor
+- secant_lut
+- sine_lut
+- tangent_lut
+total_entities: 7
+health_tier: bronze
+last_verified_at: '2026-05-05'

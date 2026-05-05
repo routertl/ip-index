@@ -1,0 +1,38 @@
+name: srl_fifo
+namespace: opencores
+version: master
+commit_sha: 4d2f19cbf9ddb28a05cec589a96436b404601edd
+published_at: '2009-03-10T09:35:24+00:00'
+description: Xilinx SRL16/SRL32-based compact FIFO — uses SRL shift-register primitives
+  for storage on Xilinx FPGA targets. VHDL utility primitive.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/srl_fifo.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 4d2f19cbf9ddb28a05cec589a96436b404601edd
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - rtl/srl_fifo_16.vhd
+  - rtl/srl_fifo_32.vhd
+  - rtl/srl_fifo_64.vhd
+tags:
+- '16'
+- '32'
+- '64'
+- buffer
+- fifo
+- queue
+- srl
+role: repo
+top_modules:
+- srl_fifo_16
+- srl_fifo_32
+- srl_fifo_64
+total_entities: 3
+health_tier: bronze
+last_verified_at: '2026-05-05'

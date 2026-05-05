@@ -1,0 +1,40 @@
+name: desxcore
+namespace: opencores
+version: master
+commit_sha: 3beddf7a023ee89d1274ef24719894ed20a2f4d4
+published_at: '2013-08-10T10:26:10+00:00'
+description: DES-X variant — adds XOR pre/post-whitening keys to standard DES (Rivest
+  1984), strengthening against brute-force. GPL-3+ VHDL.
+license: GPL-3.0-or-later
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/desxcore.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 3beddf7a023ee89d1274ef24719894ed20a2f4d4
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - rtl/f_fun.vhd
+  - rtl/des_round.vhd
+  - rtl/key_schedule.vhd
+  - rtl/des_loop.vhd
+tags:
+- des
+- fun
+- key
+- loop
+- round
+- schedule
+role: repo
+top_modules:
+- des_loop
+components:
+- des_round
+- f_fun
+- key_schedule
+total_entities: 4
+health_tier: bronze
+last_verified_at: '2026-05-05'

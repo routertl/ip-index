@@ -1,0 +1,43 @@
+name: sha3
+namespace: opencores
+version: master
+commit_sha: c25a5befc75e8f8392fdbff040165428b2f54bfd
+published_at: '2013-01-29T07:40:49+00:00'
+description: Keccak / SHA-3 cryptographic hash family — Apache-2.0 Verilog implementation
+  with ack/in handshake interface.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/freecores/sha3.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: c25a5befc75e8f8392fdbff040165428b2f54bfd
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - low_throughput_core/rtl/rconst.v
+  - low_throughput_core/rtl/round.v
+  - low_throughput_core/rtl/f_permutation.v
+  - low_throughput_core/rtl/padder1.v
+  - low_throughput_core/rtl/padder.v
+  - low_throughput_core/rtl/keccak.v
+  - high_throughput_core/rtl/rconst2in1.v
+  - high_throughput_core/rtl/round2in1.v
+tags:
+- permutation
+role: repo
+top_modules:
+- keccak
+- rconst2in1
+- round2in1
+components:
+- f_permutation
+- padder
+- padder1
+- rconst
+- round
+total_entities: 8
+health_tier: bronze
+last_verified_at: '2026-05-05'

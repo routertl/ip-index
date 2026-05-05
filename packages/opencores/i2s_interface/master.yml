@@ -1,0 +1,55 @@
+name: i2s_interface
+namespace: opencores
+version: master
+commit_sha: a34bb4d1683b024e697cf0a35344583fcd74a7d0
+published_at: '2007-10-09T20:13:08+00:00'
+description: I²S audio bus interface controller with Wishbone control port — VHDL
+  bridge between FPGA and external audio codecs.
+license: GPL-2.0-or-later
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/i2s_interface.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: a34bb4d1683b024e697cf0a35344583fcd74a7d0
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - rtl/vhdl/i2s_codec.vhd
+  - rtl/vhdl/i2s_version.vhd
+  - rtl/vhdl/rx_i2s_pack.vhd
+  - rtl/vhdl/rx_i2s_wbd.vhd
+  - rtl/vhdl/rx_i2s_topm.vhd
+  - rtl/vhdl/rx_i2s_tops.vhd
+  - rtl/vhdl/tx_i2s_pack.vhd
+  - rtl/vhdl/tx_i2s_wbd.vhd
+  - rtl/vhdl/tx_i2s_topm.vhd
+  - rtl/vhdl/tx_i2s_tops.vhd
+tags:
+- codec
+- i2s
+- receive
+- receiver
+- rx
+- topm
+- tops
+- transmit
+- transmitter
+- tx
+- wbd
+role: repo
+top_modules:
+- rx_i2s_topm
+- rx_i2s_tops
+- tx_i2s_topm
+- tx_i2s_tops
+components:
+- i2s_codec
+- i2s_version
+- rx_i2s_wbd
+- tx_i2s_wbd
+total_entities: 8
+health_tier: bronze
+last_verified_at: '2026-05-05'

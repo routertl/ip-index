@@ -1,0 +1,31 @@
+name: wb_flash
+namespace: opencores
+version: master
+commit_sha: e4025107be7d9084588350302272a6d591061358
+published_at: '2008-06-04T06:10:35+00:00'
+description: Wishbone-controlled parallel flash memory controller (CFI/JEDEC compatible).
+  Verilog.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/wb_flash.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: e4025107be7d9084588350302272a6d591061358
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/wb_flash.v
+tags:
+- bus
+- flash
+- wb
+- wishbone
+role: repo
+top_modules:
+- wb_flash
+total_entities: 1
+health_tier: bronze
+last_verified_at: '2026-05-05'

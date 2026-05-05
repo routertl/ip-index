@@ -603,6 +603,125 @@
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.360 ingest. LLM picked up README boilerplate with $Date: CVS metadata; rubric-locked."
+    },
+    "opencores/avs_aes": {
+      "verdict": "good",
+      "locked_text": "AES (Advanced Encryption Standard) 128-bit encryption/decryption block (AVS variant) — BSD-2-Clause Verilog primitive with synchronous load/ready handshake.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.362 ingest. LLM lifted to repo-boilerplate ('This file is part of the project avs_aes'); rubric-locked."
+    },
+    "opencores/sha3": {
+      "verdict": "good",
+      "locked_text": "Keccak / SHA-3 cryptographic hash family — Apache-2.0 Verilog implementation with ack/in handshake interface.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.362 ingest. LLM cross-described an internal port-handshake fragment instead of the IP; rubric-locked."
+    },
+    "opencores/i2s_interface": {
+      "verdict": "good",
+      "locked_text": "I²S audio bus interface controller with Wishbone control port — VHDL bridge between FPGA and external audio codecs.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.362 ingest. LLM picked formatting-noise from header banner; rubric-locked. First I²S in registry."
+    },
+    "opencores/wb_lpc": {
+      "verdict": "good",
+      "locked_text": "Wishbone-controlled LPC (Low Pin Count) bus interface — bridges Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD, BMC).",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.362 ingest. LLM picked CVS $Id: line; rubric-locked."
+    },
+    "opencores/yac": {
+      "verdict": "good",
+      "locked_text": "Yet Another CORDIC — generic iterative CORDIC pipeline for trigonometric and hyperbolic functions with parameterised data width.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. LLM picked file-header File: cordic_iterative_int.vhd metadata; rubric-locked."
+    },
+    "opencores/sha_core": {
+      "verdict": "good",
+      "locked_text": "SHA-1 (160-bit Secure Hash Algorithm) cryptographic hash core — single-block hashing primitive.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. LLM picked banner-noise 'SHA-160 //// Secure Hash'; rubric-locked."
+    },
+    "opencores/descore": {
+      "verdict": "good",
+      "locked_text": "DES (Data Encryption Standard) cipher core — 56-bit key, 64-bit block. GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. LLM lifted to GPL preamble fragment ('This program is free software'); rubric-locked."
+    },
+    "opencores/deslcore": {
+      "verdict": "good",
+      "locked_text": "DESL (DES-Lightweight) variant — area-optimised DES with a single shared S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. Same GPL-preamble issue as descore."
+    },
+    "opencores/deslxcore": {
+      "verdict": "good",
+      "locked_text": "DESLX variant — combines the DES-Lightweight S-box optimisation with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. Same GPL-preamble issue as descore."
+    },
+    "opencores/desxcore": {
+      "verdict": "good",
+      "locked_text": "DES-X variant — adds XOR pre/post-whitening keys to standard DES (Rivest 1984), strengthening against brute-force. GPL-3+ VHDL.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. Same GPL-preamble issue as descore."
+    },
+    "opencores/xteacore": {
+      "verdict": "good",
+      "locked_text": "XTEA (eXtended Tiny Encryption Algorithm) cipher core — 128-bit key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. Same GPL-preamble issue as descore."
+    },
+    "opencores/reed_solomon_decoder": {
+      "verdict": "good",
+      "locked_text": "Generic Reed-Solomon decoder pipeline with configurable code parameters. Sibling to opencores/rs_decoder_31_19_6 (specific to the (31,19,6) code).",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. Same GPL-preamble issue as descore."
+    },
+    "opencores/srl_fifo": {
+      "verdict": "good",
+      "locked_text": "Xilinx SRL16/SRL32-based compact FIFO — uses SRL shift-register primitives for storage on Xilinx FPGA targets. VHDL utility primitive.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. LLM lifted to repo-boilerplate ('part of the srl_fifo project'); rubric-locked."
+    },
+    "opencores/wb_size_bridge": {
+      "verdict": "good",
+      "locked_text": "Wishbone bus width-resize bridge — connects masters and slaves with mismatched data widths via byte-lane steering.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. LLM picked OpenCores license preamble ('This source file may be used and distributed without'); rubric-locked."
+    },
+    "opencores/wb_flash": {
+      "verdict": "good",
+      "locked_text": "Wishbone-controlled parallel flash memory controller (CFI/JEDEC compatible). Verilog.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. LLM picked CVS $Id: line; rubric-locked."
+    },
+    "opencores/video_stream_scaler": {
+      "verdict": "good",
+      "locked_text": "Video stream scaler — line-buffer-based filtering pipeline that resamples raster video streams to a target output resolution. LGPL-2.1+ Verilog.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.363 ingest. LLM described an internal dual-port-RAM sub-module instead of the scaler IP; rubric-locked."
+    },
+    "opencores/warp": {
+      "verdict": "good",
+      "locked_text": "Image warping pipeline with image-decay / temporal-aging effect — geometric distortion + temporal modulation.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.362 ingest. LLM produced cryptic 'Image warping and decay, top-level'; rubric-locked."
     }
   }
 }

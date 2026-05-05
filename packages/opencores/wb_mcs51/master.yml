@@ -1,0 +1,30 @@
+name: wb_mcs51
+namespace: opencores
+version: master
+commit_sha: fed5cdbbd07523dff528e9dcb7d8f36056043987
+published_at: '2008-03-10T13:58:10+00:00'
+description: MCS51 to Wishbone Interface                                 ////
+license: OpenCores-Permissive-1.0
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/wb_mcs51.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: fed5cdbbd07523dff528e9dcb7d8f36056043987
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/wb_mcs51.v
+tags:
+- bus
+- mcs51
+- wb
+- wishbone
+role: repo
+top_modules:
+- wb_mcs51
+total_entities: 1
+health_tier: bronze
+last_verified_at: '2026-05-05'

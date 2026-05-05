@@ -1,0 +1,62 @@
+name: reed_solomon_decoder
+namespace: opencores
+version: master
+commit_sha: 2d581673ad7d3a97bca63c674b867ec80db0e2c6
+published_at: '2010-04-11T14:41:07+00:00'
+description: Generic Reed-Solomon decoder pipeline with configurable code parameters.
+  Sibling to opencores/rs_decoder_31_19_6 (specific to the (31,19,6) code).
+license: GPL-3.0-or-later
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/reed_solomon_decoder.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 2d581673ad7d3a97bca63c674b867ec80db0e2c6
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/BM_lamda.v
+  - rtl/DP_RAM.v
+  - rtl/GF_matrix_ascending_binary.v
+  - rtl/GF_matrix_dec.v
+  - rtl/GF_mult_add_syndromes.v
+  - rtl/Omega_Phy.v
+  - rtl/error_correction.v
+  - rtl/input_syndromes.v
+  - rtl/lamda_roots.v
+  - rtl/out_stage.v
+  - rtl/transport_in2out.v
+  - rtl/RS_dec.v
+tags:
+- access
+- ascending
+- binary
+- correction
+- datapath
+- decoder
+- in2out
+- matrix
+- memory
+- physical
+- syndromes
+- transport
+role: repo
+top_modules:
+- RS_dec
+components:
+- BM_lamda
+- DP_RAM
+- GF_matrix_ascending_binary
+- GF_matrix_dec
+- GF_mult_add_syndromes
+- Omega_Phy
+- error_correction
+- input_syndromes
+- lamda_roots
+- out_stage
+- transport_in2out
+total_entities: 12
+health_tier: bronze
+last_verified_at: '2026-05-05'

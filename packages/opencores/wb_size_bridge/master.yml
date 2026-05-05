@@ -1,0 +1,44 @@
+name: wb_size_bridge
+namespace: opencores
+version: master
+commit_sha: b550232886547e5e24d4f0db6382da3b1f70506d
+published_at: '2011-03-29T01:42:07+00:00'
+description: Wishbone bus width-resize bridge — connects masters and slaves with mismatched
+  data widths via byte-lane steering.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/wb_size_bridge.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: b550232886547e5e24d4f0db6382da3b1f70506d
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - src/wb_size_bridge.v
+  - src/asram_if.v
+  - src/async_mem_if.v
+tags:
+- adapter
+- asram
+- async
+- asynchronous
+- bridge
+- bus
+- converter
+- mem
+- protocol
+- size
+- wb
+- wishbone
+role: repo
+top_modules:
+- asram_if
+- async_mem_if
+components:
+- wb_size_bridge
+total_entities: 3
+health_tier: bronze
+last_verified_at: '2026-05-05'

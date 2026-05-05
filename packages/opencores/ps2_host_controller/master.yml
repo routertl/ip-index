@@ -1,0 +1,50 @@
+name: ps2_host_controller
+namespace: opencores
+version: master
+commit_sha: 4707b69862d7760b360363c2f52b9fbc754946bd
+published_at: '2011-12-19T02:13:20+00:00'
+description: PS/2 host controller that transmits and receives 8-bit data over PS/2
+  clock and data lines with status indication.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/ps2_host_controller.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 4707b69862d7760b360363c2f52b9fbc754946bd
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - hdl/ps2_host_defines.v
+  - hdl/timescale.v
+  - hdl/ps2_host_clk_ctrl.v
+  - hdl/ps2_host_watchdog.v
+  - hdl/ps2_host_rx.v
+  - hdl/ps2_host_tx.v
+  - hdl/ps2_host.v
+tags:
+- clk
+- clock
+- control
+- controller
+- ctrl
+- host
+- ps2
+- receive
+- receiver
+- transmit
+- transmitter
+- watchdog
+role: repo
+top_modules:
+- ps2_host
+components:
+- ps2_host_clk_ctrl
+- ps2_host_rx
+- ps2_host_tx
+- ps2_host_watchdog
+total_entities: 5
+health_tier: bronze
+last_verified_at: '2026-05-05'

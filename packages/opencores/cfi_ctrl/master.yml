@@ -1,0 +1,35 @@
+name: cfi_ctrl
+namespace: opencores
+version: master
+commit_sha: 5c9b818aa0ef2ea3b5b14c06e016e6f3fc677e74
+published_at: '2011-10-23T12:05:51+00:00'
+description: Top level of CFI controller with 32-bit Wishbone classic interface Intended
+  to be used at about 66MHz with a 32MB CFI flash part with 16-bit data interface.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/cfi_ctrl.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 5c9b818aa0ef2ea3b5b14c06e016e6f3fc677e74
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/verilog/cfi_ctrl_engine.v
+  - rtl/verilog/cfi_ctrl.v
+tags:
+- cfi
+- control
+- controller
+- ctrl
+- engine
+role: repo
+top_modules:
+- cfi_ctrl
+components:
+- cfi_ctrl_engine
+total_entities: 2
+health_tier: bronze
+last_verified_at: '2026-05-05'

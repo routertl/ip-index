@@ -1,0 +1,77 @@
+name: jpegencode
+namespace: opencores
+version: master
+commit_sha: 1cd7f75b5f7f2c2e99640b1fd42f7f875b081044
+published_at: '2022-10-31T01:41:03+01:00'
+description: This is the top level module of the JPEG Encoder Core. This module takes
+  the output from the fifo_out module and sends it to the ff_checker module to check
+  for FF's in the bitstream.
+license: OpenCores-Permissive-1.0
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/freecores/jpegencode.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 1cd7f75b5f7f2c2e99640b1fd42f7f875b081044
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rgb2ycbcr.v
+  - cb_dct.v
+  - cb_huff.v
+  - cb_quantizer.v
+  - cbd_q_h.v
+  - cr_dct.v
+  - cr_huff.v
+  - cr_quantizer.v
+  - crd_q_h.v
+  - sync_fifo_ff.v
+  - ff_checker.v
+  - y_dct.v
+  - y_huff.v
+  - y_quantizer.v
+  - yd_q_h.v
+  - pre_fifo.v
+  - sync_fifo_32.v
+  - fifo_out.v
+  - jpeg_top.v
+tags:
+- buffer
+- cbd
+- checker
+- crd
+- fifo
+- huff
+- jpeg
+- quantizer
+- queue
+- sync
+- synchronizer
+- synchronous
+role: repo
+top_modules:
+- jpeg_top
+components:
+- RGB2YCBCR
+- cb_dct
+- cb_huff
+- cb_quantizer
+- cbd_q_h
+- cr_dct
+- cr_huff
+- cr_quantizer
+- crd_q_h
+- ff_checker
+- fifo_out
+- pre_fifo
+- sync_fifo_32
+- sync_fifo_ff
+- y_dct
+- y_huff
+- y_quantizer
+- yd_q_h
+total_entities: 19
+health_tier: bronze
+last_verified_at: '2026-05-05'

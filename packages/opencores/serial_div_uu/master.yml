@@ -1,0 +1,38 @@
+name: serial_div_uu
+namespace: opencores
+version: master
+commit_sha: 2d99c8360df6e7009eee2aee1719ce2b9c82a316
+published_at: '2005-10-25T06:23:36+00:00'
+description: 'PWM reader ...for variable frequency PWM signals from real world sensors.
+  Description: See description below (which suffices for IP core specification document.)'
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/freecores/serial_div_uu.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 2d99c8360df6e7009eee2aee1719ce2b9c82a316
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - serial_divide_uu.v
+  - pwm_reader.v
+tags:
+- divide
+- modulation
+- pulse
+- pwm
+- reader
+- serial
+- uu
+- width
+role: repo
+top_modules:
+- pwm_reader
+components:
+- serial_divide_uu
+total_entities: 2
+health_tier: bronze
+last_verified_at: '2026-05-05'
