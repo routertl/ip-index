@@ -722,6 +722,41 @@
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.362 ingest. LLM produced cryptic 'Image warping and decay, top-level'; rubric-locked."
+    },
+    "opencores/fully-pipelined-edge-detection-algorithms": {
+      "verdict": "good",
+      "locked_text": "Fully-pipelined image edge-detection algorithms — Sobel and Canny family operators in mature Verilog form, ready for streaming raster pixel inputs.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.364 ingest. LLM picked the Vivado tool-template header banner ('Company: Engineer: MUHAMMED KOCAOGLU Create Date:...'); rubric-locked."
+    },
+    "opencores/apbtoaes128": {
+      "verdict": "good",
+      "locked_text": "APB-to-AES-128 bridge — exposes an AES-128 cipher core through the AMBA APB peripheral bus for register-mapped key/data access.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.364 ingest. LLM hallucinated 'APB to I2C project' attribution (the file's actual scope is APB-to-AES, not I2C); rubric-locked + factual fix."
+    },
+    "opencores/sha256_hash_core": {
+      "verdict": "good",
+      "locked_text": "SHA-256 cryptographic hash core — single-block 256-bit Secure Hash Algorithm 2 implementation with synchronous control interface.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.364 ingest. LLM picked Xilinx ISE/Vivado template header ('Create Date: ... Design Name: gv_sha256 Module Name...'); rubric-locked."
+    },
+    "opencores/wbfmtx": {
+      "verdict": "good",
+      "locked_text": "Wishbone-controlled FM transmitter — software-defined-radio building block that takes a Wishbone-attached audio stream and produces an FM-modulated baseband output.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.364 ingest. LLM picked author's narrative ('This Hack is based off of two things'); rubric-locked."
+    },
+    "opencores/m32632": {
+      "verdict": "good",
+      "locked_text": "National Semiconductor NS32000-series 32-bit CPU implementation in Verilog (Udo Möller). Maintained at RetroPM/m32632; LGPL-2.1.",
+      "reviewed_at": "2026-05-05",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.364 ingest. Direct upstream (RetroPM/m32632, no fork-curate). LLM produced the literal GitHub one-line description (\"Udo Möller's description\") which echos the repo's own about-text; rubric-locked."
     }
   }
 }

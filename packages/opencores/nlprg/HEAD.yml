@@ -1,0 +1,33 @@
+name: nlprg
+namespace: opencores
+version: HEAD
+commit_sha: fd86f57cd8244ffb2b6349a68566cc65d885752a
+published_at: '2026-05-05T12:55:14+02:00'
+description: This project provides an example of a non-linear pseudo random generator
+  ( nlprg ). The nlprg can produce a pseudo-random sequence with a period of 2^n numbers,
+  where n is the numbers of registers.
+license: OpenCores-Permissive-1.0
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/routertl-mirrors/nlprg.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: fd86f57cd8244ffb2b6349a68566cc65d885752a
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/dff.v
+  - rtl/nlprg8.v
+tags: []
+role: repo
+top_modules:
+- nlprg8
+components:
+- dff
+total_entities: 2
+mirror_status: curated-mirror
+upstream_url: https://opencores.org/projects/nlprg
+health_tier: bronze
+last_verified_at: '2026-05-05'

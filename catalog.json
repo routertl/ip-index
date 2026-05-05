@@ -27909,5 +27909,639 @@
     ],
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "dpll-isdn",
+    "latest": "efc6cb4e747a",
+    "versions": [
+      "efc6cb4e747a"
+    ],
+    "commit_sha": "efc6cb4e747abcdcf9dc2239fb4cfe35c053ca95",
+    "published_at": "2026-05-05T12:55:03+02:00",
+    "description": "Synchronizes an input signal to a main clock using phase-locked loop control with lead/lag outputs.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/routertl-mirrors/dpll-isdn.git",
+    "tags": [],
+    "role": "repo",
+    "top_modules": [
+      "dpll"
+    ],
+    "components": [
+      "freqdivider",
+      "phasecomparator",
+      "randomwalkfilter",
+      "variableresetrandomwalkfilter"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/dpll-isdn",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "xconcentrator",
+    "latest": "32767e185533",
+    "versions": [
+      "32767e185533"
+    ],
+    "commit_sha": "32767e1855335acd07cd6c5eaf3d25d612257ac2",
+    "published_at": "2026-05-05T12:42:29+02:00",
+    "description": "Concentrates multiple BNET input streams into a single output stream with data availability signaling.",
+    "license": "BSD-2-Clause",
+    "license_class": "permissive",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/routertl-mirrors/xconcentrator.git",
+    "tags": [
+      "bnet",
+      "concentrator",
+      "find",
+      "switch",
+      "target"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "bnet_concentrator"
+    ],
+    "components": [
+      "bnet_find_target",
+      "concentrator_switch"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/xconcentrator",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "8bit_vedic_multiplier",
+    "latest": "3cd5ea40cadd",
+    "versions": [
+      "3cd5ea40cadd"
+    ],
+    "commit_sha": "3cd5ea40cadd7d5dd6746ef390758a8ded01ac97",
+    "published_at": "2026-05-05T12:54:06+02:00",
+    "description": "Multiplies two 8-bit unsigned integers to produce a 16-bit product.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/routertl-mirrors/8bit_vedic_multiplier.git",
+    "tags": [
+      "12bit",
+      "4bit",
+      "6bit",
+      "8bit",
+      "adder",
+      "full",
+      "half",
+      "ripple"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "vedic8x8"
+    ],
+    "components": [
+      "full_adder",
+      "half_adder",
+      "ripple_adder_12bit",
+      "ripple_adder_4bit",
+      "ripple_adder_6bit",
+      "ripple_adder_8bit",
+      "vedic2x2",
+      "vedic4x4"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/8bit_vedic_multiplier",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "nand_controller",
+    "latest": "94bb63210770",
+    "versions": [
+      "94bb63210770"
+    ],
+    "commit_sha": "94bb6321077060734432b32c75423b5f6a2aa3c2",
+    "published_at": "2026-05-05T12:54:24+02:00",
+    "description": "Avalon interface controller for NAND flash memory read/write operations with command and address sequencing.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/routertl-mirrors/nand_controller.git",
+    "tags": [
+      "avalon",
+      "io",
+      "latch",
+      "master",
+      "nand"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "nand_avalon"
+    ],
+    "components": [
+      "io_unit",
+      "latch_unit",
+      "nand_master"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/nand_controller",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "nlprg",
+    "latest": "fd86f57cd824",
+    "versions": [
+      "fd86f57cd824"
+    ],
+    "commit_sha": "fd86f57cd8244ffb2b6349a68566cc65d885752a",
+    "published_at": "2026-05-05T12:55:14+02:00",
+    "description": "This project provides an example of a non-linear pseudo random generator ( nlprg ). The nlprg can produce a pseudo-random sequence with a period of 2^n numbers, where n is the numbers of registers.",
+    "license": "OpenCores-Permissive-1.0",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/routertl-mirrors/nlprg.git",
+    "tags": [],
+    "role": "repo",
+    "top_modules": [
+      "nlprg8"
+    ],
+    "components": [
+      "dff"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/nlprg",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "m32632",
+    "latest": "3f7adf4b32ae",
+    "versions": [
+      "3f7adf4b32ae"
+    ],
+    "commit_sha": "3f7adf4b32ae5cc3843d71840efe76132f2e7daa",
+    "published_at": "2024-08-02T14:57:07+01:00",
+    "description": "National Semiconductor NS32000-series 32-bit CPU implementation in Verilog (Udo Möller). Maintained at RetroPM/m32632; LGPL-2.1.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/RetroPM/m32632.git",
+    "tags": [
+      "addsub",
+      "aligner",
+      "config",
+      "control",
+      "counter",
+      "datapath",
+      "dcache",
+      "divider",
+      "gruppe",
+      "icache",
+      "register",
+      "switch"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "DCACHE_SM",
+      "DCA_CONTROL",
+      "DEBUG_AE",
+      "DFPU_ADDSUB",
+      "DFPU_BCD",
+      "DFPU_DIV",
+      "DFPU_MISC",
+      "DFPU_MUL",
+      "DIVI_PREP",
+      "DP_FPU",
+      "DP_LOGIK",
+      "FFS_LOGIK",
+      "FILTCMP",
+      "FP_STAT_REG",
+      "ICACHE_SM",
+      "ILL_UNDEF",
+      "I_PFAD",
+      "KOLDETECT",
+      "M32632",
+      "MAKE_STAT",
+      "MMU_MATCH",
+      "MMU_UP",
+      "MULFILTER",
+      "NEU_VALID",
+      "OPDEC_REG",
+      "PREPDATA",
+      "PROG_COUNTER",
+      "REGISTER",
+      "REG_LIST",
+      "SCANDIG",
+      "SCHALE",
+      "SFPU_ADDSUB",
+      "SFPU_MUL",
+      "SHIFTER",
+      "SP_FPU",
+      "WRPORT",
+      "WR_ALIGNER"
+    ],
+    "components": [
+      "ADDR_UNIT",
+      "ADDSUB",
+      "BCDADDER",
+      "BITMASK",
+      "CA_MATCH",
+      "CONFIG_REGS",
+      "DATENPFAD",
+      "DCACHE",
+      "DECODER",
+      "DMUX",
+      "GRUPPE_2",
+      "ICACHE",
+      "IO_SWITCH",
+      "RD_ALIGNER",
+      "STEUERUNG"
+    ],
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "linkruncca",
+    "latest": "dc0a13c4d755",
+    "versions": [
+      "dc0a13c4d755"
+    ],
+    "commit_sha": "dc0a13c4d75501f51745b9f13aa6263f41b17eb3",
+    "published_at": "2026-05-05T12:54:46+02:00",
+    "description": "Detects connected components in pixel data stream and outputs bounding box coordinates.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/routertl-mirrors/linkruncca.git",
+    "tags": [
+      "access",
+      "accumulator",
+      "buf",
+      "equivalence",
+      "feature",
+      "filler",
+      "holes",
+      "memory",
+      "random",
+      "reader",
+      "resolver",
+      "table"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "LinkRunCCA"
+    ],
+    "components": [
+      "equivalence_resolver",
+      "feature_accumulator",
+      "holes_filler",
+      "row_buf",
+      "table_ram",
+      "table_reader",
+      "window"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/linkruncca",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "apbtoaes128",
+    "latest": "74ca9275976b",
+    "versions": [
+      "74ca9275976b"
+    ],
+    "commit_sha": "74ca9275976b427baf2fccd052cffbc7763e7b16",
+    "published_at": "2026-05-05T12:54:29+02:00",
+    "description": "APB-to-AES-128 bridge — exposes an AES-128 cipher core through the AMBA APB peripheral bus for register-mapped key/data access.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/routertl-mirrors/apbtoaes128.git",
+    "tags": [
+      "columns",
+      "control",
+      "core",
+      "data",
+      "expander",
+      "host",
+      "interface",
+      "internet",
+      "network",
+      "protocol",
+      "rows",
+      "shift"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "aes_ip"
+    ],
+    "components": [
+      "aes_core",
+      "control_unit",
+      "data_swap",
+      "datapath",
+      "host_interface",
+      "key_expander",
+      "mix_columns",
+      "sBox",
+      "sBox_8",
+      "shift_rows"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/apbtoaes128",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wbfmtx",
+    "latest": "d248fe6384ac",
+    "versions": [
+      "d248fe6384ac"
+    ],
+    "commit_sha": "d248fe6384ac66b83badd53d15e57c2e30b33b5f",
+    "published_at": "2026-05-05T12:54:52+02:00",
+    "description": "Wishbone-controlled FM transmitter — software-defined-radio building block that takes a Wishbone-attached audio stream and produces an FM-modulated baseband output.",
+    "license": "GPL-2.0-or-later",
+    "license_class": "strong-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/routertl-mirrors/wbfmtx.git",
+    "tags": [],
+    "role": "repo",
+    "top_modules": [
+      "wbfmtxhack"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/wbfmtx",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "gng",
+    "latest": "83a7d8f9468e",
+    "versions": [
+      "83a7d8f9468e"
+    ],
+    "commit_sha": "83a7d8f9468e82d4eb9653248de7bb2cae709a1e",
+    "published_at": "2026-05-05T12:54:57+02:00",
+    "description": "Gaussian Noise Generator (GNG) IP Core",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/routertl-mirrors/gng.git",
+    "tags": [
+      "16",
+      "18",
+      "37",
+      "coef",
+      "ctg",
+      "gng",
+      "interp",
+      "lzd",
+      "sadd",
+      "smul"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "gng"
+    ],
+    "components": [
+      "gng_coef",
+      "gng_ctg",
+      "gng_interp",
+      "gng_lzd",
+      "gng_smul_16_18",
+      "gng_smul_16_18_sadd_37"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/gng",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "generic_parameterized_carry_lookahead_adder",
+    "latest": "a642c47c40b0",
+    "versions": [
+      "a642c47c40b0"
+    ],
+    "commit_sha": "a642c47c40b0cb5e80c6b0bec117dd75686ce023",
+    "published_at": "2026-05-05T12:55:08+02:00",
+    "description": "Adds two binary numbers with carry-lookahead logic for faster propagation of carry signals.",
+    "license": "GPL-2.0-or-later",
+    "license_class": "strong-copyleft",
+    "language": "verilog",
+    "source_url": "https://github.com/routertl-mirrors/generic_parameterized_carry_lookahead_adder.git",
+    "tags": [
+      "adder",
+      "carry",
+      "generate",
+      "lookahead",
+      "propagate"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "carry_lookahead_adder"
+    ],
+    "components": [
+      "carry_generate",
+      "propagate_generate"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/generic_parameterized_carry_lookahead_adder",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "sha256_hash_core",
+    "latest": "094b65152da7",
+    "versions": [
+      "094b65152da7"
+    ],
+    "commit_sha": "094b65152da7e696ccbbe5a58851c1391a5b02c7",
+    "published_at": "2026-05-05T12:54:40+02:00",
+    "description": "SHA-256 cryptographic hash core — single-block 256-bit Secure Hash Algorithm 2 implementation with synchronous control interface.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/routertl-mirrors/sha256_hash_core.git",
+    "tags": [
+      "control",
+      "core",
+      "gv",
+      "hash",
+      "memory",
+      "msg",
+      "only",
+      "padding",
+      "read",
+      "rom",
+      "sch",
+      "sha256"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "gv_sha256"
+    ],
+    "components": [
+      "sha256_control",
+      "sha256_hash_core",
+      "sha256_ki_rom",
+      "sha256_kt_rom",
+      "sha256_msg_sch",
+      "sha256_padding",
+      "sha256_regs"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/sha256_hash_core",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "fully-pipelined-edge-detection-algorithms",
+    "latest": "596c754dca8a",
+    "versions": [
+      "596c754dca8a"
+    ],
+    "commit_sha": "596c754dca8ad85a2af9e01086fc791fa8c75ee8",
+    "published_at": "2026-05-05T12:54:17+02:00",
+    "description": "Fully-pipelined image edge-detection algorithms — Sobel and Canny family operators in mature Verilog form, ready for streaming raster pixel inputs.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "source_url": "https://github.com/routertl-mirrors/fully-pipelined-edge-detection-algorithms.git",
+    "tags": [
+      "fpga",
+      "unisim",
+      "xilinx"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "EdgeDetection"
+    ],
+    "components": [
+      "PrewittFilter",
+      "RobertsFilter",
+      "ScharrFilter",
+      "SobelFilter"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/fully-pipelined-edge-detection-algorithms",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "wf3d",
+    "latest": "ffd766c3b3e7",
+    "versions": [
+      "ffd766c3b3e7"
+    ],
+    "commit_sha": "ffd766c3b3e735a28773c7b74cfc2b54efbb1078",
+    "published_at": "2026-05-05T12:54:00+02:00",
+    "description": "A 3D graphics rendering core that processes commands via Wishbone bus interface and manages memory transactions for 3D drawing operations.",
+    "license": "BSD-2-Clause",
+    "license_class": "permissive",
+    "language": "verilog",
+    "source_url": "https://github.com/routertl-mirrors/wf3d.git",
+    "tags": [
+      "arbiter",
+      "arbitration",
+      "clip",
+      "core",
+      "cull",
+      "fadd",
+      "fcnv",
+      "matrix",
+      "memory",
+      "persdiv",
+      "state",
+      "viewport"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "fm_3d_core"
+    ],
+    "components": [
+      "fm_3d_f22_to_i",
+      "fm_3d_fadd",
+      "fm_3d_fcnv",
+      "fm_3d_fmul",
+      "fm_3d_frcp",
+      "fm_3d_frcp_rom",
+      "fm_3d_norm",
+      "fm_geo",
+      "fm_geo_clip",
+      "fm_geo_cull",
+      "fm_geo_matrix",
+      "fm_geo_mem",
+      "fm_geo_persdiv",
+      "fm_geo_tri",
+      "fm_geo_viewport",
+      "fm_mem_arb",
+      "fm_ras",
+      "fm_ras_line",
+      "fm_ras_mem",
+      "fm_ras_state",
+      "fm_sys"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/wf3d",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "opencores",
+    "name": "viterbi_decoder_soft_decision",
+    "latest": "21a58406dd00",
+    "versions": [
+      "21a58406dd00"
+    ],
+    "commit_sha": "21a58406dd001643069aa1a8ff6738de3467e982",
+    "published_at": "2026-05-05T12:54:35+02:00",
+    "description": "Viterbi decoder that recovers information bits from received symbol pairs using branch and path metrics.",
+    "license": "LGPL-2.1-or-later",
+    "license_class": "weak-copyleft",
+    "language": "systemverilog",
+    "source_url": "https://github.com/routertl-mirrors/viterbi_decoder_soft_decision.git",
+    "tags": [
+      "acs",
+      "bmu",
+      "dec",
+      "decoder",
+      "fsm",
+      "rad2",
+      "tbu",
+      "vit"
+    ],
+    "role": "repo",
+    "top_modules": [
+      "vit_top"
+    ],
+    "components": [
+      "acs_rad2",
+      "tbu_dec",
+      "vit_acs",
+      "vit_bmu",
+      "vit_fsm",
+      "vit_tbu"
+    ],
+    "mirror_status": "curated-mirror",
+    "upstream_url": "https://opencores.org/projects/viterbi_decoder_soft_decision",
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   }
 ]

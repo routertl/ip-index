@@ -1,0 +1,43 @@
+name: fully-pipelined-edge-detection-algorithms
+namespace: opencores
+version: HEAD
+commit_sha: 596c754dca8ad85a2af9e01086fc791fa8c75ee8
+published_at: '2026-05-05T12:54:17+02:00'
+description: Fully-pipelined image edge-detection algorithms — Sobel and Canny family
+  operators in mature Verilog form, ready for streaming raster pixel inputs.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/routertl-mirrors/fully-pipelined-edge-detection-algorithms.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 596c754dca8ad85a2af9e01086fc791fa8c75ee8
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - src/OperatorOverloading_pkg.vhd
+  - src/EdgeDetection_pkg.vhd
+  - src/PrewittFilter.vhd
+  - src/RobertsFilter.vhd
+  - src/ScharrFilter.vhd
+  - src/SobelFilter.vhd
+  - src/EdgeDetection.vhd
+tags:
+- fpga
+- unisim
+- xilinx
+role: repo
+top_modules:
+- EdgeDetection
+components:
+- PrewittFilter
+- RobertsFilter
+- ScharrFilter
+- SobelFilter
+total_entities: 5
+mirror_status: curated-mirror
+upstream_url: https://opencores.org/projects/fully-pipelined-edge-detection-algorithms
+health_tier: bronze
+last_verified_at: '2026-05-05'

@@ -1,0 +1,39 @@
+name: generic_parameterized_carry_lookahead_adder
+namespace: opencores
+version: a642c47c40b0
+commit_sha: a642c47c40b0cb5e80c6b0bec117dd75686ce023
+published_at: '2026-05-05T12:55:08+02:00'
+description: Adds two binary numbers with carry-lookahead logic for faster propagation
+  of carry signals.
+license: GPL-2.0-or-later
+license_class: strong-copyleft
+source:
+  type: git
+  url: https://github.com/routertl-mirrors/generic_parameterized_carry_lookahead_adder.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: a642c47c40b0cb5e80c6b0bec117dd75686ce023
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/carry_generate.v
+  - rtl/propagate_generate.v
+  - rtl/carry_lookahead_adder.v
+tags:
+- adder
+- carry
+- generate
+- lookahead
+- propagate
+role: repo
+top_modules:
+- carry_lookahead_adder
+components:
+- carry_generate
+- propagate_generate
+total_entities: 3
+mirror_status: curated-mirror
+upstream_url: https://opencores.org/projects/generic_parameterized_carry_lookahead_adder
+health_tier: bronze
+last_verified_at: '2026-05-05'

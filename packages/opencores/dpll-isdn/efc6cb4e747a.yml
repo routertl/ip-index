@@ -1,0 +1,38 @@
+name: dpll-isdn
+namespace: opencores
+version: efc6cb4e747a
+commit_sha: efc6cb4e747abcdcf9dc2239fb4cfe35c053ca95
+published_at: '2026-05-05T12:55:03+02:00'
+description: Synchronizes an input signal to a main clock using phase-locked loop
+  control with lead/lag outputs.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/routertl-mirrors/dpll-isdn.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: efc6cb4e747abcdcf9dc2239fb4cfe35c053ca95
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - Sources/freqdivider.v
+  - Sources/phasecomparator.v
+  - Sources/randomwalkfilter.v
+  - Sources/variableresetrandomwalkfilter.v
+  - Sources/dpll.v
+tags: []
+role: repo
+top_modules:
+- dpll
+components:
+- freqdivider
+- phasecomparator
+- randomwalkfilter
+- variableresetrandomwalkfilter
+total_entities: 5
+mirror_status: curated-mirror
+upstream_url: https://opencores.org/projects/dpll-isdn
+health_tier: bronze
+last_verified_at: '2026-05-05'

@@ -1,0 +1,62 @@
+name: apbtoaes128
+namespace: opencores
+version: HEAD
+commit_sha: 74ca9275976b427baf2fccd052cffbc7763e7b16
+published_at: '2026-05-05T12:54:29+02:00'
+description: APB-to-AES-128 bridge — exposes an AES-128 cipher core through the AMBA
+  APB peripheral bus for register-mapped key/data access.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/routertl-mirrors/apbtoaes128.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 74ca9275976b427baf2fccd052cffbc7763e7b16
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/control_unit.v
+  - rtl/data_swap.v
+  - rtl/key_expander.v
+  - rtl/mix_columns.v
+  - rtl/sBox_8.v
+  - rtl/sBox.v
+  - rtl/shift_rows.v
+  - rtl/datapath.v
+  - rtl/aes_core.v
+  - rtl/host_interface.v
+  - rtl/aes_ip.v
+tags:
+- columns
+- control
+- core
+- data
+- expander
+- host
+- interface
+- internet
+- network
+- protocol
+- rows
+- shift
+role: repo
+top_modules:
+- aes_ip
+components:
+- aes_core
+- control_unit
+- data_swap
+- datapath
+- host_interface
+- key_expander
+- mix_columns
+- sBox
+- sBox_8
+- shift_rows
+total_entities: 11
+mirror_status: curated-mirror
+upstream_url: https://opencores.org/projects/apbtoaes128
+health_tier: bronze
+last_verified_at: '2026-05-05'

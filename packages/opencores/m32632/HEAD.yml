@@ -1,0 +1,106 @@
+name: m32632
+namespace: opencores
+version: HEAD
+commit_sha: 3f7adf4b32ae5cc3843d71840efe76132f2e7daa
+published_at: '2024-08-02T14:57:07+01:00'
+description: National Semiconductor NS32000-series 32-bit CPU implementation in Verilog
+  (Udo Möller). Maintained at RetroPM/m32632; LGPL-2.1.
+license: LGPL-2.1-or-later
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://github.com/RetroPM/m32632.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 3f7adf4b32ae5cc3843d71840efe76132f2e7daa
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/ADDR_UNIT.v
+  - rtl/SP_FPU.v
+  - rtl/DP_FPU.v
+  - rtl/I_PFAD.v
+  - rtl/CACHE_LOGIK.v
+  - rtl/REGISTERS.v
+  - rtl/DATENPFAD.v
+  - rtl/ALIGNER.v
+  - rtl/DCACHE.v
+  - rtl/STEUER_MISC.v
+  - rtl/DECODER.v
+  - rtl/ICACHE_SM.v
+  - rtl/ICACHE.v
+  - rtl/TOP_MISC.v
+  - rtl/STEUERUNG.v
+  - rtl/M32632.v
+tags:
+- addsub
+- aligner
+- config
+- control
+- counter
+- datapath
+- dcache
+- divider
+- gruppe
+- icache
+- register
+- switch
+role: repo
+top_modules:
+- DCACHE_SM
+- DCA_CONTROL
+- DEBUG_AE
+- DFPU_ADDSUB
+- DFPU_BCD
+- DFPU_DIV
+- DFPU_MISC
+- DFPU_MUL
+- DIVI_PREP
+- DP_FPU
+- DP_LOGIK
+- FFS_LOGIK
+- FILTCMP
+- FP_STAT_REG
+- ICACHE_SM
+- ILL_UNDEF
+- I_PFAD
+- KOLDETECT
+- M32632
+- MAKE_STAT
+- MMU_MATCH
+- MMU_UP
+- MULFILTER
+- NEU_VALID
+- OPDEC_REG
+- PREPDATA
+- PROG_COUNTER
+- REGISTER
+- REG_LIST
+- SCANDIG
+- SCHALE
+- SFPU_ADDSUB
+- SFPU_MUL
+- SHIFTER
+- SP_FPU
+- WRPORT
+- WR_ALIGNER
+components:
+- ADDR_UNIT
+- ADDSUB
+- BCDADDER
+- BITMASK
+- CA_MATCH
+- CONFIG_REGS
+- DATENPFAD
+- DCACHE
+- DECODER
+- DMUX
+- GRUPPE_2
+- ICACHE
+- IO_SWITCH
+- RD_ALIGNER
+- STEUERUNG
+total_entities: 52
+health_tier: bronze
+last_verified_at: '2026-05-05'

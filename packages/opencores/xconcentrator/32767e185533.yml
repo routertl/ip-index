@@ -1,0 +1,41 @@
+name: xconcentrator
+namespace: opencores
+version: 32767e185533
+commit_sha: 32767e1855335acd07cd6c5eaf3d25d612257ac2
+published_at: '2026-05-05T12:42:29+02:00'
+description: Concentrates multiple BNET input streams into a single output stream
+  with data availability signaling.
+license: BSD-2-Clause
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/routertl-mirrors/xconcentrator.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 32767e1855335acd07cd6c5eaf3d25d612257ac2
+routertl_compat:
+  language: vhdl-2008
+  library: lib1
+  files:
+  - src/bnet_def_pkg.vhd
+  - src/bnet_pkg.vhd
+  - src/bnet_find_target.vhd
+  - src/concentrator_switch.vhd
+  - src/bnet_concentrator.vhd
+tags:
+- bnet
+- concentrator
+- find
+- switch
+- target
+role: repo
+top_modules:
+- bnet_concentrator
+components:
+- bnet_find_target
+- concentrator_switch
+total_entities: 3
+mirror_status: curated-mirror
+upstream_url: https://opencores.org/projects/xconcentrator
+health_tier: bronze
+last_verified_at: '2026-05-05'
