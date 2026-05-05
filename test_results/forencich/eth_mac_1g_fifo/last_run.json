@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "ip": "forencich/eth_mac_1g_fifo",
+  "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
+  "run_at": "2026-05-05T17:22:14+00:00",
+  "result": "pass",
+  "duration_seconds": 37.6932,
+  "test_engine": "engine.simulation.run_simulation()",
+  "test_runner": "rr sim run test_eth_mac_1g_fifo",
+  "simulator": "verilator-5.036",
+  "commit_sha": "6f630775f858f4ea4d7603430cbbe786bddc617b",
+  "ip_commit_sha": "77320a9471d19c7dd383914bc049e02d9f4f1ffb",
+  "host": "dasjimaz/x86_64-linux",
+  "tests": [
+    {
+      "name": "test_eth_mac_1g_fifo::cocotb_eth_mac_1g_fifo_loopback",
+      "status": "pass",
+      "duration_seconds": 37.6932,
+      "message": ""
+    }
+  ],
+  "adversarial": {
+    "test_runner": "python3 -m pytest sim/cocotb/tests/eth_validator/test_eth_validator_adversarial.py",
+    "duration_seconds": 0.033,
+    "tests": [
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestFcsCorruptionFires::test_flipped_fcs_byte_fires_eth_fcs_valid",
+        "status": "pass",
+        "duration_seconds": 0.022,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestRuntFiresFrameLenMin::test_runt_fires_eth_frame_len_min",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestGiantFiresFrameLenMax::test_giant_fires_eth_frame_len_max",
+        "status": "pass",
+        "duration_seconds": 0.002,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestBadPreambleFires::test_wrong_preamble_byte_fires_eth_preamble",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestBadSfdFires::test_wrong_sfd_byte_fires_eth_sfd",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_gmii_skip_cycles_construction_round_trips",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_negative_skip_cycles_raises",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_no_paired_frames_fires_eth_latency_bound",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_within_tolerance_does_not_fire",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_zero_tolerance_fires_when_drift_one_cycle",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestHelperPositiveControls::test_good_frame_fires_no_clauses",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      }
+    ]
+  },
+  "notes": "Fibich Table 15 baselines (TX 11.00 / RX 14.00 cycles) reproduced within \u00b12 cycles via gmii_skip_cycles=5 (D.79). DUT is the alex-forencich/verilog-ethernet eth_mac_1g_fifo subtree vendored at routertl/libs/alex-forencich/eth_mac_1g_fifo/. ip_commit_sha is the upstream master HEAD captured at run time via git ls-remote. Adversarial suite (11/11 monitors) confirms ETH_PREAMBLE / ETH_SFD / ETH_FCS_VALID / ETH_FRAME_LEN_MIN / ETH_FRAME_LEN_MAX / ETH_LATENCY_BOUND clauses fire under crafted bad input."
+}
