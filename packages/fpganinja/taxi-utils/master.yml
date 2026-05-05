@@ -83,3 +83,4 @@ components:
 - taxi_sync_reset
 - taxi_sync_signal
 total_entities: 22
+desc_source: curator

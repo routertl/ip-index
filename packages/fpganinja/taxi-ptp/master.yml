@@ -52,3 +52,4 @@ components:
 - taxi_ptp_td_phc_apb
 - taxi_ptp_td_rel2tod
 total_entities: 8
+desc_source: curator

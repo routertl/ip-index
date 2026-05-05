@@ -41,3 +41,4 @@ components:
 - taxi_uart_rx
 - taxi_uart_tx
 total_entities: 4
+desc_source: curator

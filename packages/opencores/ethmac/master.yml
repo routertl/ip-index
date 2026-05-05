@@ -91,5 +91,5 @@ components:
 total_entities: 26
 desc_source: verdict
 health_tier: silver
-contract_url: https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/oc_ethmac.md
+contract_url: https://github.com/djmazure/routertl-ip-index/blob/main/contracts/oc_ethmac.md
 last_verified_at: '2026-05-04'

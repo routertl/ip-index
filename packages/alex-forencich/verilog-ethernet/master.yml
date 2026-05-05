@@ -232,6 +232,7 @@ components:
 - xgmii_baser_dec_64
 - xgmii_baser_enc_64
 total_entities: 98
+desc_source: verdict
 status: deprecated-upstream
 successor: fpganinja/taxi
 contract:
@@ -240,6 +241,5 @@ contract:
     tx_user_frame_includes_fcs: false
   defects: []
 health_tier: silver
-contract_url: https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/eth_mac_1g_requirements.yml
-test_status_url: https://github.com/djmazure/routertl/tree/main/sdk/sim/cocotb/tests/eth_validator
+contract_url: https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml
 last_verified_at: '2026-05-04'

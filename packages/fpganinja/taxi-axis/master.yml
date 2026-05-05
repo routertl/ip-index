@@ -79,3 +79,4 @@ components:
 - taxi_axis_register
 - taxi_axis_tie
 total_entities: 19
+desc_source: curator

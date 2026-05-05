@@ -47,3 +47,4 @@ top_modules:
 - pyrite_pcie_us_vsec_bpi
 - pyrite_pcie_us_vsec_qspi
 total_entities: 4
+desc_source: curator

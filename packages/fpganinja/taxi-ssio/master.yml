@@ -53,3 +53,4 @@ components:
 - taxi_ssio_sdr_in
 - taxi_ssio_sdr_out
 total_entities: 10
+desc_source: curator

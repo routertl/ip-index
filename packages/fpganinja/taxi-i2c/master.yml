@@ -51,3 +51,4 @@ components:
 - taxi_i2c_master
 - taxi_i2c_slave
 total_entities: 7
+desc_source: curator

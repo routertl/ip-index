@@ -63,3 +63,4 @@ components:
 - zircon_ip_rx_parse
 - zircon_ip_tx_deparse
 total_entities: 8
+desc_source: curator

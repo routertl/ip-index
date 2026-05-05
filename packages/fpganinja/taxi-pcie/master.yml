@@ -67,3 +67,4 @@ components:
 - taxi_pcie_us_vpd
 - taxi_pcie_us_vsec_apb
 total_entities: 12
+desc_source: curator

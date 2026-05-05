@@ -129,3 +129,4 @@ components:
 - cndm_proto_rx
 - cndm_proto_tx
 total_entities: 20
+desc_source: curator

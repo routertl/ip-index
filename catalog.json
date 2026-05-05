@@ -20968,6 +20968,7 @@
       "xgmii_baser_dec_64",
       "xgmii_baser_enc_64"
     ],
+    "desc_source": "verdict",
     "status": "deprecated-upstream",
     "successor": "fpganinja/taxi",
     "contract": {
@@ -20978,10 +20979,8 @@
       "defects": []
     },
     "health_tier": "silver",
-    "contract_url": "https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/eth_mac_1g_requirements.yml",
-    "test_status_url": "https://github.com/djmazure/routertl/tree/main/sdk/sim/cocotb/tests/eth_validator",
-    "last_verified_at": "2026-05-04",
-    "desc_source": "preserved"
+    "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "fpganinja",
@@ -21088,7 +21087,8 @@
       "taxi_axil_register_wr",
       "taxi_axil_tie_rd",
       "taxi_axil_tie_wr"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21141,7 +21141,8 @@
       "taxi_axis_null_src",
       "taxi_axis_register",
       "taxi_axis_tie"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21230,9 +21231,9 @@
       "taxi_xgmii_baser_dec",
       "taxi_xgmii_baser_enc"
     ],
+    "desc_source": "curator",
     "health_tier": "silver",
-    "contract_url": "https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/eth_mac_1g_requirements.yml",
-    "test_status_url": "https://github.com/djmazure/routertl/tree/main/sdk/sim/cocotb/tests/eth_validator",
+    "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
     "last_verified_at": "2026-05-05"
   },
   {
@@ -21279,7 +21280,8 @@
       "taxi_pcie_us_msi",
       "taxi_pcie_us_vpd",
       "taxi_pcie_us_vsec_apb"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21327,7 +21329,8 @@
       "taxi_dma_psdpram",
       "taxi_dma_ram_demux_rd",
       "taxi_dma_ram_demux_wr"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21369,7 +21372,8 @@
       "taxi_ptp_td_phc",
       "taxi_ptp_td_phc_apb",
       "taxi_ptp_td_rel2tod"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21410,7 +21414,8 @@
     "components": [
       "taxi_i2c_master",
       "taxi_i2c_slave"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21446,7 +21451,8 @@
       "taxi_uart_brg",
       "taxi_uart_rx",
       "taxi_uart_tx"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21487,7 +21493,8 @@
     "components": [
       "taxi_xfcp_mod_axil",
       "taxi_xfcp_switch"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21530,7 +21537,8 @@
       "taxi_ssio_ddr_out",
       "taxi_ssio_sdr_in",
       "taxi_ssio_sdr_out"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21586,7 +21594,8 @@
       "taxi_stats_strings_full",
       "taxi_sync_reset",
       "taxi_sync_signal"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21640,7 +21649,8 @@
       "cndm_proto_port",
       "cndm_proto_rx",
       "cndm_proto_tx"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21682,7 +21692,8 @@
       "zircon_ip_len_cksum",
       "zircon_ip_rx_parse",
       "zircon_ip_tx_deparse"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "fpganinja",
@@ -21715,7 +21726,8 @@
       "pyrite_pcie_us_vpd_qspi",
       "pyrite_pcie_us_vsec_bpi",
       "pyrite_pcie_us_vsec_qspi"
-    ]
+    ],
+    "desc_source": "curator"
   },
   {
     "namespace": "opencores",
@@ -21772,7 +21784,7 @@
     ],
     "desc_source": "verdict",
     "health_tier": "silver",
-    "contract_url": "https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/oc_xge_mac.md",
+    "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/oc_xge_mac.md",
     "last_verified_at": "2026-05-04"
   },
   {
@@ -21836,7 +21848,7 @@
     ],
     "desc_source": "verdict",
     "health_tier": "silver",
-    "contract_url": "https://github.com/djmazure/routertl/blob/main/sdk/sim/cocotb/tb/contracts/oc_ethmac.md",
+    "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/oc_ethmac.md",
     "last_verified_at": "2026-05-04"
   },
   {

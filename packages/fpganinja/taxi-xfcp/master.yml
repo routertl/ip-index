@@ -65,3 +65,4 @@ components:
 - taxi_xfcp_mod_axil
 - taxi_xfcp_switch
 total_entities: 7
+desc_source: curator

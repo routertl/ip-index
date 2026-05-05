@@ -69,3 +69,4 @@ components:
 - taxi_dma_ram_demux_rd
 - taxi_dma_ram_demux_wr
 total_entities: 14
+desc_source: curator
