@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "ip": "fpganinja/taxi-ethernet",
+  "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
+  "run_at": "2026-05-06T10:17:24+00:00",
+  "result": "pass",
+  "duration_seconds": 37.5736,
+  "test_engine": "engine.simulation.run_simulation()",
+  "test_runner": "rr sim run test_taxi_eth_mac_1g_fifo",
+  "simulator": "verilator-5.036",
+  "commit_sha": "5b28960ad4df50d0877b664466485032f841165e",
+  "ip_commit_sha": "1fe508a6bf17edbb29bce9a8477be615b1012789",
+  "host": "dasjimaz/x86_64-linux",
+  "tests": [
+    {
+      "name": "test_taxi_eth_mac_1g_fifo::cocotb_taxi_eth_mac_1g_fifo_loopback",
+      "status": "pass",
+      "duration_seconds": 37.5736,
+      "message": ""
+    }
+  ],
+  "adversarial": {
+    "test_runner": "python3 -m pytest sim/cocotb/tests/eth_validator/test_eth_validator_adversarial.py",
+    "duration_seconds": 0.034,
+    "tests": [
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestFcsCorruptionFires::test_flipped_fcs_byte_fires_eth_fcs_valid",
+        "status": "pass",
+        "duration_seconds": 0.022,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestRuntFiresFrameLenMin::test_runt_fires_eth_frame_len_min",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestGiantFiresFrameLenMax::test_giant_fires_eth_frame_len_max",
+        "status": "pass",
+        "duration_seconds": 0.002,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestBadPreambleFires::test_wrong_preamble_byte_fires_eth_preamble",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestBadSfdFires::test_wrong_sfd_byte_fires_eth_sfd",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_gmii_skip_cycles_construction_round_trips",
+        "status": "pass",
+        "duration_seconds": 0.002,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_negative_skip_cycles_raises",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_no_paired_frames_fires_eth_latency_bound",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_within_tolerance_does_not_fire",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_zero_tolerance_fires_when_drift_one_cycle",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestHelperPositiveControls::test_good_frame_fires_no_clauses",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      }
+    ]
+  },
+  "notes": "fpganinja/taxi taxi_eth_mac_1g_fifo (SystemVerilog port of alex-forencich/eth_mac_1g_fifo) verified against the same IEEE 802.3 1G MAC contract as forencich (REQ-1/2/3, Fibich Table 15 baseline TX 11.00 / RX 13.97 \u00b12 cycles). Driven via taxi_eth_mac_1g_fifo_flat wrapper at sim/cocotb/tests/eth_validator/wrappers/ \u2014 translates flat AXIS top-level signals to taxi_axis_if SV interface ports so the standard cocotb BFM (AxiStreamBus.from_prefix) works unchanged. Cut-through mode (TX_FRAME_FIFO=0/RX_FRAME_FIFO=0) per Fibich's measurement methodology. Lineage equivalence empirically confirmed: same sim-time as forencich (1630088 ns), all 9 Fibich frame sizes pass, all 11 adversarial monitor-coverage tests pass. ip_commit_sha is upstream taxi master HEAD captured at run time via git ls-remote."
+}
