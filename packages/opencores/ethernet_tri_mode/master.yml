@@ -121,7 +121,9 @@ contract:
     fix_pr: null
     review_after: '2026-08-03'
 health_tier: silver
-last_verified_at: '2026-05-05'
+contract_url: https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml
+test_status_url: https://github.com/djmazure/routertl-ip-index/blob/main/test_results/opencores/ethernet_tri_mode/last_run.json
+last_verified_at: '2026-05-06'
 hdl:
   vendor_variants:
     generic:
