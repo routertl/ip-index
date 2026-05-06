@@ -1,12 +1,14 @@
-name: max_3d_top
+name: gplgpu
 namespace: asicguy
 version: master
 commit_sha: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
 published_at: '2014-08-31T17:11:20-04:00'
-description: This program is free software; you can redistribute it and/or modify
-  it
-license: ''
-license_class: unknown
+description: "2D/3D graphics engine (GPU) \u2014 Drawing Engine 2D + 3D, texel pipeline,\
+  \ Display List Processor, Texture Cache, float ALU, Memory Controller, Digital RAMDAC,\
+  \ IBM-compatible VGA, host bus interface. Verilog/VHDL, GPL-3.0 with commercial\
+  \ dual-license available."
+license: GPL-3.0-only
+license_class: strong-copyleft
 source:
   type: git
   url: https://github.com/asicguy/gplgpu.git
@@ -22,13 +24,51 @@ routertl_compat:
   - hdl/altera_ddr3_128_sim/alt_mem_phy_defines.v
   - hdl/altera_project/q5/nopli.v
   - hdl/sim_lib/nopli.v
+  - hdl/vga/addr_dec_gen.v
+  - hdl/ram_based/async_fifo.v
+  - hdl/vga/attr_reg_dec.v
+  - hdl/vga/final_cursor.v
+  - hdl/vga/dual_port_16x6.v
+  - hdl/vga/serializer_a.v
+  - hdl/vga/serial_shifter.v
+  - hdl/vga/attr.v
+  - hdl/bios_internal/bios_rom.v
+  - hdl/bios_internal/bios_internal.v
+  - hdl/ramdac_sp/blnk.v
+  - hdl/vga/clk_sel.v
+  - hdl/clk_gen/clk_gen.v
   - hdl/clk_switch/clk_switch.v
+  - hdl/ramdac_sp/cpu_int.v
+  - hdl/vga/cpu_rd.v
+  - hdl/vga/ram_64x32_2p.v
+  - hdl/vga/sm_cpuwr.v
+  - hdl/vga/cpu_wr.v
+  - hdl/ramdac_sp/crcx.v
   - hdl/crt_sp/crtaddsl.v
   - hdl/crt_sp/crtregist.v
   - hdl/crt_sp/crttimer.v
   - hdl/crt_sp/dc_adout.v
   - hdl/crt_sp/dc_contr.v
   - hdl/crt_sp/crt.v
+  - hdl/vga/crt_addr_gen.v
+  - hdl/vga/pixel_panning.v
+  - hdl/vga/crt_clk_gen.v
+  - hdl/vga/ram_16x32_dp.v
+  - hdl/vga/ram_32x32_dp.v
+  - hdl/vga/ram_9x32_2p.v
+  - hdl/vga/crt_fifo_logic.v
+  - hdl/vga/crt_misc.v
+  - hdl/vga/crt_op_stage.v
+  - hdl/vga/crt_reg_dec.v
+  - hdl/vga/hcrt.v
+  - hdl/vga/txt_time.v
+  - hdl/vga/vcrt.v
+  - hdl/vga/crtc.v
+  - hdl/ramdac_sp/ram_dp_8x512.v
+  - hdl/ramdac_sp/cur_ram_blk.v
+  - hdl/ramdac_sp/cursor.v
+  - hdl/de3d/de3d_fog_table.v
+  - hdl/lucy_tc/de3d_tc_read_addr_in.v
   - hdl/math/flt_add_sub_comb.v
   - hdl/math/flt_mult_comb.v
   - hdl/de3d/de3d_reg.v
@@ -49,6 +89,7 @@ routertl_compat:
   - hdl/lucy_tc/de3d_tc_tag.v
   - hdl/lucy_tc/de3d_tc_top.v
   - hdl/de3d/de3d_texel_pipe.v
+  - hdl/de3d/de3d_tfog.v
   - hdl/math/flt_add_sub.v
   - hdl/math/flt_fx1616_mult.v
   - hdl/de3d/des_comp_gen.v
@@ -82,7 +123,6 @@ routertl_compat:
   - hdl/de/ded_funshf.v
   - hdl/de/ded_funcol.v
   - hdl/de/ded_mskgen.v
-  - hdl/ram_based/async_fifo.v
   - hdl/de/ded_pix_cache.v
   - hdl/de/ded_top.v
   - hdl/de/der_misc.v
@@ -102,12 +142,22 @@ routertl_compat:
   - hdl/de/dex_sm.v
   - hdl/de/dex_top.v
   - hdl/de/de_top.v
+  - hdl/de3d/des_comp_gen_fx_z.v
   - hdl/dlp/dlp_cache.v
   - hdl/dlp/dlp_reg.v
   - hdl/dlp/dlp_sm.v
   - hdl/dlp/dlp_store.v
   - hdl/dlp/pp_sync.v
   - hdl/dlp/dlp_top.v
+  - hdl/ram_based/fifo_267x128.v
+  - hdl/math/flt2int.v
+  - hdl/math/flt_frac_test.v
+  - hdl/math/flt_fx_mult.v
+  - hdl/math/flt_fx_rnd.v
+  - hdl/math/flt_fx_uv.v
+  - hdl/vga/grap_data_rd.v
+  - hdl/vga/grap_data_wr.v
+  - hdl/vga/grap_reg_dec.v
   - hdl/hbi/hbi_addr_data.v
   - hdl/hbi/hbi_addr_decoder.v
   - hdl/hbi/hbi_control.v
@@ -134,56 +184,22 @@ routertl_compat:
   - hdl/mc_graph/mc_mff.v
   - hdl/mc_graph/mc_vga.v
   - hdl/mc_graph/mc.v
-  - hdl/hbi/pci_wom.v
+  - hdl/mc_cache/mc_cache_fifo_256.v
+  - hdl/mc_cache/mc_cache_full.v
   - hdl/pll_intf/pll_intf.v
-  - hdl/ramdac_sp/blnk.v
-  - hdl/ramdac_sp/cpu_int.v
-  - hdl/ramdac_sp/crcx.v
-  - hdl/ramdac_sp/cursor.v
   - hdl/ramdac_sp/pal_ctl.v
   - hdl/ramdac_sp/pix_pll.v
   - hdl/ramdac_sp/pixel_dp.v
-  - hdl/ramdac_sp/ram_dp_8x512.v
-  - hdl/ramdac_sp/cur_ram_blk.v
   - hdl/ramdac_sp/ram_blk.v
   - hdl/ramdac_sp/ram_blks.v
   - hdl/ramdac_sp/ram_ctl.v
   - hdl/ramdac_sp/syncs.v
   - hdl/ramdac_sp/ramdac.v
-  - hdl/vga/attr_reg_dec.v
-  - hdl/vga/final_cursor.v
-  - hdl/vga/dual_port_16x6.v
-  - hdl/vga/serializer_a.v
-  - hdl/vga/serial_shifter.v
-  - hdl/vga/attr.v
-  - hdl/vga/clk_sel.v
-  - hdl/vga/pixel_panning.v
-  - hdl/vga/crt_clk_gen.v
-  - hdl/vga/crt_misc.v
-  - hdl/vga/crt_op_stage.v
-  - hdl/vga/crt_reg_dec.v
-  - hdl/vga/hcrt.v
-  - hdl/vga/txt_time.v
-  - hdl/vga/vcrt.v
-  - hdl/vga/crtc.v
-  - hdl/vga/grap_data_rd.v
-  - hdl/vga/grap_data_wr.v
-  - hdl/vga/grap_reg_dec.v
   - hdl/vga/htaddmap.v
   - hdl/vga/sm_cpu_cy124.v
   - hdl/vga/graph_top.v
-  - hdl/vga/addr_dec_gen.v
   - hdl/vga/hif_sm.v
   - hdl/vga/hif.v
-  - hdl/vga/cpu_rd.v
-  - hdl/vga/ram_64x32_2p.v
-  - hdl/vga/sm_cpuwr.v
-  - hdl/vga/cpu_wr.v
-  - hdl/vga/crt_addr_gen.v
-  - hdl/vga/ram_16x32_dp.v
-  - hdl/vga/ram_32x32_dp.v
-  - hdl/vga/ram_9x32_2p.v
-  - hdl/vga/crt_fifo_logic.v
   - hdl/vga/memif_reg_dec.v
   - hdl/vga/sm_arb.v
   - hdl/vga/sm_crt_ffwr_rd.v
@@ -194,16 +210,50 @@ routertl_compat:
   - hdl/vga/vga.v
   - hdl/vga/vga_hint.v
   - hdl/vga/vga_top.v
+  - hdl/graph_core/graph_core.v
+  - hdl/hbi/pci_wom.v
   - hdl/top/max_3d_top.v
+  - hdl/vga/sm_ref.v
+  - hdl/math/sv_log2.v
 tags:
-- 3d
-- max
-role: top
+- arbitration
+- asynchronous
+- datapath
+- interface
+- internal
+- processor
+- regblock
+- register
+- serializer
+- synchronizer
+- synchronous
+- toplevel
+role: repo
+top_modules:
+- de3d_fog_table
+- de3d_read_addr_in
+- de3d_tfog
+- des_comp_gen_fx
+- fifo_267x128
+- flt2int
+- flt_frac_test
+- flt_fx_mult
+- flt_fx_rnd
+- flt_fx_uv
+- flt_recip_iter
+- flt_recip_rom
+- graph_core
+- max_3d_top
+- ram_tag
+- sm_ref
+- sv_log2
 components:
 - addr_dec_gen
 - async_fifo
 - attr
 - attr_reg_dec
+- bios_internal
+- bios_rom
 - blnk
 - clk_gen
 - clk_sel
@@ -328,6 +378,8 @@ components:
 - log2_table
 - mc
 - mc_arb
+- mc_cache
+- mc_cache_fifo_256
 - mc_crt
 - mc_dat
 - mc_dat16
@@ -373,5 +425,6 @@ components:
 - vga
 - vga_hint
 - vga_top
-desc_source: header
+total_entities: 194
+desc_source: verdict
 status: dormant

@@ -771,6 +771,13 @@
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P4.34 ingest. LLM picked Vivado tool-template header (Company:/Engineer:/Create Date:); rubric-locked."
+    },
+    "asicguy/gplgpu": {
+      "verdict": "good",
+      "locked_text": "2D/3D graphics engine (GPU) — Drawing Engine 2D + 3D, texel pipeline, Display List Processor, Texture Cache, float ALU, Memory Controller, Digital RAMDAC, IBM-compatible VGA, host bus interface. Verilog/VHDL, GPL-3.0 with commercial dual-license available.",
+      "reviewed_at": "2026-05-06",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.284 ingest. Scanner picked the GPL preamble (\"This program is free software...\") from a header; rubric-locked the actual project description from curator notes."
     }
   }
 }
