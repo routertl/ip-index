@@ -1,0 +1,52 @@
+name: des_top
+namespace: asicguy
+version: master
+commit_sha: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
+published_at: '2014-08-31T17:11:20-04:00'
+description: This program is free software; you can redistribute it and/or modify
+  it
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/asicguy/gplgpu.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
+routertl_compat:
+  language: verilog
+  library: sgate
+  files:
+  - hdl/altera_ddr3/alt_mem_phy_defines.v
+  - hdl/altera_ddr3_128/alt_mem_phy_defines.v
+  - hdl/altera_ddr3_128_sim/alt_mem_phy_defines.v
+  - hdl/altera_project/q5/nopli.v
+  - hdl/sim_lib/nopli.v
+  - hdl/math/flt_add_sub.v
+  - hdl/math/flt_fx1616_mult.v
+  - hdl/de3d/des_comp_gen.v
+  - hdl/de3d/des_comp_gen_fx_color.v
+  - hdl/math/flt_fx.v
+  - hdl/math/flt_fx_23p9.v
+  - hdl/math/flt_fx_24p8.v
+  - hdl/math/flt_mult.v
+  - hdl/math/flt_recip_orig.v
+  - hdl/generic/gen_pipe.v
+  - hdl/generic/gen_pipe_1.v
+  - hdl/math/real_log2_table.v
+  - hdl/de3d/des_frag_gen.v
+  - hdl/math/flt_det.v
+  - hdl/math/flt_div.v
+  - hdl/math/flt_int.v
+  - hdl/math/flt_alu.v
+  - hdl/de3d/des_grad.v
+  - hdl/de3d/des_reg.v
+  - hdl/de3d/des_smline_3d.v
+  - hdl/de3d/des_smtri.v
+  - hdl/de3d/des_state.v
+  - hdl/de3d/des_top.v
+tags:
+- des
+role: component
+desc_source: header
+status: dormant

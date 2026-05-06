@@ -1,0 +1,34 @@
+name: mc_dat
+namespace: asicguy
+version: master
+commit_sha: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
+published_at: '2014-08-31T17:11:20-04:00'
+description: This program is free software; you can redistribute it and/or modify
+  it
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/asicguy/gplgpu.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
+routertl_compat:
+  language: verilog
+  library: sgate
+  files:
+  - hdl/altera_ddr3/alt_mem_phy_defines.v
+  - hdl/altera_ddr3_128/alt_mem_phy_defines.v
+  - hdl/altera_ddr3_128_sim/alt_mem_phy_defines.v
+  - hdl/altera_project/q5/nopli.v
+  - hdl/sim_lib/nopli.v
+  - hdl/mc_graph/mc_dat16.v
+  - hdl/mc_graph/mc_datmsk.v
+  - hdl/vga/read_data.v
+  - hdl/mc_graph/mc_dat.v
+tags:
+- dat
+- mc
+role: component
+desc_source: header
+status: dormant

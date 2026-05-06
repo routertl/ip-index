@@ -1,0 +1,66 @@
+name: vga
+namespace: asicguy
+version: master
+commit_sha: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
+published_at: '2014-08-31T17:11:20-04:00'
+description: This program is free software; you can redistribute it and/or modify
+  it
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/asicguy/gplgpu.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
+routertl_compat:
+  language: verilog
+  library: sgate
+  files:
+  - hdl/vga/attr_reg_dec.v
+  - hdl/vga/final_cursor.v
+  - hdl/vga/dual_port_16x6.v
+  - hdl/vga/serializer_a.v
+  - hdl/vga/serial_shifter.v
+  - hdl/vga/attr.v
+  - hdl/vga/clk_sel.v
+  - hdl/vga/pixel_panning.v
+  - hdl/vga/crt_clk_gen.v
+  - hdl/vga/crt_misc.v
+  - hdl/vga/crt_op_stage.v
+  - hdl/vga/crt_reg_dec.v
+  - hdl/vga/hcrt.v
+  - hdl/vga/txt_time.v
+  - hdl/vga/vcrt.v
+  - hdl/vga/crtc.v
+  - hdl/vga/grap_data_rd.v
+  - hdl/vga/grap_data_wr.v
+  - hdl/vga/grap_reg_dec.v
+  - hdl/vga/htaddmap.v
+  - hdl/vga/read_data.v
+  - hdl/vga/sm_cpu_cy124.v
+  - hdl/vga/graph_top.v
+  - hdl/vga/addr_dec_gen.v
+  - hdl/vga/hif_sm.v
+  - hdl/vga/hif.v
+  - hdl/vga/cpu_rd.v
+  - hdl/vga/ram_64x32_2p.v
+  - hdl/vga/sm_cpuwr.v
+  - hdl/vga/cpu_wr.v
+  - hdl/vga/crt_addr_gen.v
+  - hdl/vga/ram_16x32_dp.v
+  - hdl/vga/ram_32x32_dp.v
+  - hdl/vga/ram_9x32_2p.v
+  - hdl/vga/crt_fifo_logic.v
+  - hdl/vga/memif_reg_dec.v
+  - hdl/vga/sm_arb.v
+  - hdl/vga/sm_crt_ffwr_rd.v
+  - hdl/vga/sm_data_comp.v
+  - hdl/vga/sm_graphic_crt.v
+  - hdl/vga/sm_txt_crt.v
+  - hdl/vga/memif_toplevel.v
+  - hdl/vga/vga.v
+tags: []
+role: component
+desc_source: header
+status: dormant

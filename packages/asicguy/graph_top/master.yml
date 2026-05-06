@@ -1,0 +1,31 @@
+name: graph_top
+namespace: asicguy
+version: master
+commit_sha: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
+published_at: '2014-08-31T17:11:20-04:00'
+description: This program is free software; you can redistribute it and/or modify
+  it
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/asicguy/gplgpu.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
+routertl_compat:
+  language: verilog
+  library: sgate
+  files:
+  - hdl/vga/grap_data_rd.v
+  - hdl/vga/grap_data_wr.v
+  - hdl/vga/grap_reg_dec.v
+  - hdl/vga/htaddmap.v
+  - hdl/vga/read_data.v
+  - hdl/vga/sm_cpu_cy124.v
+  - hdl/vga/graph_top.v
+tags:
+- graph
+role: component
+desc_source: header
+status: dormant

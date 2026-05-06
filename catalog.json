@@ -28848,5 +28848,1841 @@
     "upstream_url": "https://opencores.org/projects/sap_1_nanoprogrammed_processor",
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "attr",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "bios_internal",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "bios",
+      "internal"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "clk_gen",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "clk",
+      "clock",
+      "gen"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "cpu_wr",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "cpu",
+      "processor",
+      "wr"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "crt",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "crt_clk_gen",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "clk",
+      "clock",
+      "crt",
+      "gen"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "crt_fifo_logic",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "buffer",
+      "crt",
+      "fifo",
+      "queue"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "crtc",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "cur_ram_blk",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "access",
+      "blk",
+      "cur",
+      "memory",
+      "ram",
+      "random"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "de3d_fog_table",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "de3d",
+      "fog",
+      "table"
+    ],
+    "role": "top",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "de3d_read_addr_in",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "asicguy IP: de3d_read_addr_in",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "addr",
+      "de3d",
+      "read"
+    ],
+    "role": "top",
+    "desc_source": "auto",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "de3d_reg",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "de3d",
+      "reg",
+      "register"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "de3d_tc_addr_in",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "addr",
+      "de3d",
+      "tc"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "de3d_tc_tag",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "asicguy IP: de3d_tc_tag",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "de3d",
+      "tag",
+      "tc"
+    ],
+    "role": "component",
+    "desc_source": "auto",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "de3d_tc_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "de3d",
+      "tc"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "de3d_tfog",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "asicguy IP: de3d_tfog",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "de3d",
+      "tfog"
+    ],
+    "role": "top",
+    "desc_source": "auto",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "de3d_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "de3d"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "de_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "de"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "ded_cactrl",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "cactrl",
+      "ded"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "ded_funcol",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "ded",
+      "funcol"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "ded_pix_cache",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "cache",
+      "ded",
+      "pix"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "ded_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "ded"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "der_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "der"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "des_comp_gen",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "comp",
+      "des",
+      "gen"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "des_comp_gen_fx",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "comp",
+      "des",
+      "fx",
+      "gen"
+    ],
+    "role": "top",
+    "components": [
+      "clk_gen",
+      "de3d_reg",
+      "de3d_top",
+      "de_top",
+      "ded_pix_cache",
+      "ded_top",
+      "der_top",
+      "des_comp_gen",
+      "des_frag_gen",
+      "des_grad",
+      "des_reg",
+      "des_top",
+      "flt_alu",
+      "flt_div",
+      "flt_fx",
+      "mc",
+      "mc_dat",
+      "mc_mff",
+      "mc_vga"
+    ],
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "des_frag_gen",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "des",
+      "frag",
+      "gen"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "des_grad",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "des",
+      "grad"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "des_reg",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "des",
+      "reg",
+      "register"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "des_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "des"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "dex_sm",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "dex",
+      "sm"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "dex_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "dex"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "dlp_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "dlp"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "fifo_267x128",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "megafunction wizard: %FIFO% GENERATION: STANDARD VERSION: WM1.0",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "267x128",
+      "buffer",
+      "fifo",
+      "queue"
+    ],
+    "role": "top",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "flt2int",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [],
+    "role": "top",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "flt_alu",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "alu",
+      "flt"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "flt_det",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "det",
+      "flt"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "flt_div",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "div",
+      "divider",
+      "flt"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "flt_frac_test",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "flt",
+      "frac"
+    ],
+    "role": "top",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "flt_fx_mult",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "flt",
+      "fx",
+      "mult"
+    ],
+    "role": "top",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "flt_fx_rnd",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "flt",
+      "fx",
+      "rnd"
+    ],
+    "role": "top",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "flt_fx_uv",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "flt",
+      "fx",
+      "uv"
+    ],
+    "role": "top",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "flt_recip_iter",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "flt",
+      "iter",
+      "recip"
+    ],
+    "role": "top",
+    "components": [
+      "de3d_top",
+      "de_top",
+      "des_frag_gen",
+      "des_grad",
+      "des_top",
+      "flt_alu",
+      "flt_div",
+      "flt_recip"
+    ],
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "flt_recip_rom",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "flt",
+      "memory",
+      "only",
+      "read",
+      "recip",
+      "rom"
+    ],
+    "role": "top",
+    "components": [
+      "de3d_top",
+      "de_top",
+      "des_frag_gen",
+      "des_grad",
+      "des_top",
+      "flt_alu",
+      "flt_div",
+      "flt_recip"
+    ],
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "graph_core",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "core",
+      "graph"
+    ],
+    "role": "top",
+    "components": [
+      "addr_dec_gen",
+      "async_fifo",
+      "attr",
+      "attr_reg_dec",
+      "bios_internal",
+      "bios_rom",
+      "blnk",
+      "clk_gen",
+      "clk_sel",
+      "cpu_int",
+      "cpu_rd",
+      "cpu_wr",
+      "crcx",
+      "crt",
+      "crt_addr_gen",
+      "crt_clk_gen",
+      "crt_fifo_logic",
+      "crt_misc",
+      "crt_op_stage",
+      "crt_reg_dec",
+      "crtaddsl",
+      "crtc",
+      "crtregist",
+      "crttimer",
+      "cur_ram_blk",
+      "cursor",
+      "dc_adout",
+      "dc_contr",
+      "de3d_reg",
+      "de3d_tc_addr_in",
+      "de3d_tc_clamp",
+      "de3d_tc_compare",
+      "de3d_tc_fmt",
+      "de3d_tc_load_gen",
+      "de3d_tc_mc_sigs",
+      "de3d_tc_mc_we",
+      "de3d_tc_mem_if_addr",
+      "de3d_tc_mem_if_out",
+      "de3d_tc_sm",
+      "de3d_tc_store",
+      "de3d_tc_tag",
+      "de3d_tc_tag_ram",
+      "de3d_tc_tag_set",
+      "de3d_tc_tag_val",
+      "de3d_tc_top",
+      "de3d_texel_pipe",
+      "de3d_top",
+      "de_top",
+      "de_top_misc",
+      "ded_ca_top",
+      "ded_cactrl",
+      "ded_cactrl_rd",
+      "ded_colsel",
+      "ded_funcol",
+      "ded_funshf",
+      "ded_mskgen",
+      "ded_pix_cache",
+      "ded_top",
+      "der_misc",
+      "der_rdmux",
+      "der_reg_1",
+      "der_reg_15",
+      "der_reg_2",
+      "der_smdisp",
+      "der_top",
+      "des_comp_gen",
+      "des_comp_gen_fx_color",
+      "des_frag_gen",
+      "des_grad",
+      "des_reg",
+      "des_smline_3d",
+      "des_smtri",
+      "des_state",
+      "des_top",
+      "dex_alu",
+      "dex_reg",
+      "dex_sm",
+      "dex_smblt",
+      "dex_smdisp",
+      "dex_smlablt",
+      "dex_smlblt",
+      "dex_smline",
+      "dex_top",
+      "dlp_cache",
+      "dlp_reg",
+      "dlp_sm",
+      "dlp_store",
+      "dlp_top",
+      "dual_port_16x6",
+      "final_cursor",
+      "flt_add_sub",
+      "flt_add_sub_comb",
+      "flt_alu",
+      "flt_det",
+      "flt_div",
+      "flt_fx",
+      "flt_fx1616_mult",
+      "flt_fx_23p9",
+      "flt_fx_24p8",
+      "flt_int",
+      "flt_mult",
+      "flt_mult_comb",
+      "flt_recip",
+      "gen_pipe",
+      "gen_pipe_1",
+      "grap_data_rd",
+      "grap_data_wr",
+      "grap_reg_dec",
+      "graph_top",
+      "hbi_addr_data",
+      "hbi_addr_decoder",
+      "hbi_control",
+      "hbi_dout_stage",
+      "hbi_lut_u",
+      "hbi_lut_v",
+      "hbi_mw",
+      "hbi_mw_ctl",
+      "hbi_per",
+      "hbi_regblock",
+      "hbi_top",
+      "hbi_wcregs",
+      "hbi_yuv2rgb",
+      "hcrt",
+      "hif",
+      "hif_sm",
+      "htaddmap",
+      "log2_table",
+      "mc",
+      "mc_arb",
+      "mc_cache",
+      "mc_cache_fifo_256",
+      "mc_crt",
+      "mc_dat",
+      "mc_dat16",
+      "mc_datmsk",
+      "mc_de",
+      "mc_dlp",
+      "mc_hst",
+      "mc_mff",
+      "mc_mff_key",
+      "mc_vga",
+      "memif_reg_dec",
+      "memif_toplevel",
+      "pal_ctl",
+      "pix_pll",
+      "pixel_dp",
+      "pixel_panning",
+      "pll_intf",
+      "pp_sync",
+      "ram_16x32_dp",
+      "ram_32x32_dp",
+      "ram_64x32_2p",
+      "ram_9x32_2p",
+      "ram_blk",
+      "ram_blks",
+      "ram_ctl",
+      "ram_dp_8x512",
+      "ramdac",
+      "read_data",
+      "serial_shifter",
+      "serializer_a",
+      "sm_arb",
+      "sm_cpu_cy124",
+      "sm_cpuwr",
+      "sm_crt_ffwr_rd",
+      "sm_data_comp",
+      "sm_graphic_crt",
+      "sm_txt_crt",
+      "ssi_sfifo",
+      "syncs",
+      "txt_time",
+      "vcrt",
+      "vga",
+      "vga_hint",
+      "vga_top"
+    ],
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "graph_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "graph"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "hbi_mw",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "hbi",
+      "mw"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "hbi_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "hbi"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "hif",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "max_3d_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "3d",
+      "max"
+    ],
+    "role": "top",
+    "components": [
+      "addr_dec_gen",
+      "async_fifo",
+      "attr",
+      "attr_reg_dec",
+      "blnk",
+      "clk_gen",
+      "clk_sel",
+      "clk_switch",
+      "cpu_int",
+      "cpu_rd",
+      "cpu_wr",
+      "crcx",
+      "crt",
+      "crt_addr_gen",
+      "crt_clk_gen",
+      "crt_fifo_logic",
+      "crt_misc",
+      "crt_op_stage",
+      "crt_reg_dec",
+      "crtaddsl",
+      "crtc",
+      "crtregist",
+      "crttimer",
+      "cur_ram_blk",
+      "cursor",
+      "dc_adout",
+      "dc_contr",
+      "de3d_reg",
+      "de3d_tc_addr_in",
+      "de3d_tc_clamp",
+      "de3d_tc_compare",
+      "de3d_tc_fmt",
+      "de3d_tc_load_gen",
+      "de3d_tc_mc_sigs",
+      "de3d_tc_mc_we",
+      "de3d_tc_mem_if_addr",
+      "de3d_tc_mem_if_out",
+      "de3d_tc_sm",
+      "de3d_tc_store",
+      "de3d_tc_tag",
+      "de3d_tc_tag_ram",
+      "de3d_tc_tag_set",
+      "de3d_tc_tag_val",
+      "de3d_tc_top",
+      "de3d_texel_pipe",
+      "de3d_top",
+      "de_top",
+      "de_top_misc",
+      "ded_ca_top",
+      "ded_cactrl",
+      "ded_cactrl_rd",
+      "ded_colsel",
+      "ded_funcol",
+      "ded_funshf",
+      "ded_mskgen",
+      "ded_pix_cache",
+      "ded_top",
+      "der_misc",
+      "der_rdmux",
+      "der_reg_1",
+      "der_reg_15",
+      "der_reg_2",
+      "der_smdisp",
+      "der_top",
+      "des_comp_gen",
+      "des_comp_gen_fx_color",
+      "des_frag_gen",
+      "des_grad",
+      "des_reg",
+      "des_smline_3d",
+      "des_smtri",
+      "des_state",
+      "des_top",
+      "dex_alu",
+      "dex_reg",
+      "dex_sm",
+      "dex_smblt",
+      "dex_smdisp",
+      "dex_smlablt",
+      "dex_smlblt",
+      "dex_smline",
+      "dex_top",
+      "dlp_cache",
+      "dlp_reg",
+      "dlp_sm",
+      "dlp_store",
+      "dlp_top",
+      "dual_port_16x6",
+      "final_cursor",
+      "flt_add_sub",
+      "flt_add_sub_comb",
+      "flt_alu",
+      "flt_det",
+      "flt_div",
+      "flt_fx",
+      "flt_fx1616_mult",
+      "flt_fx_23p9",
+      "flt_fx_24p8",
+      "flt_int",
+      "flt_mult",
+      "flt_mult_comb",
+      "flt_recip",
+      "gen_pipe",
+      "gen_pipe_1",
+      "grap_data_rd",
+      "grap_data_wr",
+      "grap_reg_dec",
+      "graph_top",
+      "hbi_addr_data",
+      "hbi_addr_decoder",
+      "hbi_control",
+      "hbi_dout_stage",
+      "hbi_lut_u",
+      "hbi_lut_v",
+      "hbi_mw",
+      "hbi_mw_ctl",
+      "hbi_per",
+      "hbi_regblock",
+      "hbi_top",
+      "hbi_wcregs",
+      "hbi_yuv2rgb",
+      "hcrt",
+      "hif",
+      "hif_sm",
+      "htaddmap",
+      "log2_table",
+      "mc",
+      "mc_arb",
+      "mc_crt",
+      "mc_dat",
+      "mc_dat16",
+      "mc_datmsk",
+      "mc_de",
+      "mc_dlp",
+      "mc_hst",
+      "mc_mff",
+      "mc_mff_key",
+      "mc_vga",
+      "memif_reg_dec",
+      "memif_toplevel",
+      "pal_ctl",
+      "pci_wom",
+      "pix_pll",
+      "pixel_dp",
+      "pixel_panning",
+      "pll_intf",
+      "pp_sync",
+      "ram_16x32_dp",
+      "ram_32x32_dp",
+      "ram_64x32_2p",
+      "ram_9x32_2p",
+      "ram_blk",
+      "ram_blks",
+      "ram_ctl",
+      "ram_dp_8x512",
+      "ramdac",
+      "read_data",
+      "serial_shifter",
+      "serializer_a",
+      "sm_arb",
+      "sm_cpu_cy124",
+      "sm_cpuwr",
+      "sm_crt_ffwr_rd",
+      "sm_data_comp",
+      "sm_graphic_crt",
+      "sm_txt_crt",
+      "ssi_sfifo",
+      "syncs",
+      "txt_time",
+      "vcrt",
+      "vga",
+      "vga_hint",
+      "vga_top"
+    ],
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "mc",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "mc_cache",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "cache",
+      "mc"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "mc_dat",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "dat",
+      "mc"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "mc_mff",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "mc",
+      "mff"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "mc_vga",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "mc",
+      "vga"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "memif_toplevel",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "memif",
+      "toplevel"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "ram_blk",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "access",
+      "blk",
+      "memory",
+      "ram",
+      "random"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "ram_blks",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "access",
+      "blks",
+      "memory",
+      "ram",
+      "random"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "ram_tag",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "access",
+      "memory",
+      "ram",
+      "random",
+      "tag"
+    ],
+    "role": "top",
+    "components": [
+      "de3d_tc_tag",
+      "de3d_tc_tag_ram",
+      "de3d_tc_top",
+      "de3d_top",
+      "de_top"
+    ],
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "ramdac",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "serial_shifter",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "serial",
+      "shifter"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "serializer_a",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "serializer"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "sm_ref",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "ref",
+      "sm"
+    ],
+    "role": "top",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "sv_log2",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "log2",
+      "sv"
+    ],
+    "role": "top",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "vga",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
+  },
+  {
+    "namespace": "asicguy",
+    "name": "vga_top",
+    "latest": "master",
+    "versions": [
+      "master"
+    ],
+    "commit_sha": "35a79805f5eb4c9da4d5928c2941ed09ca29fa47",
+    "published_at": "2014-08-31T17:11:20-04:00",
+    "description": "This program is free software; you can redistribute it and/or modify it",
+    "license": "",
+    "license_class": "unknown",
+    "language": "verilog",
+    "source_url": "https://github.com/asicguy/gplgpu.git",
+    "tags": [
+      "vga"
+    ],
+    "role": "component",
+    "desc_source": "header",
+    "status": "dormant"
   }
 ]

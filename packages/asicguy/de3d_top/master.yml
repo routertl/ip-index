@@ -1,0 +1,74 @@
+name: de3d_top
+namespace: asicguy
+version: master
+commit_sha: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
+published_at: '2014-08-31T17:11:20-04:00'
+description: This program is free software; you can redistribute it and/or modify
+  it
+license: ''
+license_class: unknown
+source:
+  type: git
+  url: https://github.com/asicguy/gplgpu.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 35a79805f5eb4c9da4d5928c2941ed09ca29fa47
+routertl_compat:
+  language: verilog
+  library: sgate
+  files:
+  - hdl/altera_ddr3/alt_mem_phy_defines.v
+  - hdl/altera_ddr3_128/alt_mem_phy_defines.v
+  - hdl/altera_ddr3_128_sim/alt_mem_phy_defines.v
+  - hdl/altera_project/q5/nopli.v
+  - hdl/sim_lib/nopli.v
+  - hdl/math/flt_add_sub_comb.v
+  - hdl/math/flt_mult_comb.v
+  - hdl/de3d/de3d_reg.v
+  - hdl/lucy_tc/de3d_tc_clamp.v
+  - hdl/lucy_tc/de3d_tc_addr_in.v
+  - hdl/lucy_tc/de3d_tc_compare.v
+  - hdl/lucy_tc/de3d_tc_fmt.v
+  - hdl/lucy_tc/de3d_tc_load_gen.v
+  - hdl/lucy_tc/de3d_tc_mc_sigs.v
+  - hdl/lucy_tc/de3d_tc_mc_we.v
+  - hdl/lucy_tc/de3d_tc_mem_if_addr.v
+  - hdl/lucy_tc/de3d_tc_mem_if_out.v
+  - hdl/lucy_tc/de3d_tc_sm.v
+  - hdl/lucy_tc/de3d_tc_store.v
+  - hdl/lucy_tc/de3d_tc_tag_ram.v
+  - hdl/lucy_tc/de3d_tc_tag_set.v
+  - hdl/lucy_tc/de3d_tc_tag_val.v
+  - hdl/lucy_tc/de3d_tc_tag.v
+  - hdl/lucy_tc/de3d_tc_top.v
+  - hdl/de3d/de3d_texel_pipe.v
+  - hdl/math/flt_add_sub.v
+  - hdl/math/flt_fx1616_mult.v
+  - hdl/de3d/des_comp_gen.v
+  - hdl/de3d/des_comp_gen_fx_color.v
+  - hdl/math/flt_fx.v
+  - hdl/math/flt_fx_23p9.v
+  - hdl/math/flt_fx_24p8.v
+  - hdl/math/flt_mult.v
+  - hdl/math/flt_recip_orig.v
+  - hdl/generic/gen_pipe.v
+  - hdl/generic/gen_pipe_1.v
+  - hdl/math/real_log2_table.v
+  - hdl/de3d/des_frag_gen.v
+  - hdl/math/flt_det.v
+  - hdl/math/flt_div.v
+  - hdl/math/flt_int.v
+  - hdl/math/flt_alu.v
+  - hdl/de3d/des_grad.v
+  - hdl/de3d/des_reg.v
+  - hdl/de3d/des_smline_3d.v
+  - hdl/de3d/des_smtri.v
+  - hdl/de3d/des_state.v
+  - hdl/de3d/des_top.v
+  - hdl/ram_based/ssi_sfifo.v
+  - hdl/de3d/de3d_top.v
+tags:
+- de3d
+role: component
+desc_source: header
+status: dormant
