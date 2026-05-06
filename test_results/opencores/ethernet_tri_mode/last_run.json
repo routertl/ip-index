@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "ip": "opencores/ethernet_tri_mode",
+  "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
+  "run_at": "2026-05-06T12:21:56+00:00",
+  "result": "pass",
+  "duration_seconds": 113.2282,
+  "test_engine": "engine.simulation.run_simulation()",
+  "test_runner": "ETH_VALIDATOR_FRAMES_PER_SIZE=4 rr sim run test_eth_mac_tri_mode",
+  "simulator": "verilator-5.036",
+  "commit_sha": "3a04b87cbc81b40a97ef861e512f538f42e77296",
+  "ip_commit_sha": "fb5fadedd6f39dcc5cfb68dc239be7b1c0e0b5b4",
+  "host": "dasjimaz/x86_64-linux",
+  "tests": [
+    {
+      "name": "test_eth_mac_tri_mode::cocotb_eth_mac_tri_mode_loopback",
+      "status": "pass",
+      "duration_seconds": 110.5172,
+      "message": ""
+    },
+    {
+      "name": "test_eth_mac_tri_mode::cocotb_eth_mac_tri_mode_one_shot",
+      "status": "pass",
+      "duration_seconds": 1.3491,
+      "message": ""
+    },
+    {
+      "name": "test_eth_mac_tri_mode::cocotb_eth_mac_tri_mode_steady_state",
+      "status": "pass",
+      "duration_seconds": 1.3619,
+      "message": ""
+    }
+  ],
+  "adversarial": {
+    "test_runner": "python3 -m pytest sim/cocotb/tests/eth_validator/test_eth_validator_adversarial.py",
+    "duration_seconds": 0.032,
+    "tests": [
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestFcsCorruptionFires::test_flipped_fcs_byte_fires_eth_fcs_valid",
+        "status": "pass",
+        "duration_seconds": 0.021,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestRuntFiresFrameLenMin::test_runt_fires_eth_frame_len_min",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestGiantFiresFrameLenMax::test_giant_fires_eth_frame_len_max",
+        "status": "pass",
+        "duration_seconds": 0.002,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestBadPreambleFires::test_wrong_preamble_byte_fires_eth_preamble",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestBadSfdFires::test_wrong_sfd_byte_fires_eth_sfd",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_gmii_skip_cycles_construction_round_trips",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_negative_skip_cycles_raises",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_no_paired_frames_fires_eth_latency_bound",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_within_tolerance_does_not_fire",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestLatencyMonitorAdversarial::test_zero_tolerance_fires_when_drift_one_cycle",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      },
+      {
+        "name": "sim.cocotb.tests.eth_validator.test_eth_validator_adversarial.TestHelperPositiveControls::test_good_frame_fires_no_clauses",
+        "status": "pass",
+        "duration_seconds": 0.001,
+        "message": ""
+      }
+    ]
+  },
+  "notes": "OpenCores 10/100/1G Tri-Mode Ethernet MAC, Jon Gao 2001+. Verified against the same IEEE 802.3 1G MAC contract as forencich + taxi (REQ-1/2/3). Three cocotb tests in this run: (1) cocotb_eth_mac_tri_mode_loopback \u2014 back-to-back loopback marked @cocotb.test(expect_fail=True), documents OC-TRIMODE-RX-WAIT-END (MAC_rx_FF.v SYS_wait_end FSM wedge after frame 0 EOP under perpetual-ready hosts; VCD-confirmed RTL-T3); the test is correctly adversarial \u2014 failure IS the witness. (2) cocotb_eth_mac_tri_mode_one_shot \u2014 single-frame sweep across all 9 Fibich sizes, gates REQ-1 (zero drops) + REQ-3 (FCS preserved); REQ-2 logged-not-asserted because cold-start latency legitimately diverges from Fibich's steady-state baseline. (3) cocotb_eth_mac_tri_mode_steady_state \u2014 captures cold-start TX/RX cycles per Fibich size as informational data (e.g. wire=64B \u2192 TX=29/RX=80; wire=1518B \u2192 TX=141/RX=1534). All 11 adversarial monitor-coverage tests pass. Two known DUT defects documented in curator entry: OC-TRIMODE-TX-HWMARK (Tx_Hwmark default 9 entries causes >512B GIANT-frame underrun; workaround: CSR-write Tx_Hwmark=31 before TX \u2014 applied by harness) and OC-TRIMODE-RX-WAIT-END (back-to-back RX wedge; workaround: Rx_mac_rd pulse low after each EOP \u2014 applied by BFM in one_shot variant). Tier remains silver-with-evidence: gold deferred until upstream defects are patched (no fix_pr; review_after 2026-08-03)."
+}
