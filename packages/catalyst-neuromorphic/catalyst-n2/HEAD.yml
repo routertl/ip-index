@@ -1,0 +1,71 @@
+name: catalyst-n2
+namespace: catalyst-neuromorphic
+version: HEAD
+commit_sha: 583f9e012f665542b23ff35a29ea81ba6db8daf4
+published_at: '2026-03-20T17:34:38+00:00'
+description: "Open-source neuromorphic processor (second generation) \u2014 LIF compartmental\
+  \ neurons, microcode learning, STDP + three-factor synaptic plasticity, asynchronous\
+  \ Network-on-Chip mesh, RV32I/RV32IM management cores, multi-chip routing. Apache-2.0,\
+  \ FPGA-validated on AWS F2, Kria, and Arty."
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/catalyst-neuromorphic/catalyst-n2.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 583f9e012f665542b23ff35a29ea81ba6db8daf4
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - rtl/async_fifo.v
+  - rtl/spike_fifo.v
+  - rtl/async_router.v
+  - rtl/sram.v
+  - rtl/scalable_core_v2.v
+  - rtl/async_noc_mesh.v
+  - rtl/axi_uart_bridge.v
+  - rtl/chip_link.v
+  - rtl/host_interface.v
+  - rtl/multi_chip_router.v
+  - rtl/neuromorphic_mesh.v
+  - rtl/uart_rx.v
+  - rtl/uart_tx.v
+  - rtl/neuromorphic_top.v
+  - rtl/rv32i_core.v
+  - rtl/rv32im_cluster.v
+tags:
+- adapter
+- asynchronous
+- cluster
+- converter
+- interface
+- neuromorphic
+- protocol
+- receiver
+- scalable
+- transmit
+- transmitter
+- universal
+role: repo
+top_modules:
+- axi_uart_bridge
+- multi_chip_router
+- neuromorphic_top
+- rv32im_cluster
+components:
+- async_fifo
+- async_noc_mesh
+- async_router
+- chip_link
+- host_interface
+- neuromorphic_mesh
+- rv32i_core
+- scalable_core_v2
+- spike_fifo
+- sram
+- uart_rx
+- uart_tx
+total_entities: 16
+desc_source: verdict

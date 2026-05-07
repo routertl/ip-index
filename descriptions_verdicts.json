@@ -778,6 +778,13 @@
       "reviewed_at": "2026-05-06",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.284 ingest. Scanner picked the GPL preamble (\"This program is free software...\") from a header; rubric-locked the actual project description from curator notes."
+    },
+    "catalyst-neuromorphic/catalyst-n2": {
+      "verdict": "good",
+      "locked_text": "Open-source neuromorphic processor (second generation) — LIF compartmental neurons, microcode learning, STDP + three-factor synaptic plasticity, asynchronous Network-on-Chip mesh, RV32I/RV32IM management cores, multi-chip routing. Apache-2.0, FPGA-validated on AWS F2, Kria, and Arty.",
+      "reviewed_at": "2026-05-07",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.402 ingest. granularity=repo (cohesive chip design; sub-components like async_noc_mesh / neuromorphic_top weren't usefully scannable per-entity — first-pass scanner gave port-heuristic descriptions that misclassified neuromorphic_top as a UART). Hand-locked from project README + the queue note's deep eval."
     }
   }
 }
