@@ -107,3 +107,25 @@ components:
 - eca_wr_time
 total_entities: 32
 desc_source: curator
+external_uses:
+- library: work
+  package: gencores_pkg
+- library: work
+  package: genram_pkg
+- library: work
+  package: wb_irq_pkg
+- library: work
+  package: wbgen2_pkg
+- library: work
+  package: wbgenplus_pkg
+- library: work
+  package: wishbone_pkg
+- library: work
+  package: wr_transmission_wbgen2_pkg
+provides_packages:
+- eca_ac_wbm_auto_pkg
+- eca_auto_pkg
+- eca_internals_pkg
+- eca_pkg
+- eca_queue_auto_pkg
+- eca_tlu_auto_pkg

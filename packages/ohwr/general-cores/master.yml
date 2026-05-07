@@ -587,3 +587,32 @@ hdl:
   vendor_variants:
     intel:
     - platform/altera/wb_pcie/pcie_altera.vhd
+external_uses:
+- library: altera_mf
+  package: all
+- library: altera_mf
+  package: altera_mf_components
+- library: work
+  package: UART_wbgen2_pkg
+- library: work
+  package: common_components
+provides_packages:
+- altera_networks_pkg
+- axi4_pkg
+- cm_wbgen2_pkg
+- gc_cordic_pkg
+- gc_dsp_pkg
+- gencores_pkg
+- genram_pkg
+- memory_loader_pkg
+- pcie_wb_pkg
+- secded_32b_pkg
+- spwm_wbgen2_pkg
+- uart_wbgen2_pkg
+- v6_fifo_pkg
+- wb_fpgen_regs_pkg
+- wb_irq_pkg
+- wbconmax_pkg
+- wbgen2_pkg
+- wishbone_pkg
+- xldr_wbgen2_pkg

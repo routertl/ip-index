@@ -72,3 +72,28 @@ components:
 - xtx_streamers_stats
 total_entities: 12
 desc_source: curator
+external_uses:
+- library: work
+  package: gencores_pkg
+- library: work
+  package: genram_pkg
+- library: work
+  package: wb_irq_pkg
+- library: work
+  package: wbgen2_pkg
+- library: work
+  package: wbgenplus_pkg
+- library: work
+  package: wishbone_pkg
+- library: work
+  package: wr_transmission_wbgen2_pkg
+provides_packages:
+- endpoint_pkg
+- softpll_pkg
+- streamers_pkg
+- streamers_priv_pkg
+- sysc_wbgen2_pkg
+- wr_fabric_pkg
+- wr_streamers_wbgen2_pkg
+- wrc_diags_wbgen2_pkg
+- wrcore_pkg

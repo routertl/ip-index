@@ -103,3 +103,30 @@ components:
 - xwr_diags_wb
 total_entities: 6
 desc_source: curator
+external_uses:
+- library: work
+  package: gencores_pkg
+- library: work
+  package: genram_pkg
+- library: work
+  package: wb_irq_pkg
+- library: work
+  package: wbgen2_pkg
+- library: work
+  package: wbgenplus_pkg
+- library: work
+  package: wishbone_pkg
+- library: work
+  package: wr_transmission_wbgen2_pkg
+provides_packages:
+- endpoint_pkg
+- endpoint_private_pkg
+- ep_crc32_pkg
+- ep_wbgen2_pkg
+- minic_wbgen2_pkg
+- softpll_pkg
+- spll_wbgen2_pkg
+- sysc_wbgen2_pkg
+- wr_fabric_pkg
+- wrc_diags_wbgen2_pkg
+- wrcore_pkg

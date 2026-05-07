@@ -94,3 +94,20 @@ components:
 - ez_usb_fifos
 total_entities: 26
 desc_source: verdict
+external_uses:
+- library: work
+  package: RandomPkg
+- library: work
+  package: genram_pkg
+- library: work
+  package: matrix_pkg
+- library: work
+  package: wishbone_pkg
+- library: work
+  package: wr_fabric_pkg
+provides_packages:
+- eb_hdr_pkg
+- eb_internals_pkg
+- ebm_auto_pkg
+- etherbone_pkg
+- ez_usb_pkg
