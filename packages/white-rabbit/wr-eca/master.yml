@@ -107,32 +107,6 @@ components:
 - eca_wr_time
 total_entities: 32
 desc_source: curator
-contract:
-  traits: {}
-  defects:
-  - id: WR-ECA-WBGENPLUS-PHANTOM
-    severity: major
-    kind: unresolved-upstream-dep
-    discovered: '2026-05-07'
-    provenance: RTL-T5
-    evidence: 'ECA wbgenplus-generated files (eca_auto_pkg.vhd, eca_queue_auto_pkg.vhd,
-      eca_tlu_auto_pkg.vhd, eca_ac_wbm_auto_pkg.vhd) carry ''use work.wbgenplus_pkg.all''
-      clauses, but wbgenplus_pkg.vhd is not published in any public repo (verified
-      2026-05-07: not in mkreider/wbgenplus tool repo, GSI-CS-CO/bel_projects monorepo,
-      GSI''s wr-cores fork, mkreider/eca, gitlab.com/ohwr/project/wbgen2; recursive
-      GitHub tree search for filename returns 0 hits across the WR/GSI ecosystem).
-      The wbgenplus codegen tool emits the ''use'' clause unconditionally in every
-      generated file, but the runtime support package the clause references appears
-      to be lost art or private to GSI. ''rr pkg add white-rabbit/wr-eca'' succeeds
-      at the install layer but the workspace will not GHDL-analyze without an externally-supplied
-      wbgenplus_pkg.vhd.'
-    recoverable: true
-    workaround: "If you have access to a GSI bel_projects internal checkout that includes\
-      \ wbgenplus_pkg.vhd, vendor it manually into your project's libs/ tree. Otherwise\
-      \ the ECA module is non-elaborable in open-source-only environments \u2014 track\
-      \ RTL-P4.35 (investigation ticket) for upstream resolution."
-    fix_pr: null
-    review_after: '2026-08-07'
 external_uses:
 - library: work
   package: gencores_pkg
