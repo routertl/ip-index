@@ -30367,7 +30367,7 @@
     "license": "MIT",
     "license_class": "permissive",
     "language": "vhdl-2008",
-    "source_url": "https://github.com/djmazure/routertl-stubs.git",
+    "source_url": "https://github.com/routertl/stubs.git",
     "tags": [
       "sentinel",
       "stub",

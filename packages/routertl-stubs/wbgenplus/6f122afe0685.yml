@@ -16,7 +16,7 @@ license: MIT
 license_class: permissive
 source:
   type: git
-  url: https://github.com/djmazure/routertl-stubs.git
+  url: https://github.com/routertl/stubs.git
   tag: main
   ip_yml_path: .
   resolved_commit: 6f122afe0685f5dad29fc1acad9e87ca44947358
