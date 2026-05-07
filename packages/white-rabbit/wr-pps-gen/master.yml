@@ -16,7 +16,7 @@ source:
   resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
 routertl_compat:
   language: vhdl-2008
-  library: synopsys
+  library: work
   files:
   - modules/wr_pps_gen/pps_gen_wb.vhd
   - modules/wr_pps_gen/wr_pps_gen.vhd

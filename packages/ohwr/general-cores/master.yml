@@ -18,7 +18,7 @@ source:
   resolved_commit: fc3ece5eff2b3b9f0369de42705d6ef99cdcc0fd
 routertl_compat:
   language: vhdl-2008
-  library: osvvm
+  library: work
   files:
   - modules/wishbone/wb_lm32/src/lm32_include.v
   - modules/wishbone/wb_spi/spi_defines.v
