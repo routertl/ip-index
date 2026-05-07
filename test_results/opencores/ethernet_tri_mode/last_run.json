@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "ip": "opencores/ethernet_tri_mode",
-  "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
+  "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
   "run_at": "2026-05-06T12:21:56+00:00",
   "result": "pass",
   "duration_seconds": 113.2282,

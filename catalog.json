@@ -20924,7 +20924,7 @@
       "defects": []
     },
     "health_tier": "silver",
-    "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
+    "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
     "last_verified_at": "2026-05-04"
   },
   {
@@ -21178,8 +21178,8 @@
     ],
     "desc_source": "curator",
     "health_tier": "gold",
-    "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
-    "test_status_url": "https://github.com/djmazure/routertl-ip-index/blob/main/test_results/fpganinja/taxi-ethernet/last_run.json",
+    "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
+    "test_status_url": "https://github.com/routertl/ip-index/blob/main/test_results/fpganinja/taxi-ethernet/last_run.json",
     "last_verified_at": "2026-05-06"
   },
   {
@@ -21730,7 +21730,7 @@
     ],
     "desc_source": "verdict",
     "health_tier": "silver",
-    "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/oc_xge_mac.md",
+    "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/oc_xge_mac.md",
     "last_verified_at": "2026-05-04"
   },
   {
@@ -21794,7 +21794,7 @@
     ],
     "desc_source": "verdict",
     "health_tier": "silver",
-    "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/oc_ethmac.md",
+    "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/oc_ethmac.md",
     "last_verified_at": "2026-05-04"
   },
   {
@@ -21893,8 +21893,8 @@
       ]
     },
     "health_tier": "silver",
-    "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
-    "test_status_url": "https://github.com/djmazure/routertl-ip-index/blob/main/test_results/opencores/ethernet_tri_mode/last_run.json",
+    "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
+    "test_status_url": "https://github.com/routertl/ip-index/blob/main/test_results/opencores/ethernet_tri_mode/last_run.json",
     "last_verified_at": "2026-05-06",
     "hdl": {
       "vendor_variants": {

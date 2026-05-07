@@ -27,7 +27,7 @@ routertl-ip-index/
 {
   "schema_version": "1.0",
   "ip": "fpganinja/taxi-ethernet",
-  "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
+  "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
 
   "run_at": "2026-05-05T18:14:23Z",
   "result": "pass",
@@ -121,7 +121,7 @@ adversarial test means a witness defect — file as a T-tier ticket.
 The curated_repos.json `test_status_url` field points at the **raw** form:
 
 ```
-https://github.com/djmazure/routertl-ip-index/blob/main/test_results/<ns>/<entity>/last_run.json
+https://github.com/routertl/ip-index/blob/main/test_results/<ns>/<entity>/last_run.json
 ```
 
 (or `raw.githubusercontent.com/...` for direct JSON fetch). Any future

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "ip": "forencich/eth_mac_1g_fifo",
-  "contract_url": "https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
+  "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml",
   "run_at": "2026-05-05T17:22:14+00:00",
   "result": "pass",
   "duration_seconds": 37.6932,

@@ -241,5 +241,5 @@ contract:
     tx_user_frame_includes_fcs: false
   defects: []
 health_tier: silver
-contract_url: https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml
+contract_url: https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml
 last_verified_at: '2026-05-04'

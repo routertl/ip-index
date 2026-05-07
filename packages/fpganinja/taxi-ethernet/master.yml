@@ -168,6 +168,6 @@ components:
 total_entities: 54
 desc_source: curator
 health_tier: gold
-contract_url: https://github.com/djmazure/routertl-ip-index/blob/main/contracts/eth_mac_1g_requirements.yml
-test_status_url: https://github.com/djmazure/routertl-ip-index/blob/main/test_results/fpganinja/taxi-ethernet/last_run.json
+contract_url: https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml
+test_status_url: https://github.com/routertl/ip-index/blob/main/test_results/fpganinja/taxi-ethernet/last_run.json
 last_verified_at: '2026-05-06'
