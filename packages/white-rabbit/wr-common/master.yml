@@ -1,0 +1,73 @@
+name: wr-common
+namespace: white-rabbit
+version: master
+commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+published_at: '2017-12-18T18:45:29+01:00'
+description: "Shared internals required by every wr-cores subsystem \u2014 WRF (White\
+  \ Rabbit Fabric) primitives, DMTD (Digital Multi-Tap Delay) phase meters, pulse\
+  \ helpers, fabric mux/reg/loopback. Not a standalone install target; auto-pulled\
+  \ via external_uses by wr-ptp-core, wr-endpoint, wr-softpll-ng, wr-streamers, wr-mini-nic."
+license: LGPL-2.1
+license_class: unknown
+source:
+  type: git
+  url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+routertl_compat:
+  language: vhdl-2008
+  library: synopsys
+  files:
+  - modules/timing/dmtd_with_deglitcher.vhd
+  - modules/timing/dmtd_phase_meas.vhd
+  - modules/timing/hpll_period_detect.vhd
+  - modules/fabric/xwrf_loopback/lbk_pkg.vhd
+  - modules/fabric/xwrf_loopback/lbk_wishbone_controller.vhd
+  - modules/timing/multi_dmtd_with_deglitcher.vhd
+  - modules/timing/pulse_gen.vhd
+  - modules/timing/pulse_stamper.vhd
+  - modules/fabric/wr_fabric_pkg.vhd
+  - modules/fabric/xwb_fabric_sink.vhd
+  - modules/fabric/xwb_fabric_source.vhd
+  - modules/wr_endpoint/endpoint_pkg.vhd
+  - modules/wr_endpoint/ep_registers_pkg.vhd
+  - modules/wr_endpoint/endpoint_private_pkg.vhd
+  - modules/wr_endpoint/ep_rx_wb_master.vhd
+  - modules/fabric/xwrf_loopback/xwrf_loopback.vhd
+  - modules/fabric/xwrf_loopback/wrf_loopback.vhd
+  - modules/fabric/xwrf_mux.vhd
+  - modules/fabric/xwrf_reg.vhd
+tags:
+- controller
+- deglitcher
+- detect
+- fabric
+- loopback
+- multi
+- multiplexer
+- period
+- register
+- source
+- stamper
+- wishbone
+role: subproject
+top_modules:
+- hpll_period_detect
+- multi_dmtd_with_deglitcher
+- pulse_gen
+- wrf_loopback
+- xwb_fabric_sink
+- xwb_fabric_source
+- xwrf_reg
+components:
+- dmtd_phase_meas
+- dmtd_with_deglitcher
+- lbk_wishbone_controller
+- pulse_stamper
+- wb_fabric_sink
+- wb_fabric_source
+- xwrf_loopback
+- xwrf_mux
+total_entities: 15
+desc_source: curator

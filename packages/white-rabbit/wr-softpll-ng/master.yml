@@ -1,0 +1,54 @@
+name: wr-softpll-ng
+namespace: white-rabbit
+version: master
+commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+published_at: '2017-12-18T18:45:29+01:00'
+description: "SoftPLL-NG \u2014 software-controlled PLL for sub-nanosecond clock recovery.\
+  \ Carrier-grade clock-domain alignment using DDMTD (Dual-Mixer Time-to-Digital)\
+  \ phase detection plus bang-bang + period-detect digital PI loops. The clock-recovery\
+  \ heart of the WR system."
+license: LGPL-2.1
+license_class: unknown
+source:
+  type: git
+  url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+routertl_compat:
+  language: vhdl-2008
+  library: synopsys
+  files:
+  - modules/wr_softpll_ng/spll_aligner.vhd
+  - modules/wr_softpll_ng/spll_bangbang_pd.vhd
+  - modules/wr_softpll_ng/spll_period_detect.vhd
+  - modules/wr_softpll_ng/spll_wbgen2_pkg.vhd
+  - modules/wr_softpll_ng/spll_wb_slave.vhd
+  - modules/wr_softpll_ng/softpll_pkg.vhd
+  - modules/timing/dmtd_with_deglitcher.vhd
+  - modules/wr_softpll_ng/wr_softpll_ng.vhd
+  - modules/wr_softpll_ng/xwr_softpll_ng.vhd
+tags:
+- aligner
+- bangbang
+- bus
+- detect
+- ng
+- pd
+- period
+- slave
+- softpll
+- spll
+- wishbone
+- xwr
+role: subproject
+top_modules:
+- spll_bangbang_pd
+- spll_period_detect
+components:
+- spll_aligner
+- spll_wb_slave
+- wr_softpll_ng
+- xwr_softpll_ng
+total_entities: 6
+desc_source: curator

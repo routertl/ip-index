@@ -1,0 +1,589 @@
+name: general-cores
+namespace: ohwr
+version: master
+commit_sha: fc3ece5eff2b3b9f0369de42705d6ef99cdcc0fd
+published_at: '2026-04-28T11:36:50+00:00'
+description: "General Cores \u2014 generic FPGA primitive library. Edge detectors,\
+  \ CDC synchronizers (gc_sync_*), pulse synchronizer, debouncers, Wishbone primitives\
+  \ + slaves + crossbars (wb_*/xwb_*), generic memory primitives (genram_pkg single/dual-port\
+  \ + async FIFO), AXI/DSP/I2C primitives, 8b/10b coder, radiation-tolerant variants.\
+  \ The CERN BE-CO-HT primitive library underlying every OHWR design."
+license: LGPL-2.1
+license_class: unknown
+source:
+  type: git
+  url: https://gitlab.com/ohwr/project/general-cores.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: fc3ece5eff2b3b9f0369de42705d6ef99cdcc0fd
+routertl_compat:
+  language: vhdl-2008
+  library: osvvm
+  files:
+  - modules/wishbone/wb_lm32/src/lm32_include.v
+  - modules/wishbone/wb_spi/spi_defines.v
+  - sim/regs/xloader_regs.vh
+  - testbench/wishbone/include/wb_fine_pulse_gen_regs.vh
+  - testbench/wishbone/include/wb_uart_regs.vh
+  - sim/if_wishbone_accessor.svh
+  - sim/if_wishbone_defs.svh
+  - sim/if_wishbone_types.svh
+  - modules/common/gencores_pkg.vhd
+  - modules/genrams/genram_pkg.vhd
+  - modules/genrams/altera/altera_async_fifo.vhd
+  - platform/altera/flash/altera_spi.vhd
+  - modules/genrams/altera/altera_sync_fifo.vhd
+  - modules/axi/axi4lite32_axi4full64_bridge/axi4lite32_axi4full64_bridge.vhd
+  - modules/axi/axi4lite_axi4full_bridge/axi4lite_axi4full_bridge.vhd
+  - modules/wishbone/wb_i2c_master/i2c_master_bit_ctrl.vhd
+  - modules/wishbone/wb_i2c_master/i2c_master_byte_ctrl.vhd
+  - modules/wishbone/wb_i2c_master/i2c_master_regs.vhd
+  - modules/axi/axi4lite_i2c_master/axi4lite_i2c_master.vhd
+  - modules/wishbone/wishbone_pkg.vhd
+  - modules/axi/axi4_pkg.vhd
+  - modules/axi/z7_axi_gpio_expander/axi_gpio_expander.vhd
+  - modules/genrams/altera/generic_dpram.vhd
+  - modules/genrams/cheby/cheby_dpssram.vhd
+  - modules/wishbone/wb_clock_monitor/clock_monitor_wbgen2_pkg.vhd
+  - modules/wishbone/wb_clock_monitor/clock_monitor_wb.vhd
+  - modules/dsp/gc_cordic_pkg.vhd
+  - modules/dsp/cordic_init.vhd
+  - modules/dsp/cordic_modulo_360.vhd
+  - modules/dsp/cordic_xy_logic_hd.vhd
+  - modules/dsp/cordic_xy_logic_nhd.vhd
+  - modules/dsp/cordic_xy_logic_nmhd.vhd
+  - modules/common/gc_dec_8b10b.vhd
+  - modules/wishbone/wb_fine_pulse_gen/fine_pulse_gen_kintex7.vhd
+  - modules/wishbone/wb_fine_pulse_gen/fine_pulse_gen_kintex7_shared.vhd
+  - modules/common/gc_edge_detect.vhd
+  - modules/common/gc_sync.vhd
+  - modules/common/gc_pulse_synchronizer2.vhd
+  - modules/common/gc_pulse_synchronizer.vhd
+  - modules/common/gc_sync_ffs.vhd
+  - modules/wishbone/wb_fine_pulse_gen/fine_pulse_gen_kintexultrascale.vhd
+  - modules/wishbone/wb_fine_pulse_gen/fine_pulse_gen_kintexultrascale_shared.vhd
+  - modules/genrams/altera/generic_simple_dpram.vhd
+  - modules/common/gc_sync_register.vhd
+  - modules/genrams/common/inferred_async_fifo_dual_rst.vhd
+  - modules/genrams/generic/generic_async_fifo_dual_rst.vhd
+  - modules/wishbone/wb_clock_crossing/xwb_clock_crossing.vhd
+  - modules/wishbone/wb_spi_flash/wb_spi_flash.vhd
+  - platform/altera/flash/flash_top.vhd
+  - modules/common/gc_arbitrated_mux.vhd
+  - modules/common/gc_argb_led_drv.vhd
+  - modules/common/gc_async_counter_diff.vhd
+  - modules/common/gc_async_handshake.vhd
+  - modules/common/gc_extend_pulse.vhd
+  - modules/common/gc_glitch_filt.vhd
+  - modules/common/gc_async_signals_input_stage.vhd
+  - modules/common/gc_bicolor_led_ctrl.vhd
+  - modules/common/gc_big_adder.vhd
+  - modules/dsp/gc_cic.vhd
+  - modules/common/gc_comparator.vhd
+  - modules/dsp/gc_cordic.vhd
+  - modules/dsp/gc_cordic_top.vhd
+  - modules/common/gc_crc_gen.vhd
+  - modules/common/gc_delay_gen.vhd
+  - modules/common/gc_delay_line.vhd
+  - modules/common/gc_ds182x_readout/gc_ds182x_readout.vhd
+  - modules/common/gc_ds182x_interface.vhd
+  - modules/common/gc_dual_pi_controller.vhd
+  - modules/common/gc_dyn_extend_pulse.vhd
+  - modules/common/gc_dyn_glitch_filt.vhd
+  - modules/common/gc_enc_8b10b.vhd
+  - modules/common/gc_freq_meas.vhd
+  - modules/common/gc_sync_word_wr.vhd
+  - modules/common/gc_frequency_meter.vhd
+  - modules/common/gc_fsm_watchdog.vhd
+  - modules/common/gc_i2c_slave.vhd
+  - modules/dsp/gc_integer_divide.vhd
+  - modules/dsp/gc_iq_demodulator.vhd
+  - modules/dsp/gc_iq_demodulator_shifted.vhd
+  - modules/dsp/gc_iq_modulator.vhd
+  - modules/common/gc_moving_average.vhd
+  - modules/common/gc_multichannel_frequency_meter.vhd
+  - modules/common/gc_negedge.vhd
+  - modules/dsp/gc_pi_regulator.vhd
+  - modules/dsp/gc_dsp_pkg.vhd
+  - modules/dsp/gc_pipelined_fir_filter.vhd
+  - modules/common/gc_posedge.vhd
+  - modules/common/gc_prio_encoder.vhd
+  - modules/common/gc_reset.vhd
+  - modules/common/gc_reset_multi_aasd.vhd
+  - modules/common/gc_rr_arbiter.vhd
+  - modules/common/gc_scrambler_descrambler.vhd
+  - modules/common/gc_serial_dac.vhd
+  - modules/common/gc_sfp_i2c_adapter.vhd
+  - modules/genrams/altera/gc_shiftreg.vhd
+  - modules/common/gc_simple_spi_master.vhd
+  - modules/common/gc_single_reset_gen.vhd
+  - modules/dsp/gc_soft_ramp_switch.vhd
+  - modules/common/gc_sync_word_rd.vhd
+  - modules/common/gc_word_packer.vhd
+  - modules/genrams/common/inferred_async_fifo.vhd
+  - modules/genrams/generic/generic_async_fifo.vhd
+  - modules/genrams/generic/generic_async_fifo_mixedw.vhd
+  - modules/genrams/memory_loader_pkg.vhd
+  - modules/genrams/xilinx/generic_dpram_dualclock.vhd
+  - modules/genrams/xilinx/generic_dpram_inst_7series.vhd
+  - modules/genrams/altera/generic_dpram_mixed.vhd
+  - modules/genrams/xilinx/generic_dpram_sameclock.vhd
+  - modules/genrams/xilinx/generic_dpram_split.vhd
+  - modules/genrams/common/generic_shiftreg_fifo.vhd
+  - modules/genrams/altera/generic_spram.vhd
+  - modules/genrams/common/inferred_sync_fifo.vhd
+  - modules/genrams/generic/generic_sync_fifo.vhd
+  - modules/wishbone/wb_i2c_master/i2c_master_top.vhd
+  - modules/wishbone/wb_irq/wb_irq_pkg.vhd
+  - modules/wishbone/wb_irq/irqm_core.vhd
+  - modules/wishbone/wb_lm32/platform/altera/jtag_tap.v
+  - modules/wishbone/wb_lm32/src/jtag_cores.v
+  - modules/wishbone/wb_lm32/src/lm32_addsub.v
+  - modules/wishbone/wb_lm32/src/lm32_adder.v
+  - modules/wishbone/wb_lm32/src/lm32_functions.v
+  - modules/wishbone/wb_lm32/src/lm32_debug.v
+  - modules/wishbone/wb_lm32/src/lm32_decoder.v
+  - modules/wishbone/wb_lm32/src/lm32_dp_ram.v
+  - modules/wishbone/wb_lm32/src/lm32_ram.v
+  - modules/wishbone/wb_lm32/src/lm32_icache.v
+  - modules/wishbone/wb_lm32/src/lm32_instruction_unit.v
+  - modules/wishbone/wb_lm32/src/lm32_interrupt.v
+  - modules/wishbone/wb_lm32/src/lm32_jtag.v
+  - modules/wishbone/wb_lm32/src/lm32_dcache.v
+  - modules/wishbone/wb_lm32/src/lm32_load_store_unit.v
+  - modules/wishbone/wb_lm32/src/lm32_logic_op.v
+  - modules/wishbone/wb_lm32/src/lm32_mc_arithmetic.v
+  - modules/wishbone/wb_lm32/platform/kintex7/lm32_multiplier.v
+  - modules/wishbone/wb_lm32/src/lm32_shifter.v
+  - modules/wishbone/wb_lm32/src/lm32_cpu.v
+  - modules/wishbone/wb_lm32/generated/lm32_allprofiles.v
+  - modules/wishbone/wb_lm32/src/lm32_top.v
+  - modules/axi/mpsoc_int_gen/mpsoc_int_gen.vhd
+  - platform/xilinx/wb_xil_multiboot/multiboot_fsm.vhd
+  - platform/xilinx/wb_xil_multiboot/multiboot_regs.vhd
+  - platform/altera/wb_pcie/pcie_32to64.vhd
+  - platform/altera/wb_pcie/pcie_64to32.vhd
+  - platform/altera/networks/altera_networks_pkg.vhd
+  - platform/altera/wb_pcie/pcie_tlp.vhd
+  - platform/altera/wb_pcie/pcie_wb_pkg.vhd
+  - platform/altera/wb_pcie/pcie_wb.vhd
+  - modules/wishbone/wb_slave_adapter/wb_slave_adapter.vhd
+  - modules/wishbone/wb_crossbar/sdb_rom.vhd
+  - modules/radtol/secded_32b_pkg.vhd
+  - modules/radtol/secded_ecc.vhd
+  - modules/wishbone/wb_simple_pwm/simple_pwm_wbgen2_pkg.vhd
+  - modules/wishbone/wb_simple_pwm/simple_pwm_wb.vhd
+  - modules/wishbone/wb_uart/simple_uart_pkg.vhd
+  - modules/wishbone/wb_uart/simple_uart_wb.vhd
+  - modules/wishbone/wb_onewire_master/sockit_owm.v
+  - modules/wishbone/wb_spi/timescale.v
+  - modules/wishbone/wb_spi/spi_clgen.v
+  - platform/xilinx/wb_xil_multiboot/spi_master.vhd
+  - modules/wishbone/wb_spi/spi_shift.v
+  - modules/wishbone/wb_spi/spi_top.v
+  - modules/wishbone/wb_uart/uart_async_rx.vhd
+  - modules/wishbone/wb_uart/uart_async_tx.vhd
+  - modules/wishbone/wb_uart/uart_baud_gen.vhd
+  - modules/wishbone/wb_uart/uart_wb_slave.vhd
+  - modules/genrams/xilinx/virtex6/v6_fifo_pkg.vhd
+  - modules/genrams/xilinx/virtex6/v6_hwfifo_wrapper.vhd
+  - modules/radtol/voter_status.vhd
+  - modules/radtol/voter_vec_status.vhd
+  - modules/wishbone/wb_vuart/vuart_board_map.vhd
+  - modules/wishbone/wb_vuart/vuart_host_map.vhd
+  - modules/wishbone/wb16_to_wb32/wb16_to_wb32.vhd
+  - modules/wishbone/wb_async_bridge/wb_async_bridge.vhd
+  - modules/wishbone/wb_axi4lite_bridge/xwb_axi4lite_bridge.vhd
+  - modules/wishbone/wb_axi4lite_bridge/wb_axi4lite_bridge.vhd
+  - modules/wishbone/wb_conmax/wb_conmax_arb.vhd
+  - modules/wishbone/wb_conmax/wbconmax_pkg.vhd
+  - modules/wishbone/wb_conmax/wb_conmax_master_if.vhd
+  - modules/wishbone/wb_conmax/wb_conmax_pri_dec.vhd
+  - modules/wishbone/wb_conmax/wb_conmax_pri_enc.vhd
+  - modules/wishbone/wb_conmax/wb_conmax_msel.vhd
+  - modules/wishbone/wb_conmax/wb_conmax_rf.vhd
+  - modules/wishbone/wb_conmax/wb_conmax_slave_if.vhd
+  - modules/wishbone/wb_conmax/wb_conmax_top.vhd
+  - modules/wishbone/wb_ds182x_readout/wb_ds182x_regs.vhd
+  - modules/wishbone/wb_fine_pulse_gen/wb_fpgen_regs.vhd
+  - modules/wishbone/wb_gpio_port/wb_gpio_port.vhd
+  - modules/wishbone/wb_i2c_bridge/wb_i2c_bridge.vhd
+  - modules/wishbone/wb_i2c_master/wb_i2c_master.vhd
+  - modules/wishbone/wb_indirect/wb_indirect_regs.vhd
+  - modules/wishbone/wb_irq/wb_irq_slave.vhd
+  - modules/wishbone/wb_lm32/generated/xwb_lm32.vhd
+  - modules/wishbone/wb_irq/wb_irq_lm32.vhd
+  - modules/wishbone/wb_irq/wb_irq_master.vhd
+  - modules/wishbone/wb_irq/wb_irq_timer.vhd
+  - modules/wishbone/wb_onewire_master/wb_onewire_master.vhd
+  - modules/wishbone/wb_serial_lcd/wb_serial_lcd.vhd
+  - modules/wishbone/wb_simple_pwm/wb_simple_pwm.vhd
+  - modules/wishbone/wb_uart/wb_simple_uart.vhd
+  - modules/wishbone/wb_register/wb_skidpad.vhd
+  - modules/wishbone/wb_register/wb_skidpad2.vhd
+  - modules/wishbone/wb_spi/wb_spi.vhd
+  - modules/wishbone/wb_simple_timer/wb_tics.vhd
+  - modules/wishbone/wb_vic/wb_vic_regs.vhd
+  - modules/wishbone/wb_vic/wb_vic.vhd
+  - modules/wishbone/wb_xc7_fw_update/wb_xc7_fw_update_regs.vhd
+  - modules/wishbone/wbgen2/wbgen2_pkg.vhd
+  - platform/xilinx/wb_xilinx_fpga_loader/xloader_registers_pkg.vhd
+  - modules/wishbone/wbgen2/wbgen2_fifo_sync.vhd
+  - platform/xilinx/wb_xilinx_fpga_loader/xloader_wb.vhd
+  - platform/xilinx/wb_xilinx_fpga_loader/wb_xilinx_fpga_loader.vhd
+  - modules/wishbone/wbgen2/wbgen2_dpssram.vhd
+  - modules/wishbone/wbgen2/wbgen2_eic.vhd
+  - modules/wishbone/wbgen2/wbgen2_fifo_async.vhd
+  - modules/axi/axi4lite_wb_bridge/xaxi4lite_wb_bridge.vhd
+  - modules/wishbone/wb_async_bridge/xwb_async_bridge.vhd
+  - modules/wishbone/wb_bus_fanout/xwb_bus_fanout.vhd
+  - modules/wishbone/wb_clock_crossing/xwb_clock_bridge.vhd
+  - modules/wishbone/wb_clock_monitor/xwb_clock_monitor.vhd
+  - modules/wishbone/wb_conmax/xwb_conmax.vhd
+  - modules/wishbone/wb_crossbar/xwb_crossbar.vhd
+  - modules/wishbone/wb_dma/xwb_dma.vhd
+  - modules/wishbone/wb_dpram/xwb_dpram.vhd
+  - modules/wishbone/wb_dpram/xwb_dpram_mixed.vhd
+  - modules/wishbone/wb_ds182x_readout/xwb_ds182x_readout.vhd
+  - modules/wishbone/wb_fine_pulse_gen/xwb_fine_pulse_gen.vhd
+  - modules/wishbone/wb_gpio_port/xwb_gpio_port.vhd
+  - modules/wishbone/wb_i2c_master/xwb_i2c_master.vhd
+  - modules/wishbone/wb_indirect/xwb_indirect.vhd
+  - modules/wishbone/wb_uart/xwb_simple_uart.vhd
+  - modules/wishbone/wb_lm32_mcs/xwb_lm32_mcs.vhd
+  - modules/wishbone/wb_metadata/xwb_metadata.vhd
+  - modules/wishbone/wb_onewire_master/xwb_onewire_master.vhd
+  - modules/wishbone/wb_register/xwb_register.vhd
+  - modules/wishbone/wb_register/xwb_register_link.vhd
+  - modules/wishbone/wb_remapper/xwb_remapper.vhd
+  - modules/wishbone/wb_crossbar/xwb_sdb_crossbar.vhd
+  - modules/wishbone/wb_simple_pwm/xwb_simple_pwm.vhd
+  - modules/wishbone/wb_spi/xwb_spi.vhd
+  - modules/wishbone/wb_split/xwb_split.vhd
+  - modules/wishbone/wb_dma/xwb_streamer.vhd
+  - modules/wishbone/wb_simple_timer/xwb_tics.vhd
+  - modules/wishbone/wb_vic/xwb_vic.vhd
+  - modules/wishbone/wb_vuart/xwb_vuart.vhd
+  - modules/wishbone/wb_xc7_fw_update/xwb_xc7_fw_update_v2.vhd
+  - modules/wishbone/wb_xc7_fw_update/xwb_xc7_fw_update.vhd
+  - platform/xilinx/wb_xil_multiboot/xwb_xil_multiboot.vhd
+  - platform/xilinx/wb_xilinx_fpga_loader/xwb_xilinx_fpga_loader.vhd
+tags:
+- arbitration
+- asynchronous
+- demodulator
+- descrambler
+- instruction
+- integrators
+- inter-integrated
+- interconnect
+- kintexultrascale
+- multichannel
+- synchronizer
+- synchronizer2
+role: repo
+top_modules:
+- altera_async_fifo
+- altera_sync_fifo
+- axi4lite32_axi4full64_bridge
+- axi4lite_axi4full_bridge
+- axi4lite_i2c_master
+- axi_gpio_expander
+- cheby_dpssram
+- dec_8b10b_ctrl
+- dec_8b10b_disp
+- dec_8b10b_lut
+- flash_top
+- gc_arbitrated_mux
+- gc_argb_led_drv
+- gc_async_counter_diff
+- gc_async_signals_input_stage
+- gc_bicolor_led_ctrl
+- gc_cic
+- gc_cic_combs
+- gc_cic_decimator
+- gc_cic_integrators
+- gc_cic_ratio_change_detect
+- gc_comparator
+- gc_cordic
+- gc_cordic_top
+- gc_crc_gen
+- gc_dec_8b10b
+- gc_delay_gen
+- gc_ds182x_interface
+- gc_dual_pi_controller
+- gc_dyn_extend_pulse
+- gc_dyn_glitch_filt
+- gc_enc_8b10b
+- gc_freq_meas
+- gc_frequency_meter
+- gc_integer_divide
+- gc_iq_demodulator
+- gc_iq_demodulator_shifted
+- gc_iq_modulator
+- gc_moving_average
+- gc_multichannel_frequency_meter
+- gc_negedge
+- gc_pi_regulator
+- gc_pipelined_fir_filter
+- gc_posedge
+- gc_reset
+- gc_reset_multi_aasd
+- gc_rr_arbiter
+- gc_scrambler_descrambler
+- gc_serial_dac
+- gc_sfp_i2c_adapter
+- gc_single_reset_gen
+- gc_soft_ramp_switch
+- gc_sync_word_rd
+- gc_word_packer
+- generic_async_fifo_mixedw
+- generic_dpram_dualclock
+- generic_dpram_inst_7series
+- generic_dpram_sameclock
+- generic_shiftreg_fifo
+- generic_spram
+- lm32_cpu_full_debug
+- lm32_cpu_medium
+- lm32_cpu_medium_debug
+- lm32_cpu_medium_icache
+- lm32_cpu_medium_icache_debug
+- lm32_cpu_minimal
+- lm32_cpu_wr_node
+- lm32_dcache_full
+- lm32_dcache_full_debug
+- lm32_debug_full_debug
+- lm32_debug_medium_debug
+- lm32_debug_medium_icache_debug
+- lm32_debug_wr_node
+- lm32_decoder_full
+- lm32_decoder_full_debug
+- lm32_decoder_medium
+- lm32_decoder_medium_debug
+- lm32_decoder_medium_icache
+- lm32_decoder_medium_icache_debug
+- lm32_decoder_minimal
+- lm32_decoder_wr_node
+- lm32_icache_full
+- lm32_icache_full_debug
+- lm32_icache_medium_debug
+- lm32_icache_medium_icache
+- lm32_icache_medium_icache_debug
+- lm32_instruction_unit_full
+- lm32_instruction_unit_full_debug
+- lm32_instruction_unit_medium
+- lm32_instruction_unit_medium_debug
+- lm32_instruction_unit_medium_icache
+- lm32_instruction_unit_medium_icache_debug
+- lm32_instruction_unit_minimal
+- lm32_instruction_unit_wr_node
+- lm32_interrupt_full
+- lm32_interrupt_full_debug
+- lm32_interrupt_medium
+- lm32_interrupt_medium_debug
+- lm32_interrupt_medium_icache
+- lm32_interrupt_medium_icache_debug
+- lm32_interrupt_minimal
+- lm32_interrupt_wr_node
+- lm32_jtag_full_debug
+- lm32_jtag_medium_debug
+- lm32_jtag_medium_icache_debug
+- lm32_load_store_unit_full
+- lm32_load_store_unit_full_debug
+- lm32_load_store_unit_medium
+- lm32_load_store_unit_medium_debug
+- lm32_load_store_unit_medium_icache
+- lm32_load_store_unit_medium_icache_debug
+- lm32_load_store_unit_minimal
+- lm32_load_store_unit_wr_node
+- lm32_mc_arithmetic_full
+- lm32_mc_arithmetic_full_debug
+- lm32_mc_arithmetic_medium
+- lm32_mc_arithmetic_medium_debug
+- lm32_mc_arithmetic_medium_icache
+- lm32_mc_arithmetic_medium_icache_debug
+- lm32_mc_arithmetic_minimal
+- lm32_mc_arithmetic_wr_node
+- lm32_top
+- lm32_top_full
+- lm32_top_full_debug
+- lm32_top_medium
+- lm32_top_medium_debug
+- lm32_top_medium_icache
+- lm32_top_medium_icache_debug
+- lm32_top_minimal
+- lm32_top_wr_node
+- mpsoc_int_gen
+- pcie_wb
+- secded_ecc
+- spi_top
+- uart_wb_slave
+- v6_hwfifo_wraper
+- voter_vec_status
+- wb16_to_wb32
+- wb_axi4lite_bridge
+- wb_conmax_top
+- wb_i2c_bridge
+- wb_irq_lm32
+- wb_irq_master
+- wb_irq_timer
+- wb_serial_lcd
+- wb_skidpad2
+- wbgen2_dpssram
+- wbgen2_eic
+- wbgen2_fifo_async
+- xaxi4lite_wb_bridge
+- xwb_async_bridge
+- xwb_bus_fanout
+- xwb_clock_bridge
+- xwb_clock_monitor
+- xwb_conmax
+- xwb_dpram
+- xwb_dpram_mixed
+- xwb_ds182x_readout
+- xwb_fine_pulse_gen
+- xwb_gpio_port
+- xwb_i2c_master
+- xwb_indirect
+- xwb_lm32_mcs
+- xwb_metadata
+- xwb_onewire_master
+- xwb_register
+- xwb_register_link
+- xwb_remapper
+- xwb_sdb_crossbar
+- xwb_simple_pwm
+- xwb_spi
+- xwb_split
+- xwb_streamer
+- xwb_tics
+- xwb_vic
+- xwb_vuart
+- xwb_xc7_fw_update
+- xwb_xil_multiboot
+- xwb_xilinx_fpga_loader
+components:
+- altera_spi
+- clock_monitor_wb
+- cordic_init
+- cordic_modulo_360
+- cordic_xy_logic_hd
+- cordic_xy_logic_nhd
+- cordic_xy_logic_nmhd
+- fine_pulse_gen_kintex7
+- fine_pulse_gen_kintex7_shared
+- fine_pulse_gen_kintexultrascale
+- fine_pulse_gen_kintexultrascale_shared
+- gc_async_handshake
+- gc_big_adder
+- gc_delay_line
+- gc_ds182x_readout
+- gc_edge_detect
+- gc_extend_pulse
+- gc_fsm_watchdog
+- gc_glitch_filt
+- gc_i2c_slave
+- gc_prio_encoder
+- gc_pulse_synchronizer
+- gc_pulse_synchronizer2
+- gc_shiftreg
+- gc_simple_spi_master
+- gc_sync
+- gc_sync_ffs
+- gc_sync_register
+- gc_sync_word_wr
+- generic_async_fifo
+- generic_async_fifo_dual_rst
+- generic_dpram
+- generic_dpram_mixed
+- generic_dpram_split
+- generic_simple_dpram
+- generic_sync_fifo
+- i2c_master_bit_ctrl
+- i2c_master_byte_ctrl
+- i2c_master_top
+- i2c_mstr_regs
+- inferred_async_fifo
+- inferred_async_fifo_dual_rst
+- inferred_sync_fifo
+- irqm_core
+- jtag_cores
+- jtag_tap
+- lm32_adder
+- lm32_addsub
+- lm32_cpu
+- lm32_cpu_full
+- lm32_dcache
+- lm32_debug
+- lm32_decoder
+- lm32_dp_ram
+- lm32_icache
+- lm32_instruction_unit
+- lm32_interrupt
+- lm32_jtag
+- lm32_load_store_unit
+- lm32_logic_op
+- lm32_mc_arithmetic
+- lm32_multiplier
+- lm32_ram
+- lm32_shifter
+- multiboot_fsm
+- multiboot_regs
+- pcie_32to64
+- pcie_64to32
+- pcie_altera
+- pcie_tlp
+- sdb_rom
+- simple_pwm_wb
+- simple_uart_wb
+- sockit_owm
+- spi_clgen
+- spi_master
+- spi_shift
+- uart_async_rx
+- uart_async_tx
+- uart_baud_gen
+- voter_status
+- vuart_board_map
+- vuart_host_map
+- wb_async_bridge
+- wb_conmax_arb
+- wb_conmax_master_if
+- wb_conmax_msel
+- wb_conmax_pri_dec
+- wb_conmax_pri_enc
+- wb_conmax_rf
+- wb_conmax_slave_if
+- wb_ds182x_regs
+- wb_fpgen_regs
+- wb_gpio_port
+- wb_i2c_master
+- wb_indirect_regs
+- wb_irq_slave
+- wb_onewire_master
+- wb_simple_pwm
+- wb_simple_uart
+- wb_skidpad
+- wb_slave_adapter
+- wb_spi
+- wb_spi_flash
+- wb_tics
+- wb_vic
+- wb_vic_regs
+- wb_xc7_fw_update_regs
+- wb_xilinx_fpga_loader
+- wbgen2_fifo_sync
+- xloader_wb
+- xwb_axi4lite_bridge
+- xwb_clock_crossing
+- xwb_crossbar
+- xwb_dma
+- xwb_lm32
+- xwb_simple_uart
+- xwb_xc7_fw_update_v2
+total_entities: 297
+desc_source: verdict
+hdl:
+  vendor_variants:
+    intel:
+    - platform/altera/wb_pcie/pcie_altera.vhd

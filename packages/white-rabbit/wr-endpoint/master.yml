@@ -1,0 +1,119 @@
+name: wr-endpoint
+namespace: white-rabbit
+version: master
+commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+published_at: '2017-12-18T18:45:29+01:00'
+description: "1G WR Endpoint \u2014 Gigabit Ethernet MAC + 1000Base-X PCS + PTP timestamping\
+  \ unit. Carrier-grade Ethernet path with timestamping hooks for sub-ns precision.\
+  \ Includes auto-negotiation, flow control, RMON counters, packet filtering, VLAN,\
+  \ RX bypass queue."
+license: LGPL-2.1
+license_class: unknown
+source:
+  type: git
+  url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+routertl_compat:
+  language: vhdl-2008
+  library: synopsys
+  files:
+  - modules/wr_endpoint/ep_registers_pkg.vhd
+  - modules/fabric/wr_fabric_pkg.vhd
+  - modules/wr_endpoint/endpoint_pkg.vhd
+  - modules/wr_endpoint/endpoint_private_pkg.vhd
+  - modules/wr_endpoint/ep_autonegotiation.vhd
+  - modules/wr_endpoint/ep_pcs_tbi_mdio_wb.vhd
+  - modules/wr_endpoint/ep_sync_detect_16bit.vhd
+  - modules/wr_endpoint/ep_rx_pcs_16bit.vhd
+  - modules/wr_endpoint/ep_sync_detect.vhd
+  - modules/wr_endpoint/ep_rx_pcs_8bit.vhd
+  - modules/wr_endpoint/ep_tx_pcs_16bit.vhd
+  - modules/wr_endpoint/ep_tx_pcs_8bit.vhd
+  - modules/wr_endpoint/ep_1000basex_pcs.vhd
+  - modules/wr_endpoint/ep_clock_alignment_fifo.vhd
+  - modules/wr_endpoint/ep_flow_control.vhd
+  - modules/wr_endpoint/ep_leds_controller.vhd
+  - modules/wr_endpoint/ep_packet_filter.vhd
+  - modules/wr_endpoint/ep_rmon_counters.vhd
+  - modules/wr_endpoint/ep_rtu_header_extract.vhd
+  - modules/wr_endpoint/ep_rx_buffer.vhd
+  - modules/wr_endpoint/ep_rx_bypass_queue.vhd
+  - modules/wr_endpoint/ep_crc32_pkg.vhd
+  - modules/wr_endpoint/ep_rx_crc_size_check.vhd
+  - modules/wr_endpoint/ep_rx_early_address_match.vhd
+  - modules/wr_endpoint/ep_rx_oob_insert.vhd
+  - modules/wr_endpoint/ep_rx_status_reg_insert.vhd
+  - modules/wr_endpoint/ep_rx_vlan_unit.vhd
+  - modules/wr_endpoint/ep_rx_wb_master.vhd
+  - modules/wr_endpoint/ep_rx_path.vhd
+  - modules/wr_endpoint/ep_ts_counter.vhd
+  - modules/wr_endpoint/ep_timestamping_unit.vhd
+  - modules/wr_endpoint/ep_tx_crc_inserter.vhd
+  - modules/wr_endpoint/ep_tx_framer.vhd
+  - modules/wr_endpoint/ep_tx_header_processor.vhd
+  - modules/wr_endpoint/ep_tx_inject_ctrl.vhd
+  - modules/wr_endpoint/ep_tx_packet_injection.vhd
+  - modules/wr_endpoint/ep_tx_vlan_unit.vhd
+  - modules/wr_endpoint/ep_tx_path.vhd
+  - modules/wr_endpoint/ep_wishbone_controller.vhd
+  - modules/timing/dmtd_with_deglitcher.vhd
+  - modules/timing/dmtd_phase_meas.vhd
+  - modules/wr_endpoint/wr_endpoint.vhd
+  - modules/wr_endpoint/xwr_endpoint.vhd
+tags:
+- 1000basex
+- alignment
+- autonegotiation
+- controller
+- injection
+- management
+- processor
+- redundancy
+- synchronizer
+- synchronous
+- timestamping
+- transmitter
+role: subproject
+top_modules:
+- ep_flow_control
+- ep_rmon_counters
+- ep_rx_bypass_queue
+- ep_shift_reg
+- ep_tx_framer
+components:
+- ep_1000basex_pcs
+- ep_autonegotiation
+- ep_clock_alignment_fifo
+- ep_leds_controller
+- ep_packet_filter
+- ep_pcs_tbi_mdio_wb
+- ep_rtu_header_extract
+- ep_rx_buffer
+- ep_rx_crc_size_check
+- ep_rx_early_address_match
+- ep_rx_oob_insert
+- ep_rx_path
+- ep_rx_pcs_16bit
+- ep_rx_pcs_8bit
+- ep_rx_status_reg_insert
+- ep_rx_vlan_unit
+- ep_rx_wb_master
+- ep_sync_detect
+- ep_sync_detect_16bit
+- ep_timestamping_unit
+- ep_ts_counter
+- ep_tx_crc_inserter
+- ep_tx_header_processor
+- ep_tx_inject_ctrl
+- ep_tx_packet_injection
+- ep_tx_path
+- ep_tx_pcs_16bit
+- ep_tx_pcs_8bit
+- ep_tx_vlan_unit
+- ep_wishbone_controller
+- wr_endpoint
+- xwr_endpoint
+total_entities: 37
+desc_source: curator

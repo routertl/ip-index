@@ -1,0 +1,109 @@
+name: wr-eca
+namespace: white-rabbit
+version: master
+commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+published_at: '2017-12-18T18:45:29+01:00'
+description: "ECA \u2014 Event Conditional Action timing controller. Hardware action\
+  \ scheduler that triggers outputs on absolute timestamp matches with sub-ns precision.\
+  \ Includes bitonic sort, MSI delivery, FIFOs, Wishbone slaves, free-list, scubus\
+  \ channel adapter, time-latched unit (TLU) integration."
+license: LGPL-2.1
+license_class: unknown
+source:
+  type: git
+  url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+routertl_compat:
+  language: vhdl-2008
+  library: synopsys
+  files:
+  - modules/wr_eca/eca_auto_pkg.vhd
+  - modules/wr_eca/eca_internals_pkg.vhd
+  - modules/wr_eca/eca_auto.vhd
+  - modules/wr_eca/eca_sdp.vhd
+  - modules/wr_eca/eca_data.vhd
+  - modules/wr_eca/eca_free.vhd
+  - modules/wr_eca/eca_piso_fifo.vhd
+  - modules/wr_eca/eca_rmw.vhd
+  - modules/wr_eca/eca_tdp.vhd
+  - modules/wr_eca/eca_scan.vhd
+  - modules/wr_eca/eca_tag_channel.vhd
+  - modules/wr_eca/eca_channel.vhd
+  - modules/wr_eca/eca_msi.vhd
+  - modules/wr_eca/eca_adder.vhd
+  - modules/wr_eca/eca_search.vhd
+  - modules/wr_eca/eca_walker.vhd
+  - modules/wr_eca/eca.vhd
+  - modules/wr_eca/eca_queue_auto_pkg.vhd
+  - modules/wr_eca/eca_tlu_auto_pkg.vhd
+  - modules/wr_eca/eca_ac_wbm_auto_pkg.vhd
+  - modules/wr_eca/eca_pkg.vhd
+  - modules/wr_eca/eca_ac_wbm_auto.vhd
+  - modules/wr_eca/eca_ac_wbm.vhd
+  - modules/wr_eca/eca_bitonic_swap.vhd
+  - modules/wr_eca/eca_bitonic_helper.vhd
+  - modules/wr_eca/eca_bitonic.vhd
+  - modules/wr_eca/eca_compact.vhd
+  - modules/wr_eca/eca_fifo.vhd
+  - modules/wr_eca/eca_offset.vhd
+  - modules/wr_eca/eca_queue_auto.vhd
+  - modules/wr_eca/eca_queue.vhd
+  - modules/wr_eca/eca_scubus_channel.vhd
+  - modules/wr_eca/eca_tlu_auto.vhd
+  - modules/wr_eca/eca_tlu_fsm.vhd
+  - modules/wr_eca/eca_tlu.vhd
+  - modules/wr_eca/eca_wb_event.vhd
+  - modules/wr_eca/eca_wr_time.vhd
+  - modules/wr_eca/wr_eca.vhd
+tags:
+- adder
+- bitonic
+- buffer
+- channel
+- compact
+- event
+- helper
+- offset
+- scubus
+- search
+- walker
+- wishbone
+role: subproject
+top_modules:
+- eca_ac_wbm
+- eca_bitonic
+- eca_compact
+- eca_fifo
+- eca_queue
+- eca_scubus_channel
+- eca_tlu
+- eca_wb_event
+- wr_eca
+components:
+- eca
+- eca_ac_wbm_auto
+- eca_adder
+- eca_auto
+- eca_bitonic_helper
+- eca_bitonic_swap
+- eca_channel
+- eca_data
+- eca_free
+- eca_msi
+- eca_offset
+- eca_piso_fifo
+- eca_queue_auto
+- eca_rmw
+- eca_scan
+- eca_sdp
+- eca_search
+- eca_tag_channel
+- eca_tdp
+- eca_tlu_auto
+- eca_tlu_fsm
+- eca_walker
+- eca_wr_time
+total_entities: 32
+desc_source: curator

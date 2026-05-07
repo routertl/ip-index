@@ -301,7 +301,7 @@
       "locked_text": "Generates and distributes multiple clock signals at different frequencies for the MAC and PHY subsystems.",
       "reviewed_at": "2026-05-03",
       "reviewed_by": "dmazure",
-      "notes": "hand-written; LLM produced this on prior runs but tripped validator on this one — model variance, locking to prevent flapping."
+      "notes": "hand-written; LLM produced this on prior runs but tripped validator on this one \u2014 model variance, locking to prevent flapping."
     },
     "opencores/pci_target32_sm": {
       "verdict": "good",
@@ -347,7 +347,7 @@
     },
     "opencores/pci": {
       "verdict": "good",
-      "locked_text": "Bidirectional 32-bit PCI ↔ Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006).",
+      "locked_text": "Bidirectional 32-bit PCI \u2194 Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006).",
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
       "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary. Metadata-sweep correction 2026-05-04: dates re-anchored to opencores.org/projects/<slug> canonical."
@@ -368,7 +368,7 @@
     },
     "alex-forencich/verilog-ethernet": {
       "verdict": "good",
-      "locked_text": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream — author moved active development to fpganinja/taxi (CERN-OHL-S-2.0); MIT-licensed verilog-ethernet remains freely available here.",
+      "locked_text": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream \u2014 author moved active development to fpganinja/taxi (CERN-OHL-S-2.0); MIT-licensed verilog-ethernet remains freely available here.",
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
       "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
@@ -536,21 +536,21 @@
     },
     "opencores/minsoc": {
       "verdict": "good",
-      "locked_text": "Minimal OpenRISC 1200 system-on-chip — OR1200 CPU with Wishbone-attached on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera). Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013).",
+      "locked_text": "Minimal OpenRISC 1200 system-on-chip \u2014 OR1200 CPU with Wishbone-attached on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera). Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013).",
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
       "notes": "top-level repo description for P3.348 granularity=repo entry. RTL-P4.32 workaround. Authors/dates cross-checked against opencores.org/projects/minsoc."
     },
     "opencores/storm_soc": {
       "verdict": "good",
-      "locked_text": "Educational SoC with peripheral suite — I2C, UART, PS/2, PWM, 7-segment display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented in STORM SoC datasheet PDF.",
+      "locked_text": "Educational SoC with peripheral suite \u2014 I2C, UART, PS/2, PWM, 7-segment display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented in STORM SoC datasheet PDF.",
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
       "notes": "top-level repo description for P3.349 granularity=repo entry. RTL-P4.32 workaround. Authors/dates cross-checked against opencores.org/projects/storm_soc."
     },
     "opencores/s1_core": {
       "verdict": "good",
-      "locked_text": "Streamlined adaptation of Sun's OpenSPARC T1 — single 64-bit SPARC v9 core supporting 1-4 concurrent threads, with Wishbone master interface. Authors: Watson, Rozhdestvenskiy, Luzzu, Fazzino (2007-2018).",
+      "locked_text": "Streamlined adaptation of Sun's OpenSPARC T1 \u2014 single 64-bit SPARC v9 core supporting 1-4 concurrent threads, with Wishbone master interface. Authors: Watson, Rozhdestvenskiy, Luzzu, Fazzino (2007-2018).",
       "reviewed_at": "2026-05-04",
       "reviewed_by": "dmazure",
       "notes": "top-level repo description for P3.350 granularity=repo entry. RTL-P4.32 workaround. Authors/dates cross-checked against opencores.org/projects/s1_core."
@@ -574,7 +574,7 @@
       "locked_text": "Elliptic Curve Group operations over the F_3^m characteristic-3 extension field, companion to the Tate bilinear pairing core (Homer Hsing, 2011).",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
-      "notes": "RTL-P3.360 ingest. Despite the slug 'ecg', this is Elliptic Curve Group — pairing-friendly crypto, NOT electrocardiogram signal processing. LLM cross-contaminated description with the sibling 'pairing' repo's headers."
+      "notes": "RTL-P3.360 ingest. Despite the slug 'ecg', this is Elliptic Curve Group \u2014 pairing-friendly crypto, NOT electrocardiogram signal processing. LLM cross-contaminated description with the sibling 'pairing' repo's headers."
     },
     "opencores/g729a_codec": {
       "verdict": "good",
@@ -606,77 +606,77 @@
     },
     "opencores/avs_aes": {
       "verdict": "good",
-      "locked_text": "AES (Advanced Encryption Standard) 128-bit encryption/decryption block (AVS variant) — BSD-2-Clause Verilog primitive with synchronous load/ready handshake.",
+      "locked_text": "AES (Advanced Encryption Standard) 128-bit encryption/decryption block (AVS variant) \u2014 BSD-2-Clause Verilog primitive with synchronous load/ready handshake.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.362 ingest. LLM lifted to repo-boilerplate ('This file is part of the project avs_aes'); rubric-locked."
     },
     "opencores/sha3": {
       "verdict": "good",
-      "locked_text": "Keccak / SHA-3 cryptographic hash family — Apache-2.0 Verilog implementation with ack/in handshake interface.",
+      "locked_text": "Keccak / SHA-3 cryptographic hash family \u2014 Apache-2.0 Verilog implementation with ack/in handshake interface.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.362 ingest. LLM cross-described an internal port-handshake fragment instead of the IP; rubric-locked."
     },
     "opencores/i2s_interface": {
       "verdict": "good",
-      "locked_text": "I²S audio bus interface controller with Wishbone control port — VHDL bridge between FPGA and external audio codecs.",
+      "locked_text": "I\u00b2S audio bus interface controller with Wishbone control port \u2014 VHDL bridge between FPGA and external audio codecs.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
-      "notes": "RTL-P3.362 ingest. LLM picked formatting-noise from header banner; rubric-locked. First I²S in registry."
+      "notes": "RTL-P3.362 ingest. LLM picked formatting-noise from header banner; rubric-locked. First I\u00b2S in registry."
     },
     "opencores/wb_lpc": {
       "verdict": "good",
-      "locked_text": "Wishbone-controlled LPC (Low Pin Count) bus interface — bridges Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD, BMC).",
+      "locked_text": "Wishbone-controlled LPC (Low Pin Count) bus interface \u2014 bridges Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD, BMC).",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.362 ingest. LLM picked CVS $Id: line; rubric-locked."
     },
     "opencores/yac": {
       "verdict": "good",
-      "locked_text": "Yet Another CORDIC — generic iterative CORDIC pipeline for trigonometric and hyperbolic functions with parameterised data width.",
+      "locked_text": "Yet Another CORDIC \u2014 generic iterative CORDIC pipeline for trigonometric and hyperbolic functions with parameterised data width.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.363 ingest. LLM picked file-header File: cordic_iterative_int.vhd metadata; rubric-locked."
     },
     "opencores/sha_core": {
       "verdict": "good",
-      "locked_text": "SHA-1 (160-bit Secure Hash Algorithm) cryptographic hash core — single-block hashing primitive.",
+      "locked_text": "SHA-1 (160-bit Secure Hash Algorithm) cryptographic hash core \u2014 single-block hashing primitive.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.363 ingest. LLM picked banner-noise 'SHA-160 //// Secure Hash'; rubric-locked."
     },
     "opencores/descore": {
       "verdict": "good",
-      "locked_text": "DES (Data Encryption Standard) cipher core — 56-bit key, 64-bit block. GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants.",
+      "locked_text": "DES (Data Encryption Standard) cipher core \u2014 56-bit key, 64-bit block. GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.363 ingest. LLM lifted to GPL preamble fragment ('This program is free software'); rubric-locked."
     },
     "opencores/deslcore": {
       "verdict": "good",
-      "locked_text": "DESL (DES-Lightweight) variant — area-optimised DES with a single shared S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore.",
+      "locked_text": "DESL (DES-Lightweight) variant \u2014 area-optimised DES with a single shared S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.363 ingest. Same GPL-preamble issue as descore."
     },
     "opencores/deslxcore": {
       "verdict": "good",
-      "locked_text": "DESLX variant — combines the DES-Lightweight S-box optimisation with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore.",
+      "locked_text": "DESLX variant \u2014 combines the DES-Lightweight S-box optimisation with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.363 ingest. Same GPL-preamble issue as descore."
     },
     "opencores/desxcore": {
       "verdict": "good",
-      "locked_text": "DES-X variant — adds XOR pre/post-whitening keys to standard DES (Rivest 1984), strengthening against brute-force. GPL-3+ VHDL.",
+      "locked_text": "DES-X variant \u2014 adds XOR pre/post-whitening keys to standard DES (Rivest 1984), strengthening against brute-force. GPL-3+ VHDL.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.363 ingest. Same GPL-preamble issue as descore."
     },
     "opencores/xteacore": {
       "verdict": "good",
-      "locked_text": "XTEA (eXtended Tiny Encryption Algorithm) cipher core — 128-bit key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL.",
+      "locked_text": "XTEA (eXtended Tiny Encryption Algorithm) cipher core \u2014 128-bit key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.363 ingest. Same GPL-preamble issue as descore."
@@ -690,14 +690,14 @@
     },
     "opencores/srl_fifo": {
       "verdict": "good",
-      "locked_text": "Xilinx SRL16/SRL32-based compact FIFO — uses SRL shift-register primitives for storage on Xilinx FPGA targets. VHDL utility primitive.",
+      "locked_text": "Xilinx SRL16/SRL32-based compact FIFO \u2014 uses SRL shift-register primitives for storage on Xilinx FPGA targets. VHDL utility primitive.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.363 ingest. LLM lifted to repo-boilerplate ('part of the srl_fifo project'); rubric-locked."
     },
     "opencores/wb_size_bridge": {
       "verdict": "good",
-      "locked_text": "Wishbone bus width-resize bridge — connects masters and slaves with mismatched data widths via byte-lane steering.",
+      "locked_text": "Wishbone bus width-resize bridge \u2014 connects masters and slaves with mismatched data widths via byte-lane steering.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.363 ingest. LLM picked OpenCores license preamble ('This source file may be used and distributed without'); rubric-locked."
@@ -711,80 +711,94 @@
     },
     "opencores/video_stream_scaler": {
       "verdict": "good",
-      "locked_text": "Video stream scaler — line-buffer-based filtering pipeline that resamples raster video streams to a target output resolution. LGPL-2.1+ Verilog.",
+      "locked_text": "Video stream scaler \u2014 line-buffer-based filtering pipeline that resamples raster video streams to a target output resolution. LGPL-2.1+ Verilog.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.363 ingest. LLM described an internal dual-port-RAM sub-module instead of the scaler IP; rubric-locked."
     },
     "opencores/warp": {
       "verdict": "good",
-      "locked_text": "Image warping pipeline with image-decay / temporal-aging effect — geometric distortion + temporal modulation.",
+      "locked_text": "Image warping pipeline with image-decay / temporal-aging effect \u2014 geometric distortion + temporal modulation.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.362 ingest. LLM produced cryptic 'Image warping and decay, top-level'; rubric-locked."
     },
     "opencores/fully-pipelined-edge-detection-algorithms": {
       "verdict": "good",
-      "locked_text": "Fully-pipelined image edge-detection algorithms — Sobel and Canny family operators in mature Verilog form, ready for streaming raster pixel inputs.",
+      "locked_text": "Fully-pipelined image edge-detection algorithms \u2014 Sobel and Canny family operators in mature Verilog form, ready for streaming raster pixel inputs.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.364 ingest. LLM picked the Vivado tool-template header banner ('Company: Engineer: MUHAMMED KOCAOGLU Create Date:...'); rubric-locked."
     },
     "opencores/apbtoaes128": {
       "verdict": "good",
-      "locked_text": "APB-to-AES-128 bridge — exposes an AES-128 cipher core through the AMBA APB peripheral bus for register-mapped key/data access.",
+      "locked_text": "APB-to-AES-128 bridge \u2014 exposes an AES-128 cipher core through the AMBA APB peripheral bus for register-mapped key/data access.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.364 ingest. LLM hallucinated 'APB to I2C project' attribution (the file's actual scope is APB-to-AES, not I2C); rubric-locked + factual fix."
     },
     "opencores/sha256_hash_core": {
       "verdict": "good",
-      "locked_text": "SHA-256 cryptographic hash core — single-block 256-bit Secure Hash Algorithm 2 implementation with synchronous control interface.",
+      "locked_text": "SHA-256 cryptographic hash core \u2014 single-block 256-bit Secure Hash Algorithm 2 implementation with synchronous control interface.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.364 ingest. LLM picked Xilinx ISE/Vivado template header ('Create Date: ... Design Name: gv_sha256 Module Name...'); rubric-locked."
     },
     "opencores/wbfmtx": {
       "verdict": "good",
-      "locked_text": "Wishbone-controlled FM transmitter — software-defined-radio building block that takes a Wishbone-attached audio stream and produces an FM-modulated baseband output.",
+      "locked_text": "Wishbone-controlled FM transmitter \u2014 software-defined-radio building block that takes a Wishbone-attached audio stream and produces an FM-modulated baseband output.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.364 ingest. LLM picked author's narrative ('This Hack is based off of two things'); rubric-locked."
     },
     "opencores/m32632": {
       "verdict": "good",
-      "locked_text": "National Semiconductor NS32000-series 32-bit CPU implementation in Verilog (Udo Möller). Maintained at RetroPM/m32632; LGPL-2.1.",
+      "locked_text": "National Semiconductor NS32000-series 32-bit CPU implementation in Verilog (Udo M\u00f6ller). Maintained at RetroPM/m32632; LGPL-2.1.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
-      "notes": "RTL-P3.364 ingest. Direct upstream (RetroPM/m32632, no fork-curate). LLM produced the literal GitHub one-line description (\"Udo Möller's description\") which echos the repo's own about-text; rubric-locked."
+      "notes": "RTL-P3.364 ingest. Direct upstream (RetroPM/m32632, no fork-curate). LLM produced the literal GitHub one-line description (\"Udo M\u00f6ller's description\") which echos the repo's own about-text; rubric-locked."
     },
     "opencores/pci32tlite_oc": {
       "verdict": "good",
-      "locked_text": "PCI 32-bit Lite Target controller — minimal PCI target-mode interface in VHDL, useful for Wishbone-bus designs needing a PCI front-end.",
+      "locked_text": "PCI 32-bit Lite Target controller \u2014 minimal PCI target-mode interface in VHDL, useful for Wishbone-bus designs needing a PCI front-end.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P4.33 ingest. LLM picked a banner-box of dashes/pipes as the description; rubric-locked."
     },
     "opencores/sap_1_nanoprogrammed_processor": {
       "verdict": "good",
-      "locked_text": "SAP-1 (Simple-As-Possible) educational processor with nanoprogrammed control unit, following the Malvino reference design — pedagogical CPU implementation in Verilog.",
+      "locked_text": "SAP-1 (Simple-As-Possible) educational processor with nanoprogrammed control unit, following the Malvino reference design \u2014 pedagogical CPU implementation in Verilog.",
       "reviewed_at": "2026-05-05",
       "reviewed_by": "dmazure",
       "notes": "RTL-P4.34 ingest. LLM picked Vivado tool-template header (Company:/Engineer:/Create Date:); rubric-locked."
     },
     "asicguy/gplgpu": {
       "verdict": "good",
-      "locked_text": "2D/3D graphics engine (GPU) — Drawing Engine 2D + 3D, texel pipeline, Display List Processor, Texture Cache, float ALU, Memory Controller, Digital RAMDAC, IBM-compatible VGA, host bus interface. Verilog/VHDL, GPL-3.0 with commercial dual-license available.",
+      "locked_text": "2D/3D graphics engine (GPU) \u2014 Drawing Engine 2D + 3D, texel pipeline, Display List Processor, Texture Cache, float ALU, Memory Controller, Digital RAMDAC, IBM-compatible VGA, host bus interface. Verilog/VHDL, GPL-3.0 with commercial dual-license available.",
       "reviewed_at": "2026-05-06",
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.284 ingest. Scanner picked the GPL preamble (\"This program is free software...\") from a header; rubric-locked the actual project description from curator notes."
     },
     "catalyst-neuromorphic/catalyst-n2": {
       "verdict": "good",
-      "locked_text": "Open-source neuromorphic processor (second generation) — LIF compartmental neurons, microcode learning, STDP + three-factor synaptic plasticity, asynchronous Network-on-Chip mesh, RV32I/RV32IM management cores, multi-chip routing. Apache-2.0, FPGA-validated on AWS F2, Kria, and Arty.",
+      "locked_text": "Open-source neuromorphic processor (second generation) \u2014 LIF compartmental neurons, microcode learning, STDP + three-factor synaptic plasticity, asynchronous Network-on-Chip mesh, RV32I/RV32IM management cores, multi-chip routing. Apache-2.0, FPGA-validated on AWS F2, Kria, and Arty.",
       "reviewed_at": "2026-05-07",
       "reviewed_by": "dmazure",
-      "notes": "RTL-P3.402 ingest. granularity=repo (cohesive chip design; sub-components like async_noc_mesh / neuromorphic_top weren't usefully scannable per-entity — first-pass scanner gave port-heuristic descriptions that misclassified neuromorphic_top as a UART). Hand-locked from project README + the queue note's deep eval."
+      "notes": "RTL-P3.402 ingest. granularity=repo (cohesive chip design; sub-components like async_noc_mesh / neuromorphic_top weren't usefully scannable per-entity \u2014 first-pass scanner gave port-heuristic descriptions that misclassified neuromorphic_top as a UART). Hand-locked from project README + the queue note's deep eval."
+    },
+    "ohwr/etherbone-core": {
+      "verdict": "good",
+      "locked_text": "Etherbone \u2014 Wishbone-over-Ethernet remote-access protocol. Three HDL subsystems: Etherbone master (eb_master_core), slave (eb_slave_core, used by White Rabbit's wrc_core for remote register access), and a USB transport variant (eb_usb_core). OHWR-canonical post-migration.",
+      "reviewed_at": "2026-05-07",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.404 Path B sibling ingestion. Required dep for white-rabbit/wr-cores' wrc_core remote-access path."
+    },
+    "ohwr/general-cores": {
+      "verdict": "good",
+      "locked_text": "General Cores \u2014 generic FPGA primitive library. Edge detectors, CDC synchronizers (gc_sync_*), pulse synchronizer, debouncers, Wishbone primitives + slaves + crossbars (wb_*/xwb_*), generic memory primitives (genram_pkg single/dual-port + async FIFO), AXI/DSP/I2C primitives, 8b/10b coder, radiation-tolerant variants. The CERN BE-CO-HT primitive library underlying every OHWR design.",
+      "reviewed_at": "2026-05-07",
+      "reviewed_by": "dmazure",
+      "notes": "RTL-P3.404 Path B sibling ingestion. Required dep for white-rabbit/wr-cores \u2014 every wr-* bucket use-clauses gencores_pkg / genram_pkg / wishbone_pkg."
     }
   }
 }

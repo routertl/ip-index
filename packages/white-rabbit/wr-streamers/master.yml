@@ -1,0 +1,74 @@
+name: wr-streamers
+namespace: white-rabbit
+version: master
+commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+published_at: '2017-12-18T18:45:29+01:00'
+description: "Streaming layer over WR \u2014 application-layer TX/RX framers for sending\
+  \ arbitrary user data over the WR Ethernet path. Drop-buffer, escape detection/insertion,\
+  \ statistics counters, Wishbone-mapped configuration."
+license: LGPL-2.1
+license_class: unknown
+source:
+  type: git
+  url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+routertl_compat:
+  language: vhdl-2008
+  library: synopsys
+  files:
+  - modules/wr_streamers/dropping_buffer.vhd
+  - modules/wr_streamers/escape_detector.vhd
+  - modules/wr_streamers/escape_inserter.vhd
+  - modules/fabric/wr_fabric_pkg.vhd
+  - modules/wrc_core/wrc_syscon_pkg.vhd
+  - modules/wrc_core/wrc_diags_pkg.vhd
+  - modules/wr_endpoint/endpoint_pkg.vhd
+  - modules/wr_softpll_ng/softpll_pkg.vhd
+  - modules/wrc_core/wrcore_pkg.vhd
+  - modules/wr_streamers/streamers_pkg.vhd
+  - modules/wr_streamers/wr_streamers_wbgen2_pkg.vhd
+  - modules/wr_streamers/streamers_priv_pkg.vhd
+  - modules/timing/pulse_stamper.vhd
+  - modules/fabric/xwb_fabric_sink.vhd
+  - modules/wr_streamers/xrx_streamer.vhd
+  - modules/wr_streamers/rx_streamer.vhd
+  - modules/fabric/xwb_fabric_source.vhd
+  - modules/wr_streamers/xtx_streamer.vhd
+  - modules/wr_streamers/tx_streamer.vhd
+  - modules/wr_streamers/wr_streamers_wb.vhd
+  - modules/wr_streamers/xrx_streamers_stats.vhd
+  - modules/wr_streamers/xtx_streamers_stats.vhd
+  - modules/wr_streamers/xrtx_streamers_stats.vhd
+  - modules/wr_streamers/xwr_streamers.vhd
+tags:
+- buffer
+- detector
+- dropping
+- escape
+- inserter
+- receive
+- receiver
+- streamer
+- streamers
+- transmit
+- transmitter
+- wishbone
+role: subproject
+top_modules:
+- rx_streamer
+- tx_streamer
+- xwr_streamers
+components:
+- dropping_buffer
+- escape_detector
+- gc_escape_inserter
+- wr_streamers_wb
+- xrtx_streamers_stats
+- xrx_streamer
+- xrx_streamers_stats
+- xtx_streamer
+- xtx_streamers_stats
+total_entities: 12
+desc_source: curator

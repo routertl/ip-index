@@ -1,0 +1,47 @@
+name: wr-tbi-phy
+namespace: white-rabbit
+version: master
+commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+published_at: '2017-12-18T18:45:29+01:00'
+description: TBI (Ten-Bit Interface) PHY adapter + 8b/10b coder. Bridges the WR Endpoint
+  MAC to a TBI-style transceiver for vendors without a built-in PCS. Includes the
+  in-tree 8b/10b encode/decode + LUT.
+license: LGPL-2.1
+license_class: unknown
+source:
+  type: git
+  url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+routertl_compat:
+  language: vhdl-2008
+  library: synopsys
+  files:
+  - modules/wr_tbi_phy/dec_8b10b.vhd
+  - modules/wr_tbi_phy/enc_8b10b.vhd
+  - modules/wr_tbi_phy/wr_tbi_phy.vhd
+tags:
+- 8b10b
+- control
+- controller
+- ctrl
+- dec
+- decoder
+- enc
+- encoder
+- layer
+- lut
+- phy
+- physical
+role: subproject
+top_modules:
+- dec_8b10b
+- dec_8b10b_ctrl
+- dec_8b10b_disp
+- dec_8b10b_lut
+- wr_tbi_phy
+components:
+- enc_8b10b
+total_entities: 6
+desc_source: curator

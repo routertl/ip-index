@@ -1,0 +1,34 @@
+name: wr-tlu
+namespace: white-rabbit
+version: master
+commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+published_at: '2017-12-18T18:45:29+01:00'
+description: "Time-Latched Unit \u2014 captures input-pin transitions with the WR-recovered\
+  \ nanosecond timestamp. Used as the timestamping front-end for ECA and external\
+  \ trigger capture."
+license: LGPL-2.1
+license_class: unknown
+source:
+  type: git
+  url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
+routertl_compat:
+  language: vhdl-2008
+  library: synopsys
+  files:
+  - modules/wr_tlu/tlu_pkg.vhd
+  - modules/wr_tlu/tlu_fsm.vhd
+  - modules/wr_tlu/tlu.vhd
+tags:
+- fsm
+- tlu
+- wr
+role: subproject
+top_modules:
+- wr_tlu
+components:
+- wr_tlu_fsm
+total_entities: 2
+desc_source: curator

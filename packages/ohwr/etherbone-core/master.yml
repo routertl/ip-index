@@ -1,0 +1,96 @@
+name: etherbone-core
+namespace: ohwr
+version: master
+commit_sha: 035fee323b5bafc8f06de0ac9cabb5892c33134e
+published_at: '2025-04-09T14:43:47+02:00'
+description: "Etherbone \u2014 Wishbone-over-Ethernet remote-access protocol. Three\
+  \ HDL subsystems: Etherbone master (eb_master_core), slave (eb_slave_core, used\
+  \ by White Rabbit's wrc_core for remote register access), and a USB transport variant\
+  \ (eb_usb_core). OHWR-canonical post-migration."
+license: LGPL-2.1
+license_class: unknown
+source:
+  type: git
+  url: https://gitlab.com/ohwr/project/etherbone-core.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: 035fee323b5bafc8f06de0ac9cabb5892c33134e
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - hdl/eb_slave_core/eb_hdr_pkg.vhd
+  - hdl/eb_slave_core/eb_internals_pkg.vhd
+  - hdl/eb_slave_core/etherbone_pkg.vhd
+  - hdl/eb_slave_core/eb_fifo.vhd
+  - hdl/eb_slave_core/eb_cfg_fifo.vhd
+  - hdl/eb_slave_core/eb_checksum.vhd
+  - hdl/eb_slave_core/eb_commit_fifo.vhd
+  - hdl/eb_master_core/eb_commit_len_fifo.vhd
+  - hdl/eb_slave_core/eb_eth_rx.vhd
+  - hdl/eb_slave_core/eb_eth_tx.vhd
+  - hdl/eb_slave_core/eb_pass_fifo.vhd
+  - hdl/eb_slave_core/eb_slave_fsm.vhd
+  - hdl/eb_slave_core/eb_tag_fifo.vhd
+  - hdl/eb_slave_core/eb_tx_mux.vhd
+  - hdl/eb_slave_core/eb_wbm_fifo.vhd
+  - hdl/eb_slave_core/eb_slave_top.vhd
+  - hdl/eb_slave_core/eb_stream_narrow.vhd
+  - hdl/eb_slave_core/eb_stream_widen.vhd
+  - hdl/eb_slave_core/eb_ethernet_slave.vhd
+  - hdl/eb_master_core/eb_record_gen.vhd
+  - hdl/eb_master_core/eb_framer.vhd
+  - hdl/eb_master_core/eb_master_eth_tx.vhd
+  - hdl/eb_master_core/ebm_auto_pkg.vhd
+  - hdl/eb_master_core/ebm_auto.vhd
+  - hdl/eb_master_core/eb_master_top.vhd
+  - hdl/eb_master_core/eb_master_slave_wrapper.vhd
+  - hdl/eb_slave_core/eb_raw_slave.vhd
+  - hdl/eb_slave_core/eb_slave_core.vhd
+  - hdl/eb_usb_core/ez_usb_pkg.vhd
+  - hdl/eb_usb_core/ez_usb_fifos.vhd
+  - hdl/eb_usb_core/ez_usb.vhd
+tags:
+- buffer
+- checksum
+- commit
+- ethernet
+- framer
+- master
+- multiplexer
+- receive
+- receiver
+- transmit
+- transmitter
+- universal
+role: repo
+top_modules:
+- eb_master_slave_wrapper
+- eb_slave_core
+- ez_usb
+components:
+- eb_cfg_fifo
+- eb_checksum
+- eb_commit_fifo
+- eb_commit_len_fifo
+- eb_eth_rx
+- eb_eth_tx
+- eb_ethernet_slave
+- eb_fifo
+- eb_framer
+- eb_master_eth_tx
+- eb_master_top
+- eb_pass_fifo
+- eb_raw_slave
+- eb_record_gen
+- eb_slave_fsm
+- eb_slave_top
+- eb_stream_narrow
+- eb_stream_widen
+- eb_tag_fifo
+- eb_tx_mux
+- eb_wbm_fifo
+- ebm_auto
+- ez_usb_fifos
+total_entities: 26
+desc_source: verdict
