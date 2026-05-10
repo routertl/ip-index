@@ -1,0 +1,216 @@
+name: ctucanfd_ip_core
+namespace: ctu-fee
+version: master
+commit_sha: f25fe172730ae620ca44d8e7bca13a83ef2a34db
+published_at: '2026-01-11T22:50:27+01:00'
+description: CTU CAN FD is soft IP-Core written in VHDL which supports ISO and NON-ISO
+  versions of CAN FD protocol.
+license: MIT
+license_class: permissive
+source:
+  type: git
+  url: https://gitlab.fel.cvut.cz/canbus/ctucanfd_ip_core.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: f25fe172730ae620ca44d8e7bca13a83ef2a34db
+routertl_compat:
+  language: vhdl-2008
+  library: ctu_can_fd_tb
+  files:
+  - src/memory_registers/generated/address_decoder.vhd
+  - src/packages/can_constants_pkg.vhd
+  - src/packages/can_config_pkg.vhd
+  - src/packages/can_types_pkg.vhd
+  - src/interface/ahb_ifc.vhd
+  - src/interface/apb_ifc.vhd
+  - src/common_blocks/dff_arst.vhd
+  - src/common_blocks/dff_arst_ce.vhd
+  - src/can_core/bit_destuffing.vhd
+  - src/bus_sampling/bit_err_detector.vhd
+  - src/frame_filters/bit_filter.vhd
+  - src/prescaler/bit_segment_meter.vhd
+  - src/can_core/bit_stuffing.vhd
+  - src/prescaler/bit_time_cfg_capture.vhd
+  - src/prescaler/bit_time_counters.vhd
+  - src/prescaler/bit_time_fsm.vhd
+  - src/bus_sampling/data_edge_detector.vhd
+  - src/common_blocks/mux2.vhd
+  - src/common_blocks/rst_reg.vhd
+  - src/bus_sampling/sample_mux.vhd
+  - src/common_blocks/sig_sync.vhd
+  - src/bus_sampling/ssp_generator.vhd
+  - src/bus_sampling/trv_delay_meas.vhd
+  - src/bus_sampling/tx_data_cache.vhd
+  - src/bus_sampling/bus_sampling.vhd
+  - src/can_core/bus_traffic_counters.vhd
+  - src/can_core/crc_calc.vhd
+  - src/can_core/can_crc.vhd
+  - src/can_core/err_counters.vhd
+  - src/can_core/fault_confinement_fsm.vhd
+  - src/can_core/fault_confinement_rules.vhd
+  - src/can_core/fault_confinement.vhd
+  - src/can_core/operation_control.vhd
+  - src/can_core/control_counter.vhd
+  - src/common_blocks/endian_swapper.vhd
+  - src/can_core/err_detector.vhd
+  - src/common_blocks/dlc_decoder.vhd
+  - src/can_core/protocol_control_fsm.vhd
+  - src/can_core/reintegration_counter.vhd
+  - src/can_core/retransmitt_counter.vhd
+  - src/common_blocks/shift_reg_byte.vhd
+  - src/can_core/rx_shift_reg.vhd
+  - src/common_blocks/shift_reg_preload.vhd
+  - src/can_core/tx_shift_reg.vhd
+  - src/can_core/protocol_control.vhd
+  - src/can_core/trigger_mux.vhd
+  - src/can_core/can_core.vhd
+  - src/memory_registers/generated/can_registers_pkg.vhd
+  - src/frame_filters/range_filter.vhd
+  - src/frame_filters/frame_filters.vhd
+  - src/interrupt_manager/int_module.vhd
+  - src/interrupt_manager/int_manager.vhd
+  - src/common_blocks/clk_gate.vhd
+  - src/memory_registers/generated/cmn_reg_map_pkg.vhd
+  - src/memory_registers/generated/memory_reg_os.vhd
+  - src/memory_registers/generated/memory_reg_os_lock.vhd
+  - src/memory_registers/generated/memory_reg_rw.vhd
+  - src/memory_registers/generated/memory_reg_rw_lock.vhd
+  - src/memory_registers/generated/read_access_signaler.vhd
+  - src/memory_registers/generated/control_registers_reg_map.vhd
+  - src/memory_registers/generated/test_registers_reg_map.vhd
+  - src/memory_registers/memory_registers.vhd
+  - src/common_blocks/parity_calculator.vhd
+  - src/prescaler/segment_end_detector.vhd
+  - src/prescaler/synchronisation_checker.vhd
+  - src/prescaler/trigger_generator.vhd
+  - src/prescaler/prescaler.vhd
+  - src/common_blocks/rst_sync.vhd
+  - src/rx_buffer/rx_buffer_fsm.vhd
+  - src/rx_buffer/rx_buffer_pointers.vhd
+  - src/common_blocks/dp_inf_ram.vhd
+  - src/rx_buffer/rx_buffer_ram.vhd
+  - src/rx_buffer/rx_buffer.vhd
+  - src/tx_arbitrator/priority_decoder.vhd
+  - src/tx_arbitrator/tx_arbitrator_fsm.vhd
+  - src/tx_arbitrator/tx_arbitrator.vhd
+  - src/txt_buffer/txt_buffer_fsm.vhd
+  - src/common_blocks/dp_inf_ram_be.vhd
+  - src/txt_buffer/txt_buffer_ram.vhd
+  - src/txt_buffer/txt_buffer_even.vhd
+  - src/txt_buffer/txt_buffer_odd.vhd
+  - src/can_top_level.vhd
+  - src/can_top_ahb.vhd
+  - src/can_top_apb.vhd
+  - src/common_blocks/majority_decoder_3.vhd
+  - src/memory_registers/generated/memory_bus.vhd
+  - src/common_blocks/shift_reg.vhd
+tags:
+- arbitrator
+- calculator
+- confinement
+- high-performance
+- measurement
+- multiplexer
+- reintegration
+- retransmitt
+- synchronisation
+- synchronizer
+- synchronous
+- transmitter
+role: repo
+top_modules:
+- can_top_ahb
+- can_top_apb
+- majority_decoder_3
+- memory_bus_template
+- shift_reg
+components:
+- address_decoder
+- ahb_ifc
+- apb_ifc
+- bit_destuffing
+- bit_err_detector
+- bit_filter
+- bit_segment_meter
+- bit_stuffing
+- bit_time_cfg_capture
+- bit_time_counters
+- bit_time_fsm
+- bus_sampling
+- bus_traffic_counters
+- can_core
+- can_crc
+- can_top_level
+- clk_gate
+- control_counter
+- control_registers_reg_map
+- crc_calc
+- data_edge_detector
+- dff_arst
+- dff_arst_ce
+- dlc_decoder
+- dp_inf_ram
+- dp_inf_ram_be
+- endian_swapper
+- err_counters
+- err_detector
+- fault_confinement
+- fault_confinement_fsm
+- fault_confinement_rules
+- frame_filters
+- int_manager
+- int_module
+- memory_reg_os
+- memory_reg_os_lock
+- memory_reg_rw
+- memory_reg_rw_lock
+- memory_registers
+- mux2
+- operation_control
+- parity_calculator
+- prescaler
+- priority_decoder
+- protocol_control
+- protocol_control_fsm
+- range_filter
+- read_access_signaller
+- reintegration_counter
+- retransmitt_counter
+- rst_reg
+- rst_sync
+- rx_buffer
+- rx_buffer_fsm
+- rx_buffer_pointers
+- rx_buffer_ram
+- rx_shift_reg
+- sample_mux
+- segment_end_detector
+- shift_reg_byte
+- shift_reg_preload
+- sig_sync
+- ssp_generator
+- synchronisation_checker
+- trigger_generator
+- trigger_mux
+- trv_delay_measurement
+- tx_arbitrator
+- tx_arbitrator_fsm
+- tx_data_cache
+- tx_shift_reg
+- txt_buffer_even
+- txt_buffer_fsm
+- txt_buffer_odd
+- txt_buffer_ram
+total_entities: 81
+desc_source: readme
+external_uses:
+- library: ctu_can_fd_rtl
+  package: CAN_FD_frame_format
+- library: ctu_can_fd_rtl
+  package: CAN_FD_register_map
+provides_packages:
+- can_config_pkg
+- can_constants_pkg
+- can_registers_pkg
+- can_types_pkg
+- cmn_reg_map_pkg
