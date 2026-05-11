@@ -15,9 +15,11 @@ source:
   resolved_commit: f25fe172730ae620ca44d8e7bca13a83ef2a34db
 routertl_compat:
   language: vhdl-2008
-  library: ctu_can_fd_tb
+  library: ctu_can_fd_rtl
   files:
   - src/memory_registers/generated/address_decoder.vhd
+  - src/packages/can_fd_frame_format.vhd
+  - src/packages/can_fd_register_map.vhd
   - src/packages/can_constants_pkg.vhd
   - src/packages/can_config_pkg.vhd
   - src/packages/can_types_pkg.vhd
