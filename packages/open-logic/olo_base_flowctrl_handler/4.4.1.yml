@@ -57,9 +57,17 @@ components:
 top_ports:
   olo_base_flowctrl_handler:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
     type: std_logic
     width: ''
+  - direction: in
+    name: In_Data
+    type: std_logic_vector
+    width: InWidth_g - 1 downto 0
   - direction: in
     name: In_Valid
     type: std_logic
@@ -69,6 +77,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: Out_Data
+    type: std_logic_vector
+    width: OutWidth_g - 1 downto 0
+  - direction: out
     name: Out_Valid
     type: std_logic
     width: ''
@@ -77,9 +89,17 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: ToProc_Data
+    type: std_logic_vector
+    width: InWidth_g - 1 downto 0
+  - direction: out
     name: ToProc_Valid
     type: std_logic
     width: ''
+  - direction: in
+    name: FromProc_Data
+    type: std_logic_vector
+    width: OutWidth_g - 1 downto 0
   - direction: in
     name: FromProc_Valid
     type: std_logic

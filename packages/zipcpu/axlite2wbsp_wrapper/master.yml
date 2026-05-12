@@ -165,7 +165,7 @@ top_ports:
     width: C_AXI_DATA_WIDTH-1 downto 0
   - direction: in
     name: m_wb_err
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
 desc_source: ports
 health_tier: bronze

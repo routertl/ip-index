@@ -54,6 +54,18 @@ components:
 top_ports:
   dec_viterbi:
   - direction: in
+    name: aclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: aresetn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axis_input_tvalid
+    type: std_logic
+    width: ''
+  - direction: in
     name: s_axis_input_tdata
     type: std_logic_vector
     width: 31 downto 0
@@ -63,6 +75,10 @@ top_ports:
     width: ''
   - direction: out
     name: s_axis_input_tready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axis_output_tvalid
     type: std_logic
     width: ''
   - direction: out
@@ -78,6 +94,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: s_axis_ctrl_tvalid
+    type: std_logic
+    width: ''
+  - direction: in
     name: s_axis_ctrl_tdata
     type: std_logic_vector
     width: 31 downto 0
@@ -87,9 +107,7 @@ top_ports:
     width: ''
   - direction: out
     name: s_axis_ctrl_tready
-    type: 'std_logic
-
-      )'
+    type: std_logic
     width: ''
 total_entities: 9
 desc_source: verdict

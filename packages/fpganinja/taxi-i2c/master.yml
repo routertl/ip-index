@@ -72,6 +72,14 @@ top_ports:
     name: registers
     type: wire
     width: ''
+  - direction: src
+    name: m_axis_cmd
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_tx
+    type: taxi_axis_if.src
+    width: ''
   taxi_i2c_init:
   - direction: in
     name: logic
@@ -93,6 +101,14 @@ top_ports:
     name: registers
     type: wire
     width: ''
+  - direction: src
+    name: m_axis_cmd
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_tx
+    type: taxi_axis_if.src
+    width: ''
   taxi_i2c_single_reg:
   - direction: in
     name: logic
@@ -103,10 +119,22 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: mst
+    name: m_apb
+    type: taxi_apb_if.mst
+    width: ''
   taxi_i2c_slave_axil_master:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
     width: ''
 total_entities: 7
 desc_source: curator

@@ -95,7 +95,7 @@ top_ports:
     width: OutWidth_g / 8 - 1 downto 0
   - direction: out
     name: Out_Last
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
 desc_source: header
 external_uses:

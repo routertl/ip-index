@@ -1,8 +1,8 @@
 name: i2s_tx
 namespace: analog-devices
 version: HEAD
-commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
-published_at: '2026-05-11T12:02:04+03:00'
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
 description: Transmit engine
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
@@ -11,7 +11,7 @@ source:
   url: https://github.com/analogdevicesinc/hdl.git
   tag: main
   ip_yml_path: .
-  resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 routertl_compat:
   language: vhdl-2008
   library: work
@@ -29,6 +29,42 @@ top_ports:
     name: clk
     type: std_logic
     width: ''
+  - direction: in
+    name: resetn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enable
+    type: Boolean
+    width: ''
+  - direction: in
+    name: bclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: channel_sync
+    type: std_logic
+    width: ''
+  - direction: in
+    name: frame_sync
+    type: std_logic
+    width: ''
+  - direction: out
+    name: sdata
+    type: std_logic_vector
+    width: C_NUM - 1 downto 0
+  - direction: out
+    name: ack
+    type: std_logic
+    width: ''
+  - direction: in
+    name: stb
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data
+    type: std_logic_vector
+    width: C_SLOT_WIDTH-1 downto 0
 desc_source: ports
 external_uses:
 - library: work

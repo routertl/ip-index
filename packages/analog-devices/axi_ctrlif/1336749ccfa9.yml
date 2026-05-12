@@ -1,0 +1,157 @@
+name: axi_ctrlif
+namespace: analog-devices
+version: 1336749ccfa9
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
+description: AXI4-Lite controller with memory interface and configurable parameters
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - library/common/axi_ctrlif.vhd
+tags:
+- amba
+- axi
+- bus
+- ctrlif
+role: top
+top_ports:
+  axi_ctrlif:
+  - direction: in
+    name: s_axi_aclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_aresetn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_awaddr
+    type: std_logic_vector
+    width: C_S_AXI_ADDR_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_awvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_wdata
+    type: std_logic_vector
+    width: C_S_AXI_DATA_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_wstrb
+    type: std_logic_vector
+    width: (C_S_AXI_DATA_WIDTH/8)-1 downto 0
+  - direction: in
+    name: s_axi_wvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_bready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_araddr
+    type: std_logic_vector
+    width: C_S_AXI_ADDR_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_arvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_rready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_arready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_rdata
+    type: std_logic_vector
+    width: C_S_AXI_DATA_WIDTH-1 downto 0
+  - direction: out
+    name: s_axi_rresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: s_axi_rvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_wready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_bresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: s_axi_bvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_awready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rd_addr
+    type: integer
+    width: 0 to C_NUM_REG - 1
+  - direction: in
+    name: rd_data
+    type: std_logic_vector
+    width: C_S_AXI_DATA_WIDTH-1 downto 0
+  - direction: out
+    name: rd_ack
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rd_stb
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wr_addr
+    type: integer
+    width: 0 to C_NUM_REG - 1
+  - direction: out
+    name: wr_data
+    type: std_logic_vector
+    width: C_S_AXI_DATA_WIDTH-1 downto 0
+  - direction: in
+    name: wr_ack
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wr_stb
+    type: std_logic
+    width: ''
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

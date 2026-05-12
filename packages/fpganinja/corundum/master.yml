@@ -134,6 +134,14 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis_cmd
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_rsp
+    type: taxi_axis_if.src
+    width: ''
   cndm_lite_pcie_us:
   - direction: in
     name: logic
@@ -142,6 +150,42 @@ top_ports:
   - direction: out
     name: delays
     type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_pcie_cq
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_pcie_cc
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_pcie_rq
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: s_axis_pcie_rc
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_brd_ctrl_cmd
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: s_axis_brd_ctrl_rsp
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: mac_axis_tx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: mac_axis_tx_cpl
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: snk
+    name: mac_axis_rx
+    type: taxi_axis_if.snk
     width: ''
   cndm_micro_pcie_us:
   - direction: in
@@ -152,10 +196,74 @@ top_ports:
     name: delays
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis_pcie_cq
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_pcie_cc
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_pcie_rq
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: s_axis_pcie_rc
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_brd_ctrl_cmd
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: s_axis_brd_ctrl_rsp
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: mac_axis_tx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: mac_axis_tx_cpl
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: snk
+    name: mac_axis_rx
+    type: taxi_axis_if.snk
+    width: ''
   cndm_proto_pcie_us:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_pcie_cq
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_pcie_cc
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_pcie_rq
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: s_axis_pcie_rc
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: mac_axis_tx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: mac_axis_tx_cpl
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: snk
+    name: mac_axis_rx
+    type: taxi_axis_if.snk
     width: ''
 total_entities: 20
 desc_source: curator

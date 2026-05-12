@@ -74,8 +74,8 @@ top_ports:
     width: XY_WIDTH+GUARD_BITS-1  downto 0
   - direction: out
     name: a_o
-    type: "std_logic_vector( A_WIDTH+2-1 downto 0 )\n    )"
-    width: ''
+    type: std_logic_vector
+    width: A_WIDTH+2-1 downto 0
 total_entities: 1
 desc_source: verdict
 health_tier: bronze

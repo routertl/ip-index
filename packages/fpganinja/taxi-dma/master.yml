@@ -74,6 +74,38 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
+    width: ''
+  - direction: req_snk
+    name: rd_desc_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: rd_desc_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: req_snk
+    name: wr_desc_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: wr_desc_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: wr_mst
+    name: dma_ram_wr
+    type: taxi_dma_ram_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: dma_ram_rd
+    type: taxi_dma_ram_if.rd_mst
+    width: ''
   taxi_dma_psdpram_async:
   - direction: out
     name: pipeline
@@ -95,10 +127,34 @@ top_ports:
     name: rst_rd
     type: wire
     width: ''
+  - direction: wr_slv
+    name: dma_ram_wr
+    type: taxi_dma_ram_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: dma_ram_rd
+    type: taxi_dma_ram_if.rd_slv
+    width: ''
   taxi_dma_ram_demux:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_slv
+    name: dma_ram_wr
+    type: taxi_dma_ram_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: dma_ram_rd
+    type: taxi_dma_ram_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: ram_wr
+    type: taxi_dma_ram_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: ram_rd
+    type: taxi_dma_ram_if.rd_mst
     width: ''
 total_entities: 14
 desc_source: curator

@@ -96,6 +96,10 @@ components:
 - uart_tx
 top_ports:
   WBOPRT08:
+  - direction: out
+    name: ACK_O
+    type: std_ulogic
+    width: ''
   - direction: in
     name: CLK_I
     type: std_ulogic
@@ -120,7 +124,19 @@ top_ports:
     name: WE_I
     type: std_ulogic
     width: ''
+  - direction: out
+    name: PRT_O
+    type: std_ulogic_vector
+    width: 7 downto 0
   cp_copyBlaze_ecoSystem:
+  - direction: in
+    name: Clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: Interrupt_i
+    type: std_ulogic
+    width: ''
   - direction: out
     name: Interrupt_Ack_o
     type: std_ulogic
@@ -145,48 +161,8 @@ top_ports:
     name: WRITE_STROBE_o
     type: std_ulogic
     width: ''
-  - direction: out
-    name: ADR_O
-    type: std_ulogic_vector
-    width: GEN_WIDTH_DATA-1 downto 0
   - direction: in
-    name: DAT_I
-    type: std_ulogic_vector
-    width: GEN_WIDTH_DATA-1 downto 0
-  - direction: out
-    name: DAT_O
-    type: std_ulogic_vector
-    width: GEN_WIDTH_DATA-1 downto 0
-  - direction: out
-    name: WE_O
-    type: std_ulogic
-    width: ''
-  - direction: out
-    name: SEL_O
-    type: std_ulogic_vector
-    width: 1 downto 0
-  - direction: out
-    name: STB_O
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: ACK_I
-    type: std_ulogic
-    width: ''
-  - direction: out
-    name: CYC_O
-    type: "std_ulogic\n\t)"
-    width: ''
-  - direction: in
-    name: Instruction_i
-    type: std_ulogic_vector
-    width: GEN_WIDTH_INST-1 downto 0
-  - direction: in
-    name: Interrupt_i
-    type: std_ulogic
-    width: ''
-  - direction: out
-    name: WRITE_STROBE_o
+    name: Freeze_i
     type: std_ulogic
     width: ''
   - direction: out
@@ -219,16 +195,8 @@ top_ports:
     width: ''
   - direction: out
     name: CYC_O
-    type: "std_ulogic\n\t\t)"
+    type: std_ulogic
     width: ''
-  - direction: in
-    name: Address_i
-    type: std_ulogic_vector
-    width: GEN_WIDTH_PC-1 downto 0
-  - direction: out
-    name: Dout_o
-    type: std_ulogic_vector
-    width: GEN_WIDTH_INST-1 downto 0
   mux32:
   - direction: in
     name: input
@@ -240,8 +208,8 @@ top_ports:
     width: ''
   - direction: in
     name: sel
-    type: std_logic_vector(4 downto 0) )
-    width: ''
+    type: std_logic_vector
+    width: 4 downto 0
   sp_ram:
   - direction: in
     name: clka
@@ -251,6 +219,10 @@ top_ports:
     name: wea
     type: std_logic_vector
     width: 0 downto 0
+  - direction: in
+    name: addra
+    type: std_logic_vector
+    width: addr_width-1 downto 0
   - direction: in
     name: dina
     type: std_logic_vector
@@ -350,24 +322,8 @@ top_ports:
     width: data_width-1 downto 0
   - direction: out
     name: wb3_ack_o
-    type: std_logic)
+    type: std_logic
     width: ''
-  - direction: in
-    name: wea
-    type: std_logic_vector
-    width: 0 downto 0
-  - direction: in
-    name: addra
-    type: std_logic_vector
-    width: addr_width-1 downto 0
-  - direction: in
-    name: dina
-    type: std_logic_vector
-    width: data_width-1 downto 0
-  - direction: out
-    name: douta
-    type: std_logic_vector
-    width: data_width-1 downto 0
   wb_gpio:
   - direction: in
     name: clk
@@ -377,6 +333,10 @@ top_ports:
     name: reset
     type: std_logic
     width: ''
+  - direction: in
+    name: wb_adr_i
+    type: std_logic_vector
+    width: 31 downto 0
   - direction: in
     name: wb_dat_i
     type: std_logic_vector
@@ -405,10 +365,14 @@ top_ports:
     name: wb_we_i
     type: std_logic
     width: ''
+  - direction: in
+    name: iport
+    type: std_logic_vector
+    width: 31 downto 0
   - direction: out
     name: oport
-    type: std_logic_vector(31 downto 0) )
-    width: ''
+    type: std_logic_vector
+    width: 31 downto 0
   wb_gpio_08:
   - direction: in
     name: clk
@@ -418,6 +382,10 @@ top_ports:
     name: reset
     type: std_ulogic
     width: ''
+  - direction: in
+    name: wb_adr_i
+    type: std_ulogic_vector
+    width: 7 downto 0
   - direction: in
     name: wb_dat_i
     type: std_ulogic_vector
@@ -442,6 +410,10 @@ top_ports:
     name: wb_we_i
     type: std_ulogic
     width: ''
+  - direction: in
+    name: iport
+    type: std_ulogic_vector
+    width: 7 downto 0
   - direction: out
     name: oport
     type: std_ulogic_vector
@@ -455,6 +427,10 @@ top_ports:
     name: reset
     type: std_logic
     width: ''
+  - direction: in
+    name: wb_adr_i
+    type: std_logic_vector
+    width: 31 downto 0
   - direction: in
     name: wb_dat_i
     type: std_logic_vector
@@ -488,33 +464,9 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
-    name: reset
-    type: std_logic
-    width: ''
-  - direction: in
-    name: addr1
-    type: std_logic_vector
-    width: 11 downto 0
-  - direction: in
-    name: wdata1
+    name: probe
     type: std_logic_vector
     width: 31 downto 0
-  - direction: in
-    name: addr2
-    type: std_logic_vector
-    width: 11 downto 0
-  - direction: out
-    name: rdata2
-    type: std_logic_vector(31 downto 0) )
-    width: ''
-  - direction: out
-    name: output
-    type: std_logic
-    width: ''
-  - direction: in
-    name: sel
-    type: std_logic_vector(4 downto 0) )
-    width: ''
   wb_sram:
   - direction: in
     name: clk
@@ -524,6 +476,10 @@ top_ports:
     name: reset
     type: std_ulogic
     width: ''
+  - direction: in
+    name: wb_adr_i
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
   - direction: in
     name: wb_dat_i
     type: std_ulogic_vector
@@ -546,7 +502,7 @@ top_ports:
     width: ''
   - direction: in
     name: wb_we_i
-    type: "std_ulogic\n\t)"
+    type: std_ulogic
     width: ''
   wb_timer:
   - direction: in
@@ -558,6 +514,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: wb_adr_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
     name: wb_dat_i
     type: std_logic_vector
     width: 31 downto 0
@@ -591,7 +551,7 @@ top_ports:
     width: ''
   - direction: out
     name: wb_irq1_o
-    type: std_logic )
+    type: std_logic
     width: ''
   wb_timer_8:
   - direction: in
@@ -603,6 +563,10 @@ top_ports:
     type: std_ulogic
     width: ''
   - direction: in
+    name: wb_adr_i
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: in
     name: wb_dat_i
     type: std_ulogic_vector
     width: 7 downto 0
@@ -632,7 +596,7 @@ top_ports:
     width: ''
   - direction: out
     name: wb_irq1_o
-    type: std_ulogic )
+    type: std_ulogic
     width: ''
   wb_uart:
   - direction: in
@@ -643,6 +607,10 @@ top_ports:
     name: reset
     type: std_logic
     width: ''
+  - direction: in
+    name: wb_adr_i
+    type: std_logic_vector
+    width: 31 downto 0
   - direction: in
     name: wb_dat_i
     type: std_logic_vector
@@ -679,53 +647,13 @@ top_ports:
     name: wb_txirq_o
     type: std_logic
     width: ''
+  - direction: in
+    name: uart_rx
+    type: std_logic
+    width: ''
   - direction: out
     name: uart_tx
-    type: std_logic )
-    width: ''
-  - direction: in
-    name: reset
     type: std_logic
-    width: ''
-  - direction: in
-    name: txdata
-    type: std_logic_vector
-    width: 7 downto 0
-  - direction: out
-    name: rxdata
-    type: std_logic_vector
-    width: 7 downto 0
-  - direction: in
-    name: wr
-    type: std_logic
-    width: ''
-  - direction: in
-    name: rd
-    type: std_logic
-    width: ''
-  - direction: out
-    name: tx_avail
-    type: std_logic
-    width: ''
-  - direction: out
-    name: tx_busy
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rx_avail
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rx_full
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rx_error
-    type: std_logic
-    width: ''
-  - direction: out
-    name: uart_txd
-    type: std_logic )
     width: ''
   wb_uart_8:
   - direction: in
@@ -736,6 +664,10 @@ top_ports:
     name: reset
     type: std_ulogic
     width: ''
+  - direction: in
+    name: wb_adr_i
+    type: std_ulogic_vector
+    width: 7 downto 0
   - direction: in
     name: wb_dat_i
     type: std_ulogic_vector
@@ -768,52 +700,12 @@ top_ports:
     name: wb_txirq_o
     type: std_ulogic
     width: ''
+  - direction: in
+    name: uart_rx
+    type: std_ulogic
+    width: ''
   - direction: out
     name: uart_tx
-    type: "std_ulogic\n\t)"
-    width: ''
-  - direction: in
-    name: reset
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: txdata
-    type: std_ulogic_vector
-    width: 7 downto 0
-  - direction: out
-    name: rxdata
-    type: std_ulogic_vector
-    width: 7 downto 0
-  - direction: in
-    name: wr
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: rd
-    type: std_ulogic
-    width: ''
-  - direction: out
-    name: tx_avail
-    type: std_ulogic
-    width: ''
-  - direction: out
-    name: tx_busy
-    type: std_ulogic
-    width: ''
-  - direction: out
-    name: rx_avail
-    type: std_ulogic
-    width: ''
-  - direction: out
-    name: rx_full
-    type: std_ulogic
-    width: ''
-  - direction: out
-    name: rx_error
-    type: std_ulogic
-    width: ''
-  - direction: out
-    name: uart_txd
     type: std_ulogic
     width: ''
 total_entities: 30

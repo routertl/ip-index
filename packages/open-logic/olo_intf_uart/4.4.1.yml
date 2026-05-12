@@ -63,7 +63,15 @@ components:
 top_ports:
   olo_intf_uart:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Tx_Valid
     type: std_logic
     width: ''
   - direction: out
@@ -75,11 +83,19 @@ top_ports:
     type: std_logic_vector
     width: DataBits_g - 1 downto 0
   - direction: out
+    name: Rx_Valid
+    type: std_logic
+    width: ''
+  - direction: out
     name: Rx_Data
     type: std_logic_vector
     width: DataBits_g - 1 downto 0
   - direction: out
     name: Rx_ParityError
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Uart_Tx
     type: std_logic
     width: ''
   - direction: in

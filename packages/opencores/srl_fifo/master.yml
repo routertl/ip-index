@@ -69,7 +69,7 @@ top_ports:
     width: ''
   - direction: in
     name: clk
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   srl_fifo_32:
   - direction: in
@@ -106,7 +106,7 @@ top_ports:
     width: ''
   - direction: in
     name: clk
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   srl_fifo_64:
   - direction: in
@@ -143,7 +143,7 @@ top_ports:
     width: ''
   - direction: in
     name: clk
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
 total_entities: 3
 desc_source: verdict

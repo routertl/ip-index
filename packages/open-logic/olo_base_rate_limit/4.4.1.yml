@@ -58,9 +58,17 @@ components:
 top_ports:
   olo_base_rate_limit:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
     type: std_logic
     width: ''
+  - direction: in
+    name: In_Data
+    type: std_logic_vector
+    width: Width_g-1 downto 0
   - direction: in
     name: In_Valid
     type: std_logic
@@ -70,6 +78,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: Out_Data
+    type: std_logic_vector
+    width: Width_g-1 downto 0
+  - direction: out
     name: Out_Valid
     type: std_logic
     width: ''
@@ -78,9 +90,13 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: Cfg_Period
+    type: std_logic_vector
+    width: log2ceil(Period_g)-1 downto 0
+  - direction: in
     name: Cfg_MaxSamples
-    type: std_logic_vector(log2ceil(MaxSamples_g)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: log2ceil(MaxSamples_g)-1 downto 0
 desc_source: header
 external_uses:
 - library: work

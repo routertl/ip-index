@@ -66,9 +66,17 @@ components:
 top_ports:
   olo_axi_master_full:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
     type: std_logic
     width: ''
+  - direction: in
+    name: CmdWr_Addr
+    type: std_logic_vector
+    width: AxiAddrWidth_g - 1 downto 0
   - direction: in
     name: CmdWr_Size
     type: std_logic_vector
@@ -86,6 +94,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: CmdRd_Addr
+    type: std_logic_vector
+    width: AxiAddrWidth_g - 1 downto 0
+  - direction: in
     name: CmdRd_Size
     type: std_logic_vector
     width: UserTransactionSizeBits_g - 1 downto 0
@@ -102,6 +114,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: Wr_Data
+    type: std_logic_vector
+    width: UserDataWidth_g - 1 downto 0
+  - direction: in
     name: Wr_Valid
     type: std_logic
     width: ''
@@ -109,6 +125,10 @@ top_ports:
     name: Wr_Ready
     type: std_logic
     width: ''
+  - direction: out
+    name: Rd_Data
+    type: std_logic_vector
+    width: UserDataWidth_g - 1 downto 0
   - direction: out
     name: Rd_Last
     type: std_logic
@@ -119,6 +139,10 @@ top_ports:
     width: ''
   - direction: in
     name: Rd_Ready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Wr_Done
     type: std_logic
     width: ''
   - direction: out
@@ -133,6 +157,10 @@ top_ports:
     name: Rd_Error
     type: std_logic
     width: ''
+  - direction: out
+    name: M_Axi_AwAddr
+    type: std_logic_vector
+    width: AxiAddrWidth_g - 1 downto 0
   - direction: out
     name: M_Axi_AwLen
     type: std_logic_vector
@@ -166,6 +194,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: M_Axi_WData
+    type: std_logic_vector
+    width: AxiDataWidth_g - 1 downto 0
+  - direction: out
     name: M_Axi_WStrb
     type: std_logic_vector
     width: AxiDataWidth_g / 8 - 1 downto 0
@@ -182,6 +214,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: M_Axi_BResp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
     name: M_Axi_BValid
     type: std_logic
     width: ''
@@ -189,6 +225,10 @@ top_ports:
     name: M_Axi_BReady
     type: std_logic
     width: ''
+  - direction: out
+    name: M_Axi_ArAddr
+    type: std_logic_vector
+    width: AxiAddrWidth_g - 1 downto 0
   - direction: out
     name: M_Axi_ArLen
     type: std_logic_vector
@@ -222,6 +262,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: M_Axi_RData
+    type: std_logic_vector
+    width: AxiDataWidth_g - 1 downto 0
+  - direction: in
     name: M_Axi_RResp
     type: std_logic_vector
     width: 1 downto 0
@@ -235,7 +279,7 @@ top_ports:
     width: ''
   - direction: out
     name: M_Axi_RReady
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
 desc_source: header
 external_uses:

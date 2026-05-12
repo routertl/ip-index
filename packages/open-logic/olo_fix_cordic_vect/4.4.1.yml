@@ -64,7 +64,15 @@ components:
 top_ports:
   olo_fix_cordic_vect:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: In_Valid
     type: std_logic
     width: ''
   - direction: out
@@ -73,20 +81,24 @@ top_ports:
     width: ''
   - direction: in
     name: In_I
-    type: std_logic_vector(fixFmtWidthFromString(InFmt_g)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: fixFmtWidthFromString(InFmt_g)-1 downto 0
   - direction: in
     name: In_Q
-    type: std_logic_vector(fixFmtWidthFromString(InFmt_g)-1 downto 0)
+    type: std_logic_vector
+    width: fixFmtWidthFromString(InFmt_g)-1 downto 0
+  - direction: out
+    name: Out_Valid
+    type: std_logic
     width: ''
   - direction: out
     name: Out_Mag
-    type: std_logic_vector(fixFmtWidthFromString(OutMagFmt_g)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: fixFmtWidthFromString(OutMagFmt_g)-1 downto 0
   - direction: out
     name: Out_Ang
-    type: "std_logic_vector(fixFmtWidthFromString(OutAngFmt_g)-1 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: fixFmtWidthFromString(OutAngFmt_g)-1 downto 0
 desc_source: header
 external_uses:
 - library: work

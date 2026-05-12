@@ -54,7 +54,7 @@ top_ports:
     width: ''
   - direction: in
     name: rst_p
-    type: std_logic)
+    type: std_logic
     width: ''
 total_entities: 3
 desc_source: preserved

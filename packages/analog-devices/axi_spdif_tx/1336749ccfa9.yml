@@ -1,0 +1,210 @@
+name: axi_spdif_tx
+namespace: analog-devices
+version: 1336749ccfa9
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
+description: AXI4-Lite transmit engine with AXI4-Stream interface and memory interface
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - library/axi_spdif_tx/tx_package.vhd
+  - library/axi_spdif_tx/tx_encoder.vhd
+  - library/axi_spdif_tx/axi_spdif_tx.vhd
+tags:
+- amba
+- axi
+- bus
+- spdif
+- transmit
+- transmitter
+- tx
+role: top
+components:
+- tx_encoder
+top_ports:
+  axi_spdif_tx:
+  - direction: in
+    name: spdif_data_clk
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spdif_tx_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_aclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_aresetn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_awaddr
+    type: std_logic_vector
+    width: S_AXI_ADDRESS_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_awprot
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: s_axi_awvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_wdata
+    type: std_logic_vector
+    width: S_AXI_DATA_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_wstrb
+    type: std_logic_vector
+    width: (S_AXI_DATA_WIDTH/8)-1 downto 0
+  - direction: in
+    name: s_axi_wvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_bready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_araddr
+    type: std_logic_vector
+    width: S_AXI_ADDRESS_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_arprot
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: s_axi_arvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_rready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_arready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_rdata
+    type: std_logic_vector
+    width: S_AXI_DATA_WIDTH-1 downto 0
+  - direction: out
+    name: s_axi_rresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: s_axi_rvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_wready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_bresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: s_axi_bvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_awready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axis_aclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axis_aresetn
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axis_tready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axis_tdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: s_axis_tlast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axis_tvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dma_req_aclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dma_req_rstn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dma_req_davalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dma_req_datype
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: dma_req_daready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dma_req_drvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dma_req_drtype
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: dma_req_drlast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dma_req_drready
+    type: std_logic
+    width: ''
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo
+provides_packages:
+- tx_package

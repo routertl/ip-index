@@ -50,7 +50,51 @@ components:
 - spwxmit_fast
 - syncdff
 top_ports:
-  streamtest:
+  spwamba:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rxclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: txclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rstn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: apbi
+    type: apb_slv_in_type
+    width: ''
+  - direction: out
+    name: apbo
+    type: apb_slv_out_type
+    width: ''
+  - direction: in
+    name: ahbi
+    type: ahb_mst_in_type
+    width: ''
+  - direction: out
+    name: ahbo
+    type: ahb_mst_out_type
+    width: ''
+  - direction: in
+    name: tick_in
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tick_out
+    type: std_logic
+    width: ''
+  - direction: in
+    name: spw_di
+    type: std_logic
+    width: ''
   - direction: in
     name: spw_si
     type: std_logic
@@ -61,7 +105,92 @@ top_ports:
     width: ''
   - direction: out
     name: spw_so
-    type: std_logic )
+    type: std_logic
+    width: ''
+  streamtest:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rxclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: txclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: linkstart
+    type: std_logic
+    width: ''
+  - direction: in
+    name: autostart
+    type: std_logic
+    width: ''
+  - direction: in
+    name: linkdisable
+    type: std_logic
+    width: ''
+  - direction: in
+    name: senddata
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sendtick
+    type: std_logic
+    width: ''
+  - direction: in
+    name: txdivcnt
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: linkstarted
+    type: std_logic
+    width: ''
+  - direction: out
+    name: linkconnecting
+    type: std_logic
+    width: ''
+  - direction: out
+    name: linkrun
+    type: std_logic
+    width: ''
+  - direction: out
+    name: linkerror
+    type: std_logic
+    width: ''
+  - direction: out
+    name: gotdata
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dataerror
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tickerror
+    type: std_logic
+    width: ''
+  - direction: in
+    name: spw_di
+    type: std_logic
+    width: ''
+  - direction: in
+    name: spw_si
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spw_do
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spw_so
+    type: std_logic
     width: ''
 total_entities: 12
 desc_source: verdict

@@ -61,11 +61,92 @@ top_ports:
     name: clk
     type: STD_LOGIC
     width: ''
+  - direction: in
+    name: data_stable
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: key_ready
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: round_index_out
+    type: NIBBLE
+    width: ''
+  - direction: out
+    name: finished
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: round_type_sel
+    type: STD_LOGIC_VECTOR
+    width: 1 downto 0
   aes_fsm_encrypt:
   - direction: in
     name: clk
     type: STD_LOGIC
     width: ''
+  - direction: in
+    name: data_stable
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: key_ready
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: round_index_out
+    type: NIBBLE
+    width: ''
+  - direction: out
+    name: finished
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: round_type_sel
+    type: STD_LOGIC_VECTOR
+    width: 1 downto 0
+  avs_AES:
+  - direction: in
+    name: clk
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: reset
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: avs_s1_chipselect
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: avs_s1_writedata
+    type: STD_LOGIC_VECTOR
+    width: 31 downto 0
+  - direction: in
+    name: avs_s1_address
+    type: STD_LOGIC_VECTOR
+    width: 4 downto 0
+  - direction: in
+    name: avs_s1_write
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: avs_s1_read
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: avs_s1_irq
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: avs_s1_waitrequest
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: avs_s1_readdata
+    type: STD_LOGIC_VECTOR
+    width: 31 downto 0
 total_entities: 12
 desc_source: verdict
 health_tier: bronze

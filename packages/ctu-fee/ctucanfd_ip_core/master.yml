@@ -206,6 +206,10 @@ components:
 top_ports:
   can_top_ahb:
   - direction: in
+    name: hresetn
+    type: std_logic
+    width: ''
+  - direction: in
     name: hclk
     type: std_logic
     width: ''
@@ -261,8 +265,28 @@ top_ports:
     name: hrdata
     type: std_logic_vector
     width: 31 downto 0
+  - direction: out
+    name: res_n_out
+    type: std_logic
+    width: ''
+  - direction: out
+    name: can_tx
+    type: std_logic
+    width: ''
   - direction: in
     name: can_rx
+    type: std_logic
+    width: ''
+  - direction: in
+    name: timestamp
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: scan_enable
+    type: std_logic
+    width: ''
+  - direction: out
+    name: int
     type: std_logic
     width: ''
   can_top_apb:
@@ -299,6 +323,10 @@ top_ports:
     type: std_logic_vector
     width: 63 downto 0
   - direction: in
+    name: s_apb_paddr
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
     name: s_apb_penable
     type: std_logic
     width: ''
@@ -332,17 +360,42 @@ top_ports:
     width: 31 downto 0
   - direction: in
     name: s_apb_pwrite
-    type: "std_logic\n  )"
+    type: std_logic
+    width: ''
+  majority_decoder_3:
+  - direction: in
+    name: input
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: output
+    type: std_logic
     width: ''
   memory_bus_template:
+  - direction: in
+    name: signal clk_sys
+    type: std_logic
+    width: ''
   - direction: in
     name: signal res_n
     type: std_logic
     width: ''
+  - direction: in
+    name: signal address
+    type: std_logic_vector
+    width: address_width - 1 downto 0
+  - direction: in
+    name: signal w_data
+    type: std_logic_vector
+    width: data_width - 1 downto 0
   - direction: out
     name: signal r_data
     type: std_logic_vector
     width: data_width - 1 downto 0
+  - direction: in
+    name: signal cs
+    type: std_logic
+    width: ''
   - direction: in
     name: signal read
     type: std_logic
@@ -356,12 +409,36 @@ top_ports:
     type: std_logic_vector
     width: data_width / 8 - 1 downto 0
   - direction: in
+    name: signal lock_1
+    type: std_logic
+    width: ''
+  - direction: in
     name: signal lock_2
     type: std_logic
     width: ''
   shift_reg:
   - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: res_n
+    type: std_logic
+    width: ''
+  - direction: in
+    name: input
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enable
+    type: std_logic
+    width: ''
+  - direction: out
+    name: reg_stat
+    type: std_logic_vector
+    width: G_WIDTH - 1 downto 0
+  - direction: out
+    name: reg_output
     type: std_logic
     width: ''
 total_entities: 81

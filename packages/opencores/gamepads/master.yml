@@ -58,6 +58,10 @@ components:
 top_ports:
   gcpad_basic:
   - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: reset_i
     type: std_logic
     width: ''
@@ -67,6 +71,14 @@ top_ports:
     width: ''
   - direction: out
     name: pad_avail_o
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: pad_data_io
+    type: std_logic
+    width: ''
+  - direction: out
+    name: but_a_o
     type: std_logic
     width: ''
   - direction: out
@@ -135,7 +147,12 @@ top_ports:
     width: 7 downto 0
   - direction: out
     name: ana_r_o
-    type: "std_logic_vector(7 downto 0)\n  )"
+    type: std_logic_vector
+    width: 7 downto 0
+  gcpad_full:
+  - direction: in
+    name: clk_i
+    type: std_logic
     width: ''
   - direction: in
     name: reset_i
@@ -143,91 +160,6 @@ top_ports:
     width: ''
   - direction: in
     name: pad_request_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: pad_avail_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rx_timeout_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: tx_start_o
-    type: boolean
-    width: ''
-  - direction: in
-    name: tx_finished_i
-    type: boolean
-    width: ''
-  - direction: out
-    name: rx_en_o
-    type: boolean
-    width: ''
-  - direction: in
-    name: rx_done_i
-    type: boolean
-    width: ''
-  - direction: in
-    name: rx_data_ok_i
-    type: "boolean\n    )"
-    width: ''
-  - direction: in
-    name: reset_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: pad_data_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: tx_start_i
-    type: boolean
-    width: ''
-  - direction: out
-    name: tx_finished_o
-    type: boolean
-    width: ''
-  - direction: in
-    name: tx_size_i
-    type: std_logic_vector
-    width: 1 downto 0
-  - direction: in
-    name: tx_command_i
-    type: "std_logic_vector(23 downto 0)\n    )"
-    width: ''
-  - direction: in
-    name: reset_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: rx_en_i
-    type: boolean
-    width: ''
-  - direction: out
-    name: rx_done_o
-    type: boolean
-    width: ''
-  - direction: out
-    name: rx_data_ok_o
-    type: boolean
-    width: ''
-  - direction: in
-    name: rx_size_i
-    type: std_logic_vector
-    width: 3 downto 0
-  - direction: in
-    name: pad_data_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rx_data_o
-    type: "buttons_t\n    )"
-    width: ''
-  gcpad_full:
-  - direction: in
-    name: reset_i
     type: std_logic
     width: ''
   - direction: out
@@ -254,93 +186,9 @@ top_ports:
     name: rx_data_o
     type: std_logic_vector
     width: 63 downto 0
-  - direction: in
-    name: reset_i
+  - direction: inout
+    name: pad_data_io
     type: std_logic
-    width: ''
-  - direction: in
-    name: pad_request_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: pad_avail_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rx_timeout_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: tx_start_o
-    type: boolean
-    width: ''
-  - direction: in
-    name: tx_finished_i
-    type: boolean
-    width: ''
-  - direction: out
-    name: rx_en_o
-    type: boolean
-    width: ''
-  - direction: in
-    name: rx_done_i
-    type: boolean
-    width: ''
-  - direction: in
-    name: rx_data_ok_i
-    type: "boolean\n    )"
-    width: ''
-  - direction: in
-    name: reset_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: pad_data_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: tx_start_i
-    type: boolean
-    width: ''
-  - direction: out
-    name: tx_finished_o
-    type: boolean
-    width: ''
-  - direction: in
-    name: tx_size_i
-    type: std_logic_vector
-    width: 1 downto 0
-  - direction: in
-    name: tx_command_i
-    type: "std_logic_vector(23 downto 0)\n    )"
-    width: ''
-  - direction: in
-    name: reset_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: rx_en_i
-    type: boolean
-    width: ''
-  - direction: out
-    name: rx_done_o
-    type: boolean
-    width: ''
-  - direction: out
-    name: rx_data_ok_o
-    type: boolean
-    width: ''
-  - direction: in
-    name: rx_size_i
-    type: std_logic_vector
-    width: 3 downto 0
-  - direction: in
-    name: pad_data_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rx_data_o
-    type: buttons_t
     width: ''
   gcpad_mod:
   - direction: in
@@ -357,76 +205,12 @@ top_ports:
     width: 63 downto 0
   snespad:
   - direction: in
-    name: reset_i
+    name: clk_i
     type: std_logic
-    width: ''
-  - direction: out
-    name: pad_latch_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: pad_data_i
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_b_o
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_x_o
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_y_o
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_start_o
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_sel_o
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_tl_o
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_tr_o
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_up_o
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_down_o
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_left_o
-    type: std_logic_vector
-    width: num_pads_g-1 downto 0
-  - direction: out
-    name: but_right_o
-    type: "std_logic_vector(num_pads_g-1 downto 0)\n  )"
     width: ''
   - direction: in
     name: reset_i
     type: std_logic
-    width: ''
-  - direction: out
-    name: clk_en_o
-    type: boolean
-    width: ''
-  - direction: out
-    name: shift_buttons_o
-    type: boolean
-    width: ''
-  - direction: out
-    name: save_buttons_o
-    type: boolean
     width: ''
   - direction: out
     name: pad_clk_o
@@ -434,76 +218,60 @@ top_ports:
     width: ''
   - direction: out
     name: pad_latch_o
-    type: "std_logic\n    )"
-    width: ''
-  - direction: in
-    name: reset_i
     type: std_logic
-    width: ''
-  - direction: in
-    name: clk_en_i
-    type: boolean
-    width: ''
-  - direction: in
-    name: shift_buttons_i
-    type: boolean
-    width: ''
-  - direction: in
-    name: save_buttons_i
-    type: boolean
     width: ''
   - direction: in
     name: pad_data_i
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_a_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_b_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_x_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_y_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_start_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_sel_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_tl_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_tr_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_up_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_down_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_left_o
-    type: std_logic
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
   - direction: out
     name: but_right_o
-    type: "std_logic\n    )"
-    width: ''
+    type: std_logic_vector
+    width: num_pads_g-1 downto 0
 total_entities: 10
 desc_source: verdict
 health_tier: bronze

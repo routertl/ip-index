@@ -34,7 +34,15 @@ components:
 top_ports:
   en_cl_fix_resize:
   - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_valid
     type: std_logic
     width: ''
   - direction: in
@@ -43,7 +51,11 @@ top_ports:
     width: meta_width_g-1 downto 0
   - direction: in
     name: in_data
-    type: std_logic_vector(cl_fix_width(in_fmt_g)-1 downto 0)
+    type: std_logic_vector
+    width: cl_fix_width(in_fmt_g)-1 downto 0
+  - direction: out
+    name: out_valid
+    type: std_logic
     width: ''
   - direction: out
     name: out_meta
@@ -51,8 +63,8 @@ top_ports:
     width: meta_width_g-1 downto 0
   - direction: out
     name: out_data
-    type: "std_logic_vector(cl_fix_width(out_fmt_g)-1 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: cl_fix_width(out_fmt_g)-1 downto 0
 desc_source: preserved
 provides_packages:
 - en_cl_fix_pkg

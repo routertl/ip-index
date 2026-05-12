@@ -53,4 +53,14 @@ components:
 - axi_to_mem
 - axi_xbar
 - axi_xbar_unmuxed
+top_ports:
+  axi_lite_join_intf:
+  - direction: Slave
+    name: in
+    type: AXI_LITE.Slave
+    width: ''
+  - direction: Master
+    name: out
+    type: AXI_LITE.Master
+    width: ''
 desc_source: preserved

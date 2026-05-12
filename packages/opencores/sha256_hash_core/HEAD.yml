@@ -51,6 +51,50 @@ components:
 - sha256_regs
 top_ports:
   gv_sha256:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ce_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: di_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: bytes_i
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: start_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: end_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: di_req_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: di_wr_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: error_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: do_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: H0_o
+    type: std_logic_vector
+    width: 31 downto 0
   - direction: out
     name: H1_o
     type: std_logic_vector

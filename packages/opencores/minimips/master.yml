@@ -72,6 +72,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: ram_req
+    type: std_logic
+    width: ''
+  - direction: out
     name: ram_adr
     type: bus32
     width: ''
@@ -85,6 +89,10 @@ top_ports:
     width: ''
   - direction: in
     name: ram_ack
+    type: std_logic
+    width: ''
+  - direction: in
+    name: it_mat
     type: std_logic
     width: ''
   ram:
@@ -106,7 +114,7 @@ top_ports:
     width: ''
   - direction: out
     name: ready
-    type: "std_logic\n   )"
+    type: std_logic
     width: ''
   rom:
   - direction: in
@@ -127,7 +135,7 @@ top_ports:
     width: ''
   - direction: in
     name: fname
-    type: "string\n   )"
+    type: string
     width: ''
 total_entities: 14
 desc_source: preserved

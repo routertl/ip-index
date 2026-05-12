@@ -95,7 +95,7 @@ top_ports:
     width: ''
   - direction: out
     name: wb_ack_o
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
 total_entities: 4
 desc_source: curator

@@ -59,7 +59,15 @@ components:
 top_ports:
   olo_intf_i2c_master:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Cmd_Ready
     type: std_logic
     width: ''
   - direction: in
@@ -83,6 +91,10 @@ top_ports:
     type: std_logic_vector
     width: ClkDivBits_g - 1 downto 0
   - direction: out
+    name: Resp_Valid
+    type: std_logic
+    width: ''
+  - direction: out
     name: Resp_Command
     type: std_logic_vector
     width: 2 downto 0
@@ -103,11 +115,23 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: Status_BusBusy
+    type: std_logic
+    width: ''
+  - direction: out
     name: Status_CmdTo
     type: std_logic
     width: ''
   - direction: inout
+    name: I2c_Scl
+    type: std_logic
+    width: ''
+  - direction: inout
     name: I2c_Sda
+    type: std_logic
+    width: ''
+  - direction: in
+    name: I2c_Scl_i
     type: std_logic
     width: ''
   - direction: out
@@ -128,7 +152,7 @@ top_ports:
     width: ''
   - direction: out
     name: I2c_Sda_t
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
 desc_source: header
 external_uses:

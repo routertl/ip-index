@@ -98,55 +98,7 @@ top_ports:
     width: ''
   - direction: out
     name: wr_o
-    type: "std_logic\n   )"
-    width: ''
-  - direction: in
-    name: d_i
-    type: std_logic_vector
-    width: 7 DOWNTO 0
-  - direction: in
-    name: irq_n_i
     type: std_logic
-    width: ''
-  - direction: in
-    name: nmi_n_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: rdy_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: rst_rst_n_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: so_n_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: a_o
-    type: std_logic_vector
-    width: 15 DOWNTO 0
-  - direction: out
-    name: d_o
-    type: std_logic_vector
-    width: 7 DOWNTO 0
-  - direction: out
-    name: rd_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: sync_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wr_n_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wr_o
-    type: "std_logic \n   )"
     width: ''
 total_entities: 7
 desc_source: verdict

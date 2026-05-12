@@ -200,6 +200,14 @@ top_ports:
     name: bus
     type: wire
     width: ''
+  - direction: slv
+    name: s_apb
+    type: taxi_apb_if.slv
+    width: ''
+  - direction: mst
+    name: m_apb
+    type: taxi_apb_if.mst
+    width: ''
   taxi_apb_axil_adapter:
   - direction: in
     name: logic
@@ -213,6 +221,18 @@ top_ports:
     name: bus
     type: wire
     width: ''
+  - direction: slv
+    name: s_apb
+    type: taxi_apb_if.slv
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
+    width: ''
   taxi_apb_dp_ram:
   - direction: out
     name: parameter
@@ -221,6 +241,14 @@ top_ports:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: slv
+    name: s_apb_a
+    type: taxi_apb_if.slv
+    width: ''
+  - direction: slv
+    name: s_apb_b
+    type: taxi_apb_if.slv
     width: ''
   taxi_apb_interconnect:
   - direction: in
@@ -231,20 +259,68 @@ top_ports:
     name: dummy
     type: wire
     width: '[31:0]'
+  - direction: slv
+    name: s_apb
+    type: taxi_apb_if.slv
+    width: ''
+  - direction: mst
+    name: m_apb
+    type: taxi_apb_if.mst
+    width: ''
   taxi_apb_tie:
   - direction: out
     name: ADDR_W
     type: wire
+    width: ''
+  - direction: slv
+    name: s_apb
+    type: taxi_apb_if.slv
+    width: ''
+  - direction: mst
+    name: m_apb
+    type: taxi_apb_if.mst
     width: ''
   taxi_axi_adapter:
   - direction: in
     name: logic
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axi_wr
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd
+    type: taxi_axi_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
+    width: ''
   taxi_axi_axil_adapter:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_slv
+    name: s_axi_wr
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd
+    type: taxi_axi_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
     width: ''
   taxi_axi_cdma:
   - direction: in
@@ -255,20 +331,100 @@ top_ports:
     name: datapath
     type: wire
     width: ''
+  - direction: req_snk
+    name: desc_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: desc_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
+    width: ''
   taxi_axi_crossbar:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_slv
+    name: s_axi_wr
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd
+    type: taxi_axi_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
     width: ''
   taxi_axi_crossbar_1s:
   - direction: in
     name: logic
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axi_wr
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd
+    type: taxi_axi_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
+    width: ''
   taxi_axi_dma:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: req_snk
+    name: rd_desc_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: rd_desc_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: req_snk
+    name: wr_desc_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: wr_desc_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: src
+    name: m_axis_rd_data
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: s_axis_wr_data
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
     width: ''
   taxi_axi_dp_ram:
   - direction: out
@@ -279,20 +435,84 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axi_wr_a
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd_a
+    type: taxi_axi_if.rd_slv
+    width: ''
+  - direction: wr_slv
+    name: s_axi_wr_b
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd_b
+    type: taxi_axi_if.rd_slv
+    width: ''
   taxi_axi_fifo:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_slv
+    name: s_axi_wr
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd
+    type: taxi_axi_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
     width: ''
   taxi_axi_interconnect:
   - direction: in
     name: logic
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axi_wr
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd
+    type: taxi_axi_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
+    width: ''
   taxi_axi_interconnect_1s:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_slv
+    name: s_axi_wr
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd
+    type: taxi_axi_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
     width: ''
   taxi_axi_ram:
   - direction: out
@@ -303,15 +523,72 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axi_wr
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd
+    type: taxi_axi_if.rd_slv
+    width: ''
   taxi_axi_register:
   - direction: in
     name: logic
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axi_wr
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd
+    type: taxi_axi_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
+    width: ''
+  taxi_axi_tie:
+  - direction: wr_slv
+    name: s_axi_wr
+    type: taxi_axi_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axi_rd
+    type: taxi_axi_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
+    width: ''
   taxi_axil_adapter:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
     width: ''
   taxi_axil_apb_adapter:
   - direction: in
@@ -326,15 +603,59 @@ top_ports:
     name: bus
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
+  - direction: mst
+    name: m_apb
+    type: taxi_apb_if.mst
+    width: ''
   taxi_axil_axi_adapter:
   - direction: in
     name: logic
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
+    width: ''
   taxi_axil_crossbar:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
     width: ''
   taxi_axil_dp_ram:
   - direction: out
@@ -345,10 +666,42 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axil_wr_a
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd_a
+    type: taxi_axil_if.rd_slv
+    width: ''
+  - direction: wr_slv
+    name: s_axil_wr_b
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd_b
+    type: taxi_axil_if.rd_slv
+    width: ''
   taxi_axil_interconnect:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
     width: ''
   taxi_axil_ram:
   - direction: out
@@ -359,10 +712,51 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
   taxi_axil_register:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
+    width: ''
+  taxi_axil_tie:
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
     width: ''
 total_entities: 73
 desc_source: curator

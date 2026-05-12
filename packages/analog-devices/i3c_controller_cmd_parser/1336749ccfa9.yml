@@ -1,0 +1,50 @@
+name: i3c_controller_cmd_parser
+namespace: analog-devices
+version: 1336749ccfa9
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
+description: Parse commands. When the first command indicates a pair command (e.g.
+  CCC), await next command to complete request (e.g. add CCC ID to parsed CCC command).
+  If it is a simple command (e.g. private transfer), their is no pair command.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
+  - library/i3c_controller/i3c_controller_host_interface/i3c_controller_cmd_parser.v
+tags:
+- cmd
+- controller
+- i3c
+- parser
+role: component
+desc_source: header
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

@@ -58,7 +58,15 @@ components:
 top_ports:
   olo_intf_spi_master:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Cmd_Valid
     type: std_logic
     width: ''
   - direction: out
@@ -67,20 +75,28 @@ top_ports:
     width: ''
   - direction: in
     name: Cmd_Slave
-    type: std_logic_vector(log2ceil(SlaveCnt_g) - 1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: log2ceil(SlaveCnt_g) - 1 downto 0
   - direction: in
     name: Cmd_Data
     type: std_logic_vector
     width: MaxTransWidth_g - 1 downto 0
   - direction: in
     name: Cmd_TransWidth
-    type: std_logic_vector(log2ceil(MaxTransWidth_g+1)-1 downto 0)
+    type: std_logic_vector
+    width: log2ceil(MaxTransWidth_g+1)-1 downto 0
+  - direction: out
+    name: Resp_Valid
+    type: std_logic
     width: ''
   - direction: out
     name: Resp_Data
     type: std_logic_vector
     width: MaxTransWidth_g - 1 downto 0
+  - direction: out
+    name: Spi_Sclk
+    type: std_logic
+    width: ''
   - direction: out
     name: Spi_Mosi
     type: std_logic
@@ -91,25 +107,8 @@ top_ports:
     width: ''
   - direction: out
     name: Spi_Cs_n
-    type: "std_logic_vector(SlaveCnt_g - 1 downto 0)\n    )"
-    width: ''
-  - direction: out
-    name: variable AfterShift
     type: std_logic_vector
-    width: MaxTransWidth_g-1 downto 0
-  - direction: in
-    name: signal InputBit
-    type: std_logic
-    width: ''
-  - direction: out
-    name: variable OutputBit
-    type: std_logic
-    width: ''
-  - direction: in
-    name: TransWidth
-    type: "integer range 0 to MaxTransWidth_g) is\n    begin\n        if LsbFirst_g\
-      \ then\n            OutputBit"
-    width: ''
+    width: SlaveCnt_g - 1 downto 0
 desc_source: header
 external_uses:
 - library: work

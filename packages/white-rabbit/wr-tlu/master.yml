@@ -37,16 +37,40 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: rst_ref_n_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_sys_n_i
     type: std_logic
     width: ''
   - direction: in
     name: triggers_i
     type: t_trigger_array
     width: g_num_triggers-1 downto 0
+  - direction: in
+    name: tm_tai_cyc_i
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: ctrl_slave_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: ctrl_slave_o
+    type: t_wishbone_slave_out
+    width: ''
   - direction: out
     name: irq_master_o
     type: t_wishbone_master_out
+    width: ''
+  - direction: in
+    name: irq_master_i
+    type: t_wishbone_master_in
     width: ''
 total_entities: 2
 desc_source: curator

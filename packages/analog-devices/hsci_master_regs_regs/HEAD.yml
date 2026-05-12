@@ -1,8 +1,8 @@
 name: hsci_master_regs_regs
 namespace: analog-devices
 version: HEAD
-commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
-published_at: '2026-05-11T12:02:04+03:00'
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
 description: Register bank for the HSCI master controller, exposing configuration
   and status fields over the processor interface.
 license: ADIBSD OR GPL-2.0-only
@@ -12,7 +12,7 @@ source:
   url: https://github.com/analogdevicesinc/hdl.git
   tag: main
   ip_yml_path: .
-  resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 routertl_compat:
   language: systemverilog
   library: work

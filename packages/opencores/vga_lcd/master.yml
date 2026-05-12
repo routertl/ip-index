@@ -107,7 +107,87 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
-    name: rst
+    name: pclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ctrl_Ven
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ctrl_HSyncL
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Thsync
+    type: unsigned
+    width: 7 downto 0
+  - direction: in
+    name: Thgdel
+    type: unsigned
+    width: 7 downto 0
+  - direction: in
+    name: Thgate
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: Thlen
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: ctrl_VSyncL
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Tvsync
+    type: unsigned
+    width: 7 downto 0
+  - direction: in
+    name: Tvgdel
+    type: unsigned
+    width: 7 downto 0
+  - direction: in
+    name: Tvgate
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: Tvlen
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: ctrl_CSyncL
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ctrl_BlankL
+    type: std_logic
+    width: ''
+  - direction: out
+    name: eoh
+    type: std_logic
+    width: ''
+  - direction: out
+    name: eov
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Gate
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Hsync
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Vsync
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Csync
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Blank
     type: std_logic
     width: ''
   Tgen:
@@ -117,6 +197,82 @@ top_ports:
     width: ''
   - direction: in
     name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: HSyncL
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Thsync
+    type: unsigned
+    width: 7 downto 0
+  - direction: in
+    name: Thgdel
+    type: unsigned
+    width: 7 downto 0
+  - direction: in
+    name: Thgate
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: Thlen
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: VSyncL
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Tvsync
+    type: unsigned
+    width: 7 downto 0
+  - direction: in
+    name: Tvgdel
+    type: unsigned
+    width: 7 downto 0
+  - direction: in
+    name: Tvgate
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: Tvlen
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: CSyncL
+    type: std_logic
+    width: ''
+  - direction: in
+    name: BlankL
+    type: std_logic
+    width: ''
+  - direction: out
+    name: eol
+    type: std_logic
+    width: ''
+  - direction: out
+    name: eof
+    type: std_logic
+    width: ''
+  - direction: out
+    name: gate
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Hsync
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Vsync
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Csync
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Blank
     type: std_logic
     width: ''
   generic_dpram:
@@ -355,128 +511,168 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
-    name: rst_i
+    name: RST_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: NRESET
     type: std_logic
     width: ''
   - direction: out
-    name: cyc_o
+    name: INTA_O
     type: std_logic
     width: ''
-  - direction: out
-    name: stb_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: we_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: adr_o
+  - direction: in
+    name: ADR_I
+    type: unsigned
+    width: 10 downto 2
+  - direction: in
+    name: SDAT_I
     type: std_logic_vector
     width: 31 downto 0
   - direction: out
-    name: dat_o
+    name: SDAT_O
     type: std_logic_vector
     width: 31 downto 0
   - direction: in
-    name: dat_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: sel_o
+    name: SEL_I
     type: std_logic_vector
     width: 3 downto 0
   - direction: in
-    name: ack_i
+    name: WE_I
     type: std_logic
     width: ''
   - direction: in
-    name: err_i
-    type: "std_logic\n\t)"
+    name: VGA_STB_I
+    type: std_logic
     width: ''
   - direction: in
-    name: adr_i
+    name: CLUT_STB_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: CYC_I
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ACK_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ERR_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ADR_O
     type: unsigned
-    width: 15 downto 0
+    width: 31 downto 2
   - direction: in
-    name: cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: stb_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: dat_o
+    name: MDAT_I
     type: std_logic_vector
     width: 31 downto 0
   - direction: out
-    name: ack_o
-    type: "std_logic\n\t)"
-    width: ''
-  - direction: in
-    name: rst_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: cyc_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: stb_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: we_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: adr_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: dat_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: dat_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: sel_o
+    name: SEL_O
     type: std_logic_vector
     width: 3 downto 0
-  - direction: in
-    name: ack_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: err_i
-    type: "std_logic\n\t)"
-    width: ''
-  - direction: in
-    name: adr_i
-    type: unsigned
-    width: 15 downto 0
-  - direction: in
-    name: cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: stb_i
+  - direction: out
+    name: WE_O
     type: std_logic
     width: ''
   - direction: out
-    name: dat_o
+    name: STB_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CYC_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CAB_O
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ACK_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ERR_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: PCLK
+    type: std_logic
+    width: ''
+  - direction: out
+    name: HSYNC
+    type: std_logic
+    width: ''
+  - direction: out
+    name: VSYNC
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CSYNC
+    type: std_logic
+    width: ''
+  - direction: out
+    name: BLANK
+    type: std_logic
+    width: ''
+  - direction: out
+    name: R
     type: std_logic_vector
-    width: 31 downto 0
+    width: 7 downto 0
   - direction: out
-    name: ack_o
-    type: std_logic
-    width: ''
+    name: G
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: B
+    type: std_logic_vector
+    width: 7 downto 0
   ud_cnt:
   - direction: in
     name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: nReset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cnt_en
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ud
+    type: std_logic
+    width: ''
+  - direction: in
+    name: nld
+    type: std_logic
+    width: ''
+  - direction: in
+    name: D
+    type: unsigned
+    width: SIZE -1 downto 0
+  - direction: out
+    name: Q
+    type: unsigned
+    width: SIZE -1 downto 0
+  - direction: in
+    name: resD
+    type: unsigned
+    width: SIZE -1 downto 0
+  - direction: in
+    name: rci
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rco
     type: std_logic
     width: ''
   vga_enh_top:
@@ -586,250 +782,250 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
-    name: rst_i
+    name: RST_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: NRESET
     type: std_logic
     width: ''
   - direction: out
-    name: cyc_o
+    name: INTA_O
     type: std_logic
     width: ''
-  - direction: out
-    name: stb_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: we_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: adr_o
+  - direction: in
+    name: ADR_I
+    type: unsigned
+    width: 10 downto 2
+  - direction: in
+    name: SDAT_I
     type: std_logic_vector
     width: 31 downto 0
   - direction: out
-    name: dat_o
+    name: SDAT_O
     type: std_logic_vector
     width: 31 downto 0
   - direction: in
-    name: dat_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: sel_o
+    name: SEL_I
     type: std_logic_vector
     width: 3 downto 0
   - direction: in
-    name: ack_i
+    name: WE_I
     type: std_logic
     width: ''
   - direction: in
-    name: err_i
-    type: "std_logic\n\t)"
+    name: VGA_STB_I
+    type: std_logic
     width: ''
   - direction: in
-    name: adr_i
+    name: CLUT_STB_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: CYC_I
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ACK_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ERR_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ADR_O
     type: unsigned
-    width: 15 downto 0
+    width: 31 downto 2
   - direction: in
-    name: cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: stb_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: dat_o
+    name: MDAT_I
     type: std_logic_vector
     width: 31 downto 0
   - direction: out
-    name: ack_o
-    type: "std_logic\n\t)"
-    width: ''
-  - direction: in
-    name: rst_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: cyc_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: stb_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: we_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: adr_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: dat_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: dat_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: sel_o
+    name: SEL_O
     type: std_logic_vector
     width: 3 downto 0
-  - direction: in
-    name: ack_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: err_i
-    type: "std_logic\n\t)"
-    width: ''
-  - direction: in
-    name: adr_i
-    type: unsigned
-    width: 15 downto 0
-  - direction: in
-    name: cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: stb_i
+  - direction: out
+    name: WE_O
     type: std_logic
     width: ''
   - direction: out
-    name: dat_o
+    name: STB_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CYC_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CAB_O
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ACK_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ERR_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: PCLK
+    type: std_logic
+    width: ''
+  - direction: out
+    name: HSYNC
+    type: std_logic
+    width: ''
+  - direction: out
+    name: VSYNC
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CSYNC
+    type: std_logic
+    width: ''
+  - direction: out
+    name: BLANK
+    type: std_logic
+    width: ''
+  - direction: out
+    name: R
     type: std_logic_vector
-    width: 31 downto 0
+    width: 7 downto 0
   - direction: out
-    name: ack_o
-    type: std_logic
-    width: ''
+    name: G
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: B
+    type: std_logic_vector
+    width: 7 downto 0
   wb_host:
   - direction: in
     name: CLK_I
     type: std_logic
     width: ''
   - direction: in
-    name: rst_i
+    name: RST_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: NRESET
     type: std_logic
     width: ''
   - direction: out
-    name: cyc_o
+    name: INTA_O
     type: std_logic
     width: ''
-  - direction: out
-    name: stb_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: we_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: adr_o
+  - direction: in
+    name: ADR_I
+    type: unsigned
+    width: 10 downto 2
+  - direction: in
+    name: SDAT_I
     type: std_logic_vector
     width: 31 downto 0
   - direction: out
-    name: dat_o
+    name: SDAT_O
     type: std_logic_vector
     width: 31 downto 0
   - direction: in
-    name: dat_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: sel_o
+    name: SEL_I
     type: std_logic_vector
     width: 3 downto 0
   - direction: in
-    name: ack_i
+    name: WE_I
     type: std_logic
     width: ''
   - direction: in
-    name: err_i
-    type: "std_logic\n\t)"
+    name: VGA_STB_I
+    type: std_logic
     width: ''
   - direction: in
-    name: adr_i
+    name: CLUT_STB_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: CYC_I
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ACK_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ERR_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ADR_O
     type: unsigned
-    width: 15 downto 0
+    width: 31 downto 2
   - direction: in
-    name: cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: stb_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: dat_o
+    name: MDAT_I
     type: std_logic_vector
     width: 31 downto 0
   - direction: out
-    name: ack_o
-    type: "std_logic\n\t)"
-    width: ''
-  - direction: in
-    name: rst_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: cyc_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: stb_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: we_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: adr_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: dat_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: dat_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: sel_o
+    name: SEL_O
     type: std_logic_vector
     width: 3 downto 0
-  - direction: in
-    name: ack_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: err_i
-    type: "std_logic\n\t)"
-    width: ''
-  - direction: in
-    name: adr_i
-    type: unsigned
-    width: 15 downto 0
-  - direction: in
-    name: cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: stb_i
+  - direction: out
+    name: WE_O
     type: std_logic
     width: ''
   - direction: out
-    name: dat_o
+    name: STB_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CYC_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CAB_O
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ACK_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ERR_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: PCLK
+    type: std_logic
+    width: ''
+  - direction: out
+    name: HSYNC
+    type: std_logic
+    width: ''
+  - direction: out
+    name: VSYNC
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CSYNC
+    type: std_logic
+    width: ''
+  - direction: out
+    name: BLANK
+    type: std_logic
+    width: ''
+  - direction: out
+    name: R
     type: std_logic_vector
-    width: 31 downto 0
+    width: 7 downto 0
   - direction: out
-    name: ack_o
-    type: std_logic
-    width: ''
+    name: G
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: B
+    type: std_logic_vector
+    width: 7 downto 0
   xilinx_ram_dp:
   - direction: in
     name: rclk

@@ -51,7 +51,19 @@ components:
 top_ports:
   olo_base_arb_wrr:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Weights
+    type: std_logic_vector
+    width: WeightWidth_g*GrantWidth_g-1 downto 0
+  - direction: in
+    name: In_Valid
     type: std_logic
     width: ''
   - direction: in
@@ -59,9 +71,13 @@ top_ports:
     type: std_logic_vector
     width: GrantWidth_g-1 downto 0
   - direction: out
-    name: Out_Grant
-    type: "std_logic_vector(GrantWidth_g-1 downto 0)\n    )"
+    name: Out_Valid
+    type: std_logic
     width: ''
+  - direction: out
+    name: Out_Grant
+    type: std_logic_vector
+    width: GrantWidth_g-1 downto 0
 desc_source: header
 external_uses:
 - library: work

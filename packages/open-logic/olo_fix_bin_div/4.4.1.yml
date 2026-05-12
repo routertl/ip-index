@@ -51,7 +51,15 @@ components:
 top_ports:
   olo_fix_bin_div:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: In_Valid
     type: std_logic
     width: ''
   - direction: out
@@ -60,16 +68,20 @@ top_ports:
     width: ''
   - direction: in
     name: In_Num
-    type: std_logic_vector(fixFmtWidthFromString(NumFmt_g)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: fixFmtWidthFromString(NumFmt_g)-1 downto 0
   - direction: in
     name: In_Denom
-    type: std_logic_vector(fixFmtWidthFromString(DenomFmt_g)-1 downto 0)
+    type: std_logic_vector
+    width: fixFmtWidthFromString(DenomFmt_g)-1 downto 0
+  - direction: out
+    name: Out_Valid
+    type: std_logic
     width: ''
   - direction: out
     name: Out_Quot
-    type: "std_logic_vector(fixFmtWidthFromString(OutFmt_g)-1 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: fixFmtWidthFromString(OutFmt_g)-1 downto 0
 desc_source: header
 external_uses:
 - library: work

@@ -141,7 +141,7 @@ top_ports:
     width: ''
   - direction: in
     name: master_i
-    type: "t_wishbone_master_in                                             \n)"
+    type: t_wishbone_master_in
     width: ''
   eca_bitonic:
   - direction: in
@@ -162,8 +162,8 @@ top_ports:
     width: 2**g_log_size-1 downto 0, g_wide-1 downto 0
   - direction: out
     name: nums_o
-    type: t_eca_matrix(2**g_log_size-1 downto 0, g_wide-1 downto 0))
-    width: ''
+    type: t_eca_matrix
+    width: 2**g_log_size-1 downto 0, g_wide-1 downto 0
   eca_compact:
   - direction: in
     name: clk_i
@@ -191,8 +191,8 @@ top_ports:
     width: g_size-1 downto 0, g_wide-1 downto 0
   - direction: out
     name: data_o
-    type: t_eca_matrix(g_size-1 downto 0, g_wide-1 downto 0))
-    width: ''
+    type: t_eca_matrix
+    width: g_size-1 downto 0, g_wide-1 downto 0
   eca_fifo:
   - direction: in
     name: clk_i
@@ -226,6 +226,10 @@ top_ports:
     name: fresh_o
     type: std_logic
     width: ''
+  - direction: out
+    name: data_o
+    type: t_eca_matrix
+    width: g_rows-1 downto 0, g_cols-1 downto 0
   eca_queue:
   - direction: in
     name: a_clk_i
@@ -257,7 +261,7 @@ top_ports:
     width: ''
   - direction: out
     name: q_slave_o
-    type: t_wishbone_slave_out)
+    type: t_wishbone_slave_out
     width: ''
   eca_scubus_channel:
   - direction: in
@@ -319,7 +323,7 @@ top_ports:
     width: ''
   - direction: in
     name: a_stall_i
-    type: std_logic)
+    type: std_logic
     width: ''
   eca_wb_event:
   - direction: in
@@ -356,6 +360,10 @@ top_ports:
     width: ''
   wr_eca:
   - direction: in
+    name: c_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: c_rst_n_i
     type: std_logic
     width: ''
@@ -368,9 +376,17 @@ top_ports:
     type: t_wishbone_slave_out
     width: ''
   - direction: in
+    name: a_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: a_rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: a_tai_i
+    type: std_logic_vector
+    width: 39 downto 0
   - direction: in
     name: a_cycles_i
     type: std_logic_vector
@@ -379,10 +395,18 @@ top_ports:
     name: a_time_o
     type: t_time
     width: ''
+  - direction: in
+    name: a_stream_i
+    type: t_stream_array
+    width: g_num_streams-1 downto 0
   - direction: out
     name: a_stall_o
     type: std_logic_vector
     width: g_num_streams-1 downto 0
+  - direction: in
+    name: a_stall_i
+    type: std_logic_vector
+    width: g_channel_types'range
   - direction: out
     name: a_channel_o
     type: t_channel_array
@@ -391,6 +415,10 @@ top_ports:
     name: a_io_o
     type: t_gpio_array
     width: g_num_ios-1 downto 0
+  - direction: in
+    name: i_clk_i
+    type: std_logic
+    width: ''
   - direction: in
     name: i_rst_n_i
     type: std_logic
@@ -401,7 +429,7 @@ top_ports:
     width: ''
   - direction: out
     name: i_master_o
-    type: t_wishbone_master_out)
+    type: t_wishbone_master_out
     width: ''
 total_entities: 32
 desc_source: curator

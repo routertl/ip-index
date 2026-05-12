@@ -59,7 +59,15 @@ components:
 top_ports:
   olo_base_cam:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Rd_Valid
     type: std_logic
     width: ''
   - direction: out
@@ -70,6 +78,10 @@ top_ports:
     name: Rd_Content
     type: std_logic_vector
     width: ContentWidth_g-1 downto 0
+  - direction: in
+    name: Wr_Valid
+    type: std_logic
+    width: ''
   - direction: out
     name: Wr_Ready
     type: std_logic
@@ -80,8 +92,8 @@ top_ports:
     width: ContentWidth_g-1 downto 0
   - direction: in
     name: Wr_Addr
-    type: std_logic_vector(log2ceil(Addresses_g)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: log2ceil(Addresses_g)-1 downto 0
   - direction: in
     name: Wr_Write
     type: std_logic
@@ -95,17 +107,25 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: Match_Valid
+    type: std_logic
+    width: ''
+  - direction: out
     name: Match_Match
     type: std_logic_vector
     width: Addresses_g-1 downto 0
+  - direction: out
+    name: Addr_Valid
+    type: std_logic
+    width: ''
   - direction: out
     name: Addr_Found
     type: std_logic
     width: ''
   - direction: out
     name: Addr_Addr
-    type: "std_logic_vector(log2ceil(Addresses_g)-1 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: log2ceil(Addresses_g)-1 downto 0
 desc_source: header
 external_uses:
 - library: work

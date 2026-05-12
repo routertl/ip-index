@@ -1,8 +1,8 @@
 name: axi_spdif_rx
 namespace: analog-devices
 version: HEAD
-commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
-published_at: '2026-05-11T12:02:04+03:00'
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
 description: AXI4-Lite receive engine with AXI4-Stream interface and memory interface
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
@@ -11,7 +11,7 @@ source:
   url: https://github.com/analogdevicesinc/hdl.git
   tag: main
   ip_yml_path: .
-  resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 routertl_compat:
   language: vhdl-2008
   library: work
@@ -36,12 +36,20 @@ components:
 - rx_status_reg
 top_ports:
   axi_spdif_rx:
+  - direction: out
+    name: rx_int_o
+    type: std_logic
+    width: ''
   - direction: in
     name: spdif_rx_i
     type: std_logic
     width: ''
   - direction: out
     name: spdif_rx_i_dbg
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_aclk
     type: std_logic
     width: ''
   - direction: in
@@ -62,8 +70,8 @@ top_ports:
     width: C_S_AXI_DATA_WIDTH-1 downto 0
   - direction: in
     name: s_axi_wstrb
-    type: std_logic_vector((C_S_AXI_DATA_WIDTH/8)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (C_S_AXI_DATA_WIDTH/8)-1 downto 0
   - direction: in
     name: s_axi_wvalid
     type: std_logic
@@ -125,6 +133,10 @@ top_ports:
     type: std_logic_vector
     width: 2 downto 0
   - direction: in
+    name: m_axis_aclk
+    type: std_logic
+    width: ''
+  - direction: in
     name: m_axis_tready
     type: std_logic
     width: ''
@@ -144,6 +156,10 @@ top_ports:
     name: m_axis_tkeep
     type: std_logic_vector
     width: 3 downto 0
+  - direction: in
+    name: dma_req_aclk
+    type: std_logic
+    width: ''
   - direction: in
     name: dma_req_rstn
     type: std_logic
@@ -174,7 +190,7 @@ top_ports:
     width: ''
   - direction: in
     name: dma_req_drready
-    type: "std_logic\n  )"
+    type: std_logic
     width: ''
 desc_source: ports
 external_uses:

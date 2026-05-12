@@ -100,6 +100,14 @@ top_ports:
     name: data
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
   taxi_axis_mux:
   - direction: in
     name: logic
@@ -129,6 +137,19 @@ top_ports:
     name: in
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
+  taxi_axis_null_snk:
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
   taxi_axis_pipeline_fifo:
   - direction: in
     name: logic
@@ -138,10 +159,26 @@ top_ports:
     name: datapath
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
   taxi_axis_pipeline_register:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
     width: ''
   taxi_axis_switch:
   - direction: out
@@ -151,6 +188,14 @@ top_ports:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
     width: ''
 total_entities: 19
 desc_source: curator

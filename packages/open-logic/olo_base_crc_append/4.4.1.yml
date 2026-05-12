@@ -60,9 +60,17 @@ components:
 top_ports:
   olo_base_crc_append:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
     type: std_logic
     width: ''
+  - direction: in
+    name: In_Data
+    type: std_logic_vector
+    width: DataWidth_g-1 downto 0
   - direction: in
     name: In_Valid
     type: std_logic
@@ -76,6 +84,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: Out_Data
+    type: std_logic_vector
+    width: DataWidth_g-1 downto 0
+  - direction: out
     name: Out_Valid
     type: std_logic
     width: ''
@@ -85,7 +97,7 @@ top_ports:
     width: ''
   - direction: out
     name: Out_Last
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
 desc_source: header
 external_uses:

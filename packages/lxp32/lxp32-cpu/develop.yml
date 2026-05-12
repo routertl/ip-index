@@ -145,8 +145,8 @@ top_ports:
     width: 31 downto 0
   - direction: in
     name: irq_i
-    type: "std_logic_vector(7 downto 0)\n\t)"
-    width: ''
+    type: std_logic_vector
+    width: 7 downto 0
   lxp32u_top:
   - direction: in
     name: clk_i
@@ -206,8 +206,8 @@ top_ports:
     width: 31 downto 0
   - direction: in
     name: irq_i
-    type: "std_logic_vector(7 downto 0)\n\t)"
-    width: ''
+    type: std_logic_vector
+    width: 7 downto 0
 total_entities: 20
 desc_source: readme
 health_tier: bronze

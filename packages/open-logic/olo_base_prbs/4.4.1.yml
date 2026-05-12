@@ -47,9 +47,17 @@ components:
 top_ports:
   olo_base_prbs:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
     type: std_logic
     width: ''
+  - direction: out
+    name: Out_Data
+    type: std_logic_vector
+    width: BitsPerSymbol_g-1 downto 0
   - direction: in
     name: Out_Ready
     type: std_logic
@@ -58,6 +66,10 @@ top_ports:
     name: Out_Valid
     type: std_logic
     width: ''
+  - direction: out
+    name: State_Current
+    type: std_logic_vector
+    width: Polynomial_g'length-1 downto 0
   - direction: in
     name: State_New
     type: std_logic_vector

@@ -180,29 +180,45 @@ top_ports:
     name: clk_i
     type: std_ulogic
     width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: bus_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: bus_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: irq_o
+    type: std_ulogic
+    width: ''
   neorv32_bus_amo_rvs:
   - direction: in
     name: clk_i
     type: std_ulogic
     width: ''
   - direction: in
-    name: a_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: b_req_o
-    type: bus_req_t
+    name: rstn_i
+    type: std_ulogic
     width: ''
   - direction: in
-    name: b_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: c_req_o
+    name: a_req_i
     type: bus_req_t
     width: ''
+  - direction: out
+    name: a_rsp_o
+    type: bus_rsp_t
+    width: ''
   - direction: in
-    name: c_rsp_i
+    name: b_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: b_rsp_o
     type: bus_rsp_t
     width: ''
   - direction: out
@@ -211,274 +227,6 @@ top_ports:
     width: ''
   - direction: in
     name: x_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: in
-    name: dev_00_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_01_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_01_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_02_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_02_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_03_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_03_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_04_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_04_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_05_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_05_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_06_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_06_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_07_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_07_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_08_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_08_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_09_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_09_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_10_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_10_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_11_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_11_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_12_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_12_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_13_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_13_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_14_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_14_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_15_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_15_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_16_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_16_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_17_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_17_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_18_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_18_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_19_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_19_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_20_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_20_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_21_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_21_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_22_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_22_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_23_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_23_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_24_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_24_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_25_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_25_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_26_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_26_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_27_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_27_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_28_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_28_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_29_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_29_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_30_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_30_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_31_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_31_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: out
-    name: core_rsp_o
-    type: bus_rsp_t
-    width: ''
-  - direction: in
-    name: sys_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: out
-    name: core_rsp_o
-    type: bus_rsp_t
-    width: ''
-  - direction: in
-    name: sys_rsp_i
     type: bus_rsp_t
     width: ''
   neorv32_bus_gateway:
@@ -487,23 +235,23 @@ top_ports:
     type: std_ulogic
     width: ''
   - direction: in
-    name: a_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: b_req_o
-    type: bus_req_t
+    name: rstn_i
+    type: std_ulogic
     width: ''
   - direction: in
-    name: b_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: c_req_o
+    name: a_req_i
     type: bus_req_t
     width: ''
+  - direction: out
+    name: a_rsp_o
+    type: bus_rsp_t
+    width: ''
   - direction: in
-    name: c_rsp_i
+    name: b_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: b_rsp_o
     type: bus_rsp_t
     width: ''
   - direction: out
@@ -512,274 +260,6 @@ top_ports:
     width: ''
   - direction: in
     name: x_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: in
-    name: dev_00_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_01_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_01_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_02_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_02_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_03_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_03_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_04_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_04_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_05_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_05_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_06_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_06_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_07_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_07_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_08_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_08_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_09_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_09_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_10_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_10_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_11_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_11_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_12_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_12_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_13_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_13_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_14_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_14_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_15_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_15_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_16_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_16_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_17_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_17_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_18_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_18_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_19_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_19_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_20_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_20_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_21_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_21_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_22_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_22_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_23_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_23_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_24_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_24_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_25_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_25_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_26_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_26_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_27_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_27_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_28_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_28_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_29_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_29_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_30_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_30_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_31_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_31_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: out
-    name: core_rsp_o
-    type: bus_rsp_t
-    width: ''
-  - direction: in
-    name: sys_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: out
-    name: core_rsp_o
-    type: bus_rsp_t
-    width: ''
-  - direction: in
-    name: sys_rsp_i
     type: bus_rsp_t
     width: ''
   neorv32_bus_io_switch:
@@ -788,23 +268,23 @@ top_ports:
     type: std_ulogic
     width: ''
   - direction: in
-    name: a_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: b_req_o
-    type: bus_req_t
+    name: rstn_i
+    type: std_ulogic
     width: ''
   - direction: in
-    name: b_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: c_req_o
+    name: a_req_i
     type: bus_req_t
     width: ''
+  - direction: out
+    name: a_rsp_o
+    type: bus_rsp_t
+    width: ''
   - direction: in
-    name: c_rsp_i
+    name: b_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: b_rsp_o
     type: bus_rsp_t
     width: ''
   - direction: out
@@ -813,274 +293,6 @@ top_ports:
     width: ''
   - direction: in
     name: x_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: in
-    name: dev_00_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_01_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_01_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_02_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_02_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_03_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_03_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_04_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_04_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_05_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_05_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_06_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_06_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_07_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_07_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_08_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_08_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_09_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_09_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_10_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_10_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_11_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_11_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_12_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_12_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_13_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_13_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_14_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_14_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_15_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_15_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_16_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_16_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_17_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_17_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_18_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_18_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_19_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_19_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_20_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_20_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_21_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_21_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_22_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_22_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_23_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_23_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_24_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_24_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_25_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_25_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_26_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_26_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_27_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_27_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_28_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_28_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_29_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_29_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_30_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_30_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_31_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_31_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: out
-    name: core_rsp_o
-    type: bus_rsp_t
-    width: ''
-  - direction: in
-    name: sys_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: out
-    name: core_rsp_o
-    type: bus_rsp_t
-    width: ''
-  - direction: in
-    name: sys_rsp_i
     type: bus_rsp_t
     width: ''
   neorv32_bus_reg:
@@ -1089,23 +301,23 @@ top_ports:
     type: std_ulogic
     width: ''
   - direction: in
-    name: a_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: b_req_o
-    type: bus_req_t
+    name: rstn_i
+    type: std_ulogic
     width: ''
   - direction: in
-    name: b_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: c_req_o
+    name: a_req_i
     type: bus_req_t
     width: ''
+  - direction: out
+    name: a_rsp_o
+    type: bus_rsp_t
+    width: ''
   - direction: in
-    name: c_rsp_i
+    name: b_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: b_rsp_o
     type: bus_rsp_t
     width: ''
   - direction: out
@@ -1114,274 +326,6 @@ top_ports:
     width: ''
   - direction: in
     name: x_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: in
-    name: dev_00_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_01_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_01_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_02_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_02_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_03_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_03_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_04_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_04_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_05_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_05_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_06_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_06_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_07_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_07_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_08_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_08_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_09_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_09_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_10_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_10_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_11_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_11_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_12_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_12_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_13_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_13_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_14_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_14_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_15_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_15_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_16_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_16_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_17_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_17_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_18_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_18_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_19_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_19_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_20_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_20_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_21_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_21_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_22_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_22_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_23_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_23_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_24_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_24_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_25_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_25_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_26_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_26_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_27_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_27_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_28_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_28_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_29_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_29_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_30_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_30_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_31_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_31_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: out
-    name: core_rsp_o
-    type: bus_rsp_t
-    width: ''
-  - direction: in
-    name: sys_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: out
-    name: core_rsp_o
-    type: bus_rsp_t
-    width: ''
-  - direction: in
-    name: sys_rsp_i
     type: bus_rsp_t
     width: ''
   neorv32_bus_switch:
@@ -1390,23 +334,23 @@ top_ports:
     type: std_ulogic
     width: ''
   - direction: in
-    name: a_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: b_req_o
-    type: bus_req_t
+    name: rstn_i
+    type: std_ulogic
     width: ''
   - direction: in
-    name: b_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: c_req_o
+    name: a_req_i
     type: bus_req_t
     width: ''
+  - direction: out
+    name: a_rsp_o
+    type: bus_rsp_t
+    width: ''
   - direction: in
-    name: c_rsp_i
+    name: b_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: b_rsp_o
     type: bus_rsp_t
     width: ''
   - direction: out
@@ -1415,274 +359,6 @@ top_ports:
     width: ''
   - direction: in
     name: x_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: in
-    name: dev_00_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_01_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_01_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_02_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_02_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_03_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_03_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_04_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_04_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_05_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_05_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_06_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_06_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_07_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_07_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_08_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_08_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_09_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_09_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_10_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_10_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_11_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_11_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_12_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_12_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_13_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_13_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_14_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_14_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_15_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_15_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_16_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_16_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_17_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_17_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_18_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_18_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_19_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_19_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_20_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_20_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_21_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_21_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_22_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_22_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_23_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_23_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_24_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_24_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_25_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_25_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_26_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_26_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_27_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_27_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_28_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_28_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_29_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_29_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_30_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_30_rsp_i
-    type: bus_rsp_t
-    width: ''
-  - direction: out
-    name: dev_31_req_o
-    type: bus_req_t
-    width: ''
-  - direction: in
-    name: dev_31_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: out
-    name: core_rsp_o
-    type: bus_rsp_t
-    width: ''
-  - direction: in
-    name: sys_rsp_i
-    type: "bus_rsp_t\n  )"
-    width: ''
-  - direction: out
-    name: core_rsp_o
-    type: bus_rsp_t
-    width: ''
-  - direction: in
-    name: sys_rsp_i
     type: bus_rsp_t
     width: ''
   neorv32_clint_mtimecmp:
@@ -1695,240 +371,304 @@ top_ports:
     type: std_ulogic
     width: ''
   - direction: in
-    name: mtime_i
+    name: bus_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: bus_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: time_o
     type: std_ulogic_vector
     width: 63 downto 0
-  - direction: in
-    name: we_i
-    type: std_ulogic_vector
-    width: 1 downto 0
-  - direction: in
-    name: re_i
-    type: std_ulogic_vector
-    width: 1 downto 0
-  - direction: in
-    name: wdata_i
-    type: std_ulogic_vector
-    width: 31 downto 0
-  - direction: out
-    name: rdata_o
-    type: std_ulogic_vector
-    width: 31 downto 0
   - direction: out
     name: mti_o
-    type: "std_ulogic\n  )"
-    width: ''
+    type: std_ulogic_vector
+    width: NUM_HARTS-1 downto 0
+  - direction: out
+    name: msi_o
+    type: std_ulogic_vector
+    width: NUM_HARTS-1 downto 0
   neorv32_cpu_alu_fpu_f2i:
   - direction: in
-    name: rstn_i
+    name: clk_i
     type: std_ulogic
-    width: ''
-  - direction: in
-    name: start_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: abort_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: rmode_i
-    type: std_ulogic_vector
-    width: 2 downto 0
-  - direction: in
-    name: funct_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: sign_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: exponent_i
-    type: std_ulogic_vector
-    width: 7 downto 0
-  - direction: in
-    name: mantissa_i
-    type: std_ulogic_vector
-    width: 22 downto 0
-  - direction: in
-    name: class_i
-    type: std_ulogic_vector
-    width: 9 downto 0
-  - direction: out
-    name: result_o
-    type: std_ulogic_vector
-    width: 31 downto 0
-  - direction: out
-    name: flags_o
-    type: std_ulogic_vector
-    width: 4 downto 0
-  - direction: out
-    name: done_o
-    type: "std_ulogic\n    )"
     width: ''
   - direction: in
     name: rstn_i
     type: std_ulogic
     width: ''
   - direction: in
-    name: start_i
+    name: ctrl_i
+    type: ctrl_bus_t
+    width: ''
+  - direction: in
+    name: csr_we_i
     type: std_ulogic
     width: ''
   - direction: in
-    name: abort_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: rmode_i
+    name: csr_addr_i
     type: std_ulogic_vector
-    width: 2 downto 0
+    width: 1 downto 0
   - direction: in
-    name: funct_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: sign_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: exponent_i
-    type: std_ulogic_vector
-    width: 8 downto 0
-  - direction: in
-    name: mantissa_i
-    type: std_ulogic_vector
-    width: 47 downto 0
-  - direction: in
-    name: integer_i
-    type: std_ulogic_vector
-    width: 31 downto 0
-  - direction: in
-    name: class_i
-    type: std_ulogic_vector
-    width: 9 downto 0
-  - direction: in
-    name: flags_i
-    type: std_ulogic_vector
-    width: 4 downto 0
-  - direction: out
-    name: result_o
+    name: csr_wdata_i
     type: std_ulogic_vector
     width: 31 downto 0
   - direction: out
-    name: flags_o
+    name: csr_rdata_o
     type: std_ulogic_vector
-    width: 4 downto 0
+    width: 31 downto 0
+  - direction: in
+    name: equal_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: less_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rs1_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: rs2_i
+    type: std_ulogic_vector
+    width: 31 downto 0
   - direction: out
-    name: done_o
-    type: "std_ulogic\n    )"
+    name: res_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: valid_o
+    type: std_ulogic
     width: ''
   neorv32_cpu_alu_fpu_normalizer:
   - direction: in
-    name: rstn_i
+    name: clk_i
     type: std_ulogic
-    width: ''
-  - direction: in
-    name: start_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: abort_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: rmode_i
-    type: std_ulogic_vector
-    width: 2 downto 0
-  - direction: in
-    name: funct_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: sign_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: exponent_i
-    type: std_ulogic_vector
-    width: 7 downto 0
-  - direction: in
-    name: mantissa_i
-    type: std_ulogic_vector
-    width: 22 downto 0
-  - direction: in
-    name: class_i
-    type: std_ulogic_vector
-    width: 9 downto 0
-  - direction: out
-    name: result_o
-    type: std_ulogic_vector
-    width: 31 downto 0
-  - direction: out
-    name: flags_o
-    type: std_ulogic_vector
-    width: 4 downto 0
-  - direction: out
-    name: done_o
-    type: "std_ulogic\n    )"
     width: ''
   - direction: in
     name: rstn_i
     type: std_ulogic
     width: ''
   - direction: in
-    name: start_i
+    name: ctrl_i
+    type: ctrl_bus_t
+    width: ''
+  - direction: in
+    name: csr_we_i
     type: std_ulogic
     width: ''
   - direction: in
-    name: abort_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: rmode_i
+    name: csr_addr_i
     type: std_ulogic_vector
-    width: 2 downto 0
+    width: 1 downto 0
   - direction: in
-    name: funct_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: sign_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: exponent_i
-    type: std_ulogic_vector
-    width: 8 downto 0
-  - direction: in
-    name: mantissa_i
-    type: std_ulogic_vector
-    width: 47 downto 0
-  - direction: in
-    name: integer_i
-    type: std_ulogic_vector
-    width: 31 downto 0
-  - direction: in
-    name: class_i
-    type: std_ulogic_vector
-    width: 9 downto 0
-  - direction: in
-    name: flags_i
-    type: std_ulogic_vector
-    width: 4 downto 0
-  - direction: out
-    name: result_o
+    name: csr_wdata_i
     type: std_ulogic_vector
     width: 31 downto 0
   - direction: out
-    name: flags_o
+    name: csr_rdata_o
     type: std_ulogic_vector
-    width: 4 downto 0
+    width: 31 downto 0
+  - direction: in
+    name: equal_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: less_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rs1_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: rs2_i
+    type: std_ulogic_vector
+    width: 31 downto 0
   - direction: out
-    name: done_o
-    type: "std_ulogic\n    )"
+    name: res_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: valid_o
+    type: std_ulogic
     width: ''
   neorv32_cpu_frontend_ipb:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: ctrl_i
+    type: ctrl_bus_t
+    width: ''
+  - direction: out
+    name: ibus_req_o
+    type: bus_req_t
+    width: ''
+  - direction: in
+    name: ibus_rsp_i
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: pmp_addr_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: pmp_priv_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: pmp_err_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: frontend_o
+    type: if_bus_t
+    width: ''
+  neorv32_cpu_trace_simlog:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: ctrl_i
+    type: ctrl_bus_t
+    width: ''
+  - direction: in
+    name: rs1_rdata_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: rs2_rdata_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: rd_wdata_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: mem_ben_i
+    type: std_ulogic_vector
+    width: 3 downto 0
+  - direction: in
+    name: mem_addr_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: mem_wdata_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: trace_o
+    type: trace_port_t
+    width: ''
+  neorv32_gptmr_slice:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: bus_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: bus_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: in
+    name: clkgen_i
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: irq_o
+    type: std_ulogic
+    width: ''
+  neorv32_litex_core_complex:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tck_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tdi_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: jtag_tdo_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tms_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_adr_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: wb_dat_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: wb_we_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_sel_o
+    type: std_ulogic_vector
+    width: 3 downto 0
+  - direction: out
+    name: wb_stb_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_cyc_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_ack_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_err_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: irq_mei_i
+    type: std_ulogic
+    width: ''
+  neorv32_prim_fifo:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
   - direction: in
     name: rstn_i
     type: std_ulogic
@@ -1959,9 +699,9 @@ top_ports:
     width: DWIDTH-1 downto 0
   - direction: out
     name: avail_o
-    type: "std_ulogic\n  )"
+    type: std_ulogic
     width: ''
-  neorv32_gptmr_slice:
+  neorv32_prim_mul:
   - direction: in
     name: clk_i
     type: std_ulogic
@@ -1971,40 +711,69 @@ top_ports:
     type: std_ulogic
     width: ''
   - direction: in
-    name: clken_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: en_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: mode_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: cs_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: we_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: addr_i
+    name: clear_i
     type: std_ulogic
     width: ''
   - direction: in
     name: wdata_i
     type: std_ulogic_vector
-    width: 31 downto 0
+    width: DWIDTH-1 downto 0
+  - direction: in
+    name: we_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: free_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: re_i
+    type: std_ulogic
+    width: ''
   - direction: out
     name: rdata_o
     type: std_ulogic_vector
-    width: 31 downto 0
+    width: DWIDTH-1 downto 0
   - direction: out
-    name: irq_o
-    type: "std_ulogic\n  )"
+    name: avail_o
+    type: std_ulogic
+    width: ''
+  neorv32_prim_spram:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: clear_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wdata_i
+    type: std_ulogic_vector
+    width: DWIDTH-1 downto 0
+  - direction: in
+    name: we_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: free_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: re_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rdata_o
+    type: std_ulogic_vector
+    width: DWIDTH-1 downto 0
+  - direction: out
+    name: avail_o
+    type: std_ulogic
     width: ''
   neorv32_pwm_channel:
   - direction: in
@@ -2016,314 +785,183 @@ top_ports:
     type: std_ulogic
     width: ''
   - direction: in
-    name: clken_i
-    type: std_ulogic
+    name: bus_req_i
+    type: bus_req_t
     width: ''
-  - direction: in
-    name: en_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: pol_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: mode_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: cs_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: we_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: ben_i
-    type: std_ulogic_vector
-    width: 3 downto 0
-  - direction: in
-    name: wdata_i
-    type: std_ulogic_vector
-    width: 31 downto 0
   - direction: out
-    name: rdata_o
-    type: std_ulogic_vector
-    width: 31 downto 0
-  - direction: out
-    name: wrap_o
-    type: std_ulogic
+    name: bus_rsp_o
+    type: bus_rsp_t
     width: ''
+  - direction: in
+    name: clkgen_i
+    type: std_ulogic_vector
+    width: 7 downto 0
   - direction: out
     name: pwm_o
-    type: "std_ulogic\n  )"
+    type: std_ulogic_vector
+    width: 31 downto 0
+  neorv32_sys_reset:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_ext_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_wdt_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_dbg_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rstn_ext_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rstn_sys_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: xrstn_wdt_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: xrstn_ocd_o
+    type: std_ulogic
+    width: ''
+  neorv32_test_setup_approm:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: gpio_o
+    type: std_ulogic_vector
+    width: 7 downto 0
+  neorv32_test_setup_bootloader:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: gpio_o
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: uart0_txd_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: uart0_rxd_i
+    type: std_ulogic
+    width: ''
+  neorv32_test_setup_on_chip_debugger:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tck_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tdi_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: jtag_tdo_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tms_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: gpio_o
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: uart0_txd_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: uart0_rxd_i
+    type: std_ulogic
     width: ''
   neorv32_trng:
   - direction: in
     name: clk_i
     type: std_ulogic
     width: ''
-  neorv32_vivado_ip:
   - direction: in
-    name: resetn
-    type: std_logic
-    width: ''
-  - direction: out
-    name: m_axi_awlen
-    type: std_logic_vector
-    width: 7 downto 0
-  - direction: out
-    name: m_axi_awsize
-    type: std_logic_vector
-    width: 2 downto 0
-  - direction: out
-    name: m_axi_awburst
-    type: std_logic_vector
-    width: 1 downto 0
-  - direction: out
-    name: m_axi_awcache
-    type: std_logic_vector
-    width: 3 downto 0
-  - direction: out
-    name: m_axi_awprot
-    type: std_logic_vector
-    width: 2 downto 0
-  - direction: out
-    name: m_axi_awvalid
-    type: std_logic
+    name: rstn_i
+    type: std_ulogic
     width: ''
   - direction: in
-    name: m_axi_awready
-    type: std_logic
+    name: bus_req_i
+    type: bus_req_t
     width: ''
   - direction: out
-    name: m_axi_wstrb
-    type: std_logic_vector
-    width: 3 downto 0
-  - direction: out
-    name: m_axi_wlast
-    type: std_logic
+    name: bus_rsp_o
+    type: bus_rsp_t
     width: ''
   - direction: out
-    name: m_axi_wvalid
-    type: std_logic
+    name: irq_o
+    type: std_ulogic
+    width: ''
+  neorv32_verilog_wrapper:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
     width: ''
   - direction: in
-    name: m_axi_wready
-    type: std_logic
+    name: rstn_i
+    type: std_ulogic
     width: ''
   - direction: out
-    name: m_axi_arlen
-    type: std_logic_vector
-    width: 7 downto 0
-  - direction: out
-    name: m_axi_arsize
-    type: std_logic_vector
-    width: 2 downto 0
-  - direction: out
-    name: m_axi_arburst
-    type: std_logic_vector
-    width: 1 downto 0
-  - direction: out
-    name: m_axi_arcache
-    type: std_logic_vector
-    width: 3 downto 0
-  - direction: out
-    name: m_axi_arprot
-    type: std_logic_vector
-    width: 2 downto 0
-  - direction: out
-    name: m_axi_arvalid
-    type: std_logic
-    width: ''
-  - direction: in
-    name: m_axi_arready
-    type: std_logic
-    width: ''
-  - direction: in
-    name: m_axi_rresp
-    type: std_logic_vector
-    width: 1 downto 0
-  - direction: in
-    name: m_axi_rvalid
-    type: std_logic
-    width: ''
-  - direction: out
-    name: m_axi_rready
-    type: std_logic
-    width: ''
-  - direction: out
-    name: m_axi_bready
-    type: std_logic
-    width: ''
-  - direction: out
-    name: s0_axis_tvalid
-    type: std_logic
-    width: ''
-  - direction: in
-    name: s0_axis_tready
-    type: std_logic
-    width: ''
-  - direction: out
-    name: s0_axis_tdata
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: s0_axis_tlast
-    type: std_logic
-    width: ''
-  - direction: in
-    name: s1_axis_tvalid
-    type: std_logic
-    width: ''
-  - direction: out
-    name: s1_axis_tready
-    type: std_logic
-    width: ''
-  - direction: in
-    name: s1_axis_tdata
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: s1_axis_tlast
-    type: std_logic
-    width: ''
-  - direction: in
-    name: jtag_tdi_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: jtag_tdo_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: jtag_tms_i
-    type: std_logic
+    name: uart0_txd_o
+    type: std_ulogic
     width: ''
   - direction: in
     name: uart0_rxd_i
-    type: std_logic
+    type: std_ulogic
     width: ''
-  - direction: out
-    name: uart0_rtsn_o
-    type: std_logic
-    width: ''
+  neorv32_vivado_ip:
   - direction: in
-    name: uart0_ctsn_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: uart1_rxd_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: uart1_rtsn_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: uart1_ctsn_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: spi_dat_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: spi_dat_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: spi_csn_o
-    type: std_logic_vector
-    width: 7 downto 0
-  - direction: out
-    name: sdi_dat_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: sdi_dat_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: sdi_csn_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: twi_sda_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: twi_scl_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: twi_scl_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: twd_sda_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: twd_scl_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: onewire_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: cfs_out_o
-    type: std_logic_vector
-    width: 255 downto 0
-  - direction: in
-    name: irq_mti_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: irq_mei_i
+    name: clk
     type: std_logic
     width: ''
   - direction: in
     name: resetn
     type: std_logic
     width: ''
-  - direction: in
-    name: xbus_dat_i
-    type: std_ulogic_vector
-    width: 31 downto 0
-  - direction: in
-    name: xbus_cti_i
-    type: std_ulogic_vector
-    width: 2 downto 0
-  - direction: in
-    name: xbus_tag_i
-    type: std_ulogic_vector
-    width: 2 downto 0
-  - direction: in
-    name: xbus_we_i
-    type: std_ulogic
-    width: ''
-  - direction: in
-    name: xbus_sel_i
-    type: std_ulogic_vector
-    width: 3 downto 0
-  - direction: in
-    name: xbus_stb_i
-    type: std_ulogic
+  - direction: out
+    name: ocd_resetn
+    type: std_logic
     width: ''
   - direction: out
-    name: xbus_ack_o
-    type: std_ulogic
+    name: wdt_resetn
+    type: std_logic
     width: ''
   - direction: out
-    name: xbus_err_o
-    type: std_ulogic
-    width: ''
-  - direction: out
-    name: xbus_dat_o
-    type: std_ulogic_vector
+    name: m_axi_awaddr
+    type: std_logic_vector
     width: 31 downto 0
   - direction: out
     name: m_axi_awlen
@@ -2354,6 +992,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: m_axi_wdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
     name: m_axi_wstrb
     type: std_logic_vector
     width: 3 downto 0
@@ -2369,6 +1011,10 @@ top_ports:
     name: m_axi_wready
     type: std_logic
     width: ''
+  - direction: out
+    name: m_axi_araddr
+    type: std_logic_vector
+    width: 31 downto 0
   - direction: out
     name: m_axi_arlen
     type: std_logic_vector
@@ -2397,6 +1043,10 @@ top_ports:
     name: m_axi_arready
     type: std_logic
     width: ''
+  - direction: in
+    name: m_axi_rdata
+    type: std_logic_vector
+    width: 31 downto 0
   - direction: in
     name: m_axi_rresp
     type: std_logic_vector
@@ -2414,12 +1064,216 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: m_axi_bresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
     name: m_axi_bvalid
     type: std_logic
     width: ''
   - direction: out
     name: m_axi_bready
-    type: "std_logic\n  )"
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s0_axis_tdest
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: s0_axis_tvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s0_axis_tready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s0_axis_tdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: s0_axis_tlast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s1_axis_tid
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: s1_axis_tvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s1_axis_tready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s1_axis_tdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: s1_axis_tlast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: jtag_tck_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: jtag_tdi_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: jtag_tdo_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: jtag_tms_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: gpio_dir_o
+    type: std_logic_vector
+    width: IO_GPIO_DIR_NUM-1 downto 0
+  - direction: out
+    name: gpio_o
+    type: std_logic_vector
+    width: IO_GPIO_OUT_NUM-1 downto 0
+  - direction: in
+    name: gpio_i
+    type: std_logic_vector
+    width: IO_GPIO_IN_NUM-1 downto 0
+  - direction: out
+    name: uart0_txd_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: uart0_rxd_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: uart0_rtsn_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: uart0_ctsn_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: uart1_txd_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: uart1_rxd_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: uart1_rtsn_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: uart1_ctsn_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spi_clk_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spi_dat_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: spi_dat_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spi_csn_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: sdi_clk_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: sdi_dat_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sdi_dat_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sdi_csn_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: twi_sda_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: twi_sda_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: twi_scl_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: twi_scl_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: twd_sda_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: twd_sda_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: twd_scl_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: onewire_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: onewire_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pwm_o
+    type: std_logic_vector
+    width: IO_PWM_NUM-1 downto 0
+  - direction: in
+    name: cfs_in_i
+    type: std_logic_vector
+    width: 255 downto 0
+  - direction: out
+    name: cfs_out_o
+    type: std_logic_vector
+    width: 255 downto 0
+  - direction: out
+    name: neoled_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mtime_time_o
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: irq_msi_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: irq_mti_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: irq_mei_i
+    type: std_logic
     width: ''
 total_entities: 78
 desc_source: readme

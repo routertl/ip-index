@@ -53,6 +53,22 @@ components:
 top_ports:
   spll_bangbang_pd:
   - direction: in
+    name: clk_ref_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_fb_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_refclk_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: rst_n_fbck_i
     type: std_logic
     width: ''
@@ -61,6 +77,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: cfg_div_ref_i
+    type: std_logic_vector
+    width: 5 downto 0
+  - direction: in
     name: cfg_div_fb_i
     type: std_logic_vector
     width: 5 downto 0
@@ -68,6 +88,10 @@ top_ports:
     name: cfg_gating_i
     type: std_logic_vector
     width: 3 downto 0
+  - direction: in
+    name: sync_p_i
+    type: std_logic
+    width: ''
   - direction: in
     name: sync_en_i
     type: std_logic
@@ -90,17 +114,41 @@ top_ports:
     width: ''
   - direction: out
     name: ref_present_o
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   spll_period_detect:
+  - direction: in
+    name: clk_ref_i
+    type: std_logic_vector
+    width: g_num_ref_inputs-1 downto 0
+  - direction: in
+    name: clk_dmtd_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_dmtdclk_i
+    type: std_logic
+    width: ''
   - direction: in
     name: rst_n_sysclk_i
     type: std_logic
     width: ''
+  - direction: out
+    name: freq_err_o
+    type: std_logic_vector
+    width: 11 downto 0
+  - direction: out
+    name: freq_err_stb_p_o
+    type: std_logic
+    width: ''
   - direction: in
     name: in_sel_i
-    type: "std_logic_vector(4 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: 4 downto 0
 total_entities: 6
 desc_source: curator
 external_uses:

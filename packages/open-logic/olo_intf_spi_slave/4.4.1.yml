@@ -59,13 +59,25 @@ components:
 top_ports:
   olo_intf_spi_slave:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Rx_Valid
     type: std_logic
     width: ''
   - direction: out
     name: Rx_Data
     type: std_logic_vector
     width: TransWidth_g - 1 downto 0
+  - direction: in
+    name: Tx_Valid
+    type: std_logic
+    width: ''
   - direction: out
     name: Tx_Ready
     type: std_logic
@@ -74,6 +86,10 @@ top_ports:
     name: Tx_Data
     type: std_logic_vector
     width: TransWidth_g - 1 downto 0
+  - direction: out
+    name: Resp_Valid
+    type: std_logic
+    width: ''
   - direction: out
     name: Resp_Sent
     type: std_logic
@@ -87,6 +103,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: Spi_Sclk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Spi_Mosi
     type: std_logic
     width: ''
@@ -95,8 +115,16 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: Spi_Miso
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Spi_Miso_o
+    type: std_logic
+    width: ''
+  - direction: out
     name: Spi_Miso_t
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
 desc_source: header
 external_uses:

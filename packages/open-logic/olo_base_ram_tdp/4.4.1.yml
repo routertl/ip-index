@@ -63,8 +63,8 @@ top_ports:
     width: ''
   - direction: in
     name: A_Addr
-    type: std_logic_vector(log2ceil(Depth_g) - 1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: log2ceil(Depth_g) - 1 downto 0
   - direction: in
     name: A_Be
     type: std_logic_vector
@@ -87,8 +87,8 @@ top_ports:
     width: ''
   - direction: in
     name: B_Addr
-    type: std_logic_vector(log2ceil(Depth_g) - 1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: log2ceil(Depth_g) - 1 downto 0
   - direction: in
     name: B_Be
     type: std_logic_vector
@@ -103,80 +103,8 @@ top_ports:
     width: Width_g - 1 downto 0
   - direction: out
     name: B_RdData
-    type: "std_logic_vector(Width_g - 1 downto 0)\n    )"
-    width: ''
-  - direction: in
-    name: A_Addr
-    type: std_logic_vector(log2ceil(Depth_g) - 1 downto 0)
-    width: ''
-  - direction: in
-    name: A_WrEna
-    type: std_logic
-    width: ''
-  - direction: in
-    name: A_WrData
     type: std_logic_vector
     width: Width_g - 1 downto 0
-  - direction: out
-    name: A_RdData
-    type: std_logic_vector
-    width: Width_g - 1 downto 0
-  - direction: in
-    name: B_Clk
-    type: std_logic
-    width: ''
-  - direction: in
-    name: B_Addr
-    type: std_logic_vector(log2ceil(Depth_g) - 1 downto 0)
-    width: ''
-  - direction: in
-    name: B_WrEna
-    type: std_logic
-    width: ''
-  - direction: in
-    name: B_WrData
-    type: std_logic_vector
-    width: Width_g - 1 downto 0
-  - direction: out
-    name: B_RdData
-    type: "std_logic_vector(Width_g - 1 downto 0)\n        )"
-    width: ''
-  - direction: in
-    name: A_Addr
-    type: std_logic_vector(log2ceil(Depth_g) - 1 downto 0)
-    width: ''
-  - direction: in
-    name: A_WrEna
-    type: std_logic
-    width: ''
-  - direction: in
-    name: A_WrData
-    type: std_logic_vector
-    width: Width_g - 1 downto 0
-  - direction: out
-    name: A_RdData
-    type: std_logic_vector
-    width: Width_g - 1 downto 0
-  - direction: in
-    name: B_Clk
-    type: std_logic
-    width: ''
-  - direction: in
-    name: B_Addr
-    type: std_logic_vector(log2ceil(Depth_g) - 1 downto 0)
-    width: ''
-  - direction: in
-    name: B_WrEna
-    type: std_logic
-    width: ''
-  - direction: in
-    name: B_WrData
-    type: std_logic_vector
-    width: Width_g - 1 downto 0
-  - direction: out
-    name: B_RdData
-    type: "std_logic_vector(Width_g - 1 downto 0)\n    )"
-    width: ''
 desc_source: header
 external_uses:
 - library: work

@@ -47,6 +47,16 @@ components:
 - olo_fix_resize
 - olo_fix_round
 - olo_fix_saturate
+top_ports:
+  olo_fix_to_real:
+  - direction: in
+    name: In_A
+    type: std_logic_vector
+    width: fixFmtWidthFromString(AFmt_g) - 1 downto 0
+  - direction: out
+    name: Out_Value
+    type: real
+    width: ''
 desc_source: header
 external_uses:
 - library: work

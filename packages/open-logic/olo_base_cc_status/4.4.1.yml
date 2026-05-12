@@ -75,8 +75,8 @@ top_ports:
     width: ''
   - direction: out
     name: Out_Data
-    type: "std_logic_vector(Width_g - 1 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: Width_g - 1 downto 0
 desc_source: preserved
 external_uses:
 - library: work

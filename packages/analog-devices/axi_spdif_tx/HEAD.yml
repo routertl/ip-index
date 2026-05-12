@@ -1,8 +1,8 @@
 name: axi_spdif_tx
 namespace: analog-devices
 version: HEAD
-commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
-published_at: '2026-05-11T12:02:04+03:00'
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
 description: AXI4-Lite transmit engine with AXI4-Stream interface and memory interface
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
@@ -11,7 +11,7 @@ source:
   url: https://github.com/analogdevicesinc/hdl.git
   tag: main
   ip_yml_path: .
-  resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 routertl_compat:
   language: vhdl-2008
   library: work
@@ -32,8 +32,16 @@ components:
 - tx_encoder
 top_ports:
   axi_spdif_tx:
+  - direction: in
+    name: spdif_data_clk
+    type: std_logic
+    width: ''
   - direction: out
     name: spdif_tx_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_aclk
     type: std_logic
     width: ''
   - direction: in
@@ -58,8 +66,8 @@ top_ports:
     width: S_AXI_DATA_WIDTH-1 downto 0
   - direction: in
     name: s_axi_wstrb
-    type: std_logic_vector((S_AXI_DATA_WIDTH/8)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (S_AXI_DATA_WIDTH/8)-1 downto 0
   - direction: in
     name: s_axi_wvalid
     type: std_logic
@@ -117,6 +125,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: s_axis_aclk
+    type: std_logic
+    width: ''
+  - direction: in
     name: s_axis_aresetn
     type: std_logic
     width: ''
@@ -134,6 +146,10 @@ top_ports:
     width: ''
   - direction: in
     name: s_axis_tvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dma_req_aclk
     type: std_logic
     width: ''
   - direction: in
@@ -166,7 +182,7 @@ top_ports:
     width: ''
   - direction: in
     name: dma_req_drready
-    type: "std_logic\n\t\t)"
+    type: std_logic
     width: ''
 desc_source: ports
 external_uses:

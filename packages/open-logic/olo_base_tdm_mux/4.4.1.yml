@@ -56,8 +56,8 @@ top_ports:
     width: ''
   - direction: in
     name: In_ChSel
-    type: std_logic_vector(log2ceil(Channels_g)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: log2ceil(Channels_g)-1 downto 0
   - direction: in
     name: In_Valid
     type: std_logic

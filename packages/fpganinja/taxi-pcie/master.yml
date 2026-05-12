@@ -72,20 +72,80 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: snk
+    name: rx_req_tlp
+    type: taxi_pcie_tlp_if.snk
+    width: ''
+  - direction: src
+    name: tx_cpl_tlp
+    type: taxi_pcie_tlp_if.src
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
+    width: ''
   taxi_pcie_axil_master_minimal:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: snk
+    name: rx_req_tlp
+    type: taxi_pcie_tlp_if.snk
+    width: ''
+  - direction: src
+    name: tx_cpl_tlp
+    type: taxi_pcie_tlp_if.src
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
     width: ''
   taxi_pcie_msix_apb:
   - direction: in
     name: logic
     type: wire
     width: ''
+  - direction: slv
+    name: s_apb
+    type: taxi_apb_if.slv
+    width: ''
+  - direction: snk
+    name: s_axis_irq
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: tx_wr_req_tlp
+    type: taxi_pcie_tlp_if.src
+    width: ''
   taxi_pcie_msix_axil:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
+  - direction: snk
+    name: s_axis_irq
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: tx_wr_req_tlp
+    type: taxi_pcie_tlp_if.src
     width: ''
 total_entities: 12
 desc_source: curator

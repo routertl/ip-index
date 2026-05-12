@@ -1,0 +1,101 @@
+name: util_i2c_mixer
+namespace: analog-devices
+version: 1336749ccfa9
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
+description: Mixes I2C signals from multiple sources.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - library/util_i2c_mixer/util_i2c_mixer.vhd
+tags:
+- circuit
+- fpga
+- i2c
+- inter-integrated
+- mixer
+- unisim
+- util
+- xilinx
+role: top
+top_ports:
+  util_i2c_mixer:
+  - direction: in
+    name: upstream_scl_T
+    type: std_logic
+    width: ''
+  - direction: in
+    name: upstream_scl_I
+    type: std_logic
+    width: ''
+  - direction: out
+    name: upstream_scl_O
+    type: std_logic
+    width: ''
+  - direction: in
+    name: upstream_sda_T
+    type: std_logic
+    width: ''
+  - direction: in
+    name: upstream_sda_I
+    type: std_logic
+    width: ''
+  - direction: out
+    name: upstream_sda_O
+    type: std_logic
+    width: ''
+  - direction: out
+    name: downstream_scl_T
+    type: std_logic
+    width: ''
+  - direction: in
+    name: downstream_scl_I
+    type: std_logic_vector
+    width: C_WIDTH - 1 downto 0
+  - direction: out
+    name: downstream_scl_O
+    type: std_logic_vector
+    width: C_WIDTH - 1 downto 0
+  - direction: out
+    name: downstream_sda_T
+    type: std_logic
+    width: ''
+  - direction: in
+    name: downstream_sda_I
+    type: std_logic_vector
+    width: C_WIDTH - 1 downto 0
+  - direction: out
+    name: downstream_sda_O
+    type: std_logic_vector
+    width: C_WIDTH - 1 downto 0
+desc_source: preserved
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

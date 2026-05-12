@@ -1,0 +1,1067 @@
+name: avl_adxphy
+namespace: analog-devices
+version: 1336749ccfa9
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
+description: Avl IP core with FIFO interface and configurable parameters
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/intel/avl_adxphy/avl_adxphy.v
+tags:
+- adxphy
+- avl
+role: top
+top_ports:
+  avl_adxphy:
+  - direction: out
+    name: rx_ip_locked
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: out
+    name: rx_ip_cal_busy
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: out
+    name: rx_ip_valid
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: out
+    name: rx_ip_data
+    type: wire
+    width: '[((NUM_OF_LANES*32)-1):0]'
+  - direction: out
+    name: rx_ip_disperr
+    type: wire
+    width: '[((NUM_OF_LANES* 4)-1):0]'
+  - direction: out
+    name: rx_ip_deterr
+    type: wire
+    width: '[((NUM_OF_LANES* 4)-1):0]'
+  - direction: out
+    name: rx_ip_kchar
+    type: wire
+    width: '[((NUM_OF_LANES* 4)-1):0]'
+  - direction: out
+    name: rx_ip_full
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: out
+    name: rx_ip_empty
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: in
+    name: rx_ip_align_en
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: in
+    name: rx_ip_lane_polarity
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: in
+    name: rx_ip_lane_powerdown
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: in
+    name: rx_ip_bit_reversal
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_ip_byte_reversal
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_locked_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_cal_busy_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_valid_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_data_0
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rx_phy_disperr_0
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_deterr_0
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_kchar_0
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_full_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_empty_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_align_en_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_polarity_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_powerdown_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_bit_reversal_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_byte_reversal_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_analogreset_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_digitalreset_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_locked_1
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_cal_busy_1
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_valid_1
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_data_1
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rx_phy_disperr_1
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_deterr_1
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_kchar_1
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_full_1
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_empty_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_align_en_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_polarity_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_powerdown_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_bit_reversal_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_byte_reversal_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_analogreset_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_digitalreset_1
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_locked_2
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_cal_busy_2
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_valid_2
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_data_2
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rx_phy_disperr_2
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_deterr_2
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_kchar_2
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_full_2
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_empty_2
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_align_en_2
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_polarity_2
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_powerdown_2
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_bit_reversal_2
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_byte_reversal_2
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_analogreset_2
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_digitalreset_2
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_locked_3
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_cal_busy_3
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_valid_3
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_data_3
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rx_phy_disperr_3
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_deterr_3
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_kchar_3
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_full_3
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_empty_3
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_align_en_3
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_polarity_3
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_powerdown_3
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_bit_reversal_3
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_byte_reversal_3
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_analogreset_3
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_digitalreset_3
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_locked_4
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_cal_busy_4
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_valid_4
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_data_4
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rx_phy_disperr_4
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_deterr_4
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_kchar_4
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_full_4
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_empty_4
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_align_en_4
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_polarity_4
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_powerdown_4
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_bit_reversal_4
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_byte_reversal_4
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_analogreset_4
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_digitalreset_4
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_locked_5
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_cal_busy_5
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_valid_5
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_data_5
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rx_phy_disperr_5
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_deterr_5
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_kchar_5
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_full_5
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_empty_5
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_align_en_5
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_polarity_5
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_powerdown_5
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_bit_reversal_5
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_byte_reversal_5
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_analogreset_5
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_digitalreset_5
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_locked_6
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_cal_busy_6
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_valid_6
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_data_6
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rx_phy_disperr_6
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_deterr_6
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_kchar_6
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_full_6
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_empty_6
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_align_en_6
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_polarity_6
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_powerdown_6
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_bit_reversal_6
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_byte_reversal_6
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_analogreset_6
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_digitalreset_6
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_locked_7
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_cal_busy_7
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_valid_7
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_data_7
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rx_phy_disperr_7
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_deterr_7
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_kchar_7
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rx_phy_full_7
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_phy_empty_7
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_align_en_7
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_polarity_7
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_lane_powerdown_7
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_bit_reversal_7
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_byte_reversal_7
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_analogreset_7
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_phy_digitalreset_7
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_core_analogreset
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: in
+    name: rx_core_digitalreset
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: out
+    name: rx_core_locked
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: out
+    name: rx_core_cal_busy
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: out
+    name: tx_ip_cal_busy
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: out
+    name: tx_ip_full
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: out
+    name: tx_ip_empty
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: in
+    name: tx_ip_data
+    type: wire
+    width: '[((NUM_OF_LANES*32)-1):0]'
+  - direction: in
+    name: tx_ip_kchar
+    type: wire
+    width: '[((NUM_OF_LANES* 4)-1):0]'
+  - direction: in
+    name: tx_ip_elecidle
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: in
+    name: tx_ip_lane_polarity
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: in
+    name: tx_ip_lane_powerdown
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: in
+    name: tx_ip_bit_reversal
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_ip_byte_reversal
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_cal_busy_0
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_full_0
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_empty_0
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_data_0
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: tx_phy_kchar_0
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: tx_phy_elecidle_0
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_polarity_0
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_powerdown_0
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_bit_reversal_0
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_byte_reversal_0
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_analogreset_0
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_digitalreset_0
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_cal_busy_1
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_full_1
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_empty_1
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_data_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: tx_phy_kchar_1
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: tx_phy_elecidle_1
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_polarity_1
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_powerdown_1
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_bit_reversal_1
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_byte_reversal_1
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_analogreset_1
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_digitalreset_1
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_cal_busy_2
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_full_2
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_empty_2
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_data_2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: tx_phy_kchar_2
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: tx_phy_elecidle_2
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_polarity_2
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_powerdown_2
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_bit_reversal_2
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_byte_reversal_2
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_analogreset_2
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_digitalreset_2
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_cal_busy_3
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_full_3
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_empty_3
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_data_3
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: tx_phy_kchar_3
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: tx_phy_elecidle_3
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_polarity_3
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_powerdown_3
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_bit_reversal_3
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_byte_reversal_3
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_analogreset_3
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_digitalreset_3
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_cal_busy_4
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_full_4
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_empty_4
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_data_4
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: tx_phy_kchar_4
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: tx_phy_elecidle_4
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_polarity_4
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_powerdown_4
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_bit_reversal_4
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_byte_reversal_4
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_analogreset_4
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_digitalreset_4
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_cal_busy_5
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_full_5
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_empty_5
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_data_5
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: tx_phy_kchar_5
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: tx_phy_elecidle_5
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_polarity_5
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_powerdown_5
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_bit_reversal_5
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_byte_reversal_5
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_analogreset_5
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_digitalreset_5
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_cal_busy_6
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_full_6
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_empty_6
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_data_6
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: tx_phy_kchar_6
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: tx_phy_elecidle_6
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_polarity_6
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_powerdown_6
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_bit_reversal_6
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_byte_reversal_6
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_analogreset_6
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_digitalreset_6
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_cal_busy_7
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_full_7
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_phy_empty_7
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_data_7
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: tx_phy_kchar_7
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: tx_phy_elecidle_7
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_polarity_7
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_lane_powerdown_7
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_bit_reversal_7
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_byte_reversal_7
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_analogreset_7
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_phy_digitalreset_7
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_core_analogreset
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: in
+    name: tx_core_digitalreset
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+  - direction: out
+    name: tx_core_cal_busy
+    type: wire
+    width: '[((NUM_OF_LANES* 1)-1):0]'
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

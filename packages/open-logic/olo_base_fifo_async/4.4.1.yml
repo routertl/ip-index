@@ -62,6 +62,10 @@ components:
 top_ports:
   olo_base_fifo_async:
   - direction: in
+    name: In_Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: In_Rst
     type: std_logic
     width: ''
@@ -82,6 +86,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: In_Full
+    type: std_logic
+    width: ''
+  - direction: out
     name: In_Empty
     type: std_logic
     width: ''
@@ -95,7 +103,11 @@ top_ports:
     width: ''
   - direction: out
     name: In_Level
-    type: std_logic_vector(log2ceil(Depth_g+1)-1 downto 0)
+    type: std_logic_vector
+    width: log2ceil(Depth_g+1)-1 downto 0
+  - direction: in
+    name: Out_Clk
+    type: std_logic
     width: ''
   - direction: in
     name: Out_Rst
@@ -118,6 +130,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: Out_Full
+    type: std_logic
+    width: ''
+  - direction: out
     name: Out_Empty
     type: std_logic
     width: ''
@@ -131,8 +147,8 @@ top_ports:
     width: ''
   - direction: out
     name: Out_Level
-    type: "std_logic_vector(log2ceil(Depth_g+1)-1 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: log2ceil(Depth_g+1)-1 downto 0
 desc_source: header
 external_uses:
 - library: work

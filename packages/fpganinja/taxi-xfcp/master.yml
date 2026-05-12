@@ -70,6 +70,14 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: src
+    name: xfcp_dsp_ds
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: xfcp_dsp_us
+    type: taxi_axis_if.snk
+    width: ''
   taxi_xfcp_mod_apb:
   - direction: in
     name: logic
@@ -99,10 +107,38 @@ top_ports:
     name: in
     type: wire
     width: ''
+  - direction: snk
+    name: xfcp_usp_ds
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: xfcp_usp_us
+    type: taxi_axis_if.src
+    width: ''
+  - direction: mst
+    name: m_apb
+    type: taxi_apb_if.mst
+    width: ''
   taxi_xfcp_mod_axi:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: snk
+    name: xfcp_usp_ds
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: xfcp_usp_us
+    type: taxi_axis_if.src
+    width: ''
+  - direction: wr_mst
+    name: m_axi_wr
+    type: taxi_axi_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axi_rd
+    type: taxi_axi_if.rd_mst
     width: ''
   taxi_xfcp_mod_i2c_master:
   - direction: in
@@ -133,10 +169,30 @@ top_ports:
     name: in
     type: wire
     width: ''
+  - direction: snk
+    name: xfcp_usp_ds
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: xfcp_usp_us
+    type: taxi_axis_if.src
+    width: ''
   taxi_xfcp_mod_stats:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: snk
+    name: xfcp_usp_ds
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: xfcp_usp_us
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: s_axis_stat
+    type: taxi_axis_if.snk
     width: ''
 total_entities: 7
 desc_source: curator

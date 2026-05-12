@@ -104,6 +104,26 @@ components:
 top_ports:
   xwr_core:
   - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_dmtd_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_ref_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_aux_i
+    type: std_logic_vector
+    width: g_aux_clks-1 downto 0
+  - direction: in
+    name: clk_ext_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: clk_ext_mul_i
     type: std_logic
     width: ''
@@ -120,7 +140,15 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: pps_ext_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dac_hpll_load_p1_o
     type: std_logic
     width: ''
   - direction: out
@@ -135,14 +163,18 @@ top_ports:
     name: dac_dpll_data_o
     type: std_logic_vector
     width: 15 downto 0
+  - direction: in
+    name: phy_ref_clk_i
+    type: std_logic
+    width: ''
   - direction: out
     name: phy_tx_data_o
-    type: std_logic_vector(f_pcs_data_width(g_pcs_16bit)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: f_pcs_data_width(g_pcs_16bit)-1 downto 0
   - direction: out
     name: phy_tx_k_o
-    type: std_logic_vector(f_pcs_k_width(g_pcs_16bit)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: f_pcs_k_width(g_pcs_16bit)-1 downto 0
   - direction: in
     name: phy_tx_disparity_i
     type: std_logic
@@ -153,24 +185,24 @@ top_ports:
     width: ''
   - direction: in
     name: phy_rx_data_i
-    type: std_logic_vector(f_pcs_data_width(g_pcs_16bit)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: f_pcs_data_width(g_pcs_16bit)-1 downto 0
   - direction: in
     name: phy_rx_rbclk_i
     type: std_logic
     width: ''
   - direction: in
     name: phy_rx_k_i
-    type: std_logic_vector(f_pcs_k_width(g_pcs_16bit)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: f_pcs_k_width(g_pcs_16bit)-1 downto 0
   - direction: in
     name: phy_rx_enc_err_i
     type: std_logic
     width: ''
   - direction: in
     name: phy_rx_bitslide_i
-    type: std_logic_vector(f_pcs_bts_width(g_pcs_16bit)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: f_pcs_bts_width(g_pcs_16bit)-1 downto 0
   - direction: out
     name: phy_rst_o
     type: std_logic
@@ -203,6 +235,10 @@ top_ports:
     name: phy_sfp_tx_disable_o
     type: std_logic
     width: ''
+  - direction: out
+    name: phy8_o
+    type: t_phy_8bits_from_wrc
+    width: ''
   - direction: in
     name: phy8_i
     type: t_phy_8bits_to_wrc
@@ -214,6 +250,10 @@ top_ports:
   - direction: in
     name: phy16_i
     type: t_phy_16bits_to_wrc
+    width: ''
+  - direction: out
+    name: led_act_o
+    type: std_logic
     width: ''
   - direction: out
     name: led_link_o
@@ -279,10 +319,18 @@ top_ports:
     name: spi_miso_i
     type: std_logic
     width: ''
+  - direction: in
+    name: uart_rxd_i
+    type: std_logic
+    width: ''
   - direction: out
     name: uart_txd_o
     type: std_logic
     width: ''
+  - direction: out
+    name: owr_pwren_o
+    type: std_logic_vector
+    width: 1 downto 0
   - direction: out
     name: owr_en_o
     type: std_logic_vector
@@ -291,6 +339,10 @@ top_ports:
     name: owr_i
     type: std_logic_vector
     width: 1 downto 0
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
+    width: ''
   - direction: out
     name: slave_o
     type: t_wishbone_slave_out
@@ -302,6 +354,10 @@ top_ports:
   - direction: in
     name: aux_master_i
     type: t_wishbone_master_in
+    width: ''
+  - direction: out
+    name: wrf_src_o
+    type: t_wrf_source_out
     width: ''
   - direction: in
     name: wrf_src_i
@@ -315,12 +371,24 @@ top_ports:
     name: wrf_snk_i
     type: t_wrf_sink_in
     width: ''
+  - direction: out
+    name: timestamps_o
+    type: t_txtsu_timestamp
+    width: ''
   - direction: in
     name: timestamps_ack_i
     type: std_logic
     width: ''
   - direction: out
+    name: abscal_txts_o
+    type: std_logic
+    width: ''
+  - direction: out
     name: abscal_rxts_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: fc_tx_pause_req_i
     type: std_logic
     width: ''
   - direction: in
@@ -332,9 +400,29 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: tm_link_up_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tm_dac_value_o
+    type: std_logic_vector
+    width: 23 downto 0
+  - direction: out
     name: tm_dac_wr_o
     type: std_logic_vector
     width: g_aux_clks-1 downto 0
+  - direction: in
+    name: tm_clk_aux_lock_en_i
+    type: std_logic_vector
+    width: g_aux_clks-1 downto 0
+  - direction: out
+    name: tm_clk_aux_locked_o
+    type: std_logic_vector
+    width: g_aux_clks-1 downto 0
+  - direction: out
+    name: tm_time_valid_o
+    type: std_logic
+    width: ''
   - direction: out
     name: tm_tai_o
     type: std_logic_vector
@@ -343,6 +431,10 @@ top_ports:
     name: tm_cycles_o
     type: std_logic_vector
     width: 27 downto 0
+  - direction: out
+    name: pps_csync_o
+    type: std_logic
+    width: ''
   - direction: out
     name: pps_p_o
     type: std_logic

@@ -802,6 +802,14 @@ top_ports:
     name: serial_o
     type: wire
     width: ''
+  - direction: '768'
+    name: kHz
+    type: '32.768'
+    width: ''
+  - direction: a
+    name: inter
+    type: k.a
+    width: ''
   clint_sync_wedge:
   - direction: in
     name: clk_i
@@ -854,6 +862,14 @@ top_ports:
   - direction: out
     name: serial_o
     type: wire
+    width: ''
+  - direction: '768'
+    name: kHz
+    type: '32.768'
+    width: ''
+  - direction: a
+    name: inter
+    type: k.a
     width: ''
   cva6_altera:
   - direction: in
@@ -1143,6 +1159,10 @@ top_ports:
   - direction: in
     name: hps_ref_clk
     type: wire
+    width: ''
+  - direction: '333'
+    name: MHz
+    type: '33.333'
     width: ''
   find_first_one:
   - direction: in
@@ -1555,6 +1575,14 @@ top_ports:
     name: irq_le_i
     type: wire
     width: '[NumSources-1:0]'
+  - direction: '768'
+    name: kHz
+    type: '32.768'
+    width: ''
+  - direction: a
+    name: inter
+    type: k.a
+    width: ''
   tc_sram_wrapper_256_64_00000008_00000001_00000001_none_0:
   - direction: in
     name: clk_i

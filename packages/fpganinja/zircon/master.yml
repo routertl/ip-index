@@ -68,10 +68,34 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis_pkt
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_ui_rx
+    type: taxi_axis_if.src
+    width: ''
   zircon_ip_rx_ingress:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_mac_rx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_pkt
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_meta_hdr
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_meta_len
+    type: taxi_axis_if.src
     width: ''
   zircon_ip_tx_buffer:
   - direction: in
@@ -82,15 +106,55 @@ top_ports:
     name: and
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis_pkt_ui
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_meta_len
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_pkt
+    type: taxi_axis_if.src
+    width: ''
   zircon_ip_tx_egress:
   - direction: in
     name: logic
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis_pkt
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: snk
+    name: s_axis_meta
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_mac_tx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: s_axis_mac_tx_cpl
+    type: taxi_axis_if.snk
+    width: ''
   zircon_ip_tx_ingress:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_ui_tx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_ui_tx_cpl
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_pkt
+    type: taxi_axis_if.src
     width: ''
 total_entities: 8
 desc_source: curator

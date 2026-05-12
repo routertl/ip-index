@@ -1,0 +1,89 @@
+name: ad_bus_mux
+namespace: analog-devices
+version: 1336749ccfa9
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
+description: Multiplexer with configurable parameters
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/common/ad_bus_mux.v
+tags:
+- ad
+- bus
+- multiplexer
+- mux
+role: top
+top_ports:
+  ad_bus_mux:
+  - direction: in
+    name: select_path
+    type: wire
+    width: ''
+  - direction: in
+    name: valid_in_0
+    type: wire
+    width: ''
+  - direction: in
+    name: enable_in_0
+    type: wire
+    width: ''
+  - direction: in
+    name: data_in_0
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: valid_in_1
+    type: wire
+    width: ''
+  - direction: in
+    name: enable_in_1
+    type: wire
+    width: ''
+  - direction: in
+    name: data_in_1
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: valid_out
+    type: wire
+    width: ''
+  - direction: out
+    name: enable_out
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

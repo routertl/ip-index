@@ -53,22 +53,33 @@ components:
 top_ports:
   olo_fix_add:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
     type: std_logic
     width: ''
   - direction: in
-    name: In_A
-    type: std_logic_vector(fixFmtWidthFromString(AFmt_g) - 1 downto 0)
+    name: In_Valid
+    type: std_logic
     width: ''
   - direction: in
+    name: In_A
+    type: std_logic_vector
+    width: fixFmtWidthFromString(AFmt_g) - 1 downto 0
+  - direction: in
     name: In_B
-    type: std_logic_vector(fixFmtWidthFromString(BFmt_g) - 1 downto 0)
+    type: std_logic_vector
+    width: fixFmtWidthFromString(BFmt_g) - 1 downto 0
+  - direction: out
+    name: Out_Valid
+    type: std_logic
     width: ''
   - direction: out
     name: Out_Result
-    type: "std_logic_vector(fixFmtWidthFromString(ResultFmt_g) - 1 downto 0)\n   \
-      \ )"
-    width: ''
+    type: std_logic_vector
+    width: fixFmtWidthFromString(ResultFmt_g) - 1 downto 0
 desc_source: header
 external_uses:
 - library: work

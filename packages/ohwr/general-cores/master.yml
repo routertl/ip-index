@@ -588,6 +588,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: clk_wr_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: d_i
     type: std_logic_vector
     width: g_data_width-1 downto 0
@@ -613,7 +617,11 @@ top_ports:
     width: ''
   - direction: out
     name: wr_count_o
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
+    type: std_logic_vector
+    width: f_log2_size(g_size)-1 downto 0
+  - direction: in
+    name: clk_rd_i
+    type: std_logic
     width: ''
   - direction: out
     name: q_o
@@ -641,56 +649,8 @@ top_ports:
     width: ''
   - direction: out
     name: rd_count_o
-    type: "std_logic_vector(f_log2_size(g_size)-1 downto 0)\n    )"
-    width: ''
-  - direction: out
-    name: rdempty
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wrempty
-    type: std_logic
-    width: ''
-  - direction: in
-    name: rdreq
-    type: std_logic
-    width: ''
-  - direction: in
-    name: aclr
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rdfull
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wrfull
-    type: std_logic
-    width: ''
-  - direction: in
-    name: rdclk
-    type: std_logic
-    width: ''
-  - direction: out
-    name: q
     type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: in
-    name: wrreq
-    type: std_logic
-    width: ''
-  - direction: in
-    name: data
-    type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: out
-    name: wrusedw
-    type: std_logic_vector (f_log2_size(g_size)-1 downto 0)
-    width: ''
-  - direction: out
-    name: rdusedw
-    type: std_logic_vector (f_log2_size(g_size)-1 downto 0)
-    width: ''
+    width: f_log2_size(g_size)-1 downto 0
   altera_sync_fifo:
   - direction: in
     name: rst_n_i
@@ -734,48 +694,8 @@ top_ports:
     width: ''
   - direction: out
     name: count_o
-    type: "std_logic_vector(f_log2_size(g_size)-1 downto 0)\n    )"
-    width: ''
-  - direction: in
-    name: sclr
-    type: std_logic
-    width: ''
-  - direction: out
-    name: usedw
-    type: std_logic_vector (f_log2_size(g_size)-1 downto 0)
-    width: ''
-  - direction: out
-    name: empty
-    type: std_logic
-    width: ''
-  - direction: out
-    name: full
-    type: std_logic
-    width: ''
-  - direction: out
-    name: q
     type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: in
-    name: wrreq
-    type: std_logic
-    width: ''
-  - direction: out
-    name: almost_empty
-    type: std_logic
-    width: ''
-  - direction: out
-    name: almost_full
-    type: std_logic
-    width: ''
-  - direction: in
-    name: data
-    type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: in
-    name: rdreq
-    type: std_logic
-    width: ''
+    width: f_log2_size(g_size)-1 downto 0
   axi4lite32_axi4full64_bridge:
   - direction: in
     name: clk_i
@@ -785,6 +705,10 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: s_awaddr
+    type: STD_LOGIC_VECTOR
+    width: 31 downto 0
   - direction: in
     name: s_awlen
     type: STD_LOGIC_VECTOR
@@ -882,6 +806,10 @@ top_ports:
     type: STD_LOGIC
     width: ''
   - direction: out
+    name: m_awaddr
+    type: STD_LOGIC_VECTOR
+    width: 31 downto 0
+  - direction: out
     name: m_awvalid
     type: STD_LOGIC
     width: ''
@@ -943,7 +871,7 @@ top_ports:
     width: ''
   - direction: out
     name: m_rready
-    type: "STD_LOGIC\n    )"
+    type: STD_LOGIC
     width: ''
   axi4lite_axi4full_bridge:
   - direction: in
@@ -954,6 +882,10 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: s_awaddr
+    type: STD_LOGIC_VECTOR
+    width: g_ADDR_WIDTH - 1 downto 0
   - direction: in
     name: s_awlen
     type: STD_LOGIC_VECTOR
@@ -984,8 +916,8 @@ top_ports:
     width: g_DATA_WIDTH - 1 downto 0
   - direction: in
     name: s_wstrb
-    type: STD_LOGIC_VECTOR ((g_DATA_WIDTH / 8) - 1 downto 0)
-    width: ''
+    type: STD_LOGIC_VECTOR
+    width: (g_DATA_WIDTH / 8) - 1 downto 0
   - direction: in
     name: s_wid
     type: STD_LOGIC_VECTOR
@@ -1071,6 +1003,10 @@ top_ports:
     type: STD_LOGIC
     width: ''
   - direction: out
+    name: m_awaddr
+    type: STD_LOGIC_VECTOR
+    width: g_ADDR_WIDTH - 1 downto 0
+  - direction: out
     name: m_awvalid
     type: STD_LOGIC
     width: ''
@@ -1084,8 +1020,8 @@ top_ports:
     width: g_DATA_WIDTH - 1 downto 0
   - direction: out
     name: m_wstrb
-    type: STD_LOGIC_VECTOR ((g_DATA_WIDTH / 8) - 1 downto 0)
-    width: ''
+    type: STD_LOGIC_VECTOR
+    width: (g_DATA_WIDTH / 8) - 1 downto 0
   - direction: out
     name: m_wvalid
     type: STD_LOGIC
@@ -1136,6 +1072,10 @@ top_ports:
     width: ''
   axi4lite_i2c_master:
   - direction: in
+    name: s_axi_aclk
+    type: std_logic
+    width: ''
+  - direction: in
     name: s_axi_aresetn
     type: std_logic
     width: ''
@@ -1161,8 +1101,8 @@ top_ports:
     width: C_S_AXI_DATA_WIDTH-1 downto 0
   - direction: in
     name: s_axi_wstrb
-    type: std_logic_vector((C_S_AXI_DATA_WIDTH/8)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (C_S_AXI_DATA_WIDTH/8)-1 downto 0
   - direction: in
     name: s_axi_wvalid
     type: std_logic
@@ -1215,6 +1155,10 @@ top_ports:
     name: s_axi_rready
     type: std_logic
     width: ''
+  - direction: in
+    name: i2c_scl_i
+    type: std_logic
+    width: ''
   - direction: out
     name: i2c_scl_o
     type: std_logic
@@ -1237,7 +1181,7 @@ top_ports:
     width: ''
   - direction: out
     name: irq_o
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   axi_gpio_expander:
   - direction: in
@@ -1262,6 +1206,10 @@ top_ports:
     width: g_num-1 downto 0
   - direction: in
     name: gpio_dir
+    type: std_logic_vector
+    width: g_num-1 downto 0
+  - direction: out
+    name: gpio_in
     type: std_logic_vector
     width: g_num-1 downto 0
   - direction: out
@@ -1334,8 +1282,8 @@ top_ports:
     width: 1 downto 0
   - direction: in
     name: RDATA
-    type: std_logic_vector (31 downto 0))
-    width: ''
+    type: std_logic_vector
+    width: 31 downto 0
   cheby_dpssram:
   - direction: in
     name: clk_a_i
@@ -1371,12 +1319,12 @@ top_ports:
     width: g_data_width-1 downto 0
   - direction: in
     name: bwsel_a_i
-    type: std_logic_vector((g_data_width+7)/8-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
   - direction: in
     name: bwsel_b_i
-    type: std_logic_vector((g_data_width+7)/8-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
   - direction: in
     name: rd_a_i
     type: std_logic
@@ -1391,36 +1339,100 @@ top_ports:
     width: ''
   - direction: in
     name: wr_b_i
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   dec_8b10b_ctrl:
   - direction: in
     name: clk_i
     type: std_logic
     width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_10b_i
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: ctrl_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: code_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rdisp_err_o
+    type: std_logic
+    width: ''
   - direction: out
     name: out_8b_o
-    type: "std_logic_vector(7 downto 0)\n      )"
-    width: ''
+    type: std_logic_vector
+    width: 7 downto 0
   dec_8b10b_disp:
   - direction: in
     name: clk_i
     type: std_logic
     width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_10b_i
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: ctrl_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: code_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rdisp_err_o
+    type: std_logic
+    width: ''
   - direction: out
     name: out_8b_o
-    type: "std_logic_vector(7 downto 0)\n      )"
-    width: ''
+    type: std_logic_vector
+    width: 7 downto 0
   dec_8b10b_lut:
   - direction: in
     name: clk_i
     type: std_logic
     width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_10b_i
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: ctrl_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: code_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rdisp_err_o
+    type: std_logic
+    width: ''
   - direction: out
     name: out_8b_o
-    type: "std_logic_vector(7 downto 0)\n      )"
-    width: ''
+    type: std_logic_vector
+    width: 7 downto 0
   flash_top:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
   - direction: in
     name: rstn_i
     type: std_logic
@@ -1434,28 +1446,16 @@ top_ports:
     type: t_wishbone_slave_out
     width: ''
   - direction: in
+    name: clk_ext_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: clk_out_i
     type: std_logic
     width: ''
   - direction: in
     name: clk_in_i
-    type: std_logic)
-    width: ''
-  - direction: in
-    name: ncs_i
     type: std_logic
-    width: ''
-  - direction: in
-    name: oe_i
-    type: std_logic_vector
-    width: g_port_width-1 downto 0
-  - direction: in
-    name: asdo_i
-    type: std_logic_vector
-    width: g_port_width-1 downto 0
-  - direction: out
-    name: data_o
-    type: std_logic_vector(g_port_width-1 downto 0))
     width: ''
   gc_arbitrated_mux:
   - direction: in
@@ -1466,6 +1466,30 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: d_i
+    type: std_logic_vector
+    width: g_num_inputs * g_width-1 downto 0
+  - direction: in
+    name: d_valid_i
+    type: std_logic_vector
+    width: g_num_inputs-1 downto 0
+  - direction: out
+    name: d_req_o
+    type: std_logic_vector
+    width: g_num_inputs-1 downto 0
+  - direction: out
+    name: q_o
+    type: std_logic_vector
+    width: g_width-1 downto 0
+  - direction: out
+    name: q_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q_input_id_o
+    type: std_logic_vector
+    width: f_log2_ceil(g_num_inputs)-1 downto 0
   gc_argb_led_drv:
   - direction: in
     name: clk_i
@@ -1475,6 +1499,10 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: g_i
+    type: std_logic_vector
+    width: 7 downto 0
   - direction: in
     name: r_i
     type: std_logic_vector
@@ -1487,6 +1515,43 @@ top_ports:
     name: valid_i
     type: std_logic
     width: ''
+  - direction: out
+    name: dout_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ready_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: res_o
+    type: std_logic
+    width: ''
+  gc_async_counter_diff:
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_inc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_dec_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: inc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dec_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: counter_o
+    type: std_logic_vector
+    width: g_bits downto 0
   gc_async_signals_input_stage:
   - direction: in
     name: clk_i
@@ -1496,6 +1561,26 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: signals_a_i
+    type: std_logic_vector
+    width: g_signal_num-1 downto 0
+  - direction: in
+    name: config_active_i
+    type: std_logic_vector
+    width: g_signal_num-1 downto 0
+  - direction: out
+    name: signals_o
+    type: std_logic_vector
+    width: g_signal_num-1 downto 0
+  - direction: out
+    name: signals_p1_o
+    type: std_logic_vector
+    width: g_signal_num-1 downto 0
+  - direction: out
+    name: signals_pN_o
+    type: std_logic_vector
+    width: g_signal_num-1 downto 0
   gc_bicolor_led_ctrl:
   - direction: in
     name: rst_n_i
@@ -1511,8 +1596,8 @@ top_ports:
     width: 6 downto 0
   - direction: in
     name: led_state_i
-    type: std_logic_vector((g_nb_line * g_nb_column * 2) - 1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (g_nb_line * g_nb_column * 2) - 1 downto 0
   - direction: out
     name: column_o
     type: std_logic_vector
@@ -1523,7 +1608,92 @@ top_ports:
     width: g_nb_line - 1 downto 0
   - direction: out
     name: line_oen_o
-    type: "std_logic_vector(g_nb_line - 1 downto 0)\n      )"
+    type: std_logic_vector
+    width: g_nb_line - 1 downto 0
+  gc_cic:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ratio_sel_i
+    type: std_logic_vector
+    width: g_RATIO_SEL_WIDTH-1 downto 0
+  - direction: out
+    name: ratio_changed_o
+    type: std_logic
+    width: ''
+  gc_cic_combs:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ratio_sel_i
+    type: std_logic_vector
+    width: g_RATIO_SEL_WIDTH-1 downto 0
+  - direction: out
+    name: ratio_changed_o
+    type: std_logic
+    width: ''
+  gc_cic_decimator:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ratio_sel_i
+    type: std_logic_vector
+    width: g_RATIO_SEL_WIDTH-1 downto 0
+  - direction: out
+    name: ratio_changed_o
+    type: std_logic
+    width: ''
+  gc_cic_integrators:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ratio_sel_i
+    type: std_logic_vector
+    width: g_RATIO_SEL_WIDTH-1 downto 0
+  - direction: out
+    name: ratio_changed_o
+    type: std_logic
+    width: ''
+  gc_cic_ratio_change_detect:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ratio_sel_i
+    type: std_logic_vector
+    width: g_RATIO_SEL_WIDTH-1 downto 0
+  - direction: out
+    name: ratio_changed_o
+    type: std_logic
     width: ''
   gc_comparator:
   - direction: in
@@ -1532,6 +1702,30 @@ top_ports:
     width: ''
   - direction: in
     name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pol_inv_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enable_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: inp_i
+    type: std_logic_vector
+    width: g_IN_WIDTH-1 downto 0
+  - direction: in
+    name: inn_i
+    type: std_logic_vector
+    width: g_IN_WIDTH-1 downto 0
+  - direction: in
+    name: hys_i
+    type: std_logic_vector
+    width: g_IN_WIDTH-1 downto 0
+  - direction: out
+    name: out_o
     type: std_logic
     width: ''
   - direction: out
@@ -1548,6 +1742,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: cor_mode_i
+    type: t_CORDIC_MODE
+    width: ''
+  - direction: in
     name: cor_submode_i
     type: t_CORDIC_SUBMODE
     width: ''
@@ -1559,6 +1757,30 @@ top_ports:
     name: lim_y_i
     type: std_logic
     width: ''
+  - direction: in
+    name: x0_i
+    type: std_logic_vector
+    width: g_M-1 downto 0
+  - direction: in
+    name: y0_i
+    type: std_logic_vector
+    width: g_M-1 downto 0
+  - direction: in
+    name: z0_i
+    type: std_logic_vector
+    width: g_M-1 downto 0
+  - direction: out
+    name: xn_o
+    type: std_logic_vector
+    width: g_M-1 downto 0
+  - direction: out
+    name: yn_o
+    type: std_logic_vector
+    width: g_M-1 downto 0
+  - direction: out
+    name: zn_o
+    type: std_logic_vector
+    width: g_M-1 downto 0
   - direction: out
     name: lim_x_o
     type: std_logic
@@ -1579,6 +1801,10 @@ top_ports:
   - direction: in
     name: rst_i
     type: std_logic
+    width: ''
+  - direction: in
+    name: mode_i
+    type: t_CORDIC_MODE
     width: ''
   - direction: in
     name: submode_i
@@ -1605,6 +1831,14 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: lim_y_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: x_o
+    type: std_logic_vector
+    width: g_WIDTH-1 downto 0
+  - direction: out
     name: y_o
     type: std_logic_vector
     width: g_WIDTH-1 downto 0
@@ -1622,26 +1856,70 @@ top_ports:
     width: ''
   - direction: out
     name: submode_o
-    type: "t_CORDIC_SUBMODE\n\n  )"
+    type: t_CORDIC_SUBMODE
     width: ''
   gc_crc_gen:
   - direction: in
     name: clk_i
     type: std_logic
     width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: en_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: half_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data_i
+    type: std_logic_vector
+    width: g_data_width - 1 downto 0
+  - direction: in
+    name: restart_i
+    type: std_logic
+    width: ''
   - direction: out
     name: match_o
     type: std_logic
     width: ''
+  - direction: out
+    name: crc_o
+    type: std_logic_vector
+    width: g_polynomial'length - 1 downto 0
   gc_dec_8b10b:
   - direction: in
     name: clk_i
     type: std_logic
     width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_10b_i
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: ctrl_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: code_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rdisp_err_o
+    type: std_logic
+    width: ''
   - direction: out
     name: out_8b_o
-    type: "std_logic_vector(7 downto 0)\n      )"
-    width: ''
+    type: std_logic_vector
+    width: 7 downto 0
   gc_delay_gen:
   - direction: in
     name: clk_i
@@ -1657,8 +1935,8 @@ top_ports:
     width: g_data_width - 1 downto 0
   - direction: out
     name: q_o
-    type: "std_logic_vector(g_data_width - 1 downto 0)\n       )"
-    width: ''
+    type: std_logic_vector
+    width: g_data_width - 1 downto 0
   gc_ds182x_interface:
   - direction: in
     name: clk_i
@@ -1672,6 +1950,26 @@ top_ports:
     name: pps_p_i
     type: std_logic
     width: ''
+  - direction: inout
+    name: onewire_b
+    type: std_logic
+    width: ''
+  - direction: out
+    name: id_o
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: temper_o
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: id_read_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: id_ok_o
+    type: std_logic
+    width: ''
   gc_dual_pi_controller:
   - direction: in
     name: clk_sys_i
@@ -1681,6 +1979,10 @@ top_ports:
     name: rst_n_sysclk_i
     type: std_logic
     width: ''
+  - direction: in
+    name: phase_err_i
+    type: std_logic_vector
+    width: g_error_bits-1 downto 0
   - direction: in
     name: phase_err_stb_p_i
     type: std_logic
@@ -1693,18 +1995,42 @@ top_ports:
     name: freq_err_stb_p_i
     type: std_logic
     width: ''
+  - direction: in
+    name: mode_sel_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dac_val_o
+    type: std_logic_vector
+    width: g_dacval_bits-1 downto 0
   - direction: out
     name: dac_val_stb_p_o
     type: std_logic
     width: ''
   - direction: in
+    name: pll_pcr_enable_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pll_pcr_force_f_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pll_fbgr_f_kp_i
+    type: std_logic_vector
+    width: g_coef_bits-1 downto 0
+  - direction: in
     name: pll_fbgr_f_ki_i
     type: std_logic_vector
     width: g_coef_bits-1 downto 0
   - direction: in
+    name: pll_pbgr_p_kp_i
+    type: std_logic_vector
+    width: g_coef_bits-1 downto 0
+  - direction: in
     name: pll_pbgr_p_ki_i
-    type: "std_logic_vector(g_coef_bits-1 downto 0)\n\n\n    )"
-    width: ''
+    type: std_logic_vector
+    width: g_coef_bits-1 downto 0
   gc_dyn_extend_pulse:
   - direction: in
     name: clk_i
@@ -1712,6 +2038,18 @@ top_ports:
     width: ''
   - direction: in
     name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pulse_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: len_i
+    type: std_logic_vector
+    width: g_len_width-1 downto 0
+  - direction: out
+    name: extended_o
     type: std_logic
     width: ''
   gc_dyn_glitch_filt:
@@ -1723,18 +2061,62 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: len_i
+    type: std_logic_vector
+    width: g_len_width-1 downto 0
+  - direction: in
+    name: dat_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dat_o
+    type: std_logic
+    width: ''
   gc_enc_8b10b:
   - direction: in
     name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ctrl_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_8b_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: err_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dispar_i
     type: std_logic
     width: ''
   - direction: out
     name: dispar_o
     type: std_logic
     width: ''
+  - direction: out
+    name: out_10b_o
+    type: std_logic_vector
+    width: 9 downto 0
   gc_freq_meas:
   - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_freq_i
     type: std_logic
     width: ''
   - direction: in
@@ -1742,7 +2124,15 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: freq_low_thr_sys_i
+    type: std_logic_vector
+    width: g_COUNTER_WIDTH-1 downto 0
+  - direction: in
     name: freq_high_thr_sys_i
+    type: std_logic_vector
+    width: g_COUNTER_WIDTH-1 downto 0
+  - direction: out
+    name: freq_value_sys_o
     type: std_logic_vector
     width: g_COUNTER_WIDTH-1 downto 0
   - direction: out
@@ -1763,7 +2153,7 @@ top_ports:
     width: ''
   - direction: out
     name: freq_ok_freq_o
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   gc_frequency_meter:
   - direction: in
@@ -1776,6 +2166,18 @@ top_ports:
     width: ''
   - direction: in
     name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pps_p1_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: freq_o
+    type: std_logic_vector
+    width: g_COUNTER_BITS-1 downto 0
+  - direction: out
+    name: freq_valid_o
     type: std_logic
     width: ''
   gc_integer_divide:
@@ -1817,7 +2219,7 @@ top_ports:
     width: ''
   - direction: out
     name: done_o
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   gc_iq_demodulator:
   - direction: in
@@ -1828,10 +2230,22 @@ top_ports:
     name: rst_i
     type: std_logic
     width: ''
+  - direction: in
+    name: sync_p1_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: adc_data_i
+    type: std_logic_vector
+    width: g_N-1 downto 0
+  - direction: out
+    name: i_o
+    type: std_logic_vector
+    width: g_N downto 0
   - direction: out
     name: q_o
-    type: "std_logic_vector(g_N downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: g_N downto 0
   gc_iq_demodulator_shifted:
   - direction: in
     name: clk_i
@@ -1842,13 +2256,29 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: sync_p1_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: adc_data_i
+    type: std_logic_vector
+    width: g_N_data-1 downto 0
+  - direction: in
+    name: phaseCos_i
+    type: std_logic_vector
+    width: g_N_coeff -1 downto 0
+  - direction: in
     name: phaseSin_i
     type: std_logic_vector
     width: g_N_coeff -1 downto 0
   - direction: out
+    name: i_o
+    type: std_logic_vector
+    width: g_N_data downto 0
+  - direction: out
     name: q_o
-    type: "std_logic_vector(g_N_data downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: g_N_data downto 0
   gc_iq_modulator:
   - direction: in
     name: clk_i
@@ -1880,8 +2310,8 @@ top_ports:
     width: g_N-1 downto 0
   - direction: out
     name: q_o
-    type: "std_logic_vector(g_N-1 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: g_N-1 downto 0
   gc_moving_average:
   - direction: in
     name: rst_n_i
@@ -1901,7 +2331,7 @@ top_ports:
     width: g_data_width+g_avg_log2-1 downto 0
   - direction: out
     name: dout_stb_o
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   gc_multichannel_frequency_meter:
   - direction: in
@@ -1935,6 +2365,18 @@ top_ports:
   gc_negedge:
   - direction: in
     name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pulse_o
     type: std_logic
     width: ''
   gc_pi_regulator:
@@ -1980,15 +2422,7 @@ top_ports:
     width: g_GAIN_BITS-1 downto 0
   - direction: out
     name: lim_o
-    type: "std_logic\n    )"
-    width: ''
-  - direction: out
-    name: o
-    type: signed
-    width: ''
-  - direction: out
-    name: lim
-    type: "std_logic) is\n\n    variable sum   : signed(o'length downto 0)"
+    type: std_logic
     width: ''
   gc_pipelined_fir_filter:
   - direction: in
@@ -2017,11 +2451,23 @@ top_ports:
     width: g_OUTPUT_BITS-1 downto 0
   - direction: out
     name: d_valid_o
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   gc_posedge:
   - direction: in
     name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pulse_o
     type: std_logic
     width: ''
   gc_reset:
@@ -2033,10 +2479,27 @@ top_ports:
     name: locked_i
     type: std_logic
     width: ''
+  - direction: in
+    name: clks_i
+    type: std_logic_vector
+    width: g_clocks-1 downto 0
   - direction: out
     name: rstn_o
-    type: std_logic_vector(g_clocks-1 downto 0))
+    type: std_logic_vector
+    width: g_clocks-1 downto 0
+  gc_reset_multi_aasd:
+  - direction: in
+    name: arst_i
+    type: std_logic
     width: ''
+  - direction: in
+    name: clks_i
+    type: std_logic_vector
+    width: g_CLOCKS-1 downto 0
+  - direction: out
+    name: rst_n_o
+    type: std_logic_vector
+    width: g_CLOCKS-1 downto 0
   gc_rr_arbiter:
   - direction: in
     name: clk_i
@@ -2056,27 +2519,70 @@ top_ports:
     width: g_size-1 downto 0
   - direction: out
     name: grant_comb_o
-    type: "std_logic_vector(g_size-1 downto 0)\n   )"
-    width: ''
-  - direction: out
-    name: therm_o
     type: std_logic_vector
-    width: g_width-1 downto 0
+    width: g_size-1 downto 0
   gc_scrambler_descrambler:
-  - direction: out
-    name: signal desc_data_o
-    type: std_logic_vector
+  - direction: in
+    name: clk_i
+    type: std_logic
     width: ''
-  - direction: inout
-    name: signal state
-    type: "std_logic_vector) is\n    variable shift_reg: std_logic_vector(c_max_order\
-      \ downto 0)"
-    width: ''
-  gc_serial_dac:
   - direction: in
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: aux_i
+    type: std_logic_vector
+    width: g_AUX_SIZE-1 downto 0
+  - direction: in
+    name: data_i
+    type: std_logic_vector
+    width: g_DATA_SIZE-1 downto 0
+  - direction: out
+    name: valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: aux_o
+    type: std_logic_vector
+    width: g_AUX_SIZE-1 downto 0
+  - direction: out
+    name: data_o
+    type: std_logic_vector
+    width: g_DATA_SIZE-1 downto 0
+  gc_serial_dac:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: value_i
+    type: std_logic_vector
+    width: g_num_data_bits-1 downto 0
+  - direction: in
+    name: cs_sel_i
+    type: std_logic_vector
+    width: g_num_cs_select-1 downto 0
+  - direction: in
+    name: load_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sclk_divsel_i
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: dac_cs_n_o
+    type: std_logic_vector
+    width: g_num_cs_select-1 downto 0
   - direction: out
     name: dac_sclk_o
     type: std_logic
@@ -2089,9 +2595,21 @@ top_ports:
     name: dac_sel_i
     type: std_logic_vector
     width: 2 downto 0
+  - direction: out
+    name: busy_o
+    type: std_logic
+    width: ''
   gc_sfp_i2c_adapter:
   - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: scl_i
     type: std_logic
     width: ''
   - direction: in
@@ -2100,6 +2618,27 @@ top_ports:
     width: ''
   - direction: out
     name: sda_en_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sfp_det_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sfp_data_i
+    type: std_logic_vector
+    width: 127 downto 0
+  gc_single_reset_gen:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_signals_n_a_i
+    type: std_logic_vector
+    width: g_rst_in_num-1 downto 0
+  - direction: out
+    name: rst_n_o
     type: std_logic
     width: ''
   gc_soft_ramp_switch:
@@ -2173,15 +2712,43 @@ top_ports:
     width: g_DATA_BITS-1 downto 0
   - direction: out
     name: y3_o
-    type: "std_logic_vector(g_DATA_BITS-1 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: g_DATA_BITS-1 downto 0
   gc_sync_word_rd:
+  - direction: in
+    name: clk_out_i
+    type: std_logic
+    width: ''
   - direction: in
     name: rst_out_n_i
     type: std_logic
     width: ''
   - direction: in
+    name: clk_in_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: rst_in_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data_in_i
+    type: std_logic_vector
+    width: g_WIDTH - 1 downto 0
+  - direction: in
+    name: rd_out_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ack_out_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: data_out_o
+    type: std_logic_vector
+    width: g_WIDTH - 1 downto 0
+  - direction: out
+    name: rd_in_o
     type: std_logic
     width: ''
   gc_word_packer:
@@ -2193,7 +2760,43 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: d_i
+    type: std_logic_vector
+    width: g_input_width-1 downto 0
+  - direction: in
+    name: d_valid_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: d_req_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: flush_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q_o
+    type: std_logic_vector
+    width: g_output_width-1 downto 0
+  - direction: out
+    name: q_valid_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: q_req_i
+    type: std_logic
+    width: ''
   generic_async_fifo_mixedw:
+  - direction: in
+    name: rst_n_a_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_wr_i
+    type: std_logic
+    width: ''
   - direction: in
     name: d_i
     type: std_logic_vector
@@ -2208,8 +2811,12 @@ top_ports:
     width: ''
   - direction: out
     name: wr_count_o
-    type: std_logic_vector(f_log2_size(g_size * ((g_rd_width + g_wr_width - 1) / g_wr_width))
-      downto 0)
+    type: std_logic_vector
+    width: f_log2_size(g_size * ((g_rd_width + g_wr_width - 1) / g_wr_width)) downto
+      0
+  - direction: in
+    name: clk_rd_i
+    type: std_logic
     width: ''
   - direction: out
     name: q_o
@@ -2225,26 +2832,30 @@ top_ports:
     width: ''
   - direction: out
     name: rd_count_o
-    type: "std_logic_vector(f_log2_size(g_size * ((g_rd_width + g_wr_width - 1) /\
-      \ g_rd_width)) downto 0)\n  )"
-    width: ''
+    type: std_logic_vector
+    width: f_log2_size(g_size * ((g_rd_width + g_wr_width - 1) / g_rd_width)) downto
+      0
   generic_dpram_dualclock:
   - direction: in
     name: rst_n_i
     type: std_logic
     width: ''
   - direction: in
-    name: bwea_i
-    type: std_logic_vector((g_data_width+7)/8-1 downto 0)
+    name: clka_i
+    type: std_logic
     width: ''
+  - direction: in
+    name: bwea_i
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
   - direction: in
     name: wea_i
     type: std_logic
     width: ''
   - direction: in
     name: aa_i
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: f_log2_size(g_size)-1 downto 0
   - direction: in
     name: da_i
     type: std_logic_vector
@@ -2254,42 +2865,103 @@ top_ports:
     type: std_logic_vector
     width: g_data_width-1 downto 0
   - direction: in
-    name: bweb_i
-    type: std_logic_vector((g_data_width+7)/8-1 downto 0)
+    name: clkb_i
+    type: std_logic
     width: ''
+  - direction: in
+    name: bweb_i
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
   - direction: in
     name: web_i
     type: std_logic
     width: ''
   - direction: in
     name: ab_i
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: f_log2_size(g_size)-1 downto 0
   - direction: in
     name: db_i
     type: std_logic_vector
     width: g_data_width-1 downto 0
   - direction: out
     name: qb_o
-    type: "std_logic_vector(g_data_width-1 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: g_data_width-1 downto 0
   generic_dpram_inst_7series:
   - direction: in
     name: rst_n_i
     type: std_logic
     width: ''
   - direction: in
-    name: bwea_i
-    type: std_logic_vector((g_data_width+7)/8-1 downto 0)
+    name: clka_i
+    type: std_logic
     width: ''
+  - direction: in
+    name: bwea_i
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
   - direction: in
     name: wea_i
     type: std_logic
     width: ''
   - direction: in
     name: aa_i
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
+    type: std_logic_vector
+    width: f_log2_size(g_size)-1 downto 0
+  - direction: in
+    name: da_i
+    type: std_logic_vector
+    width: g_data_width-1 downto 0
+  - direction: out
+    name: qa_o
+    type: std_logic_vector
+    width: g_data_width-1 downto 0
+  - direction: in
+    name: clkb_i
+    type: std_logic
     width: ''
+  - direction: in
+    name: bweb_i
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
+  - direction: in
+    name: web_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ab_i
+    type: std_logic_vector
+    width: f_log2_size(g_size)-1 downto 0
+  - direction: in
+    name: db_i
+    type: std_logic_vector
+    width: g_data_width-1 downto 0
+  - direction: out
+    name: qb_o
+    type: std_logic_vector
+    width: g_data_width-1 downto 0
+  generic_dpram_sameclock:
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: bwea_i
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
+  - direction: in
+    name: wea_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: aa_i
+    type: std_logic_vector
+    width: f_log2_size(g_size)-1 downto 0
   - direction: in
     name: da_i
     type: std_logic_vector
@@ -2300,82 +2972,24 @@ top_ports:
     width: g_data_width-1 downto 0
   - direction: in
     name: bweb_i
-    type: std_logic_vector((g_data_width+7)/8-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
   - direction: in
     name: web_i
     type: std_logic
     width: ''
   - direction: in
     name: ab_i
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: f_log2_size(g_size)-1 downto 0
   - direction: in
     name: db_i
     type: std_logic_vector
     width: g_data_width-1 downto 0
   - direction: out
     name: qb_o
-    type: std_logic_vector(g_data_width-1 downto 0))
-    width: ''
-  - direction: in
-    name: mem_size
-    type: integer
-    width: ''
-  - direction: in
-    name: mem_width
-    type: integer
-    width: ''
-  - direction: in
-    name: ram_idx
-    type: integer
-    width: ''
-  - direction: in
-    name: idx
-    type: "integer)\n  return bit_vector is\n    variable vec : bit_vector(255 downto\
-      \ 0)"
-    width: ''
-  generic_dpram_sameclock:
-  - direction: in
-    name: rst_n_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: bwea_i
-    type: std_logic_vector((g_data_width+7)/8-1 downto 0)
-    width: ''
-  - direction: in
-    name: wea_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: aa_i
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
-    width: ''
-  - direction: in
-    name: da_i
     type: std_logic_vector
     width: g_data_width-1 downto 0
-  - direction: out
-    name: qa_o
-    type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: in
-    name: web_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: ab_i
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
-    width: ''
-  - direction: in
-    name: db_i
-    type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: out
-    name: qb_o
-    type: "std_logic_vector(g_data_width-1 downto 0)\n    )"
-    width: ''
   generic_shiftreg_fifo:
   - direction: in
     name: rst_n_i
@@ -2411,23 +3025,7 @@ top_ports:
     width: ''
   - direction: out
     name: q_valid_o
-    type: "std_logic\n    )"
-    width: ''
-  - direction: in
-    name: en_i
     type: std_logic
-    width: ''
-  - direction: in
-    name: d_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: q_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: a_i
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0))
     width: ''
   generic_spram:
   - direction: in
@@ -2440,24 +3038,24 @@ top_ports:
     width: ''
   - direction: in
     name: bwe_i
-    type: std_logic_vector((g_data_width+7)/8-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
   - direction: in
     name: we_i
     type: std_logic
     width: ''
   - direction: in
     name: a_i
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: f_log2_size(g_size)-1 downto 0
   - direction: in
     name: d_i
     type: std_logic_vector
     width: g_data_width-1 downto 0
   - direction: out
     name: q_o
-    type: std_logic_vector(g_data_width-1 downto 0))
-    width: ''
+    type: std_logic_vector
+    width: g_data_width-1 downto 0
   lm32_cpu_full_debug:
   - direction: in
     name: clk_i
@@ -66157,6 +66755,14 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: irq_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_AXI_awaddr
+    type: std_logic_vector
+    width: 48 downto 0
   - direction: out
     name: S_AXI_awburst
     type: std_logic_vector
@@ -66238,10 +66844,30 @@ top_ports:
     name: clk125_i
     type: std_logic
     width: ''
+  - direction: in
+    name: cal_clk50_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pcie_refclk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pcie_rstn_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pcie_rx_i
+    type: std_logic_vector
+    width: 3 downto 0
   - direction: out
     name: pcie_tx_o
     type: std_logic_vector
     width: 3 downto 0
+  - direction: in
+    name: master_clk_i
+    type: std_logic
+    width: ''
   - direction: in
     name: master_rstn_i
     type: std_logic
@@ -66255,6 +66881,10 @@ top_ports:
     type: t_wishbone_master_in
     width: ''
   - direction: in
+    name: slave_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: slave_rstn_i
     type: std_logic
     width: ''
@@ -66264,7 +66894,7 @@ top_ports:
     width: ''
   - direction: out
     name: slave_o
-    type: t_wishbone_slave_out)
+    type: t_wishbone_slave_out
     width: ''
   secded_ecc:
   - direction: in
@@ -66275,6 +66905,10 @@ top_ports:
     name: rst_i
     type: std_logic
     width: ''
+  - direction: in
+    name: a_i
+    type: std_logic_vector
+    width: g_addr_width-1 downto 0
   - direction: in
     name: d_i
     type: std_logic_vector
@@ -66303,6 +66937,10 @@ top_ports:
     name: done_w_o
     type: std_logic
     width: ''
+  - direction: out
+    name: a_ram_o
+    type: std_logic_vector
+    width: g_addr_width-1 downto 0
   - direction: in
     name: d_ram_i
     type: std_logic_vector
@@ -66337,7 +66975,7 @@ top_ports:
     width: ''
   - direction: out
     name: double_error_p_o
-    type: "std_logic\n  )"
+    type: std_logic
     width: ''
   spi_top:
   - direction: out
@@ -66430,6 +67068,22 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: uart_sr_tx_busy_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: uart_sr_rx_rdy_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: uart_bcr_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: uart_tdr_tx_data_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
     name: uart_tdr_tx_data_i
     type: std_logic_vector
     width: 7 downto 0
@@ -66437,9 +67091,13 @@ top_ports:
     name: uart_tdr_tx_data_load_o
     type: std_logic
     width: ''
+  - direction: in
+    name: uart_rdr_rx_data_i
+    type: std_logic_vector
+    width: 7 downto 0
   - direction: out
     name: rdr_rack_o
-    type: "std_logic\n  )"
+    type: std_logic
     width: ''
   v6_hwfifo_wraper:
   - direction: in
@@ -66488,12 +67146,12 @@ top_ports:
     width: ''
   - direction: out
     name: rd_count_o
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: f_log2_size(g_size)-1 downto 0
   - direction: out
     name: wr_count_o
-    type: "std_logic_vector(f_log2_size(g_size)-1 downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: f_log2_size(g_size)-1 downto 0
   voter_vec_status:
   - direction: in
     name: a
@@ -66513,7 +67171,7 @@ top_ports:
     width: g_WIDTH - 1 downto 0
   - direction: out
     name: err
-    type: std_logic)
+    type: std_logic
     width: ''
   wb16_to_wb32:
   - direction: in
@@ -66538,7 +67196,7 @@ top_ports:
     width: ''
   - direction: out
     name: wb32_o
-    type: "t_wishbone_master_out\n  )"
+    type: t_wishbone_master_out
     width: ''
   wb_axi4lite_bridge:
   - direction: in
@@ -66667,7 +67325,7 @@ top_ports:
     width: ''
   - direction: in
     name: wb_stall
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   wb_conmax_top:
   - direction: in
@@ -66684,51 +67342,19 @@ top_ports:
     width: ''
   - direction: out
     name: wb_slaves_o
-    type: "t_conmax_slaves_o\n  )"
-    width: ''
-  - direction: in
-    name: rst_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wb_master_o
-    type: t_wb_o
-    width: ''
-  - direction: out
-    name: wb_slaves_o
-    type: "t_conmax_slaves_o\n    )"
-    width: ''
-  - direction: in
-    name: rst_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: conf_i
-    type: std_logic_vector
-    width: 15 downto 0
-  - direction: out
-    name: wb_slave_o
-    type: t_wb_i
-    width: ''
-  - direction: out
-    name: wb_masters_o
-    type: "t_conmax_masters_o\n    )"
-    width: ''
-  - direction: in
-    name: rst_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: int_wb_o
-    type: t_wb_o
-    width: ''
-  - direction: out
-    name: ext_wb_o
-    type: t_wb_i
+    type: t_conmax_slaves_o
     width: ''
   wb_i2c_bridge:
   - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: scl_i
     type: std_logic
     width: ''
   - direction: out
@@ -66751,12 +67377,24 @@ top_ports:
     name: sda_en_o
     type: std_logic
     width: ''
+  - direction: in
+    name: i2c_addr_i
+    type: std_logic_vector
+    width: 6 downto 0
+  - direction: out
+    name: tip_o
+    type: std_logic
+    width: ''
   - direction: out
     name: err_p_o
     type: std_logic
     width: ''
   - direction: out
     name: wdto_p_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wbm_stb_o
     type: std_logic
     width: ''
   - direction: out
@@ -66793,7 +67431,7 @@ top_ports:
     width: ''
   - direction: in
     name: wbm_err_i
-    type: "std_logic\n  )"
+    type: std_logic
     width: ''
   wb_irq_lm32:
   - direction: in
@@ -66824,11 +67462,31 @@ top_ports:
     name: irq_slave_o
     type: t_wishbone_slave_out_array
     width: g_msi_queues-1 downto 0
+  - direction: in
+    name: irq_slave_i
+    type: t_wishbone_slave_in_array
+    width: g_msi_queues-1 downto 0
   - direction: out
     name: ctrl_slave_o
     type: t_wishbone_slave_out
     width: ''
+  - direction: in
+    name: ctrl_slave_i
+    type: t_wishbone_slave_in
+    width: ''
   wb_irq_master:
+  - direction: out
+    name: irq_master_o
+    type: t_wishbone_master_out
+    width: ''
+  - direction: in
+    name: irq_master_i
+    type: t_wishbone_master_in
+    width: ''
+  - direction: out
+    name: ctrl_slave_o
+    type: t_wishbone_slave_out
+    width: ''
   - direction: in
     name: ctrl_slave_i
     type: t_wishbone_slave_in
@@ -66838,9 +67496,29 @@ top_ports:
     name: clk_sys_i
     type: std_logic
     width: ''
+  - direction: in
+    name: rst_sys_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tm_tai8ns_i
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: ctrl_slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  - direction: in
+    name: ctrl_slave_i
+    type: t_wishbone_slave_in
+    width: ''
   - direction: out
     name: irq_master_o
     type: t_wishbone_master_out
+    width: ''
+  - direction: in
+    name: irq_master_i
+    type: t_wishbone_master_in
     width: ''
   wb_serial_lcd:
   - direction: in
@@ -66881,6 +67559,10 @@ top_ports:
     width: ''
   wb_skidpad2:
   - direction: in
+    name: stb_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: adr_i
     type: std_logic_vector
     width: g_adrbits-1 downto 0
@@ -66890,14 +67572,18 @@ top_ports:
     width: g_datbits-1 downto 0
   - direction: in
     name: sel_i
-    type: std_logic_vector((g_datbits/8)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (g_datbits/8)-1 downto 0
   - direction: in
     name: we_i
     type: std_logic
     width: ''
   - direction: out
     name: stall_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: stb_o
     type: std_logic
     width: ''
   - direction: out
@@ -66910,15 +67596,15 @@ top_ports:
     width: g_datbits-1 downto 0
   - direction: out
     name: sel_o
-    type: std_logic_vector((g_datbits/8)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (g_datbits/8)-1 downto 0
   - direction: out
     name: we_o
     type: std_logic
     width: ''
   - direction: in
     name: stall_i
-    type: "std_logic\n )"
+    type: std_logic
     width: ''
   wbgen2_dpssram:
   - direction: in
@@ -66955,12 +67641,12 @@ top_ports:
     width: g_data_width-1 downto 0
   - direction: in
     name: bwsel_a_i
-    type: std_logic_vector((g_data_width+7)/8-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
   - direction: in
     name: bwsel_b_i
-    type: std_logic_vector((g_data_width+7)/8-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (g_data_width+7)/8-1 downto 0
   - direction: in
     name: rd_a_i
     type: std_logic
@@ -66975,79 +67661,11 @@ top_ports:
     width: ''
   - direction: in
     name: wr_b_i
-    type: "std_logic\n    )"
-    width: ''
-  - direction: in
-    name: clka_i
     type: std_logic
-    width: ''
-  - direction: in
-    name: bwea_i
-    type: std_logic_vector
-    width: g_data_width/8-1 downto 0
-  - direction: in
-    name: wea_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: aa_i
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
-    width: ''
-  - direction: in
-    name: da_i
-    type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: out
-    name: qa_o
-    type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: in
-    name: clkb_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: bweb_i
-    type: std_logic_vector
-    width: g_data_width/8-1 downto 0
-  - direction: in
-    name: web_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: ab_i
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
-    width: ''
-  - direction: in
-    name: db_i
-    type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: out
-    name: qb_o
-    type: std_logic_vector(g_data_width-1 downto 0))
     width: ''
   wbgen2_eic:
   - direction: in
     name: rst_n_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: reg_ier_wr_stb_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: reg_idr_i
-    type: std_logic_vector
-    width: g_num_interrupts-1 downto 0
-  - direction: in
-    name: reg_idr_wr_stb_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: reg_isr_i
-    type: std_logic_vector
-    width: g_num_interrupts-1 downto 0
-  - direction: in
-    name: reg_isr_wr_stb_i
     type: std_logic
     width: ''
   wbgen2_fifo_async:
@@ -67101,72 +67719,8 @@ top_ports:
     width: ''
   - direction: out
     name: wr_usedw_o
-    type: "std_logic_vector(g_usedw_size -1 downto 0)\n      )"
-    width: ''
-  - direction: in
-    name: clk_wr_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: d_i
     type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: in
-    name: we_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wr_empty_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wr_full_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wr_almost_empty_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wr_almost_full_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wr_count_o
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0)
-    width: ''
-  - direction: in
-    name: clk_rd_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: q_o
-    type: std_logic_vector
-    width: g_data_width-1 downto 0
-  - direction: in
-    name: rd_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rd_empty_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rd_full_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rd_almost_empty_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rd_almost_full_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rd_count_o
-    type: std_logic_vector(f_log2_size(g_size)-1 downto 0))
-    width: ''
+    width: g_usedw_size -1 downto 0
   xaxi4lite_wb_bridge:
   - direction: in
     name: clk_i
@@ -67198,8 +67752,44 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cpu_cs_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cpu_wr_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cpu_rd_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cpu_bs_n_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: cpu_addr_i
+    type: std_logic_vector
+    width: g_cpu_address_width-1 downto 0
+  - direction: inout
+    name: cpu_data_b
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: cpu_nwait_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: master_o
+    type: t_wishbone_master_out
+    width: ''
+  - direction: in
     name: master_i
-    type: "t_wishbone_master_in\n    )"
+    type: t_wishbone_master_in
     width: ''
   xwb_bus_fanout:
   - direction: in
@@ -67224,33 +67814,8 @@ top_ports:
     width: 0 to g_num_outputs-1
   - direction: out
     name: master_o
-    type: "t_wishbone_master_out_array(0 to g_num_outputs-1)\n    )"
-    width: ''
-  xwb_clock_bridge:
-  - direction: in
-    name: slave_rst_n_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: slave_i
-    type: t_wishbone_slave_in
-    width: ''
-  - direction: out
-    name: slave_o
-    type: t_wishbone_slave_out
-    width: ''
-  - direction: in
-    name: master_rst_n_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: master_i
-    type: t_wishbone_master_in
-    width: ''
-  - direction: out
-    name: master_o
-    type: t_wishbone_master_out
-    width: ''
+    type: t_wishbone_master_out_array
+    width: 0 to g_num_outputs-1
   xwb_clock_monitor:
   - direction: in
     name: rst_n_i
@@ -67274,7 +67839,7 @@ top_ports:
     width: ''
   - direction: out
     name: slave_o
-    type: "t_wishbone_slave_out\n    )"
+    type: t_wishbone_slave_out
     width: ''
   xwb_conmax:
   - direction: in
@@ -67299,76 +67864,8 @@ top_ports:
     width: 0 to g_num_masters-1
   - direction: out
     name: master_o
-    type: "t_wishbone_master_out_array(0 to g_num_masters-1)\n    )"
-    width: ''
-  - direction: in
-    name: rst_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_master_i
-    type: t_wishbone_slave_in
-    width: ''
-  - direction: out
-    name: wb_master_o
-    type: t_wishbone_slave_out
-    width: ''
-  - direction: in
-    name: wb_slaves_i
-    type: t_wishbone_master_in_array
-    width: 0 to 15
-  - direction: out
-    name: wb_slaves_o
-    type: t_wishbone_master_out_array(0 to 15))
-    width: ''
-  - direction: in
-    name: rst_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: conf_i
-    type: std_logic_vector
-    width: 15 downto 0
-  - direction: in
-    name: wb_slave_i
-    type: t_wishbone_master_in
-    width: ''
-  - direction: out
-    name: wb_slave_o
-    type: t_wishbone_master_out
-    width: ''
-  - direction: in
-    name: wb_masters_i
-    type: t_wishbone_slave_in_array
-    width: 0 to 7
-  - direction: out
-    name: wb_masters_o
-    type: t_wishbone_slave_out_array(0 to 7))
-    width: ''
-  - direction: in
-    name: rst_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: int_wb_i
-    type: t_wishbone_slave_in
-    width: ''
-  - direction: out
-    name: int_wb_o
-    type: t_wishbone_slave_out
-    width: ''
-  - direction: in
-    name: ext_wb_i
-    type: t_wishbone_master_in
-    width: ''
-  - direction: out
-    name: ext_wb_o
-    type: t_wishbone_master_out
-    width: ''
-  - direction: out
-    name: conf_o
-    type: t_conmax_rf_conf)
-    width: ''
+    type: t_wishbone_master_out_array
+    width: 0 to g_num_masters-1
   xwb_dpram:
   - direction: in
     name: clk_sys_i
@@ -67421,7 +67918,7 @@ top_ports:
     width: ''
   - direction: out
     name: slave2_o
-    type: "t_wishbone_slave_out\n    )"
+    type: t_wishbone_slave_out
     width: ''
   xwb_ds182x_readout:
   - direction: in
@@ -67444,6 +67941,10 @@ top_ports:
     name: pps_p_i
     type: std_logic
     width: ''
+  - direction: inout
+    name: onewire_b
+    type: std_logic
+    width: ''
   xwb_fine_pulse_gen:
   - direction: in
     name: clk_sys_i
@@ -67454,9 +67955,25 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: rst_sys_n_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: clk_ser_ext_i
     type: std_logic
     width: ''
+  - direction: in
+    name: ext_trigger_p_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pps_p_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pulse_o
+    type: std_logic_vector
+    width: g_num_channels-1 downto 0
   - direction: out
     name: clk_par_o
     type: std_logic
@@ -67467,7 +67984,7 @@ top_ports:
     width: ''
   - direction: out
     name: slave_o
-    type: "t_wishbone_slave_out\n    )"
+    type: t_wishbone_slave_out
     width: ''
   xwb_gpio_port:
   - direction: in
@@ -67478,6 +67995,10 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
+    width: ''
   - direction: out
     name: slave_o
     type: t_wishbone_slave_out
@@ -67485,62 +68006,6 @@ top_ports:
   - direction: out
     name: desc_o
     type: t_wishbone_device_descriptor
-    width: ''
-  - direction: inout
-    name: gpio_b
-    type: std_logic_vector
-    width: g_num_pins-1 downto 0
-  - direction: out
-    name: gpio_out_o
-    type: std_logic_vector
-    width: g_num_pins-1 downto 0
-  - direction: in
-    name: gpio_in_i
-    type: std_logic_vector
-    width: g_num_pins-1 downto 0
-  - direction: out
-    name: gpio_oen_o
-    type: "std_logic_vector(g_num_pins-1 downto 0)\n\n    )"
-    width: ''
-  - direction: in
-    name: rst_n_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_sel_i
-    type: std_logic_vector
-    width: c_wishbone_data_width/8-1 downto 0
-  - direction: in
-    name: wb_cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_stb_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_we_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_adr_i
-    type: std_logic_vector
-    width: 7 downto 0
-  - direction: in
-    name: wb_dat_i
-    type: std_logic_vector
-    width: c_wishbone_data_width-1 downto 0
-  - direction: out
-    name: wb_dat_o
-    type: std_logic_vector
-    width: c_wishbone_data_width-1 downto 0
-  - direction: out
-    name: wb_ack_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wb_stall_o
-    type: std_logic
     width: ''
   - direction: inout
     name: gpio_b
@@ -67587,6 +68052,26 @@ top_ports:
     name: scl_pad_i
     type: std_logic_vector
     width: g_num_interfaces-1 downto 0
+  - direction: out
+    name: scl_pad_o
+    type: std_logic_vector
+    width: g_num_interfaces-1 downto 0
+  - direction: out
+    name: scl_padoen_o
+    type: std_logic_vector
+    width: g_num_interfaces-1 downto 0
+  - direction: in
+    name: sda_pad_i
+    type: std_logic_vector
+    width: g_num_interfaces-1 downto 0
+  - direction: out
+    name: sda_pad_o
+    type: std_logic_vector
+    width: g_num_interfaces-1 downto 0
+  - direction: out
+    name: sda_padoen_o
+    type: std_logic_vector
+    width: g_num_interfaces-1 downto 0
   xwb_indirect:
   - direction: in
     name: rst_n_i
@@ -67610,7 +68095,7 @@ top_ports:
     width: ''
   - direction: out
     name: master_wb_o
-    type: "t_wishbone_master_out\n  )"
+    type: t_wishbone_master_out
     width: ''
   xwb_lm32_mcs:
   - direction: in
@@ -67647,127 +68132,7 @@ top_ports:
     width: ''
   - direction: in
     name: dwb_i
-    type: "t_wishbone_master_in\n    )"
-    width: ''
-  - direction: in
-    name: CLK
-    type: std_logic
-    width: ''
-  - direction: in
-    name: TRIG0
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: TRIG1
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: TRIG2
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: TRIG3
-    type: std_logic_vector(31 downto 0))
-    width: ''
-  - direction: in
-    name: enable_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: rst_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: interrupt
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: iram_i_adr_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: iram_i_dat_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: iram_i_en_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: iram_d_adr_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: iram_d_dat_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: iram_d_dat_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: iram_d_sel_o
-    type: std_logic_vector
-    width: 3 downto 0
-  - direction: out
-    name: iram_d_we_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: iram_d_en_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: D_DAT_O
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: D_ADR_O
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: D_CTI_O
-    type: std_logic_vector
-    width: 2 downto 0
-  - direction: out
-    name: D_BTE_O
-    type: std_logic_vector
-    width: 1 downto 0
-  - direction: out
-    name: D_lock_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: D_CYC_O
-    type: std_logic
-    width: ''
-  - direction: out
-    name: D_SEL_O
-    type: std_logic_vector
-    width: 3 downto 0
-  - direction: out
-    name: D_STB_O
-    type: std_logic
-    width: ''
-  - direction: out
-    name: D_WE_O
-    type: std_logic
-    width: ''
-  - direction: in
-    name: D_DAT_I
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: D_ACK_I
-    type: std_logic
-    width: ''
-  - direction: in
-    name: D_ERR_I
-    type: std_logic
-    width: ''
-  - direction: in
-    name: D_RTY_I
-    type: std_logic
+    type: t_wishbone_master_in
     width: ''
   xwb_metadata:
   - direction: in
@@ -67795,6 +68160,10 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
+    width: ''
   - direction: out
     name: slave_o
     type: t_wishbone_slave_out
@@ -67817,8 +68186,8 @@ top_ports:
     width: g_num_ports -1 downto 0
   - direction: in
     name: owr_i
-    type: "std_logic_vector(g_num_ports -1 downto 0)\n\n    )"
-    width: ''
+    type: std_logic_vector
+    width: g_num_ports -1 downto 0
   xwb_register:
   - direction: in
     name: rst_n_i
@@ -67884,7 +68253,7 @@ top_ports:
     width: ''
   - direction: out
     name: master_o
-    type: "t_wishbone_master_out\n    )"
+    type: t_wishbone_master_out
     width: ''
   xwb_sdb_crossbar:
   - direction: in
@@ -67895,6 +68264,10 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in_array
+    width: g_num_masters-1 downto 0
   - direction: out
     name: slave_o
     type: t_wishbone_slave_out_array
@@ -67907,6 +68280,10 @@ top_ports:
     name: msi_master_o
     type: t_wishbone_master_out_array
     width: g_num_masters-1 downto 0
+  - direction: in
+    name: master_i
+    type: t_wishbone_master_in_array
+    width: g_num_slaves -1 downto 0
   - direction: out
     name: master_o
     type: t_wishbone_master_out_array
@@ -67917,8 +68294,8 @@ top_ports:
     width: g_num_slaves -1 downto 0
   - direction: out
     name: msi_slave_o
-    type: t_wishbone_slave_out_array (g_num_slaves -1 downto 0))
-    width: ''
+    type: t_wishbone_slave_out_array
+    width: g_num_slaves -1 downto 0
   xwb_simple_pwm:
   - direction: in
     name: clk_sys_i
@@ -67928,53 +68305,13 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
+    width: ''
   - direction: out
     name: slave_o
     type: t_wishbone_slave_out
-    width: ''
-  - direction: out
-    name: pwm_o
-    type: "std_logic_vector(g_num_channels-1 downto 0)\n    )"
-    width: ''
-  - direction: in
-    name: rst_n_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_adr_i
-    type: std_logic_vector
-    width: 5 downto 0
-  - direction: in
-    name: wb_dat_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: wb_dat_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: wb_cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_sel_i
-    type: std_logic_vector
-    width: 3 downto 0
-  - direction: in
-    name: wb_stb_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_we_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wb_ack_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wb_stall_o
-    type: std_logic
     width: ''
   - direction: out
     name: pwm_o
@@ -67988,6 +68325,10 @@ top_ports:
   - direction: in
     name: rst_n_i
     type: std_logic
+    width: ''
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
     width: ''
   - direction: out
     name: slave_o
@@ -68026,26 +68367,46 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
+    width: ''
   - direction: out
     name: slave_o
     type: t_wishbone_slave_out
     width: ''
+  - direction: in
+    name: master_i
+    type: t_wishbone_master_in_array
+    width: 1 downto 0
   - direction: out
     name: master_o
     type: t_wishbone_master_out_array
     width: 1 downto 0
   xwb_streamer:
   - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: rst_n_i
     type: std_logic
+    width: ''
+  - direction: in
+    name: r_master_i
+    type: t_wishbone_master_in
     width: ''
   - direction: out
     name: r_master_o
     type: t_wishbone_master_out
     width: ''
+  - direction: in
+    name: w_master_i
+    type: t_wishbone_master_in
+    width: ''
   - direction: out
     name: w_master_o
-    type: t_wishbone_master_out)
+    type: t_wishbone_master_out
     width: ''
   xwb_tics:
   - direction: in
@@ -68056,58 +68417,30 @@ top_ports:
     name: rst_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
+    width: ''
   - direction: out
     name: slave_o
     type: t_wishbone_slave_out
     width: ''
   - direction: out
     name: desc_o
-    type: "t_wishbone_device_descriptor\n\n    )"
-    width: ''
-  - direction: in
-    name: clk_sys_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_adr_i
-    type: std_logic_vector
-    width: 3 downto 0
-  - direction: in
-    name: wb_dat_i
-    type: std_logic_vector
-    width: c_wishbone_data_width-1 downto 0
-  - direction: out
-    name: wb_dat_o
-    type: std_logic_vector
-    width: c_wishbone_data_width-1 downto 0
-  - direction: in
-    name: wb_cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_sel_i
-    type: std_logic_vector
-    width: c_wishbone_data_width/8-1 downto 0
-  - direction: in
-    name: wb_stb_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_we_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wb_ack_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wb_stall_o
-    type: std_logic
+    type: t_wishbone_device_descriptor
     width: ''
   xwb_vic:
   - direction: in
     name: clk_sys_i
     type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
     width: ''
   - direction: out
     name: slave_o
@@ -68117,6 +68450,10 @@ top_ports:
     name: irqs_i
     type: std_logic_vector
     width: g_num_interrupts-1 downto 0
+  - direction: out
+    name: irq_master_o
+    type: std_logic
+    width: ''
   xwb_vuart:
   - direction: in
     name: clk_sys_i
@@ -68125,6 +68462,10 @@ top_ports:
   - direction: in
     name: rst_n_i
     type: std_logic
+    width: ''
+  - direction: in
+    name: host_i
+    type: t_wishbone_slave_in
     width: ''
   - direction: out
     name: host_o
@@ -68165,179 +68506,27 @@ top_ports:
     width: ''
   - direction: in
     name: flash_miso_i
-    type: "std_logic\n  )"
+    type: std_logic
     width: ''
   xwb_xil_multiboot:
   - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: rst_n_i
     type: std_logic
+    width: ''
+  - direction: in
+    name: wbs_i
+    type: t_wishbone_slave_in
     width: ''
   - direction: out
     name: wbs_o
     type: t_wishbone_slave_out
     width: ''
   - direction: out
-    name: spi_sclk_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: spi_mosi_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: spi_miso_i
-    type: "std_logic\n  )"
-    width: ''
-  - direction: in
-    name: clk_sys_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_adr_i
-    type: std_logic_vector
-    width: 2 downto 0
-  - direction: in
-    name: wb_dat_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: wb_dat_o
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: wb_cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_sel_i
-    type: std_logic_vector
-    width: 3 downto 0
-  - direction: in
-    name: wb_stb_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_we_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wb_ack_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wb_stall_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: reg_cr_iprog_unlock_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: reg_cr_iprog_unlock_load_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: reg_cr_iprog_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: reg_cr_iprog_load_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: reg_sr_wdto_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: reg_sr_wdto_load_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: reg_far_data_i
-    type: std_logic_vector
-    width: 23 downto 0
-  - direction: out
-    name: reg_far_data_load_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: rst_n_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: reg_cfgregadr_i
-    type: std_logic_vector
-    width: 5 downto 0
-  - direction: in
-    name: reg_iprog_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: reg_mbbar_i
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: reg_cfgreg_img_o
-    type: std_logic_vector
-    width: 15 downto 0
-  - direction: out
-    name: reg_cfgreg_valid_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: reg_far_data_o
-    type: std_logic_vector
-    width: 23 downto 0
-  - direction: in
-    name: reg_far_nbytes_i
-    type: std_logic_vector
-    width: 1 downto 0
-  - direction: in
-    name: reg_far_xfer_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: reg_far_cs_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: reg_far_ready_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: spi_cs_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: spi_data_i
-    type: std_logic_vector
-    width: 7 downto 0
-  - direction: out
-    name: spi_data_o
-    type: std_logic_vector
-    width: 7 downto 0
-  - direction: in
-    name: spi_ready_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: icap_dat_o
-    type: std_logic_vector
-    width: 15 downto 0
-  - direction: in
-    name: icap_busy_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: icap_ce_n_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: icap_wr_n_o
-    type: "std_logic\n    )"
-    width: ''
-  - direction: in
-    name: rst_n_i
+    name: spi_cs_n_o
     type: std_logic
     width: ''
   - direction: out
@@ -68350,7 +68539,7 @@ top_ports:
     width: ''
   - direction: in
     name: spi_miso_i
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   xwb_xilinx_fpga_loader:
   - direction: in
@@ -68372,78 +68561,6 @@ top_ports:
   - direction: out
     name: desc_o
     type: t_wishbone_device_descriptor
-    width: ''
-  - direction: out
-    name: xlx_cclk_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: xlx_din_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: xlx_program_b_o
-    type: std_logic
-    width: ''
-  - direction: in
-    name: xlx_init_b_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: xlx_done_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: xlx_suspend_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: xlx_m_o
-    type: std_logic_vector
-    width: 1 downto 0
-  - direction: out
-    name: gpio_o
-    type: "std_logic_vector(7 downto 0)\n    )"
-    width: ''
-  - direction: in
-    name: rst_n_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_cyc_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_stb_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_we_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: wb_adr_i
-    type: std_logic_vector
-    width: c_wishbone_address_width - 1 downto 0
-  - direction: in
-    name: wb_sel_i
-    type: std_logic_vector((c_wishbone_data_width + 7) / 8 - 1 downto 0)
-    width: ''
-  - direction: in
-    name: wb_dat_i
-    type: std_logic_vector
-    width: c_wishbone_data_width-1 downto 0
-  - direction: out
-    name: wb_dat_o
-    type: std_logic_vector
-    width: c_wishbone_data_width-1 downto 0
-  - direction: out
-    name: wb_ack_o
-    type: std_logic
-    width: ''
-  - direction: out
-    name: wb_stall_o
-    type: std_logic
     width: ''
   - direction: out
     name: xlx_cclk_o

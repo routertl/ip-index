@@ -126,12 +126,8 @@ top_ports:
     width: ''
   - direction: out
     name: Q
-    type: std_logic_vector(LPM_WIDTH-1 downto 0))
-    width: ''
-  - direction: in
-    name: pos
-    type: "integer) is\n\tsubtype nstring is string(1 to pos)"
-    width: ''
+    type: std_logic_vector
+    width: LPM_WIDTH-1 downto 0
   LPM_ROM:
   - direction: in
     name: ADDRESS
@@ -151,12 +147,8 @@ top_ports:
     width: ''
   - direction: out
     name: Q
-    type: STD_LOGIC_VECTOR(LPM_WIDTH-1 downto 0))
-    width: ''
-  - direction: in
-    name: pos
-    type: "integer) is\n\tsubtype nstring is string(1 to pos)"
-    width: ''
+    type: STD_LOGIC_VECTOR
+    width: LPM_WIDTH-1 downto 0
   t49_rom:
   - direction: in
     name: clk_i
@@ -225,11 +217,7 @@ top_ports:
     width: 7 downto 0
   - direction: out
     name: prog_n_o
-    type: "std_logic\n  )"
-    width: ''
-  - direction: in
-    name: low_imp
-    type: "std_logic) return std_logic_vector is\n      variable result_v : std_logic_vector(port_value'range)"
+    type: std_logic
     width: ''
   t8048:
   - direction: in
@@ -286,13 +274,13 @@ top_ports:
     width: 7 downto 0
   - direction: out
     name: prog_n_o
-    type: "std_logic\n  )"
-    width: ''
-  - direction: in
-    name: low_imp
-    type: "std_logic) return std_logic_vector is\n      variable result_v : std_logic_vector(port_value'range)"
+    type: std_logic
     width: ''
   t8050_wb:
+  - direction: in
+    name: xtal_i
+    type: std_logic
+    width: ''
   - direction: in
     name: reset_n_i
     type: std_logic
@@ -370,6 +358,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: wb_cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
     name: wb_stb_o
     type: std_logic
     width: ''
@@ -391,14 +383,42 @@ top_ports:
     width: 7 downto 0
   - direction: out
     name: wb_dat_o
-    type: "std_logic_vector( 7 downto 0)\n\n  )"
-    width: ''
+    type: std_logic_vector
+    width: 7 downto 0
   t8243:
+  - direction: in
+    name: cs_n_i
+    type: std_logic
+    width: ''
   - direction: in
     name: prog_n_i
     type: std_logic
     width: ''
+  - direction: inout
+    name: p2_b
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: inout
+    name: p4_b
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: inout
+    name: p5_b
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: inout
+    name: p6_b
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: inout
+    name: p7_b
+    type: std_logic_vector
+    width: 3 downto 0
   t8243_sync_notri:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
   - direction: in
     name: clk_en_i
     type: std_logic
@@ -408,9 +428,17 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: cs_n_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: prog_n_i
     type: std_logic
     width: ''
+  - direction: in
+    name: p2_i
+    type: std_logic_vector
+    width: 3 downto 0
   - direction: out
     name: p2_o
     type: std_logic_vector
@@ -419,6 +447,10 @@ top_ports:
     name: p2_en_o
     type: std_logic
     width: ''
+  - direction: in
+    name: p4_i
+    type: std_logic_vector
+    width: 3 downto 0
   - direction: out
     name: p4_o
     type: std_logic_vector
@@ -427,6 +459,10 @@ top_ports:
     name: p4_en_o
     type: std_logic
     width: ''
+  - direction: in
+    name: p5_i
+    type: std_logic_vector
+    width: 3 downto 0
   - direction: out
     name: p5_o
     type: std_logic_vector
@@ -435,6 +471,10 @@ top_ports:
     name: p5_en_o
     type: std_logic
     width: ''
+  - direction: in
+    name: p6_i
+    type: std_logic_vector
+    width: 3 downto 0
   - direction: out
     name: p6_o
     type: std_logic_vector
@@ -443,13 +483,17 @@ top_ports:
     name: p6_en_o
     type: std_logic
     width: ''
+  - direction: in
+    name: p7_i
+    type: std_logic_vector
+    width: 3 downto 0
   - direction: out
     name: p7_o
     type: std_logic_vector
     width: 3 downto 0
   - direction: out
     name: p7_en_o
-    type: "std_logic\n  )"
+    type: std_logic
     width: ''
 total_entities: 29
 desc_source: verdict

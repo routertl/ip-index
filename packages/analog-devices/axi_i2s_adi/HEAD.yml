@@ -1,8 +1,8 @@
 name: axi_i2s_adi
 namespace: analog-devices
 version: HEAD
-commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
-published_at: '2026-05-11T12:02:04+03:00'
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
 description: AXI4-Lite with AXI4-Stream interface and memory interface
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
@@ -11,7 +11,7 @@ source:
   url: https://github.com/analogdevicesinc/hdl.git
   tag: main
   ip_yml_path: .
-  resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 routertl_compat:
   language: vhdl-2008
   library: work
@@ -26,6 +26,10 @@ tags:
 role: top
 top_ports:
   axi_i2s_adi:
+  - direction: in
+    name: data_clk_i
+    type: std_logic
+    width: ''
   - direction: out
     name: bclk_o
     type: std_logic_vector
@@ -42,6 +46,10 @@ top_ports:
     name: sdata_i
     type: std_logic_vector
     width: NUM_OF_CHANNEL - 1 downto 0
+  - direction: in
+    name: s_axis_aclk
+    type: std_logic
+    width: ''
   - direction: in
     name: s_axis_aresetn
     type: std_logic
@@ -60,6 +68,10 @@ top_ports:
     width: ''
   - direction: in
     name: s_axis_tvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: m_axis_aclk
     type: std_logic
     width: ''
   - direction: in
@@ -82,6 +94,10 @@ top_ports:
     name: m_axis_tkeep
     type: std_logic_vector
     width: 3 downto 0
+  - direction: in
+    name: dma_req_tx_aclk
+    type: std_logic
+    width: ''
   - direction: in
     name: dma_req_tx_rstn
     type: std_logic
@@ -112,6 +128,10 @@ top_ports:
     width: ''
   - direction: in
     name: dma_req_tx_drready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dma_req_rx_aclk
     type: std_logic
     width: ''
   - direction: in
@@ -147,6 +167,10 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: s_axi_aclk
+    type: std_logic
+    width: ''
+  - direction: in
     name: s_axi_aresetn
     type: std_logic
     width: ''
@@ -164,8 +188,8 @@ top_ports:
     width: S_AXI_DATA_WIDTH-1 downto 0
   - direction: in
     name: s_axi_wstrb
-    type: std_logic_vector((S_AXI_DATA_WIDTH/8)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: (S_AXI_DATA_WIDTH/8)-1 downto 0
   - direction: in
     name: s_axi_wvalid
     type: std_logic
@@ -224,8 +248,8 @@ top_ports:
     width: 2 downto 0
   - direction: in
     name: s_axi_arprot
-    type: "std_logic_vector(2 downto 0)\n\n\t)"
-    width: ''
+    type: std_logic_vector
+    width: 2 downto 0
 desc_source: ports
 external_uses:
 - library: work

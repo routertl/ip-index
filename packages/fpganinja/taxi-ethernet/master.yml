@@ -171,25 +171,113 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis_tx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_tx_cpl
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_rx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_stat
+    type: taxi_axis_if.src
+    width: ''
   taxi_eth_mac_1g_fifo:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_tx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_tx_cpl
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_rx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_stat
+    type: taxi_axis_if.src
     width: ''
   taxi_eth_mac_1g_gmii_fifo:
   - direction: in
     name: logic
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis_tx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_tx_cpl
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_rx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_stat
+    type: taxi_axis_if.src
+    width: ''
   taxi_eth_mac_1g_rgmii_fifo:
   - direction: in
     name: logic
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis_tx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_tx_cpl
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_rx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_stat
+    type: taxi_axis_if.src
+    width: ''
   taxi_eth_mac_25g_us:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: slv
+    name: s_apb_ctrl
+    type: taxi_apb_if.slv
+    width: ''
+  - direction: snk
+    name: s_axis_tx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_tx_cpl
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_rx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: '3'
+    name: annex
+    type: '802.3'
+    width: ''
+  - direction: src
+    name: m_axis_stat
+    type: taxi_axis_if.src
     width: ''
   taxi_eth_mac_mii_fifo:
   - direction: in
@@ -240,15 +328,55 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis_tx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_tx_cpl
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_rx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_stat
+    type: taxi_axis_if.src
+    width: ''
   taxi_eth_mac_phy_10g_fifo:
   - direction: in
     name: logic
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis_tx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_tx_cpl
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_rx
+    type: taxi_axis_if.src
+    width: ''
+  - direction: src
+    name: m_axis_stat
+    type: taxi_axis_if.src
+    width: ''
   taxi_mdio_master:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_cmd
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_rd_data
+    type: taxi_axis_if.src
     width: ''
 total_entities: 54
 desc_source: curator

@@ -42,9 +42,17 @@ components:
 top_ports:
   olo_axi_pl_stage:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
     type: std_logic
     width: ''
+  - direction: in
+    name: S_AwId
+    type: std_logic_vector
+    width: IdWidth_g - 1 downto 0
   - direction: in
     name: S_AwAddr
     type: std_logic_vector
@@ -94,6 +102,10 @@ top_ports:
     type: std_logic_vector
     width: 3 downto 0
   - direction: in
+    name: S_WData
+    type: std_logic_vector
+    width: DataWidth_g - 1 downto 0
+  - direction: in
     name: S_WStrb
     type: std_logic_vector
     width: DataWidth_g / 8 - 1 downto 0
@@ -114,6 +126,10 @@ top_ports:
     type: std_logic_vector
     width: UserWidth_g - 1 downto 0
   - direction: out
+    name: S_BId
+    type: std_logic_vector
+    width: IdWidth_g - 1 downto 0
+  - direction: out
     name: S_BResp
     type: std_logic_vector
     width: 1 downto 0
@@ -129,6 +145,10 @@ top_ports:
     name: S_BUser
     type: std_logic_vector
     width: UserWidth_g - 1 downto 0
+  - direction: in
+    name: S_ArId
+    type: std_logic_vector
+    width: IdWidth_g - 1 downto 0
   - direction: in
     name: S_ArAddr
     type: std_logic_vector
@@ -178,6 +198,10 @@ top_ports:
     type: std_logic_vector
     width: 3 downto 0
   - direction: out
+    name: S_RId
+    type: std_logic_vector
+    width: IdWidth_g - 1 downto 0
+  - direction: out
     name: S_RData
     type: std_logic_vector
     width: DataWidth_g - 1 downto 0
@@ -201,6 +225,10 @@ top_ports:
     name: S_RUser
     type: std_logic_vector
     width: UserWidth_g - 1 downto 0
+  - direction: out
+    name: M_AwId
+    type: std_logic_vector
+    width: IdWidth_g - 1 downto 0
   - direction: out
     name: M_AwAddr
     type: std_logic_vector
@@ -250,6 +278,10 @@ top_ports:
     type: std_logic_vector
     width: 3 downto 0
   - direction: out
+    name: M_WData
+    type: std_logic_vector
+    width: DataWidth_g - 1 downto 0
+  - direction: out
     name: M_WStrb
     type: std_logic_vector
     width: DataWidth_g / 8 - 1 downto 0
@@ -270,6 +302,10 @@ top_ports:
     type: std_logic_vector
     width: UserWidth_g - 1 downto 0
   - direction: in
+    name: M_BId
+    type: std_logic_vector
+    width: IdWidth_g - 1 downto 0
+  - direction: in
     name: M_BResp
     type: std_logic_vector
     width: 1 downto 0
@@ -285,6 +321,10 @@ top_ports:
     name: M_BUser
     type: std_logic_vector
     width: UserWidth_g - 1 downto 0
+  - direction: out
+    name: M_ArId
+    type: std_logic_vector
+    width: IdWidth_g - 1 downto 0
   - direction: out
     name: M_ArAddr
     type: std_logic_vector
@@ -333,6 +373,10 @@ top_ports:
     name: M_ArRegion
     type: std_logic_vector
     width: 3 downto 0
+  - direction: in
+    name: M_RId
+    type: std_logic_vector
+    width: IdWidth_g - 1 downto 0
   - direction: in
     name: M_RData
     type: std_logic_vector

@@ -1,0 +1,175 @@
+name: axi_ad9361_lvds_if_10
+namespace: analog-devices
+version: 1336749ccfa9
+commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+published_at: '2026-05-12T15:24:37+03:00'
+description: Interfaces AD9361 with AXI.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/axi_ad9361/intel/axi_ad9361_lvds_if_10.v
+tags:
+- '10'
+- ad9361
+- amba
+- axi
+- bus
+- differential
+- low
+- lvds
+- signaling
+- voltage
+role: top
+top_ports:
+  axi_ad9361_lvds_if_10:
+  - direction: in
+    name: rx_clk_in_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_in_n
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_frame_in_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_frame_in_n
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_data_in_p
+    type: wire
+    width: '[ 5:0]'
+  - direction: in
+    name: rx_data_in_n
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: tx_clk_out_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_clk_out_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_frame_out_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_frame_out_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_data_out_p
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: tx_data_out_n
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: out
+    name: txnrx
+    type: wire
+    width: ''
+  - direction: out
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_frame
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: rx_data_0
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: rx_data_1
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: rx_data_2
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: rx_data_3
+    type: wire
+    width: '[ 5:0]'
+  - direction: in
+    name: tx_frame
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: tx_data_0
+    type: wire
+    width: '[ 5:0]'
+  - direction: in
+    name: tx_data_1
+    type: wire
+    width: '[ 5:0]'
+  - direction: in
+    name: tx_data_2
+    type: wire
+    width: '[ 5:0]'
+  - direction: in
+    name: tx_data_3
+    type: wire
+    width: '[ 5:0]'
+  - direction: in
+    name: tx_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_txnrx
+    type: wire
+    width: ''
+  - direction: out
+    name: locked
+    type: wire
+    width: ''
+  - direction: in
+    name: up_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rstn
+    type: wire
+    width: ''
+desc_source: preserved
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

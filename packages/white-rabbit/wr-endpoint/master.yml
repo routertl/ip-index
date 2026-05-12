@@ -126,9 +126,17 @@ top_ports:
     type: std_logic
     width: ''
   - direction: in
+    name: rx_pause_p1_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: rx_pause_delay_i
     type: std_logic_vector
     width: 15 downto 0
+  - direction: out
+    name: tx_pause_o
+    type: std_logic
+    width: ''
   - direction: out
     name: tx_pause_delay_o
     type: std_logic_vector
@@ -137,6 +145,14 @@ top_ports:
     name: tx_pause_ack_i
     type: std_logic
     width: ''
+  - direction: out
+    name: tx_flow_enable_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rx_buffer_used_i
+    type: std_logic_vector
+    width: 7 downto 0
   - direction: in
     name: ep_fcr_txpause_i
     type: std_logic
@@ -196,7 +212,7 @@ top_ports:
     width: ''
   - direction: out
     name: cntr_overflow_o
-    type: "std_logic\n    )"
+    type: std_logic
     width: ''
   ep_rx_bypass_queue:
   - direction: in
@@ -241,31 +257,7 @@ top_ports:
     width: ''
   - direction: out
     name: empty_o
-    type: "std_logic\n    )"
-    width: ''
-  - direction: in
-    name: ce_i
     type: std_logic
-    width: ''
-  - direction: in
-    name: d_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: q_o
-    type: std_logic)
-    width: ''
-  - direction: in
-    name: ce_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: d_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: q_o
-    type: std_logic)
     width: ''
   ep_shift_reg:
   - direction: in
@@ -310,31 +302,7 @@ top_ports:
     width: ''
   - direction: out
     name: empty_o
-    type: "std_logic\n    )"
-    width: ''
-  - direction: in
-    name: ce_i
     type: std_logic
-    width: ''
-  - direction: in
-    name: d_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: q_o
-    type: std_logic)
-    width: ''
-  - direction: in
-    name: ce_i
-    type: std_logic
-    width: ''
-  - direction: in
-    name: d_i
-    type: std_logic
-    width: ''
-  - direction: out
-    name: q_o
-    type: std_logic)
     width: ''
   ep_tx_framer:
   - direction: in
@@ -344,6 +312,10 @@ top_ports:
   - direction: in
     name: rst_n_i
     type: std_logic
+    width: ''
+  - direction: out
+    name: pcs_fab_o
+    type: t_ep_internal_fabric
     width: ''
   - direction: in
     name: pcs_error_i
@@ -357,25 +329,69 @@ top_ports:
     name: pcs_dreq_i
     type: std_logic
     width: ''
+  - direction: in
+    name: snk_i
+    type: t_wrf_sink_in
+    width: ''
   - direction: out
     name: snk_o
     type: t_wrf_sink_out
+    width: ''
+  - direction: in
+    name: fc_pause_p_i
+    type: std_logic
     width: ''
   - direction: in
     name: fc_pause_delay_i
     type: std_logic_vector
     width: 15 downto 0
   - direction: out
+    name: fc_pause_ack_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: fc_flow_enable_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: txtsu_port_id_o
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: out
+    name: txtsu_fid_o
+    type: std_logic_vector
+    width: 16 -1 downto 0
+  - direction: out
+    name: txtsu_ts_value_o
+    type: std_logic_vector
+    width: 28 + 4 - 1 downto 0
+  - direction: out
     name: txtsu_ts_incorrect_o
     type: std_logic
     width: ''
+  - direction: out
+    name: txtsu_stb_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: txtsu_ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: txts_timestamp_i
+    type: std_logic_vector
+    width: 31 downto 0
   - direction: in
     name: txts_timestamp_valid_i
     type: std_logic
     width: ''
   - direction: in
+    name: ep_ctrl_i
+    type: std_logic
+    width: ''
+  - direction: in
     name: regs_i
-    type: "t_ep_out_registers\n\n    )"
+    type: t_ep_out_registers
     width: ''
 total_entities: 37
 desc_source: curator

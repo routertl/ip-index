@@ -97,11 +97,23 @@ top_ports:
     type: std_logic
     width: ''
   - direction: out
+    name: wb_ack_o
+    type: std_logic
+    width: ''
+  - direction: out
     name: wb_dat_o
     type: std_logic_vector
     width: DATA_WIDTH - 1 downto 0
   - direction: out
     name: rx_int_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: i2s_sck_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: i2s_ws_o
     type: std_logic
     width: ''
   rx_i2s_tops:
@@ -149,15 +161,31 @@ top_ports:
     name: i2s_sd_i
     type: std_logic
     width: ''
+  - direction: in
+    name: i2s_sck_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: i2s_ws_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_logic
+    width: ''
   - direction: out
     name: wb_dat_o
     type: std_logic_vector
     width: DATA_WIDTH - 1 downto 0
   - direction: out
     name: rx_int_o
-    type: std_logic)
+    type: std_logic
     width: ''
   tx_i2s_topm:
+  - direction: in
+    name: wb_clk_i
+    type: std_logic
+    width: ''
   - direction: in
     name: wb_rst_i
     type: std_logic
@@ -203,12 +231,20 @@ top_ports:
     type: std_logic_vector
     width: DATA_WIDTH - 1 downto 0
   - direction: out
+    name: tx_int_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: i2s_sd_o
+    type: std_logic
+    width: ''
+  - direction: out
     name: i2s_sck_o
     type: std_logic
     width: ''
   - direction: out
     name: i2s_ws_o
-    type: std_logic)
+    type: std_logic
     width: ''
   tx_i2s_tops:
   - direction: in
@@ -273,7 +309,7 @@ top_ports:
     width: ''
   - direction: out
     name: i2s_sd_o
-    type: std_logic)
+    type: std_logic
     width: ''
 total_entities: 8
 desc_source: verdict

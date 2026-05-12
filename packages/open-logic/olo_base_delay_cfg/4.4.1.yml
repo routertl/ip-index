@@ -57,21 +57,29 @@ components:
 top_ports:
   olo_base_delay_cfg:
   - direction: in
+    name: Clk
+    type: std_logic
+    width: ''
+  - direction: in
     name: Rst
     type: std_logic
     width: ''
   - direction: in
     name: Delay
-    type: std_logic_vector(log2ceil(MaxDelay_g+1)-1 downto 0)
-    width: ''
+    type: std_logic_vector
+    width: log2ceil(MaxDelay_g+1)-1 downto 0
+  - direction: in
+    name: In_Data
+    type: std_logic_vector
+    width: Width_g - 1 downto 0
   - direction: in
     name: In_Valid
     type: std_logic
     width: ''
   - direction: out
     name: Out_Data
-    type: "std_logic_vector((Width_g - 1) downto 0)\n    )"
-    width: ''
+    type: std_logic_vector
+    width: (Width_g - 1) downto 0
 desc_source: header
 external_uses:
 - library: work

@@ -71,5 +71,13 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
 total_entities: 8
 desc_source: curator

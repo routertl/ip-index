@@ -83,16 +83,8 @@ top_ports:
     width: 31 downto 0
   - direction: out
     name: c32
-    type: "std_logic_vector(31 downto 0)\n\t)"
-    width: ''
-  - direction: in
-    name: datab
     type: std_logic_vector
-    width: lpm_widthb-1 downto 0
-  - direction: out
-    name: result
-    type: "std_logic_vector( lpm_widthp-1 downto 0 )\n\t)"
-    width: ''
+    width: 31 downto 0
   ema32x3:
   - direction: in
     name: clk
@@ -116,16 +108,8 @@ top_ports:
     width: 31 downto 0
   - direction: out
     name: res32
-    type: "std_logic_vector (31 downto 0)\n\t\t\n\t\t\t\t\t\t\n\t\n\t)"
-    width: ''
-  - direction: in
-    name: datab
     type: std_logic_vector
-    width: lpm_widthb-1 downto 0
-  - direction: out
-    name: result
-    type: "std_logic_vector( lpm_widthp-1 downto 0 )\n\t)"
-    width: ''
+    width: 31 downto 0
   func:
   - direction: in
     name: ad0
@@ -141,44 +125,12 @@ top_ports:
     width: ''
   - direction: out
     name: q0
-    type: "std_logic_vector(qwidth-1 downto 0)\n\t)"
-    width: ''
+    type: std_logic_vector
+    width: qwidth-1 downto 0
   - direction: out
     name: q1
-    type: "std_logic_vector(qwidth-1 downto 0)\n\t)"
-    width: ''
-  - direction: in
-    name: wren_a
-    type: STD_LOGIC
-    width: ''
-  - direction: in
-    name: address_b
-    type: STD_LOGIC_VECTOR
-    width: 8 DOWNTO 0
-  - direction: in
-    name: data_b
-    type: STD_LOGIC_VECTOR
-    width: 17 DOWNTO 0
-  - direction: out
-    name: q_a
-    type: STD_LOGIC_VECTOR
-    width: 17 DOWNTO 0
-  - direction: in
-    name: wren_b
-    type: STD_LOGIC
-    width: ''
-  - direction: in
-    name: address_a
-    type: STD_LOGIC_VECTOR
-    width: 8 DOWNTO 0
-  - direction: in
-    name: data_a
-    type: STD_LOGIC_VECTOR
-    width: 17 DOWNTO 0
-  - direction: out
-    name: q_b
-    type: "STD_LOGIC_VECTOR (17 DOWNTO 0)\n\t)"
-    width: ''
+    type: std_logic_vector
+    width: qwidth-1 downto 0
   invr32:
   - direction: in
     name: clk
@@ -190,16 +142,8 @@ top_ports:
     width: 31 downto 0
   - direction: out
     name: qout32
-    type: "std_logic_vector(31 downto 0)\n\t)"
-    width: ''
-  - direction: in
-    name: address_a
     type: std_logic_vector
-    width: 9 downto 0
-  - direction: out
-    name: q_a
-    type: "std_logic_vector (17 downto 0)\n\t)"
-    width: ''
+    width: 31 downto 0
   memblock:
   - direction: in
     name: clk
@@ -283,40 +227,8 @@ top_ports:
     width: 11 downto 0
   - direction: in
     name: w
-    type: "std_logic\n\n\t)"
-    width: ''
-  - direction: in
-    name: clock0
     type: std_logic
     width: ''
-  - direction: in
-    name: wren_b
-    type: std_logic
-    width: ''
-  - direction: in
-    name: address_a
-    type: std_logic_vector
-    width: 6 downto 0
-  - direction: in
-    name: address_b
-    type: std_logic_vector
-    width: 6 downto 0
-  - direction: out
-    name: q_a
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: out
-    name: q_b
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: data_a
-    type: std_logic_vector
-    width: 31 downto 0
-  - direction: in
-    name: data_b
-    type: std_logic_vector
-    width: 31 downto 0
   mul2:
   - direction: in
     name: clk
@@ -332,16 +244,8 @@ top_ports:
     width: 31 downto 0
   - direction: out
     name: p32
-    type: "std_logic_vector(31 downto 0)\n\t\t\n\t)"
-    width: ''
-  - direction: in
-    name: datab
     type: std_logic_vector
-    width: lpm_widthb-1 downto 0
-  - direction: out
-    name: result
-    type: "std_logic_vector ( lpm_widthp-1 downto 0 )\n\t)"
-    width: ''
+    width: 31 downto 0
   raytrac:
   - direction: in
     name: A
@@ -359,6 +263,34 @@ top_ports:
     name: D
     type: std_logic_vector
     width: 18*3-1 downto 0
+  - direction: in
+    name: opcode
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addcode
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ena
+    type: std_logic
+    width: ''
+  - direction: out
+    name: sqrt0
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: sqrt1
+    type: std_logic_vector
+    width: 17 downto 0
   - direction: out
     name: addABx
     type: std_logic_vector
@@ -383,6 +315,74 @@ top_ports:
     name: addCDz
     type: std_logic_vector
     width: 17 downto 0
+  - direction: out
+    name: subABx
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: subABy
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: subABz
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: subCDx
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: subCDy
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: subCDz
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: CPX
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: CPY
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: CPZ
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: DP0
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: DP1
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: kvx0
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: kvy0
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: kvz0
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: kvx1
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: kvy1
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: kvz1
+    type: std_logic_vector
+    width: 31 downto 0
   sqrt32:
   - direction: in
     name: clk
@@ -394,16 +394,8 @@ top_ports:
     width: 31 downto 0
   - direction: out
     name: sq32
-    type: "std_logic_vector(31 downto 0)\n\t)"
-    width: ''
-  - direction: in
-    name: address_a
     type: std_logic_vector
-    width: 9 downto 0
-  - direction: out
-    name: q_a
-    type: "std_logic_vector (17 downto 0)\n\t)"
-    width: ''
+    width: 31 downto 0
   sqrtdiv:
   - direction: in
     name: clk
@@ -427,8 +419,8 @@ top_ports:
     width: 15 downto 0
   - direction: out
     name: inv
-    type: "std_logic_vector (16 downto 0)\n\t)"
-    width: ''
+    type: std_logic_vector
+    width: 16 downto 0
 total_entities: 19
 desc_source: verdict
 health_tier: bronze
