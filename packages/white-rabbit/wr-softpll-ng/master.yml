@@ -45,11 +45,11 @@ role: subproject
 top_modules:
 - spll_bangbang_pd
 - spll_period_detect
+- xwr_softpll_ng
 components:
 - spll_aligner
 - spll_wb_slave
 - wr_softpll_ng
-- xwr_softpll_ng
 top_ports:
   spll_bangbang_pd:
   - direction: in
@@ -149,6 +149,111 @@ top_ports:
     name: in_sel_i
     type: std_logic_vector
     width: 4 downto 0
+  xwr_softpll_ng:
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_sys_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_ref_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_ext_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_dmtd_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_ref_i
+    type: std_logic_vector
+    width: g_num_ref_inputs-1 downto 0
+  - direction: in
+    name: clk_fb_i
+    type: std_logic_vector
+    width: g_num_outputs-1 downto 0
+  - direction: in
+    name: clk_dmtd_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_ext_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_ext_mul_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_ext_mul_locked_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_ext_stopped_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: clk_ext_rst_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pps_csync_p1_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pps_ext_a_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dac_dmtd_data_o
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: dac_dmtd_load_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dac_out_data_o
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: dac_out_sel_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: dac_out_load_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: out_enable_i
+    type: std_logic_vector
+    width: g_num_outputs-1 downto 0
+  - direction: out
+    name: out_locked_o
+    type: std_logic_vector
+    width: g_num_outputs-1 downto 0
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  - direction: out
+    name: debug_o
+    type: std_logic_vector
+    width: 5 downto 0
+  - direction: out
+    name: dbg_fifo_irq_o
+    type: std_logic
+    width: ''
 total_entities: 6
 desc_source: curator
 external_uses:

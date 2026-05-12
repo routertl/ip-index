@@ -60,6 +60,7 @@ tags:
 role: subproject
 top_modules:
 - taxi_debounce_switch
+- taxi_irq_rate_limit
 - taxi_led_sreg
 - taxi_lfsr_crc
 - taxi_lfsr_descramble
@@ -68,19 +69,18 @@ top_modules:
 - taxi_lfsr_scramble
 - taxi_mmcm_frac
 - taxi_mt19937
+- taxi_penc
 - taxi_ram_1r1w_1c
 - taxi_ram_1r1w_2c
 - taxi_ram_1rw
-- taxi_ram_2rw_2c
-components:
-- taxi_irq_rate_limit
-- taxi_lfsr
-- taxi_penc
 - taxi_ram_2rw_1c
+- taxi_ram_2rw_2c
 - taxi_stats_collect
 - taxi_stats_counter
 - taxi_stats_strings_full
 - taxi_sync_reset
+components:
+- taxi_lfsr
 - taxi_sync_signal
 top_ports:
   taxi_debounce_switch:
@@ -95,6 +95,19 @@ top_ports:
   - direction: in
     name: logic
     type: wire
+    width: ''
+  taxi_irq_rate_limit:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_irq
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_irq
+    type: taxi_axis_if.src
     width: ''
   taxi_led_sreg:
   - direction: out
@@ -272,6 +285,19 @@ top_ports:
     name: m_axis
     type: taxi_axis_if.src
     width: ''
+  taxi_penc:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: bits
+    type: wire
+    width: ''
   taxi_ram_1r1w_1c:
   - direction: in
     name: logic
@@ -287,7 +313,60 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  taxi_ram_2rw_1c:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
   taxi_ram_2rw_2c:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_stats_collect:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: src
+    name: m_axis_stat
+    type: taxi_axis_if.src
+    width: ''
+  taxi_stats_counter:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_stat
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
+  taxi_stats_strings_full:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: mon
+    name: s_axis_stat
+    type: taxi_axis_if.mon
+    width: ''
+  - direction: wr_slv
+    name: s_axil_wr
+    type: taxi_axil_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: s_axil_rd
+    type: taxi_axil_if.rd_slv
+    width: ''
+  taxi_sync_reset:
   - direction: in
     name: logic
     type: wire

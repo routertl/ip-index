@@ -58,27 +58,302 @@ tags:
 - register
 role: subproject
 top_modules:
-- taxi_axis_fifo_adapter
-- taxi_axis_mux
-- taxi_axis_null_snk
-- taxi_axis_pipeline_fifo
-- taxi_axis_pipeline_register
-- taxi_axis_switch
-components:
-- taxi_axis_adapter
 - taxi_axis_arb_mux
-- taxi_axis_async_fifo
 - taxi_axis_async_fifo_adapter
 - taxi_axis_broadcast
 - taxi_axis_cobs_decode
 - taxi_axis_cobs_encode
 - taxi_axis_concat
 - taxi_axis_demux
-- taxi_axis_fifo
+- taxi_axis_fifo_adapter
+- taxi_axis_mux
+- taxi_axis_null_snk
 - taxi_axis_null_src
-- taxi_axis_register
+- taxi_axis_pipeline_fifo
+- taxi_axis_pipeline_register
+- taxi_axis_switch
 - taxi_axis_tie
+components:
+- taxi_axis_adapter
+- taxi_axis_async_fifo
+- taxi_axis_fifo
+- taxi_axis_register
 top_ports:
+  taxi_axis_arb_mux:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: empty
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
+  taxi_axis_async_fifo_adapter:
+  - direction: out
+    name: FIFO
+    type: wire
+    width: ''
+  - direction: in
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: bus
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
+  taxi_axis_broadcast:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: empty
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
+  taxi_axis_cobs_decode:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: final
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tdata_int
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: empty
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
+  taxi_axis_cobs_encode:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: if
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: empty
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
+  taxi_axis_concat:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: empty
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
+  taxi_axis_demux:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: empty
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
   taxi_axis_fifo_adapter:
   - direction: out
     name: FIFO
@@ -150,6 +425,11 @@ top_ports:
     name: s_axis
     type: taxi_axis_if.snk
     width: ''
+  taxi_axis_null_src:
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
   taxi_axis_pipeline_fifo:
   - direction: in
     name: logic
@@ -189,6 +469,15 @@ top_ports:
     name: logic
     type: wire
     width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
+  taxi_axis_tie:
   - direction: snk
     name: s_axis
     type: taxi_axis_if.snk

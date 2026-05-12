@@ -44,11 +44,11 @@ role: subproject
 top_modules:
 - si5340_i2c_init
 - taxi_i2c_init
+- taxi_i2c_master
 - taxi_i2c_single_reg
 - taxi_i2c_slave_apb_master
 - taxi_i2c_slave_axil_master
 components:
-- taxi_i2c_master
 - taxi_i2c_slave
 top_ports:
   si5340_i2c_init:
@@ -107,6 +107,35 @@ top_ports:
     width: ''
   - direction: src
     name: m_axis_tx
+    type: taxi_axis_if.src
+    width: ''
+  taxi_i2c_master:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_cmd
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: snk
+    name: s_axis_tx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_rx
     type: taxi_axis_if.src
     width: ''
   taxi_i2c_single_reg:

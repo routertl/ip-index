@@ -35,10 +35,25 @@ tags:
 - uart
 - universal
 role: subproject
-components:
+top_modules:
 - taxi_uart
+components:
 - taxi_uart_brg
 - taxi_uart_rx
 - taxi_uart_tx
+top_ports:
+  taxi_uart:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_tx
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_rx
+    type: taxi_axis_if.src
+    width: ''
 total_entities: 4
 desc_source: curator

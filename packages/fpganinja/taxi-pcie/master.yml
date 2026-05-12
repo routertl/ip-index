@@ -53,20 +53,57 @@ tags:
 - peripheral
 role: subproject
 top_modules:
+- taxi_dma_if_pcie_us
 - taxi_pcie_axil_master
 - taxi_pcie_axil_master_minimal
 - taxi_pcie_msix_apb
 - taxi_pcie_msix_axil
-components:
-- taxi_dma_if_pcie_us
-- taxi_dma_if_pcie_us_rd
-- taxi_dma_if_pcie_us_wr
 - taxi_pcie_us_axil_master
 - taxi_pcie_us_cfg
 - taxi_pcie_us_msi
 - taxi_pcie_us_vpd
 - taxi_pcie_us_vsec_apb
+components:
+- taxi_dma_if_pcie_us_rd
+- taxi_dma_if_pcie_us_wr
 top_ports:
+  taxi_dma_if_pcie_us:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: src
+    name: m_axis_rq
+    type: taxi_axis_if.src
+    width: ''
+  - direction: snk
+    name: s_axis_rc
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: req_snk
+    name: rd_desc_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: rd_desc_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: req_snk
+    name: wr_desc_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: wr_desc_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: wr_mst
+    name: dma_ram_wr
+    type: taxi_dma_ram_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: dma_ram_rd
+    type: taxi_dma_ram_if.rd_mst
+    width: ''
   taxi_pcie_axil_master:
   - direction: in
     name: logic
@@ -146,6 +183,83 @@ top_ports:
   - direction: src
     name: tx_wr_req_tlp
     type: taxi_pcie_tlp_if.src
+    width: ''
+  taxi_pcie_us_axil_master:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_cc_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_cq
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_cc
+    type: taxi_axis_if.src
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
+    width: ''
+  taxi_pcie_us_cfg:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_pcie_us_msi:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_pcie_us_vpd:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: mst
+    name: m_apb
+    type: taxi_apb_if.mst
+    width: ''
+  taxi_pcie_us_vsec_apb:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: wr_mst
+    name: m_axil_wr
+    type: taxi_axil_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: m_axil_rd
+    type: taxi_axil_if.rd_mst
     width: ''
 total_entities: 12
 desc_source: curator

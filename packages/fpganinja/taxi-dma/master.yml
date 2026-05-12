@@ -53,22 +53,72 @@ tags:
 - stream
 role: subproject
 top_modules:
+- taxi_dma_client_axis_sink
+- taxi_dma_client_axis_source
 - taxi_dma_if_axi
+- taxi_dma_if_mux
+- taxi_dma_psdpram
 - taxi_dma_psdpram_async
 - taxi_dma_ram_demux
 components:
-- taxi_dma_client_axis_sink
-- taxi_dma_client_axis_source
 - taxi_dma_desc_mux
 - taxi_dma_if_axi_rd
 - taxi_dma_if_axi_wr
-- taxi_dma_if_mux
 - taxi_dma_if_mux_rd
 - taxi_dma_if_mux_wr
-- taxi_dma_psdpram
 - taxi_dma_ram_demux_rd
 - taxi_dma_ram_demux_wr
 top_ports:
+  taxi_dma_client_axis_sink:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: req_snk
+    name: desc_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: desc_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: snk
+    name: s_axis_wr_data
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: wr_mst
+    name: dma_ram_wr
+    type: taxi_dma_ram_if.wr_mst
+    width: ''
+  taxi_dma_client_axis_source:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: req_snk
+    name: desc_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: desc_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: src
+    name: m_axis_rd_data
+    type: taxi_axis_if.src
+    width: ''
+  - direction: rd_mst
+    name: dma_ram_rd
+    type: taxi_dma_ram_if.rd_mst
+    width: ''
   taxi_dma_if_axi:
   - direction: in
     name: logic
@@ -105,6 +155,80 @@ top_ports:
   - direction: rd_mst
     name: dma_ram_rd
     type: taxi_dma_ram_if.rd_mst
+    width: ''
+  taxi_dma_if_mux:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: req_snk
+    name: client_rd_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: client_rd_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: req_snk
+    name: client_wr_req
+    type: taxi_dma_desc_if.req_snk
+    width: ''
+  - direction: sts_src
+    name: client_wr_sts
+    type: taxi_dma_desc_if.sts_src
+    width: ''
+  - direction: req_src
+    name: dma_rd_req
+    type: taxi_dma_desc_if.req_src
+    width: ''
+  - direction: sts_snk
+    name: dma_rd_sts
+    type: taxi_dma_desc_if.sts_snk
+    width: ''
+  - direction: req_src
+    name: dma_wr_req
+    type: taxi_dma_desc_if.req_src
+    width: ''
+  - direction: sts_snk
+    name: dma_wr_sts
+    type: taxi_dma_desc_if.sts_snk
+    width: ''
+  - direction: wr_slv
+    name: dma_ram_wr
+    type: taxi_dma_ram_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: dma_ram_rd
+    type: taxi_dma_ram_if.rd_slv
+    width: ''
+  - direction: wr_mst
+    name: client_ram_wr
+    type: taxi_dma_ram_if.wr_mst
+    width: ''
+  - direction: rd_mst
+    name: client_ram_rd
+    type: taxi_dma_ram_if.rd_mst
+    width: ''
+  taxi_dma_psdpram:
+  - direction: out
+    name: pipeline
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: wr_slv
+    name: dma_ram_wr
+    type: taxi_dma_ram_if.wr_slv
+    width: ''
+  - direction: rd_slv
+    name: dma_ram_rd
+    type: taxi_dma_ram_if.rd_slv
     width: ''
   taxi_dma_psdpram_async:
   - direction: out

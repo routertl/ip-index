@@ -30,10 +30,73 @@ tags:
 - wr
 - xwr
 role: subproject
+top_modules:
+- xwr_pps_gen
 components:
 - pps_gen_wb
 - wr_pps_gen
-- xwr_pps_gen
+top_ports:
+  xwr_pps_gen:
+  - direction: in
+    name: clk_ref_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_ref_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_sys_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  - direction: in
+    name: link_ok_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pps_in_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pps_csync_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pps_out_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pps_led_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pps_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tm_utc_o
+    type: std_logic_vector
+    width: 39 downto 0
+  - direction: out
+    name: tm_cycles_o
+    type: std_logic_vector
+    width: 27 downto 0
+  - direction: out
+    name: tm_time_valid_o
+    type: std_logic
+    width: ''
 total_entities: 3
 desc_source: curator
 external_uses:

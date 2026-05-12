@@ -43,18 +43,43 @@ tags:
 role: subproject
 top_modules:
 - taxi_ptp_clock
-- taxi_ptp_perout
-- taxi_ptp_td_phc_axil
-components:
 - taxi_ptp_clock_cdc
+- taxi_ptp_perout
+- taxi_ptp_td_phc_apb
+- taxi_ptp_td_phc_axil
+- taxi_ptp_td_rel2tod
+components:
 - taxi_ptp_td_leaf
 - taxi_ptp_td_phc
-- taxi_ptp_td_phc_apb
-- taxi_ptp_td_rel2tod
 top_ports:
   taxi_ptp_clock:
   - direction: in
     name: logic
+    type: wire
+    width: ''
+  taxi_ptp_clock_cdc:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: if
+    type: wire
+    width: ''
+  - direction: in
+    name: stepped
+    type: wire
+    width: ''
+  - direction: in
+    name: did
+    type: wire
+    width: ''
+  - direction: out
+    name: case
+    type: wire
+    width: ''
+  - direction: out
+    name: pps_reg
     type: wire
     width: ''
   taxi_ptp_perout:
@@ -65,6 +90,15 @@ top_ports:
   - direction: in
     name: from
     type: wire
+    width: ''
+  taxi_ptp_td_phc_apb:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: slv
+    name: s_apb
+    type: taxi_apb_if.slv
     width: ''
   taxi_ptp_td_phc_axil:
   - direction: in
@@ -78,6 +112,23 @@ top_ports:
   - direction: rd_slv
     name: s_axil_rd
     type: taxi_axil_if.rd_slv
+    width: ''
+  taxi_ptp_td_rel2tod:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: path
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis_ts_rel
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis_ts_tod
+    type: taxi_axis_if.src
     width: ''
 total_entities: 8
 desc_source: curator

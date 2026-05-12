@@ -39,10 +39,10 @@ tags:
 role: subproject
 top_modules:
 - minic_packet_buffer
+- xwr_mini_nic
 components:
 - minic_wb_slave
 - wr_mini_nic
-- xwr_mini_nic
 top_ports:
   minic_packet_buffer:
   - direction: in
@@ -96,6 +96,63 @@ top_ports:
   - direction: out
     name: wb_ack_o
     type: std_logic
+    width: ''
+  xwr_mini_nic:
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_o
+    type: t_wrf_source_out
+    width: ''
+  - direction: in
+    name: src_i
+    type: t_wrf_source_in
+    width: ''
+  - direction: out
+    name: snk_o
+    type: t_wrf_sink_out
+    width: ''
+  - direction: in
+    name: snk_i
+    type: t_wrf_sink_in
+    width: ''
+  - direction: in
+    name: txtsu_port_id_i
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: in
+    name: txtsu_frame_id_i
+    type: std_logic_vector
+    width: 16 - 1 downto 0
+  - direction: in
+    name: txtsu_tsval_i
+    type: std_logic_vector
+    width: 28 + 4 - 1 downto 0
+  - direction: in
+    name: txtsu_tsincorrect_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: txtsu_stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: txtsu_ack_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: wb_o
+    type: t_wishbone_slave_out
     width: ''
 total_entities: 4
 desc_source: curator

@@ -53,23 +53,64 @@ tags:
 - wishbone
 role: subproject
 top_modules:
+- dmtd_phase_meas
 - hpll_period_detect
 - multi_dmtd_with_deglitcher
 - pulse_gen
-- wrf_loopback
-- xwb_fabric_sink
-- xwb_fabric_source
-- xwrf_reg
-components:
-- dmtd_phase_meas
-- dmtd_with_deglitcher
-- lbk_wishbone_controller
 - pulse_stamper
 - wb_fabric_sink
 - wb_fabric_source
-- xwrf_loopback
+- wrf_loopback
+- xwb_fabric_sink
+- xwb_fabric_source
 - xwrf_mux
+- xwrf_reg
+components:
+- dmtd_with_deglitcher
+- lbk_wishbone_controller
+- xwrf_loopback
 top_ports:
+  dmtd_phase_meas:
+  - direction: in
+    name: rst_sys_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_dmtd_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_a_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_b_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_dmtd_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: en_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: navg_i
+    type: std_logic_vector
+    width: 11 downto 0
+  - direction: out
+    name: phase_meas_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: phase_meas_p_o
+    type: std_logic
+    width: ''
   hpll_period_detect:
   - direction: in
     name: clk_ref_i
@@ -199,6 +240,145 @@ top_ports:
     width: 27 downto 0
   - direction: in
     name: trig_valid_i
+    type: std_logic
+    width: ''
+  pulse_stamper:
+  - direction: in
+    name: clk_ref_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pulse_a_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tm_time_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tm_tai_i
+    type: std_logic_vector
+    width: 39 downto 0
+  - direction: in
+    name: tm_cycles_i
+    type: std_logic_vector
+    width: 27 downto 0
+  - direction: out
+    name: tag_tai_o
+    type: std_logic_vector
+    width: 39 downto 0
+  - direction: out
+    name: tag_cycles_o
+    type: std_logic_vector
+    width: 27 downto 0
+  - direction: out
+    name: tag_valid_o
+    type: std_logic
+    width: ''
+  wb_fabric_sink:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_i
+    type: t_wrf_sink_in
+    width: ''
+  - direction: out
+    name: snk_o
+    type: t_wrf_sink_out
+    width: ''
+  - direction: out
+    name: addr_o
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: data_o
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: dvalid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: sof_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: eof_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: error_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: bytesel_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dreq_i
+    type: std_logic
+    width: ''
+  wb_fabric_source:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: src_i
+    type: t_wrf_source_in
+    width: ''
+  - direction: out
+    name: src_o
+    type: t_wrf_source_out
+    width: ''
+  - direction: in
+    name: addr_i
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: data_i
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: in
+    name: dvalid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sof_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: eof_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: error_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: bytesel_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dreq_o
     type: std_logic
     width: ''
   wrf_loopback:
@@ -408,6 +588,51 @@ top_ports:
     name: dreq_o
     type: std_logic
     width: ''
+  xwrf_mux:
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ep_src_o
+    type: t_wrf_source_out
+    width: ''
+  - direction: in
+    name: ep_src_i
+    type: t_wrf_source_in
+    width: ''
+  - direction: out
+    name: ep_snk_o
+    type: t_wrf_sink_out
+    width: ''
+  - direction: in
+    name: ep_snk_i
+    type: t_wrf_sink_in
+    width: ''
+  - direction: out
+    name: mux_src_o
+    type: t_wrf_source_out_array
+    width: g_muxed_ports-1 downto 0
+  - direction: in
+    name: mux_src_i
+    type: t_wrf_source_in_array
+    width: g_muxed_ports-1 downto 0
+  - direction: out
+    name: mux_snk_o
+    type: t_wrf_sink_out_array
+    width: g_muxed_ports-1 downto 0
+  - direction: in
+    name: mux_snk_i
+    type: t_wrf_sink_in_array
+    width: g_muxed_ports-1 downto 0
+  - direction: in
+    name: mux_class_i
+    type: t_wrf_mux_class
+    width: g_muxed_ports-1 downto 0
   xwrf_reg:
   - direction: in
     name: rst_n_i
