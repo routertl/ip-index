@@ -1,0 +1,65 @@
+name: axi_ad9361_rx_channel
+namespace: analog-devices
+version: ca0618ef7b4f
+commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
+published_at: '2026-05-11T12:02:04+03:00'
+description: Receives analog data from ADC.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/corundum/corundum_core/mqnic_app_custom_params.vh
+  - library/corundum/corundum_core/mqnic_app_custom_ports.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_bit_mod.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_word.vh
+  - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
+  - library/common/ad_datafmt.v
+  - library/xilinx/common/ad_dcfilter.v
+  - library/xilinx/common/ad_mul.v
+  - library/common/ad_iqcor.v
+  - library/common/ad_pnmon.v
+  - library/axi_ad9361/axi_ad9361_rx_pnmon.v
+  - library/common/up_xfer_cntrl.v
+  - library/common/up_xfer_status.v
+  - library/common/up_adc_channel.v
+  - library/axi_ad9361/axi_ad9361_rx_channel.v
+tags:
+- ad9361
+- amba
+- axi
+- bus
+- channel
+- receive
+- receiver
+- rx
+role: component
+desc_source: preserved
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo
