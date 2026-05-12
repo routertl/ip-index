@@ -82,5 +82,211 @@ components:
 - taxi_stats_strings_full
 - taxi_sync_reset
 - taxi_sync_signal
+top_ports:
+  taxi_debounce_switch:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: signals
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_led_sreg:
+  - direction: out
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_lfsr_crc:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: data_in_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: CRC32C
+    type: wire
+    width: ''
+  taxi_lfsr_descramble:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: PRBS6
+    type: wire
+    width: ''
+  taxi_lfsr_prbs_check:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: PRBS6
+    type: wire
+    width: ''
+  taxi_lfsr_prbs_gen:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: PRBS6
+    type: wire
+    width: ''
+  taxi_lfsr_scramble:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: PRBS6
+    type: wire
+    width: ''
+  taxi_mmcm_frac:
+  - direction: in
+    name: input_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: input_rst
+    type: wire
+    width: ''
+  - direction: out
+    name: output_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: output_offset_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: locked
+    type: wire
+    width: ''
+  - direction: in
+    name: clocks
+    type: wire
+    width: ''
+  - direction: in
+    name: status
+    type: wire
+    width: ''
+  taxi_mt19937:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_ram_1r1w_1c:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_ram_1r1w_2c:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_ram_1rw:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_ram_2rw_2c:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 22
 desc_source: curator

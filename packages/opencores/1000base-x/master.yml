@@ -56,6 +56,92 @@ components:
 - ge_1000baseX_rx
 - ge_1000baseX_sync
 - ge_1000baseX_tx
+top_ports:
+  ge_1000baseX_test:
+  - direction: in
+    name: reset_pin
+    type: wire
+    width: ''
+  - direction: in
+    name: GE_125MHz_ref_ckpin
+    type: wire
+    width: ''
+  - direction: in
+    name: tbi_rx_ckpin
+    type: wire
+    width: ''
+  - direction: in
+    name: tbi_rxd
+    type: wire
+    width: '[9:0]'
+  - direction: out
+    name: tbi_txd
+    type: wire
+    width: '[9:0]'
+  - direction: out
+    name: gmii_rxd
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: gmii_rx_dv
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_rx_er
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_col
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_cs
+    type: wire
+    width: ''
+  - direction: in
+    name: gmii_txd
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: gmii_tx_en
+    type: wire
+    width: ''
+  - direction: in
+    name: gmii_tx_er
+    type: wire
+    width: ''
+  - direction: out
+    name: sync_en
+    type: wire
+    width: ''
+  - direction: out
+    name: loop_en
+    type: wire
+    width: ''
+  - direction: out
+    name: prbs_en
+    type: wire
+    width: ''
+  - direction: in
+    name: signal_detect
+    type: wire
+    width: ''
+  - direction: in
+    name: sync
+    type: wire
+    width: ''
+  - direction: inout
+    name: mdio
+    type: wire
+    width: ''
+  - direction: in
+    name: mdio_ckpin
+    type: wire
+    width: ''
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
 total_entities: 10
 desc_source: verdict
 health_tier: bronze

@@ -181,6 +181,336 @@ components:
 - util_cpack2_impl
 - util_dacfifo_bypass
 - util_upack2_impl
+top_ports:
+  system_top_corundum:
+  - direction: in
+    name: sys_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: sys_clk_p
+    type: wire
+    width: ''
+  - direction: in
+    name: sys_clk_n
+    type: wire
+    width: ''
+  - direction: in
+    name: uart_sin
+    type: wire
+    width: ''
+  - direction: out
+    name: uart_sout
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr4_act_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr4_addr
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: ddr4_ba
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: ddr4_bg
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr4_ck_p
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr4_ck_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr4_cke
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr4_cs_n
+    type: wire
+    width: '[ 0:0]'
+  - direction: inout
+    name: ddr4_dm_n
+    type: wire
+    width: '[ 7:0]'
+  - direction: inout
+    name: ddr4_dq
+    type: wire
+    width: '[63:0]'
+  - direction: inout
+    name: ddr4_dqs_p
+    type: wire
+    width: '[ 7:0]'
+  - direction: inout
+    name: ddr4_dqs_n
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: ddr4_odt
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr4_reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mdio_mdc
+    type: wire
+    width: ''
+  - direction: inout
+    name: mdio_mdio
+    type: wire
+    width: ''
+  - direction: in
+    name: phy_clk_p
+    type: wire
+    width: ''
+  - direction: in
+    name: phy_clk_n
+    type: wire
+    width: ''
+  - direction: out
+    name: phy_rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: phy_rx_p
+    type: wire
+    width: ''
+  - direction: in
+    name: phy_rx_n
+    type: wire
+    width: ''
+  - direction: out
+    name: phy_tx_p
+    type: wire
+    width: ''
+  - direction: out
+    name: phy_tx_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: gpio_bd
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: iic_rstn
+    type: wire
+    width: ''
+  - direction: inout
+    name: iic_scl
+    type: wire
+    width: ''
+  - direction: inout
+    name: iic_sda
+    type: wire
+    width: ''
+  - direction: in
+    name: vadj_1v8_pgood
+    type: wire
+    width: ''
+  - direction: in
+    name: agc0
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: agc1
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: agc2
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: agc3
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: clkin8_n
+    type: wire
+    width: ''
+  - direction: in
+    name: clkin8_p
+    type: wire
+    width: ''
+  - direction: in
+    name: clkin6_n
+    type: wire
+    width: ''
+  - direction: in
+    name: clkin6_p
+    type: wire
+    width: ''
+  - direction: in
+    name: fpga_refclk_in_n
+    type: wire
+    width: ''
+  - direction: in
+    name: fpga_refclk_in_p
+    type: wire
+    width: ''
+  - direction: in
+    name: fpga_refclk_in_replica_n
+    type: wire
+    width: ''
+  - direction: in
+    name: fpga_refclk_in_replica_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_data_n
+    type: wire
+    width: '[RX_JESD_L*RX_NUM_LINKS-1:0]'
+  - direction: in
+    name: rx_data_p
+    type: wire
+    width: '[RX_JESD_L*RX_NUM_LINKS-1:0]'
+  - direction: out
+    name: tx_data_n
+    type: wire
+    width: '[TX_JESD_L*TX_NUM_LINKS-1:0]'
+  - direction: out
+    name: tx_data_p
+    type: wire
+    width: '[TX_JESD_L*TX_NUM_LINKS-1:0]'
+  - direction: in
+    name: fpga_syncin_n
+    type: wire
+    width: '[TX_NUM_LINKS-1:0]'
+  - direction: in
+    name: fpga_syncin_p
+    type: wire
+    width: '[TX_NUM_LINKS-1:0]'
+  - direction: out
+    name: fpga_syncout_n
+    type: wire
+    width: '[RX_NUM_LINKS-1:0]'
+  - direction: out
+    name: fpga_syncout_p
+    type: wire
+    width: '[RX_NUM_LINKS-1:0]'
+  - direction: inout
+    name: gpio
+    type: wire
+    width: '[10:0]'
+  - direction: inout
+    name: hmc_gpio1
+    type: wire
+    width: ''
+  - direction: out
+    name: hmc_sync
+    type: wire
+    width: ''
+  - direction: in
+    name: irqb
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rstb
+    type: wire
+    width: ''
+  - direction: out
+    name: rxen
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: spi0_csb
+    type: wire
+    width: ''
+  - direction: in
+    name: spi0_miso
+    type: wire
+    width: ''
+  - direction: out
+    name: spi0_mosi
+    type: wire
+    width: ''
+  - direction: out
+    name: spi0_sclk
+    type: wire
+    width: ''
+  - direction: out
+    name: spi1_csb
+    type: wire
+    width: ''
+  - direction: out
+    name: spi1_sclk
+    type: wire
+    width: ''
+  - direction: inout
+    name: spi1_sdio
+    type: wire
+    width: ''
+  - direction: in
+    name: sysref2_n
+    type: wire
+    width: ''
+  - direction: in
+    name: sysref2_p
+    type: wire
+    width: ''
+  - direction: out
+    name: txen
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: qsfp_mgt_refclk_p
+    type: wire
+    width: ''
+  - direction: in
+    name: qsfp_mgt_refclk_n
+    type: wire
+    width: ''
+  - direction: out
+    name: qsfp_tx_p
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: qsfp_tx_n
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: qsfp_rx_p
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: qsfp_rx_n
+    type: wire
+    width: '[3:0]'
+  - direction: inout
+    name: qspi1_dq
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: qspi1_cs
+    type: wire
+    width: ''
+  - direction: out
+    name: qsfp_modsell
+    type: wire
+    width: ''
+  - direction: out
+    name: qsfp_resetl
+    type: wire
+    width: ''
+  - direction: in
+    name: qsfp_modprsl
+    type: wire
+    width: ''
+  - direction: in
+    name: qsfp_intl
+    type: wire
+    width: ''
+  - direction: out
+    name: qsfp_lpmode
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

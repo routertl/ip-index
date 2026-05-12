@@ -50,5 +50,63 @@ top_modules:
 components:
 - taxi_i2c_master
 - taxi_i2c_slave
+top_ports:
+  si5340_i2c_init:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[6:0]'
+  - direction: in
+    name: data
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: d
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  taxi_i2c_init:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[6:0]'
+  - direction: in
+    name: data
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: d
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  taxi_i2c_single_reg:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_i2c_slave_apb_master:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_i2c_slave_axil_master:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 7
 desc_source: curator

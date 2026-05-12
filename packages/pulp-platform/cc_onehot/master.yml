@@ -23,3 +23,18 @@ tags:
 - crossing
 - onehot
 role: top
+top_ports:
+  cc_onehot:
+  - direction: in
+    name: d_i
+    type: wire
+    width: '[Width-1:0]'
+  - direction: out
+    name: is_onehot_o
+    type: wire
+    width: ''
+  - direction: in
+    name: level
+    type: wire
+    width: ''
+desc_source: preserved

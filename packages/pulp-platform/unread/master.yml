@@ -19,3 +19,10 @@ routertl_compat:
   - src/unread.sv
 tags: []
 role: top
+top_ports:
+  unread:
+  - direction: in
+    name: d_i
+    type: wire
+    width: ''
+desc_source: preserved

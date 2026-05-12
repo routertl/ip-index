@@ -40,6 +40,64 @@ top_modules:
 components:
 - usb_rx_phy
 - usb_tx_phy
+top_ports:
+  usb_phy:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: phy_tx_mode
+    type: wire
+    width: ''
+  - direction: out
+    name: usb_rst
+    type: wire
+    width: ''
+  - direction: out
+    name: txdp
+    type: wire
+    width: ''
+  - direction: in
+    name: rxd
+    type: wire
+    width: ''
+  - direction: in
+    name: DataOut_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: TxValid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: TxReady_o
+    type: wire
+    width: ''
+  - direction: out
+    name: DataIn_o
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: RxValid_o
+    type: wire
+    width: ''
+  - direction: out
+    name: RxActive_o
+    type: wire
+    width: ''
+  - direction: out
+    name: RxError_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LineState_o
+    type: wire
+    width: '[1:0]'
 total_entities: 3
 desc_source: preserved
 health_tier: bronze

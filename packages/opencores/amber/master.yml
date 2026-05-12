@@ -160,6 +160,260 @@ components:
 - xs6_sram_256x128_byte_en
 - xs6_sram_256x21_line_en
 - xs6_sram_4096x32_byte_en
+top_ports:
+  ddr3_afifo:
+  - direction: in
+    name: i_sys_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_ddr_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_cmd_en
+    type: wire
+    width: ''
+  - direction: in
+    name: i_cmd_instr
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: i_cmd_byte_addr
+    type: wire
+    width: '[ADDR_WIDTH-1:0]'
+  - direction: out
+    name: o_cmd_full
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wr_full
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wr_en
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wr_mask
+    type: wire
+    width: '[DATA_WIDTH/8-1:0]'
+  - direction: in
+    name: i_wr_data
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: i_wr_addr_32
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: o_rd_data
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: o_rd_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: o_ddr_cmd_en
+    type: wire
+    width: ''
+  - direction: out
+    name: o_ddr_cmd_instr
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: o_ddr_cmd_byte_addr
+    type: wire
+    width: '[ADDR_WIDTH-1:0]'
+  - direction: in
+    name: i_ddr_cmd_full
+    type: wire
+    width: ''
+  - direction: in
+    name: i_ddr_wr_full
+    type: wire
+    width: ''
+  - direction: out
+    name: o_ddr_wr_en
+    type: wire
+    width: ''
+  - direction: out
+    name: o_ddr_wr_mask
+    type: wire
+    width: '[DATA_WIDTH/8-1:0]'
+  - direction: out
+    name: o_ddr_wr_data
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: o_ddr_wr_addr_32
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: i_ddr_rd_data
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: i_ddr_rd_valid
+    type: wire
+    width: ''
+  wb_ddr3_bridge:
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_adr
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: i_wb_sel
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: i_wb_we
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wb_dat
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: i_wb_dat
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: i_wb_cyc
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_stb
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wb_ack
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wb_err
+    type: wire
+    width: ''
+  - direction: out
+    name: o_cmd_en
+    type: wire
+    width: ''
+  - direction: out
+    name: o_cmd_instr
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: o_cmd_byte_addr
+    type: wire
+    width: '[29:0]'
+  - direction: in
+    name: i_cmd_full
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wr_full
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wr_en
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wr_mask
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: o_wr_data
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: i_rd_data
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: i_rd_empty
+    type: wire
+    width: ''
+  xs6_sram_2048x32_byte_en:
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_write_data
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: i_write_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: i_address
+    type: wire
+    width: '[10:0]'
+  - direction: in
+    name: i_byte_enable
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: o_read_data
+    type: wire
+    width: '[31:0]'
+  xs6_sram_256x32_byte_en:
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_write_data
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: i_write_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: i_address
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: i_byte_enable
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: o_read_data
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  xs6_sram_512x128_byte_en:
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_write_data
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: i_write_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: i_address
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: i_byte_enable
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: o_read_data
+    type: wire
+    width: '[127:0]'
 total_entities: 56
 desc_source: verdict
 health_tier: bronze

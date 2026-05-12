@@ -43,6 +43,48 @@ components:
 - vit_bmu
 - vit_fsm
 - vit_tbu
+top_ports:
+  vit_top:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn
+    type: wire
+    width: ''
+  - direction: in
+    name: info_seq_len
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: init_neg
+    type: wire
+    width: ''
+  - direction: in
+    name: g_dvld
+    type: wire
+    width: ''
+  - direction: in
+    name: start_vtd
+    type: wire
+    width: ''
+  - direction: in
+    name: g0
+    type: wire
+    width: '[WL_CB-1:0]'
+  - direction: in
+    name: g1
+    type: wire
+    width: '[WL_CB-1:0]'
+  - direction: out
+    name: o_dec_bit
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: o_dec_bvld
+    type: wire
+    width: ''
 total_entities: 7
 desc_source: preserved
 mirror_status: curated-mirror

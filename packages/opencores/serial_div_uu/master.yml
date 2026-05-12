@@ -33,6 +33,48 @@ top_modules:
 - pwm_reader
 components:
 - serial_divide_uu
+top_ports:
+  pwm_reader:
+  - direction: in
+    name: is
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_en_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: pwm_signal_i
+    type: wire
+    width: ''
+  - direction: in
+    name: ack_i
+    type: wire
+    width: ''
+  - direction: out
+    name: dat_o
+    type: wire
+    width: '[DAT_WIDTH_PP-1:0]'
+  - direction: out
+    name: stb_o
+    type: wire
+    width: ''
+  - direction: in
+    name: signal
+    type: wire
+    width: ''
+  - direction: out
+    name: holding
+    type: wire
+    width: ''
 total_entities: 2
 desc_source: header
 health_tier: bronze

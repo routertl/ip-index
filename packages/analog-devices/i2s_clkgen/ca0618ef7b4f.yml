@@ -21,6 +21,28 @@ tags:
 - clkgen
 - i2s
 role: top
+top_ports:
+  i2s_clkgen:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: bclk_div_rate
+    type: natural
+    width: 0 to 255
+  - direction: in
+    name: lrclk_div_rate
+    type: natural
+    width: 0 to 255
+  - direction: out
+    name: bclk
+    type: std_logic
+    width: ''
+  - direction: out
+    name: frame_sync
+    type: std_logic
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

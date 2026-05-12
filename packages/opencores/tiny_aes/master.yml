@@ -55,6 +55,430 @@ top_modules:
 components:
 - S
 - final_round
+top_ports:
+  S4:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: p0
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[31:0]'
+  T:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: p0
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[31:0]'
+  aes_128:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: rcon
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: out_1
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: out_2
+    type: wire
+    width: '[127:0]'
+  aes_192:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[191:0]'
+  - direction: in
+    name: rcon
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: out_1
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: out_2
+    type: wire
+    width: '[127:0]'
+  aes_256:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key
+    type: wire
+    width: '[255:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[255:0]'
+  - direction: in
+    name: rcon
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: out_1
+    type: wire
+    width: '[255:0]'
+  - direction: out
+    name: out_2
+    type: wire
+    width: '[127:0]'
+  expand_key_128:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: rcon
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: out_1
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: out_2
+    type: wire
+    width: '[127:0]'
+  expand_key_type_A_192:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[191:0]'
+  - direction: in
+    name: rcon
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: out_1
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: out_2
+    type: wire
+    width: '[127:0]'
+  expand_key_type_A_256:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key
+    type: wire
+    width: '[255:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[255:0]'
+  - direction: in
+    name: rcon
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: out_1
+    type: wire
+    width: '[255:0]'
+  - direction: out
+    name: out_2
+    type: wire
+    width: '[127:0]'
+  expand_key_type_B_192:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[191:0]'
+  - direction: in
+    name: rcon
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: out_1
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: out_2
+    type: wire
+    width: '[127:0]'
+  expand_key_type_B_256:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key
+    type: wire
+    width: '[255:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[255:0]'
+  - direction: in
+    name: rcon
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: out_1
+    type: wire
+    width: '[255:0]'
+  - direction: out
+    name: out_2
+    type: wire
+    width: '[127:0]'
+  expand_key_type_C_192:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[191:0]'
+  - direction: in
+    name: rcon
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: out_1
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: out_2
+    type: wire
+    width: '[127:0]'
+  expand_key_type_D_192:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[191:0]'
+  - direction: in
+    name: rcon
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: out_1
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: out_2
+    type: wire
+    width: '[127:0]'
+  one_round:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state_in
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: state_out
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key_in
+    type: wire
+    width: '[127:0]'
+  table_lookup:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: p0
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[31:0]'
+  xS:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: state
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: p0
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[31:0]'
 total_entities: 17
 desc_source: verdict
 health_tier: bronze

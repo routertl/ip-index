@@ -73,6 +73,142 @@ components:
 - lxp32_scratchpad
 - lxp32_shifter
 - lxp32_ubuf
+top_ports:
+  lxp32c_top:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ibus_cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ibus_stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ibus_cti_o
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: ibus_bte_o
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: ibus_ack_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ibus_adr_o
+    type: std_logic_vector
+    width: 29 downto 0
+  - direction: in
+    name: ibus_dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: dbus_cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dbus_stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dbus_we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dbus_sel_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: dbus_ack_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dbus_adr_o
+    type: std_logic_vector
+    width: 31 downto 2
+  - direction: out
+    name: dbus_dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: dbus_dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: irq_i
+    type: "std_logic_vector(7 downto 0)\n\t)"
+    width: ''
+  lxp32u_top:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: lli_re_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: lli_adr_o
+    type: std_logic_vector
+    width: 29 downto 0
+  - direction: in
+    name: lli_dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: lli_busy_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dbus_cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dbus_stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dbus_we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dbus_sel_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: dbus_ack_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dbus_adr_o
+    type: std_logic_vector
+    width: 31 downto 2
+  - direction: out
+    name: dbus_dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: dbus_dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: irq_i
+    type: "std_logic_vector(7 downto 0)\n\t)"
+    width: ''
 total_entities: 20
+desc_source: readme
 health_tier: bronze
 last_verified_at: '2026-05-05'

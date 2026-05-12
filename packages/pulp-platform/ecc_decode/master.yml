@@ -26,3 +26,36 @@ tags:
 - ecc
 - error
 role: top
+top_ports:
+  ecc_decode:
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: encoded_data_t
+    type: wire
+    width: ''
+  - direction: out
+    name: data_t
+    type: wire
+    width: ''
+  - direction: out
+    name: parity_t
+    type: wire
+    width: ''
+  - direction: out
+    name: single_error_o
+    type: wire
+    width: ''
+  - direction: out
+    name: parity_error_o
+    type: wire
+    width: ''
+  - direction: out
+    name: double_error_o
+    type: wire
+    width: ''
+desc_source: preserved
+provides_packages:
+- ecc_pkg

@@ -26,3 +26,16 @@ tags:
 - encode
 - error
 role: top
+top_ports:
+  ecc_encode:
+  - direction: in
+    name: data_t
+    type: wire
+    width: ''
+  - direction: out
+    name: encoded_data_t
+    type: wire
+    width: ''
+desc_source: preserved
+provides_packages:
+- ecc_pkg

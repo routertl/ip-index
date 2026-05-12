@@ -186,6 +186,236 @@ components:
 - util_cpack2_impl
 - util_dacfifo_bypass
 - util_upack2_impl
+top_ports:
+  quad_mxfe_gpio_mux:
+  - direction: inout
+    name: mxfe0_gpio0
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_gpio1
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_gpio2
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_gpio5
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_gpio6
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_gpio7
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_gpio8
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_gpio9
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_gpio10
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_syncin_1_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_syncin_1_p
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_syncout_1_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe0_syncout_1_p
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_gpio0
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_gpio1
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_gpio2
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_gpio5
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_gpio6
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_gpio7
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_gpio8
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_gpio9
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_gpio10
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_syncin_1_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_syncin_1_p
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_syncout_1_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe1_syncout_1_p
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_gpio0
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_gpio1
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_gpio2
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_gpio5
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_gpio6
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_gpio7
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_gpio8
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_gpio9
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_gpio10
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_syncin_1_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_syncin_1_p
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_syncout_1_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe2_syncout_1_p
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_gpio0
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_gpio1
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_gpio2
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_gpio5
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_gpio6
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_gpio7
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_gpio8
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_gpio9
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_gpio10
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_syncin_1_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_syncin_1_p
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_syncout_1_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: mxfe3_syncout_1_p
+    type: wire
+    width: ''
+  - direction: in
+    name: gpio_t
+    type: wire
+    width: '[127:64]'
+  - direction: out
+    name: gpio_i
+    type: wire
+    width: '[127:64]'
+  - direction: in
+    name: gpio_o
+    type: wire
+    width: '[127:64]'
+  - direction: out
+    name: enables
+    type: wire
+    width: ''
+  - direction: out
+    name: values
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

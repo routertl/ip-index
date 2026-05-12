@@ -50,6 +50,158 @@ components:
 - sbox
 - subbytes
 - word_mixcolum
+top_ports:
+  aes:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: load_i
+    type: wire
+    width: ''
+  - direction: in
+    name: decrypt_i
+    type: wire
+    width: ''
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key_i
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: if
+    type: wire
+    width: ''
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  aes192:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: load_i
+    type: wire
+    width: ''
+  - direction: in
+    name: decrypt_i
+    type: wire
+    width: ''
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: key_i
+    type: wire
+    width: '[191:0]'
+  - direction: out
+    name: ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: if
+    type: wire
+    width: ''
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: but
+    type: wire
+    width: ''
+  wb_aes_controller:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: load_o
+    type: wire
+    width: ''
+  - direction: out
+    name: decrypt_o
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: key_o
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: ready_i
+    type: wire
+    width: ''
 total_entities: 10
 desc_source: preserved
 health_tier: bronze

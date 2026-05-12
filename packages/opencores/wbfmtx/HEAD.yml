@@ -23,6 +23,60 @@ tags: []
 role: repo
 top_modules:
 - wbfmtxhack
+top_ports:
+  wbfmtxhack:
+  - direction: in
+    name: sample
+    type: wire
+    width: ''
+  - direction: out
+    name: samples
+    type: wire
+    width: ''
+  - direction: out
+    name: would
+    type: wire
+    width: ''
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_cyc
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_addr
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_data
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: o_wb_ack
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wb_stall
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wb_data
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: o_tx
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: o_int
+    type: wire
+    width: ''
+  - direction: out
+    name: a
+    type: wire
+    width: ''
 total_entities: 1
 desc_source: verdict
 mirror_status: curated-mirror

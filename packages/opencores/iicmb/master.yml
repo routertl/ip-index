@@ -62,7 +62,506 @@ components:
 - regblock
 - sequencer
 - wishbone
+top_ports:
+  iicmb_m_av:
+  - direction: in
+    name: s_rst
+    type: std_logic
+    width: ''
+  - direction: out
+    name: waitrequest
+    type: std_logic
+    width: ''
+  - direction: out
+    name: readdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: readdatavalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: writedata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: write
+    type: std_logic
+    width: ''
+  - direction: in
+    name: read
+    type: std_logic
+    width: ''
+  - direction: in
+    name: byteenable
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: wr
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: rd
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: idata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: odata
+    type: "std_logic_vector(31 downto 0)\n    )"
+    width: ''
+  - direction: in
+    name: s_rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wr
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: rd
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: idata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: odata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: irq
+    type: std_logic
+    width: ''
+  - direction: in
+    name: busy
+    type: std_logic
+    width: ''
+  - direction: in
+    name: captured
+    type: std_logic
+    width: ''
+  - direction: in
+    name: bus_id
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: bit_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: byte_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: disable
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mcmd_wr
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mcmd_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: mcmd_data
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: mrsp_wr
+    type: std_logic
+    width: ''
+  - direction: in
+    name: mrsp_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: mrsp_data
+    type: "std_logic_vector( 7 downto 0)\n    )"
+    width: ''
+  - direction: in
+    name: s_rst
+    type: std_logic
+    width: ''
+  - direction: out
+    name: busy
+    type: std_logic
+    width: ''
+  - direction: out
+    name: captured
+    type: std_logic
+    width: ''
+  - direction: out
+    name: bus_id
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: bit_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: byte_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: mcmd_wr
+    type: std_logic
+    width: ''
+  - direction: in
+    name: mcmd_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: mcmd_data
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: mrsp_wr
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mrsp_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: mrsp_data
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: scl_i
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  - direction: in
+    name: sda_i
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  - direction: out
+    name: scl_o
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  - direction: out
+    name: sda_o
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  iicmb_m_sq:
+  - direction: in
+    name: s_rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cs_start
+    type: std_logic
+    width: ''
+  - direction: out
+    name: cs_busy
+    type: std_logic
+    width: ''
+  - direction: out
+    name: cs_status
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: busy
+    type: std_logic
+    width: ''
+  - direction: in
+    name: captured
+    type: std_logic
+    width: ''
+  - direction: in
+    name: bus_id
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: bit_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: byte_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: mcmd_wr
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mcmd_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: mcmd_data
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: mrsp_wr
+    type: std_logic
+    width: ''
+  - direction: in
+    name: mrsp_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: mrsp_data
+    type: "std_logic_vector(7 downto 0)\n    )"
+    width: ''
+  - direction: in
+    name: s_rst
+    type: std_logic
+    width: ''
+  - direction: out
+    name: busy
+    type: std_logic
+    width: ''
+  - direction: out
+    name: captured
+    type: std_logic
+    width: ''
+  - direction: out
+    name: bus_id
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: bit_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: byte_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: mcmd_wr
+    type: std_logic
+    width: ''
+  - direction: in
+    name: mcmd_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: mcmd_data
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: mrsp_wr
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mrsp_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: mrsp_data
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: scl_i
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  - direction: in
+    name: sda_i
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  - direction: out
+    name: scl_o
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  - direction: out
+    name: sda_o
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  iicmb_m_wb:
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ack_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: adr_i
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: we_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dat_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: wr
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: rd
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: idata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: odata
+    type: "std_logic_vector(31 downto 0)\n    )"
+    width: ''
+  - direction: in
+    name: s_rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wr
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: rd
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: idata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: odata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: irq
+    type: std_logic
+    width: ''
+  - direction: in
+    name: busy
+    type: std_logic
+    width: ''
+  - direction: in
+    name: captured
+    type: std_logic
+    width: ''
+  - direction: in
+    name: bus_id
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: bit_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: byte_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: disable
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mcmd_wr
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mcmd_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: mcmd_data
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: mrsp_wr
+    type: std_logic
+    width: ''
+  - direction: in
+    name: mrsp_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: mrsp_data
+    type: "std_logic_vector( 7 downto 0)\n    )"
+    width: ''
+  - direction: in
+    name: s_rst
+    type: std_logic
+    width: ''
+  - direction: out
+    name: busy
+    type: std_logic
+    width: ''
+  - direction: out
+    name: captured
+    type: std_logic
+    width: ''
+  - direction: out
+    name: bus_id
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: bit_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: byte_state
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: mcmd_wr
+    type: std_logic
+    width: ''
+  - direction: in
+    name: mcmd_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: mcmd_data
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: mrsp_wr
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mrsp_id
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: mrsp_data
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: scl_i
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  - direction: in
+    name: sda_i
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  - direction: out
+    name: scl_o
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
+  - direction: out
+    name: sda_o
+    type: std_logic_vector
+    width: 0 to g_bus_num - 1
 total_entities: 14
 desc_source: ports
 health_tier: bronze
 last_verified_at: '2026-05-05'
+provides_packages:
+- iicmb_int_pkg
+- iicmb_pkg

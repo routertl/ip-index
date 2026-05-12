@@ -425,6 +425,1107 @@ components:
 - vga
 - vga_hint
 - vga_top
+top_ports:
+  de3d_fog_table:
+  - direction: in
+    name: select
+    type: wire
+    width: ''
+  - direction: in
+    name: hb_wstrb
+    type: wire
+    width: ''
+  - direction: in
+    name: hb_addr
+    type: wire
+    width: '[6:2]'
+  - direction: in
+    name: hb_ben
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: hb_din
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: z_low
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: z_hi
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: hb_dout
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: low_factor
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: high_factor
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: fog64
+    type: wire
+    width: '[7:0]'
+  de3d_read_addr_in:
+  - direction: in
+    name: de_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: bpt
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: ul_tag_adr_rd
+    type: wire
+    width: '[14:0]'
+  - direction: in
+    name: ll_tag_adr_rd
+    type: wire
+    width: '[14:0]'
+  - direction: in
+    name: ur_tag_adr_rd
+    type: wire
+    width: '[14:0]'
+  - direction: in
+    name: lr_tag_adr_rd
+    type: wire
+    width: '[14:0]'
+  - direction: out
+    name: ee_tag_adr_rd
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: eo_tag_adr_rd
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: oe_tag_adr_rd
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: oo_tag_adr_rd
+    type: wire
+    width: '[4:0]'
+  de3d_tfog:
+  - direction: in
+    name: de_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: hb_csn
+    type: wire
+    width: ''
+  - direction: in
+    name: hb_tfog_en
+    type: wire
+    width: ''
+  - direction: in
+    name: hb_wstrb
+    type: wire
+    width: ''
+  - direction: in
+    name: hb_addr
+    type: wire
+    width: '[6:2]'
+  - direction: in
+    name: hb_ben
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: hb_din
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: zvalue
+    type: wire
+    width: '[13:0]'
+  - direction: in
+    name: pc_busy
+    type: wire
+    width: ''
+  - direction: out
+    name: hb_dout
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: fog_factor
+    type: wire
+    width: '[7:0]'
+  des_comp_gen_fx:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn
+    type: wire
+    width: ''
+  - direction: in
+    name: dx_fx
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: dy_fx
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: cmp_i
+    type: wire
+    width: '[95:0]'
+  - direction: out
+    name: curr_i
+    type: wire
+    width: '[31:0]'
+  fifo_267x128:
+  - direction: out
+    name: files
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: '[266:0]'
+  - direction: in
+    name: rdclk
+    type: wire
+    width: ''
+  - direction: in
+    name: rdreq
+    type: wire
+    width: ''
+  - direction: in
+    name: wrclk
+    type: wire
+    width: ''
+  - direction: in
+    name: wrreq
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[266:0]'
+  - direction: out
+    name: rdempty
+    type: wire
+    width: ''
+  - direction: out
+    name: wrempty
+    type: wire
+    width: ''
+  - direction: out
+    name: wrfull
+    type: wire
+    width: ''
+  - direction: out
+    name: wrusedw
+    type: wire
+    width: '[6:0]'
+  - direction: in
+    name: NODEFVAL
+    type: wire
+    width: ''
+  flt2int:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: afl
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: fx_int
+    type: wire
+    width: '[15:0]'
+  flt_frac_test:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn
+    type: wire
+    width: ''
+  - direction: in
+    name: afl
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: frac_flag
+    type: wire
+    width: ''
+  flt_fx_mult:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn
+    type: wire
+    width: ''
+  - direction: in
+    name: fx
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: bfl
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: fl
+    type: wire
+    width: '[31:0]'
+  flt_fx_rnd:
+  - direction: in
+    name: fp_in
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: int_out
+    type: wire
+    width: '[31:0]'
+  flt_fx_uv:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: float
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: fixed_out
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: vector
+    type: wire
+    width: ''
+  - direction: in
+    name: a
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s
+    type: wire
+    width: '[4:0]'
+  flt_recip_iter:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: denom
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: recip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: index
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: init_est
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: X0
+    type: wire
+    width: '[7:0]'
+  flt_recip_rom:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: denom
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: recip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: index
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: init_est
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: X0
+    type: wire
+    width: '[7:0]'
+  graph_core:
+  - direction: in
+    name: hclock
+    type: wire
+    width: ''
+  - direction: in
+    name: port
+    type: wire
+    width: ''
+  - direction: in
+    name: hresetn
+    type: wire
+    width: ''
+  - direction: in
+    name: pframen
+    type: wire
+    width: ''
+  - direction: in
+    name: pirdyn
+    type: wire
+    width: ''
+  - direction: inout
+    name: ptrdyn
+    type: wire
+    width: ''
+  - direction: inout
+    name: pdevseln
+    type: wire
+    width: ''
+  - direction: in
+    name: pidsel
+    type: wire
+    width: ''
+  - direction: inout
+    name: pintan
+    type: wire
+    width: ''
+  - direction: out
+    name: inout
+    type: wire
+    width: ''
+  - direction: out
+    name: input
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: pgnntn
+    type: wire
+    width: ''
+  - direction: in
+    name: pcben
+    type: wire
+    width: '[3:0]'
+  - direction: inout
+    name: pad
+    type: wire
+    width: '[31:00]'
+  - direction: in
+    name: bios_rdat
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: bios_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: bios_csn
+    type: wire
+    width: ''
+  - direction: out
+    name: bios_wrn
+    type: wire
+    width: ''
+  - direction: out
+    name: bios_hld
+    type: wire
+    width: ''
+  - direction: out
+    name: bios_wdat
+    type: wire
+    width: ''
+  - direction: in
+    name: pll_xbuf
+    type: wire
+    width: ''
+  - direction: in
+    name: pll_xbuf1
+    type: wire
+    width: ''
+  - direction: inout
+    name: pll_sclk
+    type: wire
+    width: ''
+  - direction: inout
+    name: pll_sdat
+    type: wire
+    width: ''
+  - direction: out
+    name: dvo_dclk
+    type: wire
+    width: ''
+  - direction: out
+    name: dvo_hsync
+    type: wire
+    width: ''
+  - direction: out
+    name: dvo_vsync
+    type: wire
+    width: ''
+  - direction: out
+    name: dvo_de
+    type: wire
+    width: ''
+  - direction: out
+    name: dvo_data
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: dvo_bsel_scl
+    type: wire
+    width: ''
+  - direction: inout
+    name: dvo_dsel_sda
+    type: wire
+    width: ''
+  - direction: inout
+    name: ddc_scl
+    type: wire
+    width: ''
+  - direction: inout
+    name: ddc_sda
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_psaven
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_cblankn
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_csyncn
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_sog
+    type: wire
+    width: ''
+  - direction: in
+    name: bt_clko
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: out
+    name: bt_clki
+    type: wire
+    width: ''
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: bt_field
+    type: wire
+    width: ''
+  - direction: out
+    name: bt_hsyncn
+    type: wire
+    width: ''
+  - direction: out
+    name: bt_vsyncn
+    type: wire
+    width: ''
+  - direction: out
+    name: bt_blankn
+    type: wire
+    width: ''
+  - direction: out
+    name: bt_pal
+    type: wire
+    width: ''
+  - direction: in
+    name: bt_clk_sel
+    type: wire
+    width: ''
+  - direction: in
+    name: mb_32_sel
+    type: wire
+    width: ''
+  - direction: in
+    name: vga_en
+    type: wire
+    width: ''
+  - direction: in
+    name: dual_enn
+    type: wire
+    width: ''
+  - direction: in
+    name: m66_en
+    type: wire
+    width: ''
+  - direction: out
+    name: ledn
+    type: wire
+    width: ''
+  - direction: in
+    name: mictor_clke
+    type: wire
+    width: ''
+  - direction: in
+    name: mictor_clko
+    type: wire
+    width: ''
+  - direction: in
+    name: mictor_de
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: mictor_do
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: gpio_3v
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: mem_odt
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_cs_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_cke
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_addr
+    type: wire
+    width: '[13:0]'
+  - direction: out
+    name: mem_ba
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: mem_ras_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_cas_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_we_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_dm
+    type: wire
+    width: '[BYTES/4-1:0]'
+  - direction: inout
+    name: mem_clk
+    type: wire
+    width: ''
+  - direction: inout
+    name: mem_clk_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_reset_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: mem_dq
+    type: wire
+    width: '[31:0]'
+  - direction: inout
+    name: mem_dqs
+    type: wire
+    width: '[3:0]'
+  - direction: inout
+    name: mem_dqsn
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: pll_25_37p5
+    type: wire
+    width: ''
+  max_3d_top:
+  - direction: in
+    name: hclock
+    type: wire
+    width: ''
+  - direction: in
+    name: port
+    type: wire
+    width: ''
+  - direction: in
+    name: hresetn
+    type: wire
+    width: ''
+  - direction: inout
+    name: pframen
+    type: wire
+    width: ''
+  - direction: inout
+    name: pirdyn
+    type: wire
+    width: ''
+  - direction: inout
+    name: ptrdyn
+    type: wire
+    width: ''
+  - direction: inout
+    name: pdevseln
+    type: wire
+    width: ''
+  - direction: in
+    name: pidsel
+    type: wire
+    width: ''
+  - direction: inout
+    name: pintan
+    type: wire
+    width: ''
+  - direction: out
+    name: inout
+    type: wire
+    width: ''
+  - direction: inout
+    name: pgnntn
+    type: wire
+    width: ''
+  - direction: inout
+    name: pcben
+    type: wire
+    width: '[3:0]'
+  - direction: inout
+    name: pad
+    type: wire
+    width: '[31:00]'
+  - direction: in
+    name: bios_rdat
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: bios_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: bios_csn
+    type: wire
+    width: ''
+  - direction: out
+    name: bios_wrn
+    type: wire
+    width: ''
+  - direction: out
+    name: bios_hld
+    type: wire
+    width: ''
+  - direction: out
+    name: bios_wdat
+    type: wire
+    width: ''
+  - direction: in
+    name: pll_clka
+    type: wire
+    width: ''
+  - direction: in
+    name: pll_clkb
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: inout
+    name: pll_sclk
+    type: wire
+    width: ''
+  - direction: inout
+    name: pll_sdat
+    type: wire
+    width: ''
+  - direction: inout
+    name: mem_clk
+    type: wire
+    width: ''
+  - direction: inout
+    name: mem_clk_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_cke
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_cs_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_odt
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_ras_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_cas_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_we_n
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_ba
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: mem_addr
+    type: wire
+    width: '[13:0]'
+  - direction: inout
+    name: mem_dq
+    type: wire
+    width: '[63:0]'
+  - direction: inout
+    name: mem_dqs
+    type: wire
+    width: '[7:0]'
+  - direction: inout
+    name: mem_dqsn
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: mem_dm
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: dvo_dclk
+    type: wire
+    width: ''
+  - direction: out
+    name: dvo_hsync
+    type: wire
+    width: ''
+  - direction: out
+    name: dvo_vsync
+    type: wire
+    width: ''
+  - direction: out
+    name: dvo_de
+    type: wire
+    width: ''
+  - direction: out
+    name: dvo_data
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: dvo_bsel_scl
+    type: wire
+    width: ''
+  - direction: inout
+    name: dvo_dsel_sda
+    type: wire
+    width: ''
+  - direction: inout
+    name: ddc_scl
+    type: wire
+    width: ''
+  - direction: inout
+    name: ddc_sda
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_psaven
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_cblankn
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_csyncn
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_sog
+    type: wire
+    width: ''
+  - direction: in
+    name: bt_clko
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: bt_hsyncn
+    type: wire
+    width: ''
+  - direction: in
+    name: bt_vsyncn
+    type: wire
+    width: ''
+  - direction: in
+    name: bt_blankn
+    type: wire
+    width: ''
+  - direction: in
+    name: bt_field
+    type: wire
+    width: ''
+  - direction: out
+    name: bt_pal
+    type: wire
+    width: ''
+  - direction: in
+    name: t2r4_mode
+    type: wire
+    width: ''
+  - direction: in
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: mb_32_sel
+    type: wire
+    width: ''
+  - direction: in
+    name: vga_en
+    type: wire
+    width: ''
+  - direction: in
+    name: dual_enn
+    type: wire
+    width: ''
+  - direction: in
+    name: m66_en
+    type: wire
+    width: ''
+  - direction: out
+    name: ledn
+    type: wire
+    width: ''
+  - direction: out
+    name: mictor_clke
+    type: wire
+    width: ''
+  - direction: out
+    name: mictor_clko
+    type: wire
+    width: ''
+  - direction: out
+    name: mictor_de
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: mictor_do
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: gpio_3v
+    type: wire
+    width: '[19:0]'
+  ram_tag:
+  - direction: in
+    name: de_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: de_rstn
+    type: wire
+    width: ''
+  - direction: in
+    name: cur_mipmap
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: ee_s0_loadn
+    type: wire
+    width: ''
+  - direction: in
+    name: ee_s1_loadn
+    type: wire
+    width: ''
+  - direction: in
+    name: eo_s0_loadn
+    type: wire
+    width: ''
+  - direction: in
+    name: eo_s1_loadn
+    type: wire
+    width: ''
+  - direction: in
+    name: oe_s0_loadn
+    type: wire
+    width: ''
+  - direction: in
+    name: oe_s1_loadn
+    type: wire
+    width: ''
+  - direction: in
+    name: oo_s0_loadn
+    type: wire
+    width: ''
+  - direction: in
+    name: oo_s1_loadn
+    type: wire
+    width: ''
+  - direction: in
+    name: ee_tag_adr_rd
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: eo_tag_adr_rd
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: oe_tag_adr_rd
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: oo_tag_adr_rd
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: ee_tag_adr_wr
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: eo_tag_adr_wr
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: oe_tag_adr_wr
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: oo_tag_adr_wr
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: ee_tag_dat_in
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: eo_tag_dat_in
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: oe_tag_dat_in
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: oo_tag_dat_in
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: tag_ram_csn
+    type: wire
+    width: ''
+  - direction: out
+    name: ee_tag_dat_out
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: eo_tag_dat_out
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: oe_tag_dat_out
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: oo_tag_dat_out
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: tag_s0_loadn
+    type: wire
+    width: ''
+  - direction: in
+    name: tag_s1_loadn
+    type: wire
+    width: ''
+  - direction: in
+    name: tag_adr_wr
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: tag_adr_rd
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: tag_dat_in
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: tag_dat_out
+    type: wire
+    width: '[23:0]'
+  sm_ref:
+  - direction: in
+    name: mem_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: hreset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: ref_gnt
+    type: wire
+    width: ''
+  - direction: in
+    name: svga_ack
+    type: wire
+    width: ''
+  - direction: in
+    name: c_cr11_b6
+    type: wire
+    width: ''
+  - direction: in
+    name: sync_c_crt_line_end
+    type: wire
+    width: ''
+  - direction: out
+    name: ref_svga_req
+    type: wire
+    width: ''
+  - direction: out
+    name: ref_req
+    type: wire
+    width: ''
+  - direction: out
+    name: m_t_ref_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ref_cycle_done
+    type: wire
+    width: ''
 total_entities: 194
 desc_source: verdict
 status: dormant

@@ -64,6 +64,1427 @@ components:
 - spi_flash_shift
 - spi_flash_top
 - xilinx_dcm
+top_ports:
+  minsoc_top:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_flash_mosi
+    type: wire
+    width: ''
+  - direction: in
+    name: spi_flash_miso
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_flash_sclk
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_flash_ss
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: uart_stx
+    type: wire
+    width: ''
+  - direction: in
+    name: uart_srx
+    type: wire
+    width: ''
+  - direction: out
+    name: eth_tx_er
+    type: wire
+    width: ''
+  - direction: in
+    name: eth_tx_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: eth_tx_en
+    type: wire
+    width: ''
+  - direction: out
+    name: eth_txd
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: eth_rx_er
+    type: wire
+    width: ''
+  - direction: in
+    name: eth_rx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: eth_rx_dv
+    type: wire
+    width: ''
+  - direction: in
+    name: eth_rxd
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: eth_col
+    type: wire
+    width: ''
+  - direction: in
+    name: eth_crs
+    type: wire
+    width: ''
+  - direction: out
+    name: eth_trste
+    type: wire
+    width: ''
+  - direction: in
+    name: eth_fds_mdint
+    type: wire
+    width: ''
+  - direction: inout
+    name: eth_mdio
+    type: wire
+    width: ''
+  - direction: out
+    name: eth_mdc
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tdi
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tms
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tck
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_tdo
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_vref
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_gnd
+    type: wire
+    width: ''
+  mux2:
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_err_o
+    type: wire
+    width: ''
+  - direction: out
+    name: assign
+    type: wire
+    width: ''
+  - direction: in
+    name: sel
+    type: wire
+    width: ''
+  - direction: in
+    name: in1
+    type: wire
+    width: '[dw-1:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[dw-1:0]'
+  tc_mi_to_st:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i0_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i0_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i0_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i0_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i0_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i0_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i0_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i0_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i0_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i1_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i1_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i1_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i1_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i1_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i1_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i1_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i1_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i1_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i2_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i2_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i2_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i2_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i2_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i2_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i2_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i2_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i2_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i3_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i3_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i3_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i3_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i3_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i3_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i3_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i3_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i3_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i4_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i4_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i4_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i4_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i4_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i4_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i4_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i4_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i4_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i5_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i5_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i5_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i5_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i5_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i5_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i5_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i5_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i5_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i6_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i6_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i6_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i6_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i6_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i6_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i6_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i6_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i6_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i7_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i7_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i7_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i7_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i7_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i7_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i7_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i7_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i7_wb_err_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t0_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t0_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t0_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t0_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t0_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t0_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t0_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t0_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t0_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t1_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t1_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t1_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t1_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t1_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t1_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t1_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t1_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t1_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t2_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t2_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t2_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t2_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t2_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t2_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t2_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t2_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t2_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t3_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t3_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t3_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t3_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t3_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t3_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t3_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t3_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t3_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t4_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t4_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t4_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t4_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t4_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t4_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t4_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t4_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t4_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t5_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t5_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t5_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t5_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t5_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t5_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t5_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t5_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t5_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t6_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t6_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t6_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t6_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t6_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t6_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t6_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t6_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t6_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t7_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t7_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t7_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t7_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t7_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t7_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t7_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t7_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t7_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t8_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t8_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t8_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t8_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t8_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t8_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t8_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t8_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t8_wb_err_i
+    type: wire
+    width: ''
+  tc_si_to_mt:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i0_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i0_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i0_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i0_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i0_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i0_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i0_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i0_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i0_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i1_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i1_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i1_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i1_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i1_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i1_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i1_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i1_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i1_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i2_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i2_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i2_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i2_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i2_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i2_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i2_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i2_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i2_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i3_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i3_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i3_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i3_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i3_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i3_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i3_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i3_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i3_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i4_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i4_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i4_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i4_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i4_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i4_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i4_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i4_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i4_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i5_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i5_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i5_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i5_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i5_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i5_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i5_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i5_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i5_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i6_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i6_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i6_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i6_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i6_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i6_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i6_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i6_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i6_wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: i7_wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i7_wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i7_wb_adr_i
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: in
+    name: i7_wb_sel_i
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: in
+    name: i7_wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: i7_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i7_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: out
+    name: i7_wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i7_wb_err_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t0_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t0_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t0_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t0_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t0_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t0_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t0_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t0_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t0_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t1_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t1_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t1_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t1_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t1_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t1_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t1_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t1_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t1_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t2_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t2_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t2_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t2_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t2_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t2_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t2_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t2_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t2_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t3_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t3_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t3_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t3_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t3_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t3_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t3_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t3_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t3_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t4_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t4_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t4_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t4_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t4_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t4_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t4_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t4_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t4_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t5_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t5_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t5_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t5_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t5_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t5_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t5_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t5_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t5_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t6_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t6_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t6_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t6_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t6_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t6_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t6_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t6_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t6_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t7_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t7_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t7_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t7_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t7_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t7_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t7_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t7_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t7_wb_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: t8_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t8_wb_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t8_wb_adr_o
+    type: wire
+    width: '[`TC_AW-1:0]'
+  - direction: out
+    name: t8_wb_sel_o
+    type: wire
+    width: '[`TC_BSW-1:0]'
+  - direction: out
+    name: t8_wb_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: t8_wb_dat_o
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t8_wb_dat_i
+    type: wire
+    width: '[`TC_DW-1:0]'
+  - direction: in
+    name: t8_wb_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t8_wb_err_i
+    type: wire
+    width: ''
 total_entities: 15
 desc_source: verdict
 health_tier: bronze

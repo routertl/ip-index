@@ -24,6 +24,32 @@ tags:
 - serial
 - spi
 role: top
+top_ports:
+  m2k_spi:
+  - direction: in
+    name: ad9963_csn
+    type: wire
+    width: ''
+  - direction: in
+    name: adf4360_cs
+    type: wire
+    width: ''
+  - direction: in
+    name: spi_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: spi_mosi
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_miso
+    type: wire
+    width: ''
+  - direction: inout
+    name: spi_sdio
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

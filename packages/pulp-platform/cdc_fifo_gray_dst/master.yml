@@ -43,3 +43,58 @@ components:
 - stream_xbar
 - sync
 - sync_wedge
+top_ports:
+  cdc_fifo_gray_dst:
+  - direction: in
+    name: src_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: src_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: T
+    type: wire
+    width: ''
+  - direction: in
+    name: src_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: src_ready_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_clk_i
+    type: wire
+    width: ''
+  - direction: out
+    name: dst_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_ready_i
+    type: wire
+    width: ''
+  - direction: out
+    name: async_wptr_o
+    type: wire
+    width: '[LOG_DEPTH:0]'
+  - direction: in
+    name: async_rptr_i
+    type: wire
+    width: '[LOG_DEPTH:0]'
+  - direction: in
+    name: async_wptr_i
+    type: wire
+    width: '[LOG_DEPTH:0]'
+  - direction: out
+    name: async_rptr_o
+    type: wire
+    width: '[LOG_DEPTH:0]'
+desc_source: ports

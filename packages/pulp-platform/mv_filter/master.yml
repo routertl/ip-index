@@ -22,3 +22,30 @@ tags:
 - filter
 - mv
 role: top
+top_ports:
+  mv_filter:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: sample_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_i
+    type: wire
+    width: ''
+  - direction: in
+    name: d_i
+    type: wire
+    width: ''
+  - direction: out
+    name: q_o
+    type: wire
+    width: ''
+desc_source: preserved

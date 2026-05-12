@@ -26,3 +26,18 @@ tags:
 role: top
 components:
 - shift_reg_gated
+top_ports:
+  shift_reg:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: dtype
+    type: wire
+    width: ''
+desc_source: preserved

@@ -25,6 +25,36 @@ tags:
 - purpose
 - slave
 role: top
+top_ports:
+  gpio_slave:
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sync
+    type: wire
+    width: ''
+  - direction: in
+    name: mosi
+    type: wire
+    width: ''
+  - direction: out
+    name: miso
+    type: wire
+    width: ''
+  - direction: in
+    name: leds
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: dipsw
+    type: wire
+    width: '[7:0]'
 desc_source: ports
 external_uses:
 - library: work

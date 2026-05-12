@@ -26,3 +26,7 @@ tags:
 - fix
 - round
 role: component
+desc_source: preserved
+provides_packages:
+- en_cl_fix_pkg
+- en_cl_fix_private_pkg

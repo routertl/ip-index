@@ -105,6 +105,304 @@ components:
 - eca_tlu_fsm
 - eca_walker
 - eca_wr_time
+top_ports:
+  eca_ac_wbm:
+  - direction: in
+    name: clk_ref_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_ref_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: channel_i
+    type: t_channel
+    width: ''
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_sys_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: slave_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  - direction: out
+    name: master_o
+    type: t_wishbone_master_out
+    width: ''
+  - direction: in
+    name: master_i
+    type: "t_wishbone_master_in                                             \n)"
+    width: ''
+  eca_bitonic:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: en_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: nums_i
+    type: t_eca_matrix
+    width: 2**g_log_size-1 downto 0, g_wide-1 downto 0
+  - direction: out
+    name: nums_o
+    type: t_eca_matrix(2**g_log_size-1 downto 0, g_wide-1 downto 0))
+    width: ''
+  eca_compact:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: holes_i
+    type: std_logic_vector
+    width: g_size-1 downto 0
+  - direction: in
+    name: valid_i
+    type: std_logic_vector
+    width: g_size-1 downto 0
+  - direction: out
+    name: valid_o
+    type: std_logic_vector
+    width: g_size-1 downto 0
+  - direction: in
+    name: data_i
+    type: t_eca_matrix
+    width: g_size-1 downto 0, g_wide-1 downto 0
+  - direction: out
+    name: data_o
+    type: t_eca_matrix(g_size-1 downto 0, g_wide-1 downto 0))
+    width: ''
+  eca_fifo:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: push_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: full_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data_i
+    type: t_eca_matrix
+    width: g_rows-1 downto 0, g_cols-1 downto 0
+  - direction: in
+    name: pop_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: fresh_o
+    type: std_logic
+    width: ''
+  eca_queue:
+  - direction: in
+    name: a_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a_rst_n_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: a_stall_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a_channel_i
+    type: t_channel
+    width: ''
+  - direction: in
+    name: q_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: q_rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: q_slave_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: q_slave_o
+    type: t_wishbone_slave_out)
+    width: ''
+  eca_scubus_channel:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: channel_i
+    type: t_channel
+    width: ''
+  - direction: out
+    name: tag_valid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tag
+    type: std_logic_vector
+    width: 31 downto 0
+  eca_tlu:
+  - direction: in
+    name: c_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: c_rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: c_slave_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: c_slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  - direction: in
+    name: a_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a_rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a_time_i
+    type: t_time
+    width: ''
+  - direction: in
+    name: a_gpio_i
+    type: t_gpio_array
+    width: g_inputs-1 downto 0
+  - direction: out
+    name: a_stream_o
+    type: t_stream
+    width: ''
+  - direction: in
+    name: a_stall_i
+    type: std_logic)
+    width: ''
+  eca_wb_event:
+  - direction: in
+    name: w_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: w_rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: w_slave_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: w_slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  - direction: in
+    name: e_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: e_rst_n_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: e_stream_o
+    type: t_stream
+    width: ''
+  - direction: in
+    name: e_stall_i
+    type: std_logic
+    width: ''
+  wr_eca:
+  - direction: in
+    name: c_rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: c_slave_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: c_slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  - direction: in
+    name: a_rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a_cycles_i
+    type: std_logic_vector
+    width: 27 downto 0
+  - direction: out
+    name: a_time_o
+    type: t_time
+    width: ''
+  - direction: out
+    name: a_stall_o
+    type: std_logic_vector
+    width: g_num_streams-1 downto 0
+  - direction: out
+    name: a_channel_o
+    type: t_channel_array
+    width: g_channel_types'range
+  - direction: out
+    name: a_io_o
+    type: t_gpio_array
+    width: g_num_ios-1 downto 0
+  - direction: in
+    name: i_rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: i_master_i
+    type: t_wishbone_master_in
+    width: ''
+  - direction: out
+    name: i_master_o
+    type: t_wishbone_master_out)
+    width: ''
 total_entities: 32
 desc_source: curator
 external_uses:

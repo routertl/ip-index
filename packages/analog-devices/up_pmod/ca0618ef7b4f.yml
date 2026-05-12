@@ -74,6 +74,60 @@ components:
 - up_hdmi_tx
 - up_tdd_cntrl
 - up_xfer_status
+top_ports:
+  up_pmod:
+  - direction: in
+    name: pmod_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: pmod_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: pmod_signal_freq
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: up_rstn
+    type: wire
+    width: ''
+  - direction: in
+    name: up_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: up_wreq
+    type: wire
+    width: ''
+  - direction: in
+    name: up_waddr
+    type: wire
+    width: '[13:0]'
+  - direction: in
+    name: up_wdata
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: up_wack
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rreq
+    type: wire
+    width: ''
+  - direction: in
+    name: up_raddr
+    type: wire
+    width: '[13:0]'
+  - direction: out
+    name: up_rdata
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: up_rack
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

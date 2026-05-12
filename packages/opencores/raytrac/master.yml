@@ -15,7 +15,7 @@ source:
   resolved_commit: d87c7de539eb19daa5fb677c3a97af62e37da743
 routertl_compat:
   language: vhdl-2008
-  library: altera_mf
+  library: work
   files:
   - sqrtdiv/RLshifter.vhd
   - fpbranch/arithpack.vhd
@@ -63,7 +63,378 @@ components:
 - shifter
 - shifter2xstage
 - uf
+top_ports:
+  ema32x2:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dpc
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a32
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: b32
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: c32
+    type: "std_logic_vector(31 downto 0)\n\t)"
+    width: ''
+  - direction: in
+    name: datab
+    type: std_logic_vector
+    width: lpm_widthb-1 downto 0
+  - direction: out
+    name: result
+    type: "std_logic_vector( lpm_widthp-1 downto 0 )\n\t)"
+    width: ''
+  ema32x3:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dpc
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a32
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: b32
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: c32
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: res32
+    type: "std_logic_vector (31 downto 0)\n\t\t\n\t\t\t\t\t\t\n\t\n\t)"
+    width: ''
+  - direction: in
+    name: datab
+    type: std_logic_vector
+    width: lpm_widthb-1 downto 0
+  - direction: out
+    name: result
+    type: "std_logic_vector( lpm_widthp-1 downto 0 )\n\t)"
+    width: ''
+  func:
+  - direction: in
+    name: ad0
+    type: std_logic_vector
+    width: awidth-1 downto 0
+  - direction: in
+    name: ad1
+    type: std_logic_vector
+    width: awidth-1 downto 0
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q0
+    type: "std_logic_vector(qwidth-1 downto 0)\n\t)"
+    width: ''
+  - direction: out
+    name: q1
+    type: "std_logic_vector(qwidth-1 downto 0)\n\t)"
+    width: ''
+  - direction: in
+    name: wren_a
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: address_b
+    type: STD_LOGIC_VECTOR
+    width: 8 DOWNTO 0
+  - direction: in
+    name: data_b
+    type: STD_LOGIC_VECTOR
+    width: 17 DOWNTO 0
+  - direction: out
+    name: q_a
+    type: STD_LOGIC_VECTOR
+    width: 17 DOWNTO 0
+  - direction: in
+    name: wren_b
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: address_a
+    type: STD_LOGIC_VECTOR
+    width: 8 DOWNTO 0
+  - direction: in
+    name: data_a
+    type: STD_LOGIC_VECTOR
+    width: 17 DOWNTO 0
+  - direction: out
+    name: q_b
+    type: "STD_LOGIC_VECTOR (17 DOWNTO 0)\n\t)"
+    width: ''
+  invr32:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dvd32
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: qout32
+    type: "std_logic_vector(31 downto 0)\n\t)"
+    width: ''
+  - direction: in
+    name: address_a
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: q_a
+    type: "std_logic_vector (17 downto 0)\n\t)"
+    width: ''
+  memblock:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: out
+    name: aqa
+    type: std_logic_vector
+    width: 32*3-1 downto 0
+  - direction: out
+    name: aqb
+    type: std_logic_vector
+    width: 32*3-1 downto 0
+  - direction: out
+    name: aqc
+    type: std_logic_vector
+    width: 32*3-1 downto 0
+  - direction: out
+    name: aqd
+    type: std_logic_vector
+    width: 32*3-1 downto 0
+  - direction: in
+    name: ada
+    type: std_logic_vector
+    width: 32*3-1 downto 0
+  - direction: in
+    name: adb
+    type: std_logic_vector
+    width: 32*3-1 downto 0
+  - direction: in
+    name: adc
+    type: std_logic_vector
+    width: 32*3-1 downto 0
+  - direction: in
+    name: add
+    type: std_logic_vector
+    width: 32*3-1 downto 0
+  - direction: in
+    name: aaa
+    type: std_logic_vector
+    width: 7*3-1 downto 0
+  - direction: in
+    name: aab
+    type: std_logic_vector
+    width: 7*3-1 downto 0
+  - direction: in
+    name: aac
+    type: std_logic_vector
+    width: 7*3-1 downto 0
+  - direction: in
+    name: aad
+    type: std_logic_vector
+    width: 7*3-1 downto 0
+  - direction: in
+    name: awa
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: awb
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: awc
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: awd
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: q
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: a
+    type: std_logic_vector
+    width: 11 downto 0
+  - direction: in
+    name: w
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: clock0
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wren_b
+    type: std_logic
+    width: ''
+  - direction: in
+    name: address_a
+    type: std_logic_vector
+    width: 6 downto 0
+  - direction: in
+    name: address_b
+    type: std_logic_vector
+    width: 6 downto 0
+  - direction: out
+    name: q_a
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: q_b
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: data_a
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: data_b
+    type: std_logic_vector
+    width: 31 downto 0
+  mul2:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a32
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: b32
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: p32
+    type: "std_logic_vector(31 downto 0)\n\t\t\n\t)"
+    width: ''
+  - direction: in
+    name: datab
+    type: std_logic_vector
+    width: lpm_widthb-1 downto 0
+  - direction: out
+    name: result
+    type: "std_logic_vector ( lpm_widthp-1 downto 0 )\n\t)"
+    width: ''
+  raytrac:
+  - direction: in
+    name: A
+    type: std_logic_vector
+    width: 18*3-1 downto 0
+  - direction: in
+    name: B
+    type: std_logic_vector
+    width: 18*3-1 downto 0
+  - direction: in
+    name: C
+    type: std_logic_vector
+    width: 18*3-1 downto 0
+  - direction: in
+    name: D
+    type: std_logic_vector
+    width: 18*3-1 downto 0
+  - direction: out
+    name: addABx
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: addABy
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: addABz
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: addCDx
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: addCDy
+    type: std_logic_vector
+    width: 17 downto 0
+  - direction: out
+    name: addCDz
+    type: std_logic_vector
+    width: 17 downto 0
+  sqrt32:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rd32
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: sq32
+    type: "std_logic_vector(31 downto 0)\n\t)"
+    width: ''
+  - direction: in
+    name: address_a
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: q_a
+    type: "std_logic_vector (17 downto 0)\n\t)"
+    width: ''
+  sqrtdiv:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: value
+    type: std_logic_vector
+    width: iwidth-1 downto 0
+  - direction: out
+    name: zero
+    type: std_logic
+    width: ''
+  - direction: out
+    name: sqr
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: inv
+    type: "std_logic_vector (16 downto 0)\n\t)"
+    width: ''
 total_entities: 19
 desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+external_uses:
+- library: altera_mf
+  package: all
+provides_packages:
+- arithpack

@@ -30,6 +30,24 @@ top_modules:
 - wr_tlu
 components:
 - wr_tlu_fsm
+top_ports:
+  wr_tlu:
+  - direction: in
+    name: clk_ref_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: triggers_i
+    type: t_trigger_array
+    width: g_num_triggers-1 downto 0
+  - direction: out
+    name: irq_master_o
+    type: t_wishbone_master_out
+    width: ''
 total_entities: 2
 desc_source: curator
 external_uses:

@@ -1,8 +1,8 @@
 name: cva6
 namespace: openhwgroup
 version: master
-commit_sha: 8e694e6460d017fb8a175336cd7dcb91d8eff682
-published_at: '2026-04-17T16:55:04+02:00'
+commit_sha: f0c274cad66b84cd58379880741680351c7ce9ab
+published_at: '2026-05-08T17:42:54+02:00'
 description: 'CVA6 is a 6-stage, single-issue, in-order CPU which implements the 64-bit
   RISC-V instruction set. It fully implements I, M, A and C extensions as specified
   in Volume I: User-Level ISA V 2.3 as well as the draft privilege extension 1.10.'
@@ -13,11 +13,36 @@ source:
   url: https://github.com/openhwgroup/cva6.git
   tag: master
   ip_yml_path: .
-  resolved_commit: 8e694e6460d017fb8a175336cd7dcb91d8eff682
+  resolved_commit: f0c274cad66b84cd58379880741680351c7ce9ab
 routertl_compat:
   language: systemverilog
   library: work
   files:
+  - vendor/pulp-platform/fpga-support/behav/common/include/assertions.sv
+  - verif/env/uvme/uvma_interrupt/uvma_interrupt_constants.sv
+  - verif/env/uvme/uvma_interrupt/uvma_interrupt_macros.sv
+  - verif/env/uvme/uvma_interrupt/uvma_interrupt_tdefs.sv
+  - verif/env/uvme/uvme_cva6_constants.sv
+  - verif/env/uvme/uvme_cva6_macros.sv
+  - verif/env/uvme/uvme_cva6_tdefs.sv
+  - verif/tb/uvmt/uvmt_cva6_constants.sv
+  - verif/tb/uvmt/uvmt_cva6_macros.sv
+  - verif/tb/uvmt/uvmt_cva6_tdefs.sv
+  - core/include/cvxif_types.svh
+  - core/include/rvfi_types.svh
+  - corev_apu/fpga/src/agilex7.svh
+  - corev_apu/fpga/src/genesysii.svh
+  - corev_apu/fpga/src/kc705.svh
+  - corev_apu/fpga/src/nexys_video.svh
+  - corev_apu/fpga/src/vc707.svh
+  - corev_apu/fpga/src/vcu118.svh
+  - corev_apu/instr_tracing/ITI/include/iti_types.svh
+  - corev_apu/tb/common/assign.svh
+  - corev_apu/tb/common/tb.svh
+  - vendor/pulp-platform/axi/include/axi/assign.svh
+  - vendor/pulp-platform/axi/include/axi/typedef.svh
+  - vendor/pulp-platform/common_cells/include/common_cells/registers.svh
+  - verif/tb/core/custom_uvm_macros.svh
   - core/include/ariane_pkg.sv
   - vendor/pulp-platform/common_cells/src/cf_math_pkg.sv
   - core/pmp/include/riscv.sv
@@ -37,17 +62,16 @@ routertl_compat:
   - core/alu_wrapper.sv
   - core/cache_subsystem/amo_alu.sv
   - core/amo_buffer.sv
-  - core/include/cvxif_types.svh
-  - core/include/rvfi_types.svh
   - core/commit_stage.sv
   - core/controller.sv
   - core/include/triggers_pkg.sv
   - core/trigger_module.sv
   - core/csr_regfile.sv
   - core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv
+  - core/include/wt_cache_pkg.sv
+  - core/cache_subsystem/cva6_hpdcache_subsystem_l15_adapter.sv
   - core/cache_subsystem/cva6_hpdcache_if_adapter.sv
   - core/cache_subsystem/cva6_hpdcache_wrapper.sv
-  - core/include/wt_cache_pkg.sv
   - vendor/pulp-platform/common_cells/src/lfsr.sv
   - vendor/pulp-platform/fpga-support/rtl/SyncSpRamBeNx64.sv
   - common/local/util/tc_sram_fpga_wrapper.sv
@@ -79,7 +103,6 @@ routertl_compat:
   - core/serdiv.sv
   - core/mult.sv
   - core/ex_stage.sv
-  - vendor/pulp-platform/common_cells/src/fifo_v3.sv
   - vendor/pulp-platform/fpga-support/rtl/AsyncThreePortRam.sv
   - vendor/pulp-platform/fpga-support/rtl/SyncThreePortRam.sv
   - core/frontend/bht.sv
@@ -132,6 +155,8 @@ routertl_compat:
   - core/cache_subsystem/wt_dcache_missunit.sv
   - core/cache_subsystem/wt_dcache_wbuffer.sv
   - core/cache_subsystem/wt_dcache.sv
+  - core/include/dummy_l15_pkg.sv
+  - vendor/pulp-platform/common_cells/src/fifo_v3.sv
   - vendor/pulp-platform/common_cells/src/deprecated/fifo_v2.sv
   - vendor/pulp-platform/common_cells/src/deprecated/rrarbiter.sv
   - core/cache_subsystem/wt_l15_adapter.sv
@@ -143,8 +168,8 @@ routertl_compat:
   - core/cvxif_example/instr_decoder.sv
   - core/cvxif_example/cvxif_example_coprocessor.sv
   - corev_apu/src/ariane.sv
+  - core/include/config_pkg.sv
   - corev_apu/openpiton/ariane_verilog_wrap.sv
-  - corev_apu/instr_tracing/ITI/include/iti_types.svh
   - vendor/pulp-platform/axi/src/axi_pkg.sv
   - corev_apu/tb/axi_intf.sv
   - corev_apu/tb/common/mock_uart.sv
@@ -201,10 +226,10 @@ routertl_compat:
   - common/local/util/find_first_one.sv
   - vendor/pulp-platform/fpga-support/rtl/SyncSpRam.sv
   - common/local/util/hpdcache_sram_1rw.sv
-  - pd/synth/hpdcache_sram_1rw_00000006_0000001c_00000040.sv
+  - pd/synth/hpdcache_sram_1rw_00000006_0000001c_00000040_00000001.sv
   - vendor/pulp-platform/fpga-support/rtl/SyncSpRamBeNx32.sv
   - common/local/util/hpdcache_sram_wbyteenable_1rw.sv
-  - pd/synth/hpdcache_sram_wbyteenable_1rw_00000007_00000040_00000080.sv
+  - pd/synth/hpdcache_sram_wbyteenable_1rw_00000007_00000020_00000080_00000002.sv
   - corev_apu/tb/common/SimDTM.sv
   - corev_apu/tb/common/SimJTAG.sv
   - corev_apu/openpiton/riscv_peripherals.sv
@@ -232,9 +257,9 @@ top_modules:
 - cva6_altera
 - find_first_one
 - hpdcache_sram_1rw
-- hpdcache_sram_1rw_00000006_0000001c_00000040
+- hpdcache_sram_1rw_00000006_0000001c_00000040_00000001
 - hpdcache_sram_wbyteenable_1rw
-- hpdcache_sram_wbyteenable_1rw_00000007_00000040_00000080
+- hpdcache_sram_wbyteenable_1rw_00000007_00000020_00000080_00000002
 - miss_handler
 - riscv_peripherals
 - tc_sram_wrapper_256_64_00000008_00000001_00000001_none_0
@@ -275,6 +300,7 @@ components:
 - cva6_hpdcache_if_adapter
 - cva6_hpdcache_subsystem
 - cva6_hpdcache_subsystem_axi_arbiter
+- cva6_hpdcache_subsystem_l15_adapter
 - cva6_hpdcache_wrapper
 - cva6_icache
 - cva6_icache_axi_wrapper
@@ -351,4 +377,1228 @@ components:
 - wt_dcache_wbuffer
 - wt_l15_adapter
 - zcmt_decoder
-total_entities: 126
+top_ports:
+  amo_alu:
+  - direction: in
+    name: ariane_pkg
+    type: wire
+    width: ''
+  - direction: in
+    name: amo_operand_a_i
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: amo_operand_b_i
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: amo_result_o
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: operand_b
+    type: wire
+    width: ''
+  ariane_verilog_wrap:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_l
+    type: wire
+    width: ''
+  - direction: out
+    name: spc_grst_l
+    type: wire
+    width: ''
+  - direction: in
+    name: boot_addr_i
+    type: wire
+    width: '[VLEN-1:0]'
+  - direction: in
+    name: hart_id_i
+    type: wire
+    width: '[XLEN-1:0]'
+  - direction: in
+    name: irq_i
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: ipi_i
+    type: wire
+    width: ''
+  - direction: in
+    name: time_irq_i
+    type: wire
+    width: ''
+  - direction: in
+    name: debug_req_i
+    type: wire
+    width: ''
+  - direction: out
+    name: l15_req_o
+    type: wire
+    width: '[$size(l15_pkg::l15_req_t)-1:0]'
+  - direction: in
+    name: l15_rtrn_i
+    type: wire
+    width: '[$size(l15_pkg::l15_rtrn_t)-1:0]'
+  ariane_xilinx:
+  - direction: in
+    name: parameters
+    type: wire
+    width: ''
+  - direction: in
+    name: sys_clk_p
+    type: wire
+    width: ''
+  - direction: in
+    name: sys_clk_n
+    type: wire
+    width: ''
+  - direction: in
+    name: cpu_resetn
+    type: wire
+    width: ''
+  - direction: inout
+    name: ddr3_dq
+    type: wire
+    width: '[31:0]'
+  - direction: inout
+    name: ddr3_dqs_n
+    type: wire
+    width: '[ 3:0]'
+  - direction: inout
+    name: ddr3_dqs_p
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: ddr3_addr
+    type: wire
+    width: '[14:0]'
+  - direction: out
+    name: ddr3_ba
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: ddr3_ras_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_cas_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_we_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_ck_p
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr3_ck_n
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr3_cke
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr3_cs_n
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr3_dm
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: ddr3_odt
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: eth_rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: eth_rxck
+    type: wire
+    width: ''
+  - direction: in
+    name: eth_rxctl
+    type: wire
+    width: ''
+  - direction: in
+    name: eth_rxd
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: eth_txck
+    type: wire
+    width: ''
+  - direction: out
+    name: eth_txctl
+    type: wire
+    width: ''
+  - direction: out
+    name: eth_txd
+    type: wire
+    width: '[3:0]'
+  - direction: inout
+    name: eth_mdio
+    type: wire
+    width: ''
+  - direction: out
+    name: eth_mdc
+    type: wire
+    width: ''
+  - direction: out
+    name: led
+    type: wire
+    width: '[ 7:0]'
+  - direction: in
+    name: sw
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: fan_pwm
+    type: wire
+    width: ''
+  - direction: in
+    name: trst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: cpu_reset
+    type: wire
+    width: ''
+  - direction: in
+    name: trst
+    type: wire
+    width: ''
+  - direction: in
+    name: c0_sys_clk_p
+    type: wire
+    width: ''
+  - direction: in
+    name: c0_sys_clk_n
+    type: wire
+    width: ''
+  - direction: in
+    name: sys_rst_n
+    type: wire
+    width: ''
+  - direction: out
+    name: c0_ddr4_adr
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: c0_ddr4_ba
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: c0_ddr4_cke
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: c0_ddr4_cs_n
+    type: wire
+    width: '[0:0]'
+  - direction: inout
+    name: c0_ddr4_dm_dbi_n
+    type: wire
+    width: '[7:0]'
+  - direction: inout
+    name: c0_ddr4_dq
+    type: wire
+    width: '[63:0]'
+  - direction: inout
+    name: c0_ddr4_dqs_c
+    type: wire
+    width: '[7:0]'
+  - direction: inout
+    name: c0_ddr4_dqs_t
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: c0_ddr4_odt
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: c0_ddr4_bg
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: c0_ddr4_reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: c0_ddr4_act_n
+    type: wire
+    width: ''
+  - direction: out
+    name: c0_ddr4_ck_c
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: c0_ddr4_ck_t
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: pci_exp_txp
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: pci_exp_txn
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: pci_exp_rxp
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: pci_exp_rxn
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: sys_clk_i
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_mosi
+    type: wire
+    width: ''
+  - direction: in
+    name: spi_miso
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_ss
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_clk_o
+    type: wire
+    width: ''
+  - direction: in
+    name: tck
+    type: wire
+    width: ''
+  - direction: in
+    name: tms
+    type: wire
+    width: ''
+  - direction: in
+    name: tdi
+    type: wire
+    width: ''
+  - direction: out
+    name: tdo
+    type: wire
+    width: ''
+  - direction: in
+    name: prog_clko
+    type: wire
+    width: ''
+  - direction: in
+    name: prog_rxen
+    type: wire
+    width: ''
+  - direction: in
+    name: prog_txen
+    type: wire
+    width: ''
+  - direction: in
+    name: prog_spien
+    type: wire
+    width: ''
+  - direction: out
+    name: prog_rdn
+    type: wire
+    width: ''
+  - direction: out
+    name: prog_wrn
+    type: wire
+    width: ''
+  - direction: out
+    name: prog_oen
+    type: wire
+    width: ''
+  - direction: out
+    name: prog_siwun
+    type: wire
+    width: ''
+  - direction: inout
+    name: prog_d
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: rx
+    type: wire
+    width: ''
+  - direction: out
+    name: tx
+    type: wire
+    width: ''
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  clint_sync:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: testmode_i
+    type: wire
+    width: ''
+  - direction: in
+    name: axi_req_t
+    type: wire
+    width: ''
+  - direction: out
+    name: axi_resp_t
+    type: wire
+    width: ''
+  - direction: in
+    name: rtc_i
+    type: wire
+    width: ''
+  - direction: out
+    name: timer_irq_o
+    type: wire
+    width: '[NR_CORES-1:0]'
+  - direction: out
+    name: ipi_o
+    type: wire
+    width: '[NR_CORES-1:0]'
+  - direction: in
+    name: through
+    type: wire
+    width: ''
+  - direction: in
+    name: serial_i
+    type: wire
+    width: ''
+  - direction: out
+    name: r_edge_o
+    type: wire
+    width: ''
+  - direction: out
+    name: f_edge_o
+    type: wire
+    width: ''
+  - direction: out
+    name: serial_o
+    type: wire
+    width: ''
+  clint_sync_wedge:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: testmode_i
+    type: wire
+    width: ''
+  - direction: in
+    name: axi_req_t
+    type: wire
+    width: ''
+  - direction: out
+    name: axi_resp_t
+    type: wire
+    width: ''
+  - direction: in
+    name: rtc_i
+    type: wire
+    width: ''
+  - direction: out
+    name: timer_irq_o
+    type: wire
+    width: '[NR_CORES-1:0]'
+  - direction: out
+    name: ipi_o
+    type: wire
+    width: '[NR_CORES-1:0]'
+  - direction: in
+    name: through
+    type: wire
+    width: ''
+  - direction: in
+    name: serial_i
+    type: wire
+    width: ''
+  - direction: out
+    name: r_edge_o
+    type: wire
+    width: ''
+  - direction: out
+    name: f_edge_o
+    type: wire
+    width: ''
+  - direction: out
+    name: serial_o
+    type: wire
+    width: ''
+  cva6_altera:
+  - direction: in
+    name: parameters
+    type: wire
+    width: ''
+  - direction: in
+    name: pll_ref_clk_p
+    type: wire
+    width: ''
+  - direction: in
+    name: pll_ref_clk_n
+    type: wire
+    width: ''
+  - direction: in
+    name: cpu_resetn
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_ddr4_ch0_p
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_ddr4_ch0_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: ddr4_dq
+    type: wire
+    width: '[71:0]'
+  - direction: inout
+    name: ddr4_dqs_n
+    type: wire
+    width: '[ 8:0]'
+  - direction: inout
+    name: ddr4_dqs_p
+    type: wire
+    width: '[ 8:0]'
+  - direction: inout
+    name: ddr4_dbi_n
+    type: wire
+    width: '[ 8:0]'
+  - direction: out
+    name: ddr4_ba
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: ddr4_bg
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: ddr4_reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr4_ck_p
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr4_ck_n
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr4_a
+    type: wire
+    width: '[ 16:0]'
+  - direction: out
+    name: ddr4_act_n
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr4_cke
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr4_cs_n
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr4_odt
+    type: wire
+    width: '[ 0:0]'
+  - direction: out
+    name: ddr4_par
+    type: wire
+    width: '[ 0:0]'
+  - direction: in
+    name: ddr4_alert_n
+    type: wire
+    width: '[ 0:0]'
+  - direction: in
+    name: oct_rzqin
+    type: wire
+    width: ''
+  - direction: out
+    name: led
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: emif_hps_mem_mem_ck
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: emif_hps_mem_mem_ck_n
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: emif_hps_mem_mem_a
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: emif_hps_mem_mem_act_n
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: emif_hps_mem_mem_ba
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: emif_hps_mem_mem_bg
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: emif_hps_mem_mem_cke
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: emif_hps_mem_mem_cs_n
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: emif_hps_mem_mem_odt
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: emif_hps_mem_mem_reset_n
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: emif_hps_mem_mem_par
+    type: wire
+    width: '[0:0]'
+  - direction: in
+    name: emif_hps_mem_mem_alert_n
+    type: wire
+    width: '[0:0]'
+  - direction: in
+    name: emif_hps_oct_oct_rzqin
+    type: wire
+    width: ''
+  - direction: in
+    name: emif_hps_pll_ref_clk_p
+    type: wire
+    width: ''
+  - direction: inout
+    name: emif_hps_mem_mem_dbi_n
+    type: wire
+    width: '[8-1:0]'
+  - direction: inout
+    name: emif_hps_mem_mem_dq
+    type: wire
+    width: '[64-1:0]'
+  - direction: inout
+    name: emif_hps_mem_mem_dqs
+    type: wire
+    width: '[8-1:0]'
+  - direction: inout
+    name: emif_hps_mem_mem_dqs_n
+    type: wire
+    width: '[8-1:0]'
+  - direction: in
+    name: hps_jtag_tck
+    type: wire
+    width: ''
+  - direction: in
+    name: hps_jtag_tms
+    type: wire
+    width: ''
+  - direction: out
+    name: hps_jtag_tdo
+    type: wire
+    width: ''
+  - direction: in
+    name: hps_jtag_tdi
+    type: wire
+    width: ''
+  - direction: out
+    name: hps_sdmmc_CCLK
+    type: wire
+    width: ''
+  - direction: inout
+    name: hps_sdmmc_CMD
+    type: wire
+    width: ''
+  - direction: inout
+    name: hps_sdmmc_D0
+    type: wire
+    width: ''
+  - direction: inout
+    name: hps_sdmmc_D1
+    type: wire
+    width: ''
+  - direction: inout
+    name: hps_sdmmc_D2
+    type: wire
+    width: ''
+  - direction: inout
+    name: hps_sdmmc_D3
+    type: wire
+    width: ''
+  - direction: out
+    name: hps_emac0_TX_CLK
+    type: wire
+    width: ''
+  - direction: in
+    name: hps_emac0_RX_CLK
+    type: wire
+    width: ''
+  - direction: out
+    name: hps_emac0_TX_CTL
+    type: wire
+    width: ''
+  - direction: in
+    name: hps_emac0_RX_CTL
+    type: wire
+    width: ''
+  - direction: out
+    name: hps_emac0_TXD0
+    type: wire
+    width: ''
+  - direction: out
+    name: hps_emac0_TXD1
+    type: wire
+    width: ''
+  - direction: in
+    name: hps_emac0_RXD0
+    type: wire
+    width: ''
+  - direction: in
+    name: hps_emac0_RXD1
+    type: wire
+    width: ''
+  - direction: out
+    name: hps_emac0_TXD2
+    type: wire
+    width: ''
+  - direction: out
+    name: hps_emac0_TXD3
+    type: wire
+    width: ''
+  - direction: in
+    name: hps_emac0_RXD2
+    type: wire
+    width: ''
+  - direction: in
+    name: hps_emac0_RXD3
+    type: wire
+    width: ''
+  - direction: inout
+    name: hps_emac0_MDIO
+    type: wire
+    width: ''
+  - direction: out
+    name: hps_emac0_MDC
+    type: wire
+    width: ''
+  - direction: in
+    name: hps_uart0_RX
+    type: wire
+    width: ''
+  - direction: out
+    name: hps_uart0_TX
+    type: wire
+    width: ''
+  - direction: inout
+    name: hps_i2c1_SDA
+    type: wire
+    width: ''
+  - direction: inout
+    name: hps_i2c1_SCL
+    type: wire
+    width: ''
+  - direction: inout
+    name: hps_gpio1_io0
+    type: wire
+    width: ''
+  - direction: in
+    name: hps_ref_clk
+    type: wire
+    width: ''
+  find_first_one:
+  - direction: in
+    name: vector
+    type: wire
+    width: ''
+  - direction: in
+    name: in_i
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: out
+    name: first_one_o
+    type: wire
+    width: '[$clog2(WIDTH)-1:0]'
+  - direction: out
+    name: no_ones_o
+    type: wire
+    width: ''
+  hpdcache_sram_1rw:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: cs
+    type: wire
+    width: ''
+  - direction: in
+    name: we
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[ADDR_SIZE-1:0]'
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  hpdcache_sram_1rw_00000006_0000001c_00000040_00000001:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: cs
+    type: wire
+    width: ''
+  - direction: in
+    name: we
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[ADDR_SIZE-1:0]'
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: int
+    type: wire
+    width: ''
+  hpdcache_sram_wbyteenable_1rw:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: cs
+    type: wire
+    width: ''
+  - direction: in
+    name: we
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[ADDR_SIZE-1:0]'
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  hpdcache_sram_wbyteenable_1rw_00000007_00000020_00000080_00000002:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: cs
+    type: wire
+    width: ''
+  - direction: in
+    name: we
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[ADDR_SIZE-1:0]'
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: int
+    type: wire
+    width: ''
+  miss_handler:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: flush_i
+    type: wire
+    width: ''
+  - direction: out
+    name: flush_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: miss_o
+    type: wire
+    width: ''
+  - direction: in
+    name: busy_i
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass_gnt_o
+    type: wire
+    width: '[NR_PORTS-1:0]'
+  - direction: out
+    name: bypass_valid_o
+    type: wire
+    width: '[NR_PORTS-1:0]'
+  - direction: out
+    name: axi_req_t
+    type: wire
+    width: ''
+  - direction: in
+    name: axi_rsp_t
+    type: wire
+    width: ''
+  - direction: out
+    name: miss_gnt_o
+    type: wire
+    width: '[NR_PORTS-1:0]'
+  - direction: out
+    name: active_serving_o
+    type: wire
+    width: '[NR_PORTS-1:0]'
+  - direction: out
+    name: critical_word_o
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: critical_word_valid_o
+    type: wire
+    width: ''
+  - direction: out
+    name: mshr_addr_matches_o
+    type: wire
+    width: '[NR_PORTS-1:0]'
+  - direction: out
+    name: mshr_index_matches_o
+    type: wire
+    width: '[NR_PORTS-1:0]'
+  - direction: in
+    name: amo_req_t
+    type: wire
+    width: ''
+  - direction: out
+    name: amo_resp_t
+    type: wire
+    width: ''
+  - direction: out
+    name: req_o
+    type: wire
+    width: '[CVA6Cfg.DCACHE_SET_ASSOC-1:0]'
+  - direction: out
+    name: addr_o
+    type: wire
+    width: '[CVA6Cfg.DCACHE_INDEX_WIDTH-1:0]'
+  - direction: out
+    name: cache_line_t
+    type: wire
+    width: ''
+  - direction: out
+    name: cl_be_t
+    type: wire
+    width: ''
+  - direction: out
+    name: we_o
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: '[CVA6Cfg.DCACHE_SET_ASSOC-1:0]'
+  - direction: in
+    name: valid_dirty
+    type: wire
+    width: '[CVA6Cfg.DCACHE_SET_ASSOC-1:0]'
+  - direction: in
+    name: req_t
+    type: wire
+    width: ''
+  - direction: out
+    name: rsp_t
+    type: wire
+    width: ''
+  riscv_peripherals:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: testmode_i
+    type: wire
+    width: ''
+  - direction: in
+    name: buf_ariane_debug_noc2_data_i
+    type: wire
+    width: '[DataWidth-1:0]'
+  - direction: in
+    name: buf_ariane_debug_noc2_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ariane_debug_buf_noc2_ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: ariane_debug_buf_noc3_data_o
+    type: wire
+    width: '[DataWidth-1:0]'
+  - direction: out
+    name: ariane_debug_buf_noc3_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: buf_ariane_debug_noc3_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: buf_ariane_bootrom_noc2_data_i
+    type: wire
+    width: '[DataWidth-1:0]'
+  - direction: in
+    name: buf_ariane_bootrom_noc2_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ariane_bootrom_buf_noc2_ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: ariane_bootrom_buf_noc3_data_o
+    type: wire
+    width: '[DataWidth-1:0]'
+  - direction: out
+    name: ariane_bootrom_buf_noc3_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: buf_ariane_bootrom_noc3_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: buf_ariane_clint_noc2_data_i
+    type: wire
+    width: '[DataWidth-1:0]'
+  - direction: in
+    name: buf_ariane_clint_noc2_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ariane_clint_buf_noc2_ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: ariane_clint_buf_noc3_data_o
+    type: wire
+    width: '[DataWidth-1:0]'
+  - direction: out
+    name: ariane_clint_buf_noc3_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: buf_ariane_clint_noc3_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: buf_ariane_plic_noc2_data_i
+    type: wire
+    width: '[DataWidth-1:0]'
+  - direction: in
+    name: buf_ariane_plic_noc2_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ariane_plic_buf_noc2_ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: ariane_plic_buf_noc3_data_o
+    type: wire
+    width: '[DataWidth-1:0]'
+  - direction: out
+    name: ariane_plic_buf_noc3_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: buf_ariane_plic_noc3_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: ariane_boot_sel_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ndmreset_o
+    type: wire
+    width: ''
+  - direction: out
+    name: dmactive_o
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_req_o
+    type: wire
+    width: '[NumHarts-1:0]'
+  - direction: in
+    name: unavailable_i
+    type: wire
+    width: '[NumHarts-1:0]'
+  - direction: in
+    name: tck_i
+    type: wire
+    width: ''
+  - direction: in
+    name: tms_i
+    type: wire
+    width: ''
+  - direction: in
+    name: trst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: td_i
+    type: wire
+    width: ''
+  - direction: out
+    name: td_o
+    type: wire
+    width: ''
+  - direction: out
+    name: tdo_oe_o
+    type: wire
+    width: ''
+  - direction: in
+    name: rtc_i
+    type: wire
+    width: ''
+  - direction: out
+    name: timer_irq_o
+    type: wire
+    width: '[NumHarts-1:0]'
+  - direction: out
+    name: ipi_o
+    type: wire
+    width: '[NumHarts-1:0]'
+  - direction: in
+    name: irq_sources_i
+    type: wire
+    width: '[NumSources-1:0]'
+  - direction: in
+    name: irq_le_i
+    type: wire
+    width: '[NumSources-1:0]'
+  tc_sram_wrapper_256_64_00000008_00000001_00000001_none_0:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: ports
+    type: wire
+    width: ''
+  - direction: in
+    name: req_i
+    type: wire
+    width: '[NumPorts-1:0]'
+  - direction: in
+    name: we_i
+    type: wire
+    width: '[NumPorts-1:0]'
+  - direction: in
+    name: addr_t
+    type: wire
+    width: ''
+  - direction: in
+    name: data_t
+    type: wire
+    width: ''
+  - direction: in
+    name: be_t
+    type: wire
+    width: ''
+total_entities: 127
+desc_source: readme
+provides_packages:
+- aes_pkg
+- ariane_pkg
+- axi_pkg
+- cf_math_pkg
+- config_pkg
+- cvxif_instr_pkg
+- l15_pkg
+- riscv
+- std_cache_pkg
+- triggers_pkg
+- wt_cache_pkg

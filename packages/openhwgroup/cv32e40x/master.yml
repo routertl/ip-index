@@ -120,4 +120,222 @@ components:
 - cv32e40x_wb_stage
 - cv32e40x_wpt
 - cv32e40x_write_buffer
+top_ports:
+  cv32e40x_core:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: scan_cg_en_i
+    type: wire
+    width: ''
+  - direction: in
+    name: boot_addr_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: dm_exception_addr_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: dm_halt_addr_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: mhartid_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: mimpid_patch_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: mtvec_addr_i
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: instr_req_o
+    type: wire
+    width: ''
+  - direction: in
+    name: instr_gnt_i
+    type: wire
+    width: ''
+  - direction: in
+    name: instr_rvalid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: instr_addr_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: instr_memtype_o
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: instr_prot_o
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: instr_dbg_o
+    type: wire
+    width: ''
+  - direction: in
+    name: instr_rdata_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: instr_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: data_req_o
+    type: wire
+    width: ''
+  - direction: in
+    name: data_gnt_i
+    type: wire
+    width: ''
+  - direction: in
+    name: data_rvalid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: data_addr_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: data_be_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: data_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: data_wdata_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: data_memtype_o
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: data_prot_o
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: data_dbg_o
+    type: wire
+    width: ''
+  - direction: out
+    name: data_atop_o
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: data_rdata_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: data_err_i
+    type: wire
+    width: ''
+  - direction: in
+    name: data_exokay_i
+    type: wire
+    width: ''
+  - direction: out
+    name: mcycle_o
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: irq_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wu_wfe_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clic_irq_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clic_irq_id_i
+    type: wire
+    width: '[CLIC_ID_WIDTH-1:0]'
+  - direction: in
+    name: clic_irq_level_i
+    type: wire
+    width: '[ 7:0]'
+  - direction: in
+    name: clic_irq_priv_i
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: clic_irq_shv_i
+    type: wire
+    width: ''
+  - direction: out
+    name: fencei_flush_req_o
+    type: wire
+    width: ''
+  - direction: in
+    name: fencei_flush_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: debug_req_i
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_havereset_o
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_running_o
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_halted_o
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_pc_valid_o
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_pc_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: fetch_enable_i
+    type: wire
+    width: ''
+  - direction: out
+    name: core_sleep_o
+    type: wire
+    width: ''
+  cv32e40x_popcnt:
+  - direction: in
+    name: in_i
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: result_o
+    type: wire
+    width: '[5: 0]'
 total_entities: 42
+desc_source: readme
+provides_packages:
+- cv32e40x_pkg

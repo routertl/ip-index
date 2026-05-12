@@ -87,6 +87,2215 @@ components:
 - f3_add
 - f3m_add
 - func6
+top_ports:
+  duursma_lee_algo:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: xp
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W6:0]'
+  - direction: in
+    name: x1
+    type: wire
+    width: '[`WIDTH:0]'
+  f32m_add3:
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  f32m_add4:
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  f32m_cubic:
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  f32m_mult:
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  f32m_mux6:
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  f32m_neg:
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  f32m_sub:
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W2:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W2:0]'
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  f33m_inv:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: ins2
+    type: wire
+    width: ''
+  - direction: in
+    name: f3m_mult
+    type: wire
+    width: ''
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`W3:0]'
+  f33m_mult:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: ins2
+    type: wire
+    width: ''
+  - direction: in
+    name: f3m_mult
+    type: wire
+    width: ''
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`W3:0]'
+  f33m_mult2:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: ins2
+    type: wire
+    width: ''
+  - direction: in
+    name: f3m_mult
+    type: wire
+    width: ''
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`W3:0]'
+  f33m_mult3:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: ins2
+    type: wire
+    width: ''
+  - direction: in
+    name: f3m_mult
+    type: wire
+    width: ''
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`W3:0]'
+  f33m_mux2:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: ins2
+    type: wire
+    width: ''
+  - direction: in
+    name: f3m_mult
+    type: wire
+    width: ''
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`W3:0]'
+  f33m_mux3:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: ins2
+    type: wire
+    width: ''
+  - direction: in
+    name: f3m_mult
+    type: wire
+    width: ''
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`W3:0]'
+  f33m_neg:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W3:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: ins2
+    type: wire
+    width: ''
+  - direction: in
+    name: f3m_mult
+    type: wire
+    width: ''
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`W3:0]'
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`W3:0]'
+  f36m_mult:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W6:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W6:0]'
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: ins2
+    type: wire
+    width: ''
+  - direction: in
+    name: f32m_mult
+    type: wire
+    width: ''
+  f3_add1:
+  - direction: in
+    name: A
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[1:0]'
+  f3_mult:
+  - direction: in
+    name: A
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[1:0]'
+  f3_sub:
+  - direction: in
+    name: A
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[1:0]'
+  f3_sub1:
+  - direction: in
+    name: A
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[1:0]'
+  f3m_add3:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  f3m_add4:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  f3m_cubic:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  f3m_inv:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  f3m_mult:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  f3m_mult3:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  f3m_mux3:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  f3m_mux6:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  f3m_neg:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  f3m_nine:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  f3m_sub:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  func1:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  func2:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  func3:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  func4:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  func5:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  func7:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  func8:
+  - direction: in
+    name: v1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l1
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: l0
+    type: wire
+    width: ''
+  - direction: in
+    name: v0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH : 0]'
+  - direction: in
+    name: a0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: c0
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[193:0]'
+  - direction: in
+    name: S
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: q
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH+2:0]'
+  - direction: in
+    name: aa
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[5:0]'
+  second_part:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: a
+    type: wire
+    width: '[`W6:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[`W6:0]'
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: ins2
+    type: wire
+    width: ''
+  - direction: in
+    name: f32m_mult
+    type: wire
+    width: ''
+  tate_pairing:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: xp
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`W6:0]'
+  - direction: in
+    name: x1
+    type: wire
+    width: '[`WIDTH:0]'
 total_entities: 46
 desc_source: verdict
 health_tier: bronze

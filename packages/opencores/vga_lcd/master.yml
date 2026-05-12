@@ -100,7 +100,969 @@ components:
 - vtim
 - wb_master
 - wb_slave
+top_ports:
+  Pgen:
+  - direction: in
+    name: mclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  Tgen:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  generic_dpram:
+  - direction: in
+    name: rclk
+    type: wire
+    width: ''
+  - direction: in
+    name: rrst
+    type: wire
+    width: ''
+  - direction: in
+    name: rce
+    type: wire
+    width: ''
+  - direction: in
+    name: oe
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: raddr
+    type: wire
+    width: '[aw-1:0]'
+  - direction: out
+    name: do
+    type: wire
+    width: '[dw-1:0]'
+  - direction: in
+    name: wclk
+    type: wire
+    width: ''
+  - direction: in
+    name: wrst
+    type: wire
+    width: ''
+  - direction: in
+    name: wce
+    type: wire
+    width: ''
+  - direction: in
+    name: we
+    type: wire
+    width: ''
+  - direction: in
+    name: waddr
+    type: wire
+    width: '[aw-1:0]'
+  - direction: in
+    name: di
+    type: wire
+    width: '[dw-1:0]'
+  - direction: out
+    name: register
+    type: wire
+    width: ''
+  - direction: out
+    name: drivers
+    type: wire
+    width: ''
+  - direction: in
+    name: start
+    type: wire
+    width: '[aw-1:0]'
+  - direction: in
+    name: finish
+    type: wire
+    width: '[aw-1:0]'
+  - direction: in
+    name: data
+    type: wire
+    width: '[dwidth -1:0]'
+  - direction: in
+    name: wraddress
+    type: wire
+    width: '[awidth -1:0]'
+  - direction: in
+    name: rdaddress
+    type: wire
+    width: '[awidth -1:0]'
+  - direction: in
+    name: wren
+    type: wire
+    width: ''
+  - direction: in
+    name: wrclock
+    type: wire
+    width: ''
+  - direction: in
+    name: wrclocken
+    type: wire
+    width: ''
+  - direction: in
+    name: rdclock
+    type: wire
+    width: ''
+  - direction: in
+    name: rdclocken
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[dwidth -1:0]'
+  - direction: in
+    name: CLKA
+    type: wire
+    width: ''
+  - direction: in
+    name: RSTA
+    type: wire
+    width: ''
+  - direction: in
+    name: ENA
+    type: wire
+    width: ''
+  - direction: in
+    name: ADDRA
+    type: wire
+    width: '[awidth-1:0]'
+  - direction: in
+    name: DIA
+    type: wire
+    width: '[dwidth-1:0]'
+  - direction: in
+    name: WEA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOA
+    type: wire
+    width: '[dwidth-1:0]'
+  - direction: in
+    name: CLKB
+    type: wire
+    width: ''
+  - direction: in
+    name: RSTB
+    type: wire
+    width: ''
+  - direction: in
+    name: ENB
+    type: wire
+    width: ''
+  - direction: in
+    name: ADDRB
+    type: wire
+    width: '[awidth-1:0]'
+  - direction: in
+    name: DIB
+    type: wire
+    width: '[dwidth-1:0]'
+  - direction: in
+    name: WEB
+    type: wire
+    width: ''
+  - direction: out
+    name: DOB
+    type: wire
+    width: '[dwidth-1:0]'
+  generic_spram:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: ce
+    type: wire
+    width: ''
+  - direction: in
+    name: we
+    type: wire
+    width: ''
+  - direction: in
+    name: oe
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[aw-1:0]'
+  - direction: in
+    name: di
+    type: wire
+    width: '[dw-1:0]'
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: do
+    type: wire
+    width: '[dw-1:0]'
+  - direction: out
+    name: from
+    type: wire
+    width: ''
+  - direction: out
+    name: raddr
+    type: wire
+    width: '[aw-1:0]'
+  - direction: out
+    name: drivers
+    type: wire
+    width: ''
+  - direction: in
+    name: address
+    type: wire
+    width: '[awidth -1:0]'
+  - direction: in
+    name: inclock
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[dwidth -1:0]'
+  - direction: in
+    name: en
+    type: wire
+    width: ''
+  tst_bench:
+  - direction: in
+    name: CLK_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: adr_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: sel_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: err_i
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: adr_i
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: ack_o
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: adr_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: sel_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: err_i
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: adr_i
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: ack_o
+    type: std_logic
+    width: ''
+  ud_cnt:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  vga_enh_top:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_inta_o
+    type: wire
+    width: ''
+  - direction: in
+    name: wbs_adr_i
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: wbs_dat_i
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: in
+    name: wbs_we_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wbm_adr_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: wbm_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: wbm_bte_o
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: wbm_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_p_i
+    type: wire
+    width: ''
+  - direction: out
+    name: dvi_pclk_p_o
+    type: wire
+    width: ''
+  - direction: out
+    name: dvi_pclk_m_o
+    type: wire
+    width: ''
+  - direction: out
+    name: dvi_hsync_o
+    type: wire
+    width: ''
+  - direction: out
+    name: dvi_vsync_o
+    type: wire
+    width: ''
+  - direction: out
+    name: dvi_de_o
+    type: wire
+    width: ''
+  - direction: out
+    name: dvi_d_o
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: clk_p_o
+    type: wire
+    width: ''
+  - direction: out
+    name: vsync_pad_o
+    type: wire
+    width: ''
+  - direction: out
+    name: csync_pad_o
+    type: wire
+    width: ''
+  - direction: out
+    name: blank_pad_o
+    type: wire
+    width: ''
+  - direction: out
+    name: r_pad_o
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  vid_mem:
+  - direction: in
+    name: CLK_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: adr_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: sel_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: err_i
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: adr_i
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: ack_o
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: adr_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: sel_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: err_i
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: adr_i
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: ack_o
+    type: std_logic
+    width: ''
+  wb_host:
+  - direction: in
+    name: CLK_I
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: adr_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: sel_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: err_i
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: adr_i
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: ack_o
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: adr_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: sel_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: err_i
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: adr_i
+    type: unsigned
+    width: 15 downto 0
+  - direction: in
+    name: cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: ack_o
+    type: std_logic
+    width: ''
+  xilinx_ram_dp:
+  - direction: in
+    name: rclk
+    type: wire
+    width: ''
+  - direction: in
+    name: rrst
+    type: wire
+    width: ''
+  - direction: in
+    name: rce
+    type: wire
+    width: ''
+  - direction: in
+    name: oe
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: raddr
+    type: wire
+    width: '[aw-1:0]'
+  - direction: out
+    name: do
+    type: wire
+    width: '[dw-1:0]'
+  - direction: in
+    name: wclk
+    type: wire
+    width: ''
+  - direction: in
+    name: wrst
+    type: wire
+    width: ''
+  - direction: in
+    name: wce
+    type: wire
+    width: ''
+  - direction: in
+    name: we
+    type: wire
+    width: ''
+  - direction: in
+    name: waddr
+    type: wire
+    width: '[aw-1:0]'
+  - direction: in
+    name: di
+    type: wire
+    width: '[dw-1:0]'
+  - direction: out
+    name: register
+    type: wire
+    width: ''
+  - direction: out
+    name: drivers
+    type: wire
+    width: ''
+  - direction: in
+    name: start
+    type: wire
+    width: '[aw-1:0]'
+  - direction: in
+    name: finish
+    type: wire
+    width: '[aw-1:0]'
+  - direction: in
+    name: data
+    type: wire
+    width: '[dwidth -1:0]'
+  - direction: in
+    name: wraddress
+    type: wire
+    width: '[awidth -1:0]'
+  - direction: in
+    name: rdaddress
+    type: wire
+    width: '[awidth -1:0]'
+  - direction: in
+    name: wren
+    type: wire
+    width: ''
+  - direction: in
+    name: wrclock
+    type: wire
+    width: ''
+  - direction: in
+    name: wrclocken
+    type: wire
+    width: ''
+  - direction: in
+    name: rdclock
+    type: wire
+    width: ''
+  - direction: in
+    name: rdclocken
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[dwidth -1:0]'
+  - direction: in
+    name: CLKA
+    type: wire
+    width: ''
+  - direction: in
+    name: RSTA
+    type: wire
+    width: ''
+  - direction: in
+    name: ENA
+    type: wire
+    width: ''
+  - direction: in
+    name: ADDRA
+    type: wire
+    width: '[awidth-1:0]'
+  - direction: in
+    name: DIA
+    type: wire
+    width: '[dwidth-1:0]'
+  - direction: in
+    name: WEA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOA
+    type: wire
+    width: '[dwidth-1:0]'
+  - direction: in
+    name: CLKB
+    type: wire
+    width: ''
+  - direction: in
+    name: RSTB
+    type: wire
+    width: ''
+  - direction: in
+    name: ENB
+    type: wire
+    width: ''
+  - direction: in
+    name: ADDRB
+    type: wire
+    width: '[awidth-1:0]'
+  - direction: in
+    name: DIB
+    type: wire
+    width: '[dwidth-1:0]'
+  - direction: in
+    name: WEB
+    type: wire
+    width: ''
+  - direction: out
+    name: DOB
+    type: wire
+    width: '[dwidth-1:0]'
+  xilinx_ram_sp:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: ce
+    type: wire
+    width: ''
+  - direction: in
+    name: we
+    type: wire
+    width: ''
+  - direction: in
+    name: oe
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[aw-1:0]'
+  - direction: in
+    name: di
+    type: wire
+    width: '[dw-1:0]'
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: do
+    type: wire
+    width: '[dw-1:0]'
+  - direction: out
+    name: from
+    type: wire
+    width: ''
+  - direction: out
+    name: raddr
+    type: wire
+    width: '[aw-1:0]'
+  - direction: out
+    name: drivers
+    type: wire
+    width: ''
+  - direction: in
+    name: address
+    type: wire
+    width: '[awidth -1:0]'
+  - direction: in
+    name: inclock
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[dwidth -1:0]'
+  - direction: in
+    name: en
+    type: wire
+    width: ''
 total_entities: 36
 desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+provides_packages:
+- count

@@ -42,3 +42,42 @@ components:
 - pulp_sync_wedge
 - rstgen
 - rstgen_bypass
+top_ports:
+  clock_divider:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: wire
+    width: ''
+  - direction: in
+    name: test_mode_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_gate_async_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_div_data_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: clk_div_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: clk_div_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: clk_o
+    type: wire
+    width: ''
+  - direction: out
+    name: RESET
+    type: wire
+    width: ''
+desc_source: preserved

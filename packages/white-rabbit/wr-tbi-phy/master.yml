@@ -43,6 +43,168 @@ top_modules:
 - wr_tbi_phy
 components:
 - enc_8b10b
+top_ports:
+  dec_8b10b:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: out_8b_o
+    type: "std_logic_vector(7 downto 0)\n      )"
+    width: ''
+  dec_8b10b_ctrl:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: out_8b_o
+    type: "std_logic_vector(7 downto 0)\n      )"
+    width: ''
+  dec_8b10b_disp:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: out_8b_o
+    type: "std_logic_vector(7 downto 0)\n      )"
+    width: ''
+  dec_8b10b_lut:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: out_8b_o
+    type: "std_logic_vector(7 downto 0)\n      )"
+    width: ''
+  wr_tbi_phy:
+  - direction: in
+    name: serdes_loopen_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: serdes_prbsen_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: serdes_enable_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: serdes_syncen_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: serdes_tx_data_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: serdes_tx_k_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: serdes_tx_disparity_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: serdes_tx_enc_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: serdes_rx_data_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: serdes_rx_k_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: serdes_rx_enc_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: serdes_rx_bitslide_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: tbi_rbclk_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tbi_td_o
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: in
+    name: tbi_rd_i
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: tbi_syncen_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tbi_loopen_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tbi_prbsen_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tbi_enable_o
+    type: "std_logic\n    )"
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_10b_i
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: ctrl_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: code_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rdisp_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: out_8b_o
+    type: std_logic_vector(7 downto 0))
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ctrl_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_8b_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dispar_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: out_10b_o
+    type: std_logic_vector
+    width: 9 downto 0
 total_entities: 6
 desc_source: curator
 external_uses:

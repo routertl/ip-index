@@ -67,5 +67,410 @@ components:
 - sram
 - uart_rx
 - uart_tx
+top_ports:
+  axi_uart_bridge:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_neuro
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_neuro_n
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_awaddr
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_axi_awvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_awready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_wdata
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_axi_wstrb
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: s_axi_wvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_wready
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_bresp
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: s_axi_bvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_bready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_araddr
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_axi_arvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_arready
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_rdata
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: s_axi_rresp
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: s_axi_rvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_rready
+    type: wire
+    width: ''
+  - direction: out
+    name: hi_rx_data
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: hi_rx_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: hi_tx_data
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: hi_tx_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: hi_tx_ready
+    type: wire
+    width: ''
+  multi_chip_router:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: my_chip_id
+    type: wire
+    width: '[CHIP_ID_BITS-1:0]'
+  - direction: in
+    name: tx_push
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_dest_chip
+    type: wire
+    width: '[CHIP_ID_BITS-1:0]'
+  - direction: in
+    name: tx_core
+    type: wire
+    width: '[CORE_ID_BITS-1:0]'
+  - direction: in
+    name: tx_neuron
+    type: wire
+    width: '[NEURON_BITS-1:0]'
+  - direction: in
+    name: tx_payload
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: tx_full
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_src_chip
+    type: wire
+    width: '[CHIP_ID_BITS-1:0]'
+  - direction: out
+    name: rx_core
+    type: wire
+    width: '[CORE_ID_BITS-1:0]'
+  - direction: out
+    name: rx_neuron
+    type: wire
+    width: '[NEURON_BITS-1:0]'
+  - direction: out
+    name: rx_current
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: rx_pop
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_empty
+    type: wire
+    width: ''
+  - direction: in
+    name: barrier_tx_send
+    type: wire
+    width: ''
+  - direction: out
+    name: barrier_rx
+    type: wire
+    width: ''
+  - direction: in
+    name: mgmt_tx_push
+    type: wire
+    width: ''
+  - direction: in
+    name: mgmt_tx_core
+    type: wire
+    width: '[CORE_ID_BITS-1:0]'
+  - direction: in
+    name: mgmt_tx_neuron
+    type: wire
+    width: '[NEURON_BITS-1:0]'
+  - direction: in
+    name: mgmt_tx_data
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: mgmt_tx_is_write
+    type: wire
+    width: ''
+  - direction: in
+    name: mgmt_tx_dest_chip
+    type: wire
+    width: '[CHIP_ID_BITS-1:0]'
+  - direction: out
+    name: mgmt_rx_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: mgmt_rx_src_chip
+    type: wire
+    width: '[CHIP_ID_BITS-1:0]'
+  - direction: out
+    name: mgmt_rx_core
+    type: wire
+    width: '[CORE_ID_BITS-1:0]'
+  - direction: out
+    name: mgmt_rx_neuron
+    type: wire
+    width: '[NEURON_BITS-1:0]'
+  - direction: out
+    name: mgmt_rx_data
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: mgmt_rx_is_write
+    type: wire
+    width: ''
+  - direction: in
+    name: preempt_request
+    type: wire
+    width: ''
+  - direction: out
+    name: preempt_rx
+    type: wire
+    width: ''
+  - direction: out
+    name: link_tx_data
+    type: wire
+    width: '[NUM_LINKS*8-1:0]'
+  - direction: out
+    name: link_tx_valid
+    type: wire
+    width: '[NUM_LINKS-1:0]'
+  - direction: in
+    name: link_tx_ready
+    type: wire
+    width: '[NUM_LINKS-1:0]'
+  - direction: in
+    name: link_rx_data
+    type: wire
+    width: '[NUM_LINKS*8-1:0]'
+  - direction: in
+    name: link_rx_valid
+    type: wire
+    width: '[NUM_LINKS-1:0]'
+  - direction: out
+    name: link_rx_ready
+    type: wire
+    width: '[NUM_LINKS-1:0]'
+  neuromorphic_top:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: uart_rxd
+    type: wire
+    width: ''
+  - direction: out
+    name: uart_txd
+    type: wire
+    width: ''
+  - direction: out
+    name: link_tx_data
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: link_tx_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: link_tx_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: link_rx_data
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: link_rx_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: link_rx_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_data_ext
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: rx_valid_ext
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_data_ext
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: tx_valid_ext
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_ready_ext
+    type: wire
+    width: ''
+  rv32im_cluster:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: enable
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: imem_we_0
+    type: wire
+    width: ''
+  - direction: in
+    name: imem_waddr_0
+    type: wire
+    width: '[IMEM_ADDR_BITS-1:0]'
+  - direction: in
+    name: imem_wdata_0
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: imem_we_1
+    type: wire
+    width: ''
+  - direction: in
+    name: imem_waddr_1
+    type: wire
+    width: '[IMEM_ADDR_BITS-1:0]'
+  - direction: in
+    name: imem_wdata_1
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: imem_we_2
+    type: wire
+    width: ''
+  - direction: in
+    name: imem_waddr_2
+    type: wire
+    width: '[IMEM_ADDR_BITS-1:0]'
+  - direction: in
+    name: imem_wdata_2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: mmio_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: mmio_we
+    type: wire
+    width: ''
+  - direction: out
+    name: mmio_addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: mmio_wdata
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: mmio_rdata
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: mmio_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: halted
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: pc_out_0
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: pc_out_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: pc_out_2
+    type: wire
+    width: '[31:0]'
 total_entities: 16
 desc_source: verdict

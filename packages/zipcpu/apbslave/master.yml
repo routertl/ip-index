@@ -19,5 +19,52 @@ routertl_compat:
   - rtl/apbslave.v
 tags: []
 role: top
+top_ports:
+  apbslave:
+  - direction: in
+    name: PCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: PSEL
+    type: wire
+    width: ''
+  - direction: in
+    name: PENABLE
+    type: wire
+    width: ''
+  - direction: out
+    name: PREADY
+    type: wire
+    width: ''
+  - direction: in
+    name: PADDR
+    type: wire
+    width: '[AW-1:0]'
+  - direction: in
+    name: PWRITE
+    type: wire
+    width: ''
+  - direction: in
+    name: PWDATA
+    type: wire
+    width: '[DW-1:0]'
+  - direction: in
+    name: PWSTRB
+    type: wire
+    width: '[DW/8-1:0]'
+  - direction: in
+    name: PPROT
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: PRDATA
+    type: wire
+    width: '[DW-1:0]'
+  - direction: out
+    name: PSLVERR
+    type: wire
+    width: ''
+desc_source: ports
 health_tier: bronze
 last_verified_at: '2026-05-05'

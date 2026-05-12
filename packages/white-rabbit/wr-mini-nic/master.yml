@@ -43,6 +43,60 @@ components:
 - minic_wb_slave
 - wr_mini_nic
 - xwr_mini_nic
+top_ports:
+  minic_packet_buffer:
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: minic_addr_i
+    type: std_logic_vector
+    width: g_memsize_log2-1 downto 0
+  - direction: in
+    name: minic_data_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: minic_wr_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: minic_data_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: wb_data_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: wb_data_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: wb_addr_i
+    type: std_logic_vector
+    width: g_memsize_log2-1 downto 0
+  - direction: in
+    name: wb_cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: "std_logic\n    )"
+    width: ''
 total_entities: 4
 desc_source: curator
 external_uses:

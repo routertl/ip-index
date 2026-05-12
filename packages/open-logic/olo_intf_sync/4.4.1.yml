@@ -15,7 +15,7 @@ source:
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
   language: vhdl-2008
-  library: olo
+  library: work
   files:
   - src/base/vhdl/olo_base_pkg_attribute.vhd
   - src/intf/vhdl/olo_intf_sync.vhd
@@ -28,3 +28,11 @@ tags:
 - synchronizer
 - synchronous
 role: component
+desc_source: header
+external_uses:
+- library: work
+  package: en_cl_fix_pkg
+- library: work
+  package: en_cl_fix_private_pkg
+provides_packages:
+- olo_base_pkg_attribute

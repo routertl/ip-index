@@ -23,6 +23,88 @@ tags:
 - phy
 - physical
 role: top
+top_ports:
+  hsci_phy_top:
+  - direction: in
+    name: pll_inclk
+    type: wire
+    width: ''
+  - direction: in
+    name: hsci_pll_reset
+    type: wire
+    width: ''
+  - direction: out
+    name: hsci_pclk
+    type: wire
+    width: ''
+  - direction: out
+    name: hsci_mosi_d_p
+    type: wire
+    width: ''
+  - direction: out
+    name: hsci_mosi_d_n
+    type: wire
+    width: ''
+  - direction: in
+    name: hsci_miso_d_p
+    type: wire
+    width: ''
+  - direction: in
+    name: hsci_miso_d_n
+    type: wire
+    width: ''
+  - direction: out
+    name: hsci_pll_locked
+    type: wire
+    width: ''
+  - direction: out
+    name: hsci_mosi_clk_p
+    type: wire
+    width: ''
+  - direction: out
+    name: hsci_mosi_clk_n
+    type: wire
+    width: ''
+  - direction: in
+    name: hsci_miso_clk_p
+    type: wire
+    width: ''
+  - direction: in
+    name: hsci_miso_clk_n
+    type: wire
+    width: ''
+  - direction: in
+    name: hsci_menc_clk
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: hsci_mosi_data
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: hsci_miso_data
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: vtc_rdy_bsc_tx
+    type: wire
+    width: ''
+  - direction: out
+    name: dly_rdy_bsc_tx
+    type: wire
+    width: ''
+  - direction: out
+    name: vtc_rdy_bsc_rx
+    type: wire
+    width: ''
+  - direction: out
+    name: dly_rdy_bsc_rx
+    type: wire
+    width: ''
+  - direction: out
+    name: rst_seq_done
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

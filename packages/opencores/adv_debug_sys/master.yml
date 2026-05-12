@@ -16,7 +16,7 @@ source:
   resolved_commit: a60f591dc96ac0c3177589b6f166072518fc4a68
 routertl_compat:
   language: verilog
-  library: altera_mf
+  library: work
   files:
   - Hardware/adv_dbg_if/bench/full_system/xsv_fpga_defines.v
   - Hardware/adv_dbg_if/bench/simulated_system/wb_model_defines.v
@@ -95,7 +95,593 @@ components:
 - syncreg
 - tap_top
 - wb_slave_behavioral
+top_ports:
+  BiDirectionalCell:
+  - direction: in
+    name: FromCore
+    type: wire
+    width: ''
+  - direction: in
+    name: FromPreviousBSCell
+    type: wire
+    width: ''
+  - direction: in
+    name: CaptureDR
+    type: wire
+    width: ''
+  - direction: in
+    name: ShiftDR
+    type: wire
+    width: ''
+  - direction: in
+    name: UpdateDR
+    type: wire
+    width: ''
+  - direction: in
+    name: extest
+    type: wire
+    width: ''
+  - direction: in
+    name: TCK
+    type: wire
+    width: ''
+  - direction: in
+    name: FromOutputEnable
+    type: wire
+    width: ''
+  - direction: out
+    name: ToNextBSCell
+    type: wire
+    width: ''
+  - direction: out
+    name: BiDirPin
+    type: wire
+    width: ''
+  - direction: out
+    name: ToCore
+    type: wire
+    width: ''
+  ControlCell:
+  - direction: out
+    name: Control
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: OutputControl
+    type: wire
+    width: ''
+  - direction: in
+    name: FromPreviousBSCell
+    type: wire
+    width: ''
+  - direction: in
+    name: CaptureDR
+    type: wire
+    width: ''
+  - direction: in
+    name: ShiftDR
+    type: wire
+    width: ''
+  - direction: in
+    name: UpdateDR
+    type: wire
+    width: ''
+  - direction: in
+    name: extest
+    type: wire
+    width: ''
+  - direction: in
+    name: TCK
+    type: wire
+    width: ''
+  - direction: out
+    name: ToNextBSCell
+    type: wire
+    width: ''
+  - direction: out
+    name: ToOutputEnable
+    type: wire
+    width: ''
+  InputCell:
+  - direction: in
+    name: Cell
+    type: wire
+    width: ''
+  - direction: in
+    name: InputPin
+    type: wire
+    width: ''
+  - direction: in
+    name: FromPreviousBSCell
+    type: wire
+    width: ''
+  - direction: in
+    name: CaptureDR
+    type: wire
+    width: ''
+  - direction: in
+    name: ShiftDR
+    type: wire
+    width: ''
+  - direction: in
+    name: TCK
+    type: wire
+    width: ''
+  - direction: out
+    name: ToNextBSCell
+    type: wire
+    width: ''
+  OutputCell:
+  - direction: out
+    name: Cell
+    type: wire
+    width: ''
+  - direction: out
+    name: pin
+    type: wire
+    width: ''
+  - direction: in
+    name: FromCore
+    type: wire
+    width: ''
+  - direction: in
+    name: FromPreviousBSCell
+    type: wire
+    width: ''
+  - direction: in
+    name: CaptureDR
+    type: wire
+    width: ''
+  - direction: in
+    name: ShiftDR
+    type: wire
+    width: ''
+  - direction: in
+    name: UpdateDR
+    type: wire
+    width: ''
+  - direction: in
+    name: extest
+    type: wire
+    width: ''
+  - direction: in
+    name: TCK
+    type: wire
+    width: ''
+  - direction: in
+    name: FromOutputEnable
+    type: wire
+    width: ''
+  - direction: out
+    name: ToNextBSCell
+    type: wire
+    width: ''
+  - direction: out
+    name: TristatedPin
+    type: wire
+    width: ''
+  actel_ujtag:
+  - direction: in
+    name: debug_tdo_i
+    type: wire
+    width: ''
+  - direction: out
+    name: tck_o
+    type: wire
+    width: ''
+  - direction: out
+    name: tdi_o
+    type: wire
+    width: ''
+  - direction: out
+    name: test_logic_reset_o
+    type: wire
+    width: ''
+  - direction: out
+    name: run_test_idle_o
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr_o
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr_o
+    type: wire
+    width: ''
+  - direction: out
+    name: pause_dr_o
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr_o
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_select_o
+    type: wire
+    width: ''
+  - direction: in
+    name: tck_pad_i
+    type: wire
+    width: ''
+  - direction: in
+    name: tms_pad_i
+    type: wire
+    width: ''
+  - direction: in
+    name: tdi_pad_i
+    type: wire
+    width: ''
+  - direction: out
+    name: tdo_pad_o
+    type: wire
+    width: ''
+  - direction: in
+    name: trstb_pad_i
+    type: wire
+    width: ''
+  altera_virtual_jtag:
+  - direction: out
+    name: tck_o
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: debug_tdo_i
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: tdi_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: test_logic_reset_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: run_test_idle_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: shift_dr_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: capture_dr_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: pause_dr_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: update_dr_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: debug_select_o
+    type: "STD_LOGIC \n\t)"
+    width: ''
+  - direction: out
+    name: jtag_state_rti
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_e1dr
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_e2dr
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: tms
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_pir
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_tlr
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: tck
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_sir
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: ir_in
+    type: STD_LOGIC_VECTOR
+    width: 3 DOWNTO 0
+  - direction: out
+    name: virtual_state_cir
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: virtual_state_pdr
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: ir_out
+    type: STD_LOGIC_VECTOR
+    width: 3 DOWNTO 0
+  - direction: out
+    name: virtual_state_uir
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_cir
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_uir
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_pdr
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: tdo
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_sdrs
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: virtual_state_sdr
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: virtual_state_cdr
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_sdr
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_cdr
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: virtual_state_udr
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_udr
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_sirs
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_e1ir
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: jtag_state_e2ir
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: virtual_state_e1dr
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: virtual_state_e2dr
+    type: STD_LOGIC
+    width: ''
+  dbg_comm:
+  - direction: out
+    name: SYS_CLK
+    type: wire
+    width: ''
+  - direction: out
+    name: SYS_RSTN
+    type: wire
+    width: ''
+  - direction: out
+    name: P_TMS
+    type: wire
+    width: ''
+  - direction: out
+    name: P_TCK
+    type: wire
+    width: ''
+  - direction: out
+    name: P_TRST
+    type: wire
+    width: ''
+  - direction: out
+    name: P_TDI
+    type: wire
+    width: ''
+  - direction: in
+    name: P_TDO
+    type: wire
+    width: ''
+  - direction: in
+    name: file
+    type: wire
+    width: ''
+  - direction: out
+    name: active
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  dbg_comm_vpi:
+  - direction: out
+    name: SYS_CLK
+    type: wire
+    width: ''
+  - direction: out
+    name: SYS_RSTN
+    type: wire
+    width: ''
+  - direction: out
+    name: P_TMS
+    type: wire
+    width: ''
+  - direction: out
+    name: P_TCK
+    type: wire
+    width: ''
+  - direction: out
+    name: P_TRST
+    type: wire
+    width: ''
+  - direction: out
+    name: P_TDI
+    type: wire
+    width: ''
+  - direction: in
+    name: P_TDO
+    type: wire
+    width: ''
+  - direction: out
+    name: bit
+    type: wire
+    width: ''
+  xilinx_internal_jtag:
+  - direction: in
+    name: debug_tdo_i
+    type: wire
+    width: ''
+  - direction: out
+    name: tck_o
+    type: wire
+    width: ''
+  - direction: out
+    name: tdi_o
+    type: wire
+    width: ''
+  - direction: out
+    name: test_logic_reset_o
+    type: wire
+    width: ''
+  - direction: out
+    name: run_test_idle_o
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr_o
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr_o
+    type: wire
+    width: ''
+  - direction: out
+    name: pause_dr_o
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr_o
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_select_o
+    type: wire
+    width: ''
+  - direction: out
+    name: for
+    type: wire
+    width: ''
+  - direction: out
+    name: from
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
+  xsv_fpga_top:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn
+    type: wire
+    width: ''
+  - direction: in
+    name: uart_srx
+    type: wire
+    width: ''
+  - direction: out
+    name: uart_stx
+    type: wire
+    width: ''
+  - direction: in
+    name: sdram_clk_i
+    type: wire
+    width: ''
+  - direction: out
+    name: sdram_addr_o
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: sdram_ba_o
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: sdram_dqm_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sdram_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sdram_cas_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sdram_ras_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sdram_cke_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sdram_cs_o
+    type: wire
+    width: ''
+  - direction: inout
+    name: sdram_data_io
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
 total_entities: 26
 desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+external_uses:
+- library: altera_mf
+  package: all

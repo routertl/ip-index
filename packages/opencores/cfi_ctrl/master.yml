@@ -30,6 +30,76 @@ top_modules:
 - cfi_ctrl
 components:
 - cfi_ctrl_engine
+top_ports:
+  cfi_ctrl:
+  - direction: inout
+    name: flash_dq_io
+    type: wire
+    width: '[flash_dq_width-1:0]'
+  - direction: out
+    name: flash_adr_o
+    type: wire
+    width: '[flash_adr_width-1:0]'
+  - direction: out
+    name: flash_adv_n_o
+    type: wire
+    width: ''
+  - direction: out
+    name: flash_ce_n_o
+    type: wire
+    width: ''
+  - direction: out
+    name: flash_clk_o
+    type: wire
+    width: ''
+  - direction: out
+    name: flash_oe_n_o
+    type: wire
+    width: ''
+  - direction: out
+    name: flash_rst_n_o
+    type: wire
+    width: ''
+  - direction: in
+    name: flash_wait_i
+    type: wire
+    width: ''
+  - direction: out
+    name: flash_we_n_o
+    type: wire
+    width: ''
+  - direction: out
+    name: flash_wp_n_o
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_err_o
+    type: wire
+    width: ''
 total_entities: 2
 desc_source: header
 health_tier: bronze

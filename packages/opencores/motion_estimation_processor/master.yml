@@ -92,7 +92,1283 @@ components:
 - reg_memory_dp
 - register_file
 - sad_selector
+top_ports:
+  current_macroblock_memory64:
+  - direction: in
+    name: addr
+    type: std_logic_VECTOR
+    width: 4 downto 0
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: in
+    name: we
+    type: std_logic)
+    width: ''
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: in
+    name: we
+    type: std_logic)
+    width: ''
+  macroblock_data0:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  macroblock_data1:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  macroblock_data2:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  macroblock_data3:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  macroblock_data4:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  macroblock_data5:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  macroblock_data6:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  macroblock_data7:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  me_top:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: register_file_address
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: in
+    name: register_file_data_in
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: register_file_data_out
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: done_interrupt
+    type: std_logic
+    width: ''
+  - direction: out
+    name: best_eu_debug
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: partition_mode_debug
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: qp_on_debug
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: load
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rest_p_cost_mv
+    type: 'rest_type_displacement
+
+      )'
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: partition_count
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: mvy
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: phy_address
+    type: std_logic_vector(13 downto 0))
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: calculate_sad_done
+    type: std_logic
+    width: ''
+  - direction: in
+    name: active_pipelines
+    type: std_logic_vector
+    width: CFG_PIPELINE_COUNT-1 downto 0
+  - direction: in
+    name: update
+    type: std_logic
+    width: ''
+  - direction: in
+    name: best_sad
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: in
+    name: best_mv
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: in
+    name: rest_best_sad
+    type: rest_type_displacement
+    width: ''
+  - direction: in
+    name: rest_best_mv
+    type: rest_type_displacement
+    width: ''
+  - direction: out
+    name: best_sad_out
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: best_mv_out
+    type: std_logic_vector(15 downto 0))
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: calculate_sad_done
+    type: std_logic
+    width: ''
+  - direction: in
+    name: active_pipelines
+    type: std_logic_vector
+    width: CFG_PIPELINE_COUNT_QP-1 downto 0
+  - direction: in
+    name: update
+    type: std_logic
+    width: ''
+  - direction: in
+    name: best_sad
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: in
+    name: best_mv
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: in
+    name: rest_best_sad
+    type: rest_type_displacement_qp
+    width: ''
+  - direction: in
+    name: rest_best_mv
+    type: rest_type_displacement_qp
+    width: ''
+  - direction: out
+    name: best_sad_out
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: best_mv_out
+    type: std_logic_vector(15 downto 0))
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enable
+    type: std_logic
+    width: ''
+  - direction: in
+    name: update
+    type: std_logic
+    width: ''
+  - direction: in
+    name: load_mv
+    type: std_logic
+    width: ''
+  - direction: in
+    name: mode_in
+    type: mode_type
+    width: ''
+  - direction: in
+    name: mv_cost_on
+    type: std_logic
+    width: ''
+  - direction: in
+    name: mv_cost_in
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: in
+    name: candidate_mvx
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: candidate_mvy
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: reference_data_in
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: current_data_in
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: residue_out
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: enable_fifo
+    type: std_logic
+    width: ''
+  - direction: out
+    name: reset_fifo
+    type: std_logic
+    width: ''
+  - direction: out
+    name: winner1
+    type: std_logic
+    width: ''
+  - direction: out
+    name: calculate_sad_done
+    type: std_logic
+    width: ''
+  - direction: out
+    name: distance_engine_active
+    type: std_logic
+    width: ''
+  - direction: out
+    name: best_sad
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: best_mv
+    type: std_logic_vector(15 downto 0))
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 4 downto 0
+  - direction: in
+    name: write
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data_in
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: data_out
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: start
+    type: std_logic
+    width: ''
+  - direction: in
+    name: all_done_qp
+    type: std_logic
+    width: ''
+  - direction: in
+    name: instruction_zero
+    type: std_logic
+    width: ''
+  - direction: in
+    name: partition_done_fp
+    type: std_logic
+    width: ''
+  - direction: out
+    name: start_row
+    type: std_logic
+    width: ''
+  - direction: in
+    name: update_fp
+    type: std_logic
+    width: ''
+  - direction: in
+    name: load_mv
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mv_cost_on
+    type: std_logic
+    width: ''
+  - direction: in
+    name: best_mv_fp
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: first_mv_fp
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: rest_first_mv_fp
+    type: rest_type_displacement
+    width: ''
+  - direction: out
+    name: mbx_coordinate
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: mby_coordinate
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: mvp_x
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: mvp_y
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: quant_parameter
+    type: std_logic_vector
+    width: 5 downto 0
+  - direction: out
+    name: frame_dimension_x
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: frame_dimension_y
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: update_qp
+    type: std_logic
+    width: ''
+  - direction: in
+    name: partition_count
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: best_mv_qp
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: first_mv_qp
+    type: std_logic_vector(15 downto 0))
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: next_point_displacement_fp
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: in
+    name: start_mb
+    type: std_logic
+    width: ''
+  - direction: in
+    name: partition_count
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: mbx_coordinate
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: candidate_mvx
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: mv_cost
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: in
+    name: mv_cost_on
+    type: std_logic
+    width: ''
+  - direction: out
+    name: best_sad_fp
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: out
+    name: best_mv_fp
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: in
+    name: dma_address
+    type: std_logic_vector
+    width: 10 downto 0
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_vector
+    width: 19 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_vector
+    width: 19 downto 0
+  - direction: in
+    name: we
+    type: std_logic)
+    width: ''
+  - direction: in
+    name: addr_w
+    type: std_logic_vector
+    width: 10 downto 0
+  - direction: in
+    name: enable_hp_inter
+    type: std_logic
+    width: ''
+  - direction: in
+    name: start
+    type: std_logic
+    width: ''
+  - direction: in
+    name: next_configuration
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: dout2
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: we
+    type: std_logic)
+    width: ''
+  - direction: in
+    name: enable_hp_inter
+    type: std_logic
+    width: ''
+  - direction: in
+    name: next_configuration
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: dout2
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: din2
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: enable
+    type: std_logic
+    width: ''
+  - direction: out
+    name: quick_valid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: din2
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: enable_hp_inter
+    type: std_logic
+    width: ''
+  - direction: out
+    name: quick_valid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: qp_mode
+    type: std_logic
+    width: ''
+  - direction: in
+    name: write_interpolate_register
+    type: std_logic
+    width: ''
+  - direction: in
+    name: interpolate_in_pixels_a
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: interpolate_in_pixels_b
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: write_block1
+    type: std_logic
+    width: ''
+  - direction: out
+    name: interpolate_out_pixels
+    type: "std_logic_vector(63 downto 0)\n    )"
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enable_hp_inter
+    type: std_logic
+    width: ''
+  - direction: in
+    name: mode_in
+    type: mode_type
+    width: ''
+  - direction: in
+    name: partition_count_in
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: in_pixels
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: write_block1
+    type: std_logic
+    width: ''
+  - direction: out
+    name: out_pixels
+    type: "std_logic_vector(63 downto 0)\n    )"
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enable_interpolation
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enable_estimation
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data_in
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: data_in_valid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: data_request
+    type: std_logic
+    width: ''
+  - direction: out
+    name: all_done
+    type: std_logic
+    width: ''
+  - direction: out
+    name: next_point
+    type: std_logic
+    width: ''
+  - direction: in
+    name: candidate_mvy
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: hp_address_a
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: hp_address_b
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: data_out_a
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: we
+    type: std_logic)
+    width: ''
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_VECTOR
+    width: 15 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_VECTOR
+    width: 15 downto 0
+  - direction: in
+    name: we
+    type: std_logic)
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: start
+    type: std_logic
+    width: ''
+  - direction: in
+    name: range_ok
+    type: std_logic
+    width: ''
+  - direction: in
+    name: mvc_done
+    type: std_logic
+    width: ''
+  - direction: in
+    name: qp_on
+    type: std_logic
+    width: ''
+  - direction: out
+    name: active_pipelines
+    type: std_logic_vector
+    width: CFG_PIPELINE_COUNT-1 downto 0
+  - direction: in
+    name: calculate_sad_done
+    type: std_logic
+    width: ''
+  - direction: in
+    name: distance_engine_active
+    type: std_logic
+    width: ''
+  - direction: in
+    name: interpolation_done
+    type: std_logic
+    width: ''
+  - direction: out
+    name: write_register
+    type: std_logic
+    width: ''
+  - direction: out
+    name: load_mv
+    type: std_logic
+    width: ''
+  - direction: out
+    name: update
+    type: std_logic
+    width: ''
+  - direction: out
+    name: instruction_zero
+    type: std_logic
+    width: ''
+  - direction: out
+    name: all_done
+    type: std_logic
+    width: ''
+  - direction: in
+    name: qpel_loc_x
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: start_qp
+    type: std_logic
+    width: ''
+  - direction: out
+    name: enable_hp_inter
+    type: std_logic
+    width: ''
+  - direction: in
+    name: next_rm_addresss
+    type: std_logic_vector
+    width: 13 downto 0
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: start
+    type: std_logic
+    width: ''
+  - direction: out
+    name: update
+    type: std_logic
+    width: ''
+  - direction: out
+    name: all_done
+    type: "std_logic -- program completes\n    )"
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: candidate_mvx
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: candidate_mvy
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: frame_dimension_x
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: mbx_coordinate
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: range_ok
+    type: 'std_logic
+
+      )'
+    width: ''
+  range_checker:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: candidate_mvx
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: candidate_mvy
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: frame_dimension_x
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: mbx_coordinate
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: range_ok
+    type: std_logic
+    width: ''
+  reference_data0:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  reference_data1:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  reference_data2:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  reference_data3:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr
+    type: std_logic_vector
+    width: 9 downto 0
+  - direction: out
+    name: data
+    type: "std_logic_vector (63 downto 0)\n      )"
+    width: ''
+  reference_macroblock_memory64:
+  - direction: in
+    name: addr
+    type: std_logic_VECTOR
+    width: 5 downto 0
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: in
+    name: we
+    type: std_logic)
+    width: ''
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: in
+    name: we
+    type: std_logic)
+    width: ''
+  reference_memory64_remap:
+  - direction: in
+    name: addr_w
+    type: std_logic_vector
+    width: 10 downto 0
+  - direction: in
+    name: enable_hp_inter
+    type: std_logic
+    width: ''
+  - direction: in
+    name: start
+    type: std_logic
+    width: ''
+  - direction: in
+    name: next_configuration
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: din
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: dout
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: out
+    name: dout2
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: addra
+    type: std_logic_VECTOR
+    width: 6 downto 0
+  - direction: in
+    name: addrb
+    type: std_logic_VECTOR
+    width: 6 downto 0
+  - direction: in
+    name: addrw
+    type: std_logic_vector
+    width: 6 downto 0
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clear
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dina
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: out
+    name: douta
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: out
+    name: doutb
+    type: std_logic_VECTOR
+    width: 63 downto 0
+  - direction: in
+    name: wea
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: rea
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: reb
+    type: std_logic_vector
+    width: 3 downto 0
 total_entities: 29
 desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+provides_packages:
+- config

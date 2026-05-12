@@ -62,5 +62,35 @@ components:
 - zircon_ip_len_cksum
 - zircon_ip_rx_parse
 - zircon_ip_tx_deparse
+top_ports:
+  zircon_ip_rx_egress:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  zircon_ip_rx_ingress:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  zircon_ip_tx_buffer:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  zircon_ip_tx_egress:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  zircon_ip_tx_ingress:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 8
 desc_source: curator

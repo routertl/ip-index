@@ -215,6 +215,176 @@ components:
 - util_cpack2_impl
 - util_dacfifo_bypass
 - util_upack2_impl
+top_ports:
+  axi_adaq8092:
+  - direction: in
+    name: adc_clk_in_p
+    type: wire
+    width: ''
+  - direction: in
+    name: adc_clk_in_n
+    type: wire
+    width: ''
+  - direction: in
+    name: lvds_adc_data_in1_p
+    type: wire
+    width: '[ 6:0]'
+  - direction: in
+    name: lvds_adc_data_in1_n
+    type: wire
+    width: '[ 6:0]'
+  - direction: in
+    name: lvds_adc_data_in2_p
+    type: wire
+    width: '[ 6:0]'
+  - direction: in
+    name: lvds_adc_data_in2_n
+    type: wire
+    width: '[ 6:0]'
+  - direction: in
+    name: lvds_adc_or_in_p
+    type: wire
+    width: ''
+  - direction: in
+    name: lvds_adc_or_in_n
+    type: wire
+    width: ''
+  - direction: in
+    name: cmos_adc_data_in1
+    type: wire
+    width: '[13:0]'
+  - direction: in
+    name: cmos_adc_data_in2
+    type: wire
+    width: '[13:0]'
+  - direction: in
+    name: cmos_adc_or_in_1
+    type: wire
+    width: ''
+  - direction: in
+    name: cmos_adc_or_in_2
+    type: wire
+    width: ''
+  - direction: in
+    name: delay_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_rst
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_enable_1
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_enable_2
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_data_channel1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: adc_data_channel2
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: adc_dovf
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_aclk
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_aresetn
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_awvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_awaddr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: s_axi_awready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_wvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_wdata
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_axi_wstrb
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: s_axi_wready
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_bvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_bresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: s_axi_bready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_arvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_araddr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: s_axi_arready
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_rvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_rresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: s_axi_rdata
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_axi_rready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_awprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: s_axi_arprot
+    type: wire
+    width: '[ 2:0]'
 desc_source: preserved
 external_uses:
 - library: work

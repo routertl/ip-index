@@ -53,6 +53,433 @@ top_modules:
 - debouncer
 - oc_fifo_basic
 - random_ff
+top_ports:
+  arbiter:
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: reqst
+    type: wire
+    width: '[RCNT-1:0]'
+  - direction: out
+    name: grant
+    type: wire
+    width: '[RCNT-1:0]'
+  bc_fifo_basic:
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: put_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: get_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: get_clk_i
+    type: wire
+    width: ''
+  - direction: out
+    name: get_do
+    type: wire
+    width: '[DW-1:0]'
+  - direction: in
+    name: get
+    type: wire
+    width: ''
+  - direction: out
+    name: get_have
+    type: wire
+    width: ''
+  - direction: in
+    name: put_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: put_di
+    type: wire
+    width: '[DW-1:0]'
+  - direction: in
+    name: put
+    type: wire
+    width: ''
+  - direction: out
+    name: put_need
+    type: wire
+    width: ''
+  - direction: in
+    name: b
+    type: wire
+    width: '[AW:0]'
+  - direction: in
+    name: g
+    type: wire
+    width: '[AW:0]'
+  clock_detect:
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  - direction: out
+    name: will
+    type: wire
+    width: ''
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: sclk_i
+    type: wire
+    width: ''
+  - direction: out
+    name: alive_o
+    type: wire
+    width: ''
+  clock_switch2_basic:
+  - direction: in
+    name: rst0_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk0_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst1_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk1_i
+    type: wire
+    width: ''
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: select
+    type: wire
+    width: ''
+  - direction: out
+    name: clk_o
+    type: wire
+    width: ''
+  - direction: in
+    name: always
+    type: wire
+    width: ''
+  - direction: in
+    name: gclk0
+    type: wire
+    width: ''
+  clock_switch3_basic:
+  - direction: in
+    name: rst0_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk0_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst1_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk1_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst2_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk2_i
+    type: wire
+    width: ''
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: out
+    name: clock
+    type: wire
+    width: ''
+  - direction: in
+    name: select
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: clk_o
+    type: wire
+    width: ''
+  - direction: in
+    name: always
+    type: wire
+    width: ''
+  - direction: in
+    name: gclk0
+    type: wire
+    width: ''
+  clock_switch4_basic:
+  - direction: in
+    name: rst0_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk0_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst1_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk1_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst2_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk2_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst3_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk3_i
+    type: wire
+    width: ''
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: select
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: clk_o
+    type: wire
+    width: ''
+  - direction: in
+    name: always
+    type: wire
+    width: ''
+  - direction: in
+    name: gclk0
+    type: wire
+    width: ''
+  clock_switch8_basic:
+  - direction: in
+    name: rst0_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk0_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst1_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk1_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst2_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk2_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst3_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk3_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst4_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk4_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst5_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk5_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst6_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk6_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst7_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk7_i
+    type: wire
+    width: ''
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: select
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: clk_o
+    type: wire
+    width: ''
+  - direction: in
+    name: always
+    type: wire
+    width: ''
+  - direction: in
+    name: gclk0
+    type: wire
+    width: ''
+  debouncer:
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: button_i
+    type: wire
+    width: ''
+  - direction: out
+    name: button_o
+    type: wire
+    width: ''
+  - direction: in
+    name: button_2
+    type: wire
+    width: ''
+  - direction: in
+    name: to
+    type: wire
+    width: ''
+  - direction: out
+    name: default
+    type: wire
+    width: ''
+  oc_fifo_basic:
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: out
+    name: have
+    type: wire
+    width: ''
+  - direction: in
+    name: take
+    type: wire
+    width: ''
+  - direction: out
+    name: take_do
+    type: wire
+    width: '[DW-1:0]'
+  - direction: out
+    name: need
+    type: wire
+    width: ''
+  - direction: in
+    name: give
+    type: wire
+    width: ''
+  - direction: in
+    name: give_di
+    type: wire
+    width: '[DW-1:0]'
+  random_ff:
+  - direction: out
+    name: DOES
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: out
+    name: Q
+    type: wire
+    width: ''
+  - direction: in
+    name: CLRN
+    type: wire
+    width: ''
+  - direction: in
+    name: SETN
+    type: wire
+    width: ''
+  - direction: in
+    name: SI
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
 total_entities: 10
 desc_source: verdict
 health_tier: bronze

@@ -32,6 +32,272 @@ top_modules:
 components:
 - ALU16
 - RAM16X8D_regs
+top_ports:
+  ALU8:
+  - direction: in
+    name: D0
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: D1
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: FIN
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: FOUT
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: ALU8DOUT
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: OP
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: EXOP
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: LDIFLAGS
+    type: wire
+    width: ''
+  - direction: in
+    name: DSTHI
+    type: wire
+    width: ''
+  - direction: out
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: cdaa
+    type: wire
+    width: ''
+  - direction: out
+    name: hdaa
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[15:0]'
+  NextZ80:
+  - direction: in
+    name: DI
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: DO
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: ADDR
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: WR
+    type: wire
+    width: ''
+  - direction: out
+    name: MREQ
+    type: wire
+    width: ''
+  - direction: out
+    name: IORQ
+    type: wire
+    width: ''
+  - direction: out
+    name: HALT
+    type: wire
+    width: ''
+  - direction: out
+    name: M1
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: in
+    name: RESET
+    type: wire
+    width: ''
+  - direction: in
+    name: INT
+    type: wire
+    width: ''
+  - direction: in
+    name: NMI
+    type: wire
+    width: ''
+  - direction: in
+    name: WAIT
+    type: wire
+    width: ''
+  RegSelect:
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: in
+    name: M1
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: out
+    name: reg
+    type: wire
+    width: ''
+  - direction: in
+    name: ALU160_sel
+    type: wire
+    width: ''
+  - direction: in
+    name: DINW_SEL
+    type: wire
+    width: ''
+  - direction: in
+    name: XMASK
+    type: wire
+    width: ''
+  - direction: in
+    name: WAIT
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: WCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: WE
+    type: wire
+    width: ''
+  Z80Reg:
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: in
+    name: M1
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: out
+    name: reg
+    type: wire
+    width: ''
+  - direction: in
+    name: ALU160_sel
+    type: wire
+    width: ''
+  - direction: in
+    name: DINW_SEL
+    type: wire
+    width: ''
+  - direction: in
+    name: XMASK
+    type: wire
+    width: ''
+  - direction: in
+    name: WAIT
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: WCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: WE
+    type: wire
+    width: ''
+  daa:
+  - direction: in
+    name: D0
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: D1
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: FIN
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: FOUT
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: ALU8DOUT
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: OP
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: EXOP
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: LDIFLAGS
+    type: wire
+    width: ''
+  - direction: in
+    name: DSTHI
+    type: wire
+    width: ''
+  - direction: out
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: cdaa
+    type: wire
+    width: ''
+  - direction: out
+    name: hdaa
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[15:0]'
 total_entities: 7
 desc_source: verdict
 health_tier: bronze

@@ -1,8 +1,8 @@
 name: axi_join_intf
 namespace: pulp-platform
 version: master
-commit_sha: 3fafe2496243a88cfa2a778921f0e7f71a6a2d9d
-published_at: '2026-04-15T10:26:08+02:00'
+commit_sha: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
+published_at: '2026-05-07T16:14:15+02:00'
 description: Joins/passes through an AXI slave interface to an AXI master interface.
 license: Apache-2.0
 license_class: permissive
@@ -11,7 +11,7 @@ source:
   url: https://github.com/pulp-platform/axi.git
   tag: master
   ip_yml_path: .
-  resolved_commit: 3fafe2496243a88cfa2a778921f0e7f71a6a2d9d
+  resolved_commit: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 routertl_compat:
   language: systemverilog
   library: work
@@ -50,3 +50,4 @@ components:
 - axi_to_mem
 - axi_xbar
 - axi_xbar_unmuxed
+desc_source: preserved

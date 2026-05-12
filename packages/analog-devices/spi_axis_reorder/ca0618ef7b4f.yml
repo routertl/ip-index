@@ -27,6 +27,40 @@ tags:
 - spi
 - stream
 role: top
+top_ports:
+  spi_axis_reorder:
+  - direction: in
+    name: axis_aclk
+    type: wire
+    width: ''
+  - direction: in
+    name: axis_aresetn
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_data
+    type: wire
+    width: '[(NUM_OF_LANES * 32)-1:0]'
+  - direction: out
+    name: m_axis_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_data
+    type: wire
+    width: '[63:0]'
 desc_source: ports
 external_uses:
 - library: work

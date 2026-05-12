@@ -26,6 +26,153 @@ role: repo
 top_modules:
 - bcd_to_binary
 - binary_to_bcd
+top_ports:
+  bcd_to_binary:
+  - direction: in
+    name: bit
+    type: wire
+    width: ''
+  - direction: in
+    name: digit
+    type: wire
+    width: ''
+  - direction: in
+    name: digits
+    type: wire
+    width: ''
+  - direction: out
+    name: bits
+    type: wire
+    width: ''
+  - direction: in
+    name: number
+    type: wire
+    width: ''
+  - direction: in
+    name: will
+    type: wire
+    width: ''
+  - direction: out
+    name: register
+    type: wire
+    width: ''
+  - direction: in
+    name: values
+    type: wire
+    width: ''
+  - direction: in
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: ce_i
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: start_i
+    type: wire
+    width: ''
+  - direction: in
+    name: dat_bcd_i
+    type: wire
+    width: '[4*BCD_DIGITS_IN_PP-1:0]'
+  - direction: in
+    name: bus
+    type: wire
+    width: ''
+  - direction: out
+    name: dat_binary_o
+    type: wire
+    width: '[BITS_OUT_PP-1:0]'
+  - direction: out
+    name: done_o
+    type: wire
+    width: ''
+  - direction: in
+    name: din
+    type: wire
+    width: '[4*BCD_DIGITS_IN_PP-1:0]'
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  binary_to_bcd:
+  - direction: in
+    name: bit
+    type: wire
+    width: ''
+  - direction: in
+    name: bits
+    type: wire
+    width: ''
+  - direction: out
+    name: digits
+    type: wire
+    width: ''
+  - direction: in
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: ce_i
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: start_i
+    type: wire
+    width: ''
+  - direction: in
+    name: dat_binary_i
+    type: wire
+    width: '[BITS_IN_PP-1:0]'
+  - direction: in
+    name: bus
+    type: wire
+    width: ''
+  - direction: out
+    name: dat_bcd_o
+    type: wire
+    width: '[4*BCD_DIGITS_OUT_PP-1:0]'
+  - direction: out
+    name: done_o
+    type: wire
+    width: ''
+  - direction: in
+    name: din
+    type: wire
+    width: '[4*BCD_DIGITS_OUT_PP-1:0]'
+  - direction: in
+    name: newbit
+    type: wire
+    width: ''
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
 total_entities: 2
 desc_source: header
 health_tier: bronze

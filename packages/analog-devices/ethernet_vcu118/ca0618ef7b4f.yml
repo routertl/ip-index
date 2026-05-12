@@ -22,6 +22,360 @@ tags:
 - ethernet
 - vcu118
 role: top
+top_ports:
+  ethernet_vcu118:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_125mhz
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_125mhz
+    type: wire
+    width: ''
+  - direction: in
+    name: qsfp_drp_clk
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: in
+    name: qsfp_drp_rst
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: in
+    name: ctrl_reg_wr_addr
+    type: wire
+    width: '[AXIL_CSR_ADDR_WIDTH-1:0]'
+  - direction: in
+    name: ctrl_reg_wr_data
+    type: wire
+    width: '[AXIL_CTRL_DATA_WIDTH-1:0]'
+  - direction: in
+    name: ctrl_reg_wr_strb
+    type: wire
+    width: '[AXIL_CTRL_STRB_WIDTH-1:0]'
+  - direction: in
+    name: ctrl_reg_wr_en
+    type: wire
+    width: ''
+  - direction: out
+    name: ctrl_reg_wr_wait
+    type: wire
+    width: ''
+  - direction: out
+    name: ctrl_reg_wr_ack
+    type: wire
+    width: ''
+  - direction: in
+    name: ctrl_reg_rd_addr
+    type: wire
+    width: '[AXIL_CSR_ADDR_WIDTH-1:0]'
+  - direction: in
+    name: ctrl_reg_rd_en
+    type: wire
+    width: ''
+  - direction: out
+    name: ctrl_reg_rd_data
+    type: wire
+    width: '[AXIL_CTRL_DATA_WIDTH-1:0]'
+  - direction: out
+    name: ctrl_reg_rd_wait
+    type: wire
+    width: ''
+  - direction: out
+    name: ctrl_reg_rd_ack
+    type: wire
+    width: ''
+  - direction: out
+    name: qsfp_tx_p
+    type: wire
+    width: '[QSFP_CNT*4-1:0]'
+  - direction: out
+    name: qsfp_tx_n
+    type: wire
+    width: '[QSFP_CNT*4-1:0]'
+  - direction: in
+    name: qsfp_rx_p
+    type: wire
+    width: '[QSFP_CNT*4-1:0]'
+  - direction: in
+    name: qsfp_rx_n
+    type: wire
+    width: '[QSFP_CNT*4-1:0]'
+  - direction: out
+    name: qsfp_modsell
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: out
+    name: qsfp_resetl
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: in
+    name: qsfp_modprsl
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: in
+    name: qsfp_intl
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: out
+    name: qsfp_lpmode
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: out
+    name: qsfp_gtpowergood
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: in
+    name: qsfp_mgt_refclk
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: in
+    name: qsfp_mgt_refclk_bufg
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: out
+    name: qsfp_rst
+    type: wire
+    width: '[QSFP_CNT-1:0]'
+  - direction: out
+    name: eth_tx_clk
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: eth_tx_rst
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: eth_tx_ptp_clk
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: eth_tx_ptp_rst
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: eth_tx_ptp_ts
+    type: wire
+    width: '[PORT_COUNT*PTP_TS_WIDTH-1:0]'
+  - direction: in
+    name: eth_tx_ptp_ts_step
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: axis_eth_tx_tdata
+    type: wire
+    width: '[PORT_COUNT*AXIS_DATA_WIDTH-1:0]'
+  - direction: in
+    name: axis_eth_tx_tkeep
+    type: wire
+    width: '[PORT_COUNT*AXIS_KEEP_WIDTH-1:0]'
+  - direction: in
+    name: axis_eth_tx_tvalid
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: axis_eth_tx_tready
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: axis_eth_tx_tlast
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: axis_eth_tx_tuser
+    type: wire
+    width: '[PORT_COUNT*AXIS_TX_USER_WIDTH-1:0]'
+  - direction: out
+    name: axis_eth_tx_ptp_ts
+    type: wire
+    width: '[PORT_COUNT*PTP_TS_WIDTH-1:0]'
+  - direction: out
+    name: axis_eth_tx_ptp_ts_tag
+    type: wire
+    width: '[PORT_COUNT*TX_TAG_WIDTH-1:0]'
+  - direction: out
+    name: axis_eth_tx_ptp_ts_valid
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: axis_eth_tx_ptp_ts_ready
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: eth_tx_enable
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: eth_tx_status
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: eth_tx_lfc_en
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: eth_tx_lfc_req
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: eth_tx_pfc_en
+    type: wire
+    width: '[PORT_COUNT*8-1:0]'
+  - direction: in
+    name: eth_tx_pfc_req
+    type: wire
+    width: '[PORT_COUNT*8-1:0]'
+  - direction: out
+    name: eth_rx_clk
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: eth_rx_rst
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: eth_rx_ptp_clk
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: eth_rx_ptp_rst
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: eth_rx_ptp_ts
+    type: wire
+    width: '[PORT_COUNT*PTP_TS_WIDTH-1:0]'
+  - direction: in
+    name: eth_rx_ptp_ts_step
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: axis_eth_rx_tdata
+    type: wire
+    width: '[PORT_COUNT*AXIS_DATA_WIDTH-1:0]'
+  - direction: out
+    name: axis_eth_rx_tkeep
+    type: wire
+    width: '[PORT_COUNT*AXIS_KEEP_WIDTH-1:0]'
+  - direction: out
+    name: axis_eth_rx_tvalid
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: axis_eth_rx_tready
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: axis_eth_rx_tlast
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: axis_eth_rx_tuser
+    type: wire
+    width: '[PORT_COUNT*AXIS_RX_USER_WIDTH-1:0]'
+  - direction: in
+    name: eth_rx_enable
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: eth_rx_status
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: eth_rx_lfc_en
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: out
+    name: eth_rx_lfc_req
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: eth_rx_lfc_ack
+    type: wire
+    width: '[PORT_COUNT-1:0]'
+  - direction: in
+    name: eth_rx_pfc_en
+    type: wire
+    width: '[PORT_COUNT*8-1:0]'
+  - direction: out
+    name: eth_rx_pfc_req
+    type: wire
+    width: '[PORT_COUNT*8-1:0]'
+  - direction: in
+    name: eth_rx_pfc_ack
+    type: wire
+    width: '[PORT_COUNT*8-1:0]'
+  - direction: in
+    name: i2c_scl_i
+    type: wire
+    width: ''
+  - direction: out
+    name: i2c_scl_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i2c_scl_t
+    type: wire
+    width: ''
+  - direction: in
+    name: i2c_sda_i
+    type: wire
+    width: ''
+  - direction: out
+    name: i2c_sda_o
+    type: wire
+    width: ''
+  - direction: out
+    name: i2c_sda_t
+    type: wire
+    width: ''
+  - direction: out
+    name: fpga_boot
+    type: wire
+    width: ''
+  - direction: out
+    name: qspi_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: qspi_0_dq_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: qspi_0_dq_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: qspi_0_dq_oe
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: qspi_0_cs
+    type: wire
+    width: ''
+  - direction: in
+    name: qspi_1_dq_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: qspi_1_dq_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: qspi_1_dq_oe
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: qspi_1_cs
+    type: wire
+    width: ''
 desc_source: header
 external_uses:
 - library: work

@@ -186,6 +186,9360 @@ components:
 - util_cpack2_impl
 - util_dacfifo_bypass
 - util_upack2_impl
+top_ports:
+  util_adxcvr:
+  - direction: in
+    name: up_rstn
+    type: wire
+    width: ''
+  - direction: in
+    name: up_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: qpll_ref_clk_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_qpll_rst_0
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_0_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_0_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_0
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_0
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_0
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_0
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_0
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_0
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_0_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_0_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_0
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_0
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_0
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_0
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_0
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_0
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_0
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_cm_enb_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_addr_0
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_cm_wr_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_wdata_0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_rdata_0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_ready_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_enb_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_0
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_0
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_0
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_0
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_0
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_0
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_0
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_0
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_0
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_0
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_0
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_0
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_0
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_0
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_0
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_0
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_0
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_0
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_0
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_0
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_0
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_0
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_0
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_0
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_0
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_0
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_1
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_1_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_1_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_1
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_1
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_1
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_1
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_1
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_1
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_1
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_1
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_1_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_1_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_1
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_1
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_1
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_1
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_1
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_1
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_1
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_1
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_1
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_1
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_1
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_1
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_1
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_1
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_1
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_1
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_1
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_1
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_1
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_1
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_1
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_1
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_1
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_1
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_1
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_1
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_1
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_1
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_1
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_1
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_1
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_1
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_1
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_2
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_2_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_2_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_2
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_2
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_2
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_2
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_2
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_2
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_2
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_2
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_2
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_2
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_2_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_2_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_2
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_2
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_2
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_2
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_2
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_2
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_2
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_2
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_2
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_2
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_2
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_2
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_2
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_2
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_2
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_2
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_2
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_2
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_2
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_2
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_2
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_2
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_2
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_2
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_2
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_2
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_2
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_2
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_2
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_2
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_2
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_2
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_2
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_2
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_2
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_2
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_2
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_2
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_3
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_3_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_3_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_3
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_3
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_3
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_3
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_3
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_3
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_3
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_3
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_3
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_3
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_3
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_3_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_3_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_3
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_3
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_3
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_3
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_3
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_3
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_3
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_3
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_3
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_3
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_3
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_3
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_3
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_3
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_3
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_3
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_3
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_3
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_3
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_3
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_3
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_3
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_3
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_3
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_3
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_3
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_3
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_3
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_3
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_3
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_3
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_3
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_3
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_3
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_3
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_3
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_3
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_3
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_3
+    type: wire
+    width: ''
+  - direction: in
+    name: qpll_ref_clk_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_qpll_rst_4
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_4
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_4_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_4_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_4
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_4
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_4
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_4
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_4
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_4
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_4
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_4
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_4
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_4
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_4
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_4_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_4_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_4
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_4
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_4
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_4
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_4
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_4
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_4
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_cm_enb_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_addr_4
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_cm_wr_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_wdata_4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_rdata_4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_ready_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_enb_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_4
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_4
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_4
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_4
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_4
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_4
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_4
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_4
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_4
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_4
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_4
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_4
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_4
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_4
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_4
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_4
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_4
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_4
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_4
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_4
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_4
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_4
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_4
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_4
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_4
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_4
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_5
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_5_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_5_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_5
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_5
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_5
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_5
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_5
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_5
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_5
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_5
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_5
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_5
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_5
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_5_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_5_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_5
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_5
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_5
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_5
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_5
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_5
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_5
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_5
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_5
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_5
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_5
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_5
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_5
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_5
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_5
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_5
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_5
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_5
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_5
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_5
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_5
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_5
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_5
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_5
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_5
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_5
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_5
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_5
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_5
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_5
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_5
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_5
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_5
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_5
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_5
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_5
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_5
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_5
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_5
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_6
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_6_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_6_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_6
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_6
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_6
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_6
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_6
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_6
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_6
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_6
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_6
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_6
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_6
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_6_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_6_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_6
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_6
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_6
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_6
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_6
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_6
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_6
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_6
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_6
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_6
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_6
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_6
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_6
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_6
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_6
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_6
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_6
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_6
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_6
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_6
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_6
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_6
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_6
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_6
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_6
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_6
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_6
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_6
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_6
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_6
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_6
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_6
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_6
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_6
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_6
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_6
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_6
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_6
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_6
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_7
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_7_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_7_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_7
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_7
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_7
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_7
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_7
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_7
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_7
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_7
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_7
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_7
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_7
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_7_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_7_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_7
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_7
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_7
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_7
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_7
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_7
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_7
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_7
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_7
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_7
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_7
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_7
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_7
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_7
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_7
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_7
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_7
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_7
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_7
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_7
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_7
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_7
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_7
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_7
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_7
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_7
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_7
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_7
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_7
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_7
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_7
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_7
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_7
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_7
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_7
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_7
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_7
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_7
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_7
+    type: wire
+    width: ''
+  - direction: in
+    name: qpll_ref_clk_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_qpll_rst_8
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_8
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_8_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_8_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_8
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_8
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_8
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_8
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_8
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_8
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_8
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_8
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_8
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_8
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_8
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_8_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_8_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_8
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_8
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_8
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_8
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_8
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_8
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_8
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_cm_enb_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_addr_8
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_cm_wr_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_wdata_8
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_rdata_8
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_ready_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_enb_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_8
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_8
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_8
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_8
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_8
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_8
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_8
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_8
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_8
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_8
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_8
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_8
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_8
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_8
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_8
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_8
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_8
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_8
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_8
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_8
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_8
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_8
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_8
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_8
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_8
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_8
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_8
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_8
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_8
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_8
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_8
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_8
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_9
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_9_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_9_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_9
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_9
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_9
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_9
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_9
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_9
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_9
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_9
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_9
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_9
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_9
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_9_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_9_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_9
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_9
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_9
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_9
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_9
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_9
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_9
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_9
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_9
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_9
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_9
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_9
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_9
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_9
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_9
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_9
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_9
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_9
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_9
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_9
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_9
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_9
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_9
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_9
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_9
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_9
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_9
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_9
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_9
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_9
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_9
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_9
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_9
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_9
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_9
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_9
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_9
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_9
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_9
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_10
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_10_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_10_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_10
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_10
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_10
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_10
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_10
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_10
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_10
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_10
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_10
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_10
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_10
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_10_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_10_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_10
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_10
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_10
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_10
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_10
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_10
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_10
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_10
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_10
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_10
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_10
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_10
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_10
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_10
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_10
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_10
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_10
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_10
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_10
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_10
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_10
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_10
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_10
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_10
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_10
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_10
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_10
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_10
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_10
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_10
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_10
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_10
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_10
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_10
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_10
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_10
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_10
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_10
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_10
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_11
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_11_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_11_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_11
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_11
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_11
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_11
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_11
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_11
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_11
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_11
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_11
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_11
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_11
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_11_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_11_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_11
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_11
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_11
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_11
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_11
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_11
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_11
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_11
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_11
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_11
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_11
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_11
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_11
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_11
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_11
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_11
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_11
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_11
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_11
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_11
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_11
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_11
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_11
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_11
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_11
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_11
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_11
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_11
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_11
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_11
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_11
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_11
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_11
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_11
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_11
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_11
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_11
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_11
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_11
+    type: wire
+    width: ''
+  - direction: in
+    name: qpll_ref_clk_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_qpll_rst_12
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_12
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_12_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_12_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_12
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_12
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_12
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_12
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_12
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_12
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_12
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_12
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_12
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_12
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_12
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_12_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_12_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_12
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_12
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_12
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_12
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_12
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_12
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_12
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_cm_enb_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_addr_12
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_cm_wr_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_wdata_12
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_rdata_12
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_ready_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_enb_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_12
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_12
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_12
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_12
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_12
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_12
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_12
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_12
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_12
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_12
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_12
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_12
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_12
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_12
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_12
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_12
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_12
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_12
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_12
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_12
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_12
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_12
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_12
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_12
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_12
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_12
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_12
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_12
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_12
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_12
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_12
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_12
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_13
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_13_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_13_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_13
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_13
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_13
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_13
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_13
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_13
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_13
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_13
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_13
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_13
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_13
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_13_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_13_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_13
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_13
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_13
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_13
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_13
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_13
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_13
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_13
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_13
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_13
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_13
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_13
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_13
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_13
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_13
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_13
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_13
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_13
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_13
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_13
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_13
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_13
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_13
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_13
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_13
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_13
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_13
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_13
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_13
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_13
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_13
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_13
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_13
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_13
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_13
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_13
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_13
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_13
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_13
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_14
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_14_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_14_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_14
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_14
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_14
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_14
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_14
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_14
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_14
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_14
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_14
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_14
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_14
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_14_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_14_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_14
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_14
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_14
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_14
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_14
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_14
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_14
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_14
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_14
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_14
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_14
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_14
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_14
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_14
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_14
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_14
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_14
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_14
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_14
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_14
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_14
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_14
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_14
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_14
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_14
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_14
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_14
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_14
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_14
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_14
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_14
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_14
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_14
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_14
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_14
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_14
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_14
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_14
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_14
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_15
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_15_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_15_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_15
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_15
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_15
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_15
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_15
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_15
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_15
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_15
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_15
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_15
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_15
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_15_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_15_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_15
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_15
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_15
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_15
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_15
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_15
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_15
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_15
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_15
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_15
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_15
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_15
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_15
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_15
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_15
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_15
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_15
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_15
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_15
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_15
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_15
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_15
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_15
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_15
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_15
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_15
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_15
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_15
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_15
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_15
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_15
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_15
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_15
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_15
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_15
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_15
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_15
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_15
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_15
+    type: wire
+    width: ''
+  - direction: in
+    name: qpll_ref_clk_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_qpll_rst_16
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_16
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_16_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_16_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_16
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_16
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_16
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_16
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_16
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_16
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_16
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_16
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_16
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_16
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_16
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_16_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_16_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_16
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_16
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_16
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_16
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_16
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_16
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_16
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_cm_enb_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_addr_16
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_cm_wr_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_wdata_16
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_rdata_16
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_ready_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_enb_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_16
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_16
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_16
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_16
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_16
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_16
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_16
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_16
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_16
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_16
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_16
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_16
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_16
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_16
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_16
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_16
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_16
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_16
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_16
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_16
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_16
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_16
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_16
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_16
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_16
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_16
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_16
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_16
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_16
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_16
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_16
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_16
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_17
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_17_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_17_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_17
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_17
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_17
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_17
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_17
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_17
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_17
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_17
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_17
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_17
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_17
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_17_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_17_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_17
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_17
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_17
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_17
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_17
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_17
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_17
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_17
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_17
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_17
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_17
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_17
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_17
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_17
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_17
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_17
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_17
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_17
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_17
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_17
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_17
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_17
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_17
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_17
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_17
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_17
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_17
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_17
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_17
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_17
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_17
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_17
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_17
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_17
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_17
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_17
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_17
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_17
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_17
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_18
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_18_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_18_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_18
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_18
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_18
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_18
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_18
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_18
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_18
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_18
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_18
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_18
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_18
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_18_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_18_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_18
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_18
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_18
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_18
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_18
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_18
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_18
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_18
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_18
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_18
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_18
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_18
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_18
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_18
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_18
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_18
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_18
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_18
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_18
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_18
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_18
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_18
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_18
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_18
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_18
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_18
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_18
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_18
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_18
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_18
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_18
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_18
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_18
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_18
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_18
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_18
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_18
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_18
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_18
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_19
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_19_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_19_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_19
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_19
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_19
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_19
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_19
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_19
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_19
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_19
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_19
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_19
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_19
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_19_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_19_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_19
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_19
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_19
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_19
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_19
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_19
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_19
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_19
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_19
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_19
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_19
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_19
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_19
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_19
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_19
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_19
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_19
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_19
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_19
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_19
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_19
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_19
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_19
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_19
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_19
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_19
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_19
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_19
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_19
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_19
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_19
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_19
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_19
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_19
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_19
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_19
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_19
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_19
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_19
+    type: wire
+    width: ''
+  - direction: in
+    name: qpll_ref_clk_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_qpll_rst_20
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_20
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_20_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_20_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_20
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_20
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_20
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_20
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_20
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_20
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_20
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_20
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_20
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_20
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_20
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_20_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_20_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_20
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_20
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_20
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_20
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_20
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_20
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_20
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_cm_enb_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_addr_20
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_cm_wr_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_wdata_20
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_rdata_20
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_ready_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_enb_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_20
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_20
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_20
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_20
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_20
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_20
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_20
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_20
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_20
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_20
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_20
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_20
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_20
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_20
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_20
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_20
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_20
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_20
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_20
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_20
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_20
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_20
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_20
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_20
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_20
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_20
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_20
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_20
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_20
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_20
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_20
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_20
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_21
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_21_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_21_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_21
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_21
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_21
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_21
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_21
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_21
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_21
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_21
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_21
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_21
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_21
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_21_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_21_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_21
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_21
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_21
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_21
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_21
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_21
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_21
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_21
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_21
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_21
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_21
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_21
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_21
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_21
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_21
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_21
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_21
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_21
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_21
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_21
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_21
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_21
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_21
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_21
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_21
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_21
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_21
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_21
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_21
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_21
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_21
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_21
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_21
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_21
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_21
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_21
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_21
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_21
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_21
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_22
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_22_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_22_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_22
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_22
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_22
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_22
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_22
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_22
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_22
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_22
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_22
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_22
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_22
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_22_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_22_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_22
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_22
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_22
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_22
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_22
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_22
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_22
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_22
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_22
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_22
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_22
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_22
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_22
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_22
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_22
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_22
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_22
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_22
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_22
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_22
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_22
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_22
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_22
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_22
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_22
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_22
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_22
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_22
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_22
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_22
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_22
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_22
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_22
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_22
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_22
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_22
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_22
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_22
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_22
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_23
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_23_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_23_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_23
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_23
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_23
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_23
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_23
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_23
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_23
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_23
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_23
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_23
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_23
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_23_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_23_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_23
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_23
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_23
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_23
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_23
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_23
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_23
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_23
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_23
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_23
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_23
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_23
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_23
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_23
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_23
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_23
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_23
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_23
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_23
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_23
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_23
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_23
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_23
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_23
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_23
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_23
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_23
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_23
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_23
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_23
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_23
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_23
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_23
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_23
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_23
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_23
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_23
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_23
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_23
+    type: wire
+    width: ''
+  - direction: in
+    name: qpll_ref_clk_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_qpll_rst_24
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_24
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_24_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_24_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_24
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_24
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_24
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_24
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_24
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_24
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_24
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_24
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_24
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_24
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_24
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_24_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_24_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_24
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_24
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_24
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_24
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_24
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_24
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_24
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_cm_enb_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_addr_24
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_cm_wr_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_wdata_24
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_rdata_24
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_ready_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_enb_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_24
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_24
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_24
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_24
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_24
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_24
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_24
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_24
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_24
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_24
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_24
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_24
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_24
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_24
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_24
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_24
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_24
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_24
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_24
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_24
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_24
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_24
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_24
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_24
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_24
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_24
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_24
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_24
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_24
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_24
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_24
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_24
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_25
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_25_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_25_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_25
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_25
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_25
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_25
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_25
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_25
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_25
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_25
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_25
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_25
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_25
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_25_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_25_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_25
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_25
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_25
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_25
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_25
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_25
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_25
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_25
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_25
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_25
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_25
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_25
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_25
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_25
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_25
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_25
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_25
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_25
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_25
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_25
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_25
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_25
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_25
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_25
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_25
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_25
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_25
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_25
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_25
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_25
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_25
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_25
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_25
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_25
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_25
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_25
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_25
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_25
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_25
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_26
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_26_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_26_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_26
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_26
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_26
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_26
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_26
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_26
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_26
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_26
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_26
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_26
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_26
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_26_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_26_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_26
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_26
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_26
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_26
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_26
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_26
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_26
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_26
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_26
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_26
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_26
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_26
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_26
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_26
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_26
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_26
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_26
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_26
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_26
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_26
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_26
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_26
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_26
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_26
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_26
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_26
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_26
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_26
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_26
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_26
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_26
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_26
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_26
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_26
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_26
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_26
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_26
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_26
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_26
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_27
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_27_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_27_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_27
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_27
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_27
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_27
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_27
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_27
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_27
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_27
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_27
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_27
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_27
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_27_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_27_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_27
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_27
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_27
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_27
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_27
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_27
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_27
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_27
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_27
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_27
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_27
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_27
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_27
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_27
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_27
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_27
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_27
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_27
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_27
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_27
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_27
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_27
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_27
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_27
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_27
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_27
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_27
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_27
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_27
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_27
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_27
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_27
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_27
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_27
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_27
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_27
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_27
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_27
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_27
+    type: wire
+    width: ''
+  - direction: in
+    name: qpll_ref_clk_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_qpll_rst_28
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_28
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_28_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_28_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_28
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_28
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_28
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_28
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_28
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_28
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_28
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_28
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_28
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_28
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_28
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_28_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_28_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_28
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_28
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_28
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_28
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_28
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_28
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_28
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_cm_enb_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_addr_28
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_cm_wr_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cm_wdata_28
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_rdata_28
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_cm_ready_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_enb_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_28
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_28
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_28
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_28
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_28
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_28
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_28
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_28
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_28
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_28
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_28
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_28
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_28
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_28
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_28
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_28
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_28
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_28
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_28
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_28
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_28
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_28
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_28
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_28
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_28
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_28
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_28
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_28
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_28
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_28
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_28
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_28
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_29
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_29_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_29_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_29
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_29
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_29
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_29
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_29
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_29
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_29
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_29
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_29
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_29
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_29
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_29_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_29_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_29
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_29
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_29
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_29
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_29
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_29
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_29
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_29
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_29
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_29
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_29
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_29
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_29
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_29
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_29
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_29
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_29
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_29
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_29
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_29
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_29
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_29
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_29
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_29
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_29
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_29
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_29
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_29
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_29
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_29
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_29
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_29
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_29
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_29
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_29
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_29
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_29
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_29
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_29
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_30
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_30_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_30_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_30
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_30
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_30
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_30
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_30
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_30
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_30
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_30
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_30
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_30
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_30
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_30_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_30_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_30
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_30
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_30
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_30
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_30
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_30
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_30
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_30
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_30
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_30
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_30
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_30
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_30
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_30
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_30
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_30
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_30
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_30
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_30
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_30
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_30
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_30
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_30
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_30
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_30
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_30
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_30
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_30
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_30
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_30
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_30
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_30
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_30
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_30
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_30
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_30
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_30
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_30
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_30
+    type: wire
+    width: ''
+  - direction: in
+    name: cpll_ref_clk_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_cpll_rst_31
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_31_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_31_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_31
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_out_clk_div2_31
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_31
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_2x_31
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_charisk_31
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_disperr_31
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_notintable_31
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_data_31
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: rx_calign_31
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_header_31
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rx_block_sync_31
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_31_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_31_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_31
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_out_clk_div2_31
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_31
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_2x_31
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_charisk_31
+    type: wire
+    width: '[DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: tx_data_31
+    type: wire
+    width: '[DATA_PATH_WIDTH*8-1:0]'
+  - direction: in
+    name: tx_header_31
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: up_es_enb_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_addr_31
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_es_wr_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_wdata_31
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_rdata_31
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_es_ready_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_es_reset_31
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_pll_locked_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rst_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_user_ready_31
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_rst_done_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_prbssel_31
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_rx_prbscntreset_31
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbserr_31
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_prbslocked_31
+    type: wire
+    width: ''
+  - direction: out
+    name: up_rx_bufstatus_31
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_bufstatus_rst_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_lpm_dfe_n_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_rate_31
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_sys_clk_sel_31
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_rx_out_clk_sel_31
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_rx_enb_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_addr_31
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_rx_wr_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_rx_wdata_31
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_rdata_31
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_rx_ready_31
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_pll_locked_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rst_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_user_ready_31
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_rst_done_31
+    type: wire
+    width: ''
+  - direction: out
+    name: up_tx_bufstatus_31
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_prbsforceerr_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_prbssel_31
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: up_tx_lpm_dfe_n_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_rate_31
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_sys_clk_sel_31
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: up_tx_out_clk_sel_31
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: up_tx_diffctrl_31
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_postcursor_31
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_precursor_31
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: up_tx_enb_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_addr_31
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: up_tx_wr_31
+    type: wire
+    width: ''
+  - direction: in
+    name: up_tx_wdata_31
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_rdata_31
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: up_tx_ready_31
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

@@ -21,3 +21,4 @@ routertl_compat:
   - src/rstgen.sv
 tags: []
 role: component
+desc_source: preserved

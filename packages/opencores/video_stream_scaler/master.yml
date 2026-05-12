@@ -24,6 +24,562 @@ top_modules:
 - ramDualPort
 - ramFifo
 - streamScaler
+top_ports:
+  ramDualPort:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: resolution
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: dInValid
+    type: wire
+    width: ''
+  - direction: out
+    name: nextDin
+    type: wire
+    width: ''
+  - direction: in
+    name: start
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: dOutValid
+    type: wire
+    width: ''
+  - direction: in
+    name: nextDout
+    type: wire
+    width: ''
+  - direction: in
+    name: inputDiscardCnt
+    type: wire
+    width: '[DISCARD_CNT_WIDTH-1:0]'
+  - direction: in
+    name: pixels
+    type: wire
+    width: ''
+  - direction: in
+    name: inputXRes
+    type: wire
+    width: '[INPUT_X_RES_WIDTH-1:0]'
+  - direction: in
+    name: inputYRes
+    type: wire
+    width: '[INPUT_Y_RES_WIDTH-1:0]'
+  - direction: in
+    name: outputXRes
+    type: wire
+    width: '[OUTPUT_X_RES_WIDTH-1:0]'
+  - direction: in
+    name: outputYRes
+    type: wire
+    width: '[OUTPUT_Y_RES_WIDTH-1:0]'
+  - direction: in
+    name: xScale
+    type: wire
+    width: '[SCALE_BITS-1:0]'
+  - direction: in
+    name: yScale
+    type: wire
+    width: '[SCALE_BITS-1:0]'
+  - direction: in
+    name: leftOffset
+    type: wire
+    width: '[OUTPUT_X_RES_WIDTH-1+SCALE_FRAC_BITS:0]'
+  - direction: in
+    name: pixel
+    type: wire
+    width: ''
+  - direction: in
+    name: topFracOffset
+    type: wire
+    width: '[SCALE_FRAC_BITS-1:0]'
+  - direction: in
+    name: nearestNeighbor
+    type: wire
+    width: ''
+  - direction: out
+    name: video
+    type: wire
+    width: ''
+  - direction: out
+    name: line
+    type: wire
+    width: ''
+  - direction: out
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: has
+    type: wire
+    width: ''
+  - direction: out
+    name: lines
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceRead1
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceRead2
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceWrite
+    type: wire
+    width: ''
+  - direction: in
+    name: forceRead
+    type: wire
+    width: ''
+  - direction: in
+    name: writeData
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: writeAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: writeEnable
+    type: wire
+    width: ''
+  - direction: out
+    name: fillCount
+    type: wire
+    width: '[BUFFER_SIZE_WIDTH-1:0]'
+  - direction: out
+    name: readData00
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData01
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData10
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData11
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: readAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: dataA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
+  - direction: in
+    name: addrA
+    type: wire
+    width: '[(ADDRESS_WIDTH-1):0]'
+  - direction: in
+    name: weA
+    type: wire
+    width: ''
+  - direction: out
+    name: qA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
+  ramFifo:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: resolution
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: dInValid
+    type: wire
+    width: ''
+  - direction: out
+    name: nextDin
+    type: wire
+    width: ''
+  - direction: in
+    name: start
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: dOutValid
+    type: wire
+    width: ''
+  - direction: in
+    name: nextDout
+    type: wire
+    width: ''
+  - direction: in
+    name: inputDiscardCnt
+    type: wire
+    width: '[DISCARD_CNT_WIDTH-1:0]'
+  - direction: in
+    name: pixels
+    type: wire
+    width: ''
+  - direction: in
+    name: inputXRes
+    type: wire
+    width: '[INPUT_X_RES_WIDTH-1:0]'
+  - direction: in
+    name: inputYRes
+    type: wire
+    width: '[INPUT_Y_RES_WIDTH-1:0]'
+  - direction: in
+    name: outputXRes
+    type: wire
+    width: '[OUTPUT_X_RES_WIDTH-1:0]'
+  - direction: in
+    name: outputYRes
+    type: wire
+    width: '[OUTPUT_Y_RES_WIDTH-1:0]'
+  - direction: in
+    name: xScale
+    type: wire
+    width: '[SCALE_BITS-1:0]'
+  - direction: in
+    name: yScale
+    type: wire
+    width: '[SCALE_BITS-1:0]'
+  - direction: in
+    name: leftOffset
+    type: wire
+    width: '[OUTPUT_X_RES_WIDTH-1+SCALE_FRAC_BITS:0]'
+  - direction: in
+    name: pixel
+    type: wire
+    width: ''
+  - direction: in
+    name: topFracOffset
+    type: wire
+    width: '[SCALE_FRAC_BITS-1:0]'
+  - direction: in
+    name: nearestNeighbor
+    type: wire
+    width: ''
+  - direction: out
+    name: video
+    type: wire
+    width: ''
+  - direction: out
+    name: line
+    type: wire
+    width: ''
+  - direction: out
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: has
+    type: wire
+    width: ''
+  - direction: out
+    name: lines
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceRead1
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceRead2
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceWrite
+    type: wire
+    width: ''
+  - direction: in
+    name: forceRead
+    type: wire
+    width: ''
+  - direction: in
+    name: writeData
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: writeAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: writeEnable
+    type: wire
+    width: ''
+  - direction: out
+    name: fillCount
+    type: wire
+    width: '[BUFFER_SIZE_WIDTH-1:0]'
+  - direction: out
+    name: readData00
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData01
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData10
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData11
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: readAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: dataA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
+  - direction: in
+    name: addrA
+    type: wire
+    width: '[(ADDRESS_WIDTH-1):0]'
+  - direction: in
+    name: weA
+    type: wire
+    width: ''
+  - direction: out
+    name: qA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
+  streamScaler:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: resolution
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: dInValid
+    type: wire
+    width: ''
+  - direction: out
+    name: nextDin
+    type: wire
+    width: ''
+  - direction: in
+    name: start
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: dOutValid
+    type: wire
+    width: ''
+  - direction: in
+    name: nextDout
+    type: wire
+    width: ''
+  - direction: in
+    name: inputDiscardCnt
+    type: wire
+    width: '[DISCARD_CNT_WIDTH-1:0]'
+  - direction: in
+    name: pixels
+    type: wire
+    width: ''
+  - direction: in
+    name: inputXRes
+    type: wire
+    width: '[INPUT_X_RES_WIDTH-1:0]'
+  - direction: in
+    name: inputYRes
+    type: wire
+    width: '[INPUT_Y_RES_WIDTH-1:0]'
+  - direction: in
+    name: outputXRes
+    type: wire
+    width: '[OUTPUT_X_RES_WIDTH-1:0]'
+  - direction: in
+    name: outputYRes
+    type: wire
+    width: '[OUTPUT_Y_RES_WIDTH-1:0]'
+  - direction: in
+    name: xScale
+    type: wire
+    width: '[SCALE_BITS-1:0]'
+  - direction: in
+    name: yScale
+    type: wire
+    width: '[SCALE_BITS-1:0]'
+  - direction: in
+    name: leftOffset
+    type: wire
+    width: '[OUTPUT_X_RES_WIDTH-1+SCALE_FRAC_BITS:0]'
+  - direction: in
+    name: pixel
+    type: wire
+    width: ''
+  - direction: in
+    name: topFracOffset
+    type: wire
+    width: '[SCALE_FRAC_BITS-1:0]'
+  - direction: in
+    name: nearestNeighbor
+    type: wire
+    width: ''
+  - direction: out
+    name: video
+    type: wire
+    width: ''
+  - direction: out
+    name: line
+    type: wire
+    width: ''
+  - direction: out
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: has
+    type: wire
+    width: ''
+  - direction: out
+    name: lines
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceRead1
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceRead2
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceWrite
+    type: wire
+    width: ''
+  - direction: in
+    name: forceRead
+    type: wire
+    width: ''
+  - direction: in
+    name: writeData
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: writeAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: writeEnable
+    type: wire
+    width: ''
+  - direction: out
+    name: fillCount
+    type: wire
+    width: '[BUFFER_SIZE_WIDTH-1:0]'
+  - direction: out
+    name: readData00
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData01
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData10
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData11
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: readAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: dataA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
+  - direction: in
+    name: addrA
+    type: wire
+    width: '[(ADDRESS_WIDTH-1):0]'
+  - direction: in
+    name: weA
+    type: wire
+    width: ''
+  - direction: out
+    name: qA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
 total_entities: 3
 desc_source: verdict
 health_tier: bronze

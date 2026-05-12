@@ -128,5 +128,34 @@ components:
 - cndm_proto_port
 - cndm_proto_rx
 - cndm_proto_tx
+top_ports:
+  cndm_brd_ctrl_i2c:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  cndm_lite_pcie_us:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: delays
+    type: wire
+    width: ''
+  cndm_micro_pcie_us:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: delays
+    type: wire
+    width: ''
+  cndm_proto_pcie_us:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 20
 desc_source: curator

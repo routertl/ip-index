@@ -21,6 +21,20 @@ tags:
 - clkdiv
 - util
 role: top
+top_ports:
+  util_clkdiv:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_sel
+    type: wire
+    width: ''
+  - direction: out
+    name: clk_out
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

@@ -22,5 +22,6 @@ routertl_compat:
   - rtl/axi2axilite.v
 tags: []
 role: component
+desc_source: ports
 health_tier: bronze
 last_verified_at: '2026-05-05'

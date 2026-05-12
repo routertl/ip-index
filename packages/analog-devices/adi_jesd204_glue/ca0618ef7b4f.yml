@@ -23,6 +23,24 @@ tags:
 - glue
 - jesd204
 role: top
+top_ports:
+  adi_jesd204_glue:
+  - direction: in
+    name: in_pll_powerdown
+    type: wire
+    width: ''
+  - direction: out
+    name: out_pll_powerdown
+    type: wire
+    width: ''
+  - direction: out
+    name: out_mcgb_rst
+    type: wire
+    width: ''
+  - direction: out
+    name: out_pll_select_gnd
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

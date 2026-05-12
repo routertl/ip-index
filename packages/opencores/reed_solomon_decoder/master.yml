@@ -57,6 +57,60 @@ components:
 - lamda_roots
 - out_stage
 - transport_in2out
+top_ports:
+  RS_dec:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: byte
+    type: wire
+    width: ''
+  - direction: in
+    name: input_byte
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: Out_byte
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: CEO
+    type: wire
+    width: ''
+  - direction: out
+    name: Valid_out
+    type: wire
+    width: ''
+  - direction: out
+    name: block
+    type: wire
+    width: ''
+  - direction: out
+    name: roots
+    type: wire
+    width: ''
+  - direction: in
+    name: initial
+    type: wire
+    width: ''
+  - direction: out
+    name: of
+    type: wire
+    width: ''
 total_entities: 12
 desc_source: verdict
 health_tier: bronze

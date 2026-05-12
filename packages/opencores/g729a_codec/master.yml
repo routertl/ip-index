@@ -112,7 +112,286 @@ components:
 - G729A_ASIP_TOP_2W
 - G729A_CODEC_SDP
 - G729_ASIP_RAM_1RW
+top_ports:
+  G729A_ASIP_ADDER:
+  - direction: in
+    name: OPA_i
+    type: signed
+    width: WIDTH-1 downto 0
+  - direction: in
+    name: OPB_i
+    type: signed
+    width: WIDTH-1 downto 0
+  - direction: in
+    name: CI_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: SUM_o
+    type: "signed(WIDTH-1 downto 0)\n  )"
+    width: ''
+  G729A_ASIP_PIPE_A_DEC_2W:
+  - direction: in
+    name: INSTR_i
+    type: DEC_INSTR_T
+    width: ''
+  - direction: out
+    name: FWDE_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: SEL_o
+    type: "std_logic_vector(7-1 downto 0)\n  )"
+    width: ''
+  - direction: in
+    name: SEL_i
+    type: std_logic_vector
+    width: 7-1 downto 0
+  - direction: in
+    name: OPA_i
+    type: SDWORD_T
+    width: ''
+  - direction: in
+    name: OPB_i
+    type: SDWORD_T
+    width: ''
+  - direction: in
+    name: ACC_i
+    type: LDWORD_T
+    width: ''
+  - direction: in
+    name: LDAT_i
+    type: std_logic_vector
+    width: SDLEN-1 downto 0
+  - direction: out
+    name: RES_1C_o
+    type: SDWORD_T
+    width: ''
+  - direction: in
+    name: OPB_i
+    type: signed
+    width: WIDTH-1 downto 0
+  - direction: in
+    name: CI_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: SUM_o
+    type: "signed(WIDTH-1 downto 0)\n    )"
+    width: ''
+  - direction: in
+    name: OPB_i
+    type: signed
+    width: LEN1+LEN2-1 downto 0
+  - direction: in
+    name: CI_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: SUM_o
+    type: "signed(LEN1+LEN2-1 downto 0)\n    )"
+    width: ''
+  G729A_ASIP_ROMI:
+  - direction: in
+    name: CLK_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: A_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: out
+    name: Q_o
+    type: "std_logic_vector(DATA_WIDTH-1 downto 0)\n  )"
+    width: ''
+  - direction: in
+    name: A0_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: in
+    name: A1_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: out
+    name: Q0_o
+    type: std_logic_vector
+    width: DATA_WIDTH-1 downto 0
+  - direction: out
+    name: Q1_o
+    type: "std_logic_vector(DATA_WIDTH-1 downto 0)\n  )"
+    width: ''
+  G729A_ASIP_ROM_MIF_2R:
+  - direction: in
+    name: CLK_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: A_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: out
+    name: Q_o
+    type: "std_logic_vector(DATA_WIDTH-1 downto 0)\n  )"
+    width: ''
+  - direction: in
+    name: A0_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: in
+    name: A1_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: out
+    name: Q0_o
+    type: std_logic_vector
+    width: DATA_WIDTH-1 downto 0
+  - direction: out
+    name: Q1_o
+    type: "std_logic_vector(DATA_WIDTH-1 downto 0)\n  )"
+    width: ''
+  G729A_ASIP_STO_ROM:
+  - direction: in
+    name: CLK_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: A_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: out
+    name: Q_o
+    type: "std_logic_vector(DATA_WIDTH-1 downto 0)\n  )"
+    width: ''
+  - direction: in
+    name: A_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: out
+    name: Q_o
+    type: "std_logic_vector(DATA_WIDTH-1 downto 0)\n  )"
+    width: ''
+  G729A_CODEC_SDP_SYN:
+  - direction: in
+    name: CLK_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: RE_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: RE_i
+    type: std_logic
+    width: ''
+  G729A_CODEC_SELFTEST:
+  - direction: in
+    name: CLK_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: RE_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: DV_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: A_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: out
+    name: Q_o
+    type: "std_logic_vector(DATA_WIDTH-1 downto 0)\n    )"
+    width: ''
+  - direction: in
+    name: A_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: out
+    name: Q_o
+    type: "std_logic_vector(DATA_WIDTH-1 downto 0)\n    )"
+    width: ''
+  - direction: in
+    name: A_i
+    type: unsigned
+    width: ADDR_WIDTH-1 downto 0
+  - direction: out
+    name: Q_o
+    type: "std_logic_vector(DATA_WIDTH-1 downto 0)\n    )"
+    width: ''
+  G729_ASIP_RAM_1RW1R:
+  - direction: in
+    name: CLK_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: A_i
+    type: unsigned(log2(WCOUNT)-1 downto 0)
+    width: ''
+  - direction: in
+    name: D_i
+    type: std_logic_vector
+    width: DWIDTH-1 downto 0
+  - direction: in
+    name: WE_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Q_o
+    type: "std_logic_vector(DWIDTH-1 downto 0)\n  )"
+    width: ''
+  - direction: in
+    name: A_i
+    type: unsigned(log2(WCOUNT)-1 downto 0)
+    width: ''
+  - direction: in
+    name: DPRA_i
+    type: unsigned(log2(WCOUNT)-1 downto 0)
+    width: ''
+  - direction: in
+    name: D_i
+    type: std_logic_vector
+    width: DWIDTH-1 downto 0
+  - direction: in
+    name: WE_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Q_o
+    type: std_logic_vector
+    width: DWIDTH-1 downto 0
+  - direction: out
+    name: DPQ_o
+    type: "std_logic_vector(DWIDTH-1 downto 0)\n  )"
+    width: ''
 total_entities: 37
 desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+external_uses:
+- library: WORK
+  package: G729A_ARITH_PKG
+- library: WORK
+  package: G729A_BASIC_PKG
+- library: WORK
+  package: G729A_CODER_PKG
+- library: WORK
+  package: G729A_TYPES_PKG
+- library: work
+  package: G729A_CODEC_TEST_PKG
+- library: work
+  package: G729A_SITE_PKG
+- library: work
+  package: G729A_STRING_PKG
+provides_packages:
+- G729A_ASIP_ARITH_PKG
+- G729A_ASIP_BASIC_PKG
+- G729A_ASIP_CFG_PKG
+- G729A_ASIP_IDEC_2W_PKG
+- G729A_ASIP_OP_PKG
+- G729A_ASIP_PKG
+- G729A_ASIP_ROMD_PKG
+- G729A_ASIP_ROMI_PKG
+- G729A_CODEC_INTF_PKG
+- G729A_CODEC_ST_ROM_PKG

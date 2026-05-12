@@ -31,6 +31,32 @@ components:
 - phasecomparator
 - randomwalkfilter
 - variableresetrandomwalkfilter
+top_ports:
+  dpll:
+  - direction: in
+    name: SignalIn
+    type: wire
+    width: ''
+  - direction: in
+    name: signal
+    type: wire
+    width: ''
+  - direction: in
+    name: MainClock
+    type: wire
+    width: ''
+  - direction: out
+    name: SignalOut
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: Lead
+    type: wire
+    width: ''
 total_entities: 5
 desc_source: preserved
 mirror_status: curated-mirror

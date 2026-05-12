@@ -68,5 +68,37 @@ components:
 - taxi_dma_psdpram
 - taxi_dma_ram_demux_rd
 - taxi_dma_ram_demux_wr
+top_ports:
+  taxi_dma_if_axi:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_dma_psdpram_async:
+  - direction: out
+    name: pipeline
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_wr
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_wr
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_rd
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_rd
+    type: wire
+    width: ''
+  taxi_dma_ram_demux:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 14
 desc_source: curator

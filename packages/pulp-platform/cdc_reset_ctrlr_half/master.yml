@@ -39,3 +39,116 @@ components:
 - stream_xbar
 - sync
 - sync_wedge
+top_ports:
+  cdc_reset_ctrlr_half:
+  - direction: in
+    name: a_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: a_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: a_clear_i
+    type: wire
+    width: ''
+  - direction: out
+    name: a_clear_o
+    type: wire
+    width: ''
+  - direction: in
+    name: a_clear_ack_i
+    type: wire
+    width: ''
+  - direction: out
+    name: a_isolate_o
+    type: wire
+    width: ''
+  - direction: in
+    name: a_isolate_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: b_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: b_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: b_clear_i
+    type: wire
+    width: ''
+  - direction: out
+    name: b_clear_o
+    type: wire
+    width: ''
+  - direction: in
+    name: b_clear_ack_i
+    type: wire
+    width: ''
+  - direction: out
+    name: b_isolate_o
+    type: wire
+    width: ''
+  - direction: in
+    name: b_isolate_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_i
+    type: wire
+    width: ''
+  - direction: out
+    name: isolate_o
+    type: wire
+    width: ''
+  - direction: in
+    name: isolate_ack_i
+    type: wire
+    width: ''
+  - direction: out
+    name: clear_o
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_ack_i
+    type: wire
+    width: ''
+  - direction: out
+    name: clear_seq_phase_e
+    type: wire
+    width: ''
+  - direction: out
+    name: async_req_o
+    type: wire
+    width: ''
+  - direction: in
+    name: async_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: async_req_i
+    type: wire
+    width: ''
+  - direction: out
+    name: async_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: Assignment
+    type: wire
+    width: ''
+desc_source: header
+provides_packages:
+- cdc_reset_ctrlr_pkg

@@ -39,3 +39,108 @@ components:
 - stream_xbar
 - sync
 - sync_wedge
+top_ports:
+  cdc_2phase_clearable:
+  - direction: in
+    name: src_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: src_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: src_clear_i
+    type: wire
+    width: ''
+  - direction: out
+    name: src_clear_pending_o
+    type: wire
+    width: ''
+  - direction: in
+    name: T
+    type: wire
+    width: ''
+  - direction: in
+    name: src_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: src_ready_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_clear_i
+    type: wire
+    width: ''
+  - direction: out
+    name: dst_clear_pending_o
+    type: wire
+    width: ''
+  - direction: out
+    name: dst_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_i
+    type: wire
+    width: ''
+  - direction: in
+    name: valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: async_req_o
+    type: wire
+    width: ''
+  - direction: in
+    name: async_ack_i
+    type: wire
+    width: ''
+  - direction: out
+    name: assignments
+    type: wire
+    width: ''
+  - direction: out
+    name: valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: async_req_i
+    type: wire
+    width: ''
+  - direction: out
+    name: async_ack_o
+    type: wire
+    width: ''
+desc_source: ports
+provides_packages:
+- cdc_reset_ctrlr_pkg

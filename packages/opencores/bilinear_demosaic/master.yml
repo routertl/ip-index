@@ -27,6 +27,418 @@ top_modules:
 - ramFifo
 components:
 - registerDelay
+top_ports:
+  bilinearDemosaic:
+  - direction: in
+    name: bayerPattern
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: resolution
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: dInValid
+    type: wire
+    width: ''
+  - direction: out
+    name: nextDin
+    type: wire
+    width: ''
+  - direction: in
+    name: start
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: gOut
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: bOut
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: dOutValid
+    type: wire
+    width: ''
+  - direction: in
+    name: nextDout
+    type: wire
+    width: ''
+  - direction: in
+    name: xRes
+    type: wire
+    width: '[X_RES_WIDTH-1:0]'
+  - direction: in
+    name: yRes
+    type: wire
+    width: '[Y_RES_WIDTH-1:0]'
+  - direction: out
+    name: video
+    type: wire
+    width: ''
+  - direction: in
+    name: has
+    type: wire
+    width: ''
+  - direction: in
+    name: pixel
+    type: wire
+    width: ''
+  - direction: out
+    name: always
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceRead
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceWrite
+    type: wire
+    width: ''
+  - direction: in
+    name: writeData
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: writeAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: writeEnable
+    type: wire
+    width: ''
+  - direction: out
+    name: fillCount
+    type: wire
+    width: '[BUFFER_SIZE_WIDTH-1:0]'
+  - direction: out
+    name: readData0
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData1
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData2
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: readAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: dataA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
+  - direction: in
+    name: addrA
+    type: wire
+    width: '[(ADDRESS_WIDTH-1):0]'
+  - direction: in
+    name: weA
+    type: wire
+    width: ''
+  - direction: out
+    name: qA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
+  ramDualPort:
+  - direction: in
+    name: bayerPattern
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: resolution
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: dInValid
+    type: wire
+    width: ''
+  - direction: out
+    name: nextDin
+    type: wire
+    width: ''
+  - direction: in
+    name: start
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: gOut
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: bOut
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: dOutValid
+    type: wire
+    width: ''
+  - direction: in
+    name: nextDout
+    type: wire
+    width: ''
+  - direction: in
+    name: xRes
+    type: wire
+    width: '[X_RES_WIDTH-1:0]'
+  - direction: in
+    name: yRes
+    type: wire
+    width: '[Y_RES_WIDTH-1:0]'
+  - direction: out
+    name: video
+    type: wire
+    width: ''
+  - direction: in
+    name: has
+    type: wire
+    width: ''
+  - direction: in
+    name: pixel
+    type: wire
+    width: ''
+  - direction: out
+    name: always
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceRead
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceWrite
+    type: wire
+    width: ''
+  - direction: in
+    name: writeData
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: writeAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: writeEnable
+    type: wire
+    width: ''
+  - direction: out
+    name: fillCount
+    type: wire
+    width: '[BUFFER_SIZE_WIDTH-1:0]'
+  - direction: out
+    name: readData0
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData1
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData2
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: readAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: dataA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
+  - direction: in
+    name: addrA
+    type: wire
+    width: '[(ADDRESS_WIDTH-1):0]'
+  - direction: in
+    name: weA
+    type: wire
+    width: ''
+  - direction: out
+    name: qA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
+  ramFifo:
+  - direction: in
+    name: bayerPattern
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: resolution
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: dInValid
+    type: wire
+    width: ''
+  - direction: out
+    name: nextDin
+    type: wire
+    width: ''
+  - direction: in
+    name: start
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: gOut
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: bOut
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: dOutValid
+    type: wire
+    width: ''
+  - direction: in
+    name: nextDout
+    type: wire
+    width: ''
+  - direction: in
+    name: xRes
+    type: wire
+    width: '[X_RES_WIDTH-1:0]'
+  - direction: in
+    name: yRes
+    type: wire
+    width: '[Y_RES_WIDTH-1:0]'
+  - direction: out
+    name: video
+    type: wire
+    width: ''
+  - direction: in
+    name: has
+    type: wire
+    width: ''
+  - direction: in
+    name: pixel
+    type: wire
+    width: ''
+  - direction: out
+    name: always
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceRead
+    type: wire
+    width: ''
+  - direction: in
+    name: advanceWrite
+    type: wire
+    width: ''
+  - direction: in
+    name: writeData
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: writeAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: writeEnable
+    type: wire
+    width: ''
+  - direction: out
+    name: fillCount
+    type: wire
+    width: '[BUFFER_SIZE_WIDTH-1:0]'
+  - direction: out
+    name: readData0
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData1
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: readData2
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: readAddress
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: dataA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
+  - direction: in
+    name: addrA
+    type: wire
+    width: '[(ADDRESS_WIDTH-1):0]'
+  - direction: in
+    name: weA
+    type: wire
+    width: ''
+  - direction: out
+    name: qA
+    type: wire
+    width: '[(DATA_WIDTH-1):0]'
 total_entities: 4
 desc_source: verdict
 health_tier: bronze

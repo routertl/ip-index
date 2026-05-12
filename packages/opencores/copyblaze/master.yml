@@ -94,7 +94,731 @@ components:
 - myuart
 - uart_rx
 - uart_tx
+top_ports:
+  WBOPRT08:
+  - direction: in
+    name: CLK_I
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: DAT_I
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: DAT_O
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: in
+    name: RST_I
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: STB_I
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: WE_I
+    type: std_ulogic
+    width: ''
+  cp_copyBlaze_ecoSystem:
+  - direction: out
+    name: Interrupt_Ack_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: IN_PORT_i
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: out
+    name: OUT_PORT_o
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: out
+    name: PORT_ID_o
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: out
+    name: READ_STROBE_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: WRITE_STROBE_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: ADR_O
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: in
+    name: DAT_I
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: out
+    name: DAT_O
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: out
+    name: WE_O
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: SEL_O
+    type: std_ulogic_vector
+    width: 1 downto 0
+  - direction: out
+    name: STB_O
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: ACK_I
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: CYC_O
+    type: "std_ulogic\n\t)"
+    width: ''
+  - direction: in
+    name: Instruction_i
+    type: std_ulogic_vector
+    width: GEN_WIDTH_INST-1 downto 0
+  - direction: in
+    name: Interrupt_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: WRITE_STROBE_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: ADR_O
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: in
+    name: DAT_I
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: out
+    name: DAT_O
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: out
+    name: WE_O
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: SEL_O
+    type: std_ulogic_vector
+    width: 1 downto 0
+  - direction: out
+    name: STB_O
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: ACK_I
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: CYC_O
+    type: "std_ulogic\n\t\t)"
+    width: ''
+  - direction: in
+    name: Address_i
+    type: std_ulogic_vector
+    width: GEN_WIDTH_PC-1 downto 0
+  - direction: out
+    name: Dout_o
+    type: std_ulogic_vector
+    width: GEN_WIDTH_INST-1 downto 0
+  mux32:
+  - direction: in
+    name: input
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: output
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sel
+    type: std_logic_vector(4 downto 0) )
+    width: ''
+  sp_ram:
+  - direction: in
+    name: clka
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wea
+    type: std_logic_vector
+    width: 0 downto 0
+  - direction: in
+    name: dina
+    type: std_logic_vector
+    width: data_width-1 downto 0
+  - direction: out
+    name: douta
+    type: std_logic_vector
+    width: data_width-1 downto 0
+  wb_Np_ram:
+  - direction: in
+    name: wb_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb1_cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb1_stb_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb1_we_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb1_adr_i
+    type: std_logic_vector
+    width: addr_width-1 downto 0
+  - direction: in
+    name: wb1_dat_i
+    type: std_logic_vector
+    width: data_width-1 downto 0
+  - direction: out
+    name: wb1_dat_o
+    type: std_logic_vector
+    width: data_width-1 downto 0
+  - direction: out
+    name: wb1_ack_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb2_cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb2_stb_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb2_we_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb2_adr_i
+    type: std_logic_vector
+    width: addr_width-1 downto 0
+  - direction: in
+    name: wb2_dat_i
+    type: std_logic_vector
+    width: data_width-1 downto 0
+  - direction: out
+    name: wb2_dat_o
+    type: std_logic_vector
+    width: data_width-1 downto 0
+  - direction: out
+    name: wb2_ack_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb3_cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb3_stb_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb3_we_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb3_adr_i
+    type: std_logic_vector
+    width: addr_width-1 downto 0
+  - direction: in
+    name: wb3_dat_i
+    type: std_logic_vector
+    width: data_width-1 downto 0
+  - direction: out
+    name: wb3_dat_o
+    type: std_logic_vector
+    width: data_width-1 downto 0
+  - direction: out
+    name: wb3_ack_o
+    type: std_logic)
+    width: ''
+  - direction: in
+    name: wea
+    type: std_logic_vector
+    width: 0 downto 0
+  - direction: in
+    name: addra
+    type: std_logic_vector
+    width: addr_width-1 downto 0
+  - direction: in
+    name: dina
+    type: std_logic_vector
+    width: data_width-1 downto 0
+  - direction: out
+    name: douta
+    type: std_logic_vector
+    width: data_width-1 downto 0
+  wb_gpio:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: wb_sel_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: wb_cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: oport
+    type: std_logic_vector(31 downto 0) )
+    width: ''
+  wb_gpio_08:
+  - direction: in
+    name: clk
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: in
+    name: wb_cyc_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: oport
+    type: std_ulogic_vector
+    width: 7 downto 0
+  wb_scope:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: wb_sel_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: wb_cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_irq_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: addr1
+    type: std_logic_vector
+    width: 11 downto 0
+  - direction: in
+    name: wdata1
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: addr2
+    type: std_logic_vector
+    width: 11 downto 0
+  - direction: out
+    name: rdata2
+    type: std_logic_vector(31 downto 0) )
+    width: ''
+  - direction: out
+    name: output
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sel
+    type: std_logic_vector(4 downto 0) )
+    width: ''
+  wb_sram:
+  - direction: in
+    name: clk
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_ulogic_vector
+    width: GEN_WIDTH_DATA-1 downto 0
+  - direction: in
+    name: wb_cyc_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: "std_ulogic\n\t)"
+    width: ''
+  wb_timer:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: wb_sel_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: wb_cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_irq0_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_irq1_o
+    type: std_logic )
+    width: ''
+  wb_timer_8:
+  - direction: in
+    name: clk
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: in
+    name: wb_cyc_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_irq0_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_irq1_o
+    type: std_ulogic )
+    width: ''
+  wb_uart:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: wb_sel_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: wb_cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_rxirq_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_txirq_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: uart_tx
+    type: std_logic )
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: txdata
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: rxdata
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: wr
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rd
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tx_avail
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tx_busy
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_avail
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_full
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_error
+    type: std_logic
+    width: ''
+  - direction: out
+    name: uart_txd
+    type: std_logic )
+    width: ''
+  wb_uart_8:
+  - direction: in
+    name: clk
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: in
+    name: wb_cyc_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_rxirq_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_txirq_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: uart_tx
+    type: "std_ulogic\n\t)"
+    width: ''
+  - direction: in
+    name: reset
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: txdata
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: rxdata
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: in
+    name: wr
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rd
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: tx_avail
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: tx_busy
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rx_avail
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rx_full
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rx_error
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: uart_txd
+    type: std_ulogic
+    width: ''
 total_entities: 30
 desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+provides_packages:
+- Usefull_Pkg

@@ -40,6 +40,174 @@ top_modules:
 - secant_lut
 - sine_lut
 - tangent_lut
+top_ports:
+  cosecant_lut:
+  - direction: in
+    name: quad
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: degrees
+    type: wire
+    width: '[`INPUT_WIDTH-1:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: '[63:0]'
+  cosine_lut:
+  - direction: in
+    name: quad
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: degrees
+    type: wire
+    width: '[`INPUT_WIDTH-1:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: '[63:0]'
+  cotangent_lut:
+  - direction: in
+    name: quad
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: degrees
+    type: wire
+    width: '[`INPUT_WIDTH-1:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: '[63:0]'
+  dividor:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: inp
+    type: wire
+    width: '[`INPUT_WIDTH-1:0]'
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[`INPUT_WIDTH-1:0]'
+  secant_lut:
+  - direction: in
+    name: quad
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: degrees
+    type: wire
+    width: '[`INPUT_WIDTH-1:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: '[63:0]'
+  sine_lut:
+  - direction: in
+    name: quad
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: degrees
+    type: wire
+    width: '[`INPUT_WIDTH-1:0]'
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: '[63:0]'
+  tangent_lut:
+  - direction: in
+    name: quad
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: degrees
+    type: wire
+    width: '[`INPUT_WIDTH-1:0]'
+  - direction: out
+    name: data
+    type: wire
+    width: '[63:0]'
 total_entities: 7
 desc_source: header
 health_tier: bronze

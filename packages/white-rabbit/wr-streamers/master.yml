@@ -70,6 +70,266 @@ components:
 - xrx_streamers_stats
 - xtx_streamer
 - xtx_streamers_stats
+top_ports:
+  rx_streamer:
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_adr_i
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: snk_sel_i
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: snk_cyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_stb_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_we_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_stall_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_ack_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_rty_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_ref_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tm_time_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tm_tai_i
+    type: std_logic_vector
+    width: 39 downto 0
+  - direction: in
+    name: tm_cycles_i
+    type: std_logic_vector
+    width: 27 downto 0
+  - direction: out
+    name: rx_first_p1_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_last_p1_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_data_o
+    type: std_logic_vector
+    width: g_data_width-1 downto 0
+  - direction: out
+    name: rx_valid_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rx_dreq_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_lost_p1_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_lost_blocks_p1_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_lost_frames_p1_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_lost_frames_cnt_o
+    type: std_logic_vector
+    width: 14 downto 0
+  - direction: out
+    name: rx_latency_o
+    type: std_logic_vector
+    width: 27 downto 0
+  - direction: out
+    name: rx_latency_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_frame_p1_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cfg_mac_local_i
+    type: std_logic_vector
+    width: 47 downto 0
+  - direction: in
+    name: cfg_mac_remote_i
+    type: std_logic_vector
+    width: 47 downto 0
+  - direction: in
+    name: cfg_ethertype_i
+    type: std_logic_vector
+    width: 15 downto 0
+  - direction: in
+    name: cfg_accept_broadcasts_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cfg_filter_remote_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cfg_fixed_latency_i
+    type: std_logic_vector
+    width: 27 downto 0
+  tx_streamer:
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_adr_o
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: src_sel_o
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: src_cyc_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_we_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: src_stall_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: src_ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: src_err_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_ref_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tm_time_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tm_tai_i
+    type: std_logic_vector
+    width: 39 downto 0
+  - direction: in
+    name: tm_cycles_i
+    type: std_logic_vector
+    width: 27 downto 0
+  - direction: in
+    name: tx_data_i
+    type: std_logic_vector
+    width: g_data_width-1 downto 0
+  - direction: in
+    name: tx_valid_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tx_dreq_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tx_last_p1_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tx_flush_p1_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tx_reset_seq_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: tx_frame_p1_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cfg_mac_target_i
+    type: std_logic_vector
+    width: 47 downto 0
+  - direction: in
+    name: cfg_ethertype_i
+    type: std_logic_vector
+    width: 15 downto 0
+  xwr_streamers:
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_o
+    type: t_wrf_source_out
+    width: ''
+  - direction: out
+    name: snk_o
+    type: t_wrf_sink_out
+    width: ''
+  - direction: out
+    name: wb_slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  - direction: out
+    name: snmp_array_o
+    type: t_generic_word_array
+    width: c_WR_STREAMERS_ARR_SIZE_OUT-1 downto 0
+  - direction: in
+    name: snmp_array_i
+    type: t_generic_word_array
+    width: c_WR_STREAMERS_ARR_SIZE_IN -1 downto 0
+  - direction: in
+    name: rx_streamer_cfg_i
+    type: t_rx_streamer_cfg
+    width: ''
 total_entities: 12
 desc_source: curator
 external_uses:

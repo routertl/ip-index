@@ -43,6 +43,41 @@ components:
 - delay_pulse_ff
 - graycntr
 - prim_dffe
+top_ports:
+  cdc_ufifo:
+  - direction: out
+    name: multiplexor
+    type: wire
+    width: ''
+  - direction: out
+    name: or
+    type: wire
+    width: ''
+  - direction: in
+    name: in_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: d
+    type: wire
+    width: '[lpm_width-1:0]'
+  - direction: out
+    name: q
+    type: wire
+    width: '[lpm_width-1:0]'
+  - direction: out
+    name: ready
+    type: wire
+    width: ''
+  gray2bin:
+  - direction: out
+    name: bin
+    type: wire
+    width: '[lpm_size-1:0]'
+  - direction: in
+    name: gray
+    type: wire
+    width: '[lpm_size-1:0]'
 total_entities: 5
 desc_source: header
 health_tier: bronze

@@ -20,5 +20,80 @@ routertl_compat:
   - rtl/wbc2pipeline.v
 tags: []
 role: top
+top_ports:
+  wbc2pipeline:
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_scyc
+    type: wire
+    width: ''
+  - direction: in
+    name: i_saddr
+    type: wire
+    width: '[AW-1:0]'
+  - direction: in
+    name: i_sdata
+    type: wire
+    width: '[DW-1:0]'
+  - direction: in
+    name: i_ssel
+    type: wire
+    width: '[DW/8-1:0]'
+  - direction: out
+    name: o_sack
+    type: wire
+    width: ''
+  - direction: out
+    name: o_sdata
+    type: wire
+    width: '[DW-1:0]'
+  - direction: out
+    name: o_serr
+    type: wire
+    width: ''
+  - direction: in
+    name: i_scti
+    type: wire
+    width: '[3-1:0]'
+  - direction: in
+    name: i_sbte
+    type: wire
+    width: '[2-1:0]'
+  - direction: out
+    name: o_mcyc
+    type: wire
+    width: ''
+  - direction: out
+    name: o_maddr
+    type: wire
+    width: '[AW-1:0]'
+  - direction: out
+    name: o_mdata
+    type: wire
+    width: '[DW-1:0]'
+  - direction: out
+    name: o_msel
+    type: wire
+    width: '[DW/8-1:0]'
+  - direction: in
+    name: i_mstall
+    type: wire
+    width: ''
+  - direction: in
+    name: i_mack
+    type: wire
+    width: ''
+  - direction: in
+    name: i_mdata
+    type: wire
+    width: '[DW-1:0]'
+  - direction: in
+    name: i_merr
+    type: wire
+    width: ''
+desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-05'

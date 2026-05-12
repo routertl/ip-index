@@ -30,6 +30,76 @@ role: top
 components:
 - mac_phy_link
 - phy_mac_link
+top_ports:
+  util_mii_to_rmii:
+  - direction: in
+    name: mac_tx_en
+    type: wire
+    width: ''
+  - direction: in
+    name: mac_txd
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: mac_tx_er
+    type: wire
+    width: ''
+  - direction: out
+    name: mii_tx_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: mii_rx_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: mii_col
+    type: wire
+    width: ''
+  - direction: out
+    name: mii_crs
+    type: wire
+    width: ''
+  - direction: out
+    name: mii_rx_dv
+    type: wire
+    width: ''
+  - direction: out
+    name: mii_rx_er
+    type: wire
+    width: ''
+  - direction: out
+    name: mii_rxd
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: rmii_txd
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: rmii_tx_en
+    type: wire
+    width: ''
+  - direction: in
+    name: phy_rxd
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: phy_crs_dv
+    type: wire
+    width: ''
+  - direction: in
+    name: phy_rx_er
+    type: wire
+    width: ''
+  - direction: in
+    name: ref_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

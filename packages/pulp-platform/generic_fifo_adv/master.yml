@@ -23,3 +23,46 @@ tags:
 - fifo
 - queue
 role: top
+top_ports:
+  generic_fifo_adv:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_n
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_i
+    type: wire
+    width: ''
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: grant_o
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: grant_i
+    type: wire
+    width: ''
+  - direction: in
+    name: test_mode_i
+    type: wire
+    width: ''
+desc_source: ports

@@ -83,6 +83,433 @@ components:
 - afifo
 - duram
 - flow_ctrl
+top_ports:
+  MAC_top:
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Clk_125M
+    type: wire
+    width: ''
+  - direction: in
+    name: Clk_user
+    type: wire
+    width: ''
+  - direction: in
+    name: Clk_reg
+    type: wire
+    width: ''
+  - direction: out
+    name: Speed
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: Rx_mac_ra
+    type: wire
+    width: ''
+  - direction: in
+    name: Rx_mac_rd
+    type: wire
+    width: ''
+  - direction: out
+    name: Rx_mac_data
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: Rx_mac_BE
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: Rx_mac_pa
+    type: wire
+    width: ''
+  - direction: out
+    name: Rx_mac_sop
+    type: wire
+    width: ''
+  - direction: out
+    name: Rx_mac_eop
+    type: wire
+    width: ''
+  - direction: out
+    name: Tx_mac_wa
+    type: wire
+    width: ''
+  - direction: in
+    name: Tx_mac_wr
+    type: wire
+    width: ''
+  - direction: in
+    name: Tx_mac_data
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: Tx_mac_BE
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: Tx_mac_sop
+    type: wire
+    width: ''
+  - direction: in
+    name: Tx_mac_eop
+    type: wire
+    width: ''
+  - direction: in
+    name: Pkg_lgth_fifo_rd
+    type: wire
+    width: ''
+  - direction: out
+    name: Pkg_lgth_fifo_ra
+    type: wire
+    width: ''
+  - direction: out
+    name: Pkg_lgth_fifo_data
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: Gtx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: Rx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: Tx_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: Tx_er
+    type: wire
+    width: ''
+  - direction: out
+    name: Tx_en
+    type: wire
+    width: ''
+  - direction: out
+    name: Txd
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: Rx_er
+    type: wire
+    width: ''
+  - direction: in
+    name: Rx_dv
+    type: wire
+    width: ''
+  - direction: in
+    name: Rxd
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: Crs
+    type: wire
+    width: ''
+  - direction: in
+    name: Col
+    type: wire
+    width: ''
+  - direction: in
+    name: CSB
+    type: wire
+    width: ''
+  - direction: in
+    name: WRB
+    type: wire
+    width: ''
+  - direction: in
+    name: CD_in
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: CD_out
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CA
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: Mdo
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Mdi
+    type: wire
+    width: ''
+  - direction: out
+    name: Mdc
+    type: wire
+    width: ''
+  Reg_int:
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Clk_reg
+    type: wire
+    width: ''
+  - direction: in
+    name: CSB
+    type: wire
+    width: ''
+  - direction: in
+    name: WRB
+    type: wire
+    width: ''
+  - direction: in
+    name: CD_in
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: CD_out
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CA
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: Tx_Hwmark
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: Tx_Lwmark
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: pause_frame_send_en
+    type: wire
+    width: ''
+  - direction: out
+    name: pause_quanta_set
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: MAC_tx_add_en
+    type: wire
+    width: ''
+  - direction: out
+    name: FullDuplex
+    type: wire
+    width: ''
+  - direction: out
+    name: MaxRetry
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IFGset
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: MAC_tx_add_prom_data
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: MAC_tx_add_prom_add
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: MAC_tx_add_prom_wr
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_pause_en
+    type: wire
+    width: ''
+  - direction: out
+    name: xoff_cpu
+    type: wire
+    width: ''
+  - direction: out
+    name: xon_cpu
+    type: wire
+    width: ''
+  - direction: out
+    name: MAC_rx_add_chk_en
+    type: wire
+    width: ''
+  - direction: out
+    name: MAC_rx_add_prom_data
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: MAC_rx_add_prom_add
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: MAC_rx_add_prom_wr
+    type: wire
+    width: ''
+  - direction: out
+    name: broadcast_filter_en
+    type: wire
+    width: ''
+  - direction: out
+    name: broadcast_bucket_depth
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: broadcast_bucket_interval
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: RX_APPEND_CRC
+    type: wire
+    width: ''
+  - direction: out
+    name: Rx_Hwmark
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: Rx_Lwmark
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: CRC_chk_en
+    type: wire
+    width: ''
+  - direction: out
+    name: RX_IFG_SET
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: RX_MAX_LENGTH
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: RX_MIN_LENGTH
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: CPU_rd_addr
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: CPU_rd_apply
+    type: wire
+    width: ''
+  - direction: in
+    name: CPU_rd_grant
+    type: wire
+    width: ''
+  - direction: in
+    name: CPU_rd_dout
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: Line_loop_en
+    type: wire
+    width: ''
+  - direction: out
+    name: Speed
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: Divider
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: CtrlData
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: Rgad
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: Fiad
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NoPre
+    type: wire
+    width: ''
+  - direction: out
+    name: WCtrlData
+    type: wire
+    width: ''
+  - direction: out
+    name: RStat
+    type: wire
+    width: ''
+  - direction: out
+    name: ScanStat
+    type: wire
+    width: ''
+  - direction: in
+    name: Busy
+    type: wire
+    width: ''
+  - direction: in
+    name: LinkFail
+    type: wire
+    width: ''
+  - direction: in
+    name: Nvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: Prsd
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: WCtrlDataStart
+    type: wire
+    width: ''
+  - direction: in
+    name: RStatStart
+    type: wire
+    width: ''
+  - direction: in
+    name: UpdateMIIRX_DATAReg
+    type: wire
+    width: ''
+  - direction: out
+    name: RegOut
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CA_reg_set
+    type: wire
+    width: '[6:0]'
+  - direction: in
+    name: RegInit
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: Clk
+    type: wire
+    width: ''
+  - direction: in
+    name: CWR_pulse
+    type: wire
+    width: ''
+  - direction: in
+    name: CCSB
+    type: wire
+    width: ''
+  - direction: in
+    name: CA_reg
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: CD_in_reg
+    type: wire
+    width: '[15:0]'
 total_entities: 26
 desc_source: verdict
 contract:

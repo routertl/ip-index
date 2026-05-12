@@ -45,6 +45,48 @@ components:
 - ps2_host_rx
 - ps2_host_tx
 - ps2_host_watchdog
+top_ports:
+  ps2_host:
+  - direction: in
+    name: sys_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sys_rst
+    type: wire
+    width: ''
+  - direction: inout
+    name: ps2_clk
+    type: wire
+    width: ''
+  - direction: inout
+    name: ps2_data
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_data
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: send_req
+    type: wire
+    width: ''
+  - direction: out
+    name: busy
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_data
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: ready
+    type: wire
+    width: ''
+  - direction: out
+    name: error
+    type: wire
+    width: ''
 total_entities: 5
 desc_source: preserved
 health_tier: bronze

@@ -1,8 +1,8 @@
 name: axi_dmac
 namespace: analog-devices
 version: HEAD
-commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
-published_at: '2026-04-15T16:15:19+03:00'
+commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
+published_at: '2026-05-11T12:02:04+03:00'
 description: AXI4 with ready/valid handshake and interrupt support
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
@@ -11,11 +11,16 @@ source:
   url: https://github.com/analogdevicesinc/hdl.git
   tag: main
   ip_yml_path: .
-  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+  resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 routertl_compat:
   language: verilog
   library: work
   files:
+  - library/corundum/corundum_core/mqnic_app_custom_params.vh
+  - library/corundum/corundum_core/mqnic_app_custom_ports.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_bit_mod.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_word.vh
+  - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
   - library/common/ad_mem.v
   - library/util_cdc/sync_bits.v
   - library/util_cdc/sync_gray.v
@@ -61,24 +66,97 @@ tags:
 role: top
 components:
 - ad408x_phy
+- ad_dds
+- ad_dds_1
+- ad_dds_2
+- ad_dds_sine
 - ad_ip_jesd204_tpl_adc
+- ad_ip_jesd204_tpl_adc_channel
+- ad_ip_jesd204_tpl_adc_core
+- ad_ip_jesd204_tpl_adc_deframer
+- ad_ip_jesd204_tpl_adc_pnmon
 - ad_ip_jesd204_tpl_adc_regmap
+- ad_ip_jesd204_tpl_dac_channel
+- ad_ip_jesd204_tpl_dac_core
+- ad_ip_jesd204_tpl_dac_framer
 - ad_ip_jesd204_tpl_dac_regmap
+- ad_iqcor
 - ad_mem
 - ad_mem_asym
 - ad_serdes_in
 - address_generator
 - avl_dacfifo_rd
+- avl_dacfifo_wr
+- axi_ad35xxr_channel
+- axi_ad35xxr_core
+- axi_ad485x_16b_channel
+- axi_ad485x_20b_channel
+- axi_ad485x_cmos
+- axi_ad485x_lvds
+- axi_ad7606x_16b_pif
+- axi_ad7606x_18b_pif
+- axi_ad9122_channel
+- axi_ad9122_core
+- axi_ad9122_if
+- axi_ad9265_channel
+- axi_ad9265_if
+- axi_ad9265_pnmon
+- axi_ad9361_cmos_if
+- axi_ad9361_lvds_if
+- axi_ad9361_rx
+- axi_ad9361_rx_channel
+- axi_ad9361_rx_pnmon
+- axi_ad9361_tdd
+- axi_ad9361_tx
+- axi_ad9361_tx_channel
+- axi_ad9434_core
 - axi_ad9434_if
+- axi_ad9434_pnmon
+- axi_ad9467_channel
+- axi_ad9467_if
+- axi_ad9467_pnmon
+- axi_ad9625_channel
 - axi_ad9625_if
+- axi_ad9625_pnmon
+- axi_ad9671_channel
 - axi_ad9671_if
+- axi_ad9671_pnmon
+- axi_ad9684_channel
 - axi_ad9684_if
+- axi_ad9684_pnmon
+- axi_ad9739a_channel
+- axi_ad9739a_core
+- axi_ad9739a_if
+- axi_ad9740_channel
+- axi_ad9740_core
+- axi_ad9783_channel
+- axi_ad9783_core
+- axi_ad9783_if
+- axi_ad9963_if
+- axi_ad9963_rx
+- axi_ad9963_rx_channel
+- axi_ad9963_rx_pnmon
+- axi_ad9963_tx
+- axi_ad9963_tx_channel
 - axi_ada4355_if
 - axi_ada4355_regmap
+- axi_adaq8092_channel
+- axi_adaq8092_if
+- axi_adc_decimate_filter
+- axi_adc_decimate_reg
+- axi_adc_trigger_reg
+- axi_adcfifo_adc
 - axi_adcfifo_dma
 - axi_adcfifo_wr
 - axi_adrv9001_core
+- axi_adrv9001_rx
+- axi_adrv9001_rx_channel
+- axi_adrv9001_sync_ctrl
+- axi_adrv9001_tdd
 - axi_adrv9001_tx
+- axi_adrv9001_tx_channel
+- axi_dac_interpolate_filter
+- axi_dac_interpolate_reg
 - axi_dacfifo_address_buffer
 - axi_dacfifo_rd
 - axi_dacfifo_wr
@@ -92,13 +170,22 @@ components:
 - axi_dmac_resize_src
 - axi_dmac_response_manager
 - axi_dmac_transfer
+- axi_fmcadc5_sync_calcor
+- axi_gpreg_clock_mon
+- axi_hdmi_rx_core
 - axi_hdmi_tx_core
 - axi_laser_driver_regmap
+- axi_logic_analyzer_reg
+- axi_ltc2387_channel
+- axi_ltc2387_if
+- axi_pulsar_lvds_channel
+- axi_pulsar_lvds_if
 - axi_pulse_gen_regmap
 - axi_pwm_gen_regmap
 - axi_register_slice
 - axi_tdd_regmap
 - axi_xcvrlb_1
+- cic_decim
 - data_mover
 - data_offload_fsm
 - data_offload_regmap
@@ -107,14 +194,30 @@ components:
 - dest_fifo_inf
 - dmac_2d_transfer
 - dmac_sg
+- elastic_buffer
+- hsci_master_top
+- i3c_controller_bit_mod
+- i3c_controller_cmd_parser
+- i3c_controller_framing
+- i3c_controller_pack
 - i3c_controller_regmap
+- i3c_controller_unpack
+- i3c_controller_word
+- i3c_controller_write_ibi
+- jesd204_rx_lane
+- jesd204_rx_lane_64b
 - jesd204_tx_ctrl
 - jesd204_tx_gearbox
+- jesd204_tx_lane
+- jesd204_up_common
 - jesd204_up_ilas_mem
 - jesd204_up_rx
 - jesd204_up_rx_lane
 - jesd204_up_sysref
 - jesd204_up_tx
+- pack_interconnect
+- pack_network
+- pack_shell
 - request_arb
 - request_generator
 - response_generator
@@ -127,9 +230,764 @@ components:
 - sync_data
 - sync_event
 - sync_gray
+- up_ad5766_sequencer
 - up_axi
 - util_adxcvr_xch
 - util_axis_fifo
 - util_axis_fifo_address_generator
 - util_axis_fifo_asym
+- util_cpack2_impl
 - util_dacfifo_bypass
+- util_upack2_impl
+top_ports:
+  axi_dmac:
+  - direction: in
+    name: s_axi_aclk
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_aresetn
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_awvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_awaddr
+    type: wire
+    width: '[10:0]'
+  - direction: out
+    name: s_axi_awready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_awprot
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: s_axi_wvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_wdata
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_axi_wstrb
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: s_axi_wready
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_bvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_bresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: s_axi_bready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_arvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_araddr
+    type: wire
+    width: '[10:0]'
+  - direction: out
+    name: s_axi_arready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_arprot
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: s_axi_rvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_rready
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_rresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: s_axi_rdata
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: irq
+    type: wire
+    width: ''
+  - direction: in
+    name: sync
+    type: wire
+    width: ''
+  - direction: in
+    name: m_dest_axi_aclk
+    type: wire
+    width: ''
+  - direction: in
+    name: m_dest_axi_aresetn
+    type: wire
+    width: ''
+  - direction: out
+    name: m_dest_axi_awaddr
+    type: wire
+    width: '[DMA_AXI_ADDR_WIDTH-1:0]'
+  - direction: out
+    name: m_dest_axi_awlen
+    type: wire
+    width: '[7-(4*DMA_AXI_PROTOCOL_DEST):0]'
+  - direction: out
+    name: m_dest_axi_awsize
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_dest_axi_awburst
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_dest_axi_awprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_dest_axi_awcache
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: m_dest_axi_awvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_dest_axi_awready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_dest_axi_awid
+    type: wire
+    width: '[AXI_ID_WIDTH_DEST-1:0]'
+  - direction: out
+    name: m_dest_axi_awlock
+    type: wire
+    width: '[DMA_AXI_PROTOCOL_DEST:0]'
+  - direction: out
+    name: m_dest_axi_wdata
+    type: wire
+    width: '[DMA_DATA_WIDTH_DEST-1:0]'
+  - direction: out
+    name: m_dest_axi_wstrb
+    type: wire
+    width: '[(DMA_DATA_WIDTH_DEST/8)-1:0]'
+  - direction: in
+    name: m_dest_axi_wready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_dest_axi_wvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_dest_axi_wlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_dest_axi_wid
+    type: wire
+    width: '[AXI_ID_WIDTH_DEST-1:0]'
+  - direction: in
+    name: m_dest_axi_bvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_dest_axi_bresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_dest_axi_bready
+    type: wire
+    width: ''
+  - direction: in
+    name: m_dest_axi_bid
+    type: wire
+    width: '[AXI_ID_WIDTH_DEST-1:0]'
+  - direction: out
+    name: m_dest_axi_arvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_dest_axi_araddr
+    type: wire
+    width: '[DMA_AXI_ADDR_WIDTH-1:0]'
+  - direction: out
+    name: m_dest_axi_arlen
+    type: wire
+    width: '[7-(4*DMA_AXI_PROTOCOL_DEST):0]'
+  - direction: out
+    name: m_dest_axi_arsize
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_dest_axi_arburst
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_dest_axi_arcache
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: m_dest_axi_arprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: m_dest_axi_arready
+    type: wire
+    width: ''
+  - direction: in
+    name: m_dest_axi_rvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_dest_axi_rresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: m_dest_axi_rdata
+    type: wire
+    width: '[DMA_DATA_WIDTH_DEST-1:0]'
+  - direction: out
+    name: m_dest_axi_rready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_dest_axi_arid
+    type: wire
+    width: '[AXI_ID_WIDTH_DEST-1:0]'
+  - direction: out
+    name: m_dest_axi_arlock
+    type: wire
+    width: '[DMA_AXI_PROTOCOL_DEST:0]'
+  - direction: in
+    name: m_dest_axi_rid
+    type: wire
+    width: '[AXI_ID_WIDTH_DEST-1:0]'
+  - direction: in
+    name: m_dest_axi_rlast
+    type: wire
+    width: ''
+  - direction: in
+    name: m_src_axi_aclk
+    type: wire
+    width: ''
+  - direction: in
+    name: m_src_axi_aresetn
+    type: wire
+    width: ''
+  - direction: in
+    name: m_src_axi_arready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_src_axi_arvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_src_axi_araddr
+    type: wire
+    width: '[DMA_AXI_ADDR_WIDTH-1:0]'
+  - direction: out
+    name: m_src_axi_arlen
+    type: wire
+    width: '[7-(4*DMA_AXI_PROTOCOL_SRC):0]'
+  - direction: out
+    name: m_src_axi_arsize
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_src_axi_arburst
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_src_axi_arprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_src_axi_arcache
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: m_src_axi_arid
+    type: wire
+    width: '[AXI_ID_WIDTH_SRC-1:0]'
+  - direction: out
+    name: m_src_axi_arlock
+    type: wire
+    width: '[DMA_AXI_PROTOCOL_SRC:0]'
+  - direction: in
+    name: m_src_axi_rdata
+    type: wire
+    width: '[DMA_DATA_WIDTH_SRC-1:0]'
+  - direction: out
+    name: m_src_axi_rready
+    type: wire
+    width: ''
+  - direction: in
+    name: m_src_axi_rvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_src_axi_rresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: m_src_axi_rid
+    type: wire
+    width: '[AXI_ID_WIDTH_SRC-1:0]'
+  - direction: in
+    name: m_src_axi_rlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_src_axi_awvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_src_axi_awaddr
+    type: wire
+    width: '[DMA_AXI_ADDR_WIDTH-1:0]'
+  - direction: out
+    name: m_src_axi_awlen
+    type: wire
+    width: '[7-(4*DMA_AXI_PROTOCOL_SRC):0]'
+  - direction: out
+    name: m_src_axi_awsize
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_src_axi_awburst
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_src_axi_awcache
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: m_src_axi_awprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: m_src_axi_awready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_src_axi_wvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_src_axi_wdata
+    type: wire
+    width: '[DMA_DATA_WIDTH_SRC-1:0]'
+  - direction: out
+    name: m_src_axi_wstrb
+    type: wire
+    width: '[(DMA_DATA_WIDTH_SRC/8)-1:0]'
+  - direction: out
+    name: m_src_axi_wlast
+    type: wire
+    width: ''
+  - direction: in
+    name: m_src_axi_wready
+    type: wire
+    width: ''
+  - direction: in
+    name: m_src_axi_bvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_src_axi_bresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_src_axi_bready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_src_axi_awid
+    type: wire
+    width: '[AXI_ID_WIDTH_SRC-1:0]'
+  - direction: out
+    name: m_src_axi_awlock
+    type: wire
+    width: '[DMA_AXI_PROTOCOL_SRC:0]'
+  - direction: out
+    name: m_src_axi_wid
+    type: wire
+    width: '[AXI_ID_WIDTH_SRC-1:0]'
+  - direction: in
+    name: m_src_axi_bid
+    type: wire
+    width: '[AXI_ID_WIDTH_SRC-1:0]'
+  - direction: in
+    name: m_sg_axi_aclk
+    type: wire
+    width: ''
+  - direction: in
+    name: m_sg_axi_aresetn
+    type: wire
+    width: ''
+  - direction: in
+    name: m_sg_axi_arready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_sg_axi_arvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_sg_axi_araddr
+    type: wire
+    width: '[DMA_AXI_ADDR_WIDTH-1:0]'
+  - direction: out
+    name: m_sg_axi_arlen
+    type: wire
+    width: '[7-(4*DMA_AXI_PROTOCOL_SG):0]'
+  - direction: out
+    name: m_sg_axi_arsize
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_sg_axi_arburst
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_sg_axi_arprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_sg_axi_arcache
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: m_sg_axi_arid
+    type: wire
+    width: '[AXI_ID_WIDTH_SG-1:0]'
+  - direction: out
+    name: m_sg_axi_arlock
+    type: wire
+    width: '[DMA_AXI_PROTOCOL_SG:0]'
+  - direction: in
+    name: m_sg_axi_rdata
+    type: wire
+    width: '[DMA_DATA_WIDTH_SG-1:0]'
+  - direction: out
+    name: m_sg_axi_rready
+    type: wire
+    width: ''
+  - direction: in
+    name: m_sg_axi_rvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_sg_axi_rresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: m_sg_axi_rid
+    type: wire
+    width: '[AXI_ID_WIDTH_SG-1:0]'
+  - direction: in
+    name: m_sg_axi_rlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_sg_axi_awvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_sg_axi_awaddr
+    type: wire
+    width: '[DMA_AXI_ADDR_WIDTH-1:0]'
+  - direction: out
+    name: m_sg_axi_awlen
+    type: wire
+    width: '[7-(4*DMA_AXI_PROTOCOL_SG):0]'
+  - direction: out
+    name: m_sg_axi_awsize
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_sg_axi_awburst
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_sg_axi_awcache
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: m_sg_axi_awprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: m_sg_axi_awready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_sg_axi_wvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_sg_axi_wdata
+    type: wire
+    width: '[DMA_DATA_WIDTH_SG-1:0]'
+  - direction: out
+    name: m_sg_axi_wstrb
+    type: wire
+    width: '[(DMA_DATA_WIDTH_SG/8)-1:0]'
+  - direction: out
+    name: m_sg_axi_wlast
+    type: wire
+    width: ''
+  - direction: in
+    name: m_sg_axi_wready
+    type: wire
+    width: ''
+  - direction: in
+    name: m_sg_axi_bvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_sg_axi_bresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_sg_axi_bready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_sg_axi_awid
+    type: wire
+    width: '[AXI_ID_WIDTH_SG-1:0]'
+  - direction: out
+    name: m_sg_axi_awlock
+    type: wire
+    width: '[DMA_AXI_PROTOCOL_SG:0]'
+  - direction: out
+    name: m_sg_axi_wid
+    type: wire
+    width: '[AXI_ID_WIDTH_SG-1:0]'
+  - direction: in
+    name: m_sg_axi_bid
+    type: wire
+    width: '[AXI_ID_WIDTH_SG-1:0]'
+  - direction: in
+    name: s_axis_aclk
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_data
+    type: wire
+    width: '[DMA_DATA_WIDTH_SRC-1:0]'
+  - direction: in
+    name: s_axis_strb
+    type: wire
+    width: '[DMA_DATA_WIDTH_SRC/8-1:0]'
+  - direction: in
+    name: s_axis_keep
+    type: wire
+    width: '[DMA_DATA_WIDTH_SRC/8-1:0]'
+  - direction: in
+    name: s_axis_user
+    type: wire
+    width: '[0:0]'
+  - direction: in
+    name: s_axis_id
+    type: wire
+    width: '[DMA_AXIS_ID_W-1:0]'
+  - direction: in
+    name: s_axis_dest
+    type: wire
+    width: '[DMA_AXIS_DEST_W-1:0]'
+  - direction: in
+    name: s_axis_last
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_xfer_req
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_aclk
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_data
+    type: wire
+    width: '[DMA_DATA_WIDTH_DEST-1:0]'
+  - direction: out
+    name: m_axis_strb
+    type: wire
+    width: '[DMA_DATA_WIDTH_DEST/8-1:0]'
+  - direction: out
+    name: m_axis_keep
+    type: wire
+    width: '[DMA_DATA_WIDTH_DEST/8-1:0]'
+  - direction: out
+    name: m_axis_user
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: m_axis_id
+    type: wire
+    width: '[DMA_AXIS_ID_W-1:0]'
+  - direction: out
+    name: m_axis_dest
+    type: wire
+    width: '[DMA_AXIS_DEST_W-1:0]'
+  - direction: out
+    name: m_axis_last
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_xfer_req
+    type: wire
+    width: ''
+  - direction: in
+    name: FIFO
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_wr_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_wr_en
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_wr_din
+    type: wire
+    width: '[DMA_DATA_WIDTH_SRC-1:0]'
+  - direction: out
+    name: fifo_wr_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: fifo_wr_xfer_req
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_rd_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_rd_en
+    type: wire
+    width: ''
+  - direction: out
+    name: fifo_rd_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: fifo_rd_dout
+    type: wire
+    width: '[DMA_DATA_WIDTH_DEST-1:0]'
+  - direction: out
+    name: fifo_rd_underflow
+    type: wire
+    width: ''
+  - direction: out
+    name: fifo_rd_xfer_req
+    type: wire
+    width: ''
+  - direction: in
+    name: m_frame_in
+    type: wire
+    width: '[MAX_NUM_FRAMES_WIDTH-1:0]'
+  - direction: in
+    name: m_frame_in_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_frame_out
+    type: wire
+    width: '[MAX_NUM_FRAMES_WIDTH-1:0]'
+  - direction: out
+    name: m_frame_out_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_frame_in
+    type: wire
+    width: '[MAX_NUM_FRAMES_WIDTH-1:0]'
+  - direction: in
+    name: s_frame_in_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_frame_out
+    type: wire
+    width: '[MAX_NUM_FRAMES_WIDTH-1:0]'
+  - direction: out
+    name: s_frame_out_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: src_ext_sync
+    type: wire
+    width: ''
+  - direction: in
+    name: dest_ext_sync
+    type: wire
+    width: ''
+  - direction: out
+    name: dest_diag_level_bursts
+    type: wire
+    width: '[7:0]'
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

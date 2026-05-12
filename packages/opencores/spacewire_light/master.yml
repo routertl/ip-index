@@ -49,6 +49,20 @@ components:
 - spwxmit
 - spwxmit_fast
 - syncdff
+top_ports:
+  streamtest:
+  - direction: in
+    name: spw_si
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spw_do
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spw_so
+    type: std_logic )
+    width: ''
 total_entities: 12
 desc_source: verdict
 health_tier: bronze
@@ -57,3 +71,15 @@ hdl:
   vendor_variants:
     generic:
     - rtl/vhdl/spwrecvfront_generic.vhd
+external_uses:
+- library: grlib
+  package: amba
+- library: grlib
+  package: devices
+- library: grlib
+  package: stdlib
+- library: techmap
+  package: gencomp
+provides_packages:
+- spwambapkg
+- spwpkg

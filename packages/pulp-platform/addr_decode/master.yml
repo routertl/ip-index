@@ -25,3 +25,42 @@ tags:
 role: top
 components:
 - addr_decode_dync
+top_ports:
+  addr_decode:
+  - direction: in
+    name: address
+    type: wire
+    width: ''
+  - direction: in
+    name: addresses
+    type: wire
+    width: ''
+  - direction: out
+    name: index
+    type: wire
+    width: ''
+  - direction: in
+    name: addr_t
+    type: wire
+    width: ''
+  - direction: in
+    name: rule_t
+    type: wire
+    width: ''
+  - direction: out
+    name: idx_t
+    type: wire
+    width: ''
+  - direction: out
+    name: dec_valid_o
+    type: wire
+    width: ''
+  - direction: out
+    name: dec_error_o
+    type: wire
+    width: ''
+  - direction: in
+    name: en_default_idx_i
+    type: wire
+    width: ''
+desc_source: preserved

@@ -29,5 +29,144 @@ components:
 - axilwr2wbsp
 - axlite2wbsp
 - wbarbiter
+top_ports:
+  axlite2wbsp_wrapper:
+  - direction: in
+    name: s_axi_aclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_aresetn
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_awready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_awaddr
+    type: std_logic_vector
+    width: C_AXI_ADDR_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_awcache
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: s_axi_awprot
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: s_axi_awvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_wready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_wdata
+    type: std_logic_vector
+    width: C_AXI_DATA_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_wstrb
+    type: std_logic_vector
+    width: C_AXI_DATA_WIDTH/8-1 downto 0
+  - direction: in
+    name: s_axi_wvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_bresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: s_axi_bvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_bready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_arready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_araddr
+    type: std_logic_vector
+    width: C_AXI_ADDR_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_arcache
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: s_axi_arprot
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: s_axi_arvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_rresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: s_axi_rvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_rdata
+    type: std_logic_vector
+    width: C_AXI_DATA_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_rready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_wb_reset
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_wb_cyc
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_wb_stb
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_wb_we
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_wb_adr
+    type: std_logic_vector
+    width: C_AXI_ADDR_WIDTH-2-1 downto 0
+  - direction: out
+    name: m_wb_dat_w
+    type: std_logic_vector
+    width: C_AXI_DATA_WIDTH-1 downto 0
+  - direction: out
+    name: m_wb_sel
+    type: std_logic_vector
+    width: C_AXI_DATA_WIDTH/8-1 downto 0
+  - direction: in
+    name: m_wb_ack
+    type: std_logic
+    width: ''
+  - direction: in
+    name: m_wb_stall
+    type: std_logic
+    width: ''
+  - direction: in
+    name: m_wb_dat_r
+    type: std_logic_vector
+    width: C_AXI_DATA_WIDTH-1 downto 0
+  - direction: in
+    name: m_wb_err
+    type: "std_logic\n    )"
+    width: ''
+desc_source: ports
 health_tier: bronze
 last_verified_at: '2026-05-05'

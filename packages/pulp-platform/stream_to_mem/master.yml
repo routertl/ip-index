@@ -29,3 +29,54 @@ components:
 - fifo_v3
 - mem_to_banks_detailed
 - stream_fifo
+top_ports:
+  stream_to_mem:
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: mem_req_t
+    type: wire
+    width: ''
+  - direction: in
+    name: req_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: req_ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_resp_t
+    type: wire
+    width: ''
+  - direction: out
+    name: resp_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: resp_ready_i
+    type: wire
+    width: ''
+  - direction: out
+    name: mem_req_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: mem_req_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: mem_resp_valid_i
+    type: wire
+    width: ''
+desc_source: preserved

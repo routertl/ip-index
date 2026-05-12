@@ -29,5 +29,76 @@ components:
 - aximrd2wbsp
 - aximwr2wbsp
 - sfifo
+top_ports:
+  wbupsz:
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_scyc
+    type: wire
+    width: ''
+  - direction: in
+    name: i_saddr
+    type: wire
+    width: '[ADDRESS_WIDTH-$clog2(SMALL_DW/8)-1:0]'
+  - direction: in
+    name: i_sdata
+    type: wire
+    width: '[SMALL_DW-1:0]'
+  - direction: in
+    name: i_ssel
+    type: wire
+    width: '[SMALL_DW/8-1:0]'
+  - direction: out
+    name: o_sstall
+    type: wire
+    width: ''
+  - direction: out
+    name: o_sack
+    type: wire
+    width: ''
+  - direction: out
+    name: o_sdata
+    type: wire
+    width: '[SMALL_DW-1:0]'
+  - direction: out
+    name: o_serr
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wcyc
+    type: wire
+    width: ''
+  - direction: out
+    name: o_waddr
+    type: wire
+    width: '[ADDRESS_WIDTH-$clog2(WIDE_DW/8)-1:0]'
+  - direction: out
+    name: o_wdata
+    type: wire
+    width: '[WIDE_DW-1:0]'
+  - direction: out
+    name: o_wsel
+    type: wire
+    width: '[WIDE_DW/8-1:0]'
+  - direction: in
+    name: i_wstall
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wack
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wdata
+    type: wire
+    width: '[WIDE_DW-1:0]'
+  - direction: in
+    name: i_werr
+    type: wire
+    width: ''
+desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-05'

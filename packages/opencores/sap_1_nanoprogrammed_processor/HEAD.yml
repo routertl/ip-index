@@ -49,6 +49,4882 @@ top_modules:
 - OREG
 - PC
 - SRAM
+top_ports:
+  ACC:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  ADDR_ROM:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  ALU:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  BREG:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  IR:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  M3CPU8:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  MAR:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  MICROCODE_ROM:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  MICRO_PROG_COUNTER:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  NANOCODE_DECODER:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  NANOCODE_ROM:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  NANO_PROG_COUNTER:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  OREG:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  PC:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
+  SRAM:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_o
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_o_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_o_2
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: AR_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PRE_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ROM_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_PRE_o
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: NANO_ROM_o
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: EP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CP_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LM_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CE_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EI_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CS_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EA_o
+    type: wire
+    width: ''
+  - direction: out
+    name: SU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: AD_o
+    type: wire
+    width: ''
+  - direction: out
+    name: EU_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LB_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: LOAD_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: CLEAR_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: INC_MICRO_o
+    type: wire
+    width: ''
+  - direction: out
+    name: B_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ALU_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: A_out
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: OR_out
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: EP
+    type: wire
+    width: ''
+  - direction: in
+    name: CP
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: LM
+    type: wire
+    width: ''
+  - direction: in
+    name: PC_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MAR_OUT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: MAR_IN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: SRAM_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LI
+    type: wire
+    width: ''
+  - direction: in
+    name: EI
+    type: wire
+    width: ''
+  - direction: in
+    name: SRAM_IN
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: IR_OUT_1
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: IR_OUT_2
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: CS
+    type: wire
+    width: ''
+  - direction: out
+    name: AR_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: AR_ROM_IN
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: LOAD_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: INC_MICRO
+    type: wire
+    width: ''
+  - direction: in
+    name: CLEAR_MICRO
+    type: wire
+    width: ''
+  - direction: out
+    name: PRE_OUT
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: PRE_IN
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: ROM_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: for
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_PRE_OUT
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: NANO_PRE_IN
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: NANO_ROM_OUT
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: NANO_ROM_IN
+    type: wire
+    width: '[16:0]'
+  - direction: in
+    name: ACC_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LA
+    type: wire
+    width: ''
+  - direction: in
+    name: EA
+    type: wire
+    width: ''
+  - direction: out
+    name: ACC_ALU
+    type: wire
+    width: '[8:0]'
+  - direction: out
+    name: ACC_BUS
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: B_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LB
+    type: wire
+    width: ''
+  - direction: out
+    name: B_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_A
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: ALU_B
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: SU
+    type: wire
+    width: ''
+  - direction: in
+    name: AD
+    type: wire
+    width: ''
+  - direction: in
+    name: EU
+    type: wire
+    width: ''
+  - direction: out
+    name: ALU_OUT
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: O_IN
+    type: wire
+    width: '[8:0]'
+  - direction: in
+    name: LO
+    type: wire
+    width: ''
+  - direction: out
+    name: O_OUT
+    type: wire
+    width: '[8:0]'
 total_entities: 15
 desc_source: verdict
 mirror_status: curated-mirror

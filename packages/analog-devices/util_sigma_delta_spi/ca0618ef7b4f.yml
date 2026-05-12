@@ -26,6 +26,60 @@ tags:
 - spi
 - util
 role: top
+top_ports:
+  util_sigma_delta_spi:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: resetn
+    type: wire
+    width: ''
+  - direction: in
+    name: s_sclk
+    type: wire
+    width: ''
+  - direction: in
+    name: s_sdo
+    type: wire
+    width: ''
+  - direction: in
+    name: s_sdo_t
+    type: wire
+    width: ''
+  - direction: out
+    name: s_sdi
+    type: wire
+    width: ''
+  - direction: in
+    name: s_cs
+    type: wire
+    width: '[NUM_OF_CS-1:0]'
+  - direction: out
+    name: m_sclk
+    type: wire
+    width: ''
+  - direction: out
+    name: m_sdo
+    type: wire
+    width: ''
+  - direction: out
+    name: m_sdo_t
+    type: wire
+    width: ''
+  - direction: in
+    name: m_sdi
+    type: wire
+    width: ''
+  - direction: out
+    name: m_cs
+    type: wire
+    width: '[NUM_OF_CS-1:0]'
+  - direction: out
+    name: data_ready
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

@@ -21,6 +21,24 @@ tags:
 - delay
 - util
 role: top
+top_ports:
+  util_delay:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: din
+    type: wire
+    width: ''
+  - direction: out
+    name: dout
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
 desc_source: preserved
 external_uses:
 - library: work

@@ -23,3 +23,38 @@ tags:
 - handshake
 - isochronous
 role: top
+top_ports:
+  isochronous_4phase_handshake:
+  - direction: in
+    name: src_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: src_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: src_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: src_ready_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_rst_ni
+    type: wire
+    width: ''
+  - direction: out
+    name: dst_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_ready_i
+    type: wire
+    width: ''
+desc_source: preserved

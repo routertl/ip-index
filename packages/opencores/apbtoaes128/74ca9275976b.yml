@@ -55,6 +55,64 @@ components:
 - sBox
 - sBox_8
 - shift_rows
+top_ports:
+  aes_ip:
+  - direction: out
+    name: int_ccf
+    type: wire
+    width: ''
+  - direction: out
+    name: int_err
+    type: wire
+    width: ''
+  - direction: out
+    name: dma_req_wr
+    type: wire
+    width: ''
+  - direction: out
+    name: dma_req_rd
+    type: wire
+    width: ''
+  - direction: out
+    name: PREADY
+    type: wire
+    width: ''
+  - direction: out
+    name: PSLVERR
+    type: wire
+    width: ''
+  - direction: out
+    name: PRDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PADDR
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: PWDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PWRITE
+    type: wire
+    width: ''
+  - direction: in
+    name: PENABLE
+    type: wire
+    width: ''
+  - direction: in
+    name: PSEL
+    type: wire
+    width: ''
+  - direction: in
+    name: PCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: PRESETn
+    type: wire
+    width: ''
 total_entities: 11
 desc_source: verdict
 mirror_status: curated-mirror

@@ -78,5 +78,79 @@ components:
 - taxi_axis_null_src
 - taxi_axis_register
 - taxi_axis_tie
+top_ports:
+  taxi_axis_fifo_adapter:
+  - direction: out
+    name: FIFO
+    type: wire
+    width: ''
+  - direction: in
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: bus
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  taxi_axis_mux:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: empty
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  taxi_axis_pipeline_fifo:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  taxi_axis_pipeline_register:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axis_switch:
+  - direction: out
+    name: interface
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 19
 desc_source: curator

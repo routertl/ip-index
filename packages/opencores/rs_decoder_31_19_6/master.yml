@@ -54,6 +54,472 @@ components:
 - MainControl
 - fifo_register
 - gfadder
+top_ports:
+  RSDecoder:
+  - direction: in
+    name: recword
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock1
+    type: wire
+    width: ''
+  - direction: in
+    name: start
+    type: wire
+    width: ''
+  - direction: out
+    name: ready
+    type: wire
+    width: ''
+  - direction: out
+    name: corr_recword
+    type: wire
+    width: '[4:0]'
+  degree0_cell:
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: lambda0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: homega0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock1
+    type: wire
+    width: ''
+  - direction: in
+    name: lastdataout
+    type: wire
+    width: ''
+  - direction: out
+    name: errorvalue
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: rootcntr
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  degree1_cell:
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: lambda0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: homega0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock1
+    type: wire
+    width: ''
+  - direction: in
+    name: lastdataout
+    type: wire
+    width: ''
+  - direction: out
+    name: errorvalue
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: rootcntr
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  degree2_cell:
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: lambda0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: homega0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock1
+    type: wire
+    width: ''
+  - direction: in
+    name: lastdataout
+    type: wire
+    width: ''
+  - direction: out
+    name: errorvalue
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: rootcntr
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  degree3_cell:
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: lambda0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: homega0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock1
+    type: wire
+    width: ''
+  - direction: in
+    name: lastdataout
+    type: wire
+    width: ''
+  - direction: out
+    name: errorvalue
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: rootcntr
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  degree4_cell:
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: lambda0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: homega0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock1
+    type: wire
+    width: ''
+  - direction: in
+    name: lastdataout
+    type: wire
+    width: ''
+  - direction: out
+    name: errorvalue
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: rootcntr
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  degree5_cell:
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: lambda0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: homega0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock1
+    type: wire
+    width: ''
+  - direction: in
+    name: lastdataout
+    type: wire
+    width: ''
+  - direction: out
+    name: errorvalue
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: rootcntr
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  degree6_cell:
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: lambda0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: homega0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock1
+    type: wire
+    width: ''
+  - direction: in
+    name: lastdataout
+    type: wire
+    width: ''
+  - direction: out
+    name: errorvalue
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: rootcntr
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  inverscomb:
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: lambda0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: homega0
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock1
+    type: wire
+    width: ''
+  - direction: in
+    name: lastdataout
+    type: wire
+    width: ''
+  - direction: out
+    name: errorvalue
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: rootcntr
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: in
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  lcpmult:
+  - direction: in
+    name: in1
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sel
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: datain
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: load
+    type: wire
+    width: ''
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  - direction: out
+    name: dataout
+    type: wire
+    width: '[4:0]'
+  mux2_to_1:
+  - direction: in
+    name: in1
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sel
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: datain
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: load
+    type: wire
+    width: ''
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  - direction: out
+    name: dataout
+    type: wire
+    width: '[4:0]'
+  register5_wl:
+  - direction: in
+    name: in1
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sel
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: datain
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: load
+    type: wire
+    width: ''
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  - direction: out
+    name: dataout
+    type: wire
+    width: '[4:0]'
+  register5_wlh:
+  - direction: in
+    name: in1
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sel
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: datain
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: load
+    type: wire
+    width: ''
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  - direction: out
+    name: dataout
+    type: wire
+    width: '[4:0]'
 total_entities: 17
 desc_source: preserved
 health_tier: bronze

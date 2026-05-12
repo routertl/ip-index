@@ -189,6 +189,60 @@ components:
 - util_cpack2_impl
 - util_dacfifo_bypass
 - util_upack2_impl
+top_ports:
+  axi_ad9361_alt_lvds_rx:
+  - direction: in
+    name: rx_clk_in_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_in_n
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_frame_in_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_frame_in_n
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_data_in_p
+    type: wire
+    width: '[ 5:0]'
+  - direction: in
+    name: rx_data_in_n
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_frame
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: rx_data_0
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: rx_data_1
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: rx_data_2
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: rx_data_3
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: rx_locked
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

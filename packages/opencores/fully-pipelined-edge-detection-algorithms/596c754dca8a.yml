@@ -36,9 +36,38 @@ components:
 - RobertsFilter
 - ScharrFilter
 - SobelFilter
+top_ports:
+  EdgeDetection:
+  - direction: in
+    name: CLK
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: EdgeDetection_Enable
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: EdgeDetection_Disable
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: EdgeDetection_Din
+    type: array2D(0 TO EdgeDetection_Kernel)(7 DOWNTO 0)
+    width: ''
+  - direction: out
+    name: EdgeDetection_Dout
+    type: STD_LOGIC_VECTOR
+    width: 31 DOWNTO 0
+  - direction: out
+    name: EdgeDetection_Ready
+    type: "STD_LOGIC\n    )"
+    width: ''
 total_entities: 5
 desc_source: verdict
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/fully-pipelined-edge-detection-algorithms
 health_tier: bronze
 last_verified_at: '2026-05-05'
+provides_packages:
+- EdgeDetection_pkg
+- OperatorOverloading_pkg

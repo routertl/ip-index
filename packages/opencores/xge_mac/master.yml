@@ -78,6 +78,144 @@ components:
 - tx_enqueue
 - tx_hold_fifo
 - wishbone_if
+top_ports:
+  xge_mac:
+  - direction: in
+    name: clk_156m25
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_xgmii_rx
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_xgmii_tx
+    type: wire
+    width: ''
+  - direction: in
+    name: pkt_rx_ren
+    type: wire
+    width: ''
+  - direction: in
+    name: pkt_tx_data
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: pkt_tx_eop
+    type: wire
+    width: ''
+  - direction: in
+    name: pkt_tx_mod
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: pkt_tx_sop
+    type: wire
+    width: ''
+  - direction: in
+    name: pkt_tx_val
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_156m25_n
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_xgmii_rx_n
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_xgmii_tx_n
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: xgmii_rxc
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: xgmii_rxd
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: pkt_rx_avail
+    type: wire
+    width: ''
+  - direction: out
+    name: pkt_rx_data
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: pkt_rx_eop
+    type: wire
+    width: ''
+  - direction: out
+    name: pkt_rx_err
+    type: wire
+    width: ''
+  - direction: out
+    name: pkt_rx_mod
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: pkt_rx_sop
+    type: wire
+    width: ''
+  - direction: out
+    name: pkt_rx_val
+    type: wire
+    width: ''
+  - direction: out
+    name: pkt_tx_full
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: wb_int_o
+    type: wire
+    width: ''
+  - direction: out
+    name: xgmii_txc
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: xgmii_txd
+    type: wire
+    width: '[63:0]'
 total_entities: 20
 desc_source: verdict
 health_tier: silver

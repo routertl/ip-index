@@ -16,7 +16,7 @@ source:
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
   language: vhdl-2008-relaxed
-  library: olo
+  library: work
   files:
   - src/base/vhdl/olo_base_pkg_array.vhd
   - src/base/vhdl/olo_base_pkg_math.vhd
@@ -63,3 +63,190 @@ components:
 - olo_fix_round
 - olo_fix_saturate
 - olo_intf_sync
+top_ports:
+  olo_axi_master_full:
+  - direction: in
+    name: Rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: CmdWr_Size
+    type: std_logic_vector
+    width: UserTransactionSizeBits_g - 1 downto 0
+  - direction: in
+    name: CmdWr_LowLat
+    type: std_logic
+    width: ''
+  - direction: in
+    name: CmdWr_Valid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CmdWr_Ready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: CmdRd_Size
+    type: std_logic_vector
+    width: UserTransactionSizeBits_g - 1 downto 0
+  - direction: in
+    name: CmdRd_LowLat
+    type: std_logic
+    width: ''
+  - direction: in
+    name: CmdRd_Valid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CmdRd_Ready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Wr_Valid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Wr_Ready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Rd_Last
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Rd_Valid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Rd_Ready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Wr_Error
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Rd_Done
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Rd_Error
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_Axi_AwLen
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: M_Axi_AwSize
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: M_Axi_AwBurst
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: M_Axi_AwLock
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_Axi_AwCache
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: M_Axi_AwProt
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: M_Axi_AwValid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_Axi_AwReady
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_Axi_WStrb
+    type: std_logic_vector
+    width: AxiDataWidth_g / 8 - 1 downto 0
+  - direction: out
+    name: M_Axi_WLast
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_Axi_WValid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_Axi_WReady
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_Axi_BValid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_Axi_BReady
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_Axi_ArLen
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: M_Axi_ArSize
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: M_Axi_ArBurst
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: M_Axi_ArLock
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_Axi_ArCache
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: M_Axi_ArProt
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: M_Axi_ArValid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_Axi_ArReady
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_Axi_RResp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: M_Axi_RLast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_Axi_RValid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_Axi_RReady
+    type: "std_logic\n    )"
+    width: ''
+desc_source: header
+external_uses:
+- library: work
+  package: en_cl_fix_pkg
+- library: work
+  package: en_cl_fix_private_pkg
+provides_packages:
+- olo_axi_pkg_protocol
+- olo_base_pkg_array
+- olo_base_pkg_attribute
+- olo_base_pkg_logic
+- olo_base_pkg_math
+- olo_base_pkg_string

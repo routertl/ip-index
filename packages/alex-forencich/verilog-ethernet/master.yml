@@ -231,6 +231,4943 @@ components:
 - udp_ip_tx_64
 - xgmii_baser_dec_64
 - xgmii_baser_enc_64
+top_ports:
+  axis_eth_fcs:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: output_fcs
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: output_fcs_valid
+    type: wire
+    width: ''
+  axis_eth_fcs_check:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tdata
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tdata
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: busy
+    type: wire
+    width: ''
+  - direction: out
+    name: error_bad_fcs
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  axis_eth_fcs_check_64:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tdata
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: s_axis_tkeep
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tdata
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: m_axis_tkeep
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: busy
+    type: wire
+    width: ''
+  - direction: out
+    name: error_bad_fcs
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  axis_eth_fcs_insert:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tdata
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tdata
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: busy
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  axis_eth_fcs_insert_64:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tdata
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: s_axis_tkeep
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tdata
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: m_axis_tkeep
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: busy
+    type: wire
+    width: ''
+  - direction: in
+    name: k
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  eth_axis_rx:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_eth_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_eth_payload_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_eth_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: busy
+    type: wire
+    width: ''
+  - direction: out
+    name: error_header_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  eth_axis_tx:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_hdr_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_eth_hdr_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_eth_payload_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_eth_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: busy
+    type: wire
+    width: ''
+  - direction: out
+    name: AXI
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  eth_demux:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_hdr_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_eth_hdr_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_eth_payload_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_eth_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_payload_axis_tid
+    type: wire
+    width: '[ID_WIDTH-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tdest
+    type: wire
+    width: '[DEST_WIDTH-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tuser
+    type: wire
+    width: '[USER_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_hdr_valid
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: in
+    name: m_eth_hdr_ready
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: out
+    name: m_eth_dest_mac
+    type: wire
+    width: '[M_COUNT*48-1:0]'
+  - direction: out
+    name: m_eth_src_mac
+    type: wire
+    width: '[M_COUNT*48-1:0]'
+  - direction: out
+    name: m_eth_type
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tdata
+    type: wire
+    width: '[M_COUNT*DATA_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tkeep
+    type: wire
+    width: '[M_COUNT*KEEP_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tvalid
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: in
+    name: m_eth_payload_axis_tready
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tlast
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tid
+    type: wire
+    width: '[M_COUNT*ID_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tdest
+    type: wire
+    width: '[M_COUNT*DEST_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tuser
+    type: wire
+    width: '[M_COUNT*USER_WIDTH-1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: drop
+    type: wire
+    width: ''
+  - direction: in
+    name: select
+    type: wire
+    width: '[$clog2(M_COUNT)-1:0]'
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  eth_mac_10g_fifo:
+  - direction: in
+    name: rx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: ptp_sample_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tuser
+    type: wire
+    width: '[TX_USER_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tx_ptp_ts_96
+    type: wire
+    width: '[PTP_TS_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tx_ptp_ts_tag
+    type: wire
+    width: '[PTP_TAG_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tx_ptp_ts_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_tx_ptp_ts_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tuser
+    type: wire
+    width: '[RX_USER_WIDTH-1:0]'
+  - direction: in
+    name: xgmii_rxd
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: xgmii_rxc
+    type: wire
+    width: '[CTRL_WIDTH-1:0]'
+  - direction: out
+    name: xgmii_txd
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: xgmii_txc
+    type: wire
+    width: '[CTRL_WIDTH-1:0]'
+  - direction: out
+    name: tx_error_underflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_fcs
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: in
+    name: ptp_ts_96
+    type: wire
+    width: '[PTP_TS_WIDTH-1:0]'
+  - direction: in
+    name: ptp_ts_step
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_ifg
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: cfg_tx_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_rx_enable
+    type: wire
+    width: ''
+  eth_mac_1g_fifo:
+  - direction: in
+    name: rx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tuser
+    type: wire
+    width: ''
+  - direction: in
+    name: gmii_rxd
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: gmii_rx_dv
+    type: wire
+    width: ''
+  - direction: in
+    name: gmii_rx_er
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_txd
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: gmii_tx_en
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_tx_er
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_mii_select
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_mii_select
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_error_underflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_fcs
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_ifg
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: cfg_tx_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_rx_enable
+    type: wire
+    width: ''
+  eth_mac_1g_gmii_fifo:
+  - direction: in
+    name: style
+    type: wire
+    width: ''
+  - direction: in
+    name: gtx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: gtx_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tuser
+    type: wire
+    width: ''
+  - direction: in
+    name: gmii_rx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: gmii_rxd
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: gmii_rx_dv
+    type: wire
+    width: ''
+  - direction: in
+    name: gmii_rx_er
+    type: wire
+    width: ''
+  - direction: in
+    name: mii_tx_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_tx_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_txd
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: gmii_tx_en
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_tx_er
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_error_underflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_fcs
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: speed
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: cfg_ifg
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: cfg_tx_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_rx_enable
+    type: wire
+    width: ''
+  eth_mac_1g_rgmii_fifo:
+  - direction: in
+    name: style
+    type: wire
+    width: ''
+  - direction: in
+    name: gtx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: gtx_clk90
+    type: wire
+    width: ''
+  - direction: in
+    name: gtx_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tuser
+    type: wire
+    width: ''
+  - direction: in
+    name: rgmii_rx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rgmii_rxd
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: rgmii_rx_ctl
+    type: wire
+    width: ''
+  - direction: out
+    name: rgmii_tx_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: rgmii_txd
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: rgmii_tx_ctl
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_error_underflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_fcs
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: speed
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: cfg_ifg
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: cfg_tx_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_rx_enable
+    type: wire
+    width: ''
+  eth_mac_mii_fifo:
+  - direction: in
+    name: style
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tuser
+    type: wire
+    width: ''
+  - direction: in
+    name: mii_rx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: mii_rxd
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: mii_rx_dv
+    type: wire
+    width: ''
+  - direction: in
+    name: mii_rx_er
+    type: wire
+    width: ''
+  - direction: in
+    name: mii_tx_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: mii_txd
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: mii_tx_en
+    type: wire
+    width: ''
+  - direction: out
+    name: mii_tx_er
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_error_underflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_fcs
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_ifg
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: cfg_tx_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_rx_enable
+    type: wire
+    width: ''
+  eth_mac_phy_10g_fifo:
+  - direction: in
+    name: rx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: logic_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: ptp_sample_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: in
+    name: tx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_axis_tuser
+    type: wire
+    width: '[TX_USER_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tx_ptp_ts_96
+    type: wire
+    width: '[PTP_TS_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tx_ptp_ts_tag
+    type: wire
+    width: '[PTP_TAG_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tx_ptp_ts_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_tx_ptp_ts_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tdata
+    type: wire
+    width: '[AXIS_DATA_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tkeep
+    type: wire
+    width: '[AXIS_KEEP_WIDTH-1:0]'
+  - direction: out
+    name: rx_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_axis_tuser
+    type: wire
+    width: '[RX_USER_WIDTH-1:0]'
+  - direction: out
+    name: serdes_tx_data
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: serdes_tx_hdr
+    type: wire
+    width: '[HDR_WIDTH-1:0]'
+  - direction: in
+    name: serdes_rx_data
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: serdes_rx_hdr
+    type: wire
+    width: '[HDR_WIDTH-1:0]'
+  - direction: out
+    name: serdes_rx_bitslip
+    type: wire
+    width: ''
+  - direction: out
+    name: serdes_rx_reset_req
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_error_underflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_bad_fcs
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_bad_block
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_block_lock
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_high_ber
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_status
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_overflow
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_bad_frame
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_fifo_good_frame
+    type: wire
+    width: ''
+  - direction: in
+    name: ptp_ts_96
+    type: wire
+    width: '[PTP_TS_WIDTH-1:0]'
+  - direction: in
+    name: ptp_ts_step
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_ifg
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: cfg_tx_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_rx_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_tx_prbs31_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_rx_prbs31_enable
+    type: wire
+    width: ''
+  eth_mux:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_hdr_valid
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: out
+    name: s_eth_hdr_ready
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_eth_dest_mac
+    type: wire
+    width: '[S_COUNT*48-1:0]'
+  - direction: in
+    name: s_eth_src_mac
+    type: wire
+    width: '[S_COUNT*48-1:0]'
+  - direction: in
+    name: s_eth_type
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tdata
+    type: wire
+    width: '[S_COUNT*DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tkeep
+    type: wire
+    width: '[S_COUNT*KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tvalid
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: out
+    name: s_eth_payload_axis_tready
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tlast
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tid
+    type: wire
+    width: '[S_COUNT*ID_WIDTH-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tdest
+    type: wire
+    width: '[S_COUNT*DEST_WIDTH-1:0]'
+  - direction: in
+    name: s_eth_payload_axis_tuser
+    type: wire
+    width: '[S_COUNT*USER_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_eth_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_eth_payload_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_eth_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tid
+    type: wire
+    width: '[ID_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tdest
+    type: wire
+    width: '[DEST_WIDTH-1:0]'
+  - direction: out
+    name: m_eth_payload_axis_tuser
+    type: wire
+    width: '[USER_WIDTH-1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: select
+    type: wire
+    width: '[$clog2(S_COUNT)-1:0]'
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  eth_phy_10g:
+  - direction: in
+    name: rx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: tx_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: xgmii_txd
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: xgmii_txc
+    type: wire
+    width: '[CTRL_WIDTH-1:0]'
+  - direction: out
+    name: xgmii_rxd
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: xgmii_rxc
+    type: wire
+    width: '[CTRL_WIDTH-1:0]'
+  - direction: out
+    name: serdes_tx_data
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: serdes_tx_hdr
+    type: wire
+    width: '[HDR_WIDTH-1:0]'
+  - direction: in
+    name: serdes_rx_data
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: serdes_rx_hdr
+    type: wire
+    width: '[HDR_WIDTH-1:0]'
+  - direction: out
+    name: serdes_rx_bitslip
+    type: wire
+    width: ''
+  - direction: out
+    name: serdes_rx_reset_req
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_bad_block
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_error_count
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: rx_bad_block
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_sequence_error
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_block_lock
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_high_ber
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_status
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_tx_prbs31_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_rx_prbs31_enable
+    type: wire
+    width: ''
+  ip_demux:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_hdr_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_ip_hdr_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_ip_version
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: s_ip_ihl
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: s_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: s_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: s_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_ip_identification
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_ip_flags
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: s_ip_fragment_offset
+    type: wire
+    width: '[12:0]'
+  - direction: in
+    name: s_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_ip_header_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_ip_payload_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_ip_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_payload_axis_tid
+    type: wire
+    width: '[ID_WIDTH-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tdest
+    type: wire
+    width: '[DEST_WIDTH-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tuser
+    type: wire
+    width: '[USER_WIDTH-1:0]'
+  - direction: out
+    name: m_ip_hdr_valid
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: in
+    name: m_ip_hdr_ready
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: out
+    name: m_eth_dest_mac
+    type: wire
+    width: '[M_COUNT*48-1:0]'
+  - direction: out
+    name: m_eth_src_mac
+    type: wire
+    width: '[M_COUNT*48-1:0]'
+  - direction: out
+    name: m_eth_type
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_ip_version
+    type: wire
+    width: '[M_COUNT*4-1:0]'
+  - direction: out
+    name: m_ip_ihl
+    type: wire
+    width: '[M_COUNT*4-1:0]'
+  - direction: out
+    name: m_ip_dscp
+    type: wire
+    width: '[M_COUNT*6-1:0]'
+  - direction: out
+    name: m_ip_ecn
+    type: wire
+    width: '[M_COUNT*2-1:0]'
+  - direction: out
+    name: m_ip_length
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_ip_identification
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_ip_flags
+    type: wire
+    width: '[M_COUNT*3-1:0]'
+  - direction: out
+    name: m_ip_fragment_offset
+    type: wire
+    width: '[M_COUNT*13-1:0]'
+  - direction: out
+    name: m_ip_ttl
+    type: wire
+    width: '[M_COUNT*8-1:0]'
+  - direction: out
+    name: m_ip_protocol
+    type: wire
+    width: '[M_COUNT*8-1:0]'
+  - direction: out
+    name: m_ip_header_checksum
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_ip_source_ip
+    type: wire
+    width: '[M_COUNT*32-1:0]'
+  - direction: out
+    name: m_ip_dest_ip
+    type: wire
+    width: '[M_COUNT*32-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tdata
+    type: wire
+    width: '[M_COUNT*DATA_WIDTH-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tkeep
+    type: wire
+    width: '[M_COUNT*KEEP_WIDTH-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tvalid
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: in
+    name: m_ip_payload_axis_tready
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tlast
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tid
+    type: wire
+    width: '[M_COUNT*ID_WIDTH-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tdest
+    type: wire
+    width: '[M_COUNT*DEST_WIDTH-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tuser
+    type: wire
+    width: '[M_COUNT*USER_WIDTH-1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: drop
+    type: wire
+    width: ''
+  - direction: in
+    name: select
+    type: wire
+    width: '[$clog2(M_COUNT)-1:0]'
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_payload_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  ip_mux:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_hdr_valid
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: out
+    name: s_ip_hdr_ready
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_eth_dest_mac
+    type: wire
+    width: '[S_COUNT*48-1:0]'
+  - direction: in
+    name: s_eth_src_mac
+    type: wire
+    width: '[S_COUNT*48-1:0]'
+  - direction: in
+    name: s_eth_type
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_version
+    type: wire
+    width: '[S_COUNT*4-1:0]'
+  - direction: in
+    name: s_ip_ihl
+    type: wire
+    width: '[S_COUNT*4-1:0]'
+  - direction: in
+    name: s_ip_dscp
+    type: wire
+    width: '[S_COUNT*6-1:0]'
+  - direction: in
+    name: s_ip_ecn
+    type: wire
+    width: '[S_COUNT*2-1:0]'
+  - direction: in
+    name: s_ip_length
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_identification
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_flags
+    type: wire
+    width: '[S_COUNT*3-1:0]'
+  - direction: in
+    name: s_ip_fragment_offset
+    type: wire
+    width: '[S_COUNT*13-1:0]'
+  - direction: in
+    name: s_ip_ttl
+    type: wire
+    width: '[S_COUNT*8-1:0]'
+  - direction: in
+    name: s_ip_protocol
+    type: wire
+    width: '[S_COUNT*8-1:0]'
+  - direction: in
+    name: s_ip_header_checksum
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_source_ip
+    type: wire
+    width: '[S_COUNT*32-1:0]'
+  - direction: in
+    name: s_ip_dest_ip
+    type: wire
+    width: '[S_COUNT*32-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tdata
+    type: wire
+    width: '[S_COUNT*DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tkeep
+    type: wire
+    width: '[S_COUNT*KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tvalid
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: out
+    name: s_ip_payload_axis_tready
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tlast
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tid
+    type: wire
+    width: '[S_COUNT*ID_WIDTH-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tdest
+    type: wire
+    width: '[S_COUNT*DEST_WIDTH-1:0]'
+  - direction: in
+    name: s_ip_payload_axis_tuser
+    type: wire
+    width: '[S_COUNT*USER_WIDTH-1:0]'
+  - direction: out
+    name: m_ip_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_ip_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_version
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_ip_ihl
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: m_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: m_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_identification
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_flags
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: m_ip_fragment_offset
+    type: wire
+    width: '[12:0]'
+  - direction: out
+    name: m_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_header_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_ip_payload_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_ip_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_payload_axis_tid
+    type: wire
+    width: '[ID_WIDTH-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tdest
+    type: wire
+    width: '[DEST_WIDTH-1:0]'
+  - direction: out
+    name: m_ip_payload_axis_tuser
+    type: wire
+    width: '[USER_WIDTH-1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: select
+    type: wire
+    width: '[$clog2(S_COUNT)-1:0]'
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_payload_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  ptp_clock:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: input_ts_96
+    type: wire
+    width: '[95:0]'
+  - direction: in
+    name: input_ts_96_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: input_ts_64
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: input_ts_64_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: input_period_ns
+    type: wire
+    width: '[PERIOD_NS_WIDTH-1:0]'
+  - direction: in
+    name: input_period_fns
+    type: wire
+    width: '[FNS_WIDTH-1:0]'
+  - direction: in
+    name: input_period_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: input_adj_ns
+    type: wire
+    width: '[OFFSET_NS_WIDTH-1:0]'
+  - direction: in
+    name: input_adj_fns
+    type: wire
+    width: '[FNS_WIDTH-1:0]'
+  - direction: in
+    name: input_adj_count
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: input_adj_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: input_adj_active
+    type: wire
+    width: ''
+  - direction: in
+    name: input_drift_ns
+    type: wire
+    width: '[DRIFT_NS_WIDTH-1:0]'
+  - direction: in
+    name: input_drift_fns
+    type: wire
+    width: '[FNS_WIDTH-1:0]'
+  - direction: in
+    name: input_drift_rate
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: input_drift_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: output_ts_96
+    type: wire
+    width: '[95:0]'
+  - direction: out
+    name: output_ts_64
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: output_ts_step
+    type: wire
+    width: ''
+  - direction: out
+    name: output_pps
+    type: wire
+    width: ''
+  ptp_perout:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: input_ts_96
+    type: wire
+    width: '[95:0]'
+  - direction: in
+    name: input_ts_step
+    type: wire
+    width: ''
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: input_start
+    type: wire
+    width: '[95:0]'
+  - direction: in
+    name: input_start_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: input_period
+    type: wire
+    width: '[95:0]'
+  - direction: in
+    name: input_period_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: input_width
+    type: wire
+    width: '[95:0]'
+  - direction: in
+    name: input_width_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: locked
+    type: wire
+    width: ''
+  - direction: out
+    name: error
+    type: wire
+    width: ''
+  - direction: out
+    name: output_pulse
+    type: wire
+    width: ''
+  ptp_tag_insert:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tuser
+    type: wire
+    width: '[USER_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_tuser
+    type: wire
+    width: '[USER_WIDTH-1:0]'
+  - direction: in
+    name: s_axis_tag
+    type: wire
+    width: '[TAG_WIDTH-1:0]'
+  - direction: in
+    name: s_axis_tag_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_tag_ready
+    type: wire
+    width: ''
+  ptp_td_leaf:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: sample_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: ptp_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: ptp_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: ptp_td_sdi
+    type: wire
+    width: ''
+  - direction: out
+    name: output_ts_rel
+    type: wire
+    width: '[TS_REL_W-1:0]'
+  - direction: out
+    name: output_ts_rel_step
+    type: wire
+    width: ''
+  - direction: out
+    name: output_ts_tod
+    type: wire
+    width: '[TS_TOD_W-1:0]'
+  - direction: out
+    name: output_ts_tod_step
+    type: wire
+    width: ''
+  - direction: out
+    name: output_pps
+    type: wire
+    width: ''
+  - direction: out
+    name: output_pps_str
+    type: wire
+    width: ''
+  - direction: out
+    name: locked
+    type: wire
+    width: ''
+  - direction: in
+    name: path
+    type: wire
+    width: ''
+  - direction: out
+    name: case
+    type: wire
+    width: ''
+  - direction: in
+    name: stepped
+    type: wire
+    width: ''
+  ptp_td_phc:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: input_ts_tod_s
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: input_ts_tod_ns
+    type: wire
+    width: '[29:0]'
+  - direction: in
+    name: input_ts_tod_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: input_ts_tod_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: input_ts_tod_offset_ns
+    type: wire
+    width: '[29:0]'
+  - direction: in
+    name: input_ts_tod_offset_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: input_ts_tod_offset_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: input_ts_rel_ns
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: input_ts_rel_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: input_ts_rel_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: input_ts_rel_offset_ns
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: input_ts_rel_offset_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: input_ts_rel_offset_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: input_ts_offset_fns
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: input_ts_offset_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: input_ts_offset_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: input_period_ns
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: input_period_fns
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: input_period_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: input_period_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: input_drift_num
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: input_drift_denom
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: input_drift_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: input_drift_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: ptp_td_sdo
+    type: wire
+    width: ''
+  - direction: out
+    name: output_pps
+    type: wire
+    width: ''
+  - direction: out
+    name: output_pps_str
+    type: wire
+    width: ''
+  ptp_td_rel2tod:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: ptp_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: ptp_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: ptp_td_sdi
+    type: wire
+    width: ''
+  - direction: in
+    name: input_ts_rel
+    type: wire
+    width: '[TS_REL_W-1:0]'
+  - direction: in
+    name: input_ts_tag
+    type: wire
+    width: '[TS_TAG_W-1:0]'
+  - direction: in
+    name: input_ts_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: output_ts_tod
+    type: wire
+    width: '[TS_TOD_W-1:0]'
+  - direction: out
+    name: output_ts_tag
+    type: wire
+    width: '[TS_TAG_W-1:0]'
+  - direction: out
+    name: output_ts_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: path
+    type: wire
+    width: ''
+  ptp_ts_extract:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_tuser
+    type: wire
+    width: '[USER_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_ts
+    type: wire
+    width: '[TS_WIDTH-1:0]'
+  - direction: out
+    name: m_axis_ts_valid
+    type: wire
+    width: ''
+  ssio_ddr_in_diff:
+  - direction: in
+    name: style
+    type: wire
+    width: ''
+  - direction: in
+    name: input_clk_p
+    type: wire
+    width: ''
+  - direction: in
+    name: input_clk_n
+    type: wire
+    width: ''
+  - direction: in
+    name: input_d_p
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: in
+    name: input_d_n
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: out
+    name: output_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: output_q1
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: out
+    name: output_q2
+    type: wire
+    width: '[WIDTH-1:0]'
+  ssio_ddr_out_diff:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: clk90
+    type: wire
+    width: ''
+  - direction: in
+    name: input_d1
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: in
+    name: input_d2
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: out
+    name: output_clk_p
+    type: wire
+    width: ''
+  - direction: out
+    name: output_clk_n
+    type: wire
+    width: ''
+  - direction: out
+    name: output_q_p
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: out
+    name: output_q_n
+    type: wire
+    width: '[WIDTH-1:0]'
+  ssio_sdr_in_diff:
+  - direction: in
+    name: style
+    type: wire
+    width: ''
+  - direction: in
+    name: input_clk_p
+    type: wire
+    width: ''
+  - direction: in
+    name: input_clk_n
+    type: wire
+    width: ''
+  - direction: in
+    name: input_d_p
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: in
+    name: input_d_n
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: out
+    name: output_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: output_q
+    type: wire
+    width: '[WIDTH-1:0]'
+  ssio_sdr_out_diff:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: input_d
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: out
+    name: output_clk_p
+    type: wire
+    width: ''
+  - direction: out
+    name: output_clk_n
+    type: wire
+    width: ''
+  - direction: out
+    name: output_q_p
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: out
+    name: output_q_n
+    type: wire
+    width: '[WIDTH-1:0]'
+  udp_arb_mux:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_hdr_valid
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: out
+    name: s_udp_hdr_ready
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_eth_dest_mac
+    type: wire
+    width: '[S_COUNT*48-1:0]'
+  - direction: in
+    name: s_eth_src_mac
+    type: wire
+    width: '[S_COUNT*48-1:0]'
+  - direction: in
+    name: s_eth_type
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_version
+    type: wire
+    width: '[S_COUNT*4-1:0]'
+  - direction: in
+    name: s_ip_ihl
+    type: wire
+    width: '[S_COUNT*4-1:0]'
+  - direction: in
+    name: s_ip_dscp
+    type: wire
+    width: '[S_COUNT*6-1:0]'
+  - direction: in
+    name: s_ip_ecn
+    type: wire
+    width: '[S_COUNT*2-1:0]'
+  - direction: in
+    name: s_ip_length
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_identification
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_flags
+    type: wire
+    width: '[S_COUNT*3-1:0]'
+  - direction: in
+    name: s_ip_fragment_offset
+    type: wire
+    width: '[S_COUNT*13-1:0]'
+  - direction: in
+    name: s_ip_ttl
+    type: wire
+    width: '[S_COUNT*8-1:0]'
+  - direction: in
+    name: s_ip_protocol
+    type: wire
+    width: '[S_COUNT*8-1:0]'
+  - direction: in
+    name: s_ip_header_checksum
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_source_ip
+    type: wire
+    width: '[S_COUNT*32-1:0]'
+  - direction: in
+    name: s_ip_dest_ip
+    type: wire
+    width: '[S_COUNT*32-1:0]'
+  - direction: in
+    name: s_udp_source_port
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_udp_dest_port
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_udp_length
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_udp_checksum
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tdata
+    type: wire
+    width: '[S_COUNT*DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tkeep
+    type: wire
+    width: '[S_COUNT*KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tvalid
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: out
+    name: s_udp_payload_axis_tready
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tlast
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tid
+    type: wire
+    width: '[S_COUNT*ID_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tdest
+    type: wire
+    width: '[S_COUNT*DEST_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tuser
+    type: wire
+    width: '[S_COUNT*USER_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_udp_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_version
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_ip_ihl
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: m_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: m_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_identification
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_flags
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: m_ip_fragment_offset
+    type: wire
+    width: '[12:0]'
+  - direction: out
+    name: m_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_header_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_udp_source_port
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_dest_port
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_payload_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_udp_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tid
+    type: wire
+    width: '[ID_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tdest
+    type: wire
+    width: '[DEST_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tuser
+    type: wire
+    width: '[USER_WIDTH-1:0]'
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  udp_complete:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_hdr_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_eth_hdr_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_eth_payload_axis_tdata
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_eth_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_eth_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_eth_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_eth_payload_axis_tdata
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_eth_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_eth_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_hdr_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_ip_hdr_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: s_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: s_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_ip_payload_axis_tdata
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_ip_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_ip_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_ip_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_ip_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_ip_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_version
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_ip_ihl
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: m_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: m_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_identification
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_flags
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: m_ip_fragment_offset
+    type: wire
+    width: '[12:0]'
+  - direction: out
+    name: m_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_header_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_ip_payload_axis_tdata
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_ip_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_hdr_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_udp_hdr_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: s_udp_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: s_udp_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_udp_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_udp_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_udp_source_port
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_dest_port
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_length
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_payload_axis_tdata
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_udp_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_udp_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_udp_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_udp_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_udp_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_ip_version
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_udp_ip_ihl
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_udp_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: m_udp_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: m_udp_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_ip_identification
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_ip_flags
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: m_udp_ip_fragment_offset
+    type: wire
+    width: '[12:0]'
+  - direction: out
+    name: m_udp_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_udp_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_udp_ip_header_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_udp_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_udp_source_port
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_dest_port
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_payload_axis_tdata
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_udp_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_udp_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_rx_busy
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_tx_busy
+    type: wire
+    width: ''
+  - direction: out
+    name: udp_rx_busy
+    type: wire
+    width: ''
+  - direction: out
+    name: udp_tx_busy
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_rx_error_header_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_rx_error_payload_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_rx_error_invalid_header
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_rx_error_invalid_checksum
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_tx_error_payload_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_tx_error_arp_failed
+    type: wire
+    width: ''
+  - direction: out
+    name: udp_rx_error_header_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: udp_rx_error_payload_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: udp_tx_error_payload_early_termination
+    type: wire
+    width: ''
+  - direction: in
+    name: local_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: local_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: gateway_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: subnet_mask
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: clear_arp_cache
+    type: wire
+    width: ''
+  - direction: in
+    name: classifier
+    type: wire
+    width: ''
+  - direction: out
+    name: assign
+    type: wire
+    width: ''
+  - direction: out
+    name: arbiter
+    type: wire
+    width: ''
+  udp_complete_64:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_hdr_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_eth_hdr_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_eth_payload_axis_tdata
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: s_eth_payload_axis_tkeep
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_eth_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_eth_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_eth_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_eth_payload_axis_tdata
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: m_eth_payload_axis_tkeep
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_eth_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_eth_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_hdr_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_ip_hdr_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: s_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: s_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_ip_payload_axis_tdata
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: s_ip_payload_axis_tkeep
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_ip_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_ip_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_ip_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_ip_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_ip_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_ip_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_version
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_ip_ihl
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: m_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: m_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_identification
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_flags
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: m_ip_fragment_offset
+    type: wire
+    width: '[12:0]'
+  - direction: out
+    name: m_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_header_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_ip_payload_axis_tdata
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: m_ip_payload_axis_tkeep
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_ip_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_ip_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_hdr_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_udp_hdr_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: s_udp_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: s_udp_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_udp_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_udp_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_udp_source_port
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_dest_port
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_length
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_payload_axis_tdata
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: s_udp_payload_axis_tkeep
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_udp_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_udp_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_udp_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_udp_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_udp_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_ip_version
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_udp_ip_ihl
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_udp_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: m_udp_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: m_udp_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_ip_identification
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_ip_flags
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: m_udp_ip_fragment_offset
+    type: wire
+    width: '[12:0]'
+  - direction: out
+    name: m_udp_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_udp_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_udp_ip_header_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_udp_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_udp_source_port
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_dest_port
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_payload_axis_tdata
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: m_udp_payload_axis_tkeep
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_udp_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_udp_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tuser
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_rx_busy
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_tx_busy
+    type: wire
+    width: ''
+  - direction: out
+    name: udp_rx_busy
+    type: wire
+    width: ''
+  - direction: out
+    name: udp_tx_busy
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_rx_error_header_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_rx_error_payload_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_rx_error_invalid_header
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_rx_error_invalid_checksum
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_tx_error_payload_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: ip_tx_error_arp_failed
+    type: wire
+    width: ''
+  - direction: out
+    name: udp_rx_error_header_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: udp_rx_error_payload_early_termination
+    type: wire
+    width: ''
+  - direction: out
+    name: udp_tx_error_payload_early_termination
+    type: wire
+    width: ''
+  - direction: in
+    name: local_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: local_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: gateway_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: subnet_mask
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: clear_arp_cache
+    type: wire
+    width: ''
+  - direction: in
+    name: classifier
+    type: wire
+    width: ''
+  - direction: out
+    name: assign
+    type: wire
+    width: ''
+  - direction: out
+    name: arbiter
+    type: wire
+    width: ''
+  udp_demux:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_hdr_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_udp_hdr_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: in
+    name: s_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_ip_version
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: s_ip_ihl
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: s_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: s_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: s_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_ip_identification
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_ip_flags
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: s_ip_fragment_offset
+    type: wire
+    width: '[12:0]'
+  - direction: in
+    name: s_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: s_ip_header_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_udp_source_port
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_dest_port
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_length
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_udp_payload_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_udp_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_payload_axis_tid
+    type: wire
+    width: '[ID_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tdest
+    type: wire
+    width: '[DEST_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tuser
+    type: wire
+    width: '[USER_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_hdr_valid
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: in
+    name: m_udp_hdr_ready
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: out
+    name: m_eth_dest_mac
+    type: wire
+    width: '[M_COUNT*48-1:0]'
+  - direction: out
+    name: m_eth_src_mac
+    type: wire
+    width: '[M_COUNT*48-1:0]'
+  - direction: out
+    name: m_eth_type
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_ip_version
+    type: wire
+    width: '[M_COUNT*4-1:0]'
+  - direction: out
+    name: m_ip_ihl
+    type: wire
+    width: '[M_COUNT*4-1:0]'
+  - direction: out
+    name: m_ip_dscp
+    type: wire
+    width: '[M_COUNT*6-1:0]'
+  - direction: out
+    name: m_ip_ecn
+    type: wire
+    width: '[M_COUNT*2-1:0]'
+  - direction: out
+    name: m_ip_length
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_ip_identification
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_ip_flags
+    type: wire
+    width: '[M_COUNT*3-1:0]'
+  - direction: out
+    name: m_ip_fragment_offset
+    type: wire
+    width: '[M_COUNT*13-1:0]'
+  - direction: out
+    name: m_ip_ttl
+    type: wire
+    width: '[M_COUNT*8-1:0]'
+  - direction: out
+    name: m_ip_protocol
+    type: wire
+    width: '[M_COUNT*8-1:0]'
+  - direction: out
+    name: m_ip_header_checksum
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_ip_source_ip
+    type: wire
+    width: '[M_COUNT*32-1:0]'
+  - direction: out
+    name: m_ip_dest_ip
+    type: wire
+    width: '[M_COUNT*32-1:0]'
+  - direction: out
+    name: m_udp_source_port
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_udp_dest_port
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_udp_length
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_udp_checksum
+    type: wire
+    width: '[M_COUNT*16-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tdata
+    type: wire
+    width: '[M_COUNT*DATA_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tkeep
+    type: wire
+    width: '[M_COUNT*KEEP_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tvalid
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: in
+    name: m_udp_payload_axis_tready
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tlast
+    type: wire
+    width: '[M_COUNT-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tid
+    type: wire
+    width: '[M_COUNT*ID_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tdest
+    type: wire
+    width: '[M_COUNT*DEST_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tuser
+    type: wire
+    width: '[M_COUNT*USER_WIDTH-1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: drop
+    type: wire
+    width: ''
+  - direction: in
+    name: select
+    type: wire
+    width: '[$clog2(M_COUNT)-1:0]'
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  udp_mux:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: s_udp_hdr_valid
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: out
+    name: s_udp_hdr_ready
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_eth_dest_mac
+    type: wire
+    width: '[S_COUNT*48-1:0]'
+  - direction: in
+    name: s_eth_src_mac
+    type: wire
+    width: '[S_COUNT*48-1:0]'
+  - direction: in
+    name: s_eth_type
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_version
+    type: wire
+    width: '[S_COUNT*4-1:0]'
+  - direction: in
+    name: s_ip_ihl
+    type: wire
+    width: '[S_COUNT*4-1:0]'
+  - direction: in
+    name: s_ip_dscp
+    type: wire
+    width: '[S_COUNT*6-1:0]'
+  - direction: in
+    name: s_ip_ecn
+    type: wire
+    width: '[S_COUNT*2-1:0]'
+  - direction: in
+    name: s_ip_length
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_identification
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_flags
+    type: wire
+    width: '[S_COUNT*3-1:0]'
+  - direction: in
+    name: s_ip_fragment_offset
+    type: wire
+    width: '[S_COUNT*13-1:0]'
+  - direction: in
+    name: s_ip_ttl
+    type: wire
+    width: '[S_COUNT*8-1:0]'
+  - direction: in
+    name: s_ip_protocol
+    type: wire
+    width: '[S_COUNT*8-1:0]'
+  - direction: in
+    name: s_ip_header_checksum
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_ip_source_ip
+    type: wire
+    width: '[S_COUNT*32-1:0]'
+  - direction: in
+    name: s_ip_dest_ip
+    type: wire
+    width: '[S_COUNT*32-1:0]'
+  - direction: in
+    name: s_udp_source_port
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_udp_dest_port
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_udp_length
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_udp_checksum
+    type: wire
+    width: '[S_COUNT*16-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tdata
+    type: wire
+    width: '[S_COUNT*DATA_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tkeep
+    type: wire
+    width: '[S_COUNT*KEEP_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tvalid
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: out
+    name: s_udp_payload_axis_tready
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tlast
+    type: wire
+    width: '[S_COUNT-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tid
+    type: wire
+    width: '[S_COUNT*ID_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tdest
+    type: wire
+    width: '[S_COUNT*DEST_WIDTH-1:0]'
+  - direction: in
+    name: s_udp_payload_axis_tuser
+    type: wire
+    width: '[S_COUNT*USER_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_hdr_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_udp_hdr_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_eth_dest_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_src_mac
+    type: wire
+    width: '[47:0]'
+  - direction: out
+    name: m_eth_type
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_version
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_ip_ihl
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_ip_dscp
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: m_ip_ecn
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: m_ip_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_identification
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_flags
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: m_ip_fragment_offset
+    type: wire
+    width: '[12:0]'
+  - direction: out
+    name: m_ip_ttl
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_protocol
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_ip_header_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_ip_source_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_ip_dest_ip
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_udp_source_port
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_dest_port
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_length
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_checksum
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: m_udp_payload_axis_tdata
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tkeep
+    type: wire
+    width: '[KEEP_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_udp_payload_axis_tready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tid
+    type: wire
+    width: '[ID_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tdest
+    type: wire
+    width: '[DEST_WIDTH-1:0]'
+  - direction: out
+    name: m_udp_payload_axis_tuser
+    type: wire
+    width: '[USER_WIDTH-1:0]'
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: select
+    type: wire
+    width: '[$clog2(S_COUNT)-1:0]'
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
+  - direction: out
+    name: m_udp_payload_axis_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  xgmii_deinterleave:
+  - direction: in
+    name: input_xgmii_dc
+    type: wire
+    width: '[72:0]'
+  - direction: out
+    name: output_xgmii_d
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: output_xgmii_c
+    type: wire
+    width: '[7:0]'
+  xgmii_interleave:
+  - direction: in
+    name: input_xgmii_d
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: input_xgmii_c
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: output_xgmii_dc
+    type: wire
+    width: '[72:0]'
 total_entities: 98
 desc_source: verdict
 status: deprecated-upstream

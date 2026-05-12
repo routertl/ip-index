@@ -30,6 +30,104 @@ tags:
 role: top
 components:
 - mdc_mdio
+top_ports:
+  util_gmii_to_rgmii:
+  - direction: in
+    name: clk_20m
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_25m
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_125m
+    type: wire
+    width: ''
+  - direction: in
+    name: idelayctrl_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: out
+    name: rgmii_td
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: rgmii_tx_ctl
+    type: wire
+    width: ''
+  - direction: out
+    name: rgmii_txc
+    type: wire
+    width: ''
+  - direction: in
+    name: rgmii_rd
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: rgmii_rx_ctl
+    type: wire
+    width: ''
+  - direction: in
+    name: rgmii_rxc
+    type: wire
+    width: ''
+  - direction: in
+    name: mdio_mdc
+    type: wire
+    width: ''
+  - direction: in
+    name: mdio_in_w
+    type: wire
+    width: ''
+  - direction: in
+    name: mdio_in_r
+    type: wire
+    width: ''
+  - direction: in
+    name: gmii_txd
+    type: wire
+    width: '[ 7:0]'
+  - direction: in
+    name: gmii_tx_en
+    type: wire
+    width: ''
+  - direction: in
+    name: gmii_tx_er
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_tx_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_crs
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_col
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_rxd
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: gmii_rx_dv
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_rx_er
+    type: wire
+    width: ''
+  - direction: out
+    name: gmii_rx_clk
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

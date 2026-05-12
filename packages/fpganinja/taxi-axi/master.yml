@@ -186,5 +186,183 @@ components:
 - taxi_axil_register_wr
 - taxi_axil_tie_rd
 - taxi_axil_tie_wr
+top_ports:
+  taxi_apb_adapter:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: bus
+    type: wire
+    width: ''
+  taxi_apb_axil_adapter:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: bus
+    type: wire
+    width: ''
+  taxi_apb_dp_ram:
+  - direction: out
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_apb_interconnect:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: dummy
+    type: wire
+    width: '[31:0]'
+  taxi_apb_tie:
+  - direction: out
+    name: ADDR_W
+    type: wire
+    width: ''
+  taxi_axi_adapter:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axi_axil_adapter:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axi_cdma:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  taxi_axi_crossbar:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axi_crossbar_1s:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axi_dma:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axi_dp_ram:
+  - direction: out
+    name: port
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axi_fifo:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axi_interconnect:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axi_interconnect_1s:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axi_ram:
+  - direction: out
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axi_register:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axil_adapter:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axil_apb_adapter:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: bus
+    type: wire
+    width: ''
+  taxi_axil_axi_adapter:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axil_crossbar:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axil_dp_ram:
+  - direction: out
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axil_interconnect:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axil_ram:
+  - direction: out
+    name: parameter
+    type: wire
+    width: ''
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_axil_register:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 73
 desc_source: curator

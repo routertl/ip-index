@@ -22,3 +22,46 @@ tags:
 - stream
 - throttle
 role: top
+top_ports:
+  stream_throttle:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: req_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: req_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: req_ready_i
+    type: wire
+    width: ''
+  - direction: out
+    name: req_ready_o
+    type: wire
+    width: ''
+  - direction: in
+    name: rsp_valid_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rsp_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: credit_t
+    type: wire
+    width: ''
+  - direction: in
+    name: is
+    type: wire
+    width: ''
+desc_source: preserved

@@ -16,7 +16,7 @@ source:
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
   language: vhdl-2008
-  library: olo
+  library: work
   files:
   - src/axi/vhdl/olo_axi_pkg_protocol.vhd
   - src/base/vhdl/olo_base_pkg_array.vhd
@@ -51,3 +51,92 @@ components:
 - olo_fix_resize
 - olo_fix_round
 - olo_fix_saturate
+top_ports:
+  olo_axi_lite_slave:
+  - direction: in
+    name: Rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_AxiLite_ArValid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_AxiLite_ArReady
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_AxiLite_AwValid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_AxiLite_AwReady
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_AxiLite_WStrb
+    type: std_logic_vector((AxiDataWidth_g/8) - 1 downto 0)
+    width: ''
+  - direction: in
+    name: S_AxiLite_WValid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_AxiLite_WReady
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_AxiLite_BValid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_AxiLite_BReady
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_AxiLite_RResp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: S_AxiLite_RValid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_AxiLite_RReady
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Rb_Wr
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Rb_ByteEna
+    type: std_logic_vector((AxiDataWidth_g/8) - 1 downto 0)
+    width: ''
+  - direction: out
+    name: Rb_WrData
+    type: std_logic_vector
+    width: AxiDataWidth_g - 1 downto 0
+  - direction: out
+    name: Rb_Rd
+    type: std_logic
+    width: ''
+  - direction: in
+    name: Rb_RdData
+    type: std_logic_vector
+    width: AxiDataWidth_g - 1 downto 0
+  - direction: in
+    name: Rb_RdValid
+    type: std_logic
+    width: ''
+desc_source: header
+external_uses:
+- library: work
+  package: en_cl_fix_pkg
+- library: work
+  package: en_cl_fix_private_pkg
+provides_packages:
+- olo_axi_pkg_protocol
+- olo_base_pkg_array
+- olo_base_pkg_logic
+- olo_base_pkg_math

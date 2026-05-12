@@ -15,7 +15,7 @@ source:
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
   language: vhdl-2008
-  library: olo
+  library: work
   files:
   - src/base/vhdl/olo_base_pkg_array.vhd
   - src/base/vhdl/olo_base_pkg_math.vhd
@@ -52,3 +52,40 @@ components:
 - olo_fix_resize
 - olo_fix_round
 - olo_fix_saturate
+top_ports:
+  olo_fix_cordic_rot:
+  - direction: in
+    name: Rst
+    type: std_logic
+    width: ''
+  - direction: out
+    name: In_Ready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: In_Mag
+    type: std_logic_vector(fixFmtWidthFromString(InMagFmt_g)-1 downto 0)
+    width: ''
+  - direction: in
+    name: In_Ang
+    type: std_logic_vector(fixFmtWidthFromString(InAngFmt_g)-1 downto 0)
+    width: ''
+  - direction: out
+    name: Out_I
+    type: std_logic_vector(fixFmtWidthFromString(OutFmt_g)-1 downto 0)
+    width: ''
+  - direction: out
+    name: Out_Q
+    type: "std_logic_vector(fixFmtWidthFromString(OutFmt_g)-1 downto 0)\n    )"
+    width: ''
+desc_source: header
+external_uses:
+- library: work
+  package: en_cl_fix_pkg
+- library: work
+  package: en_cl_fix_private_pkg
+provides_packages:
+- olo_base_pkg_array
+- olo_base_pkg_math
+- olo_base_pkg_string
+- olo_fix_pkg

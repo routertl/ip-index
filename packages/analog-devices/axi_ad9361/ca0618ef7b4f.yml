@@ -243,6 +243,348 @@ components:
 - util_cpack2_impl
 - util_dacfifo_bypass
 - util_upack2_impl
+top_ports:
+  axi_ad9361:
+  - direction: in
+    name: rx_clk_in_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_clk_in_n
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_frame_in_p
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_frame_in_n
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_data_in_p
+    type: wire
+    width: '[ 5:0]'
+  - direction: in
+    name: rx_data_in_n
+    type: wire
+    width: '[ 5:0]'
+  - direction: in
+    name: rx_clk_in
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_frame_in
+    type: wire
+    width: ''
+  - direction: in
+    name: rx_data_in
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: tx_clk_out_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_clk_out_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_frame_out_p
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_frame_out_n
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_data_out_p
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: tx_data_out_n
+    type: wire
+    width: '[ 5:0]'
+  - direction: out
+    name: tx_clk_out
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_frame_out
+    type: wire
+    width: ''
+  - direction: out
+    name: tx_data_out
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: out
+    name: txnrx
+    type: wire
+    width: ''
+  - direction: in
+    name: dac_sync_in
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_sync_out
+    type: wire
+    width: ''
+  - direction: in
+    name: tdd_sync
+    type: wire
+    width: ''
+  - direction: out
+    name: tdd_sync_cntr
+    type: wire
+    width: ''
+  - direction: in
+    name: gps_pps
+    type: wire
+    width: ''
+  - direction: out
+    name: gps_pps_irq
+    type: wire
+    width: ''
+  - direction: in
+    name: delay_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: l_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_enable_i0
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_valid_i0
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_data_i0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: adc_enable_q0
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_valid_q0
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_data_q0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: adc_enable_i1
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_valid_i1
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_data_i1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: adc_enable_q1
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_valid_q1
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_data_q1
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: adc_dovf
+    type: wire
+    width: ''
+  - direction: out
+    name: adc_r1_mode
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_enable_i0
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_valid_i0
+    type: wire
+    width: ''
+  - direction: in
+    name: dac_data_i0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: dac_enable_q0
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_valid_q0
+    type: wire
+    width: ''
+  - direction: in
+    name: dac_data_q0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: dac_enable_i1
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_valid_i1
+    type: wire
+    width: ''
+  - direction: in
+    name: dac_data_i1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: dac_enable_q1
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_valid_q1
+    type: wire
+    width: ''
+  - direction: in
+    name: dac_data_q1
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: dac_dunf
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_r1_mode
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_aclk
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_aresetn
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_awvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_awaddr
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_axi_awprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: s_axi_awready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_wvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_wdata
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_axi_wstrb
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: s_axi_wready
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_bvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_bresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: s_axi_bready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_arvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axi_araddr
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s_axi_arprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: s_axi_arready
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_rvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axi_rdata
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: s_axi_rresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: s_axi_rready
+    type: wire
+    width: ''
+  - direction: in
+    name: up_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: up_txnrx
+    type: wire
+    width: ''
+  - direction: in
+    name: up_dac_gpio_in
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: up_dac_gpio_out
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: up_adc_gpio_in
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: up_adc_gpio_out
+    type: wire
+    width: '[31:0]'
 desc_source: ports
 external_uses:
 - library: work

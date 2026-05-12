@@ -30,3 +30,6 @@ tags:
 - domain
 - reset
 role: component
+desc_source: header
+provides_packages:
+- cdc_reset_ctrlr_pkg

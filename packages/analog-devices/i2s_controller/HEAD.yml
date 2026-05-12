@@ -1,8 +1,8 @@
 name: i2s_controller
 namespace: analog-devices
 version: HEAD
-commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
-published_at: '2026-04-15T16:15:19+03:00'
+commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
+published_at: '2026-05-11T12:02:04+03:00'
 description: JESD204 controller with configurable parameters
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
@@ -11,7 +11,7 @@ source:
   url: https://github.com/analogdevicesinc/hdl.git
   tag: main
   ip_yml_path: .
-  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+  resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 routertl_compat:
   language: vhdl-2008
   library: work
@@ -21,3 +21,39 @@ tags:
 - controller
 - i2s
 role: top
+top_ports:
+  i2s_controller:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_stb
+    type: std_logic
+    width: ''
+  - direction: in
+    name: lrclk_div_rate
+    type: "natural range 0 to 255\n\t)"
+    width: ''
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

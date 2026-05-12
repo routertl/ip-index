@@ -125,6 +125,121 @@ components:
 - uart_min
 - uart_rx
 - uart_tx
+top_ports:
+  Decoder_2to4:
+  - direction: in
+    name: A
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: B
+    type: wire
+    width: '[3:0]'
+  PLL_100MHz_to_50MHz_100MHz:
+  - direction: in
+    name: CLKIN1_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: RST_IN
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT0_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT1_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: LOCKED_OUT
+    type: wire
+    width: ''
+  PLL_100MHz_to_50MHz_100MHz_66MHz:
+  - direction: in
+    name: CLKIN1_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: RST_IN
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT0_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT1_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT2_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: LOCKED_OUT
+    type: wire
+    width: ''
+  PLL_100MHz_to_66MHz:
+  - direction: in
+    name: CLKIN1_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: RST_IN
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT0_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: LOCKED_OUT
+    type: wire
+    width: ''
+  PLL_100MHz_to_66MHz_133MHz:
+  - direction: in
+    name: CLKIN1_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: RST_IN
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT0_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT1_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: LOCKED_OUT
+    type: wire
+    width: ''
+  PLL_100MHz_to_66MHz_133MHz_266MHz:
+  - direction: in
+    name: CLKIN1_IN
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT0_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT1_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: CLKOUT2_OUT
+    type: wire
+    width: ''
+  - direction: out
+    name: LOCKED_OUT
+    type: wire
+    width: ''
 total_entities: 45
 desc_source: verdict
 health_tier: bronze

@@ -27,5 +27,144 @@ components:
 - aximwr2wbsp
 - skidbuffer
 - wbm2axisp
+top_ports:
+  axilgpio:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: module
+    type: wire
+    width: ''
+  - direction: out
+    name: bits
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: bit
+    type: wire
+    width: ''
+  - direction: out
+    name: interrupt
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_ACLK
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_ARESETN
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_AWVALID
+    type: wire
+    width: ''
+  - direction: out
+    name: S_AXI_AWREADY
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_AWADDR
+    type: wire
+    width: '[C_AXI_ADDR_WIDTH-1:0]'
+  - direction: in
+    name: S_AXI_AWPROT
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: S_AXI_WVALID
+    type: wire
+    width: ''
+  - direction: out
+    name: S_AXI_WREADY
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_WDATA
+    type: wire
+    width: '[C_AXI_DATA_WIDTH-1:0]'
+  - direction: in
+    name: S_AXI_WSTRB
+    type: wire
+    width: '[C_AXI_DATA_WIDTH/8-1:0]'
+  - direction: out
+    name: S_AXI_BVALID
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_BREADY
+    type: wire
+    width: ''
+  - direction: out
+    name: S_AXI_BRESP
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: S_AXI_ARVALID
+    type: wire
+    width: ''
+  - direction: out
+    name: S_AXI_ARREADY
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_ARADDR
+    type: wire
+    width: '[C_AXI_ADDR_WIDTH-1:0]'
+  - direction: in
+    name: S_AXI_ARPROT
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: S_AXI_RVALID
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_RREADY
+    type: wire
+    width: ''
+  - direction: out
+    name: S_AXI_RDATA
+    type: wire
+    width: '[C_AXI_DATA_WIDTH-1:0]'
+  - direction: out
+    name: S_AXI_RRESP
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: o_gpio
+    type: wire
+    width: '[NOUT-1:0]'
+  - direction: in
+    name: i_gpio
+    type: wire
+    width: '[((NIN>0) ? (NIN-1):0):0]'
+  - direction: out
+    name: o_int
+    type: wire
+    width: ''
+  - direction: in
+    name: registers
+    type: wire
+    width: ''
+  - direction: in
+    name: prior_data
+    type: wire
+    width: '[C_AXI_DATA_WIDTH-1:0]'
+  - direction: in
+    name: new_data
+    type: wire
+    width: '[C_AXI_DATA_WIDTH-1:0]'
+  - direction: in
+    name: wstrb
+    type: wire
+    width: '[C_AXI_DATA_WIDTH/8-1:0]'
+desc_source: ports
 health_tier: bronze
 last_verified_at: '2026-05-05'

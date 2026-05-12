@@ -102,7 +102,371 @@ components:
 - t8048_notri
 - t8243_async_notri
 - t8243_core
+top_ports:
+  LPM_RAM_DQ:
+  - direction: in
+    name: DATA
+    type: std_logic_vector
+    width: LPM_WIDTH-1 downto 0
+  - direction: in
+    name: ADDRESS
+    type: std_logic_vector
+    width: LPM_WIDTHAD-1 downto 0
+  - direction: in
+    name: INCLOCK
+    type: std_logic
+    width: ''
+  - direction: in
+    name: OUTCLOCK
+    type: std_logic
+    width: ''
+  - direction: in
+    name: WE
+    type: std_logic
+    width: ''
+  - direction: out
+    name: Q
+    type: std_logic_vector(LPM_WIDTH-1 downto 0))
+    width: ''
+  - direction: in
+    name: pos
+    type: "integer) is\n\tsubtype nstring is string(1 to pos)"
+    width: ''
+  LPM_ROM:
+  - direction: in
+    name: ADDRESS
+    type: STD_LOGIC_VECTOR
+    width: LPM_WIDTHAD-1 downto 0
+  - direction: in
+    name: INCLOCK
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: OUTCLOCK
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: MEMENAB
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: Q
+    type: STD_LOGIC_VECTOR(LPM_WIDTH-1 downto 0))
+    width: ''
+  - direction: in
+    name: pos
+    type: "integer) is\n\tsubtype nstring is string(1 to pos)"
+    width: ''
+  t49_rom:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rom_addr_i
+    type: std_logic_vector
+    width: 10 downto 0
+  - direction: out
+    name: rom_data_o
+    type: std_logic_vector
+    width: 7 downto 0
+  t8039:
+  - direction: in
+    name: xtal_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_n_i
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: t0_b
+    type: std_logic
+    width: ''
+  - direction: in
+    name: int_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ea_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rd_n_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: psen_n_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wr_n_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ale_o
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: db_b
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: t1_i
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: p2_b
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: inout
+    name: p1_b
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: prog_n_o
+    type: "std_logic\n  )"
+    width: ''
+  - direction: in
+    name: low_imp
+    type: "std_logic) return std_logic_vector is\n      variable result_v : std_logic_vector(port_value'range)"
+    width: ''
+  t8048:
+  - direction: in
+    name: xtal_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_n_i
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: t0_b
+    type: std_logic
+    width: ''
+  - direction: in
+    name: int_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ea_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rd_n_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: psen_n_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wr_n_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ale_o
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: db_b
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: t1_i
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: p2_b
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: inout
+    name: p1_b
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: prog_n_o
+    type: "std_logic\n  )"
+    width: ''
+  - direction: in
+    name: low_imp
+    type: "std_logic) return std_logic_vector is\n      variable result_v : std_logic_vector(port_value'range)"
+    width: ''
+  t8050_wb:
+  - direction: in
+    name: reset_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: t0_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: t0_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: t0_dir_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: int_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ea_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rd_n_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: psen_n_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wr_n_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ale_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: t1_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: p2_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: p2_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: p2l_low_imp_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: p2h_low_imp_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: p1_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: p1_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: p1_low_imp_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: prog_n_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_adr_o
+    type: std_logic_vector
+    width: 23 downto 0
+  - direction: in
+    name: wb_ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: "std_logic_vector( 7 downto 0)\n\n  )"
+    width: ''
+  t8243:
+  - direction: in
+    name: prog_n_i
+    type: std_logic
+    width: ''
+  t8243_sync_notri:
+  - direction: in
+    name: clk_en_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: prog_n_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: p2_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: p2_en_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: p4_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: p4_en_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: p5_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: p5_en_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: p6_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: p6_en_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: p7_o
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: p7_en_o
+    type: "std_logic\n  )"
+    width: ''
 total_entities: 29
 desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+external_uses:
+- library: work
+  package: LPM_COMPONENTS
+provides_packages:
+- t48_alu_pack
+- t48_comp_pack
+- t48_cond_branch_pack
+- t48_core_comp_pack
+- t48_decoder_pack
+- t48_dmem_ctrl_pack
+- t48_pack
+- t48_pmem_ctrl_pack
+- t48_system_comp_pack
+- t48_tb_pack
+- t8243_comp_pack

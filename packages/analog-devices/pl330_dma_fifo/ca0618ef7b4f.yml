@@ -27,6 +27,72 @@ tags:
 - pl330
 - queue
 role: top
+top_ports:
+  pl330_dma_fifo:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: resetn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: fifo_reset
+    type: std_logic
+    width: ''
+  - direction: out
+    name: in_ack
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_data
+    type: std_logic_vector
+    width: FIFO_DWIDTH-1 downto 0
+  - direction: in
+    name: out_ack
+    type: std_logic
+    width: ''
+  - direction: out
+    name: out_data
+    type: std_logic_vector
+    width: FIFO_DWIDTH-1 downto 0
+  - direction: in
+    name: dresetn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: davalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: daready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: datype
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: drvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: drready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: drtype
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: drlast
+    type: std_logic
+    width: ''
+  - direction: out
+    name: DBG
+    type: std_logic_vector
+    width: 7 downto 0
 desc_source: ports
 external_uses:
 - library: work

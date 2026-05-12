@@ -183,6 +183,28 @@ components:
 - util_cpack2_impl
 - util_dacfifo_bypass
 - util_upack2_impl
+top_ports:
+  ad9467_spi:
+  - direction: in
+    name: spi_csn
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: spi_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: spi_mosi
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_miso
+    type: wire
+    width: ''
+  - direction: inout
+    name: spi_sdio
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

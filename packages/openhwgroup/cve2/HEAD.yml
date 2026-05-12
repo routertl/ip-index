@@ -85,4 +85,211 @@ components:
 - cve2_top
 - cve2_tracer
 - cve2_wb
+top_ports:
+  cve2_branch_predict:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: fetch_rdata_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: fetch_pc_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: fetch_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: predict_branch_taken_o
+    type: wire
+    width: ''
+  - direction: out
+    name: predict_branch_pc_o
+    type: wire
+    width: '[31:0]'
+  cve2_top_tracing:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: test_en_i
+    type: wire
+    width: ''
+  - direction: in
+    name: prim_ram_1p_pkg
+    type: wire
+    width: ''
+  - direction: in
+    name: hart_id_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: boot_addr_i
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: instr_req_o
+    type: wire
+    width: ''
+  - direction: in
+    name: instr_gnt_i
+    type: wire
+    width: ''
+  - direction: in
+    name: instr_rvalid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: instr_addr_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: instr_rdata_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: instr_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: data_req_o
+    type: wire
+    width: ''
+  - direction: in
+    name: data_gnt_i
+    type: wire
+    width: ''
+  - direction: in
+    name: data_rvalid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: data_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: data_be_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: data_addr_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: data_wdata_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: data_rdata_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: data_err_i
+    type: wire
+    width: ''
+  - direction: out
+    name: x_issue_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: x_issue_ready_i
+    type: wire
+    width: ''
+  - direction: out
+    name: x_issue_req_t
+    type: wire
+    width: ''
+  - direction: in
+    name: x_issue_resp_t
+    type: wire
+    width: ''
+  - direction: out
+    name: x_register_t
+    type: wire
+    width: ''
+  - direction: out
+    name: x_commit_valid_o
+    type: wire
+    width: ''
+  - direction: out
+    name: x_commit_t
+    type: wire
+    width: ''
+  - direction: in
+    name: x_result_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: x_result_ready_o
+    type: wire
+    width: ''
+  - direction: in
+    name: x_result_t
+    type: wire
+    width: ''
+  - direction: in
+    name: irq_software_i
+    type: wire
+    width: ''
+  - direction: in
+    name: irq_timer_i
+    type: wire
+    width: ''
+  - direction: in
+    name: irq_external_i
+    type: wire
+    width: ''
+  - direction: in
+    name: irq_fast_i
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: irq_nm_i
+    type: wire
+    width: ''
+  - direction: in
+    name: debug_req_i
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_halted_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dm_halt_addr_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: dm_exception_addr_i
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: crash_dump_t
+    type: wire
+    width: ''
+  - direction: in
+    name: fetch_enable_i
+    type: wire
+    width: ''
+  - direction: out
+    name: core_sleep_o
+    type: wire
+    width: ''
 total_entities: 24
+desc_source: readme
+provides_packages:
+- cve2_pkg
+- cve2_tracer_pkg

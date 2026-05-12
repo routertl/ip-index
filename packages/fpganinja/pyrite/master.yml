@@ -46,5 +46,34 @@ top_modules:
 - pyrite_pcie_us_vpd_qspi
 - pyrite_pcie_us_vsec_bpi
 - pyrite_pcie_us_vsec_qspi
+top_ports:
+  pyrite_pcie_us_vpd_bpi:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  pyrite_pcie_us_vpd_qspi:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  pyrite_pcie_us_vsec_bpi:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  pyrite_pcie_us_vsec_qspi:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 4
 desc_source: curator

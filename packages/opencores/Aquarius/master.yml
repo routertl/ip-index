@@ -68,6 +68,49 @@ components:
 - sasc_top
 - sys
 - uart
+top_ports:
+  rom:
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: in
+    name: CE
+    type: wire
+    width: ''
+  - direction: in
+    name: WE
+    type: wire
+    width: ''
+  - direction: in
+    name: SEL
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: ADR
+    type: wire
+    width: '[12:0]'
+  - direction: in
+    name: DATI
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DATO
+    type: wire
+    width: '[31:0]'
+  test:
+  - direction: in
+    name: port
+    type: wire
+    width: ''
+  - direction: in
+    name: signals
+    type: wire
+    width: ''
+  - direction: in
+    name: Pattern
+    type: wire
+    width: ''
 total_entities: 16
 desc_source: verdict
 health_tier: bronze

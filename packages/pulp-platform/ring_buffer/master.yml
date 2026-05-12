@@ -23,3 +23,58 @@ tags:
 - buffer
 - ring
 role: top
+top_ports:
+  ring_buffer:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: wvalid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wready_o
+    type: wire
+    width: ''
+  - direction: in
+    name: data_t
+    type: wire
+    width: ''
+  - direction: in
+    name: rvalid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: rready_o
+    type: wire
+    width: ''
+  - direction: in
+    name: addr_t
+    type: wire
+    width: ''
+  - direction: in
+    name: advance_i
+    type: wire
+    width: ''
+  - direction: in
+    name: step_t
+    type: wire
+    width: ''
+  - direction: out
+    name: full_o
+    type: wire
+    width: ''
+  - direction: out
+    name: empty_o
+    type: wire
+    width: ''
+  - direction: out
+    name: logic
+    type: wire
+    width: ''
+desc_source: header

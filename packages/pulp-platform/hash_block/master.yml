@@ -30,3 +30,78 @@ components:
 - counter
 - delta_counter
 - sub_per_hash
+top_ports:
+  hash_block:
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: look_data_i
+    type: wire
+    width: '[InpWidth-1:0]'
+  - direction: out
+    name: look_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: incr_data_i
+    type: wire
+    width: '[InpWidth-1:0]'
+  - direction: in
+    name: incr_valid_i
+    type: wire
+    width: ''
+  - direction: in
+    name: decr_data_i
+    type: wire
+    width: '[InpWidth-1:0]'
+  - direction: in
+    name: decr_valid_i
+    type: wire
+    width: ''
+  - direction: in
+    name: filter_clear_i
+    type: wire
+    width: ''
+  - direction: out
+    name: filter_usage_o
+    type: wire
+    width: '[HashWidth-1:0]'
+  - direction: out
+    name: filter_full_o
+    type: wire
+    width: ''
+  - direction: out
+    name: filter_empty_o
+    type: wire
+    width: ''
+  - direction: out
+    name: filter_error_o
+    type: wire
+    width: ''
+  - direction: out
+    name: Flags
+    type: wire
+    width: ''
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[InpWidth-1:0]'
+  - direction: out
+    name: indicator_o
+    type: wire
+    width: '[2**HashWidth-1:0]'
+  - direction: out
+    name: assignment
+    type: wire
+    width: ''
+desc_source: preserved

@@ -185,6 +185,28 @@ components:
 - util_cpack2_impl
 - util_dacfifo_bypass
 - util_upack2_impl
+top_ports:
+  trigger_generator:
+  - direction: in
+    name: sysref
+    type: wire
+    width: ''
+  - direction: in
+    name: device_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: gpio
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn
+    type: wire
+    width: ''
+  - direction: out
+    name: trigger
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

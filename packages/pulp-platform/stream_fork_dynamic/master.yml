@@ -26,3 +26,58 @@ tags:
 role: top
 components:
 - stream_fork
+top_ports:
+  stream_fork_dynamic:
+  - direction: in
+    name: stream
+    type: wire
+    width: ''
+  - direction: out
+    name: streams
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: handshake
+    type: wire
+    width: ''
+  - direction: in
+    name: sel_i
+    type: wire
+    width: '[N_OUP-1:0]'
+  - direction: in
+    name: sel_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: valid_o
+    type: wire
+    width: '[N_OUP-1:0]'
+  - direction: in
+    name: ready_i
+    type: wire
+    width: '[N_OUP-1:0]'
+  - direction: out
+    name: handshaking
+    type: wire
+    width: ''
+desc_source: preserved

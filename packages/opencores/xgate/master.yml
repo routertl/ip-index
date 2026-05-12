@@ -56,6 +56,2647 @@ components:
 - xgate_regs
 - xgate_wbm_bus
 - xgate_wbs_bus
+top_ports:
+  bc_2:
+  - direction: out
+    name: jtag_tdo
+    type: wire
+    width: ''
+  - direction: out
+    name: Data
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_tdo_en
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tdi
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tms
+    type: wire
+    width: ''
+  - direction: out
+    name: extest
+    type: wire
+    width: ''
+  - direction: out
+    name: clamp
+    type: wire
+    width: ''
+  - direction: out
+    name: highz
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_lo
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_hi
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bsd
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: capture
+    type: wire
+    width: ''
+  - direction: out
+    name: update_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: loading
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: bsd_so
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: user1_so
+    type: wire
+    width: ''
+  - direction: out
+    name: I
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: next_jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: update_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: ir_reg
+    type: wire
+    width: '[IR_BITS-1:0]'
+  - direction: out
+    name: ir_so
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass_so
+    type: wire
+    width: ''
+  - direction: out
+    name: id_so
+    type: wire
+    width: ''
+  - direction: in
+    name: idcode
+    type: wire
+    width: ''
+  - direction: in
+    name: usercode
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sample
+    type: wire
+    width: ''
+  - direction: out
+    name: udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_id
+    type: wire
+    width: ''
+  - direction: out
+    name: mux
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: capture_en
+    type: wire
+    width: ''
+  - direction: in
+    name: update_en
+    type: wire
+    width: ''
+  - direction: in
+    name: mode
+    type: wire
+    width: ''
+  - direction: in
+    name: si
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: control_out
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: output_data
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
+  bc_7:
+  - direction: out
+    name: jtag_tdo
+    type: wire
+    width: ''
+  - direction: out
+    name: Data
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_tdo_en
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tdi
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tms
+    type: wire
+    width: ''
+  - direction: out
+    name: extest
+    type: wire
+    width: ''
+  - direction: out
+    name: clamp
+    type: wire
+    width: ''
+  - direction: out
+    name: highz
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_lo
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_hi
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bsd
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: capture
+    type: wire
+    width: ''
+  - direction: out
+    name: update_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: loading
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: bsd_so
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: user1_so
+    type: wire
+    width: ''
+  - direction: out
+    name: I
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: next_jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: update_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: ir_reg
+    type: wire
+    width: '[IR_BITS-1:0]'
+  - direction: out
+    name: ir_so
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass_so
+    type: wire
+    width: ''
+  - direction: out
+    name: id_so
+    type: wire
+    width: ''
+  - direction: in
+    name: idcode
+    type: wire
+    width: ''
+  - direction: in
+    name: usercode
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sample
+    type: wire
+    width: ''
+  - direction: out
+    name: udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_id
+    type: wire
+    width: ''
+  - direction: out
+    name: mux
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: capture_en
+    type: wire
+    width: ''
+  - direction: in
+    name: update_en
+    type: wire
+    width: ''
+  - direction: in
+    name: mode
+    type: wire
+    width: ''
+  - direction: in
+    name: si
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: control_out
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: output_data
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
+  xgate_barrel_shift:
+  - direction: out
+    name: xgr1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr2
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr3
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr5
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr6
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr7
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgate_address
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: write_mem_data
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: mem_access
+    type: wire
+    width: ''
+  - direction: out
+    name: write_mem_strb_l
+    type: wire
+    width: ''
+  - direction: out
+    name: write_mem_strb_h
+    type: wire
+    width: ''
+  - direction: out
+    name: zero_flag
+    type: wire
+    width: ''
+  - direction: out
+    name: negative_flag
+    type: wire
+    width: ''
+  - direction: out
+    name: carry_flag
+    type: wire
+    width: ''
+  - direction: out
+    name: overflow_flag
+    type: wire
+    width: ''
+  - direction: out
+    name: xgchid
+    type: wire
+    width: '[ 6:0]'
+  - direction: out
+    name: xgif_status
+    type: wire
+    width: '[127:1]'
+  - direction: out
+    name: xg_sw_irq
+    type: wire
+    width: ''
+  - direction: out
+    name: host_semap
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: debug_active
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_ack
+    type: wire
+    width: ''
+  - direction: out
+    name: single_step
+    type: wire
+    width: ''
+  - direction: in
+    name: read_mem_data
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: perif_data
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: risc_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: async_rst_b
+    type: wire
+    width: ''
+  - direction: in
+    name: mem_req_ack
+    type: wire
+    width: ''
+  - direction: in
+    name: ss_mem_ack
+    type: wire
+    width: ''
+  - direction: in
+    name: xge
+    type: wire
+    width: ''
+  - direction: in
+    name: debug_mode_i
+    type: wire
+    width: ''
+  - direction: in
+    name: xgdbg_set
+    type: wire
+    width: ''
+  - direction: in
+    name: xgdbg_clear
+    type: wire
+    width: ''
+  - direction: in
+    name: xgss
+    type: wire
+    width: ''
+  - direction: in
+    name: xgvbr
+    type: wire
+    width: '[15:1]'
+  - direction: in
+    name: int_req
+    type: wire
+    width: '[ 6:0]'
+  - direction: in
+    name: xgie
+    type: wire
+    width: ''
+  - direction: in
+    name: brk_irq_ena
+    type: wire
+    width: ''
+  - direction: in
+    name: write_xgchid
+    type: wire
+    width: ''
+  - direction: in
+    name: write_xgsem
+    type: wire
+    width: ''
+  - direction: in
+    name: write_xgccr
+    type: wire
+    width: ''
+  - direction: in
+    name: write_xgpc
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr7
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr6
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr5
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr4
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr3
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr2
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr1
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: xgsweif_c
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_7
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_6
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_5
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_4
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_3
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_2
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_1
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_0
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_data
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: register
+    type: wire
+    width: ''
+  - direction: out
+    name: RAM
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_out
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: shift_rollover
+    type: wire
+    width: ''
+  - direction: in
+    name: shift_left
+    type: wire
+    width: ''
+  - direction: in
+    name: shift_ammount
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: shift_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: shift_filler
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: host_status
+    type: wire
+    width: ''
+  - direction: out
+    name: risc_status
+    type: wire
+    width: ''
+  - direction: in
+    name: risc_bit_sel
+    type: wire
+    width: ''
+  - direction: in
+    name: csem
+    type: wire
+    width: ''
+  - direction: in
+    name: ssem
+    type: wire
+    width: ''
+  - direction: in
+    name: host_wrt
+    type: wire
+    width: ''
+  - direction: in
+    name: host_bit_mask
+    type: wire
+    width: ''
+  - direction: in
+    name: host_bit
+    type: wire
+    width: ''
+  xgate_bypass_reg:
+  - direction: out
+    name: jtag_tdo
+    type: wire
+    width: ''
+  - direction: out
+    name: Data
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_tdo_en
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tdi
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tms
+    type: wire
+    width: ''
+  - direction: out
+    name: extest
+    type: wire
+    width: ''
+  - direction: out
+    name: clamp
+    type: wire
+    width: ''
+  - direction: out
+    name: highz
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_lo
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_hi
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bsd
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: capture
+    type: wire
+    width: ''
+  - direction: out
+    name: update_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: loading
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: bsd_so
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: user1_so
+    type: wire
+    width: ''
+  - direction: out
+    name: I
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: next_jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: update_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: ir_reg
+    type: wire
+    width: '[IR_BITS-1:0]'
+  - direction: out
+    name: ir_so
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass_so
+    type: wire
+    width: ''
+  - direction: out
+    name: id_so
+    type: wire
+    width: ''
+  - direction: in
+    name: idcode
+    type: wire
+    width: ''
+  - direction: in
+    name: usercode
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sample
+    type: wire
+    width: ''
+  - direction: out
+    name: udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_id
+    type: wire
+    width: ''
+  - direction: out
+    name: mux
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: capture_en
+    type: wire
+    width: ''
+  - direction: in
+    name: update_en
+    type: wire
+    width: ''
+  - direction: in
+    name: mode
+    type: wire
+    width: ''
+  - direction: in
+    name: si
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: control_out
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: output_data
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
+  xgate_id_reg:
+  - direction: out
+    name: jtag_tdo
+    type: wire
+    width: ''
+  - direction: out
+    name: Data
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_tdo_en
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tdi
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tms
+    type: wire
+    width: ''
+  - direction: out
+    name: extest
+    type: wire
+    width: ''
+  - direction: out
+    name: clamp
+    type: wire
+    width: ''
+  - direction: out
+    name: highz
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_lo
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_hi
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bsd
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: capture
+    type: wire
+    width: ''
+  - direction: out
+    name: update_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: loading
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: bsd_so
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: user1_so
+    type: wire
+    width: ''
+  - direction: out
+    name: I
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: next_jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: update_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: ir_reg
+    type: wire
+    width: '[IR_BITS-1:0]'
+  - direction: out
+    name: ir_so
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass_so
+    type: wire
+    width: ''
+  - direction: out
+    name: id_so
+    type: wire
+    width: ''
+  - direction: in
+    name: idcode
+    type: wire
+    width: ''
+  - direction: in
+    name: usercode
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sample
+    type: wire
+    width: ''
+  - direction: out
+    name: udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_id
+    type: wire
+    width: ''
+  - direction: out
+    name: mux
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: capture_en
+    type: wire
+    width: ''
+  - direction: in
+    name: update_en
+    type: wire
+    width: ''
+  - direction: in
+    name: mode
+    type: wire
+    width: ''
+  - direction: in
+    name: si
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: control_out
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: output_data
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
+  xgate_instr_decode:
+  - direction: out
+    name: jtag_tdo
+    type: wire
+    width: ''
+  - direction: out
+    name: Data
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_tdo_en
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tdi
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tms
+    type: wire
+    width: ''
+  - direction: out
+    name: extest
+    type: wire
+    width: ''
+  - direction: out
+    name: clamp
+    type: wire
+    width: ''
+  - direction: out
+    name: highz
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_lo
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_hi
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bsd
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: capture
+    type: wire
+    width: ''
+  - direction: out
+    name: update_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: loading
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: bsd_so
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: user1_so
+    type: wire
+    width: ''
+  - direction: out
+    name: I
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: next_jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: update_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: ir_reg
+    type: wire
+    width: '[IR_BITS-1:0]'
+  - direction: out
+    name: ir_so
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass_so
+    type: wire
+    width: ''
+  - direction: out
+    name: id_so
+    type: wire
+    width: ''
+  - direction: in
+    name: idcode
+    type: wire
+    width: ''
+  - direction: in
+    name: usercode
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sample
+    type: wire
+    width: ''
+  - direction: out
+    name: udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_id
+    type: wire
+    width: ''
+  - direction: out
+    name: mux
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: capture_en
+    type: wire
+    width: ''
+  - direction: in
+    name: update_en
+    type: wire
+    width: ''
+  - direction: in
+    name: mode
+    type: wire
+    width: ''
+  - direction: in
+    name: si
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: control_out
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: output_data
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
+  xgate_jtag:
+  - direction: out
+    name: jtag_tdo
+    type: wire
+    width: ''
+  - direction: out
+    name: Data
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_tdo_en
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tdi
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tms
+    type: wire
+    width: ''
+  - direction: out
+    name: extest
+    type: wire
+    width: ''
+  - direction: out
+    name: clamp
+    type: wire
+    width: ''
+  - direction: out
+    name: highz
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_lo
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_hi
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bsd
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: capture
+    type: wire
+    width: ''
+  - direction: out
+    name: update_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: loading
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: bsd_so
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: user1_so
+    type: wire
+    width: ''
+  - direction: out
+    name: I
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: next_jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: update_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: ir_reg
+    type: wire
+    width: '[IR_BITS-1:0]'
+  - direction: out
+    name: ir_so
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass_so
+    type: wire
+    width: ''
+  - direction: out
+    name: id_so
+    type: wire
+    width: ''
+  - direction: in
+    name: idcode
+    type: wire
+    width: ''
+  - direction: in
+    name: usercode
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sample
+    type: wire
+    width: ''
+  - direction: out
+    name: udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_id
+    type: wire
+    width: ''
+  - direction: out
+    name: mux
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: capture_en
+    type: wire
+    width: ''
+  - direction: in
+    name: update_en
+    type: wire
+    width: ''
+  - direction: in
+    name: mode
+    type: wire
+    width: ''
+  - direction: in
+    name: si
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: control_out
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: output_data
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
+  xgate_jtag_ir:
+  - direction: out
+    name: jtag_tdo
+    type: wire
+    width: ''
+  - direction: out
+    name: Data
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_tdo_en
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tdi
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tms
+    type: wire
+    width: ''
+  - direction: out
+    name: extest
+    type: wire
+    width: ''
+  - direction: out
+    name: clamp
+    type: wire
+    width: ''
+  - direction: out
+    name: highz
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_lo
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_hi
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bsd
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: capture
+    type: wire
+    width: ''
+  - direction: out
+    name: update_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: loading
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: bsd_so
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: user1_so
+    type: wire
+    width: ''
+  - direction: out
+    name: I
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: next_jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: update_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: ir_reg
+    type: wire
+    width: '[IR_BITS-1:0]'
+  - direction: out
+    name: ir_so
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass_so
+    type: wire
+    width: ''
+  - direction: out
+    name: id_so
+    type: wire
+    width: ''
+  - direction: in
+    name: idcode
+    type: wire
+    width: ''
+  - direction: in
+    name: usercode
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sample
+    type: wire
+    width: ''
+  - direction: out
+    name: udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_id
+    type: wire
+    width: ''
+  - direction: out
+    name: mux
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: capture_en
+    type: wire
+    width: ''
+  - direction: in
+    name: update_en
+    type: wire
+    width: ''
+  - direction: in
+    name: mode
+    type: wire
+    width: ''
+  - direction: in
+    name: si
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: control_out
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: output_data
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
+  xgate_jtag_sm:
+  - direction: out
+    name: jtag_tdo
+    type: wire
+    width: ''
+  - direction: out
+    name: Data
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_tdo_en
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tdi
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tms
+    type: wire
+    width: ''
+  - direction: out
+    name: extest
+    type: wire
+    width: ''
+  - direction: out
+    name: clamp
+    type: wire
+    width: ''
+  - direction: out
+    name: highz
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_lo
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_hi
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bsd
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: capture
+    type: wire
+    width: ''
+  - direction: out
+    name: update_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: loading
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: bsd_so
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: user1_so
+    type: wire
+    width: ''
+  - direction: out
+    name: I
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: next_jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: update_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: ir_reg
+    type: wire
+    width: '[IR_BITS-1:0]'
+  - direction: out
+    name: ir_so
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass_so
+    type: wire
+    width: ''
+  - direction: out
+    name: id_so
+    type: wire
+    width: ''
+  - direction: in
+    name: idcode
+    type: wire
+    width: ''
+  - direction: in
+    name: usercode
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sample
+    type: wire
+    width: ''
+  - direction: out
+    name: udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_id
+    type: wire
+    width: ''
+  - direction: out
+    name: mux
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: capture_en
+    type: wire
+    width: ''
+  - direction: in
+    name: update_en
+    type: wire
+    width: ''
+  - direction: in
+    name: mode
+    type: wire
+    width: ''
+  - direction: in
+    name: si
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: control_out
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: output_data
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
+  xgate_risc:
+  - direction: out
+    name: xgr1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr2
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr3
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr5
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr6
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgr7
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: xgate_address
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: write_mem_data
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: mem_access
+    type: wire
+    width: ''
+  - direction: out
+    name: write_mem_strb_l
+    type: wire
+    width: ''
+  - direction: out
+    name: write_mem_strb_h
+    type: wire
+    width: ''
+  - direction: out
+    name: zero_flag
+    type: wire
+    width: ''
+  - direction: out
+    name: negative_flag
+    type: wire
+    width: ''
+  - direction: out
+    name: carry_flag
+    type: wire
+    width: ''
+  - direction: out
+    name: overflow_flag
+    type: wire
+    width: ''
+  - direction: out
+    name: xgchid
+    type: wire
+    width: '[ 6:0]'
+  - direction: out
+    name: xgif_status
+    type: wire
+    width: '[127:1]'
+  - direction: out
+    name: xg_sw_irq
+    type: wire
+    width: ''
+  - direction: out
+    name: host_semap
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: debug_active
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_ack
+    type: wire
+    width: ''
+  - direction: out
+    name: single_step
+    type: wire
+    width: ''
+  - direction: in
+    name: read_mem_data
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: perif_data
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: risc_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: async_rst_b
+    type: wire
+    width: ''
+  - direction: in
+    name: mem_req_ack
+    type: wire
+    width: ''
+  - direction: in
+    name: ss_mem_ack
+    type: wire
+    width: ''
+  - direction: in
+    name: xge
+    type: wire
+    width: ''
+  - direction: in
+    name: debug_mode_i
+    type: wire
+    width: ''
+  - direction: in
+    name: xgdbg_set
+    type: wire
+    width: ''
+  - direction: in
+    name: xgdbg_clear
+    type: wire
+    width: ''
+  - direction: in
+    name: xgss
+    type: wire
+    width: ''
+  - direction: in
+    name: xgvbr
+    type: wire
+    width: '[15:1]'
+  - direction: in
+    name: int_req
+    type: wire
+    width: '[ 6:0]'
+  - direction: in
+    name: xgie
+    type: wire
+    width: ''
+  - direction: in
+    name: brk_irq_ena
+    type: wire
+    width: ''
+  - direction: in
+    name: write_xgchid
+    type: wire
+    width: ''
+  - direction: in
+    name: write_xgsem
+    type: wire
+    width: ''
+  - direction: in
+    name: write_xgccr
+    type: wire
+    width: ''
+  - direction: in
+    name: write_xgpc
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr7
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr6
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr5
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr4
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr3
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr2
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: write_xgr1
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: xgsweif_c
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_7
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_6
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_5
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_4
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_3
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_2
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_1
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_0
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_xgif_data
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: register
+    type: wire
+    width: ''
+  - direction: out
+    name: RAM
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_out
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: shift_rollover
+    type: wire
+    width: ''
+  - direction: in
+    name: shift_left
+    type: wire
+    width: ''
+  - direction: in
+    name: shift_ammount
+    type: wire
+    width: '[ 4:0]'
+  - direction: in
+    name: shift_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: shift_filler
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: host_status
+    type: wire
+    width: ''
+  - direction: out
+    name: risc_status
+    type: wire
+    width: ''
+  - direction: in
+    name: risc_bit_sel
+    type: wire
+    width: ''
+  - direction: in
+    name: csem
+    type: wire
+    width: ''
+  - direction: in
+    name: ssem
+    type: wire
+    width: ''
+  - direction: in
+    name: host_wrt
+    type: wire
+    width: ''
+  - direction: in
+    name: host_bit_mask
+    type: wire
+    width: ''
+  - direction: in
+    name: host_bit
+    type: wire
+    width: ''
+  xgate_tdo_mux:
+  - direction: out
+    name: jtag_tdo
+    type: wire
+    width: ''
+  - direction: out
+    name: Data
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_tdo_en
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tdi
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: jtag_tms
+    type: wire
+    width: ''
+  - direction: out
+    name: extest
+    type: wire
+    width: ''
+  - direction: out
+    name: clamp
+    type: wire
+    width: ''
+  - direction: out
+    name: highz
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_lo
+    type: wire
+    width: ''
+  - direction: out
+    name: force_pul_hi
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bsd
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: capture
+    type: wire
+    width: ''
+  - direction: out
+    name: update_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: loading
+    type: wire
+    width: ''
+  - direction: out
+    name: update_dr
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_dr
+    type: wire
+    width: ''
+  - direction: in
+    name: bsd_so
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: user1_so
+    type: wire
+    width: ''
+  - direction: out
+    name: I
+    type: wire
+    width: ''
+  - direction: out
+    name: jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: next_jtag_state
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: update_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: capture_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: shift_ir
+    type: wire
+    width: ''
+  - direction: out
+    name: ir_reg
+    type: wire
+    width: '[IR_BITS-1:0]'
+  - direction: out
+    name: ir_so
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass_so
+    type: wire
+    width: ''
+  - direction: out
+    name: id_so
+    type: wire
+    width: ''
+  - direction: in
+    name: idcode
+    type: wire
+    width: ''
+  - direction: in
+    name: usercode
+    type: wire
+    width: ''
+  - direction: out
+    name: bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sample
+    type: wire
+    width: ''
+  - direction: out
+    name: udi_1
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_bypass
+    type: wire
+    width: ''
+  - direction: out
+    name: sel_id
+    type: wire
+    width: ''
+  - direction: out
+    name: mux
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: capture_en
+    type: wire
+    width: ''
+  - direction: in
+    name: update_en
+    type: wire
+    width: ''
+  - direction: in
+    name: mode
+    type: wire
+    width: ''
+  - direction: in
+    name: si
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: control_out
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: output_data
+    type: wire
+    width: ''
+  - direction: in
+    name: reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: ''
+  - direction: out
+    name: so
+    type: wire
+    width: ''
+  xgate_top:
+  - direction: out
+    name: wbs_dat_o
+    type: wire
+    width: '[DWIDTH-1:0]'
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  - direction: in
+    name: wbs_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: arst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wbs_adr_i
+    type: wire
+    width: '[6:1]'
+  - direction: in
+    name: wbs_dat_i
+    type: wire
+    width: '[DWIDTH-1:0]'
+  - direction: in
+    name: wbs_cyc_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wbm_dat_o
+    type: wire
+    width: '[DWIDTH-1:0]'
+  - direction: out
+    name: wbm_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: wbm_adr_o
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: wbm_dat_i
+    type: wire
+    width: '[DWIDTH-1:0]'
+  - direction: out
+    name: xgswt
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: xg_sw_irq
+    type: wire
+    width: ''
+  - direction: out
+    name: xgif
+    type: wire
+    width: '[MAX_CHANNEL:1]'
+  - direction: in
+    name: chan_req_i
+    type: wire
+    width: '[MAX_CHANNEL:1]'
+  - direction: in
+    name: risc_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: debug_mode_i
+    type: wire
+    width: ''
+  - direction: in
+    name: secure_mode_i
+    type: wire
+    width: ''
+  - direction: in
+    name: scantestmode
+    type: wire
+    width: ''
+  - direction: out
+    name: flags
+    type: wire
+    width: ''
 total_entities: 17
 desc_source: header
 health_tier: bronze

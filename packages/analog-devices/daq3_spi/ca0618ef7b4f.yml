@@ -24,6 +24,32 @@ tags:
 - serial
 - spi
 role: top
+top_ports:
+  daq3_spi:
+  - direction: in
+    name: spi_csn
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: spi_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: spi_mosi
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_miso
+    type: wire
+    width: ''
+  - direction: inout
+    name: spi_sdio
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_dir
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

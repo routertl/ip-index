@@ -32,6 +32,16 @@ top_modules:
 components:
 - carry_generate
 - propagate_generate
+top_ports:
+  carry_lookahead_adder:
+  - direction: in
+    name: Cin
+    type: wire
+    width: ''
+  - direction: out
+    name: Cout
+    type: wire
+    width: ''
 total_entities: 3
 desc_source: preserved
 mirror_status: curated-mirror

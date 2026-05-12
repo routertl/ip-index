@@ -79,7 +79,249 @@ components:
 - spi_clgen
 - spi_shift
 - spi_top
+top_ports:
+  STORM_SoC_basic:
+  - direction: in
+    name: RST_I
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: UART0_TXD_O
+    type: STD_LOGIC
+    width: ''
+  - direction: inout
+    name: I2C_SDA_IO
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: SPI_P0_MISO_I
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: SPI_P0_MOSI_O
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: SPI_P0_CS_O
+    type: STD_LOGIC_VECTOR
+    width: 02 downto 0
+  - direction: in
+    name: SPI_P1_MISO_I
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: SPI_P1_MOSI_O
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: SPI_P1_CS_O
+    type: STD_LOGIC_VECTOR
+    width: 02 downto 0
+  - direction: in
+    name: SPI_P2_MISO_I
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: SPI_P2_MOSI_O
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: SPI_P2_CS_O
+    type: STD_LOGIC_VECTOR
+    width: 01 downto 0
+  - direction: in
+    name: GP_IO_I
+    type: STD_LOGIC_VECTOR
+    width: 31 downto 00
+  - direction: in
+    name: wb_rst_i
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: wb_adr_i
+    type: STD_LOGIC_VECTOR
+    width: 04 downto 0
+  - direction: in
+    name: wb_dat_i
+    type: STD_LOGIC_VECTOR
+    width: 31 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: STD_LOGIC_VECTOR
+    width: 31 downto 0
+  - direction: in
+    name: wb_sel_i
+    type: STD_LOGIC_VECTOR
+    width: 03 downto 0
+  - direction: in
+    name: wb_we_i
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: wb_err_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: wb_int_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: sclk_pad_o
+    type: STD_LOGIC
+    width: ''
+  - direction: out
+    name: mosi_pad_o
+    type: STD_LOGIC
+    width: ''
+  - direction: in
+    name: miso_pad_i
+    type: "STD_LOGIC\n\t\t\t\t )"
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: wb_adr_i
+    type: std_logic_vector
+    width: 0 downto 0
+  - direction: in
+    name: wb_stb_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: ps2_dat
+    type: "std_logic\n\t\t\t\t )"
+    width: ''
+  - direction: out
+    name: ACK_LINES_O
+    type: STD_LOGIC_VECTOR
+    width: 31 downto 0
+  - direction: out
+    name: STORM_FIQ_O
+    type: "STD_LOGIC\n\t\t\t\t )"
+    width: ''
+  ps2_wb:
+  - direction: in
+    name: wb_rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: wb_adr_i
+    type: std_logic_vector
+    width: 0 downto 0
+  - direction: in
+    name: wb_stb_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_we_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: ps2_dat
+    type: std_logic)
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: data_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: data_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: ibf_clr_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: obf_set_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ibf_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: obf_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: frame_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: parity_err_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: busy_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: err_clr_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wdt_o
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: ps2_clk_io
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: ps2_data_io
+    type: std_logic)
+    width: ''
 total_entities: 22
 desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+external_uses:
+- library: work
+  package: STORM_core_package

@@ -20,3 +20,10 @@ routertl_compat:
   - src/read.sv
 tags: []
 role: top
+top_ports:
+  read:
+  - direction: in
+    name: T
+    type: wire
+    width: ''
+desc_source: header

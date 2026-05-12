@@ -49,6 +49,1067 @@ components:
 - alu
 - calc_ea
 - decode_alu
+top_ports:
+  MC6809_cpu:
+  - direction: in
+    name: cpu_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: cpu_reset
+    type: wire
+    width: ''
+  - direction: in
+    name: cpu_nmi_n
+    type: wire
+    width: ''
+  - direction: in
+    name: cpu_irq_n
+    type: wire
+    width: ''
+  - direction: in
+    name: cpu_firq_n
+    type: wire
+    width: ''
+  - direction: out
+    name: cpu_state_o
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: cpu_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: cpu_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: cpu_addr_o
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: cpu_data_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: cpu_data_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: debug_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: debug_data_o
+    type: wire
+    width: ''
+  - direction: in
+    name: mux
+    type: wire
+    width: ''
+  - direction: out
+    name: will
+    type: wire
+    width: ''
+  alu16:
+  - direction: in
+    name: clk_in
+    type: wire
+    width: ''
+  - direction: in
+    name: a_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: b_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CCR
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: opcode_in
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sz_in
+    type: wire
+    width: ''
+  - direction: out
+    name: q_out
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: CCRo
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: carry_in
+    type: wire
+    width: ''
+  - direction: in
+    name: half_c_in
+    type: wire
+    width: ''
+  - direction: out
+    name: carry_out
+    type: wire
+    width: ''
+  - direction: out
+    name: overflow_out
+    type: wire
+    width: ''
+  - direction: out
+    name: half_c_out
+    type: wire
+    width: ''
+  - direction: in
+    name: overflow_in
+    type: wire
+    width: ''
+  - direction: in
+    name: q_mul_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: q
+    type: wire
+    width: '[15:0]'
+  alu8:
+  - direction: in
+    name: clk_in
+    type: wire
+    width: ''
+  - direction: in
+    name: a_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: b_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CCR
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: opcode_in
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sz_in
+    type: wire
+    width: ''
+  - direction: out
+    name: q_out
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: CCRo
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: carry_in
+    type: wire
+    width: ''
+  - direction: in
+    name: half_c_in
+    type: wire
+    width: ''
+  - direction: out
+    name: carry_out
+    type: wire
+    width: ''
+  - direction: out
+    name: overflow_out
+    type: wire
+    width: ''
+  - direction: out
+    name: half_c_out
+    type: wire
+    width: ''
+  - direction: in
+    name: overflow_in
+    type: wire
+    width: ''
+  - direction: in
+    name: q_mul_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: q
+    type: wire
+    width: '[15:0]'
+  arith16:
+  - direction: in
+    name: clk_in
+    type: wire
+    width: ''
+  - direction: in
+    name: a_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: b_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CCR
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: opcode_in
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sz_in
+    type: wire
+    width: ''
+  - direction: out
+    name: q_out
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: CCRo
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: carry_in
+    type: wire
+    width: ''
+  - direction: in
+    name: half_c_in
+    type: wire
+    width: ''
+  - direction: out
+    name: carry_out
+    type: wire
+    width: ''
+  - direction: out
+    name: overflow_out
+    type: wire
+    width: ''
+  - direction: out
+    name: half_c_out
+    type: wire
+    width: ''
+  - direction: in
+    name: overflow_in
+    type: wire
+    width: ''
+  - direction: in
+    name: q_mul_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: q
+    type: wire
+    width: '[15:0]'
+  arith8:
+  - direction: in
+    name: clk_in
+    type: wire
+    width: ''
+  - direction: in
+    name: a_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: b_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CCR
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: opcode_in
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sz_in
+    type: wire
+    width: ''
+  - direction: out
+    name: q_out
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: CCRo
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: carry_in
+    type: wire
+    width: ''
+  - direction: in
+    name: half_c_in
+    type: wire
+    width: ''
+  - direction: out
+    name: carry_out
+    type: wire
+    width: ''
+  - direction: out
+    name: overflow_out
+    type: wire
+    width: ''
+  - direction: out
+    name: half_c_out
+    type: wire
+    width: ''
+  - direction: in
+    name: overflow_in
+    type: wire
+    width: ''
+  - direction: in
+    name: q_mul_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: q
+    type: wire
+    width: '[15:0]'
+  decode_ea:
+  - direction: in
+    name: cpu_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: opcode
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: postbyte0
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: page2_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: page3_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: path_left_addr_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: path_right_addr_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: dest_reg_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: path_left_addr_lo
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: path_right_addr_lo
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: dest_reg_lo
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: write_dest
+    type: wire
+    width: ''
+  - direction: out
+    name: source_size
+    type: wire
+    width: ''
+  - direction: out
+    name: result_size
+    type: wire
+    width: ''
+  - direction: out
+    name: mode
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: optype
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: use_s
+    type: wire
+    width: ''
+  - direction: in
+    name: eapostbyte
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: noofs
+    type: wire
+    width: ''
+  - direction: out
+    name: ofs8
+    type: wire
+    width: ''
+  - direction: out
+    name: ofs16
+    type: wire
+    width: ''
+  - direction: out
+    name: write_post
+    type: wire
+    width: ''
+  - direction: out
+    name: isind
+    type: wire
+    width: ''
+  - direction: out
+    name: alu_opcode
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: dec_alu_right_path_mod
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: dest_flags
+    type: wire
+    width: ''
+  - direction: in
+    name: CCR
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: cond_taken
+    type: wire
+    width: ''
+  decode_op:
+  - direction: in
+    name: cpu_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: opcode
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: postbyte0
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: page2_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: page3_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: path_left_addr_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: path_right_addr_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: dest_reg_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: path_left_addr_lo
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: path_right_addr_lo
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: dest_reg_lo
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: write_dest
+    type: wire
+    width: ''
+  - direction: out
+    name: source_size
+    type: wire
+    width: ''
+  - direction: out
+    name: result_size
+    type: wire
+    width: ''
+  - direction: out
+    name: mode
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: optype
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: use_s
+    type: wire
+    width: ''
+  - direction: in
+    name: eapostbyte
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: noofs
+    type: wire
+    width: ''
+  - direction: out
+    name: ofs8
+    type: wire
+    width: ''
+  - direction: out
+    name: ofs16
+    type: wire
+    width: ''
+  - direction: out
+    name: write_post
+    type: wire
+    width: ''
+  - direction: out
+    name: isind
+    type: wire
+    width: ''
+  - direction: out
+    name: alu_opcode
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: dec_alu_right_path_mod
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: dest_flags
+    type: wire
+    width: ''
+  - direction: in
+    name: CCR
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: cond_taken
+    type: wire
+    width: ''
+  decode_regs:
+  - direction: in
+    name: cpu_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: opcode
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: postbyte0
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: page2_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: page3_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: path_left_addr_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: path_right_addr_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: dest_reg_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: path_left_addr_lo
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: path_right_addr_lo
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: dest_reg_lo
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: write_dest
+    type: wire
+    width: ''
+  - direction: out
+    name: source_size
+    type: wire
+    width: ''
+  - direction: out
+    name: result_size
+    type: wire
+    width: ''
+  - direction: out
+    name: mode
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: optype
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: use_s
+    type: wire
+    width: ''
+  - direction: in
+    name: eapostbyte
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: noofs
+    type: wire
+    width: ''
+  - direction: out
+    name: ofs8
+    type: wire
+    width: ''
+  - direction: out
+    name: ofs16
+    type: wire
+    width: ''
+  - direction: out
+    name: write_post
+    type: wire
+    width: ''
+  - direction: out
+    name: isind
+    type: wire
+    width: ''
+  - direction: out
+    name: alu_opcode
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: dec_alu_right_path_mod
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: dest_flags
+    type: wire
+    width: ''
+  - direction: in
+    name: CCR
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: cond_taken
+    type: wire
+    width: ''
+  logic8:
+  - direction: in
+    name: clk_in
+    type: wire
+    width: ''
+  - direction: in
+    name: a_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: b_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CCR
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: opcode_in
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sz_in
+    type: wire
+    width: ''
+  - direction: out
+    name: q_out
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: CCRo
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: carry_in
+    type: wire
+    width: ''
+  - direction: in
+    name: half_c_in
+    type: wire
+    width: ''
+  - direction: out
+    name: carry_out
+    type: wire
+    width: ''
+  - direction: out
+    name: overflow_out
+    type: wire
+    width: ''
+  - direction: out
+    name: half_c_out
+    type: wire
+    width: ''
+  - direction: in
+    name: overflow_in
+    type: wire
+    width: ''
+  - direction: in
+    name: q_mul_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: q
+    type: wire
+    width: '[15:0]'
+  mul8x8:
+  - direction: in
+    name: clk_in
+    type: wire
+    width: ''
+  - direction: in
+    name: a_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: b_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CCR
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: opcode_in
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sz_in
+    type: wire
+    width: ''
+  - direction: out
+    name: q_out
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: CCRo
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: carry_in
+    type: wire
+    width: ''
+  - direction: in
+    name: half_c_in
+    type: wire
+    width: ''
+  - direction: out
+    name: carry_out
+    type: wire
+    width: ''
+  - direction: out
+    name: overflow_out
+    type: wire
+    width: ''
+  - direction: out
+    name: half_c_out
+    type: wire
+    width: ''
+  - direction: in
+    name: overflow_in
+    type: wire
+    width: ''
+  - direction: in
+    name: q_mul_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: q
+    type: wire
+    width: '[15:0]'
+  regblock:
+  - direction: in
+    name: clk_in
+    type: wire
+    width: ''
+  - direction: in
+    name: path_left_addr
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: path_right_addr
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: write_reg_addr
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: exg_dest_r
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: eapostbyte
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: offset16
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: write_reg
+    type: wire
+    width: ''
+  - direction: in
+    name: write_post
+    type: wire
+    width: ''
+  - direction: in
+    name: write_pc
+    type: wire
+    width: ''
+  - direction: in
+    name: write_tfr
+    type: wire
+    width: ''
+  - direction: in
+    name: write_exg
+    type: wire
+    width: ''
+  - direction: in
+    name: inc_pc
+    type: wire
+    width: ''
+  - direction: in
+    name: inc_su
+    type: wire
+    width: ''
+  - direction: in
+    name: dec_su
+    type: wire
+    width: ''
+  - direction: in
+    name: use_s
+    type: wire
+    width: ''
+  - direction: in
+    name: data_w
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: new_pc
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CCR_in
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: write_flags
+    type: wire
+    width: ''
+  - direction: in
+    name: set_e
+    type: wire
+    width: ''
+  - direction: in
+    name: clear_e
+    type: wire
+    width: ''
+  - direction: out
+    name: CCR_o
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: path_left_data
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: path_right_data
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: eamem_addr_o
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: reg_pc
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: reg_dp
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: reg_su
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: acca
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: accb
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: ix
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: iy
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: s
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: u
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: pc
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_reg_post_o
+    type: wire
+    width: '[15:0]'
+  shift8:
+  - direction: in
+    name: clk_in
+    type: wire
+    width: ''
+  - direction: in
+    name: a_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: b_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: CCR
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: opcode_in
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: sz_in
+    type: wire
+    width: ''
+  - direction: out
+    name: q_out
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: CCRo
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: carry_in
+    type: wire
+    width: ''
+  - direction: in
+    name: half_c_in
+    type: wire
+    width: ''
+  - direction: out
+    name: carry_out
+    type: wire
+    width: ''
+  - direction: out
+    name: overflow_out
+    type: wire
+    width: ''
+  - direction: out
+    name: half_c_out
+    type: wire
+    width: ''
+  - direction: in
+    name: overflow_in
+    type: wire
+    width: ''
+  - direction: in
+    name: q_mul_in
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: b
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: q
+    type: wire
+    width: '[15:0]'
 total_entities: 15
 desc_source: verdict
 health_tier: bronze

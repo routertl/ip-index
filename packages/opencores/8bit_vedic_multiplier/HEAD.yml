@@ -46,6 +46,16 @@ components:
 - ripple_adder_8bit
 - vedic2x2
 - vedic4x4
+top_ports:
+  vedic8x8:
+  - direction: in
+    name: a
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: prod
+    type: wire
+    width: '[15:0]'
 total_entities: 9
 desc_source: preserved
 mirror_status: curated-mirror

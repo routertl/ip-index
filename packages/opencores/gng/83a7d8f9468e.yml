@@ -44,6 +44,32 @@ components:
 - gng_lzd
 - gng_smul_16_18
 - gng_smul_16_18_sadd_37
+top_ports:
+  gng:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn
+    type: wire
+    width: ''
+  - direction: in
+    name: ce
+    type: wire
+    width: ''
+  - direction: out
+    name: valid_out
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: data_out
+    type: wire
+    width: '[15:0]'
 total_entities: 7
 desc_source: readme
 mirror_status: curated-mirror

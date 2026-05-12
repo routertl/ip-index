@@ -24,6 +24,52 @@ tags:
 - upscale
 - util
 role: top
+top_ports:
+  util_axis_upscale:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: resetn
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_axis_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_axis_data
+    type: wire
+    width: '[(NUM_OF_CHANNELS*DATA_WIDTH)-1:0]'
+  - direction: out
+    name: m_axis_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axis_data
+    type: wire
+    width: '[(NUM_OF_CHANNELS*UDATA_WIDTH)-1:0]'
+  - direction: in
+    name: dfmt_enable
+    type: wire
+    width: ''
+  - direction: in
+    name: dfmt_type
+    type: wire
+    width: ''
+  - direction: in
+    name: dfmt_se
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

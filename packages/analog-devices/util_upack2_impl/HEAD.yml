@@ -1,8 +1,8 @@
 name: util_upack2_impl
 namespace: analog-devices
 version: HEAD
-commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
-published_at: '2026-04-15T16:15:19+03:00'
+commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
+published_at: '2026-05-11T12:02:04+03:00'
 description: Util IP core with ready/valid handshake and configurable parameters
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
@@ -11,11 +11,16 @@ source:
   url: https://github.com/analogdevicesinc/hdl.git
   tag: main
   ip_yml_path: .
-  resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
+  resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 routertl_compat:
   language: verilog
   library: work
   files:
+  - library/corundum/corundum_core/mqnic_app_custom_params.vh
+  - library/corundum/corundum_core/mqnic_app_custom_ports.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_bit_mod.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_word.vh
+  - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
   - library/common/ad_perfect_shuffle.v
   - library/util_pack/util_pack_common/pack_ctrl.v
   - library/util_pack/util_pack_common/pack_interconnect.v
@@ -26,3 +31,25 @@ tags:
 - upack2
 - util
 role: component
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

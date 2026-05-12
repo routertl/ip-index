@@ -21,6 +21,20 @@ tags:
 - controller
 - i2s
 role: top
+top_ports:
+  i2s_controller:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_stb
+    type: std_logic
+    width: ''
+  - direction: in
+    name: lrclk_div_rate
+    type: "natural range 0 to 255\n\t)"
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

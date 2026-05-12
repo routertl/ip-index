@@ -101,6 +101,8440 @@ components:
 - IO_SWITCH
 - RD_ALIGNER
 - STEUERUNG
+top_ports:
+  DCACHE_SM:
+  - direction: in
+    name: WRITE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: WRDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ENBYTE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: VADDR
+    type: wire
+    width: '[3:2]'
+  - direction: in
+    name: DADDR
+    type: wire
+    width: '[3:2]'
+  - direction: out
+    name: WDAT
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: CAP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: ENB
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: VALIN
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: WADR
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: RADR
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: VALOUT
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DBG_IN
+    type: wire
+    width: '[40:2]'
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: VIRTUELL
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR_R
+    type: wire
+    width: '[31:2]'
+  - direction: in
+    name: MMU_Q
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: DBG_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW_PTB
+    type: wire
+    width: ''
+  - direction: in
+    name: PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: IVAR
+    type: wire
+    width: ''
+  - direction: in
+    name: WR_MRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR
+    type: wire
+    width: '[19:16]'
+  - direction: in
+    name: MVALID
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: WE_MV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_MV
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: DAT_MV
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: NEW_PTB_RUN
+    type: wire
+    width: ''
+  - direction: in
+    name: CUPDATE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: CA_SET
+    type: wire
+    width: ''
+  - direction: in
+    name: HIT_ALL
+    type: wire
+    width: ''
+  - direction: in
+    name: UPDATE
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: INVAL_A
+    type: wire
+    width: ''
+  - direction: in
+    name: MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: USE_CA
+    type: wire
+    width: ''
+  - direction: in
+    name: INHIBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: KILL
+    type: wire
+    width: ''
+  - direction: out
+    name: WRCRAM0
+    type: wire
+    width: ''
+  - direction: out
+    name: WE_CV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_CV
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DAT_CV
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: INIT_CA_RUN
+    type: wire
+    width: ''
+  - direction: out
+    name: WRSET0
+    type: wire
+    width: ''
+  - direction: in
+    name: RMW
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_FLAGS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: MMU_VA
+    type: wire
+    width: '[31:16]'
+  - direction: out
+    name: MMU_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: out
+    name: CI
+    type: wire
+    width: ''
+  - direction: in
+    name: CVALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DRAMSZ
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:4]'
+  - direction: in
+    name: TAG0
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: INVAL_L
+    type: wire
+    width: ''
+  - direction: in
+    name: KDET
+    type: wire
+    width: ''
+  - direction: in
+    name: ENDRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: DC_ILO
+    type: wire
+    width: ''
+  - direction: out
+    name: CA_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_SPACE
+    type: wire
+    width: ''
+  - direction: out
+    name: WB_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: ADR_EQU
+    type: wire
+    width: ''
+  - direction: out
+    name: TAGDAT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: CAPDAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: SEL_PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: CPU_OUT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: ENWR
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_PREQ
+    type: wire
+    width: ''
+  - direction: in
+    name: DMA_CHK
+    type: wire
+    width: ''
+  - direction: in
+    name: ICTODC
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: RWVAL
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: QWATWO
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_ADR
+    type: wire
+    width: '[28:0]'
+  - direction: out
+    name: PTE_DAT
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IACC_STAT
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ABO_LEVEL1
+    type: wire
+    width: ''
+  - direction: out
+    name: AUX_DAT
+    type: wire
+    width: ''
+  - direction: out
+    name: PTB_ONE
+    type: wire
+    width: ''
+  - direction: out
+    name: MMU_DIN
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: IC_SIGS
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: KOMUX
+    type: wire
+    width: ''
+  - direction: out
+    name: DMA_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: HLDA
+    type: wire
+    width: ''
+  - direction: out
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_STAT
+    type: wire
+    width: '[1:0]'
+  DCA_CONTROL:
+  - direction: in
+    name: WRITE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: WRDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ENBYTE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: VADDR
+    type: wire
+    width: '[3:2]'
+  - direction: in
+    name: DADDR
+    type: wire
+    width: '[3:2]'
+  - direction: out
+    name: WDAT
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: CAP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: ENB
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: VALIN
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: WADR
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: RADR
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: VALOUT
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DBG_IN
+    type: wire
+    width: '[40:2]'
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: VIRTUELL
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR_R
+    type: wire
+    width: '[31:2]'
+  - direction: in
+    name: MMU_Q
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: DBG_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW_PTB
+    type: wire
+    width: ''
+  - direction: in
+    name: PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: IVAR
+    type: wire
+    width: ''
+  - direction: in
+    name: WR_MRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR
+    type: wire
+    width: '[19:16]'
+  - direction: in
+    name: MVALID
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: WE_MV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_MV
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: DAT_MV
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: NEW_PTB_RUN
+    type: wire
+    width: ''
+  - direction: in
+    name: CUPDATE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: CA_SET
+    type: wire
+    width: ''
+  - direction: in
+    name: HIT_ALL
+    type: wire
+    width: ''
+  - direction: in
+    name: UPDATE
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: INVAL_A
+    type: wire
+    width: ''
+  - direction: in
+    name: MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: USE_CA
+    type: wire
+    width: ''
+  - direction: in
+    name: INHIBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: KILL
+    type: wire
+    width: ''
+  - direction: out
+    name: WRCRAM0
+    type: wire
+    width: ''
+  - direction: out
+    name: WE_CV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_CV
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DAT_CV
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: INIT_CA_RUN
+    type: wire
+    width: ''
+  - direction: out
+    name: WRSET0
+    type: wire
+    width: ''
+  - direction: in
+    name: RMW
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_FLAGS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: MMU_VA
+    type: wire
+    width: '[31:16]'
+  - direction: out
+    name: MMU_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: out
+    name: CI
+    type: wire
+    width: ''
+  - direction: in
+    name: CVALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DRAMSZ
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:4]'
+  - direction: in
+    name: TAG0
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: INVAL_L
+    type: wire
+    width: ''
+  - direction: in
+    name: KDET
+    type: wire
+    width: ''
+  - direction: in
+    name: ENDRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: DC_ILO
+    type: wire
+    width: ''
+  - direction: out
+    name: CA_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_SPACE
+    type: wire
+    width: ''
+  - direction: out
+    name: WB_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: ADR_EQU
+    type: wire
+    width: ''
+  - direction: out
+    name: TAGDAT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: CAPDAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: SEL_PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: CPU_OUT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: ENWR
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_PREQ
+    type: wire
+    width: ''
+  - direction: in
+    name: DMA_CHK
+    type: wire
+    width: ''
+  - direction: in
+    name: ICTODC
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: RWVAL
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: QWATWO
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_ADR
+    type: wire
+    width: '[28:0]'
+  - direction: out
+    name: PTE_DAT
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IACC_STAT
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ABO_LEVEL1
+    type: wire
+    width: ''
+  - direction: out
+    name: AUX_DAT
+    type: wire
+    width: ''
+  - direction: out
+    name: PTB_ONE
+    type: wire
+    width: ''
+  - direction: out
+    name: MMU_DIN
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: IC_SIGS
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: KOMUX
+    type: wire
+    width: ''
+  - direction: out
+    name: DMA_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: HLDA
+    type: wire
+    width: ''
+  - direction: out
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_STAT
+    type: wire
+    width: '[1:0]'
+  DEBUG_AE:
+  - direction: in
+    name: WRITE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: WRDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ENBYTE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: VADDR
+    type: wire
+    width: '[3:2]'
+  - direction: in
+    name: DADDR
+    type: wire
+    width: '[3:2]'
+  - direction: out
+    name: WDAT
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: CAP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: ENB
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: VALIN
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: WADR
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: RADR
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: VALOUT
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DBG_IN
+    type: wire
+    width: '[40:2]'
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: VIRTUELL
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR_R
+    type: wire
+    width: '[31:2]'
+  - direction: in
+    name: MMU_Q
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: DBG_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW_PTB
+    type: wire
+    width: ''
+  - direction: in
+    name: PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: IVAR
+    type: wire
+    width: ''
+  - direction: in
+    name: WR_MRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR
+    type: wire
+    width: '[19:16]'
+  - direction: in
+    name: MVALID
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: WE_MV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_MV
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: DAT_MV
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: NEW_PTB_RUN
+    type: wire
+    width: ''
+  - direction: in
+    name: CUPDATE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: CA_SET
+    type: wire
+    width: ''
+  - direction: in
+    name: HIT_ALL
+    type: wire
+    width: ''
+  - direction: in
+    name: UPDATE
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: INVAL_A
+    type: wire
+    width: ''
+  - direction: in
+    name: MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: USE_CA
+    type: wire
+    width: ''
+  - direction: in
+    name: INHIBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: KILL
+    type: wire
+    width: ''
+  - direction: out
+    name: WRCRAM0
+    type: wire
+    width: ''
+  - direction: out
+    name: WE_CV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_CV
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DAT_CV
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: INIT_CA_RUN
+    type: wire
+    width: ''
+  - direction: out
+    name: WRSET0
+    type: wire
+    width: ''
+  - direction: in
+    name: RMW
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_FLAGS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: MMU_VA
+    type: wire
+    width: '[31:16]'
+  - direction: out
+    name: MMU_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: out
+    name: CI
+    type: wire
+    width: ''
+  - direction: in
+    name: CVALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DRAMSZ
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:4]'
+  - direction: in
+    name: TAG0
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: INVAL_L
+    type: wire
+    width: ''
+  - direction: in
+    name: KDET
+    type: wire
+    width: ''
+  - direction: in
+    name: ENDRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: DC_ILO
+    type: wire
+    width: ''
+  - direction: out
+    name: CA_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_SPACE
+    type: wire
+    width: ''
+  - direction: out
+    name: WB_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: ADR_EQU
+    type: wire
+    width: ''
+  - direction: out
+    name: TAGDAT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: CAPDAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: SEL_PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: CPU_OUT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: ENWR
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_PREQ
+    type: wire
+    width: ''
+  - direction: in
+    name: DMA_CHK
+    type: wire
+    width: ''
+  - direction: in
+    name: ICTODC
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: RWVAL
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: QWATWO
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_ADR
+    type: wire
+    width: '[28:0]'
+  - direction: out
+    name: PTE_DAT
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IACC_STAT
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ABO_LEVEL1
+    type: wire
+    width: ''
+  - direction: out
+    name: AUX_DAT
+    type: wire
+    width: ''
+  - direction: out
+    name: PTB_ONE
+    type: wire
+    width: ''
+  - direction: out
+    name: MMU_DIN
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: IC_SIGS
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: KOMUX
+    type: wire
+    width: ''
+  - direction: out
+    name: DMA_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: HLDA
+    type: wire
+    width: ''
+  - direction: out
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_STAT
+    type: wire
+    width: '[1:0]'
+  DFPU_ADDSUB:
+  - direction: in
+    name: START
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MEI
+    type: wire
+    width: ''
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSD_1
+    type: wire
+    width: '[52:32]'
+  - direction: out
+    name: LSD_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: LOAD_MSD
+    type: wire
+    width: ''
+  - direction: in
+    name: A_IN
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CY_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: SUBP
+    type: wire
+    width: ''
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CY_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DO_BCD
+    type: wire
+    width: ''
+  - direction: out
+    name: BCD_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: BCD_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: MAN1
+    type: wire
+    width: '[20:0]'
+  - direction: in
+    name: SRCFLAGS
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MAN2
+    type: wire
+    width: '[19:0]'
+  - direction: in
+    name: MODE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: MRESULT
+    type: wire
+    width: '[105:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: NOT_DEI
+    type: wire
+    width: ''
+  - direction: in
+    name: EXTDATA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSB
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: 'NULL'
+    type: wire
+    width: ''
+  - direction: out
+    name: MINUS
+    type: wire
+    width: ''
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DONE
+    type: wire
+    width: ''
+  - direction: out
+    name: DIVI_OUT
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: DVZ_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: DEI_OVF
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: WR_REG
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: TT_DP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CLR_LSB
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: UP_DP
+    type: wire
+    width: ''
+  - direction: out
+    name: WREN_L
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  DFPU_BCD:
+  - direction: in
+    name: START
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MEI
+    type: wire
+    width: ''
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSD_1
+    type: wire
+    width: '[52:32]'
+  - direction: out
+    name: LSD_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: LOAD_MSD
+    type: wire
+    width: ''
+  - direction: in
+    name: A_IN
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CY_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: SUBP
+    type: wire
+    width: ''
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CY_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DO_BCD
+    type: wire
+    width: ''
+  - direction: out
+    name: BCD_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: BCD_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: MAN1
+    type: wire
+    width: '[20:0]'
+  - direction: in
+    name: SRCFLAGS
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MAN2
+    type: wire
+    width: '[19:0]'
+  - direction: in
+    name: MODE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: MRESULT
+    type: wire
+    width: '[105:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: NOT_DEI
+    type: wire
+    width: ''
+  - direction: in
+    name: EXTDATA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSB
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: 'NULL'
+    type: wire
+    width: ''
+  - direction: out
+    name: MINUS
+    type: wire
+    width: ''
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DONE
+    type: wire
+    width: ''
+  - direction: out
+    name: DIVI_OUT
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: DVZ_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: DEI_OVF
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: WR_REG
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: TT_DP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CLR_LSB
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: UP_DP
+    type: wire
+    width: ''
+  - direction: out
+    name: WREN_L
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  DFPU_DIV:
+  - direction: in
+    name: START
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MEI
+    type: wire
+    width: ''
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSD_1
+    type: wire
+    width: '[52:32]'
+  - direction: out
+    name: LSD_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: LOAD_MSD
+    type: wire
+    width: ''
+  - direction: in
+    name: A_IN
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CY_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: SUBP
+    type: wire
+    width: ''
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CY_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DO_BCD
+    type: wire
+    width: ''
+  - direction: out
+    name: BCD_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: BCD_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: MAN1
+    type: wire
+    width: '[20:0]'
+  - direction: in
+    name: SRCFLAGS
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MAN2
+    type: wire
+    width: '[19:0]'
+  - direction: in
+    name: MODE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: MRESULT
+    type: wire
+    width: '[105:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: NOT_DEI
+    type: wire
+    width: ''
+  - direction: in
+    name: EXTDATA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSB
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: 'NULL'
+    type: wire
+    width: ''
+  - direction: out
+    name: MINUS
+    type: wire
+    width: ''
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DONE
+    type: wire
+    width: ''
+  - direction: out
+    name: DIVI_OUT
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: DVZ_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: DEI_OVF
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: WR_REG
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: TT_DP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CLR_LSB
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: UP_DP
+    type: wire
+    width: ''
+  - direction: out
+    name: WREN_L
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  DFPU_MISC:
+  - direction: in
+    name: START
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MEI
+    type: wire
+    width: ''
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSD_1
+    type: wire
+    width: '[52:32]'
+  - direction: out
+    name: LSD_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: LOAD_MSD
+    type: wire
+    width: ''
+  - direction: in
+    name: A_IN
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CY_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: SUBP
+    type: wire
+    width: ''
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CY_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DO_BCD
+    type: wire
+    width: ''
+  - direction: out
+    name: BCD_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: BCD_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: MAN1
+    type: wire
+    width: '[20:0]'
+  - direction: in
+    name: SRCFLAGS
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MAN2
+    type: wire
+    width: '[19:0]'
+  - direction: in
+    name: MODE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: MRESULT
+    type: wire
+    width: '[105:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: NOT_DEI
+    type: wire
+    width: ''
+  - direction: in
+    name: EXTDATA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSB
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: 'NULL'
+    type: wire
+    width: ''
+  - direction: out
+    name: MINUS
+    type: wire
+    width: ''
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DONE
+    type: wire
+    width: ''
+  - direction: out
+    name: DIVI_OUT
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: DVZ_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: DEI_OVF
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: WR_REG
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: TT_DP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CLR_LSB
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: UP_DP
+    type: wire
+    width: ''
+  - direction: out
+    name: WREN_L
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  DFPU_MUL:
+  - direction: in
+    name: START
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MEI
+    type: wire
+    width: ''
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSD_1
+    type: wire
+    width: '[52:32]'
+  - direction: out
+    name: LSD_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: LOAD_MSD
+    type: wire
+    width: ''
+  - direction: in
+    name: A_IN
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CY_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: SUBP
+    type: wire
+    width: ''
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CY_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DO_BCD
+    type: wire
+    width: ''
+  - direction: out
+    name: BCD_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: BCD_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: MAN1
+    type: wire
+    width: '[20:0]'
+  - direction: in
+    name: SRCFLAGS
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MAN2
+    type: wire
+    width: '[19:0]'
+  - direction: in
+    name: MODE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: MRESULT
+    type: wire
+    width: '[105:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: NOT_DEI
+    type: wire
+    width: ''
+  - direction: in
+    name: EXTDATA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSB
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: 'NULL'
+    type: wire
+    width: ''
+  - direction: out
+    name: MINUS
+    type: wire
+    width: ''
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DONE
+    type: wire
+    width: ''
+  - direction: out
+    name: DIVI_OUT
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: DVZ_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: DEI_OVF
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: WR_REG
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: TT_DP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CLR_LSB
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: UP_DP
+    type: wire
+    width: ''
+  - direction: out
+    name: WREN_L
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  DIVI_PREP:
+  - direction: in
+    name: START
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MEI
+    type: wire
+    width: ''
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSD_1
+    type: wire
+    width: '[52:32]'
+  - direction: out
+    name: LSD_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: LOAD_MSD
+    type: wire
+    width: ''
+  - direction: in
+    name: A_IN
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CY_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: SUBP
+    type: wire
+    width: ''
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CY_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DO_BCD
+    type: wire
+    width: ''
+  - direction: out
+    name: BCD_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: BCD_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: MAN1
+    type: wire
+    width: '[20:0]'
+  - direction: in
+    name: SRCFLAGS
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MAN2
+    type: wire
+    width: '[19:0]'
+  - direction: in
+    name: MODE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: MRESULT
+    type: wire
+    width: '[105:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: NOT_DEI
+    type: wire
+    width: ''
+  - direction: in
+    name: EXTDATA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSB
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: 'NULL'
+    type: wire
+    width: ''
+  - direction: out
+    name: MINUS
+    type: wire
+    width: ''
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DONE
+    type: wire
+    width: ''
+  - direction: out
+    name: DIVI_OUT
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: DVZ_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: DEI_OVF
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: WR_REG
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: TT_DP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CLR_LSB
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: UP_DP
+    type: wire
+    width: ''
+  - direction: out
+    name: WREN_L
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  DP_FPU:
+  - direction: in
+    name: START
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MEI
+    type: wire
+    width: ''
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSD_1
+    type: wire
+    width: '[52:32]'
+  - direction: out
+    name: LSD_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: LOAD_MSD
+    type: wire
+    width: ''
+  - direction: in
+    name: A_IN
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CY_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: SUBP
+    type: wire
+    width: ''
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CY_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DO_BCD
+    type: wire
+    width: ''
+  - direction: out
+    name: BCD_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: BCD_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: MAN1
+    type: wire
+    width: '[20:0]'
+  - direction: in
+    name: SRCFLAGS
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MAN2
+    type: wire
+    width: '[19:0]'
+  - direction: in
+    name: MODE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: MRESULT
+    type: wire
+    width: '[105:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: NOT_DEI
+    type: wire
+    width: ''
+  - direction: in
+    name: EXTDATA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSB
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: 'NULL'
+    type: wire
+    width: ''
+  - direction: out
+    name: MINUS
+    type: wire
+    width: ''
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DONE
+    type: wire
+    width: ''
+  - direction: out
+    name: DIVI_OUT
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: DVZ_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: DEI_OVF
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: WR_REG
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: TT_DP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CLR_LSB
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: UP_DP
+    type: wire
+    width: ''
+  - direction: out
+    name: WREN_L
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  DP_LOGIK:
+  - direction: in
+    name: START
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MEI
+    type: wire
+    width: ''
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSD_1
+    type: wire
+    width: '[52:32]'
+  - direction: out
+    name: LSD_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: LOAD_MSD
+    type: wire
+    width: ''
+  - direction: in
+    name: A_IN
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CY_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: SUBP
+    type: wire
+    width: ''
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CY_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DO_BCD
+    type: wire
+    width: ''
+  - direction: out
+    name: BCD_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: BCD_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: MAN1
+    type: wire
+    width: '[20:0]'
+  - direction: in
+    name: SRCFLAGS
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MAN2
+    type: wire
+    width: '[19:0]'
+  - direction: in
+    name: MODE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: MRESULT
+    type: wire
+    width: '[105:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: NOT_DEI
+    type: wire
+    width: ''
+  - direction: in
+    name: EXTDATA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSB
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: 'NULL'
+    type: wire
+    width: ''
+  - direction: out
+    name: MINUS
+    type: wire
+    width: ''
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DONE
+    type: wire
+    width: ''
+  - direction: out
+    name: DIVI_OUT
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: DVZ_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: DEI_OVF
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: WR_REG
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: TT_DP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CLR_LSB
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: UP_DP
+    type: wire
+    width: ''
+  - direction: out
+    name: WREN_L
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  FFS_LOGIK:
+  - direction: in
+    name: Data
+    type: wire
+    width: ''
+  - direction: in
+    name: AA
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MRESULT
+    type: wire
+    width: '[32:0]'
+  - direction: in
+    name: MASKE
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ROT
+    type: wire
+    width: ''
+  - direction: in
+    name: SIZE
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SH_VAL
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: SH_DAT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: SH_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MASK_SEL
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: FLAG
+    type: wire
+    width: ''
+  - direction: in
+    name: dataa
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: cin
+    type: wire
+    width: ''
+  - direction: in
+    name: add_sub
+    type: wire
+    width: ''
+  - direction: in
+    name: bwd
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: result
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: cout
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: SFP_DAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: BMASKE
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: SP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: WRADR
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: RDAA
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: DETOIP
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: BITSEL
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DISP
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: in
+    name: DSR
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: I_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PSR
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: BMCODE
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: OV_FLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: ACB_ZERO
+    type: wire
+    width: ''
+  - direction: out
+    name: STRING
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: Multiplexer
+    type: wire
+    width: ''
+  FILTCMP:
+  - direction: in
+    name: WRITE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: WRDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ENBYTE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: VADDR
+    type: wire
+    width: '[3:2]'
+  - direction: in
+    name: DADDR
+    type: wire
+    width: '[3:2]'
+  - direction: out
+    name: WDAT
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: CAP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: ENB
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: VALIN
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: WADR
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: RADR
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: VALOUT
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DBG_IN
+    type: wire
+    width: '[40:2]'
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: VIRTUELL
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR_R
+    type: wire
+    width: '[31:2]'
+  - direction: in
+    name: MMU_Q
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: DBG_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW_PTB
+    type: wire
+    width: ''
+  - direction: in
+    name: PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: IVAR
+    type: wire
+    width: ''
+  - direction: in
+    name: WR_MRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR
+    type: wire
+    width: '[19:16]'
+  - direction: in
+    name: MVALID
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: WE_MV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_MV
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: DAT_MV
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: NEW_PTB_RUN
+    type: wire
+    width: ''
+  - direction: in
+    name: CUPDATE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: CA_SET
+    type: wire
+    width: ''
+  - direction: in
+    name: HIT_ALL
+    type: wire
+    width: ''
+  - direction: in
+    name: UPDATE
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: INVAL_A
+    type: wire
+    width: ''
+  - direction: in
+    name: MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: USE_CA
+    type: wire
+    width: ''
+  - direction: in
+    name: INHIBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: KILL
+    type: wire
+    width: ''
+  - direction: out
+    name: WRCRAM0
+    type: wire
+    width: ''
+  - direction: out
+    name: WE_CV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_CV
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DAT_CV
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: INIT_CA_RUN
+    type: wire
+    width: ''
+  - direction: out
+    name: WRSET0
+    type: wire
+    width: ''
+  - direction: in
+    name: RMW
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_FLAGS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: MMU_VA
+    type: wire
+    width: '[31:16]'
+  - direction: out
+    name: MMU_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: out
+    name: CI
+    type: wire
+    width: ''
+  - direction: in
+    name: CVALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DRAMSZ
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:4]'
+  - direction: in
+    name: TAG0
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: INVAL_L
+    type: wire
+    width: ''
+  - direction: in
+    name: KDET
+    type: wire
+    width: ''
+  - direction: in
+    name: ENDRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: DC_ILO
+    type: wire
+    width: ''
+  - direction: out
+    name: CA_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_SPACE
+    type: wire
+    width: ''
+  - direction: out
+    name: WB_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: ADR_EQU
+    type: wire
+    width: ''
+  - direction: out
+    name: TAGDAT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: CAPDAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: SEL_PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: CPU_OUT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: ENWR
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_PREQ
+    type: wire
+    width: ''
+  - direction: in
+    name: DMA_CHK
+    type: wire
+    width: ''
+  - direction: in
+    name: ICTODC
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: RWVAL
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: QWATWO
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_ADR
+    type: wire
+    width: '[28:0]'
+  - direction: out
+    name: PTE_DAT
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IACC_STAT
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ABO_LEVEL1
+    type: wire
+    width: ''
+  - direction: out
+    name: AUX_DAT
+    type: wire
+    width: ''
+  - direction: out
+    name: PTB_ONE
+    type: wire
+    width: ''
+  - direction: out
+    name: MMU_DIN
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: IC_SIGS
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: KOMUX
+    type: wire
+    width: ''
+  - direction: out
+    name: DMA_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: HLDA
+    type: wire
+    width: ''
+  - direction: out
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_STAT
+    type: wire
+    width: '[1:0]'
+  FP_STAT_REG:
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: WRADR
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: PC_ARCHI
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: PCMATCH
+    type: wire
+    width: ''
+  - direction: in
+    name: DBG_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: out
+    name: CFG
+    type: wire
+    width: '[12:0]'
+  - direction: out
+    name: MCR
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: out
+    name: PTB_SEL
+    type: wire
+    width: ''
+  - direction: out
+    name: IVAR
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: IVAR_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: CINV
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: Y_INIT
+    type: wire
+    width: ''
+  - direction: out
+    name: DSR
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: DBG_TRAPS
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DBG_IN
+    type: wire
+    width: '[40:2]'
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: LFSR
+    type: wire
+    width: ''
+  - direction: in
+    name: UP_SP
+    type: wire
+    width: ''
+  - direction: in
+    name: TT_SP
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: FSR
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: TWREN
+    type: wire
+    width: ''
+  - direction: out
+    name: FPU_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: SAVE_PC
+    type: wire
+    width: ''
+  - direction: in
+    name: DOWR
+    type: wire
+    width: ''
+  - direction: in
+    name: BYDIN
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: RADR
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: WADR
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: WMASKE
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: SELI
+    type: wire
+    width: ''
+  ICACHE_SM:
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: CVALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[28:4]'
+  - direction: in
+    name: TAG0
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: C_VALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: READ_I
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: HOLD
+    type: wire
+    width: ''
+  - direction: in
+    name: KDET
+    type: wire
+    width: ''
+  - direction: in
+    name: INVAL_A
+    type: wire
+    width: ''
+  - direction: in
+    name: ENA_HK
+    type: wire
+    width: ''
+  - direction: out
+    name: NEWCVAL
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: KOLLISION
+    type: wire
+    width: ''
+  - direction: out
+    name: STOP_ICRD
+    type: wire
+    width: ''
+  - direction: out
+    name: RUN_ICRD
+    type: wire
+    width: ''
+  - direction: out
+    name: KILL
+    type: wire
+    width: ''
+  - direction: out
+    name: KILLADR
+    type: wire
+    width: '[11:7]'
+  - direction: out
+    name: ICTODC
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: STOP_CINV
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: CAP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: IO_SPACE
+    type: wire
+    width: ''
+  - direction: in
+    name: MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: MMU_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: PTE_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: USE_CA
+    type: wire
+    width: ''
+  - direction: in
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: out
+    name: DRAM_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: IC_PREQ
+    type: wire
+    width: ''
+  - direction: out
+    name: HIT_ALL
+    type: wire
+    width: ''
+  - direction: out
+    name: CUPDATE
+    type: wire
+    width: ''
+  - direction: out
+    name: AUX_DAT
+    type: wire
+    width: ''
+  - direction: out
+    name: NEW_PTB
+    type: wire
+    width: ''
+  ILL_UNDEF:
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_STAT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: in
+    name: ALSB
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: USED
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: IC_DIN
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: IC_INIT
+    type: wire
+    width: ''
+  - direction: in
+    name: RESTART
+    type: wire
+    width: ''
+  - direction: in
+    name: STOP_IC
+    type: wire
+    width: ''
+  - direction: out
+    name: OPREG
+    type: wire
+    width: '[55:0]'
+  - direction: out
+    name: ANZ_VAL
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: IC_READ
+    type: wire
+    width: ''
+  - direction: out
+    name: NEW_PC
+    type: wire
+    width: ''
+  - direction: out
+    name: NEXT_ADR
+    type: wire
+    width: ''
+  - direction: out
+    name: DATA_HOLD
+    type: wire
+    width: ''
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IC_TEX
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: INIT_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: LOAD_PC
+    type: wire
+    width: ''
+  - direction: in
+    name: NEXT_PCA
+    type: wire
+    width: ''
+  - direction: in
+    name: DISP
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PC_NEW
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: SAVE_PC
+    type: wire
+    width: ''
+  - direction: in
+    name: FPU_TRAP
+    type: wire
+    width: ''
+  - direction: in
+    name: ADIVAR
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_ARCHI
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PC_ICACHE
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PC_SAVE
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: IC_USER
+    type: wire
+    width: ''
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: IPOS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: INIT
+    type: wire
+    width: ''
+  - direction: out
+    name: OPOS
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: VALID
+    type: wire
+    width: ''
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ILL
+    type: wire
+    width: ''
+  - direction: out
+    name: UNDEF
+    type: wire
+    width: ''
+  - direction: in
+    name: PHASE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: SRC_1
+    type: wire
+    width: '[6:0]'
+  - direction: in
+    name: ADRD1
+    type: wire
+    width: '[18:0]'
+  - direction: in
+    name: PHRD1
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: NXRD1
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: ACCA
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: OPERA
+    type: wire
+    width: '[10:0]'
+  - direction: out
+    name: STATE_0
+    type: wire
+    width: '[66:0]'
+  - direction: out
+    name: STATE_GROUP_50
+    type: wire
+    width: '[66:0]'
+  I_PFAD:
+  - direction: in
+    name: Data
+    type: wire
+    width: ''
+  - direction: in
+    name: AA
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MRESULT
+    type: wire
+    width: '[32:0]'
+  - direction: in
+    name: MASKE
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ROT
+    type: wire
+    width: ''
+  - direction: in
+    name: SIZE
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SH_VAL
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: SH_DAT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: SH_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MASK_SEL
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: FLAG
+    type: wire
+    width: ''
+  - direction: in
+    name: dataa
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: cin
+    type: wire
+    width: ''
+  - direction: in
+    name: add_sub
+    type: wire
+    width: ''
+  - direction: in
+    name: bwd
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: result
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: cout
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: SFP_DAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: BMASKE
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: SP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: WRADR
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: RDAA
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: DETOIP
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: BITSEL
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DISP
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: in
+    name: DSR
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: I_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PSR
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: BMCODE
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: OV_FLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: ACB_ZERO
+    type: wire
+    width: ''
+  - direction: out
+    name: STRING
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: Multiplexer
+    type: wire
+    width: ''
+  KOLDETECT:
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: CVALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[28:4]'
+  - direction: in
+    name: TAG0
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: C_VALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: READ_I
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: HOLD
+    type: wire
+    width: ''
+  - direction: in
+    name: KDET
+    type: wire
+    width: ''
+  - direction: in
+    name: INVAL_A
+    type: wire
+    width: ''
+  - direction: in
+    name: ENA_HK
+    type: wire
+    width: ''
+  - direction: out
+    name: NEWCVAL
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: KOLLISION
+    type: wire
+    width: ''
+  - direction: out
+    name: STOP_ICRD
+    type: wire
+    width: ''
+  - direction: out
+    name: RUN_ICRD
+    type: wire
+    width: ''
+  - direction: out
+    name: KILL
+    type: wire
+    width: ''
+  - direction: out
+    name: KILLADR
+    type: wire
+    width: '[11:7]'
+  - direction: out
+    name: ICTODC
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: STOP_CINV
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: CAP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: IO_SPACE
+    type: wire
+    width: ''
+  - direction: in
+    name: MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: MMU_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: PTE_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: USE_CA
+    type: wire
+    width: ''
+  - direction: in
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: out
+    name: DRAM_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: IC_PREQ
+    type: wire
+    width: ''
+  - direction: out
+    name: HIT_ALL
+    type: wire
+    width: ''
+  - direction: out
+    name: CUPDATE
+    type: wire
+    width: ''
+  - direction: out
+    name: AUX_DAT
+    type: wire
+    width: ''
+  - direction: out
+    name: NEW_PTB
+    type: wire
+    width: ''
+  M32632:
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAMSZ
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: NMI_N
+    type: wire
+    width: ''
+  - direction: in
+    name: INT_N
+    type: wire
+    width: ''
+  - direction: out
+    name: STATUS
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ILO
+    type: wire
+    width: ''
+  - direction: out
+    name: STATSIGS
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: IO_WR
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_RD
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_A
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: IO_BE
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IO_DI
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: IO_Q
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: ENDRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: DC_MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: ENWR
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: DC_INHIBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_INHIBIT
+    type: wire
+    width: ''
+  - direction: out
+    name: IC_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: IDRAM_ADR
+    type: wire
+    width: '[28:0]'
+  - direction: out
+    name: DC_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: DC_WR
+    type: wire
+    width: ''
+  - direction: out
+    name: DRAM_ADR
+    type: wire
+    width: '[28:0]'
+  - direction: out
+    name: DRAM_DI
+    type: wire
+    width: '[35:0]'
+  - direction: in
+    name: HOLD
+    type: wire
+    width: ''
+  - direction: out
+    name: HLDA
+    type: wire
+    width: ''
+  - direction: in
+    name: DMA_CHK
+    type: wire
+    width: ''
+  - direction: in
+    name: DMA_AA
+    type: wire
+    width: '[28:4]'
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: Interface
+    type: wire
+    width: ''
+  MAKE_STAT:
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: I_IOA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: I_IORD
+    type: wire
+    width: ''
+  - direction: in
+    name: D_IORD
+    type: wire
+    width: ''
+  - direction: in
+    name: D_IOBE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: GENSTAT
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: ILO_SIG
+    type: wire
+    width: ''
+  - direction: in
+    name: DCWACC
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: IO_A
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: IO_RD
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_BE
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: I_IORDY
+    type: wire
+    width: ''
+  - direction: out
+    name: D_IORDY
+    type: wire
+    width: ''
+  - direction: out
+    name: STATUS
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: ILO
+    type: wire
+    width: ''
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: DC_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_READ
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: KOLLISION
+    type: wire
+    width: ''
+  - direction: out
+    name: STATSIGS
+    type: wire
+    width: '[7:0]'
+  MMU_MATCH:
+  - direction: in
+    name: WRITE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: WRDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ENBYTE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: VADDR
+    type: wire
+    width: '[3:2]'
+  - direction: in
+    name: DADDR
+    type: wire
+    width: '[3:2]'
+  - direction: out
+    name: WDAT
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: CAP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: ENB
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: VALIN
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: WADR
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: RADR
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: VALOUT
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DBG_IN
+    type: wire
+    width: '[40:2]'
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: VIRTUELL
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR_R
+    type: wire
+    width: '[31:2]'
+  - direction: in
+    name: MMU_Q
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: DBG_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW_PTB
+    type: wire
+    width: ''
+  - direction: in
+    name: PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: IVAR
+    type: wire
+    width: ''
+  - direction: in
+    name: WR_MRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR
+    type: wire
+    width: '[19:16]'
+  - direction: in
+    name: MVALID
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: WE_MV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_MV
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: DAT_MV
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: NEW_PTB_RUN
+    type: wire
+    width: ''
+  - direction: in
+    name: CUPDATE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: CA_SET
+    type: wire
+    width: ''
+  - direction: in
+    name: HIT_ALL
+    type: wire
+    width: ''
+  - direction: in
+    name: UPDATE
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: INVAL_A
+    type: wire
+    width: ''
+  - direction: in
+    name: MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: USE_CA
+    type: wire
+    width: ''
+  - direction: in
+    name: INHIBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: KILL
+    type: wire
+    width: ''
+  - direction: out
+    name: WRCRAM0
+    type: wire
+    width: ''
+  - direction: out
+    name: WE_CV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_CV
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DAT_CV
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: INIT_CA_RUN
+    type: wire
+    width: ''
+  - direction: out
+    name: WRSET0
+    type: wire
+    width: ''
+  - direction: in
+    name: RMW
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_FLAGS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: MMU_VA
+    type: wire
+    width: '[31:16]'
+  - direction: out
+    name: MMU_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: out
+    name: CI
+    type: wire
+    width: ''
+  - direction: in
+    name: CVALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DRAMSZ
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:4]'
+  - direction: in
+    name: TAG0
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: INVAL_L
+    type: wire
+    width: ''
+  - direction: in
+    name: KDET
+    type: wire
+    width: ''
+  - direction: in
+    name: ENDRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: DC_ILO
+    type: wire
+    width: ''
+  - direction: out
+    name: CA_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_SPACE
+    type: wire
+    width: ''
+  - direction: out
+    name: WB_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: ADR_EQU
+    type: wire
+    width: ''
+  - direction: out
+    name: TAGDAT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: CAPDAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: SEL_PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: CPU_OUT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: ENWR
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_PREQ
+    type: wire
+    width: ''
+  - direction: in
+    name: DMA_CHK
+    type: wire
+    width: ''
+  - direction: in
+    name: ICTODC
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: RWVAL
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: QWATWO
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_ADR
+    type: wire
+    width: '[28:0]'
+  - direction: out
+    name: PTE_DAT
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IACC_STAT
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ABO_LEVEL1
+    type: wire
+    width: ''
+  - direction: out
+    name: AUX_DAT
+    type: wire
+    width: ''
+  - direction: out
+    name: PTB_ONE
+    type: wire
+    width: ''
+  - direction: out
+    name: MMU_DIN
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: IC_SIGS
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: KOMUX
+    type: wire
+    width: ''
+  - direction: out
+    name: DMA_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: HLDA
+    type: wire
+    width: ''
+  - direction: out
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_STAT
+    type: wire
+    width: '[1:0]'
+  MMU_UP:
+  - direction: in
+    name: WRITE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: WRDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ENBYTE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: VADDR
+    type: wire
+    width: '[3:2]'
+  - direction: in
+    name: DADDR
+    type: wire
+    width: '[3:2]'
+  - direction: out
+    name: WDAT
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: CAP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: ENB
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: VALIN
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: WADR
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: RADR
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: VALOUT
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DBG_IN
+    type: wire
+    width: '[40:2]'
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: VIRTUELL
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR_R
+    type: wire
+    width: '[31:2]'
+  - direction: in
+    name: MMU_Q
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: DBG_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW_PTB
+    type: wire
+    width: ''
+  - direction: in
+    name: PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: IVAR
+    type: wire
+    width: ''
+  - direction: in
+    name: WR_MRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR
+    type: wire
+    width: '[19:16]'
+  - direction: in
+    name: MVALID
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: WE_MV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_MV
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: DAT_MV
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: NEW_PTB_RUN
+    type: wire
+    width: ''
+  - direction: in
+    name: CUPDATE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: CA_SET
+    type: wire
+    width: ''
+  - direction: in
+    name: HIT_ALL
+    type: wire
+    width: ''
+  - direction: in
+    name: UPDATE
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: INVAL_A
+    type: wire
+    width: ''
+  - direction: in
+    name: MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: USE_CA
+    type: wire
+    width: ''
+  - direction: in
+    name: INHIBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: KILL
+    type: wire
+    width: ''
+  - direction: out
+    name: WRCRAM0
+    type: wire
+    width: ''
+  - direction: out
+    name: WE_CV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_CV
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DAT_CV
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: INIT_CA_RUN
+    type: wire
+    width: ''
+  - direction: out
+    name: WRSET0
+    type: wire
+    width: ''
+  - direction: in
+    name: RMW
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_FLAGS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: MMU_VA
+    type: wire
+    width: '[31:16]'
+  - direction: out
+    name: MMU_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: out
+    name: CI
+    type: wire
+    width: ''
+  - direction: in
+    name: CVALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DRAMSZ
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:4]'
+  - direction: in
+    name: TAG0
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: INVAL_L
+    type: wire
+    width: ''
+  - direction: in
+    name: KDET
+    type: wire
+    width: ''
+  - direction: in
+    name: ENDRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: DC_ILO
+    type: wire
+    width: ''
+  - direction: out
+    name: CA_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_SPACE
+    type: wire
+    width: ''
+  - direction: out
+    name: WB_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: ADR_EQU
+    type: wire
+    width: ''
+  - direction: out
+    name: TAGDAT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: CAPDAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: SEL_PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: CPU_OUT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: ENWR
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_PREQ
+    type: wire
+    width: ''
+  - direction: in
+    name: DMA_CHK
+    type: wire
+    width: ''
+  - direction: in
+    name: ICTODC
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: RWVAL
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: QWATWO
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_ADR
+    type: wire
+    width: '[28:0]'
+  - direction: out
+    name: PTE_DAT
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IACC_STAT
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ABO_LEVEL1
+    type: wire
+    width: ''
+  - direction: out
+    name: AUX_DAT
+    type: wire
+    width: ''
+  - direction: out
+    name: PTB_ONE
+    type: wire
+    width: ''
+  - direction: out
+    name: MMU_DIN
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: IC_SIGS
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: KOMUX
+    type: wire
+    width: ''
+  - direction: out
+    name: DMA_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: HLDA
+    type: wire
+    width: ''
+  - direction: out
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_STAT
+    type: wire
+    width: '[1:0]'
+  MULFILTER:
+  - direction: in
+    name: Data
+    type: wire
+    width: ''
+  - direction: in
+    name: AA
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MRESULT
+    type: wire
+    width: '[32:0]'
+  - direction: in
+    name: MASKE
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ROT
+    type: wire
+    width: ''
+  - direction: in
+    name: SIZE
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SH_VAL
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: SH_DAT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: SH_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MASK_SEL
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: FLAG
+    type: wire
+    width: ''
+  - direction: in
+    name: dataa
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: cin
+    type: wire
+    width: ''
+  - direction: in
+    name: add_sub
+    type: wire
+    width: ''
+  - direction: in
+    name: bwd
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: result
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: cout
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: SFP_DAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: BMASKE
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: SP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: WRADR
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: RDAA
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: DETOIP
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: BITSEL
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DISP
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: in
+    name: DSR
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: I_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PSR
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: BMCODE
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: OV_FLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: ACB_ZERO
+    type: wire
+    width: ''
+  - direction: out
+    name: STRING
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: Multiplexer
+    type: wire
+    width: ''
+  NEU_VALID:
+  - direction: in
+    name: WRITE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: WRDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ENBYTE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: VADDR
+    type: wire
+    width: '[3:2]'
+  - direction: in
+    name: DADDR
+    type: wire
+    width: '[3:2]'
+  - direction: out
+    name: WDAT
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: CAP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: ENB
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: VALIN
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: WADR
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: RADR
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: VALOUT
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DBG_IN
+    type: wire
+    width: '[40:2]'
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: VIRTUELL
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR_R
+    type: wire
+    width: '[31:2]'
+  - direction: in
+    name: MMU_Q
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: DBG_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW_PTB
+    type: wire
+    width: ''
+  - direction: in
+    name: PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: IVAR
+    type: wire
+    width: ''
+  - direction: in
+    name: WR_MRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR
+    type: wire
+    width: '[19:16]'
+  - direction: in
+    name: MVALID
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: WE_MV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_MV
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: DAT_MV
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: NEW_PTB_RUN
+    type: wire
+    width: ''
+  - direction: in
+    name: CUPDATE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: CA_SET
+    type: wire
+    width: ''
+  - direction: in
+    name: HIT_ALL
+    type: wire
+    width: ''
+  - direction: in
+    name: UPDATE
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: INVAL_A
+    type: wire
+    width: ''
+  - direction: in
+    name: MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: USE_CA
+    type: wire
+    width: ''
+  - direction: in
+    name: INHIBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: KILL
+    type: wire
+    width: ''
+  - direction: out
+    name: WRCRAM0
+    type: wire
+    width: ''
+  - direction: out
+    name: WE_CV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_CV
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DAT_CV
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: INIT_CA_RUN
+    type: wire
+    width: ''
+  - direction: out
+    name: WRSET0
+    type: wire
+    width: ''
+  - direction: in
+    name: RMW
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_FLAGS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: MMU_VA
+    type: wire
+    width: '[31:16]'
+  - direction: out
+    name: MMU_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: out
+    name: CI
+    type: wire
+    width: ''
+  - direction: in
+    name: CVALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DRAMSZ
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:4]'
+  - direction: in
+    name: TAG0
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: INVAL_L
+    type: wire
+    width: ''
+  - direction: in
+    name: KDET
+    type: wire
+    width: ''
+  - direction: in
+    name: ENDRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: DC_ILO
+    type: wire
+    width: ''
+  - direction: out
+    name: CA_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_SPACE
+    type: wire
+    width: ''
+  - direction: out
+    name: WB_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: ADR_EQU
+    type: wire
+    width: ''
+  - direction: out
+    name: TAGDAT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: CAPDAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: SEL_PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: CPU_OUT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: ENWR
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_PREQ
+    type: wire
+    width: ''
+  - direction: in
+    name: DMA_CHK
+    type: wire
+    width: ''
+  - direction: in
+    name: ICTODC
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: RWVAL
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: QWATWO
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_ADR
+    type: wire
+    width: '[28:0]'
+  - direction: out
+    name: PTE_DAT
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IACC_STAT
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ABO_LEVEL1
+    type: wire
+    width: ''
+  - direction: out
+    name: AUX_DAT
+    type: wire
+    width: ''
+  - direction: out
+    name: PTB_ONE
+    type: wire
+    width: ''
+  - direction: out
+    name: MMU_DIN
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: IC_SIGS
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: KOMUX
+    type: wire
+    width: ''
+  - direction: out
+    name: DMA_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: HLDA
+    type: wire
+    width: ''
+  - direction: out
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_STAT
+    type: wire
+    width: '[1:0]'
+  OPDEC_REG:
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_STAT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: in
+    name: ALSB
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: USED
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: IC_DIN
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: IC_INIT
+    type: wire
+    width: ''
+  - direction: in
+    name: RESTART
+    type: wire
+    width: ''
+  - direction: in
+    name: STOP_IC
+    type: wire
+    width: ''
+  - direction: out
+    name: OPREG
+    type: wire
+    width: '[55:0]'
+  - direction: out
+    name: ANZ_VAL
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: IC_READ
+    type: wire
+    width: ''
+  - direction: out
+    name: NEW_PC
+    type: wire
+    width: ''
+  - direction: out
+    name: NEXT_ADR
+    type: wire
+    width: ''
+  - direction: out
+    name: DATA_HOLD
+    type: wire
+    width: ''
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IC_TEX
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: INIT_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: LOAD_PC
+    type: wire
+    width: ''
+  - direction: in
+    name: NEXT_PCA
+    type: wire
+    width: ''
+  - direction: in
+    name: DISP
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PC_NEW
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: SAVE_PC
+    type: wire
+    width: ''
+  - direction: in
+    name: FPU_TRAP
+    type: wire
+    width: ''
+  - direction: in
+    name: ADIVAR
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_ARCHI
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PC_ICACHE
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PC_SAVE
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: IC_USER
+    type: wire
+    width: ''
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: IPOS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: INIT
+    type: wire
+    width: ''
+  - direction: out
+    name: OPOS
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: VALID
+    type: wire
+    width: ''
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ILL
+    type: wire
+    width: ''
+  - direction: out
+    name: UNDEF
+    type: wire
+    width: ''
+  - direction: in
+    name: PHASE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: SRC_1
+    type: wire
+    width: '[6:0]'
+  - direction: in
+    name: ADRD1
+    type: wire
+    width: '[18:0]'
+  - direction: in
+    name: PHRD1
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: NXRD1
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: ACCA
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: OPERA
+    type: wire
+    width: '[10:0]'
+  - direction: out
+    name: STATE_0
+    type: wire
+    width: '[66:0]'
+  - direction: out
+    name: STATE_GROUP_50
+    type: wire
+    width: '[66:0]'
+  PREPDATA:
+  - direction: in
+    name: START
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MEI
+    type: wire
+    width: ''
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSD_1
+    type: wire
+    width: '[52:32]'
+  - direction: out
+    name: LSD_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: LOAD_MSD
+    type: wire
+    width: ''
+  - direction: in
+    name: A_IN
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CY_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: SUBP
+    type: wire
+    width: ''
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CY_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DO_BCD
+    type: wire
+    width: ''
+  - direction: out
+    name: BCD_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: BCD_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: MAN1
+    type: wire
+    width: '[20:0]'
+  - direction: in
+    name: SRCFLAGS
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MAN2
+    type: wire
+    width: '[19:0]'
+  - direction: in
+    name: MODE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: MRESULT
+    type: wire
+    width: '[105:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: NOT_DEI
+    type: wire
+    width: ''
+  - direction: in
+    name: EXTDATA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSB
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: 'NULL'
+    type: wire
+    width: ''
+  - direction: out
+    name: MINUS
+    type: wire
+    width: ''
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DONE
+    type: wire
+    width: ''
+  - direction: out
+    name: DIVI_OUT
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: DVZ_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: DEI_OVF
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: WR_REG
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: TT_DP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CLR_LSB
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: UP_DP
+    type: wire
+    width: ''
+  - direction: out
+    name: WREN_L
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  PROG_COUNTER:
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_STAT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: in
+    name: ALSB
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: USED
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: IC_DIN
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: IC_INIT
+    type: wire
+    width: ''
+  - direction: in
+    name: RESTART
+    type: wire
+    width: ''
+  - direction: in
+    name: STOP_IC
+    type: wire
+    width: ''
+  - direction: out
+    name: OPREG
+    type: wire
+    width: '[55:0]'
+  - direction: out
+    name: ANZ_VAL
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: IC_READ
+    type: wire
+    width: ''
+  - direction: out
+    name: NEW_PC
+    type: wire
+    width: ''
+  - direction: out
+    name: NEXT_ADR
+    type: wire
+    width: ''
+  - direction: out
+    name: DATA_HOLD
+    type: wire
+    width: ''
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IC_TEX
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: INIT_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: LOAD_PC
+    type: wire
+    width: ''
+  - direction: in
+    name: NEXT_PCA
+    type: wire
+    width: ''
+  - direction: in
+    name: DISP
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PC_NEW
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: SAVE_PC
+    type: wire
+    width: ''
+  - direction: in
+    name: FPU_TRAP
+    type: wire
+    width: ''
+  - direction: in
+    name: ADIVAR
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_ARCHI
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PC_ICACHE
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PC_SAVE
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: IC_USER
+    type: wire
+    width: ''
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: IPOS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: INIT
+    type: wire
+    width: ''
+  - direction: out
+    name: OPOS
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: VALID
+    type: wire
+    width: ''
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ILL
+    type: wire
+    width: ''
+  - direction: out
+    name: UNDEF
+    type: wire
+    width: ''
+  - direction: in
+    name: PHASE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: SRC_1
+    type: wire
+    width: '[6:0]'
+  - direction: in
+    name: ADRD1
+    type: wire
+    width: '[18:0]'
+  - direction: in
+    name: PHRD1
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: NXRD1
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: ACCA
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: OPERA
+    type: wire
+    width: '[10:0]'
+  - direction: out
+    name: STATE_0
+    type: wire
+    width: '[66:0]'
+  - direction: out
+    name: STATE_GROUP_50
+    type: wire
+    width: '[66:0]'
+  REGISTER:
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: WRADR
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: PC_ARCHI
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: PCMATCH
+    type: wire
+    width: ''
+  - direction: in
+    name: DBG_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: out
+    name: CFG
+    type: wire
+    width: '[12:0]'
+  - direction: out
+    name: MCR
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: out
+    name: PTB_SEL
+    type: wire
+    width: ''
+  - direction: out
+    name: IVAR
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: IVAR_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: CINV
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: Y_INIT
+    type: wire
+    width: ''
+  - direction: out
+    name: DSR
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: DBG_TRAPS
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DBG_IN
+    type: wire
+    width: '[40:2]'
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: LFSR
+    type: wire
+    width: ''
+  - direction: in
+    name: UP_SP
+    type: wire
+    width: ''
+  - direction: in
+    name: TT_SP
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[16:0]'
+  - direction: out
+    name: FSR
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: TWREN
+    type: wire
+    width: ''
+  - direction: out
+    name: FPU_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: SAVE_PC
+    type: wire
+    width: ''
+  - direction: in
+    name: DOWR
+    type: wire
+    width: ''
+  - direction: in
+    name: BYDIN
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: RADR
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: WADR
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: WMASKE
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: SELI
+    type: wire
+    width: ''
+  REG_LIST:
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_STAT
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: in
+    name: ALSB
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: USED
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: IC_DIN
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: IC_INIT
+    type: wire
+    width: ''
+  - direction: in
+    name: RESTART
+    type: wire
+    width: ''
+  - direction: in
+    name: STOP_IC
+    type: wire
+    width: ''
+  - direction: out
+    name: OPREG
+    type: wire
+    width: '[55:0]'
+  - direction: out
+    name: ANZ_VAL
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: IC_READ
+    type: wire
+    width: ''
+  - direction: out
+    name: NEW_PC
+    type: wire
+    width: ''
+  - direction: out
+    name: NEXT_ADR
+    type: wire
+    width: ''
+  - direction: out
+    name: DATA_HOLD
+    type: wire
+    width: ''
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IC_TEX
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: INIT_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: LOAD_PC
+    type: wire
+    width: ''
+  - direction: in
+    name: NEXT_PCA
+    type: wire
+    width: ''
+  - direction: in
+    name: DISP
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PC_NEW
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: SAVE_PC
+    type: wire
+    width: ''
+  - direction: in
+    name: FPU_TRAP
+    type: wire
+    width: ''
+  - direction: in
+    name: ADIVAR
+    type: wire
+    width: ''
+  - direction: out
+    name: PC_ARCHI
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PC_ICACHE
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PC_SAVE
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: IC_USER
+    type: wire
+    width: ''
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: IPOS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: INIT
+    type: wire
+    width: ''
+  - direction: out
+    name: OPOS
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: VALID
+    type: wire
+    width: ''
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ILL
+    type: wire
+    width: ''
+  - direction: out
+    name: UNDEF
+    type: wire
+    width: ''
+  - direction: in
+    name: PHASE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: SRC_1
+    type: wire
+    width: '[6:0]'
+  - direction: in
+    name: ADRD1
+    type: wire
+    width: '[18:0]'
+  - direction: in
+    name: PHRD1
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: NXRD1
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: ACCA
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: OPERA
+    type: wire
+    width: '[10:0]'
+  - direction: out
+    name: STATE_0
+    type: wire
+    width: '[66:0]'
+  - direction: out
+    name: STATE_GROUP_50
+    type: wire
+    width: '[66:0]'
+  SCANDIG:
+  - direction: in
+    name: START
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MEI
+    type: wire
+    width: ''
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSD_1
+    type: wire
+    width: '[52:32]'
+  - direction: out
+    name: LSD_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: LOAD_MSD
+    type: wire
+    width: ''
+  - direction: in
+    name: A_IN
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: CY_IN
+    type: wire
+    width: ''
+  - direction: in
+    name: SUBP
+    type: wire
+    width: ''
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CY_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: DO_BCD
+    type: wire
+    width: ''
+  - direction: out
+    name: BCD_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: BCD_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: MAN1
+    type: wire
+    width: '[20:0]'
+  - direction: in
+    name: SRCFLAGS
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: MAN2
+    type: wire
+    width: '[19:0]'
+  - direction: in
+    name: MODE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: MRESULT
+    type: wire
+    width: '[105:0]'
+  - direction: in
+    name: DIN
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: MBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: NOT_DEI
+    type: wire
+    width: ''
+  - direction: in
+    name: EXTDATA
+    type: wire
+    width: ''
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MSB
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: 'NULL'
+    type: wire
+    width: ''
+  - direction: out
+    name: MINUS
+    type: wire
+    width: ''
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DONE
+    type: wire
+    width: ''
+  - direction: out
+    name: DIVI_OUT
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: DVZ_TRAP
+    type: wire
+    width: ''
+  - direction: out
+    name: DEI_OVF
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: word
+    type: wire
+    width: ''
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: WR_REG
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_DONE
+    type: wire
+    width: ''
+  - direction: in
+    name: COP_OP
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: COP_IN
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: TT_DP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: CLR_LSB
+    type: wire
+    width: ''
+  - direction: out
+    name: COP_GO
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: UP_DP
+    type: wire
+    width: ''
+  - direction: out
+    name: WREN_L
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: DP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: COP_OUT
+    type: wire
+    width: '[127:0]'
+  SCHALE:
+  - direction: in
+    name: Data
+    type: wire
+    width: ''
+  - direction: in
+    name: AA
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MRESULT
+    type: wire
+    width: '[32:0]'
+  - direction: in
+    name: MASKE
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ROT
+    type: wire
+    width: ''
+  - direction: in
+    name: SIZE
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SH_VAL
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: SH_DAT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: SH_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MASK_SEL
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: FLAG
+    type: wire
+    width: ''
+  - direction: in
+    name: dataa
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: cin
+    type: wire
+    width: ''
+  - direction: in
+    name: add_sub
+    type: wire
+    width: ''
+  - direction: in
+    name: bwd
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: result
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: cout
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: SFP_DAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: BMASKE
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: SP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: WRADR
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: RDAA
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: DETOIP
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: BITSEL
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DISP
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: in
+    name: DSR
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: I_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PSR
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: BMCODE
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: OV_FLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: ACB_ZERO
+    type: wire
+    width: ''
+  - direction: out
+    name: STRING
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: Multiplexer
+    type: wire
+    width: ''
+  SFPU_ADDSUB:
+  - direction: in
+    name: dataa
+    type: wire
+    width: '[35:0]'
+  - direction: in
+    name: add_sub
+    type: wire
+    width: ''
+  - direction: out
+    name: result
+    type: wire
+    width: '[35:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: NZEXP
+    type: wire
+    width: '[2:1]'
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[36:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: START
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: out
+    name: FP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: TT_SP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: SP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: SP_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: UP_SP
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  SFPU_MUL:
+  - direction: in
+    name: dataa
+    type: wire
+    width: '[35:0]'
+  - direction: in
+    name: add_sub
+    type: wire
+    width: ''
+  - direction: out
+    name: result
+    type: wire
+    width: '[35:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: NZEXP
+    type: wire
+    width: '[2:1]'
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[36:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: START
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: out
+    name: FP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: TT_SP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: SP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: SP_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: UP_SP
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  SHIFTER:
+  - direction: in
+    name: Data
+    type: wire
+    width: ''
+  - direction: in
+    name: AA
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DOUT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MRESULT
+    type: wire
+    width: '[32:0]'
+  - direction: in
+    name: MASKE
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ROT
+    type: wire
+    width: ''
+  - direction: in
+    name: SIZE
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SH_VAL
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: SH_DAT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: SH_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: MASK_SEL
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC2
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: FLAG
+    type: wire
+    width: ''
+  - direction: in
+    name: dataa
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: cin
+    type: wire
+    width: ''
+  - direction: in
+    name: add_sub
+    type: wire
+    width: ''
+  - direction: in
+    name: bwd
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: result
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: cout
+    type: wire
+    width: ''
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: SFP_DAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: BMASKE
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: in
+    name: SP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: DP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: LD_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: WRADR
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: RDAA
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: DETOIP
+    type: wire
+    width: '[11:0]'
+  - direction: in
+    name: BITSEL
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: OVF_BCD
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DISP
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: in
+    name: DSR
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: I_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: PSR
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: BMCODE
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: OV_FLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: ACB_ZERO
+    type: wire
+    width: ''
+  - direction: out
+    name: STRING
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: Multiplexer
+    type: wire
+    width: ''
+  SP_FPU:
+  - direction: in
+    name: dataa
+    type: wire
+    width: '[35:0]'
+  - direction: in
+    name: add_sub
+    type: wire
+    width: ''
+  - direction: out
+    name: result
+    type: wire
+    width: '[35:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: SRC1
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: NZEXP
+    type: wire
+    width: '[2:1]'
+  - direction: in
+    name: BWD
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: SELECT
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: OUT
+    type: wire
+    width: '[36:0]'
+  - direction: out
+    name: IOUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: CMPRES
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: START
+    type: wire
+    width: ''
+  - direction: in
+    name: OPCODE
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: FSR
+    type: wire
+    width: '[8:3]'
+  - direction: in
+    name: FL
+    type: wire
+    width: ''
+  - direction: out
+    name: FP_OUT
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: TT_SP
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: SP_CMP
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: SP_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: UP_SP
+    type: wire
+    width: ''
+  - direction: out
+    name: multiplexer
+    type: wire
+    width: ''
+  WRPORT:
+  - direction: in
+    name: WRITE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_Q
+    type: wire
+    width: '[127:0]'
+  - direction: in
+    name: WRDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: ENBYTE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: VADDR
+    type: wire
+    width: '[3:2]'
+  - direction: in
+    name: DADDR
+    type: wire
+    width: '[3:2]'
+  - direction: out
+    name: WDAT
+    type: wire
+    width: '[127:0]'
+  - direction: out
+    name: CAP_Q
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: ENB
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: VALIN
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: WADR
+    type: wire
+    width: '[4:0]'
+  - direction: in
+    name: WREN
+    type: wire
+    width: ''
+  - direction: in
+    name: RADR
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: VALOUT
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DBG_IN
+    type: wire
+    width: '[40:2]'
+  - direction: in
+    name: READ
+    type: wire
+    width: ''
+  - direction: in
+    name: USER
+    type: wire
+    width: ''
+  - direction: in
+    name: VIRTUELL
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR_R
+    type: wire
+    width: '[31:2]'
+  - direction: in
+    name: MMU_Q
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: DBG_HIT
+    type: wire
+    width: ''
+  - direction: in
+    name: BRESET
+    type: wire
+    width: ''
+  - direction: in
+    name: NEW_PTB
+    type: wire
+    width: ''
+  - direction: in
+    name: PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: IVAR
+    type: wire
+    width: ''
+  - direction: in
+    name: WR_MRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: VADR
+    type: wire
+    width: '[19:16]'
+  - direction: in
+    name: MVALID
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: WE_MV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_MV
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: DAT_MV
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: NEW_PTB_RUN
+    type: wire
+    width: ''
+  - direction: in
+    name: CUPDATE
+    type: wire
+    width: ''
+  - direction: in
+    name: DRAM_ACC
+    type: wire
+    width: ''
+  - direction: in
+    name: CA_SET
+    type: wire
+    width: ''
+  - direction: in
+    name: HIT_ALL
+    type: wire
+    width: ''
+  - direction: in
+    name: UPDATE
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: INVAL_A
+    type: wire
+    width: ''
+  - direction: in
+    name: MDONE
+    type: wire
+    width: ''
+  - direction: in
+    name: USE_CA
+    type: wire
+    width: ''
+  - direction: in
+    name: INHIBIT
+    type: wire
+    width: ''
+  - direction: in
+    name: KILL
+    type: wire
+    width: ''
+  - direction: out
+    name: WRCRAM0
+    type: wire
+    width: ''
+  - direction: out
+    name: WE_CV
+    type: wire
+    width: ''
+  - direction: out
+    name: WADR_CV
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: DAT_CV
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: INIT_CA_RUN
+    type: wire
+    width: ''
+  - direction: out
+    name: WRSET0
+    type: wire
+    width: ''
+  - direction: in
+    name: RMW
+    type: wire
+    width: ''
+  - direction: in
+    name: MCR_FLAGS
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: MMU_VA
+    type: wire
+    width: '[31:16]'
+  - direction: out
+    name: MMU_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: PROT_ERROR
+    type: wire
+    width: ''
+  - direction: out
+    name: CI
+    type: wire
+    width: ''
+  - direction: in
+    name: CVALID
+    type: wire
+    width: '[23:0]'
+  - direction: in
+    name: DRAMSZ
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: ADDR
+    type: wire
+    width: '[31:4]'
+  - direction: in
+    name: TAG0
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: CFG
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: INVAL_L
+    type: wire
+    width: ''
+  - direction: in
+    name: KDET
+    type: wire
+    width: ''
+  - direction: in
+    name: ENDRAM
+    type: wire
+    width: ''
+  - direction: in
+    name: DC_ILO
+    type: wire
+    width: ''
+  - direction: out
+    name: CA_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_SPACE
+    type: wire
+    width: ''
+  - direction: out
+    name: WB_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: ADR_EQU
+    type: wire
+    width: ''
+  - direction: out
+    name: TAGDAT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: IO_READY
+    type: wire
+    width: ''
+  - direction: in
+    name: CAPDAT
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: PTB_WR
+    type: wire
+    width: ''
+  - direction: in
+    name: SEL_PTB1
+    type: wire
+    width: ''
+  - direction: in
+    name: CPU_OUT
+    type: wire
+    width: '[28:12]'
+  - direction: in
+    name: ENWR
+    type: wire
+    width: ''
+  - direction: in
+    name: IC_PREQ
+    type: wire
+    width: ''
+  - direction: in
+    name: DMA_CHK
+    type: wire
+    width: ''
+  - direction: in
+    name: ICTODC
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: RWVAL
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: QWATWO
+    type: wire
+    width: ''
+  - direction: out
+    name: IO_ACC
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_ADR
+    type: wire
+    width: '[28:0]'
+  - direction: out
+    name: PTE_DAT
+    type: wire
+    width: '[19:0]'
+  - direction: out
+    name: ABORT
+    type: wire
+    width: ''
+  - direction: out
+    name: IACC_STAT
+    type: wire
+    width: '[3:1]'
+  - direction: out
+    name: ABO_LEVEL1
+    type: wire
+    width: ''
+  - direction: out
+    name: AUX_DAT
+    type: wire
+    width: ''
+  - direction: out
+    name: PTB_ONE
+    type: wire
+    width: ''
+  - direction: out
+    name: MMU_DIN
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: IC_SIGS
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: KOMUX
+    type: wire
+    width: ''
+  - direction: out
+    name: DMA_MUX
+    type: wire
+    width: ''
+  - direction: out
+    name: HLDA
+    type: wire
+    width: ''
+  - direction: out
+    name: RWVFLAG
+    type: wire
+    width: ''
+  - direction: out
+    name: PTE_STAT
+    type: wire
+    width: '[1:0]'
+  WR_ALIGNER:
+  - direction: in
+    name: PACKET
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DP_Q
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: SIZE
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: WRDATA
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: ENBYTE
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: BCLK
+    type: wire
+    width: ''
+  - direction: in
+    name: ACC_OK
+    type: wire
+    width: ''
+  - direction: in
+    name: REG_OUT
+    type: wire
+    width: ''
+  - direction: in
+    name: RDDATA
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: CA_HIT
+    type: wire
+    width: ''
+  - direction: out
+    name: DP_DI
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: AUX_QW
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
 total_entities: 52
 desc_source: verdict
 health_tier: bronze

@@ -29,3 +29,90 @@ components:
 - rr_arb_tree
 - stream_arbiter_flushable
 - stream_xbar
+top_ports:
+  id_queue:
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: cannot
+    type: wire
+    width: ''
+  - direction: out
+    name: can
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: id_t
+    type: wire
+    width: ''
+  - direction: in
+    name: data_t
+    type: wire
+    width: ''
+  - direction: in
+    name: inp_req_i
+    type: wire
+    width: ''
+  - direction: out
+    name: inp_gnt_o
+    type: wire
+    width: ''
+  - direction: in
+    name: exists_req_i
+    type: wire
+    width: '[NUM_CMP_PORTS-1:0]'
+  - direction: out
+    name: exists_o
+    type: wire
+    width: '[NUM_CMP_PORTS-1:0]'
+  - direction: out
+    name: exists_gnt_o
+    type: wire
+    width: '[NUM_CMP_PORTS-1:0]'
+  - direction: in
+    name: oup_pop_i
+    type: wire
+    width: ''
+  - direction: in
+    name: oup_req_i
+    type: wire
+    width: ''
+  - direction: out
+    name: oup_data_valid_o
+    type: wire
+    width: ''
+  - direction: out
+    name: oup_gnt_o
+    type: wire
+    width: ''
+  - direction: out
+    name: full_o
+    type: wire
+    width: ''
+  - direction: out
+    name: empty_o
+    type: wire
+    width: ''
+  - direction: out
+    name: request
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: id
+    type: wire
+    width: ''
+desc_source: ports

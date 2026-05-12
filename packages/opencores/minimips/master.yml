@@ -61,7 +61,80 @@ components:
 - predict
 - renvoi
 - syscop
+top_ports:
+  minimips:
+  - direction: in
+    name: clock
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ram_adr
+    type: bus32
+    width: ''
+  - direction: out
+    name: ram_r_w
+    type: std_logic
+    width: ''
+  - direction: inout
+    name: ram_data
+    type: bus32
+    width: ''
+  - direction: in
+    name: ram_ack
+    type: std_logic
+    width: ''
+  ram:
+  - direction: in
+    name: req
+    type: std_logic
+    width: ''
+  - direction: in
+    name: adr
+    type: bus32
+    width: ''
+  - direction: inout
+    name: data_inout
+    type: bus32
+    width: ''
+  - direction: in
+    name: r_w
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ready
+    type: "std_logic\n   )"
+    width: ''
+  rom:
+  - direction: in
+    name: adr
+    type: bus32
+    width: ''
+  - direction: out
+    name: donnee
+    type: bus32
+    width: ''
+  - direction: out
+    name: ack
+    type: std_logic
+    width: ''
+  - direction: in
+    name: load
+    type: std_logic
+    width: ''
+  - direction: in
+    name: fname
+    type: "string\n   )"
+    width: ''
 total_entities: 14
 desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-04'
+external_uses:
+- library: work
+  package: alu
+provides_packages:
+- pack_mips

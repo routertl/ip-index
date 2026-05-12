@@ -22,5 +22,60 @@ tags: []
 role: top
 components:
 - llqspi
+top_ports:
+  wbqspiflash:
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_cyc
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_addr
+    type: wire
+    width: '[(AW-1):0]'
+  - direction: in
+    name: i_wb_data
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: o_wb_stall
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wb_ack
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wb_data
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: o_qspi_sck
+    type: wire
+    width: ''
+  - direction: out
+    name: o_qspi_mod
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: o_qspi_dat
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: i_qspi_dat
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: o_interrupt
+    type: wire
+    width: ''
+  - direction: out
+    name: o_debug
+    type: wire
+    width: '[31:0]'
+desc_source: ports
 health_tier: bronze
 last_verified_at: '2026-05-05'

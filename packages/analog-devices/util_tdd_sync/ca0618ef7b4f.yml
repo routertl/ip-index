@@ -182,6 +182,32 @@ components:
 - util_dacfifo_bypass
 - util_pulse_gen
 - util_upack2_impl
+top_ports:
+  util_tdd_sync:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn
+    type: wire
+    width: ''
+  - direction: in
+    name: sync_mode
+    type: wire
+    width: ''
+  - direction: in
+    name: sync_in
+    type: wire
+    width: ''
+  - direction: out
+    name: sync_out
+    type: wire
+    width: ''
+  - direction: out
+    name: assign
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

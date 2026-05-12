@@ -23,3 +23,38 @@ tags: []
 role: top
 components:
 - onehot_to_bin
+top_ports:
+  prioarbiter:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: flush_i
+    type: wire
+    width: ''
+  - direction: in
+    name: en_i
+    type: wire
+    width: ''
+  - direction: in
+    name: req_i
+    type: wire
+    width: '[NUM_REQ-1:0]'
+  - direction: out
+    name: ack_o
+    type: wire
+    width: '[NUM_REQ-1:0]'
+  - direction: out
+    name: vld_o
+    type: wire
+    width: ''
+  - direction: out
+    name: idx_o
+    type: wire
+    width: '[$clog2(NUM_REQ)-1:0]'
+desc_source: preserved

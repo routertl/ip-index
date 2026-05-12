@@ -22,3 +22,42 @@ tags:
 - counter
 - credit
 role: top
+top_ports:
+  credit_counter:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: out
+    name: credit_cnt_t
+    type: wire
+    width: ''
+  - direction: in
+    name: credit_give_i
+    type: wire
+    width: ''
+  - direction: in
+    name: credit_take_i
+    type: wire
+    width: ''
+  - direction: in
+    name: credit_init_i
+    type: wire
+    width: ''
+  - direction: out
+    name: credit_left_o
+    type: wire
+    width: ''
+  - direction: out
+    name: credit_crit_o
+    type: wire
+    width: ''
+  - direction: out
+    name: credit_full_o
+    type: wire
+    width: ''
+desc_source: preserved

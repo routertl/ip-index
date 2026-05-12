@@ -20,5 +20,28 @@ routertl_compat:
   - rtl/axisrandom.v
 tags: []
 role: top
+top_ports:
+  axisrandom:
+  - direction: in
+    name: S_AXI_ACLK
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_ARESETN
+    type: wire
+    width: ''
+  - direction: out
+    name: M_AXIS_TVALID
+    type: wire
+    width: ''
+  - direction: in
+    name: M_AXIS_TREADY
+    type: wire
+    width: ''
+  - direction: out
+    name: M_AXIS_TDATA
+    type: wire
+    width: '[C_AXIS_DATA_WIDTH-1:0]'
+desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-05'

@@ -66,5 +66,26 @@ components:
 - taxi_pcie_us_msi
 - taxi_pcie_us_vpd
 - taxi_pcie_us_vsec_apb
+top_ports:
+  taxi_pcie_axil_master:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_pcie_axil_master_minimal:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_pcie_msix_apb:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_pcie_msix_axil:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 12
 desc_source: curator

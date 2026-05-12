@@ -30,3 +30,46 @@ components:
 - rr_arb_tree
 - stream_arbiter_flushable
 - stream_xbar
+top_ports:
+  stream_arbiter:
+  - direction: in
+    name: streams
+    type: wire
+    width: ''
+  - direction: out
+    name: stream
+    type: wire
+    width: ''
+  - direction: out
+    name: handshake
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: DATA_T
+    type: wire
+    width: ''
+  - direction: in
+    name: inp_valid_i
+    type: wire
+    width: '[N_INP-1:0]'
+  - direction: out
+    name: inp_ready_o
+    type: wire
+    width: '[N_INP-1:0]'
+  - direction: out
+    name: oup_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: oup_ready_i
+    type: wire
+    width: ''
+desc_source: ports

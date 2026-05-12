@@ -63,6 +63,476 @@ components:
 - ram
 - rom
 - v0
+top_ports:
+  PPG:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: ctrl
+    type: wire
+    width: '[10:0]'
+  - direction: in
+    name: d0
+    type: wire
+    width: '[197:0]'
+  - direction: in
+    name: d1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: d
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH:0]'
+  const_:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH_D0:0]'
+  - direction: out
+    name: effective
+    type: wire
+    width: ''
+  f3_add:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: ctrl
+    type: wire
+    width: '[10:0]'
+  - direction: in
+    name: d0
+    type: wire
+    width: '[197:0]'
+  - direction: in
+    name: d1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: d
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH:0]'
+  f3_mult:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: ctrl
+    type: wire
+    width: '[10:0]'
+  - direction: in
+    name: d0
+    type: wire
+    width: '[197:0]'
+  - direction: in
+    name: d1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: d
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH:0]'
+  f3_sub:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: ctrl
+    type: wire
+    width: '[10:0]'
+  - direction: in
+    name: d0
+    type: wire
+    width: '[`WIDTH_D0:0]'
+  - direction: in
+    name: d1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: d
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH:0]'
+  f3m_add:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: ctrl
+    type: wire
+    width: '[10:0]'
+  - direction: in
+    name: d0
+    type: wire
+    width: '[197:0]'
+  - direction: in
+    name: d1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: d
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH:0]'
+  mod_p:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: ctrl
+    type: wire
+    width: '[10:0]'
+  - direction: in
+    name: d0
+    type: wire
+    width: '[197:0]'
+  - direction: in
+    name: d1
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: B
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: out
+    name: C
+    type: wire
+    width: '[`WIDTH:0]'
+  - direction: in
+    name: d
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: A
+    type: wire
+    width: '[`WIDTH:0]'
+  pairing:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: sel
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: w
+    type: wire
+    width: ''
+  - direction: in
+    name: update
+    type: wire
+    width: ''
+  - direction: in
+    name: ready
+    type: wire
+    width: ''
+  - direction: in
+    name: i
+    type: wire
+    width: ''
+  - direction: out
+    name: o
+    type: wire
+    width: ''
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  select:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sel
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: w
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: '[197:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[197:0]'
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: addr_in
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: addr_fsm_in
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: w_in
+    type: wire
+    width: ''
+  - direction: out
+    name: addr_out
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: w_out
+    type: wire
+    width: ''
+  - direction: in
+    name: from_ram
+    type: wire
+    width: '[197:0]'
+  - direction: in
+    name: const_effective
+    type: wire
+    width: ''
+  tiny:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sel
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: w
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: '[197:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[197:0]'
+  - direction: out
+    name: done
+    type: wire
+    width: ''
+  - direction: in
+    name: addr_in
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: addr_fsm_in
+    type: wire
+    width: '[5:0]'
+  - direction: in
+    name: w_in
+    type: wire
+    width: ''
+  - direction: out
+    name: addr_out
+    type: wire
+    width: '[5:0]'
+  - direction: out
+    name: w_out
+    type: wire
+    width: ''
+  - direction: in
+    name: from_ram
+    type: wire
+    width: '[197:0]'
+  - direction: in
+    name: const_effective
+    type: wire
+    width: ''
+  v1:
+  - direction: in
+    name: a
+    type: wire
+    width: '[193:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[193:0]'
+  v2:
+  - direction: in
+    name: a
+    type: wire
+    width: '[193:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[193:0]'
+  v3:
+  - direction: in
+    name: a
+    type: wire
+    width: '[1005:0]'
+  - direction: out
+    name: c
+    type: wire
+    width: '[1005:0]'
 total_entities: 20
 desc_source: verdict
 health_tier: bronze

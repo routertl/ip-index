@@ -30,3 +30,42 @@ tags:
 role: top
 components:
 - cdc_2phase
+top_ports:
+  cdc_fifo_2phase:
+  - direction: in
+    name: src_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: src_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: T
+    type: wire
+    width: ''
+  - direction: in
+    name: src_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: src_ready_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_clk_i
+    type: wire
+    width: ''
+  - direction: out
+    name: dst_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_ready_i
+    type: wire
+    width: ''
+desc_source: ports

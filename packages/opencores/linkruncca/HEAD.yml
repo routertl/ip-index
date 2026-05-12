@@ -50,6 +50,36 @@ components:
 - table_ram
 - table_reader
 - window
+top_ports:
+  LinkRunCCA:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: datavalid_out
+    type: wire
+    width: ''
+  - direction: out
+    name: reg
+    type: wire
+    width: ''
+  - direction: in
+    name: A
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: out
+    name: always
+    type: wire
+    width: ''
 total_entities: 8
 desc_source: preserved
 mirror_status: curated-mirror

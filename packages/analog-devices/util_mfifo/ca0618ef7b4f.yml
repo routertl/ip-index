@@ -179,6 +179,96 @@ components:
 - util_cpack2_impl
 - util_dacfifo_bypass
 - util_upack2_impl
+top_ports:
+  util_mfifo:
+  - direction: in
+    name: din_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: din_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: din_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: din_data_0
+    type: wire
+    width: '[DIN_DATA_WIDTH-1:0]'
+  - direction: in
+    name: din_data_1
+    type: wire
+    width: '[DIN_DATA_WIDTH-1:0]'
+  - direction: in
+    name: din_data_2
+    type: wire
+    width: '[DIN_DATA_WIDTH-1:0]'
+  - direction: in
+    name: din_data_3
+    type: wire
+    width: '[DIN_DATA_WIDTH-1:0]'
+  - direction: in
+    name: din_data_4
+    type: wire
+    width: '[DIN_DATA_WIDTH-1:0]'
+  - direction: in
+    name: din_data_5
+    type: wire
+    width: '[DIN_DATA_WIDTH-1:0]'
+  - direction: in
+    name: din_data_6
+    type: wire
+    width: '[DIN_DATA_WIDTH-1:0]'
+  - direction: in
+    name: din_data_7
+    type: wire
+    width: '[DIN_DATA_WIDTH-1:0]'
+  - direction: in
+    name: dout_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: dout_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: dout_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: dout_data_0
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: dout_data_1
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: dout_data_2
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: dout_data_3
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: dout_data_4
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: dout_data_5
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: dout_data_6
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: dout_data_7
+    type: wire
+    width: '[15:0]'
 desc_source: ports
 external_uses:
 - library: work

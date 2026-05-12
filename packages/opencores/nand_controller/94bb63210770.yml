@@ -35,9 +35,101 @@ components:
 - io_unit
 - latch_unit
 - nand_master
+top_ports:
+  nand_avalon:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: resetn
+    type: std_logic
+    width: ''
+  - direction: out
+    name: readdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: writedata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: pread
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pwrite
+    type: std_logic
+    width: ''
+  - direction: in
+    name: address
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: nand_ale
+    type: std_logic
+    width: ''
+  - direction: out
+    name: nand_nwe
+    type: std_logic
+    width: ''
+  - direction: out
+    name: nand_nwp
+    type: std_logic
+    width: ''
+  - direction: out
+    name: nand_nce
+    type: std_logic
+    width: ''
+  - direction: out
+    name: nand_nre
+    type: std_logic
+    width: ''
+  - direction: in
+    name: nand_rnb
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enable
+    type: std_logic
+    width: ''
+  - direction: in
+    name: nand_rnb
+    type: std_logic
+    width: ''
+  - direction: in
+    name: nreset
+    type: std_logic
+    width: ''
+  - direction: in
+    name: activate
+    type: std_logic
+    width: ''
+  - direction: out
+    name: data_out
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: data_in
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: cmd_in
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: inout
+    name: nand_data
+    type: "std_logic_vector(15 downto 0)\n\t\t)"
+    width: ''
 total_entities: 4
 desc_source: preserved
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/nand_controller
 health_tier: bronze
 last_verified_at: '2026-05-05'
+provides_packages:
+- onfi

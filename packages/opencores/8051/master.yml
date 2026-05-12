@@ -219,6 +219,3296 @@ components:
 - oc8051_tc2
 - oc8051_uart
 - oc8051_wb_iinterface
+top_ports:
+  oc8051_top:
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: int0_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wbd_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: wbd_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: p0_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: p1_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: p2_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: p3_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: rxd_i
+    type: wire
+    width: ''
+  - direction: out
+    name: txd_o
+    type: wire
+    width: ''
+  - direction: in
+    name: t0_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t1_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t2_i
+    type: wire
+    width: ''
+  - direction: in
+    name: t2ex_i
+    type: wire
+    width: ''
+  - direction: in
+    name: scanb_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: scanb_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: scanb_si
+    type: wire
+    width: ''
+  - direction: out
+    name: scanb_so
+    type: wire
+    width: ''
+  - direction: in
+    name: scanb_en
+    type: wire
+    width: ''
+  rom0:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom1:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom10:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom100:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom101:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom102:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom103:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom104:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom105:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom106:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom107:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom108:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom109:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom11:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom110:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom111:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom112:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom113:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom114:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom115:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom116:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom117:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom118:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom119:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom12:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom120:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom121:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom122:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom123:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom124:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom125:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom126:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom127:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom13:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom14:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom15:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom16:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom17:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom18:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom19:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom2:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom20:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom21:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom22:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom23:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom24:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom25:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom26:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom27:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom28:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom29:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom3:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom30:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom31:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom32:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom33:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom34:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom35:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom36:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom37:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom38:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom39:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom4:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom40:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom41:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom42:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom43:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom44:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom45:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom46:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom47:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom48:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom49:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom5:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom50:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom51:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom52:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom53:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom54:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom55:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom56:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom57:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom58:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom59:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom6:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom60:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom61:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom62:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom63:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom64:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom65:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom66:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom67:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom68:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom69:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom7:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom70:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom71:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom72:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom73:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom74:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom75:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom76:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom77:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom78:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom79:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom8:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom80:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom81:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom82:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom83:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom84:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom85:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom86:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom87:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom88:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom89:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom9:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom90:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom91:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom92:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom93:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom94:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom95:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom96:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom97:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom98:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
+  rom99:
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: addr
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: ea_int
+    type: wire
+    width: ''
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: a
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: o
+    type: wire
+    width: '[7:0]'
 total_entities: 156
 desc_source: verdict
 health_tier: bronze

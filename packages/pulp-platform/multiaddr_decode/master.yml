@@ -22,3 +22,30 @@ tags:
 - decode
 - multiaddr
 role: top
+top_ports:
+  multiaddr_decode:
+  - direction: in
+    name: addr_t
+    type: wire
+    width: ''
+  - direction: in
+    name: rule_t
+    type: wire
+    width: ''
+  - direction: out
+    name: select_o
+    type: wire
+    width: '[NoIndices-1:0]'
+  - direction: out
+    name: dec_valid_o
+    type: wire
+    width: ''
+  - direction: out
+    name: dec_error_o
+    type: wire
+    width: ''
+  - direction: in
+    name: address
+    type: wire
+    width: ''
+desc_source: preserved

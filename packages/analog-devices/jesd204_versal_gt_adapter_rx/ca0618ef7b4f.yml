@@ -36,6 +36,76 @@ components:
 - lane_align
 - sync_header_align
 - util_adxcvr_xch
+top_ports:
+  jesd204_versal_gt_adapter_rx:
+  - direction: in
+    name: rxdata
+    type: wire
+    width: '[127 : 0]'
+  - direction: in
+    name: rxheader
+    type: wire
+    width: '[  5 : 0]'
+  - direction: in
+    name: rxctrl0
+    type: wire
+    width: '[ 15 : 0]'
+  - direction: in
+    name: rxctrl1
+    type: wire
+    width: '[ 15 : 0]'
+  - direction: in
+    name: rxctrl2
+    type: wire
+    width: '[  7 : 0]'
+  - direction: in
+    name: rxctrl3
+    type: wire
+    width: '[  7 : 0]'
+  - direction: out
+    name: rxgearboxslip
+    type: wire
+    width: ''
+  - direction: in
+    name: rxheadervalid
+    type: wire
+    width: '[  1 : 0]'
+  - direction: out
+    name: rxslide
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_data
+    type: wire
+    width: '[ 63 : 0]'
+  - direction: out
+    name: rx_charisk
+    type: wire
+    width: '[  3 : 0]'
+  - direction: out
+    name: rx_disperr
+    type: wire
+    width: '[  3 : 0]'
+  - direction: out
+    name: rx_notintable
+    type: wire
+    width: '[  3 : 0]'
+  - direction: out
+    name: rx_header
+    type: wire
+    width: '[  1 : 0]'
+  - direction: out
+    name: rx_block_sync
+    type: wire
+    width: ''
+  - direction: in
+    name: en_char_align
+    type: wire
+    width: ''
+  - direction: in
+    name: usr_clk
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

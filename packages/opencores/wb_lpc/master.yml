@@ -47,6 +47,350 @@ top_modules:
 - wb_lpc_host
 - wb_lpc_periph
 - wb_regfile
+top_ports:
+  serirq_host:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: nrst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: serirq_mode_i
+    type: wire
+    width: ''
+  - direction: out
+    name: serirq_o
+    type: wire
+    width: ''
+  - direction: out
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: out
+    name: irq_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: Bus
+    type: wire
+    width: ''
+  serirq_slave:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: nrst_i
+    type: wire
+    width: ''
+  - direction: out
+    name: serirq_o
+    type: wire
+    width: ''
+  - direction: out
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: irq_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: Bus
+    type: wire
+    width: ''
+  wb_dreq_host:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: nrst_i
+    type: wire
+    width: ''
+  - direction: out
+    name: dma_chan_o
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: dma_req_o
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  wb_dreq_periph:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: nrst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: dma_chan_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: dma_req_i
+    type: wire
+    width: ''
+  - direction: out
+    name: output
+    type: wire
+    width: ''
+  wb_lpc_host:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: nrst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wbs_adr_i
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: wbs_dat_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wbs_dat_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wbs_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: wbs_tga_i
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: wbs_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wbs_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wbs_cyc_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wbs_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: wbs_err_o
+    type: wire
+    width: ''
+  - direction: out
+    name: lframe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: lad_oe
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: lad_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: Bus
+    type: wire
+    width: ''
+  - direction: out
+    name: lad_o
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: dma_chan_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: dma_tc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: word
+    type: wire
+    width: ''
+  - direction: out
+    name: four
+    type: wire
+    width: ''
+  wb_lpc_periph:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: nrst_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wbm_adr_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: wbm_dat_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wbm_dat_i
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: wbm_sel_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: wbm_tga_o
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: wbm_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: wbm_stb_o
+    type: wire
+    width: ''
+  - direction: out
+    name: wbm_cyc_o
+    type: wire
+    width: ''
+  - direction: in
+    name: wbm_ack_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wbm_err_i
+    type: wire
+    width: ''
+  - direction: in
+    name: lframe_i
+    type: wire
+    width: ''
+  - direction: out
+    name: lad_oe
+    type: wire
+    width: ''
+  - direction: out
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: lad_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: Bus
+    type: wire
+    width: ''
+  - direction: out
+    name: lad_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: dma_chan_o
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: dma_tc_o
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  wb_regfile:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: nrst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_err_o
+    type: wire
+    width: ''
+  - direction: in
+    name: ws_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: datareg0
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: datareg1
+    type: wire
+    width: '[31:0]'
 total_entities: 7
 desc_source: verdict
 health_tier: bronze

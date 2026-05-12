@@ -47,9 +47,2840 @@ components:
 - pcipargen
 - pciregs
 - pciwbsequ
+top_ports:
+  pci32tLite:
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cbe
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: par
+    type: std_logic
+    width: ''
+  - direction: in
+    name: frame
+    type: std_logic
+    width: ''
+  - direction: in
+    name: irdy
+    type: std_logic
+    width: ''
+  - direction: out
+    name: trdy
+    type: std_logic
+    width: ''
+  - direction: out
+    name: devsel
+    type: std_logic
+    width: ''
+  - direction: out
+    name: stop
+    type: std_logic
+    width: ''
+  - direction: in
+    name: idsel
+    type: std_logic
+    width: ''
+  - direction: out
+    name: perr
+    type: std_logic
+    width: ''
+  - direction: out
+    name: serr
+    type: std_logic
+    width: ''
+  - direction: out
+    name: intb
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: std_logic_vector
+    width: WBSIZE-1 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_logic_vector
+    width: WBSIZE-1 downto 0
+  - direction: out
+    name: wb_sel_o
+    type: std_logic_vector(((WBSIZE/8)-1) downto 0)
+    width: ''
+  - direction: out
+    name: wb_we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_cyc_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_rty_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_err_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_int_i
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cbe_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: idsel_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: bar0_i
+    type: std_logic_vector
+    width: 31 downto 9
+  - direction: in
+    name: memEN_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ioEN_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: pciadrLD_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: adrcfg_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: adrmem_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: adr_o
+    type: std_logic_vector
+    width: 24 downto 0
+  - direction: out
+    name: cmd_o
+    type: "std_logic_vector(3 downto 0)\n\t)"
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cbe_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: frame_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: irdy_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: devsel_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: trdy_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: stop_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: adrmem_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pciadrLD_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pcidOE_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: parOE_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wbdatLD_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wrcfg_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rdcfg_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_cyc_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_rty_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_err_i
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pcidatout_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: pcidOE_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wbdatLD_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rdcfg_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cbe_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: wb_dat_i
+    type: std_logic_vector((WBSIZE-1) downto 0)
+    width: ''
+  - direction: out
+    name: wb_dat_o
+    type: std_logic_vector((WBSIZE-1) downto 0)
+    width: ''
+  - direction: in
+    name: rg_dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: rg_dat_o
+    type: "std_logic_vector(31 downto 0)\n\t)"
+    width: ''
+  - direction: in
+    name: rst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cbe_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: dat_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: dat_o
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: wrcfg_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rdcfg_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: perr_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: serr_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tabort_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: bar0_o
+    type: std_logic_vector
+    width: 31 downto 9
+  - direction: out
+    name: perrEN_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: serrEN_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: memEN_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ioEN_o
+    type: "std_logic\n\t)"
+    width: ''
+  - direction: in
+    name: pcidatout_i
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: cbe_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: parOE_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: par_o
+    type: std_logic
+    width: ''
+  pfb:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: out
+    name: o
+    type: "std_logic_vector(7 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: out
+    name: o
+    type: 'std_logic_vector(7 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: std_logic
+    width: ''
+  pfs:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: out
+    name: o
+    type: "std_logic_vector(7 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: out
+    name: o
+    type: 'std_logic_vector(7 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: std_logic
+    width: ''
+  sync:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: out
+    name: o
+    type: "std_logic_vector(7 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: out
+    name: o
+    type: 'std_logic_vector(7 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: std_logic
+    width: ''
+  sync2:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: out
+    name: o
+    type: "std_logic_vector(7 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: out
+    name: o
+    type: 'std_logic_vector(7 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: std_logic
+    width: ''
+  sync2h:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: out
+    name: o
+    type: "std_logic_vector(7 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: out
+    name: o
+    type: 'std_logic_vector(7 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: std_logic
+    width: ''
+  sync2l:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: out
+    name: o
+    type: "std_logic_vector(7 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: out
+    name: o
+    type: 'std_logic_vector(7 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: std_logic
+    width: ''
+  synch:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: out
+    name: o
+    type: "std_logic_vector(7 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: out
+    name: o
+    type: 'std_logic_vector(7 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: std_logic
+    width: ''
+  syncl:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: out
+    name: o
+    type: "std_logic_vector(7 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: out
+    name: o
+    type: 'std_logic_vector(7 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: std_logic
+    width: ''
+  syncv:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: out
+    name: o
+    type: "std_logic_vector(7 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: out
+    name: o
+    type: 'std_logic_vector(7 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: std_logic
+    width: ''
+  syncv2h:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: "std_logic_vector(size-1 downto 0)\n\n\t)"
+    width: ''
+  - direction: out
+    name: o
+    type: "std_logic_vector(7 downto 0)\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic
+    width: ''
+  - direction: out
+    name: q
+    type: "std_logic\n\n\t)"
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: d
+    type: std_logic_vector
+    width: size-1 downto 0
+  - direction: out
+    name: q
+    type: 'std_logic_vector(size-1 downto 0)
+
+
+      )'
+    width: ''
+  - direction: out
+    name: o
+    type: 'std_logic_vector(7 downto 0)
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: 'std_logic
+
+
+      )'
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a
+    type: std_logic
+    width: ''
+  - direction: out
+    name: y
+    type: std_logic
+    width: ''
 total_entities: 17
 desc_source: verdict
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/pci32tlite_oc
 health_tier: bronze
 last_verified_at: '2026-05-05'
+provides_packages:
+- onapackage

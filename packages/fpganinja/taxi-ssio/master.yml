@@ -52,5 +52,26 @@ components:
 - taxi_ssio_ddr_out
 - taxi_ssio_sdr_in
 - taxi_ssio_sdr_out
+top_ports:
+  ssio_sdr_in_diff:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_ssio_ddr_in_diff:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_ssio_ddr_out_diff:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_ssio_sdr_out_diff:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 10
 desc_source: curator

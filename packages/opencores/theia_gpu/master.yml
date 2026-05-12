@@ -117,6 +117,1367 @@ components:
 - WBMaster
 - WishBoneMasterUnit
 - WishBoneSlaveUnit
+top_ports:
+  CIRCULAR_SHIFTLEFT_POSEDGE_EX:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  FFD32_POSEDGE:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  FFD_POSEDGE_ASYNC_RESET:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  FFD_POSEDGE_SYNCRONOUS_RESET:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  FFT1:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  FFToggleOnce_1Bit:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  INCREMENT:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: A
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: R
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[`LONG_WIDTH-1:0]'
+  - direction: in
+    name: iOperation
+    type: wire
+    width: ''
+  - direction: in
+    name: iInputReady
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: OutputReady
+    type: wire
+    width: ''
+  - direction: out
+    name: ready
+    type: wire
+    width: ''
+  MUXFULLPARALELL_16bits_2SEL:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  MUXFULLPARALELL_16bits_2SEL_X:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  MUXFULLPARALELL_2SEL_GENERIC:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  MUXFULLPARALELL_3SEL_WALKINGONE:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  MUXFULLPARALELL_96bits_2SEL:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  Module_Host:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: iEnable
+    type: wire
+    width: ''
+  - direction: in
+    name: iHostDataReadConfirmed
+    type: wire
+    width: ''
+  - direction: in
+    name: iMemorySize
+    type: wire
+    width: '[`WB_WIDTH-1:0]'
+  - direction: in
+    name: iPrimitiveCount
+    type: wire
+    width: '[`WB_WIDTH-1:0]'
+  - direction: out
+    name: oReadAddress
+    type: wire
+    width: '[`WB_WIDTH-1:0]'
+  - direction: in
+    name: iReadData
+    type: wire
+    width: '[`WB_WIDTH-1:0]'
+  - direction: in
+    name: iGPUCommitedResults
+    type: wire
+    width: ''
+  - direction: out
+    name: oCoreSelectMask
+    type: wire
+    width: '[`MAX_CORES-1:0]'
+  - direction: out
+    name: oMemSelect
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: DAT_O
+    type: wire
+    width: '[`WB_WIDTH-1:0]'
+  - direction: out
+    name: ADR_O
+    type: wire
+    width: '[`WB_WIDTH-1:0]'
+  - direction: out
+    name: TGA_O
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: RENDREN_O
+    type: wire
+    width: '[`MAX_CORES-1:0]'
+  - direction: out
+    name: CYC_O
+    type: wire
+    width: ''
+  - direction: out
+    name: STB_O
+    type: wire
+    width: ''
+  - direction: out
+    name: MST_O
+    type: wire
+    width: ''
+  - direction: out
+    name: WE_O
+    type: wire
+    width: ''
+  - direction: in
+    name: GRDY_I
+    type: wire
+    width: ''
+  - direction: out
+    name: GACK_O
+    type: wire
+    width: ''
+  - direction: out
+    name: STDONE_O
+    type: wire
+    width: ''
+  - direction: out
+    name: oHostDataAvailable
+    type: wire
+    width: ''
+  - direction: in
+    name: iGPUDone
+    type: wire
+    width: ''
+  - direction: in
+    name: iDebugWidth
+    type: wire
+    width: '[`WIDTH-1:0]'
+  - direction: in
+    name: ACK_I
+    type: wire
+    width: ''
+  RADIX_R_MUL_32_FULL_PARALLEL:
+  - direction: in
+    name: i1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: O
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: C
+    type: wire
+    width: ''
+  - direction: in
+    name: In
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: Out
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: A
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: R
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: iUnscaled
+    type: wire
+    width: ''
+  - direction: in
+    name: iInputReady
+    type: wire
+    width: ''
+  - direction: out
+    name: OutputReady
+    type: wire
+    width: ''
+  RAM_SINGLE_READ_PORT:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: iWriteEnable
+    type: wire
+    width: ''
+  - direction: in
+    name: iReadAddress0
+    type: wire
+    width: '[ADDR_WIDTH-1:0]'
+  - direction: in
+    name: iReadAddress1
+    type: wire
+    width: '[ADDR_WIDTH-1:0]'
+  - direction: in
+    name: iWriteAddress
+    type: wire
+    width: '[ADDR_WIDTH-1:0]'
+  - direction: in
+    name: iDataIn
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: oDataOut0
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  - direction: out
+    name: oDataOut1
+    type: wire
+    width: '[DATA_WIDTH-1:0]'
+  SELECT_1_TO_N:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  SHIFTER2_16_BITS:
+  - direction: in
+    name: i1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: O
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: C
+    type: wire
+    width: ''
+  - direction: in
+    name: In
+    type: wire
+    width: '[15:0]'
+  - direction: out
+    name: Out
+    type: wire
+    width: '[15:0]'
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: A
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: B
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: R
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: iUnscaled
+    type: wire
+    width: ''
+  - direction: in
+    name: iInputReady
+    type: wire
+    width: ''
+  - direction: out
+    name: OutputReady
+    type: wire
+    width: ''
+  SHIFTLEFT_POSEDGE:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  SignedIntegerDivision:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: iDividend
+    type: wire
+    width: '[`WIDTH-1:0]'
+  - direction: out
+    name: oQuotient
+    type: wire
+    width: '[`WIDTH-1:0]'
+  - direction: in
+    name: iInputReady
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: oOutputReady
+    type: wire
+    width: ''
+  - direction: out
+    name: xQuotient
+    type: wire
+    width: '[`WIDTH-1:0]'
+  - direction: out
+    name: OutputReady
+    type: wire
+    width: ''
+  - direction: out
+    name: from
+    type: wire
+    width: ''
+  - direction: out
+    name: Quotient
+    type: wire
+    width: '[`WIDTH-1:0]'
+  - direction: out
+    name: ExitStatus
+    type: wire
+    width: '[7:0]'
+  UPCOUNTER_POSEDGE:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  UnsignedIntegerDivision:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: iDividend
+    type: wire
+    width: '[`WIDTH-1:0]'
+  - direction: out
+    name: oQuotient
+    type: wire
+    width: '[`WIDTH-1:0]'
+  - direction: in
+    name: iInputReady
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: oOutputReady
+    type: wire
+    width: ''
+  - direction: out
+    name: xQuotient
+    type: wire
+    width: '[`WIDTH-1:0]'
+  - direction: out
+    name: OutputReady
+    type: wire
+    width: ''
+  - direction: out
+    name: from
+    type: wire
+    width: ''
+  - direction: out
+    name: Quotient
+    type: wire
+    width: '[`WIDTH-1:0]'
+  - direction: out
+    name: ExitStatus
+    type: wire
+    width: '[7:0]'
+  UpCounter_16E:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  UpCounter_3:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
+  UpCounter_32:
+  - direction: in
+    name: Clock
+    type: wire
+    width: ''
+  - direction: in
+    name: Clear
+    type: wire
+    width: ''
+  - direction: in
+    name: D
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: Q
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Reset
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: Initial
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: in
+    name: Sel
+    type: wire
+    width: '[SEL_WIDTH-1:0]'
+  - direction: in
+    name: En
+    type: wire
+    width: ''
+  - direction: out
+    name: O
+    type: wire
+    width: '[OUTPUT_WIDTH-1:0]'
+  - direction: in
+    name: wire
+    type: wire
+    width: ''
+  - direction: out
+    name: O1
+    type: wire
+    width: '[SIZE-1:0]'
+  - direction: out
+    name: to
+    type: wire
+    width: ''
+  - direction: in
+    name: S
+    type: wire
+    width: ''
 total_entities: 53
 desc_source: verdict
 health_tier: bronze

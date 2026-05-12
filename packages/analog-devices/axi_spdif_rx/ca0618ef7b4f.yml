@@ -34,6 +34,148 @@ components:
 - rx_decode
 - rx_phase_det
 - rx_status_reg
+top_ports:
+  axi_spdif_rx:
+  - direction: in
+    name: spdif_rx_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spdif_rx_i_dbg
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_aresetn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_awaddr
+    type: std_logic_vector
+    width: C_S_AXI_ADDR_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_awvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_wdata
+    type: std_logic_vector
+    width: C_S_AXI_DATA_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_wstrb
+    type: std_logic_vector((C_S_AXI_DATA_WIDTH/8)-1 downto 0)
+    width: ''
+  - direction: in
+    name: s_axi_wvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_bready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_araddr
+    type: std_logic_vector
+    width: C_S_AXI_ADDR_WIDTH-1 downto 0
+  - direction: in
+    name: s_axi_arvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_rready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_arready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_rdata
+    type: std_logic_vector
+    width: C_S_AXI_DATA_WIDTH-1 downto 0
+  - direction: out
+    name: s_axi_rresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: s_axi_rvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_wready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_bresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: s_axi_bvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axi_awready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axi_awprot
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: s_axi_arprot
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: m_axis_tready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axis_tdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: m_axis_tlast
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axis_tvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axis_tkeep
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: dma_req_rstn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dma_req_davalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dma_req_datype
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: dma_req_daready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dma_req_drvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: dma_req_drtype
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: dma_req_drlast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: dma_req_drready
+    type: "std_logic\n  )"
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

@@ -28,3 +28,50 @@ components:
 - fifo_v3
 - mem_to_banks_detailed
 - stream_fifo
+top_ports:
+  fifo:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: flush_i
+    type: wire
+    width: ''
+  - direction: in
+    name: testmode_i
+    type: wire
+    width: ''
+  - direction: out
+    name: full_o
+    type: wire
+    width: ''
+  - direction: out
+    name: empty_o
+    type: wire
+    width: ''
+  - direction: out
+    name: threshold_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dtype
+    type: wire
+    width: ''
+  - direction: in
+    name: push_i
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: pop_i
+    type: wire
+    width: ''
+desc_source: ports

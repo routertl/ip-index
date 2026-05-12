@@ -29,5 +29,76 @@ components:
 - aximwr2wbsp
 - skidbuffer
 - wbm2axisp
+top_ports:
+  wbxbar:
+  - direction: in
+    name: ports
+    type: wire
+    width: ''
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_mcyc
+    type: wire
+    width: '[NM-1:0]'
+  - direction: in
+    name: i_maddr
+    type: wire
+    width: '[NM*AW-1:0]'
+  - direction: in
+    name: i_mdata
+    type: wire
+    width: '[NM*DW-1:0]'
+  - direction: in
+    name: i_msel
+    type: wire
+    width: '[NM*DW/8-1:0]'
+  - direction: out
+    name: o_mstall
+    type: wire
+    width: '[NM-1:0]'
+  - direction: out
+    name: o_mack
+    type: wire
+    width: '[NM-1:0]'
+  - direction: out
+    name: o_mdata
+    type: wire
+    width: '[NM*DW-1:0]'
+  - direction: out
+    name: o_merr
+    type: wire
+    width: '[NM-1:0]'
+  - direction: out
+    name: o_scyc
+    type: wire
+    width: '[NS-1:0]'
+  - direction: out
+    name: o_saddr
+    type: wire
+    width: '[NS*AW-1:0]'
+  - direction: out
+    name: o_sdata
+    type: wire
+    width: '[NS*DW-1:0]'
+  - direction: out
+    name: o_ssel
+    type: wire
+    width: '[NS*DW/8-1:0]'
+  - direction: in
+    name: i_sstall
+    type: wire
+    width: '[NS-1:0]'
+  - direction: in
+    name: i_sdata
+    type: wire
+    width: '[NS*DW-1:0]'
+  - direction: in
+    name: i_serr
+    type: wire
+    width: '[NS-1:0]'
+desc_source: ports
 health_tier: bronze
 last_verified_at: '2026-05-05'

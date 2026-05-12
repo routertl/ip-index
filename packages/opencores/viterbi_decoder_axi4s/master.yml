@@ -51,7 +51,60 @@ components:
 - recursion
 - reorder
 - trellis_traceback
+top_ports:
+  dec_viterbi:
+  - direction: in
+    name: s_axis_input_tdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: s_axis_input_tlast
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axis_input_tready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axis_output_tdata
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axis_output_tlast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: m_axis_output_tready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axis_ctrl_tdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: s_axis_ctrl_tlast
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axis_ctrl_tready
+    type: 'std_logic
+
+      )'
+    width: ''
 total_entities: 9
 desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-04'
+external_uses:
+- library: dec_viterbi
+  package: pkg_components
+- library: dec_viterbi
+  package: pkg_helper
+- library: dec_viterbi
+  package: pkg_param
+- library: dec_viterbi
+  package: pkg_param_derived
+- library: dec_viterbi
+  package: pkg_trellis
+- library: dec_viterbi
+  package: pkg_types

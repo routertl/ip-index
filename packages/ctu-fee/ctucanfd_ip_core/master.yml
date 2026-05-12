@@ -1,8 +1,8 @@
 name: ctucanfd_ip_core
 namespace: ctu-fee
 version: master
-commit_sha: f25fe172730ae620ca44d8e7bca13a83ef2a34db
-published_at: '2026-01-11T22:50:27+01:00'
+commit_sha: b76a8888ecd10d2a1f38590eadfc8a3dc2394b48
+published_at: '2026-01-07T13:55:29+01:00'
 description: CTU CAN FD is soft IP-Core written in VHDL which supports ISO and NON-ISO
   versions of CAN FD protocol.
 license: MIT
@@ -12,17 +12,17 @@ source:
   url: https://gitlab.fel.cvut.cz/canbus/ctucanfd_ip_core.git
   tag: master
   ip_yml_path: .
-  resolved_commit: f25fe172730ae620ca44d8e7bca13a83ef2a34db
+  resolved_commit: b76a8888ecd10d2a1f38590eadfc8a3dc2394b48
 routertl_compat:
   language: vhdl-2008
   library: ctu_can_fd_rtl
   files:
   - src/memory_registers/generated/address_decoder.vhd
-  - src/packages/can_fd_frame_format.vhd
-  - src/packages/can_fd_register_map.vhd
   - src/packages/can_constants_pkg.vhd
   - src/packages/can_config_pkg.vhd
   - src/packages/can_types_pkg.vhd
+  - src/packages/can_fd_register_map.vhd
+  - src/packages/can_fd_frame_format.vhd
   - src/interface/ahb_ifc.vhd
   - src/interface/apb_ifc.vhd
   - src/common_blocks/dff_arst.vhd
@@ -203,16 +203,174 @@ components:
 - txt_buffer_fsm
 - txt_buffer_odd
 - txt_buffer_ram
+top_ports:
+  can_top_ahb:
+  - direction: in
+    name: hclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: haddr
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: hwdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: hsel
+    type: std_logic
+    width: ''
+  - direction: in
+    name: hwrite
+    type: std_logic
+    width: ''
+  - direction: in
+    name: hsize
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: hburst
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: hprot
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: htrans
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: hmastlock
+    type: std_logic
+    width: ''
+  - direction: in
+    name: hready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: hreadyout
+    type: std_logic
+    width: ''
+  - direction: out
+    name: hresp
+    type: std_logic
+    width: ''
+  - direction: out
+    name: hrdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: can_rx
+    type: std_logic
+    width: ''
+  can_top_apb:
+  - direction: in
+    name: aclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: arstn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: scan_enable
+    type: std_logic
+    width: ''
+  - direction: out
+    name: res_n_out
+    type: std_logic
+    width: ''
+  - direction: out
+    name: irq
+    type: std_logic
+    width: ''
+  - direction: out
+    name: CAN_tx
+    type: std_logic
+    width: ''
+  - direction: in
+    name: CAN_rx
+    type: std_logic
+    width: ''
+  - direction: in
+    name: timestamp
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: s_apb_penable
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_apb_pprot
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: s_apb_prdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: s_apb_pready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_apb_psel
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_apb_pslverr
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_apb_pstrb
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: s_apb_pwdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: s_apb_pwrite
+    type: "std_logic\n  )"
+    width: ''
+  memory_bus_template:
+  - direction: in
+    name: signal res_n
+    type: std_logic
+    width: ''
+  - direction: out
+    name: signal r_data
+    type: std_logic_vector
+    width: data_width - 1 downto 0
+  - direction: in
+    name: signal read
+    type: std_logic
+    width: ''
+  - direction: in
+    name: signal write
+    type: std_logic
+    width: ''
+  - direction: in
+    name: signal be
+    type: std_logic_vector
+    width: data_width / 8 - 1 downto 0
+  - direction: in
+    name: signal lock_2
+    type: std_logic
+    width: ''
+  shift_reg:
+  - direction: in
+    name: res_n
+    type: std_logic
+    width: ''
 total_entities: 81
 desc_source: readme
-external_uses:
-- library: ctu_can_fd_rtl
-  package: CAN_FD_frame_format
-- library: ctu_can_fd_rtl
-  package: CAN_FD_register_map
 provides_packages:
 - can_config_pkg
 - can_constants_pkg
+- can_fd_frame_format
+- can_fd_register_map
 - can_registers_pkg
 - can_types_pkg
 - cmn_reg_map_pkg

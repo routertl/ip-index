@@ -20,5 +20,20 @@ routertl_compat:
   - rtl/xddrcck.v
 tags: []
 role: top
+top_ports:
+  xddrck:
+  - direction: in
+    name: i_clk
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: i_v
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: o_pin
+    type: wire
+    width: ''
+desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-05'

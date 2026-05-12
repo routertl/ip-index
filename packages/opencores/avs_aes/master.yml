@@ -55,7 +55,23 @@ components:
 - mux2
 - mux3
 - sbox
+top_ports:
+  aes_fsm_decrypt:
+  - direction: in
+    name: clk
+    type: STD_LOGIC
+    width: ''
+  aes_fsm_encrypt:
+  - direction: in
+    name: clk
+    type: STD_LOGIC
+    width: ''
 total_entities: 12
 desc_source: verdict
 health_tier: bronze
 last_verified_at: '2026-05-05'
+external_uses:
+- library: altera_mf
+  package: all
+provides_packages:
+- avs_aes_pkg

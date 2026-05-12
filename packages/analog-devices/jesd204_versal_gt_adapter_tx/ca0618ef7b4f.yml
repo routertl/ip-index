@@ -29,6 +29,44 @@ tags:
 - tx
 - versal
 role: top
+top_ports:
+  jesd204_versal_gt_adapter_tx:
+  - direction: out
+    name: txdata
+    type: wire
+    width: '[127 : 0]'
+  - direction: out
+    name: txheader
+    type: wire
+    width: '[  5 : 0]'
+  - direction: out
+    name: txctrl0
+    type: wire
+    width: '[ 15 : 0]'
+  - direction: out
+    name: txctrl1
+    type: wire
+    width: '[ 15 : 0]'
+  - direction: out
+    name: txctrl2
+    type: wire
+    width: '[  7 : 0]'
+  - direction: in
+    name: tx_data
+    type: wire
+    width: '[ 63 : 0]'
+  - direction: in
+    name: tx_header
+    type: wire
+    width: '[  1 : 0]'
+  - direction: in
+    name: tx_charisk
+    type: wire
+    width: '[  3 : 0]'
+  - direction: in
+    name: usr_clk
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

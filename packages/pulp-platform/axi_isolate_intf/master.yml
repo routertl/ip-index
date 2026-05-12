@@ -1,8 +1,8 @@
 name: axi_isolate_intf
 namespace: pulp-platform
 version: master
-commit_sha: 3fafe2496243a88cfa2a778921f0e7f71a6a2d9d
-published_at: '2026-04-15T10:26:08+02:00'
+commit_sha: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
+published_at: '2026-05-07T16:14:15+02:00'
 description: Isolates an AXI master port from slave port requests, optionally terminating
   transactions with error responses.
 license: Apache-2.0
@@ -12,7 +12,7 @@ source:
   url: https://github.com/pulp-platform/axi.git
   tag: master
   ip_yml_path: .
-  resolved_commit: 3fafe2496243a88cfa2a778921f0e7f71a6a2d9d
+  resolved_commit: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 routertl_compat:
   language: systemverilog
   library: work
@@ -58,3 +58,38 @@ components:
 - axi_to_mem
 - axi_xbar
 - axi_xbar_unmuxed
+top_ports:
+  axi_isolate_intf:
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: axi_req_t
+    type: wire
+    width: ''
+  - direction: out
+    name: axi_resp_t
+    type: wire
+    width: ''
+  - direction: in
+    name: isolate_i
+    type: wire
+    width: ''
+  - direction: out
+    name: isolated_o
+    type: wire
+    width: ''
+  - direction: out
+    name: signal
+    type: wire
+    width: ''
+desc_source: preserved

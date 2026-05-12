@@ -31,3 +31,29 @@ role: top
 components:
 - en_cl_fix_round
 - en_cl_fix_saturate
+top_ports:
+  en_cl_fix_resize:
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_meta
+    type: std_logic_vector
+    width: meta_width_g-1 downto 0
+  - direction: in
+    name: in_data
+    type: std_logic_vector(cl_fix_width(in_fmt_g)-1 downto 0)
+    width: ''
+  - direction: out
+    name: out_meta
+    type: std_logic_vector
+    width: meta_width_g-1 downto 0
+  - direction: out
+    name: out_data
+    type: "std_logic_vector(cl_fix_width(out_fmt_g)-1 downto 0)\n    )"
+    width: ''
+desc_source: preserved
+provides_packages:
+- en_cl_fix_pkg
+- en_cl_fix_private_pkg

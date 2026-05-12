@@ -31,6 +31,44 @@ tags:
 - transmit
 - transmitter
 role: top
+top_ports:
+  axi_streaming_dma_tx_fifo:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: resetn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: fifo_reset
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s_axis_tready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axis_tdata
+    type: std_logic_vector
+    width: FIFO_DWIDTH-1 downto 0
+  - direction: in
+    name: s_axis_tlast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s_axis_tvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: out_ack
+    type: std_logic
+    width: ''
+  - direction: out
+    name: out_data
+    type: std_logic_vector
+    width: FIFO_DWIDTH-1 downto 0
 desc_source: ports
 external_uses:
 - library: work

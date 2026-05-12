@@ -22,6 +22,20 @@ tags:
 - gen
 - sysref
 role: top
+top_ports:
+  ad_sysref_gen:
+  - direction: in
+    name: core_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sysref_en
+    type: wire
+    width: ''
+  - direction: out
+    name: sysref_out
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

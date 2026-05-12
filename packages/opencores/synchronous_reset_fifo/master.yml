@@ -23,6 +23,40 @@ tags:
 role: repo
 top_modules:
 - fifo
+top_ports:
+  fifo:
+  - direction: in
+    name: clock
+    type: wire
+    width: ''
+  - direction: in
+    name: resetn
+    type: wire
+    width: ''
+  - direction: in
+    name: write_enb
+    type: wire
+    width: ''
+  - direction: in
+    name: read_enb
+    type: wire
+    width: ''
+  - direction: in
+    name: data_in
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: out
+    name: data_out
+    type: wire
+    width: '[WIDTH-1:0]'
+  - direction: out
+    name: empty
+    type: wire
+    width: ''
+  - direction: out
+    name: full
+    type: wire
+    width: ''
 total_entities: 1
 desc_source: ports
 health_tier: bronze

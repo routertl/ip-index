@@ -30,6 +30,60 @@ top_modules:
 components:
 - key_schedule
 - round_f
+top_ports:
+  xtea:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enc
+    type: std_logic
+    width: ''
+  - direction: in
+    name: block_in
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: key
+    type: std_logic_vector
+    width: 127 downto 0
+  - direction: out
+    name: v_0_out
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: v_1_out
+    type: std_logic_vector(31 downto 0))
+    width: ''
+  - direction: in
+    name: last_val
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: v_out
+    type: std_logic_vector(31 downto 0))
+    width: ''
+  - direction: in
+    name: rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enc
+    type: std_logic
+    width: ''
+  - direction: in
+    name: key
+    type: std_logic_vector
+    width: 127 downto 0
+  - direction: out
+    name: subkey
+    type: std_logic_vector(31 downto 0))
+    width: ''
 total_entities: 3
 desc_source: verdict
 health_tier: bronze

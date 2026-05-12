@@ -26,6 +26,106 @@ top_modules:
 - sha1
 - sha256
 - sha512
+top_ports:
+  sha1:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: text_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: 32bit
+    type: wire
+    width: ''
+  - direction: out
+    name: text_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: cmd_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: write
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_o
+    type: wire
+    width: '[3:0]'
+  sha256:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: text_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: 32bit
+    type: wire
+    width: ''
+  - direction: out
+    name: text_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: cmd_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: write
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_o
+    type: wire
+    width: '[3:0]'
+  sha512:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: text_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: 32bit
+    type: wire
+    width: ''
+  - direction: out
+    name: text_o
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: cmd_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: write
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_o
+    type: wire
+    width: '[4:0]'
 total_entities: 3
 desc_source: verdict
 health_tier: bronze

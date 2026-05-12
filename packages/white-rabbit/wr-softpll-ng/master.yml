@@ -50,6 +50,57 @@ components:
 - spll_wb_slave
 - wr_softpll_ng
 - xwr_softpll_ng
+top_ports:
+  spll_bangbang_pd:
+  - direction: in
+    name: rst_n_fbck_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_n_sysclk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: cfg_div_fb_i
+    type: std_logic_vector
+    width: 5 downto 0
+  - direction: in
+    name: cfg_gating_i
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: sync_en_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: sync_done_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: err_wrap_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: err_o
+    type: std_logic_vector
+    width: g_error_bits-1 downto 0
+  - direction: out
+    name: err_stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ref_present_o
+    type: "std_logic\n    )"
+    width: ''
+  spll_period_detect:
+  - direction: in
+    name: rst_n_sysclk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: in_sel_i
+    type: "std_logic_vector(4 downto 0)\n    )"
+    width: ''
 total_entities: 6
 desc_source: curator
 external_uses:

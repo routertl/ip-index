@@ -73,6 +73,1575 @@ components:
 - sd_rx_fifo
 - sd_tx_fifo
 - versatile_fifo_dptam_dw
+top_ports:
+  CRC_7:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_dat_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_out_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_oe_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_out_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_clk_o_pad
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_dat_o
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_adr_o
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_re_o
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_full
+    type: wire
+    width: '[1:2]'
+  - direction: in
+    name: fifo_empty
+    type: wire
+    width: '[1:2]'
+  - direction: out
+    name: start_dat_t
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: fifo_acces_token
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_re_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_adr_i
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_re_i
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[9:1]'
+  - direction: out
+    name: q_bin
+    type: wire
+    width: '[9:1]'
+  - direction: in
+    name: cke
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: wptr
+    type: wire
+    width: '[N:0]'
+  - direction: in
+    name: wclk
+    type: wire
+    width: ''
+  - direction: in
+    name: BITVAL
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: in
+    name: RST
+    type: wire
+    width: ''
+  - direction: out
+    name: CRC
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DAT_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: DAT_dat_o
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DAT_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: start_dat
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: fifo_acces
+    type: wire
+    width: ''
+  sd_cmd_phy:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_dat_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_out_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_oe_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_out_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_clk_o_pad
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_dat_o
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_adr_o
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_re_o
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_full
+    type: wire
+    width: '[1:2]'
+  - direction: in
+    name: fifo_empty
+    type: wire
+    width: '[1:2]'
+  - direction: out
+    name: start_dat_t
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: fifo_acces_token
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_re_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_adr_i
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_re_i
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[9:1]'
+  - direction: out
+    name: q_bin
+    type: wire
+    width: '[9:1]'
+  - direction: in
+    name: cke
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: wptr
+    type: wire
+    width: '[N:0]'
+  - direction: in
+    name: wclk
+    type: wire
+    width: ''
+  - direction: in
+    name: BITVAL
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: in
+    name: RST
+    type: wire
+    width: ''
+  - direction: out
+    name: CRC
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DAT_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: DAT_dat_o
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DAT_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: start_dat
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: fifo_acces
+    type: wire
+    width: ''
+  sd_controller_fifo_wba:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_dat_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_out_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_oe_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_out_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_clk_o_pad
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_dat_o
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_adr_o
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_re_o
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_full
+    type: wire
+    width: '[1:2]'
+  - direction: in
+    name: fifo_empty
+    type: wire
+    width: '[1:2]'
+  - direction: out
+    name: start_dat_t
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: fifo_acces_token
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_re_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_adr_i
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_re_i
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[9:1]'
+  - direction: out
+    name: q_bin
+    type: wire
+    width: '[9:1]'
+  - direction: in
+    name: cke
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: wptr
+    type: wire
+    width: '[N:0]'
+  - direction: in
+    name: wclk
+    type: wire
+    width: ''
+  - direction: in
+    name: BITVAL
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: in
+    name: RST
+    type: wire
+    width: ''
+  - direction: out
+    name: CRC
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DAT_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: DAT_dat_o
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DAT_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: start_dat
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: fifo_acces
+    type: wire
+    width: ''
+  sd_counter:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_dat_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_out_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_oe_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_out_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_clk_o_pad
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_dat_o
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_adr_o
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_re_o
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_full
+    type: wire
+    width: '[1:2]'
+  - direction: in
+    name: fifo_empty
+    type: wire
+    width: '[1:2]'
+  - direction: out
+    name: start_dat_t
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: fifo_acces_token
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_re_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_adr_i
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_re_i
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[9:1]'
+  - direction: out
+    name: q_bin
+    type: wire
+    width: '[9:1]'
+  - direction: in
+    name: cke
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: wptr
+    type: wire
+    width: '[N:0]'
+  - direction: in
+    name: wclk
+    type: wire
+    width: ''
+  - direction: in
+    name: BITVAL
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: in
+    name: RST
+    type: wire
+    width: ''
+  - direction: out
+    name: CRC
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DAT_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: DAT_dat_o
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DAT_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: start_dat
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: fifo_acces
+    type: wire
+    width: ''
+  sd_data_phy:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_dat_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_out_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_oe_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_out_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_clk_o_pad
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_dat_o
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_adr_o
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_re_o
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_full
+    type: wire
+    width: '[1:2]'
+  - direction: in
+    name: fifo_empty
+    type: wire
+    width: '[1:2]'
+  - direction: out
+    name: start_dat_t
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: fifo_acces_token
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_re_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_adr_i
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_re_i
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[9:1]'
+  - direction: out
+    name: q_bin
+    type: wire
+    width: '[9:1]'
+  - direction: in
+    name: cke
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: wptr
+    type: wire
+    width: '[N:0]'
+  - direction: in
+    name: wclk
+    type: wire
+    width: ''
+  - direction: in
+    name: BITVAL
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: in
+    name: RST
+    type: wire
+    width: ''
+  - direction: out
+    name: CRC
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DAT_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: DAT_dat_o
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DAT_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: start_dat
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: fifo_acces
+    type: wire
+    width: ''
+  sd_fifo:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_dat_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_out_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_oe_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_out_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_clk_o_pad
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_dat_o
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_adr_o
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_re_o
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_full
+    type: wire
+    width: '[1:2]'
+  - direction: in
+    name: fifo_empty
+    type: wire
+    width: '[1:2]'
+  - direction: out
+    name: start_dat_t
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: fifo_acces_token
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_re_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_adr_i
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_re_i
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[9:1]'
+  - direction: out
+    name: q_bin
+    type: wire
+    width: '[9:1]'
+  - direction: in
+    name: cke
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: wptr
+    type: wire
+    width: '[N:0]'
+  - direction: in
+    name: wclk
+    type: wire
+    width: ''
+  - direction: in
+    name: BITVAL
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: in
+    name: RST
+    type: wire
+    width: ''
+  - direction: out
+    name: CRC
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DAT_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: DAT_dat_o
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DAT_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: start_dat
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: fifo_acces
+    type: wire
+    width: ''
+  sdc_controller:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: output
+    type: wire
+    width: ''
+  - direction: out
+    name: input
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: m_wb_adr_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_wb_sel_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: m_wb_we_o
+    type: wire
+    width: ''
+  - direction: in
+    name: m_wb_dat_i
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_wb_dat_o
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_wb_cyc_o
+    type: wire
+    width: ''
+  - direction: out
+    name: m_wb_stb_o
+    type: wire
+    width: ''
+  - direction: in
+    name: m_wb_ack_i
+    type: wire
+    width: ''
+  - direction: out
+    name: m_wb_cti_o
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: m_wb_bte_o
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_dat_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_out_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_out_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_clk_o_pad
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_clk_i_pad
+    type: wire
+    width: ''
+  - direction: out
+    name: int_a
+    type: wire
+    width: ''
+  versatile_fifo_async_cmp:
+  - direction: in
+    name: wb_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: wb_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: wb_adr_i
+    type: wire
+    width: '[2:0]'
+  - direction: in
+    name: wb_sel_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: wb_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_cyc_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_stb_i
+    type: wire
+    width: ''
+  - direction: out
+    name: wb_ack_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_dat_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_out_o
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: sd_dat_oe_o
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_out_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_clk_o_pad
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: cmd_dat_i
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_dat_o
+    type: wire
+    width: ''
+  - direction: out
+    name: cmd_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_adr_o
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_dat_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_dat_o
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: sd_we_o
+    type: wire
+    width: ''
+  - direction: out
+    name: sd_re_o
+    type: wire
+    width: ''
+  - direction: in
+    name: fifo_full
+    type: wire
+    width: '[1:2]'
+  - direction: in
+    name: fifo_empty
+    type: wire
+    width: '[1:2]'
+  - direction: out
+    name: start_dat_t
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: fifo_acces_token
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_re_i
+    type: wire
+    width: ''
+  - direction: in
+    name: wb_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_adr_i
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: sd_we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: sd_re_i
+    type: wire
+    width: ''
+  - direction: out
+    name: q
+    type: wire
+    width: '[9:1]'
+  - direction: out
+    name: q_bin
+    type: wire
+    width: '[9:1]'
+  - direction: in
+    name: cke
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: wptr
+    type: wire
+    width: '[N:0]'
+  - direction: in
+    name: wclk
+    type: wire
+    width: ''
+  - direction: in
+    name: BITVAL
+    type: wire
+    width: ''
+  - direction: in
+    name: Enable
+    type: wire
+    width: ''
+  - direction: in
+    name: CLK
+    type: wire
+    width: ''
+  - direction: in
+    name: RST
+    type: wire
+    width: ''
+  - direction: out
+    name: CRC
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: DAT_oe_o
+    type: wire
+    width: ''
+  - direction: out
+    name: DAT_dat_o
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: DAT_dat_i
+    type: wire
+    width: '[3:0]'
+  - direction: in
+    name: start_dat
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: fifo_acces
+    type: wire
+    width: ''
 total_entities: 23
 desc_source: verdict
 health_tier: bronze

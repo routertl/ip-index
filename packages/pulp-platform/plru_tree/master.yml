@@ -22,3 +22,22 @@ tags:
 - plru
 - tree
 role: top
+top_ports:
+  plru_tree:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: used_i
+    type: wire
+    width: '[ENTRIES-1:0]'
+  - direction: out
+    name: plru_o
+    type: wire
+    width: '[ENTRIES-1:0]'
+desc_source: preserved

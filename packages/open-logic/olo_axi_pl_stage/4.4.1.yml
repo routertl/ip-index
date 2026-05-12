@@ -14,7 +14,7 @@ source:
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
   language: vhdl-2008
-  library: olo
+  library: work
   files:
   - src/base/vhdl/olo_base_pkg_attribute.vhd
   - src/base/vhdl/olo_base_pl_stage.vhd
@@ -39,3 +39,329 @@ components:
 - olo_base_pl_stage
 - olo_base_ram_sdp
 - olo_intf_sync
+top_ports:
+  olo_axi_pl_stage:
+  - direction: in
+    name: Rst
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_AwAddr
+    type: std_logic_vector
+    width: AddrWidth_g - 1 downto 0
+  - direction: in
+    name: S_AwValid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_AwReady
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_AwLen
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: S_AwSize
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: S_AwBurst
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: S_AwLock
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_AwCache
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: S_AwProt
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: S_AwQos
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: S_AwUser
+    type: std_logic_vector
+    width: UserWidth_g - 1 downto 0
+  - direction: in
+    name: S_AwRegion
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: S_WStrb
+    type: std_logic_vector
+    width: DataWidth_g / 8 - 1 downto 0
+  - direction: in
+    name: S_WValid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_WReady
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_WLast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_WUser
+    type: std_logic_vector
+    width: UserWidth_g - 1 downto 0
+  - direction: out
+    name: S_BResp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: S_BValid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_BReady
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_BUser
+    type: std_logic_vector
+    width: UserWidth_g - 1 downto 0
+  - direction: in
+    name: S_ArAddr
+    type: std_logic_vector
+    width: AddrWidth_g - 1 downto 0
+  - direction: in
+    name: S_ArValid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_ArReady
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_ArLen
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: S_ArSize
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: S_ArBurst
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: S_ArLock
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_ArCache
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: S_ArProt
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: in
+    name: S_ArQos
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: S_ArUser
+    type: std_logic_vector
+    width: UserWidth_g - 1 downto 0
+  - direction: in
+    name: S_ArRegion
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: S_RData
+    type: std_logic_vector
+    width: DataWidth_g - 1 downto 0
+  - direction: out
+    name: S_RValid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: S_RReady
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_RResp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: S_RLast
+    type: std_logic
+    width: ''
+  - direction: out
+    name: S_RUser
+    type: std_logic_vector
+    width: UserWidth_g - 1 downto 0
+  - direction: out
+    name: M_AwAddr
+    type: std_logic_vector
+    width: AddrWidth_g - 1 downto 0
+  - direction: out
+    name: M_AwValid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_AwReady
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_AwLen
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: M_AwSize
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: M_AwBurst
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: M_AwLock
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_AwCache
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: M_AwProt
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: M_AwQos
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: M_AwUser
+    type: std_logic_vector
+    width: UserWidth_g - 1 downto 0
+  - direction: out
+    name: M_AwRegion
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: M_WStrb
+    type: std_logic_vector
+    width: DataWidth_g / 8 - 1 downto 0
+  - direction: out
+    name: M_WValid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_WReady
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_WLast
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_WUser
+    type: std_logic_vector
+    width: UserWidth_g - 1 downto 0
+  - direction: in
+    name: M_BResp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: M_BValid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_BReady
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_BUser
+    type: std_logic_vector
+    width: UserWidth_g - 1 downto 0
+  - direction: out
+    name: M_ArAddr
+    type: std_logic_vector
+    width: AddrWidth_g - 1 downto 0
+  - direction: out
+    name: M_ArValid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_ArReady
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_ArLen
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: M_ArSize
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: M_ArBurst
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: M_ArLock
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_ArCache
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: M_ArProt
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: M_ArQos
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: M_ArUser
+    type: std_logic_vector
+    width: UserWidth_g - 1 downto 0
+  - direction: out
+    name: M_ArRegion
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: M_RData
+    type: std_logic_vector
+    width: DataWidth_g - 1 downto 0
+  - direction: in
+    name: M_RValid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: M_RReady
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_RResp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: M_RLast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: M_RUser
+    type: std_logic_vector
+    width: UserWidth_g - 1 downto 0
+desc_source: header
+external_uses:
+- library: work
+  package: en_cl_fix_pkg
+- library: work
+  package: en_cl_fix_private_pkg
+provides_packages:
+- olo_base_pkg_attribute

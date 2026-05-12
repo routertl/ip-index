@@ -22,6 +22,48 @@ tags:
 - capture
 - data
 role: top
+top_ports:
+  ad463x_data_capture:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: csn
+    type: wire
+    width: ''
+  - direction: in
+    name: echo_sclk
+    type: wire
+    width: ''
+  - direction: in
+    name: data_in
+    type: wire
+    width: '[NUM_OF_LANES-1:0]'
+  - direction: out
+    name: m_axis_data
+    type: wire
+    width: '[(NUM_OF_LANES * DATA_WIDTH)-1:0]'
+  - direction: out
+    name: m_axis_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axis_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: data
+    type: wire
+    width: ''
+  - direction: out
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: assign
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

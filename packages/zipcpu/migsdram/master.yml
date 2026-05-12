@@ -29,5 +29,88 @@ components:
 - aximwr2wbsp
 - skidbuffer
 - wbm2axisp
+top_ports:
+  migsdram:
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: o_sys_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: o_sys_reset
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_cyc
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_addr
+    type: wire
+    width: '[(AW-1):0]'
+  - direction: in
+    name: i_wb_data
+    type: wire
+    width: '[(DW-1):0]'
+  - direction: in
+    name: i_wb_sel
+    type: wire
+    width: '[(SELW-1):0]'
+  - direction: out
+    name: o_wb_ack
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wb_data
+    type: wire
+    width: '[(DW-1):0]'
+  - direction: out
+    name: o_wb_err
+    type: wire
+    width: ''
+  - direction: out
+    name: o_ddr_ck_p
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: o_ddr_cke
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: o_ddr_reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: o_ddr_cs_n
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: o_ddr_ba
+    type: wire
+    width: '[2:0]'
+  - direction: out
+    name: o_ddr_addr
+    type: wire
+    width: '[13:0]'
+  - direction: out
+    name: o_ddr_odt
+    type: wire
+    width: '[0:0]'
+  - direction: out
+    name: o_ddr_dm
+    type: wire
+    width: '[(DDRWIDTH/8-1):0]'
+  - direction: inout
+    name: io_ddr_dqs_p
+    type: wire
+    width: '[1:0]'
+  - direction: inout
+    name: io_ddr_data
+    type: wire
+    width: '[(DDRWIDTH-1):0]'
+desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-05'

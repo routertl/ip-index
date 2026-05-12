@@ -39,3 +39,94 @@ components:
 - stream_arbiter_flushable
 - stream_demux
 - stream_xbar
+top_ports:
+  stream_omega_net:
+  - direction: out
+    name: selection
+    type: wire
+    width: ''
+  - direction: out
+    name: at
+    type: wire
+    width: ''
+  - direction: in
+    name: index
+    type: wire
+    width: ''
+  - direction: in
+    name: the
+    type: wire
+    width: ''
+  - direction: out
+    name: came
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: flush_i
+    type: wire
+    width: ''
+  - direction: in
+    name: idx_inp_t
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: payload_t
+    type: wire
+    width: ''
+  - direction: out
+    name: port
+    type: wire
+    width: ''
+  - direction: in
+    name: sel_oup_t
+    type: wire
+    width: ''
+  - direction: in
+    name: is
+    type: wire
+    width: ''
+  - direction: in
+    name: valid_i
+    type: wire
+    width: '[NumInp-1:0]'
+  - direction: out
+    name: ready_o
+    type: wire
+    width: '[NumInp-1:0]'
+  - direction: out
+    name: valid_o
+    type: wire
+    width: '[NumOut-1:0]'
+  - direction: out
+    name: can
+    type: wire
+    width: ''
+  - direction: in
+    name: ready_i
+    type: wire
+    width: '[NumOut-1:0]'
+  - direction: in
+    name: of
+    type: wire
+    width: ''
+  - direction: in
+    name: shuffle
+    type: wire
+    width: ''
+  - direction: in
+    name: ports
+    type: wire
+    width: ''
+desc_source: preserved

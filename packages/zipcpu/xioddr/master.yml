@@ -20,5 +20,24 @@ routertl_compat:
   - rtl/xioddr.v
 tags: []
 role: top
+top_ports:
+  xioddr:
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_v
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: o_v
+    type: wire
+    width: '[1:0]'
+  - direction: inout
+    name: io_pin
+    type: wire
+    width: ''
+desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-05'

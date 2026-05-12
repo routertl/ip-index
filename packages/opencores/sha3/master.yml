@@ -38,6 +38,62 @@ components:
 - padder1
 - rconst
 - round
+top_ports:
+  keccak:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: in_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: byte_num
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: buffer_full
+    type: wire
+    width: ''
+  - direction: out
+    name: out
+    type: wire
+    width: '[511:0]'
+  - direction: out
+    name: out_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  rconst2in1:
+  - direction: in
+    name: i
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: rc1
+    type: wire
+    width: '[63:0]'
+  round2in1:
+  - direction: in
+    name: in
+    type: wire
+    width: '[1599:0]'
+  - direction: in
+    name: round_const_1
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: out
+    type: wire
+    width: '[1599:0]'
 total_entities: 8
 desc_source: verdict
 health_tier: bronze

@@ -92,6 +92,226 @@ components:
 - eb_wbm_fifo
 - ebm_auto
 - ez_usb_fifos
+top_ports:
+  eb_master_slave_wrapper:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: nRst_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_o
+    type: t_wrf_sink_out
+    width: ''
+  - direction: out
+    name: src_o
+    type: t_wrf_source_out
+    width: ''
+  - direction: in
+    name: src_i
+    type: t_wrf_source_in
+    width: ''
+  - direction: in
+    name: ebs_cfg_slave_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: ebs_wb_master_o
+    type: t_wishbone_master_out
+    width: ''
+  - direction: in
+    name: ebs_wb_master_i
+    type: t_wishbone_master_in
+    width: ''
+  - direction: out
+    name: ebm_wb_slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  eb_slave_core:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: nRst_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_i
+    type: t_wrf_sink_in
+    width: ''
+  - direction: out
+    name: snk_o
+    type: t_wrf_sink_out
+    width: ''
+  - direction: out
+    name: src_o
+    type: t_wrf_source_out
+    width: ''
+  - direction: in
+    name: src_i
+    type: t_wrf_source_in
+    width: ''
+  - direction: out
+    name: cfg_slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  - direction: in
+    name: cfg_slave_i
+    type: t_wishbone_slave_in
+    width: ''
+  - direction: out
+    name: master_o
+    type: t_wishbone_master_out
+    width: ''
+  - direction: in
+    name: master_i
+    type: t_wishbone_master_in)
+    width: ''
+  ez_usb:
+  - direction: in
+    name: clk_sys_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: master_o
+    type: t_wishbone_master_out
+    width: ''
+  - direction: out
+    name: msi_slave_o
+    type: t_wishbone_slave_out
+    width: ''
+  - direction: in
+    name: uart_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: ebcyc_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: speed_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: shift_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: fifoadr_o
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: readyn_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: fulln_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: emptyn_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: sloen_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: slrdn_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: slwrn_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pktendn_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: fd_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: fd_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: fd_oen_o
+    type: std_logic)
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: baudrate_i
+    type: std_logic_vector
+    width: g_baud_acc_width downto 0
+  - direction: out
+    name: baud_tick_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: baud8_tick_o
+    type: std_logic)
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: baud8_tick_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rxd_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_ready_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_error_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_data_o
+    type: std_logic_vector(7 downto 0))
+    width: ''
+  - direction: in
+    name: rst_n_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: baud_tick_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: txd_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tx_start_p_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: tx_data_i
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: tx_busy_o
+    type: std_logic)
+    width: ''
 total_entities: 26
 desc_source: verdict
 external_uses:

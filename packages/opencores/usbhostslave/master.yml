@@ -186,6 +186,753 @@ components:
 - wishBoneBI
 - wishboneArb
 - writeUSBWireData
+top_ports:
+  speedCtrlMux:
+  - direction: in
+    name: directCtrlRate
+    type: wire
+    width: ''
+  - direction: in
+    name: directCtrlPol
+    type: wire
+    width: ''
+  - direction: in
+    name: sendPacketRate
+    type: wire
+    width: ''
+  - direction: in
+    name: sendPacketPol
+    type: wire
+    width: ''
+  - direction: in
+    name: sendPacketSel
+    type: wire
+    width: ''
+  - direction: out
+    name: fullSpeedRate
+    type: wire
+    width: ''
+  - direction: out
+    name: fullSpeedPol
+    type: wire
+    width: ''
+  usbDeviceActelTop:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ledOut
+    type: wire
+    width: '[9:0]'
+  - direction: inout
+    name: usbSlaveVP
+    type: wire
+    width: ''
+  - direction: inout
+    name: usbSlaveVM
+    type: wire
+    width: ''
+  - direction: out
+    name: usbSlaveOE_n
+    type: wire
+    width: ''
+  - direction: out
+    name: usbDPlusPullup
+    type: wire
+    width: ''
+  usbDeviceAlteraTop:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: mc_addr
+    type: wire
+    width: '[11:0]'
+  - direction: out
+    name: mc_ba
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: mc_dqm
+    type: wire
+    width: '[3:0]'
+  - direction: out
+    name: mc_we_
+    type: wire
+    width: ''
+  - direction: out
+    name: mc_cas_
+    type: wire
+    width: ''
+  - direction: out
+    name: mc_ras_
+    type: wire
+    width: ''
+  - direction: out
+    name: mc_cke_
+    type: wire
+    width: ''
+  - direction: out
+    name: sdram_cs
+    type: wire
+    width: ''
+  - direction: out
+    name: sdram_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: spiClk
+    type: wire
+    width: ''
+  - direction: out
+    name: spiMasterDataOut
+    type: wire
+    width: ''
+  - direction: out
+    name: spiCS_n
+    type: wire
+    width: ''
+  - direction: out
+    name: usbHostOE_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: usbSlaveVP
+    type: wire
+    width: ''
+  - direction: inout
+    name: usbSlaveVM
+    type: wire
+    width: ''
+  - direction: out
+    name: usbSlaveOE_n
+    type: wire
+    width: ''
+  - direction: out
+    name: usbDPlusPullup
+    type: wire
+    width: ''
+  - direction: in
+    name: vBusDetect
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P_CLK
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_RST_N
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_CS_N
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P0
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P1
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P2
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P3
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P4
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P5
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P6
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P7
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P8
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P9
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P10
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P11
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P12
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P13
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P14
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P15
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P16
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P17
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P18
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P19
+    type: wire
+    width: ''
+  - direction: in
+    name: SC_P20
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P21
+    type: wire
+    width: ''
+  - direction: inout
+    name: SC_P22
+    type: wire
+    width: ''
+  - direction: inout
+    name: SC_P23
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P24
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P25
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P26
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P27
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P28
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P29
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P30
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P31
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P32
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P33
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P34
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P35
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P36
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P37
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P38
+    type: wire
+    width: ''
+  - direction: out
+    name: SC_P39
+    type: wire
+    width: ''
+  usbDeviceXilinxTop:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: E_NRST
+    type: wire
+    width: ''
+  - direction: out
+    name: SPI_SCK
+    type: wire
+    width: ''
+  - direction: out
+    name: NF_CE
+    type: wire
+    width: ''
+  - direction: out
+    name: SD_CS
+    type: wire
+    width: ''
+  - direction: inout
+    name: usbSlaveVP
+    type: wire
+    width: ''
+  - direction: inout
+    name: usbSlaveVM
+    type: wire
+    width: ''
+  - direction: out
+    name: usbSlaveOE_n
+    type: wire
+    width: ''
+  - direction: out
+    name: usbDPlusPullup
+    type: wire
+    width: ''
+  usbHostCyc2Wrap:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: address_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: strobe_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: irq
+    type: wire
+    width: ''
+  - direction: in
+    name: usbClk
+    type: wire
+    width: ''
+  - direction: inout
+    name: USBWireVP
+    type: wire
+    width: ''
+  - direction: inout
+    name: USBWireVM
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireOE_n
+    type: wire
+    width: ''
+  - direction: out
+    name: USBFullSpeed
+    type: wire
+    width: ''
+  usbHostCyc2Wrap_usb1t11:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: address_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: strobe_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: irq
+    type: wire
+    width: ''
+  - direction: in
+    name: usbClk
+    type: wire
+    width: ''
+  - direction: in
+    name: USBWireVPin
+    type: wire
+    width: ''
+  - direction: in
+    name: USBWireVMin
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireVPout
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireVMout
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireOE_n
+    type: wire
+    width: ''
+  - direction: out
+    name: USBFullSpeed
+    type: wire
+    width: ''
+  usbHostSlaveAvalonWrap:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: address
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: writedata
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: readdata
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: write
+    type: wire
+    width: ''
+  - direction: in
+    name: read
+    type: wire
+    width: ''
+  - direction: out
+    name: waitrequest
+    type: wire
+    width: ''
+  - direction: in
+    name: chipselect
+    type: wire
+    width: ''
+  - direction: out
+    name: irq
+    type: wire
+    width: ''
+  - direction: in
+    name: usbClk
+    type: wire
+    width: ''
+  - direction: in
+    name: USBWireVPI
+    type: wire
+    width: ''
+  - direction: in
+    name: USBWireVMI
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireVPO
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireVMO
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireDataOutTick
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireDataInTick
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireOutEn_n
+    type: wire
+    width: ''
+  - direction: out
+    name: USBFullSpeed
+    type: wire
+    width: ''
+  usbHostSlaveCyc2Wrap:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: address_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: strobe_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: irq
+    type: wire
+    width: ''
+  - direction: in
+    name: usbClk
+    type: wire
+    width: ''
+  - direction: inout
+    name: USBWireVP
+    type: wire
+    width: ''
+  - direction: inout
+    name: USBWireVM
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireOE_n
+    type: wire
+    width: ''
+  - direction: out
+    name: USBFullSpeed
+    type: wire
+    width: ''
+  usbSlaveCyc2Wrap:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: address_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: strobe_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: irq
+    type: wire
+    width: ''
+  - direction: in
+    name: usbClk
+    type: wire
+    width: ''
+  - direction: inout
+    name: USBWireVP
+    type: wire
+    width: ''
+  - direction: inout
+    name: USBWireVM
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireOE_n
+    type: wire
+    width: ''
+  - direction: out
+    name: USBFullSpeed
+    type: wire
+    width: ''
+  - direction: out
+    name: USBDPlusPullup
+    type: wire
+    width: ''
+  - direction: out
+    name: USBDMinusPullup
+    type: wire
+    width: ''
+  - direction: in
+    name: vBusDetect
+    type: wire
+    width: ''
+  usbSlaveCyc2Wrap_usb1t11:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_i
+    type: wire
+    width: ''
+  - direction: in
+    name: address_i
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: data_o
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: we_i
+    type: wire
+    width: ''
+  - direction: in
+    name: strobe_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ack_o
+    type: wire
+    width: ''
+  - direction: out
+    name: irq
+    type: wire
+    width: ''
+  - direction: in
+    name: usbClk
+    type: wire
+    width: ''
+  - direction: in
+    name: USBWireVPin
+    type: wire
+    width: ''
+  - direction: in
+    name: USBWireVMin
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireVPout
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireVMout
+    type: wire
+    width: ''
+  - direction: out
+    name: USBWireOE_n
+    type: wire
+    width: ''
+  - direction: out
+    name: USBFullSpeed
+    type: wire
+    width: ''
+  - direction: out
+    name: USBDPlusPullup
+    type: wire
+    width: ''
+  - direction: out
+    name: USBDMinusPullup
+    type: wire
+    width: ''
+  - direction: in
+    name: vBusDetect
+    type: wire
+    width: ''
 total_entities: 67
 desc_source: verdict
 health_tier: bronze

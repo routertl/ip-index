@@ -19,5 +19,72 @@ routertl_compat:
   - rtl/axissafety.v
 tags: []
 role: top
+top_ports:
+  axissafety:
+  - direction: in
+    name: more
+    type: wire
+    width: ''
+  - direction: in
+    name: to
+    type: wire
+    width: ''
+  - direction: out
+    name: o_fault
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_ACLK
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXI_ARESETN
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXIS_TVALID
+    type: wire
+    width: ''
+  - direction: out
+    name: S_AXIS_TREADY
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXIS_TDATA
+    type: wire
+    width: '[C_AXIS_DATA_WIDTH-1:0]'
+  - direction: in
+    name: S_AXIS_TLAST
+    type: wire
+    width: ''
+  - direction: in
+    name: S_AXIS_TUSER
+    type: wire
+    width: '[C_AXIS_USER_WIDTH-1:0]'
+  - direction: out
+    name: M_AXIS_TVALID
+    type: wire
+    width: ''
+  - direction: in
+    name: M_AXIS_TREADY
+    type: wire
+    width: ''
+  - direction: out
+    name: M_AXIS_TDATA
+    type: wire
+    width: '[C_AXIS_DATA_WIDTH-1:0]'
+  - direction: out
+    name: M_AXIS_TLAST
+    type: wire
+    width: ''
+  - direction: out
+    name: M_AXIS_TUSER
+    type: wire
+    width: '[C_AXIS_USER_WIDTH-1:0]'
+  - direction: in
+    name: stall
+    type: wire
+    width: ''
+desc_source: ports
 health_tier: bronze
 last_verified_at: '2026-05-05'

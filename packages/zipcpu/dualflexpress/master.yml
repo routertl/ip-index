@@ -20,5 +20,72 @@ routertl_compat:
   - rtl/dualflexpress.v
 tags: []
 role: top
+top_ports:
+  dualflexpress:
+  - direction: out
+    name: mode
+    type: wire
+    width: ''
+  - direction: in
+    name: i_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_cyc
+    type: wire
+    width: ''
+  - direction: in
+    name: i_wb_addr
+    type: wire
+    width: '[(AW-1):0]'
+  - direction: in
+    name: i_wb_data
+    type: wire
+    width: '[(DW-1):0]'
+  - direction: out
+    name: o_wb_ack
+    type: wire
+    width: ''
+  - direction: out
+    name: o_wb_data
+    type: wire
+    width: '[(DW-1):0]'
+  - direction: out
+    name: o_dspi_sck
+    type: wire
+    width: ''
+  - direction: out
+    name: o_dspi_cs_n
+    type: wire
+    width: ''
+  - direction: out
+    name: o_dspi_mod
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: o_dspi_dat
+    type: wire
+    width: '[1:0]'
+  - direction: in
+    name: i_dspi_dat
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: o_dbg_trigger
+    type: wire
+    width: ''
+  - direction: out
+    name: o_debug
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: values
+    type: wire
+    width: ''
+  - direction: out
+    name: initial
+    type: wire
+    width: ''
+desc_source: preserved
 health_tier: bronze
 last_verified_at: '2026-05-05'

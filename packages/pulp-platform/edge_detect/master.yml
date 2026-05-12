@@ -29,3 +29,26 @@ components:
 - cdc_reset_ctrlr
 - sync
 - sync_wedge
+top_ports:
+  edge_detect:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: d_i
+    type: wire
+    width: ''
+  - direction: out
+    name: re_o
+    type: wire
+    width: ''
+  - direction: out
+    name: fe_o
+    type: wire
+    width: ''
+desc_source: preserved

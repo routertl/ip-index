@@ -22,3 +22,14 @@ tags: []
 role: top
 components:
 - heaviside
+top_ports:
+  boxcar:
+  - direction: in
+    name: idx_t
+    type: wire
+    width: ''
+  - direction: out
+    name: mask_t
+    type: wire
+    width: ''
+desc_source: header

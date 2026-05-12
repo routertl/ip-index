@@ -188,6 +188,112 @@ components:
 - util_cpack2_impl
 - util_dacfifo_bypass
 - util_upack2_impl
+top_ports:
+  avl_dacfifo:
+  - direction: in
+    name: dma_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: dma_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: dma_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: dma_data
+    type: wire
+    width: '[(DMA_DATA_WIDTH-1):0]'
+  - direction: out
+    name: dma_ready
+    type: wire
+    width: ''
+  - direction: in
+    name: dma_xfer_req
+    type: wire
+    width: ''
+  - direction: in
+    name: dma_xfer_last
+    type: wire
+    width: ''
+  - direction: in
+    name: dac_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: dac_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: dac_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_data
+    type: wire
+    width: '[(DAC_DATA_WIDTH-1):0]'
+  - direction: out
+    name: dac_dunf
+    type: wire
+    width: ''
+  - direction: out
+    name: dac_xfer_out
+    type: wire
+    width: ''
+  - direction: in
+    name: bypass
+    type: wire
+    width: ''
+  - direction: in
+    name: avl_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: avl_reset
+    type: wire
+    width: ''
+  - direction: out
+    name: avl_address
+    type: wire
+    width: '[(AVL_ADDRESS_WIDTH-1):0]'
+  - direction: out
+    name: avl_burstcount
+    type: wire
+    width: '[  6:0]'
+  - direction: out
+    name: avl_byteenable
+    type: wire
+    width: '[ 63:0]'
+  - direction: out
+    name: avl_read
+    type: wire
+    width: ''
+  - direction: in
+    name: avl_readdata
+    type: wire
+    width: '[(AVL_DATA_WIDTH-1):0]'
+  - direction: in
+    name: avl_readdata_valid
+    type: wire
+    width: ''
+  - direction: in
+    name: avl_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: avl_write
+    type: wire
+    width: ''
+  - direction: out
+    name: avl_writedata
+    type: wire
+    width: '[(AVL_DATA_WIDTH-1):0]'
+  - direction: out
+    name: registers
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

@@ -25,6 +25,268 @@ tags:
 - system
 - voltage
 role: top
+top_ports:
+  system_top_lvds:
+  - direction: in
+    name: sys_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_a
+    type: wire
+    width: '[14:0]'
+  - direction: out
+    name: ddr3_ba
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: ddr3_reset_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_ck_p
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_ck_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_cke
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_cs_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_ras_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_cas_n
+    type: wire
+    width: ''
+  - direction: out
+    name: ddr3_we_n
+    type: wire
+    width: ''
+  - direction: inout
+    name: ddr3_dq
+    type: wire
+    width: '[31:0]'
+  - direction: inout
+    name: ddr3_dqs_p
+    type: wire
+    width: '[ 3:0]'
+  - direction: inout
+    name: ddr3_dqs_n
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: ddr3_dm
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: ddr3_odt
+    type: wire
+    width: ''
+  - direction: in
+    name: ddr3_rzq
+    type: wire
+    width: ''
+  - direction: out
+    name: eth1_tx_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: eth1_tx_ctl
+    type: wire
+    width: ''
+  - direction: out
+    name: eth1_tx_d
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: eth1_rx_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: eth1_rx_ctl
+    type: wire
+    width: ''
+  - direction: in
+    name: eth1_rx_d
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: eth1_mdc
+    type: wire
+    width: ''
+  - direction: inout
+    name: eth1_mdio
+    type: wire
+    width: ''
+  - direction: out
+    name: qspi_ss0
+    type: wire
+    width: ''
+  - direction: out
+    name: qspi_clk
+    type: wire
+    width: ''
+  - direction: inout
+    name: qspi_io
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: sdio_clk
+    type: wire
+    width: ''
+  - direction: inout
+    name: sdio_cmd
+    type: wire
+    width: ''
+  - direction: inout
+    name: sdio_d
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: usb1_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: usb1_stp
+    type: wire
+    width: ''
+  - direction: in
+    name: usb1_dir
+    type: wire
+    width: ''
+  - direction: in
+    name: usb1_nxt
+    type: wire
+    width: ''
+  - direction: inout
+    name: usb1_d
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: spim1_ss0
+    type: wire
+    width: ''
+  - direction: out
+    name: spim1_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: spim1_mosi
+    type: wire
+    width: ''
+  - direction: in
+    name: spim1_miso
+    type: wire
+    width: ''
+  - direction: in
+    name: uart0_rx
+    type: wire
+    width: ''
+  - direction: out
+    name: uart0_tx
+    type: wire
+    width: ''
+  - direction: out
+    name: gpio_bd_o
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: gpio_bd_i
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: vga_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: vga_blank_n
+    type: wire
+    width: ''
+  - direction: out
+    name: vga_sync_n
+    type: wire
+    width: ''
+  - direction: out
+    name: vga_hsync
+    type: wire
+    width: ''
+  - direction: out
+    name: vga_vsync
+    type: wire
+    width: ''
+  - direction: out
+    name: vga_red
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: vga_grn
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: vga_blu
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: lvds_cmos_n
+    type: wire
+    width: ''
+  - direction: out
+    name: cnv
+    type: wire
+    width: ''
+  - direction: in
+    name: busy
+    type: wire
+    width: ''
+  - direction: out
+    name: pd
+    type: wire
+    width: ''
+  - direction: out
+    name: cs_n
+    type: wire
+    width: ''
+  - direction: out
+    name: sdi_p
+    type: wire
+    width: ''
+  - direction: out
+    name: sdi_n
+    type: wire
+    width: ''
+  - direction: out
+    name: scki_p
+    type: wire
+    width: ''
+  - direction: out
+    name: scki_n
+    type: wire
+    width: ''
+  - direction: in
+    name: scko_p
+    type: wire
+    width: ''
+  - direction: in
+    name: scko_n
+    type: wire
+    width: ''
+  - direction: in
+    name: sdo_p
+    type: wire
+    width: ''
+  - direction: in
+    name: sdo_n
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

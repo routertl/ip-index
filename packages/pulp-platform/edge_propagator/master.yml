@@ -29,3 +29,30 @@ components:
 - edge_propagator_ack
 - pulp_sync
 - pulp_sync_wedge
+top_ports:
+  edge_propagator:
+  - direction: in
+    name: clk_tx_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn_tx_i
+    type: wire
+    width: ''
+  - direction: in
+    name: edge_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_rx_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rstn_rx_i
+    type: wire
+    width: ''
+  - direction: out
+    name: edge_o
+    type: wire
+    width: ''
+desc_source: preserved

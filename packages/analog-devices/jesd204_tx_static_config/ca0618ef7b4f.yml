@@ -28,6 +28,88 @@ tags:
 role: top
 components:
 - jesd204_ilas_cfg_static
+top_ports:
+  jesd204_tx_static_config:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: cfg_lanes_disable
+    type: wire
+    width: '[NUM_LANES-1:0]'
+  - direction: out
+    name: cfg_links_disable
+    type: wire
+    width: '[NUM_LINKS-1:0]'
+  - direction: out
+    name: cfg_octets_per_multiframe
+    type: wire
+    width: '[9:0]'
+  - direction: out
+    name: cfg_octets_per_frame
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: cfg_continuous_cgs
+    type: wire
+    width: ''
+  - direction: out
+    name: cfg_continuous_ilas
+    type: wire
+    width: ''
+  - direction: out
+    name: cfg_skip_ilas
+    type: wire
+    width: ''
+  - direction: out
+    name: cfg_mframes_per_ilas
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: cfg_disable_char_replacement
+    type: wire
+    width: ''
+  - direction: out
+    name: cfg_disable_scrambler
+    type: wire
+    width: ''
+  - direction: out
+    name: device_cfg_octets_per_multiframe
+    type: wire
+    width: '[9:0]'
+  - direction: out
+    name: device_cfg_octets_per_frame
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: device_cfg_beats_per_multiframe
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: device_cfg_lmfc_offset
+    type: wire
+    width: '[7:0]'
+  - direction: out
+    name: device_cfg_sysref_oneshot
+    type: wire
+    width: ''
+  - direction: out
+    name: device_cfg_sysref_disable
+    type: wire
+    width: ''
+  - direction: in
+    name: ilas_config_rd
+    type: wire
+    width: ''
+  - direction: in
+    name: ilas_config_addr
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: ilas_config_data
+    type: wire
+    width: '[NUM_LANES*DATA_PATH_WIDTH*8-1:0]'
 desc_source: ports
 external_uses:
 - library: work

@@ -72,6 +72,48 @@ components:
 - y_huff
 - y_quantizer
 - yd_q_h
+top_ports:
+  jpeg_top:
+  - direction: out
+    name: from
+    type: wire
+    width: ''
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: in
+    name: end_of_file_signal
+    type: wire
+    width: ''
+  - direction: in
+    name: enable
+    type: wire
+    width: ''
+  - direction: in
+    name: data_in
+    type: wire
+    width: '[23:0]'
+  - direction: out
+    name: JPEG_bitstream
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: data_ready
+    type: wire
+    width: ''
+  - direction: out
+    name: end_of_file_bitstream_count
+    type: wire
+    width: '[4:0]'
+  - direction: out
+    name: eof_data_partial_ready
+    type: wire
+    width: ''
 total_entities: 19
 desc_source: header
 health_tier: bronze

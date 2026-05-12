@@ -1,8 +1,8 @@
 name: axi_chan_logger
 namespace: pulp-platform
 version: master
-commit_sha: 3fafe2496243a88cfa2a778921f0e7f71a6a2d9d
-published_at: '2026-04-15T10:26:08+02:00'
+commit_sha: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
+published_at: '2026-05-07T16:14:15+02:00'
 description: Logs AXI protocol transactions across all five channels (AW, W, B, AR,
   R) with ready/valid handshake monitoring.
 license: Apache-2.0
@@ -12,7 +12,7 @@ source:
   url: https://github.com/pulp-platform/axi.git
   tag: master
   ip_yml_path: .
-  resolved_commit: 3fafe2496243a88cfa2a778921f0e7f71a6a2d9d
+  resolved_commit: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 routertl_compat:
   language: systemverilog
   library: work
@@ -51,3 +51,181 @@ components:
 - axi_to_mem
 - axi_xbar
 - axi_xbar_unmuxed
+top_ports:
+  axi_chan_logger:
+  - direction: in
+    name: addr
+    type: wire
+    width: '[AW-1:0]'
+  - direction: in
+    name: prot_t
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: '[DW-1:0]'
+  - direction: in
+    name: strb
+    type: wire
+    width: '[DW/8-1:0]'
+  - direction: in
+    name: axi_pkg
+    type: wire
+    width: ''
+  - direction: in
+    name: ax_beat_t
+    type: wire
+    width: ''
+  - direction: in
+    name: w_beat_t
+    type: wire
+    width: ''
+  - direction: in
+    name: b_beat_t
+    type: wire
+    width: ''
+  - direction: in
+    name: r_beat_t
+    type: wire
+    width: ''
+  - direction: in
+    name: addr_t
+    type: wire
+    width: ''
+  - direction: in
+    name: mem_type_t
+    type: wire
+    width: ''
+  - direction: in
+    name: int
+    type: wire
+    width: ''
+  - direction: in
+    name: user_rand
+    type: wire
+    width: ''
+  - direction: in
+    name: function
+    type: wire
+    width: ''
+  - direction: in
+    name: is_read
+    type: wire
+    width: ''
+  - direction: in
+    name: user_t
+    type: wire
+    width: ''
+  - direction: in
+    name: bit
+    type: wire
+    width: ''
+  - direction: in
+    name: task
+    type: wire
+    width: ''
+  - direction: in
+    name: string
+    type: wire
+    width: ''
+  - direction: in
+    name: data_t
+    type: wire
+    width: ''
+  - direction: in
+    name: strb_t
+    type: wire
+    width: ''
+  - direction: in
+    name: axi_id_t
+    type: wire
+    width: ''
+  - direction: in
+    name: axi_addr_t
+    type: wire
+    width: ''
+  - direction: out
+    name: byte_t
+    type: wire
+    width: ''
+  - direction: in
+    name: axi
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: end_sim_i
+    type: wire
+    width: ''
+  - direction: in
+    name: aw_chan_t
+    type: wire
+    width: ''
+  - direction: in
+    name: aw_valid_i
+    type: wire
+    width: ''
+  - direction: in
+    name: aw_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: w_chan_t
+    type: wire
+    width: ''
+  - direction: in
+    name: w_valid_i
+    type: wire
+    width: ''
+  - direction: in
+    name: w_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: b_chan_t
+    type: wire
+    width: ''
+  - direction: in
+    name: b_valid_i
+    type: wire
+    width: ''
+  - direction: in
+    name: b_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: ar_chan_t
+    type: wire
+    width: ''
+  - direction: in
+    name: ar_valid_i
+    type: wire
+    width: ''
+  - direction: in
+    name: ar_ready_i
+    type: wire
+    width: ''
+  - direction: in
+    name: r_chan_t
+    type: wire
+    width: ''
+  - direction: in
+    name: r_valid_i
+    type: wire
+    width: ''
+  - direction: in
+    name: r_ready_i
+    type: wire
+    width: ''
+desc_source: preserved
+provides_packages:
+- axi_pkg
+- axi_test

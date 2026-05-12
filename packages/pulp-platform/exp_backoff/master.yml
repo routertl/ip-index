@@ -25,3 +25,26 @@ tags:
 role: top
 components:
 - lfsr
+top_ports:
+  exp_backoff:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: set_i
+    type: wire
+    width: ''
+  - direction: in
+    name: clr_i
+    type: wire
+    width: ''
+  - direction: out
+    name: is_zero_o
+    type: wire
+    width: ''
+desc_source: preserved

@@ -25,3 +25,34 @@ tags:
 role: top
 components:
 - stream_join_dynamic
+top_ports:
+  stream_join:
+  - direction: in
+    name: streams
+    type: wire
+    width: ''
+  - direction: out
+    name: stream
+    type: wire
+    width: ''
+  - direction: out
+    name: handshake
+    type: wire
+    width: ''
+  - direction: in
+    name: inp_valid_i
+    type: wire
+    width: '[N_INP-1:0]'
+  - direction: out
+    name: inp_ready_o
+    type: wire
+    width: '[N_INP-1:0]'
+  - direction: out
+    name: oup_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: oup_ready_i
+    type: wire
+    width: ''
+desc_source: preserved

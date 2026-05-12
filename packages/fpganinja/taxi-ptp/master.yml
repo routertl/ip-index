@@ -51,5 +51,25 @@ components:
 - taxi_ptp_td_phc
 - taxi_ptp_td_phc_apb
 - taxi_ptp_td_rel2tod
+top_ports:
+  taxi_ptp_clock:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_ptp_perout:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: from
+    type: wire
+    width: ''
+  taxi_ptp_td_phc_axil:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 8
 desc_source: curator

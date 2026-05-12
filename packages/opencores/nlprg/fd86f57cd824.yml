@@ -26,6 +26,48 @@ top_modules:
 - nlprg8
 components:
 - dff
+top_ports:
+  nlprg8:
+  - direction: in
+    name: ck
+    type: wire
+    width: ''
+  - direction: in
+    name: rst
+    type: wire
+    width: ''
+  - direction: out
+    name: o0
+    type: wire
+    width: ''
+  - direction: out
+    name: o1
+    type: wire
+    width: ''
+  - direction: out
+    name: o2
+    type: wire
+    width: ''
+  - direction: out
+    name: o3
+    type: wire
+    width: ''
+  - direction: out
+    name: o4
+    type: wire
+    width: ''
+  - direction: out
+    name: o5
+    type: wire
+    width: ''
+  - direction: out
+    name: o6
+    type: wire
+    width: ''
+  - direction: out
+    name: o7
+    type: wire
+    width: ''
 total_entities: 2
 desc_source: readme
 mirror_status: curated-mirror

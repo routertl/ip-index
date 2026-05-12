@@ -23,6 +23,12 @@ tags:
 - transmitter
 - tx
 role: top
+top_ports:
+  i2s_tx:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

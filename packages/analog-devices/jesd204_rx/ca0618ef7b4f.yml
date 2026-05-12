@@ -224,6 +224,236 @@ components:
 - util_dacfifo_bypass
 - util_pipeline_stage
 - util_upack2_impl
+top_ports:
+  jesd204_rx:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: device_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: device_reset
+    type: wire
+    width: ''
+  - direction: in
+    name: phy_data
+    type: wire
+    width: '[DATA_PATH_WIDTH*8*NUM_LANES-1:0]'
+  - direction: in
+    name: phy_header
+    type: wire
+    width: '[2*NUM_LANES-1:0]'
+  - direction: in
+    name: phy_charisk
+    type: wire
+    width: '[DATA_PATH_WIDTH*NUM_LANES-1:0]'
+  - direction: in
+    name: phy_notintable
+    type: wire
+    width: '[DATA_PATH_WIDTH*NUM_LANES-1:0]'
+  - direction: in
+    name: phy_disperr
+    type: wire
+    width: '[DATA_PATH_WIDTH*NUM_LANES-1:0]'
+  - direction: in
+    name: phy_block_sync
+    type: wire
+    width: '[NUM_LANES-1:0]'
+  - direction: in
+    name: sysref
+    type: wire
+    width: ''
+  - direction: out
+    name: lmfc_edge
+    type: wire
+    width: ''
+  - direction: out
+    name: lmfc_clk
+    type: wire
+    width: ''
+  - direction: out
+    name: device_event_sysref_alignment_error
+    type: wire
+    width: ''
+  - direction: out
+    name: device_event_sysref_edge
+    type: wire
+    width: ''
+  - direction: out
+    name: event_frame_alignment_error
+    type: wire
+    width: ''
+  - direction: out
+    name: event_unexpected_lane_state_error
+    type: wire
+    width: ''
+  - direction: out
+    name: sync
+    type: wire
+    width: '[NUM_LINKS-1:0]'
+  - direction: out
+    name: phy_en_char_align
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_data
+    type: wire
+    width: '[TPL_DATA_PATH_WIDTH*8*NUM_LANES-1:0]'
+  - direction: out
+    name: rx_valid
+    type: wire
+    width: ''
+  - direction: out
+    name: rx_eof
+    type: wire
+    width: '[TPL_DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_sof
+    type: wire
+    width: '[TPL_DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_eomf
+    type: wire
+    width: '[TPL_DATA_PATH_WIDTH-1:0]'
+  - direction: out
+    name: rx_somf
+    type: wire
+    width: '[TPL_DATA_PATH_WIDTH-1:0]'
+  - direction: in
+    name: cfg_lanes_disable
+    type: wire
+    width: '[NUM_LANES-1:0]'
+  - direction: in
+    name: cfg_links_disable
+    type: wire
+    width: '[NUM_LINKS-1:0]'
+  - direction: in
+    name: cfg_octets_per_multiframe
+    type: wire
+    width: '[9:0]'
+  - direction: in
+    name: cfg_octets_per_frame
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: cfg_disable_scrambler
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_disable_char_replacement
+    type: wire
+    width: ''
+  - direction: in
+    name: cfg_frame_align_err_threshold
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: device_cfg_octets_per_multiframe
+    type: wire
+    width: '[9:0]'
+  - direction: in
+    name: device_cfg_octets_per_frame
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: device_cfg_beats_per_multiframe
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: device_cfg_lmfc_offset
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: device_cfg_sysref_oneshot
+    type: wire
+    width: ''
+  - direction: in
+    name: device_cfg_sysref_disable
+    type: wire
+    width: ''
+  - direction: in
+    name: device_cfg_buffer_early_release
+    type: wire
+    width: ''
+  - direction: in
+    name: device_cfg_buffer_delay
+    type: wire
+    width: '[7:0]'
+  - direction: in
+    name: ctrl_err_statistics_reset
+    type: wire
+    width: ''
+  - direction: in
+    name: ctrl_err_statistics_mask
+    type: wire
+    width: '[6:0]'
+  - direction: out
+    name: status_err_statistics_cnt
+    type: wire
+    width: '[32*NUM_LANES-1:0]'
+  - direction: out
+    name: ilas_config_valid
+    type: wire
+    width: '[NUM_LANES-1:0]'
+  - direction: out
+    name: ilas_config_addr
+    type: wire
+    width: '[NUM_LANES*2-1:0]'
+  - direction: out
+    name: ilas_config_data
+    type: wire
+    width: '[NUM_LANES*DATA_PATH_WIDTH*8-1:0]'
+  - direction: out
+    name: status_ctrl_state
+    type: wire
+    width: '[1:0]'
+  - direction: out
+    name: status_lane_cgs_state
+    type: wire
+    width: '[2*NUM_LANES-1:0]'
+  - direction: out
+    name: status_lane_ifs_ready
+    type: wire
+    width: '[NUM_LANES-1:0]'
+  - direction: out
+    name: status_lane_latency
+    type: wire
+    width: '[14*NUM_LANES-1:0]'
+  - direction: out
+    name: status_lane_emb_state
+    type: wire
+    width: '[3*NUM_LANES-1:0]'
+  - direction: out
+    name: status_lane_frame_align_err_cnt
+    type: wire
+    width: '[8*NUM_LANES-1:0]'
+  - direction: out
+    name: status_synth_params0
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: status_synth_params1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: status_synth_params2
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: and
+    type: wire
+    width: ''
+  - direction: out
+    name: widths
+    type: wire
+    width: ''
 desc_source: ports
 external_uses:
 - library: work

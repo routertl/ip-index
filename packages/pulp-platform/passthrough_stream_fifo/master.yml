@@ -24,3 +24,46 @@ tags:
 - queue
 - stream
 role: top
+top_ports:
+  passthrough_stream_fifo:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: flush_i
+    type: wire
+    width: ''
+  - direction: in
+    name: testmode_i
+    type: wire
+    width: ''
+  - direction: in
+    name: type_t
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: in
+    name: valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: ready_o
+    type: wire
+    width: ''
+  - direction: out
+    name: valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: ready_i
+    type: wire
+    width: ''
+desc_source: ports

@@ -21,6 +21,16 @@ tags:
 - pad
 - util
 role: top
+top_ports:
+  util_pad:
+  - direction: in
+    name: data_in
+    type: wire
+    width: '[NUM_OF_SAMPLES*IN_BITS_PER_SAMPLE-1:0]'
+  - direction: out
+    name: data_out
+    type: wire
+    width: '[NUM_OF_SAMPLES*OUT_BITS_PER_SAMPLE-1:0]'
 desc_source: preserved
 external_uses:
 - library: work

@@ -34,9 +34,34 @@ top_modules:
 components:
 - bnet_find_target
 - concentrator_switch
+top_ports:
+  bnet_concentrator:
+  - direction: in
+    name: data_i
+    type: BNET_INPUT_ARR_CT
+    width: ''
+  - direction: out
+    name: dav_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: data_o
+    type: BNET_OUTPUT_ARR_CT
+    width: ''
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: rst_p
+    type: std_logic)
+    width: ''
 total_entities: 3
 desc_source: preserved
 mirror_status: curated-mirror
 upstream_url: https://opencores.org/projects/xconcentrator
 health_tier: bronze
 last_verified_at: '2026-05-05'
+provides_packages:
+- bnet_def_pkg
+- bnet_pkg

@@ -23,6 +23,24 @@ tags:
 - reset
 - rst
 role: top
+top_ports:
+  ad_adl5904_rst:
+  - direction: in
+    name: sys_cpu_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rf_peak_det_n
+    type: wire
+    width: ''
+  - direction: out
+    name: rf_peak_rst
+    type: wire
+    width: ''
+  - direction: in
+    name: protection
+    type: wire
+    width: ''
 desc_source: preserved
 external_uses:
 - library: work

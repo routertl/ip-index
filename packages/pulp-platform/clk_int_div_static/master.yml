@@ -30,3 +30,30 @@ components:
 - clk_div
 - clk_int_div
 - clock_divider_counter
+top_ports:
+  clk_int_div_static:
+  - direction: out
+    name: clock
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: en_i
+    type: wire
+    width: ''
+  - direction: in
+    name: test_mode_en_i
+    type: wire
+    width: ''
+  - direction: out
+    name: clk_o
+    type: wire
+    width: ''
+desc_source: header

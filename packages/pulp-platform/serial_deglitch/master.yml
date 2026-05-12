@@ -22,3 +22,34 @@ tags:
 - deglitch
 - serial
 role: top
+top_ports:
+  serial_deglitch:
+  - direction: out
+    name: high
+    type: wire
+    width: ''
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: en_i
+    type: wire
+    width: ''
+  - direction: in
+    name: d_i
+    type: wire
+    width: ''
+  - direction: out
+    name: q_o
+    type: wire
+    width: ''
+  - direction: out
+    name: process
+    type: wire
+    width: ''
+desc_source: preserved

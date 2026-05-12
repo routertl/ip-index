@@ -64,5 +64,79 @@ top_modules:
 components:
 - taxi_xfcp_mod_axil
 - taxi_xfcp_switch
+top_ports:
+  taxi_xfcp_if_uart:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_xfcp_mod_apb:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: empty
+    type: wire
+    width: ''
+  - direction: out
+    name: xfcp_usp_us_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  taxi_xfcp_mod_axi:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  taxi_xfcp_mod_i2c_master:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: out
+    name: datapath
+    type: wire
+    width: ''
+  - direction: in
+    name: next
+    type: wire
+    width: ''
+  - direction: out
+    name: is
+    type: wire
+    width: ''
+  - direction: out
+    name: empty
+    type: wire
+    width: ''
+  - direction: out
+    name: xfcp_usp_us_tvalid_next
+    type: wire
+    width: ''
+  - direction: in
+    name: in
+    type: wire
+    width: ''
+  taxi_xfcp_mod_stats:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
 total_entities: 7
 desc_source: curator
