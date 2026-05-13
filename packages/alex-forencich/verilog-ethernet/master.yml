@@ -5,8 +5,7 @@ commit_sha: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
 published_at: '2025-02-27T15:50:25-08:00'
 description: "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with\
   \ both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream \u2014\
-  \ author moved active development to fpganinja/taxi (CERN-OHL-S-2.0); MIT-licensed\
-  \ verilog-ethernet remains freely available here."
+  \ author moved active development to fpganinja/taxi (CERN-OHL-S-2.0)."
 license: MIT
 license_class: permissive
 source:

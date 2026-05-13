@@ -368,10 +368,10 @@
     },
     "alex-forencich/verilog-ethernet": {
       "verdict": "good",
-      "locked_text": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream \u2014 author moved active development to fpganinja/taxi (CERN-OHL-S-2.0); MIT-licensed verilog-ethernet remains freely available here.",
-      "reviewed_at": "2026-05-04",
+      "locked_text": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream \u2014 author moved active development to fpganinja/taxi (CERN-OHL-S-2.0).",
+      "reviewed_at": "2026-05-13",
       "reviewed_by": "dmazure",
-      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary."
+      "notes": "top-level repo description for granularity=repo entry. Scanner picked arbitrary internal modules as the description source; this locks the user-facing text to a meaningful project summary. 2026-05-13: dropped sell-pitch trailing clause (\"MIT-licensed verilog-ethernet remains freely available here\") \u2014 neutral deprecation note is enough; registry isn't a marketing surface."
     },
     "opencores/tiny_aes": {
       "verdict": "good",
