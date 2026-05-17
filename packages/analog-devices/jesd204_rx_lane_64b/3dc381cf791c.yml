@@ -1,0 +1,62 @@
+name: jesd204_rx_lane_64b
+namespace: analog-devices
+version: 3dc381cf791c
+commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+published_at: '2026-05-13T08:20:05+00:00'
+description: Receives JESD204 data.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/corundum/corundum_core/mqnic_app_custom_params.vh
+  - library/corundum/corundum_core/mqnic_app_custom_ports.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_bit_mod.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_word.vh
+  - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
+  - library/common/ad_pack.v
+  - library/common/ad_upack.v
+  - library/jesd204/jesd204_rx/elastic_buffer.v
+  - library/jesd204/jesd204_rx/error_monitor.v
+  - library/jesd204/jesd204_common/jesd204_crc12.v
+  - library/jesd204/jesd204_rx/jesd204_rx_header.v
+  - library/jesd204/jesd204_common/jesd204_scrambler_64b.v
+  - library/common/util_pipeline_stage.v
+  - library/jesd204/jesd204_rx/jesd204_rx_lane_64b.v
+tags:
+- 64b
+- jesd204
+- lane
+- receive
+- receiver
+- rx
+role: component
+desc_source: preserved
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

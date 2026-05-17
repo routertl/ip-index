@@ -1,0 +1,52 @@
+name: jesd204_up_ilas_mem
+namespace: analog-devices
+version: 3dc381cf791c
+commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+published_at: '2026-05-13T08:20:05+00:00'
+description: JESD204 with ready/valid handshake
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/corundum/corundum_core/mqnic_app_custom_params.vh
+  - library/corundum/corundum_core/mqnic_app_custom_ports.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_bit_mod.vh
+  - library/i3c_controller/i3c_controller_core/i3c_controller_word.vh
+  - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
+  - library/util_cdc/sync_bits.v
+  - library/jesd204/axi_jesd204_rx/jesd204_up_ilas_mem.v
+tags:
+- ilas
+- jesd204
+- mem
+role: component
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

@@ -1,8 +1,8 @@
 name: taxi-ssio
 namespace: fpganinja
 version: master
-commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
-published_at: '2026-04-06T23:59:16-07:00'
+commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
+published_at: '2026-05-12T13:06:02-07:00'
 description: "Source-synchronous I/O \u2014 DDR / SDR in / out with diff variants,\
   \ plus the bare IDDR / ODDR I/O DDR-register primitives."
 license: CERN-OHL-S-2.0
@@ -12,7 +12,7 @@ source:
   url: https://github.com/fpganinja/taxi.git
   tag: master
   ip_yml_path: .
-  resolved_commit: 1fe508a6bf17edbb29bce9a8477be615b1012789
+  resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
   language: systemverilog
   library: work

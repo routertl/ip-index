@@ -1,0 +1,99 @@
+name: fmcomms11_spi
+namespace: analog-devices
+version: 3dc381cf791c
+commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+published_at: '2026-05-13T08:20:05+00:00'
+description: Bridges standard 4-wire SPI to dual-protocol interface supporting 4-wire
+  and 3-wire SPI modes for multi-device FMCOMMS11 RF board control.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - projects/fmcomms11/common/fmcomms11_spi.v
+tags:
+- fmcomms11
+- interface
+- peripheral
+- serial
+- spi
+role: top
+top_ports:
+  fmcomms11_spi:
+  - direction: in
+    name: spi_csn
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: spi_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: spi_mosi
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_miso
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_csn_ad9625
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_csn_ad9162
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_csn_ad9508
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_csn_adl5240
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_csn_adf4355
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_csn_hmc1119
+    type: wire
+    width: ''
+  - direction: inout
+    name: spi_sdio
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_dir
+    type: wire
+    width: ''
+desc_source: preserved
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

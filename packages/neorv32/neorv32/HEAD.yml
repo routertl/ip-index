@@ -1,8 +1,8 @@
 name: neorv32
 namespace: neorv32
 version: HEAD
-commit_sha: 67fd919f88c6cb6e46245f1db3304945049d8cbd
-published_at: '2026-05-12T05:42:47+02:00'
+commit_sha: f62ca4323d263cfb0289e779bb107ffcf0dafff6
+published_at: '2026-05-16T11:17:19+02:00'
 description: The NEORV32 Processor is a **customizable microcontroller-like system
   on chip (SoC)** built around the NEORV32 [RISC-V](https://riscv.org/) CPU that is
   written in **platform-independent VHDL**.
@@ -13,7 +13,7 @@ source:
   url: https://github.com/stnolting/neorv32.git
   tag: main
   ip_yml_path: .
-  resolved_commit: 67fd919f88c6cb6e46245f1db3304945049d8cbd
+  resolved_commit: f62ca4323d263cfb0289e779bb107ffcf0dafff6
 routertl_compat:
   language: vhdl-2008
   library: neorv32

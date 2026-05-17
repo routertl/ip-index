@@ -1,0 +1,1282 @@
+name: neorv32
+namespace: neorv32
+version: f62ca4323d26
+commit_sha: f62ca4323d263cfb0289e779bb107ffcf0dafff6
+published_at: '2026-05-16T11:17:19+02:00'
+description: The NEORV32 Processor is a **customizable microcontroller-like system
+  on chip (SoC)** built around the NEORV32 [RISC-V](https://riscv.org/) CPU that is
+  written in **platform-independent VHDL**.
+license: BSD-3-Clause
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/stnolting/neorv32.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: f62ca4323d263cfb0289e779bb107ffcf0dafff6
+routertl_compat:
+  language: vhdl-2008
+  library: neorv32
+  files:
+  - rtl/core/neorv32_package.vhd
+  - rtl/core/neorv32_prim.vhd
+  - rtl/core/neorv32_trng.vhd
+  - rtl/verilog/ip/neorv32_bootrom_rom.v
+  - rtl/core/neorv32_bootrom.vhd
+  - rtl/core/neorv32_bus.vhd
+  - rtl/verilog/ip/neorv32_cache_ram.v
+  - rtl/core/neorv32_cache.vhd
+  - rtl/core/neorv32_cfs.vhd
+  - rtl/core/neorv32_clint.vhd
+  - rtl/core/neorv32_cpu_alu_bitmanip.vhd
+  - rtl/core/neorv32_cpu_alu_cfu.vhd
+  - rtl/core/neorv32_cpu_alu_cond.vhd
+  - rtl/core/neorv32_cpu_alu_crypto.vhd
+  - rtl/core/neorv32_cpu_alu_fpu.vhd
+  - rtl/core/neorv32_cpu_alu_muldiv.vhd
+  - rtl/core/neorv32_cpu_alu_shifter.vhd
+  - rtl/core/neorv32_cpu_alu.vhd
+  - rtl/core/neorv32_cpu_control.vhd
+  - rtl/core/neorv32_cpu_counters.vhd
+  - rtl/core/neorv32_cpu_decompressor.vhd
+  - rtl/core/neorv32_cpu_frontend.vhd
+  - rtl/core/neorv32_cpu_hwtrig.vhd
+  - rtl/core/neorv32_cpu_lsu.vhd
+  - rtl/core/neorv32_cpu_pmp.vhd
+  - rtl/core/neorv32_cpu_regfile.vhd
+  - rtl/core/neorv32_cpu_trace.vhd
+  - rtl/core/neorv32_cpu.vhd
+  - rtl/core/neorv32_debug_auth.vhd
+  - rtl/core/neorv32_debug_dm.vhd
+  - rtl/core/neorv32_debug_dtm.vhd
+  - rtl/core/neorv32_dma.vhd
+  - rtl/verilog/ip/neorv32_dmem_ram.v
+  - rtl/core/neorv32_dmem.vhd
+  - rtl/core/neorv32_gpio.vhd
+  - rtl/core/neorv32_gptmr.vhd
+  - rtl/core/neorv32_imem_ram.vhd
+  - rtl/core/neorv32_imem_image.vhd
+  - rtl/core/neorv32_imem_rom.vhd
+  - rtl/core/neorv32_imem.vhd
+  - rtl/core/neorv32_neoled.vhd
+  - rtl/core/neorv32_onewire.vhd
+  - rtl/core/neorv32_pwm.vhd
+  - rtl/core/neorv32_sdi.vhd
+  - rtl/core/neorv32_slink.vhd
+  - rtl/core/neorv32_spi.vhd
+  - rtl/core/neorv32_sys.vhd
+  - rtl/core/neorv32_sysinfo.vhd
+  - rtl/core/neorv32_tracer.vhd
+  - rtl/core/neorv32_twd.vhd
+  - rtl/core/neorv32_twi.vhd
+  - rtl/core/neorv32_uart.vhd
+  - rtl/core/neorv32_wdt.vhd
+  - rtl/core/neorv32_xbus.vhd
+  - rtl/core/neorv32_top.vhd
+  - rtl/system_integration/neorv32_litex_core_complex.vhd
+  - rtl/test_setups/neorv32_test_setup_approm.vhd
+  - rtl/test_setups/neorv32_test_setup_bootloader.vhd
+  - rtl/test_setups/neorv32_test_setup_on_chip_debugger.vhd
+  - rtl/verilog/neorv32_verilog_wrapper.vhd
+  - rtl/system_integration/xbus2axi4_bridge.vhd
+  - rtl/system_integration/neorv32_vivado_ip.vhd
+tags:
+- asynchronous
+- bootloader
+- converter
+- decompressor
+- interface
+- modulation
+- normalizer
+- peripheral
+- processor
+- transmitter
+- universal
+- xbus2axi4
+role: repo
+top_modules:
+- neoTRNG_cell
+- neorv32_bus_amo_rvs
+- neorv32_bus_gateway
+- neorv32_bus_io_switch
+- neorv32_bus_reg
+- neorv32_bus_switch
+- neorv32_clint_mtimecmp
+- neorv32_cpu_alu_fpu_f2i
+- neorv32_cpu_alu_fpu_normalizer
+- neorv32_cpu_frontend_ipb
+- neorv32_cpu_trace_simlog
+- neorv32_gptmr_slice
+- neorv32_litex_core_complex
+- neorv32_prim_fifo
+- neorv32_prim_mul
+- neorv32_prim_spram
+- neorv32_pwm_channel
+- neorv32_sys_reset
+- neorv32_test_setup_approm
+- neorv32_test_setup_bootloader
+- neorv32_test_setup_on_chip_debugger
+- neorv32_trng
+- neorv32_verilog_wrapper
+- neorv32_vivado_ip
+components:
+- neoTRNG
+- neorv32_bootrom
+- neorv32_bootrom_rom
+- neorv32_bus_amo_rmw
+- neorv32_cache
+- neorv32_cache_ram
+- neorv32_cfs
+- neorv32_clint
+- neorv32_cpu
+- neorv32_cpu_alu
+- neorv32_cpu_alu_bitmanip
+- neorv32_cpu_alu_cfu
+- neorv32_cpu_alu_cond
+- neorv32_cpu_alu_crypto
+- neorv32_cpu_alu_fpu
+- neorv32_cpu_alu_muldiv
+- neorv32_cpu_alu_shifter
+- neorv32_cpu_control
+- neorv32_cpu_counters
+- neorv32_cpu_decompressor
+- neorv32_cpu_frontend
+- neorv32_cpu_hwtrig
+- neorv32_cpu_lsu
+- neorv32_cpu_pmp
+- neorv32_cpu_regfile
+- neorv32_cpu_trace
+- neorv32_debug_auth
+- neorv32_debug_dm
+- neorv32_debug_dtm
+- neorv32_dma
+- neorv32_dmem
+- neorv32_dmem_ram
+- neorv32_gpio
+- neorv32_gptmr
+- neorv32_imem
+- neorv32_imem_ram
+- neorv32_imem_rom
+- neorv32_neoled
+- neorv32_onewire
+- neorv32_prim_cnt
+- neorv32_pwm
+- neorv32_sdi
+- neorv32_slink
+- neorv32_spi
+- neorv32_sys_clock
+- neorv32_sysinfo
+- neorv32_top
+- neorv32_tracer
+- neorv32_twd
+- neorv32_twi
+- neorv32_uart
+- neorv32_wdt
+- neorv32_xbus
+- xbus2axi4_bridge
+top_ports:
+  neoTRNG_cell:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: bus_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: bus_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: irq_o
+    type: std_ulogic
+    width: ''
+  neorv32_bus_amo_rvs:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: a_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: a_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: in
+    name: b_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: b_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: x_req_o
+    type: bus_req_t
+    width: ''
+  - direction: in
+    name: x_rsp_i
+    type: bus_rsp_t
+    width: ''
+  neorv32_bus_gateway:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: a_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: a_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: in
+    name: b_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: b_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: x_req_o
+    type: bus_req_t
+    width: ''
+  - direction: in
+    name: x_rsp_i
+    type: bus_rsp_t
+    width: ''
+  neorv32_bus_io_switch:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: a_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: a_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: in
+    name: b_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: b_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: x_req_o
+    type: bus_req_t
+    width: ''
+  - direction: in
+    name: x_rsp_i
+    type: bus_rsp_t
+    width: ''
+  neorv32_bus_reg:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: a_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: a_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: in
+    name: b_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: b_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: x_req_o
+    type: bus_req_t
+    width: ''
+  - direction: in
+    name: x_rsp_i
+    type: bus_rsp_t
+    width: ''
+  neorv32_bus_switch:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: a_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: a_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: in
+    name: b_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: b_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: x_req_o
+    type: bus_req_t
+    width: ''
+  - direction: in
+    name: x_rsp_i
+    type: bus_rsp_t
+    width: ''
+  neorv32_clint_mtimecmp:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: bus_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: bus_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: time_o
+    type: std_ulogic_vector
+    width: 63 downto 0
+  - direction: out
+    name: mti_o
+    type: std_ulogic_vector
+    width: NUM_HARTS-1 downto 0
+  - direction: out
+    name: msi_o
+    type: std_ulogic_vector
+    width: NUM_HARTS-1 downto 0
+  neorv32_cpu_alu_fpu_f2i:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: ctrl_i
+    type: ctrl_bus_t
+    width: ''
+  - direction: in
+    name: csr_we_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: csr_addr_i
+    type: std_ulogic_vector
+    width: 1 downto 0
+  - direction: in
+    name: csr_wdata_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: csr_rdata_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: equal_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: less_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rs1_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: rs2_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: res_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: valid_o
+    type: std_ulogic
+    width: ''
+  neorv32_cpu_alu_fpu_normalizer:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: ctrl_i
+    type: ctrl_bus_t
+    width: ''
+  - direction: in
+    name: csr_we_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: csr_addr_i
+    type: std_ulogic_vector
+    width: 1 downto 0
+  - direction: in
+    name: csr_wdata_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: csr_rdata_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: equal_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: less_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rs1_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: rs2_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: res_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: valid_o
+    type: std_ulogic
+    width: ''
+  neorv32_cpu_frontend_ipb:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: ctrl_i
+    type: ctrl_bus_t
+    width: ''
+  - direction: out
+    name: ibus_req_o
+    type: bus_req_t
+    width: ''
+  - direction: in
+    name: ibus_rsp_i
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: pmp_addr_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: pmp_priv_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: pmp_err_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: frontend_o
+    type: if_bus_t
+    width: ''
+  neorv32_cpu_trace_simlog:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: ctrl_i
+    type: ctrl_bus_t
+    width: ''
+  - direction: in
+    name: rs1_rdata_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: rs2_rdata_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: rd_wdata_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: mem_ben_i
+    type: std_ulogic_vector
+    width: 3 downto 0
+  - direction: in
+    name: mem_addr_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: mem_wdata_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: trace_o
+    type: trace_port_t
+    width: ''
+  neorv32_gptmr_slice:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: bus_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: bus_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: in
+    name: clkgen_i
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: irq_o
+    type: std_ulogic
+    width: ''
+  neorv32_litex_core_complex:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tck_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tdi_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: jtag_tdo_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tms_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_adr_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: in
+    name: wb_dat_i
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  - direction: out
+    name: wb_we_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_sel_o
+    type: std_ulogic_vector
+    width: 3 downto 0
+  - direction: out
+    name: wb_stb_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: wb_cyc_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_ack_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wb_err_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: irq_mei_i
+    type: std_ulogic
+    width: ''
+  neorv32_prim_fifo:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: clear_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wdata_i
+    type: std_ulogic_vector
+    width: DWIDTH-1 downto 0
+  - direction: in
+    name: we_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: free_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: re_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rdata_o
+    type: std_ulogic_vector
+    width: DWIDTH-1 downto 0
+  - direction: out
+    name: avail_o
+    type: std_ulogic
+    width: ''
+  neorv32_prim_mul:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: clear_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wdata_i
+    type: std_ulogic_vector
+    width: DWIDTH-1 downto 0
+  - direction: in
+    name: we_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: free_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: re_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rdata_o
+    type: std_ulogic_vector
+    width: DWIDTH-1 downto 0
+  - direction: out
+    name: avail_o
+    type: std_ulogic
+    width: ''
+  neorv32_prim_spram:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: clear_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: wdata_i
+    type: std_ulogic_vector
+    width: DWIDTH-1 downto 0
+  - direction: in
+    name: we_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: free_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: re_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rdata_o
+    type: std_ulogic_vector
+    width: DWIDTH-1 downto 0
+  - direction: out
+    name: avail_o
+    type: std_ulogic
+    width: ''
+  neorv32_pwm_channel:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: bus_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: bus_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: in
+    name: clkgen_i
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: pwm_o
+    type: std_ulogic_vector
+    width: 31 downto 0
+  neorv32_sys_reset:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_ext_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_wdt_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_dbg_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rstn_ext_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: rstn_sys_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: xrstn_wdt_o
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: xrstn_ocd_o
+    type: std_ulogic
+    width: ''
+  neorv32_test_setup_approm:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: gpio_o
+    type: std_ulogic_vector
+    width: 7 downto 0
+  neorv32_test_setup_bootloader:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: gpio_o
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: uart0_txd_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: uart0_rxd_i
+    type: std_ulogic
+    width: ''
+  neorv32_test_setup_on_chip_debugger:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tck_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tdi_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: jtag_tdo_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: jtag_tms_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: gpio_o
+    type: std_ulogic_vector
+    width: 7 downto 0
+  - direction: out
+    name: uart0_txd_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: uart0_rxd_i
+    type: std_ulogic
+    width: ''
+  neorv32_trng:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: bus_req_i
+    type: bus_req_t
+    width: ''
+  - direction: out
+    name: bus_rsp_o
+    type: bus_rsp_t
+    width: ''
+  - direction: out
+    name: irq_o
+    type: std_ulogic
+    width: ''
+  neorv32_verilog_wrapper:
+  - direction: in
+    name: clk_i
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: rstn_i
+    type: std_ulogic
+    width: ''
+  - direction: out
+    name: uart0_txd_o
+    type: std_ulogic
+    width: ''
+  - direction: in
+    name: uart0_rxd_i
+    type: std_ulogic
+    width: ''
+  neorv32_vivado_ip:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: resetn
+    type: std_logic
+    width: ''
+  - direction: out
+    name: ocd_resetn
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wdt_resetn
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axi_awaddr
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: m_axi_awlen
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: m_axi_awsize
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: m_axi_awburst
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: m_axi_awcache
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: m_axi_awprot
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: m_axi_awvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: m_axi_awready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axi_wdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: m_axi_wstrb
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: m_axi_wlast
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axi_wvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: m_axi_wready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axi_araddr
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: m_axi_arlen
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: out
+    name: m_axi_arsize
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: m_axi_arburst
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: out
+    name: m_axi_arcache
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: m_axi_arprot
+    type: std_logic_vector
+    width: 2 downto 0
+  - direction: out
+    name: m_axi_arvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: m_axi_arready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: m_axi_rdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: m_axi_rresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: m_axi_rlast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: m_axi_rvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axi_rready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: m_axi_bresp
+    type: std_logic_vector
+    width: 1 downto 0
+  - direction: in
+    name: m_axi_bvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: m_axi_bready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s0_axis_tdest
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: out
+    name: s0_axis_tvalid
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s0_axis_tready
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s0_axis_tdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: out
+    name: s0_axis_tlast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s1_axis_tid
+    type: std_logic_vector
+    width: 3 downto 0
+  - direction: in
+    name: s1_axis_tvalid
+    type: std_logic
+    width: ''
+  - direction: out
+    name: s1_axis_tready
+    type: std_logic
+    width: ''
+  - direction: in
+    name: s1_axis_tdata
+    type: std_logic_vector
+    width: 31 downto 0
+  - direction: in
+    name: s1_axis_tlast
+    type: std_logic
+    width: ''
+  - direction: in
+    name: jtag_tck_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: jtag_tdi_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: jtag_tdo_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: jtag_tms_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: gpio_dir_o
+    type: std_logic_vector
+    width: IO_GPIO_DIR_NUM-1 downto 0
+  - direction: out
+    name: gpio_o
+    type: std_logic_vector
+    width: IO_GPIO_OUT_NUM-1 downto 0
+  - direction: in
+    name: gpio_i
+    type: std_logic_vector
+    width: IO_GPIO_IN_NUM-1 downto 0
+  - direction: out
+    name: uart0_txd_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: uart0_rxd_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: uart0_rtsn_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: uart0_ctsn_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: uart1_txd_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: uart1_rxd_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: uart1_rtsn_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: uart1_ctsn_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spi_clk_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spi_dat_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: spi_dat_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: spi_csn_o
+    type: std_logic_vector
+    width: 7 downto 0
+  - direction: in
+    name: sdi_clk_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: sdi_dat_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sdi_dat_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: sdi_csn_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: twi_sda_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: twi_sda_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: twi_scl_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: twi_scl_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: twd_sda_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: twd_sda_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: twd_scl_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: onewire_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: onewire_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pwm_o
+    type: std_logic_vector
+    width: IO_PWM_NUM-1 downto 0
+  - direction: in
+    name: cfs_in_i
+    type: std_logic_vector
+    width: 255 downto 0
+  - direction: out
+    name: cfs_out_o
+    type: std_logic_vector
+    width: 255 downto 0
+  - direction: out
+    name: neoled_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: mtime_time_o
+    type: std_logic_vector
+    width: 63 downto 0
+  - direction: in
+    name: irq_msi_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: irq_mti_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: irq_mei_i
+    type: std_logic
+    width: ''
+total_entities: 78
+desc_source: readme
+provides_packages:
+- neorv32_imem_image
+- neorv32_package

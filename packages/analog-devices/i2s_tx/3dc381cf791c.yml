@@ -1,0 +1,89 @@
+name: i2s_tx
+namespace: analog-devices
+version: 3dc381cf791c
+commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+published_at: '2026-05-13T08:20:05+00:00'
+description: Transmit engine
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+routertl_compat:
+  language: vhdl-2008
+  library: work
+  files:
+  - library/axi_i2s_adi/i2s_tx.vhd
+tags:
+- i2s
+- transmit
+- transmitter
+- tx
+role: top
+top_ports:
+  i2s_tx:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: resetn
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enable
+    type: Boolean
+    width: ''
+  - direction: in
+    name: bclk
+    type: std_logic
+    width: ''
+  - direction: in
+    name: channel_sync
+    type: std_logic
+    width: ''
+  - direction: in
+    name: frame_sync
+    type: std_logic
+    width: ''
+  - direction: out
+    name: sdata
+    type: std_logic_vector
+    width: C_NUM - 1 downto 0
+  - direction: out
+    name: ack
+    type: std_logic
+    width: ''
+  - direction: in
+    name: stb
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data
+    type: std_logic_vector
+    width: C_SLOT_WIDTH-1 downto 0
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

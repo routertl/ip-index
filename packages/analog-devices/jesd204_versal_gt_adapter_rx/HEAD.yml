@@ -1,8 +1,8 @@
 name: jesd204_versal_gt_adapter_rx
 namespace: analog-devices
 version: HEAD
-commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
-published_at: '2026-05-12T15:24:37+03:00'
+commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+published_at: '2026-05-13T08:20:05+00:00'
 description: JESD204 adapter
 license: ADIBSD OR GPL-2.0-only
 license_class: permissive
@@ -11,7 +11,7 @@ source:
   url: https://github.com/analogdevicesinc/hdl.git
   tag: main
   ip_yml_path: .
-  resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
+  resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
   language: verilog
   library: work

@@ -1,8 +1,8 @@
 name: taxi-ethernet
 namespace: fpganinja
 version: master
-commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
-published_at: '2026-04-06T23:59:16-07:00'
+commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
+published_at: '2026-05-12T13:06:02-07:00'
 description: 'Full Ethernet stack: 1G/10G/25G MACs, 10G/25G PHYs, MII/GMII/RGMII PHY
   interfaces, MAC control + 802.3x pause, MDIO master, BASE-R + XGMII PCS encoders/decoders,
   transceiver reset helpers, eth_mac_stats.'
@@ -13,7 +13,7 @@ source:
   url: https://github.com/fpganinja/taxi.git
   tag: master
   ip_yml_path: .
-  resolved_commit: 1fe508a6bf17edbb29bce9a8477be615b1012789
+  resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
   language: systemverilog
   library: work
@@ -31,6 +31,7 @@ routertl_compat:
   - src/eth/rtl/taxi_axis_xgmii_tx_32.sv
   - src/eth/rtl/taxi_axis_xgmii_tx_64.sv
   - src/axis/rtl/taxi_axis_null_src.sv
+  - src/axis/rtl/taxi_axis_pad.sv
   - src/axis/rtl/taxi_axis_tie.sv
   - src/prim/rtl/taxi_penc.sv
   - src/prim/rtl/taxi_arbiter.sv

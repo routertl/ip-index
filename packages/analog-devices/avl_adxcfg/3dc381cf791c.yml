@@ -1,0 +1,151 @@
+name: avl_adxcfg
+namespace: analog-devices
+version: 3dc381cf791c
+commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+published_at: '2026-05-13T08:20:05+00:00'
+description: Configures AXI interfaces.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/intel/avl_adxcfg/avl_adxcfg.v
+tags:
+- adxcfg
+- avl
+role: top
+top_ports:
+  avl_adxcfg:
+  - direction: in
+    name: rcfg_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rcfg_reset_n
+    type: wire
+    width: ''
+  - direction: in
+    name: rcfg_in_read_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rcfg_in_write_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rcfg_in_address_0
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: rcfg_in_writedata_0
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: rcfg_in_readdata_0
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: rcfg_in_waitrequest_0
+    type: wire
+    width: ''
+  - direction: in
+    name: rcfg_in_read_1
+    type: wire
+    width: ''
+  - direction: in
+    name: rcfg_in_write_1
+    type: wire
+    width: ''
+  - direction: in
+    name: rcfg_in_address_1
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: in
+    name: rcfg_in_writedata_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: rcfg_in_readdata_1
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: rcfg_in_waitrequest_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rcfg_out_read_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rcfg_out_write_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rcfg_out_address_0
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: out
+    name: rcfg_out_writedata_0
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rcfg_out_readdata_0
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rcfg_out_waitrequest_0
+    type: wire
+    width: ''
+  - direction: out
+    name: rcfg_out_read_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rcfg_out_write_1
+    type: wire
+    width: ''
+  - direction: out
+    name: rcfg_out_address_1
+    type: wire
+    width: '[ADDRESS_WIDTH-1:0]'
+  - direction: out
+    name: rcfg_out_writedata_1
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rcfg_out_readdata_1
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: rcfg_out_waitrequest_1
+    type: wire
+    width: ''
+desc_source: preserved
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

@@ -1,8 +1,8 @@
 name: cva6
 namespace: openhwgroup
 version: master
-commit_sha: f0c274cad66b84cd58379880741680351c7ce9ab
-published_at: '2026-05-08T17:42:54+02:00'
+commit_sha: b3bee0ca1b4cfe78559ed11fd28d3abb137fc8ec
+published_at: '2026-05-13T13:41:37+02:00'
 description: 'CVA6 is a 6-stage, single-issue, in-order CPU which implements the 64-bit
   RISC-V instruction set. It fully implements I, M, A and C extensions as specified
   in Volume I: User-Level ISA V 2.3 as well as the draft privilege extension 1.10.'
@@ -13,7 +13,7 @@ source:
   url: https://github.com/openhwgroup/cva6.git
   tag: master
   ip_yml_path: .
-  resolved_commit: f0c274cad66b84cd58379880741680351c7ce9ab
+  resolved_commit: b3bee0ca1b4cfe78559ed11fd28d3abb137fc8ec
 routertl_compat:
   language: systemverilog
   library: work

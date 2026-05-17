@@ -1,0 +1,288 @@
+name: axi_rd_wr_combiner
+namespace: analog-devices
+version: 3dc381cf791c
+commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+published_at: '2026-05-13T08:20:05+00:00'
+description: Helper module to combine a read-only and a write-only AXI interface into
+  a single read-write AXI interface. Only supports AXI3 at the moment.
+license: ADIBSD OR GPL-2.0-only
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/analogdevicesinc/hdl.git
+  tag: main
+  ip_yml_path: .
+  resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
+routertl_compat:
+  language: verilog
+  library: work
+  files:
+  - library/axi_rd_wr_combiner/axi_rd_wr_combiner.v
+tags:
+- amba
+- axi
+- bus
+- combiner
+- rd
+- wr
+role: top
+top_ports:
+  axi_rd_wr_combiner:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axi_awaddr
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_axi_awlen
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: m_axi_awsize
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_axi_awburst
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_axi_awprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_axi_awcache
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: m_axi_awvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axi_awready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axi_wdata
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: m_axi_wstrb
+    type: wire
+    width: '[ 7:0]'
+  - direction: in
+    name: m_axi_wready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axi_wvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axi_wlast
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axi_bvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axi_bresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_axi_bready
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axi_arvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axi_araddr
+    type: wire
+    width: '[31:0]'
+  - direction: out
+    name: m_axi_arlen
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: m_axi_arsize
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: m_axi_arburst
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: m_axi_arcache
+    type: wire
+    width: '[ 3:0]'
+  - direction: out
+    name: m_axi_arprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: m_axi_arready
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axi_rvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: m_axi_rresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: m_axi_rdata
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: m_axi_rlast
+    type: wire
+    width: ''
+  - direction: out
+    name: m_axi_rready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_wr_axi_awaddr
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_wr_axi_awlen
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: s_wr_axi_awsize
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: s_wr_axi_awburst
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: s_wr_axi_awprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: s_wr_axi_awcache
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: s_wr_axi_awvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_wr_axi_awready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_wr_axi_wdata
+    type: wire
+    width: '[63:0]'
+  - direction: in
+    name: s_wr_axi_wstrb
+    type: wire
+    width: '[ 7:0]'
+  - direction: out
+    name: s_wr_axi_wready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_wr_axi_wvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_wr_axi_wlast
+    type: wire
+    width: ''
+  - direction: out
+    name: s_wr_axi_bvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_wr_axi_bresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: s_wr_axi_bready
+    type: wire
+    width: ''
+  - direction: in
+    name: s_rd_axi_arvalid
+    type: wire
+    width: ''
+  - direction: in
+    name: s_rd_axi_araddr
+    type: wire
+    width: '[31:0]'
+  - direction: in
+    name: s_rd_axi_arlen
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: s_rd_axi_arsize
+    type: wire
+    width: '[ 2:0]'
+  - direction: in
+    name: s_rd_axi_arburst
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: s_rd_axi_arcache
+    type: wire
+    width: '[ 3:0]'
+  - direction: in
+    name: s_rd_axi_arprot
+    type: wire
+    width: '[ 2:0]'
+  - direction: out
+    name: s_rd_axi_arready
+    type: wire
+    width: ''
+  - direction: out
+    name: s_rd_axi_rvalid
+    type: wire
+    width: ''
+  - direction: out
+    name: s_rd_axi_rresp
+    type: wire
+    width: '[ 1:0]'
+  - direction: out
+    name: s_rd_axi_rdata
+    type: wire
+    width: '[63:0]'
+  - direction: out
+    name: s_rd_axi_rlast
+    type: wire
+    width: ''
+  - direction: in
+    name: s_rd_axi_rready
+    type: wire
+    width: ''
+desc_source: header
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo

@@ -1,8 +1,8 @@
 name: taxi-axis
 namespace: fpganinja
 version: master
-commit_sha: 1fe508a6bf17edbb29bce9a8477be615b1012789
-published_at: '2026-04-06T23:59:16-07:00'
+commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
+published_at: '2026-05-12T13:06:02-07:00'
 description: "AXI4-Stream infrastructure: FIFOs (sync/async/pipeline), broadcast,\
   \ demux/mux, switch, register, COBS encode/decode, null src/snk, tie. Excludes Ethernet\
   \ PCS streams (BASE-R, XGMII, GMII bridges) \u2014 those live in taxi-ethernet."
@@ -13,7 +13,7 @@ source:
   url: https://github.com/fpganinja/taxi.git
   tag: master
   ip_yml_path: .
-  resolved_commit: 1fe508a6bf17edbb29bce9a8477be615b1012789
+  resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
   language: systemverilog
   library: work
@@ -38,6 +38,7 @@ routertl_compat:
   - src/axis/rtl/taxi_axis_mux.sv
   - src/axis/rtl/taxi_axis_null_snk.sv
   - src/axis/rtl/taxi_axis_null_src.sv
+  - src/axis/rtl/taxi_axis_pad.sv
   - src/axis/rtl/taxi_axis_pipeline_fifo.sv
   - src/axis/rtl/taxi_axis_register.sv
   - src/axis/rtl/taxi_axis_pipeline_register.sv
@@ -69,6 +70,7 @@ top_modules:
 - taxi_axis_mux
 - taxi_axis_null_snk
 - taxi_axis_null_src
+- taxi_axis_pad
 - taxi_axis_pipeline_fifo
 - taxi_axis_pipeline_register
 - taxi_axis_switch
@@ -430,6 +432,23 @@ top_ports:
     name: m_axis
     type: taxi_axis_if.src
     width: ''
+  taxi_axis_pad:
+  - direction: in
+    name: logic
+    type: wire
+    width: ''
+  - direction: in
+    name: data
+    type: wire
+    width: ''
+  - direction: snk
+    name: s_axis
+    type: taxi_axis_if.snk
+    width: ''
+  - direction: src
+    name: m_axis
+    type: taxi_axis_if.src
+    width: ''
   taxi_axis_pipeline_fifo:
   - direction: in
     name: logic
@@ -486,5 +505,5 @@ top_ports:
     name: m_axis
     type: taxi_axis_if.src
     width: ''
-total_entities: 19
+total_entities: 20
 desc_source: curator
