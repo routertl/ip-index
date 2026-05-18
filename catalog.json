@@ -17353,7 +17353,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "etherbone",
     "source_url": "https://gitlab.com/ohwr/project/etherbone-core.git",
     "commit_sha": "035fee323b5bafc8f06de0ac9cabb5892c33134e",
     "published_at": "2025-04-09T14:43:47+02:00",
@@ -17387,7 +17387,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "etherbone",
       "files": [
         "hdl/eb_slave_core/eb_hdr_pkg.vhd",
         "hdl/eb_slave_core/eb_internals_pkg.vhd",
@@ -17434,7 +17434,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "general_cores",
     "source_url": "https://gitlab.com/ohwr/project/general-cores.git",
     "commit_sha": "cfd63e8bcd582f979e0ca2b8583f0327a6bfbf7b",
     "published_at": "2026-05-08T07:43:51+00:00",
@@ -17658,7 +17658,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "general_cores",
       "files": [
         "modules/wishbone/wb_lm32/src/lm32_include.v",
         "modules/wishbone/wb_spi/spi_defines.v",
@@ -35087,7 +35087,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "wr",
     "source_url": "https://gitlab.cern.ch/white-rabbit/wr-cores.git",
     "commit_sha": "69cc4cc3132530c836cd57ce1b282e8377fe7a07",
     "published_at": "2017-12-18T18:45:29+01:00",
@@ -35130,7 +35130,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "wr",
       "files": [
         "modules/timing/dmtd_with_deglitcher.vhd",
         "modules/timing/dmtd_phase_meas.vhd",
@@ -35165,7 +35165,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "wr",
     "source_url": "https://gitlab.cern.ch/white-rabbit/wr-cores.git",
     "commit_sha": "69cc4cc3132530c836cd57ce1b282e8377fe7a07",
     "published_at": "2017-12-18T18:45:29+01:00",
@@ -35206,7 +35206,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "wr",
       "files": [
         "modules/wr_eca/eca_auto_pkg.vhd",
         "modules/wr_eca/eca_internals_pkg.vhd",
@@ -35260,7 +35260,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "wr",
     "source_url": "https://gitlab.cern.ch/white-rabbit/wr-cores.git",
     "commit_sha": "69cc4cc3132530c836cd57ce1b282e8377fe7a07",
     "published_at": "2017-12-18T18:45:29+01:00",
@@ -35297,7 +35297,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "wr",
       "files": [
         "modules/wr_endpoint/ep_registers_pkg.vhd",
         "modules/fabric/wr_fabric_pkg.vhd",
@@ -35356,7 +35356,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "wr",
     "source_url": "https://gitlab.cern.ch/white-rabbit/wr-cores.git",
     "commit_sha": "69cc4cc3132530c836cd57ce1b282e8377fe7a07",
     "published_at": "2017-12-18T18:45:29+01:00",
@@ -35385,7 +35385,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "wr",
       "files": [
         "modules/wr_mini_nic/minic_packet_buffer.vhd",
         "modules/wr_mini_nic/minic_wbgen2_pkg.vhd",
@@ -35407,7 +35407,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "wr",
     "source_url": "https://gitlab.cern.ch/white-rabbit/wr-cores.git",
     "commit_sha": "69cc4cc3132530c836cd57ce1b282e8377fe7a07",
     "published_at": "2017-12-18T18:45:29+01:00",
@@ -35428,7 +35428,7 @@
     "provides_packages": [],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "wr",
       "files": [
         "modules/wr_pps_gen/pps_gen_wb.vhd",
         "modules/wr_pps_gen/wr_pps_gen.vhd",
@@ -35447,7 +35447,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "wr",
     "source_url": "https://gitlab.cern.ch/white-rabbit/wr-cores.git",
     "commit_sha": "69cc4cc3132530c836cd57ce1b282e8377fe7a07",
     "published_at": "2017-12-18T18:45:29+01:00",
@@ -35483,7 +35483,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "wr",
       "files": [
         "modules/wrc_core/wrc_syscon_pkg.vhd",
         "modules/wrc_core/wrc_diags_pkg.vhd",
@@ -35561,7 +35561,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "wr",
     "source_url": "https://gitlab.cern.ch/white-rabbit/wr-cores.git",
     "commit_sha": "69cc4cc3132530c836cd57ce1b282e8377fe7a07",
     "published_at": "2017-12-18T18:45:29+01:00",
@@ -35592,7 +35592,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "wr",
       "files": [
         "modules/wr_softpll_ng/spll_aligner.vhd",
         "modules/wr_softpll_ng/spll_bangbang_pd.vhd",
@@ -35617,7 +35617,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "wr",
     "source_url": "https://gitlab.cern.ch/white-rabbit/wr-cores.git",
     "commit_sha": "69cc4cc3132530c836cd57ce1b282e8377fe7a07",
     "published_at": "2017-12-18T18:45:29+01:00",
@@ -35655,7 +35655,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "wr",
       "files": [
         "modules/wr_streamers/dropping_buffer.vhd",
         "modules/wr_streamers/escape_detector.vhd",
@@ -35695,7 +35695,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "wr",
     "source_url": "https://gitlab.cern.ch/white-rabbit/wr-cores.git",
     "commit_sha": "69cc4cc3132530c836cd57ce1b282e8377fe7a07",
     "published_at": "2017-12-18T18:45:29+01:00",
@@ -35725,7 +35725,7 @@
     "provides_packages": [],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "wr",
       "files": [
         "modules/wr_tbi_phy/dec_8b10b.vhd",
         "modules/wr_tbi_phy/enc_8b10b.vhd",
@@ -35744,7 +35744,7 @@
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "wr",
     "source_url": "https://gitlab.cern.ch/white-rabbit/wr-cores.git",
     "commit_sha": "69cc4cc3132530c836cd57ce1b282e8377fe7a07",
     "published_at": "2017-12-18T18:45:29+01:00",
@@ -35763,7 +35763,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "wr",
       "files": [
         "modules/wr_tlu/tlu_pkg.vhd",
         "modules/wr_tlu/tlu_fsm.vhd",

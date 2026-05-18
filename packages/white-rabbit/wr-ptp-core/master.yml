@@ -17,7 +17,7 @@ source:
   resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
 routertl_compat:
   language: vhdl-2008
-  library: work
+  library: wr
   files:
   - modules/wrc_core/wrc_syscon_pkg.vhd
   - modules/wrc_core/wrc_diags_pkg.vhd

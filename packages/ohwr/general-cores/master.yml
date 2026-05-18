@@ -18,7 +18,7 @@ source:
   resolved_commit: cfd63e8bcd582f979e0ca2b8583f0327a6bfbf7b
 routertl_compat:
   language: vhdl-2008
-  library: work
+  library: general_cores
   files:
   - modules/wishbone/wb_lm32/src/lm32_include.v
   - modules/wishbone/wb_spi/spi_defines.v

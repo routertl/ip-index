@@ -17,7 +17,7 @@ source:
   resolved_commit: 035fee323b5bafc8f06de0ac9cabb5892c33134e
 routertl_compat:
   language: vhdl-2008
-  library: work
+  library: etherbone
   files:
   - hdl/eb_slave_core/eb_hdr_pkg.vhd
   - hdl/eb_slave_core/eb_internals_pkg.vhd
