@@ -19,9 +19,10 @@ routertl_compat:
   files:
   - hdl/en_cl_fix_private_pkg.vhd
   - hdl/en_cl_fix_pkg.vhd
-  - hdl/en_cl_fix_round.vhd
-  - hdl/en_cl_fix_saturate.vhd
   - hdl/en_cl_fix_resize.vhd
+  package_deps:
+  - enclustra/en_cl_fix_round
+  - enclustra/en_cl_fix_saturate
 tags:
 - cl
 - en
