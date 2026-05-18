@@ -17922,7 +17922,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -17947,7 +17947,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/axi/vhdl/olo_axi_pkg_protocol.vhd",
         "src/base/vhdl/olo_base_pkg_array.vhd",
@@ -17968,7 +17968,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -17994,7 +17994,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18022,7 +18022,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18048,7 +18048,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18073,7 +18073,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18093,7 +18093,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_pl_stage.vhd",
@@ -18112,7 +18112,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18134,7 +18134,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18154,7 +18154,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18176,7 +18176,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18197,7 +18197,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18219,7 +18219,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18241,7 +18241,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18265,7 +18265,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18289,7 +18289,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18309,7 +18309,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd"
@@ -18327,7 +18327,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18347,7 +18347,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
@@ -18369,7 +18369,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18389,7 +18389,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
@@ -18409,7 +18409,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18429,7 +18429,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
@@ -18449,7 +18449,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18469,7 +18469,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
@@ -18488,7 +18488,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18508,7 +18508,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
@@ -18529,7 +18529,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18549,7 +18549,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
@@ -18571,7 +18571,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18591,7 +18591,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
@@ -18611,7 +18611,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18634,7 +18634,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18655,7 +18655,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18680,7 +18680,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18704,7 +18704,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18728,7 +18728,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18755,7 +18755,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18775,7 +18775,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18795,7 +18795,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18815,7 +18815,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18837,7 +18837,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18858,7 +18858,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18880,7 +18880,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18903,7 +18903,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18924,7 +18924,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18949,7 +18949,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -18974,7 +18974,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -18998,7 +18998,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19022,7 +19022,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19047,7 +19047,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19069,7 +19069,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19090,7 +19090,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19113,7 +19113,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19134,7 +19134,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19158,7 +19158,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19175,7 +19175,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_pl_stage.vhd"
@@ -19193,7 +19193,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19212,7 +19212,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19232,7 +19232,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19256,7 +19256,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19277,7 +19277,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19301,7 +19301,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19322,7 +19322,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008-relaxed",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19346,7 +19346,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19367,7 +19367,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19389,7 +19389,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19412,7 +19412,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19432,7 +19432,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19452,7 +19452,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19472,7 +19472,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19491,7 +19491,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19510,7 +19510,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19529,7 +19529,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19549,7 +19549,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19568,7 +19568,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19590,7 +19590,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19610,7 +19610,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19632,7 +19632,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19652,7 +19652,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19674,7 +19674,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19694,7 +19694,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19715,7 +19715,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19740,7 +19740,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19761,7 +19761,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19786,7 +19786,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19807,7 +19807,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19832,7 +19832,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19855,7 +19855,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19876,7 +19876,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19903,7 +19903,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19935,7 +19935,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -19961,7 +19961,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -19992,7 +19992,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20013,7 +20013,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20035,7 +20035,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20057,7 +20057,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20083,7 +20083,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20106,7 +20106,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20135,7 +20135,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20156,7 +20156,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20177,7 +20177,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20198,7 +20198,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20223,7 +20223,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20244,7 +20244,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20269,7 +20269,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20290,7 +20290,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20315,7 +20315,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20336,7 +20336,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20360,7 +20360,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20381,7 +20381,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20403,7 +20403,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20424,7 +20424,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20446,7 +20446,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20466,7 +20466,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20491,7 +20491,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20512,7 +20512,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20533,7 +20533,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20556,7 +20556,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20581,7 +20581,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20603,7 +20603,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20626,7 +20626,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20652,7 +20652,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20674,7 +20674,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20699,7 +20699,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20720,7 +20720,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20745,7 +20745,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",
@@ -20767,7 +20767,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20788,7 +20788,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/intf/vhdl/olo_intf_sync.vhd"
@@ -20806,7 +20806,7 @@
     "license": "",
     "license_class": "unknown",
     "language": "vhdl-2008",
-    "library": "work",
+    "library": "olo",
     "source_url": "https://github.com/open-logic/open-logic.git",
     "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
     "published_at": "2026-03-10T06:51:30+01:00",
@@ -20834,7 +20834,7 @@
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
-      "library": "work",
+      "library": "olo",
       "files": [
         "src/base/vhdl/olo_base_pkg_array.vhd",
         "src/base/vhdl/olo_base_pkg_math.vhd",

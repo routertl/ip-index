@@ -15,7 +15,7 @@ source:
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
   language: vhdl-2008
-  library: work
+  library: olo
   files:
   - src/base/vhdl/olo_base_pkg_array.vhd
   - src/base/vhdl/olo_base_pkg_math.vhd
