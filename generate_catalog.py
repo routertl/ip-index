@@ -51,7 +51,7 @@ def build_catalog() -> list[dict]:
             with open(latest_file) as f:
                 meta = yaml.safe_load(f)
 
-            compat = meta.get("routertl_compat", {})
+            compat = meta.get("routertl_compat", {}) or {}
             entry = {
                 "namespace": namespace,
                 "name": name,
@@ -62,6 +62,14 @@ def build_catalog() -> list[dict]:
                 "language": compat.get("language", ""),
                 "library": compat.get("library", ""),
                 "source_url": meta.get("source", {}).get("url", ""),
+                # DS-T1 (2026-05-18): copy the full routertl_compat block
+                # so the resolver has the files / library_deps it needs.
+                # Previous versions of this script dropped routertl_compat
+                # entirely, producing catalogs that worked for cached
+                # consumers (ip.lock retained file lists) but broke every
+                # fresh `rr pkg add`. Regression test at
+                # tests/test_catalog_integrity.py prevents recurrence.
+                "routertl_compat": compat,
             }
             catalog.append(entry)
 

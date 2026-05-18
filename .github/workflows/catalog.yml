@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - "packages/**"
+      - "generate_catalog.py"
+      - "tests/test_catalog_integrity.py"
+      - ".github/workflows/catalog.yml"
 
 jobs:
   catalog:
@@ -13,8 +16,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install pyyaml
+      - run: pip install pyyaml pytest
       - run: python generate_catalog.py
+      # DS-T1 regression guard (2026-05-18): assert every regenerated
+      # catalog entry has the resolver-required fields. A previous
+      # generate_catalog.py regression silently shipped 804 entries
+      # without routertl_compat.files; existing consumers' ip.lock
+      # masked the failure for weeks. This step refuses to commit a
+      # catalog the resolver can't actually use.
+      - run: python -m pytest tests/test_catalog_integrity.py -v
       - name: Commit updated catalog
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
