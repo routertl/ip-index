@@ -6,7 +6,7 @@
     "versions": [
       "master"
     ],
-    "description": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream \u2014 author moved active development to fpganinja/taxi (CERN-OHL-S-2.0).",
+    "description": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream — author moved active development to fpganinja/taxi (CERN-OHL-S-2.0).",
     "license": "MIT",
     "license_class": "permissive",
     "language": "verilog",
@@ -172,7 +172,17 @@
         "rtl/xgmii_deinterleave.v",
         "rtl/xgmii_interleave.v"
       ]
-    }
+    },
+    "health_tier": "silver",
+    "last_verified_at": "2026-05-04",
+    "contract": {
+      "traits": {
+        "rx_strips_fcs": true,
+        "tx_user_frame_includes_fcs": false
+      },
+      "defects": []
+    },
+    "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml"
   },
   {
     "namespace": "analog-devices",
@@ -201,7 +211,7 @@
       "physical"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -242,7 +252,7 @@
       "data"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -281,7 +291,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -320,7 +330,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -360,7 +370,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -399,7 +409,7 @@
       "rst"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -437,7 +447,7 @@
       "mux"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -474,7 +484,7 @@
       "csc"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -512,7 +522,7 @@
       "rgb2crycb"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -549,7 +559,7 @@
       "dds"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -591,7 +601,7 @@
       "dds"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -631,7 +641,7 @@
       "dds"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -673,7 +683,7 @@
       "sine"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -712,7 +722,7 @@
       "sine"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -759,7 +769,7 @@
       "transport"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -823,7 +833,7 @@
       "transport"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -872,7 +882,7 @@
       "transport"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -926,7 +936,7 @@
       "transport"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -974,7 +984,7 @@
       "transport"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1021,7 +1031,7 @@
       "transport"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1075,7 +1085,7 @@
       "transport"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1146,7 +1156,7 @@
       "transport"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1200,7 +1210,7 @@
       "transport"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1261,7 +1271,7 @@
       "transport"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1308,7 +1318,7 @@
       "transport"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1352,7 +1362,7 @@
       "iqcor"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1390,7 +1400,7 @@
       "mux"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1431,7 +1441,7 @@
       "serializer"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1470,7 +1480,7 @@
       "serializer"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1509,7 +1519,7 @@
       "sysref"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1546,7 +1556,7 @@
       "tdd"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "verdict",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1583,7 +1593,7 @@
       "generator"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1621,7 +1631,7 @@
       "jesd204"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1660,7 +1670,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1702,7 +1712,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1739,7 +1749,7 @@
       "avl"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1777,7 +1787,7 @@
       "swap"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1813,7 +1823,7 @@
       "avl"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1849,7 +1859,7 @@
       "dacfifo"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1893,7 +1903,7 @@
       "rd"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1933,7 +1943,7 @@
       "wr"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -1973,7 +1983,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2029,7 +2039,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2077,7 +2087,7 @@
       "core"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2129,7 +2139,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2180,7 +2190,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2236,7 +2246,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved-suspect",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2280,7 +2290,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved-suspect",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2323,7 +2333,7 @@
       "cmos"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2368,7 +2378,7 @@
       "voltage"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2409,7 +2419,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2457,7 +2467,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2506,7 +2516,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2557,7 +2567,7 @@
       "pif"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2598,7 +2608,7 @@
       "pif"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2637,7 +2647,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2684,7 +2694,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2730,7 +2740,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2776,7 +2786,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2835,7 +2845,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2883,7 +2893,7 @@
       "core"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2935,7 +2945,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -2976,7 +2986,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3033,7 +3043,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3088,7 +3098,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved-suspect",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3133,7 +3143,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3174,7 +3184,7 @@
       "pnmon"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3213,7 +3223,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3296,7 +3306,7 @@
       "voltage"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3343,7 +3353,7 @@
       "voltage"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3383,7 +3393,7 @@
       "cmos"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3429,7 +3439,7 @@
       "voltage"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3476,7 +3486,7 @@
       "voltage"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3520,7 +3530,7 @@
       "voltage"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3562,7 +3572,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3618,7 +3628,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3669,7 +3679,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3709,7 +3719,7 @@
       "tdd"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved-suspect",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3755,7 +3765,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3813,7 +3823,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3861,7 +3871,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3918,7 +3928,7 @@
       "core"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -3966,7 +3976,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4010,7 +4020,7 @@
       "pnmon"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4049,7 +4059,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4103,7 +4113,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4147,7 +4157,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4188,7 +4198,7 @@
       "pnmon"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4227,7 +4237,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4280,7 +4290,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4324,7 +4334,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4365,7 +4375,7 @@
       "pnmon"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4404,7 +4414,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4457,7 +4467,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4501,7 +4511,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4542,7 +4552,7 @@
       "pnmon"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4581,7 +4591,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4638,7 +4648,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved-suspect",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4682,7 +4692,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4726,7 +4736,7 @@
       "pnmon"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4765,7 +4775,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4822,7 +4832,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4870,7 +4880,7 @@
       "core"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4922,7 +4932,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -4961,7 +4971,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5017,7 +5027,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5065,7 +5075,7 @@
       "core"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5117,7 +5127,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5174,7 +5184,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5222,7 +5232,7 @@
       "core"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5274,7 +5284,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5313,7 +5323,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5379,7 +5389,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5421,7 +5431,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5477,7 +5487,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5528,7 +5538,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5570,7 +5580,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5627,7 +5637,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5675,7 +5685,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5726,7 +5736,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5768,7 +5778,7 @@
       "regmap"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5807,7 +5817,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5862,7 +5872,7 @@
       "channel"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved-suspect",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5905,7 +5915,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -5949,7 +5959,7 @@
       "digital"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6002,7 +6012,7 @@
       "filter"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6052,7 +6062,7 @@
       "register"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6095,7 +6105,7 @@
       "trigger"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6142,7 +6152,7 @@
       "trigger"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6181,7 +6191,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6231,7 +6241,7 @@
       "digital"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6274,7 +6284,7 @@
       "memory"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6316,7 +6326,7 @@
       "wr"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6356,7 +6366,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6438,7 +6448,7 @@
       "core"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6508,7 +6518,7 @@
       "bus"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6556,7 +6566,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6611,7 +6621,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6664,7 +6674,7 @@
       "synchronous"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6707,7 +6717,7 @@
       "tdd"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6753,7 +6763,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6812,7 +6822,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6861,7 +6871,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6904,7 +6914,7 @@
       "clkgen"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6947,7 +6957,7 @@
       "monitor"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -6988,7 +6998,7 @@
       "ctrlif"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7030,7 +7040,7 @@
       "interpolate"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7081,7 +7091,7 @@
       "interpolate"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7129,7 +7139,7 @@
       "register"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7168,7 +7178,7 @@
       "dacfifo"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7217,7 +7227,7 @@
       "dacfifo"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7257,7 +7267,7 @@
       "rd"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7301,7 +7311,7 @@
       "wr"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7343,7 +7353,7 @@
       "dmac"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7419,7 +7429,7 @@
       "memory"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7466,7 +7476,7 @@
       "synchronous"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7507,7 +7517,7 @@
       "regmap"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7554,7 +7564,7 @@
       "request"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7599,7 +7609,7 @@
       "reset"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "verdict",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7640,7 +7650,7 @@
       "response"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7684,7 +7694,7 @@
       "transfer"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7755,7 +7765,7 @@
       "fan"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7798,7 +7808,7 @@
       "synchronous"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7844,7 +7854,7 @@
       "synchronous"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7886,7 +7896,7 @@
       "digital"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7931,7 +7941,7 @@
       "gpreg"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -7976,7 +7986,7 @@
       "mon"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8019,7 +8029,7 @@
       "rx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8073,7 +8083,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8119,7 +8129,7 @@
       "tx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8174,7 +8184,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8217,7 +8227,7 @@
       "hsci"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8270,7 +8280,7 @@
       "i2s"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8309,7 +8319,7 @@
       "monitor"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8351,7 +8361,7 @@
       "rx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8402,7 +8412,7 @@
       "tx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8449,7 +8459,7 @@
       "laser"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8498,7 +8508,7 @@
       "regmap"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8537,7 +8547,7 @@
       "bus"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8583,7 +8593,7 @@
       "register"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8624,7 +8634,7 @@
       "ltc235x"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8671,7 +8681,7 @@
       "ltc2387"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8722,7 +8732,7 @@
       "ltc2387"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8764,7 +8774,7 @@
       "ltc2387"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8808,7 +8818,7 @@
       "voltage"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8864,7 +8874,7 @@
       "voltage"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8911,7 +8921,7 @@
       "voltage"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8951,7 +8961,7 @@
       "pulse"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -8998,7 +9008,7 @@
       "regmap"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9044,7 +9054,7 @@
       "width"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9094,7 +9104,7 @@
       "width"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9138,7 +9148,7 @@
       "wr"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9176,7 +9186,7 @@
       "selmap"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9220,7 +9230,7 @@
       "spdif"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9265,7 +9275,7 @@
       "tx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9309,7 +9319,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9363,7 +9373,7 @@
       "streaming"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9409,7 +9419,7 @@
       "transmitter"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9447,7 +9457,7 @@
       "sysid"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9486,7 +9496,7 @@
       "tdd"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9534,7 +9544,7 @@
       "tdd"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9574,7 +9584,7 @@
       "tdd"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9614,7 +9624,7 @@
       "tdd"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9656,7 +9666,7 @@
       "xcvrlb"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9701,7 +9711,7 @@
       "xcvrlb"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9742,7 +9752,7 @@
       "decim"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9784,7 +9794,7 @@
       "sequencer"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9824,7 +9834,7 @@
       "synchronous"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9860,7 +9870,7 @@
       "demod"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9896,7 +9906,7 @@
       "corundum"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9937,7 +9947,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -9976,7 +9986,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10012,7 +10022,7 @@
       "mover"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10049,7 +10059,7 @@
       "offload"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10097,7 +10107,7 @@
       "offload"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10136,7 +10146,7 @@
       "regmap"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10178,7 +10188,7 @@
       "mm"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10221,7 +10231,7 @@
       "stream"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10263,7 +10273,7 @@
       "queue"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10307,7 +10317,7 @@
       "queue"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10343,7 +10353,7 @@
       "sg"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10385,7 +10395,7 @@
       "elastic"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10423,7 +10433,7 @@
       "ethernet"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10459,7 +10469,7 @@
       "k26"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10495,7 +10505,7 @@
       "vcu118"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10531,7 +10541,7 @@
       "xcvu11p"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10569,7 +10579,7 @@
       "synchronizer"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10608,7 +10618,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10647,7 +10657,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10688,7 +10698,7 @@
       "slave"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10728,7 +10738,7 @@
       "slave"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10765,7 +10775,7 @@
       "master"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10803,7 +10813,7 @@
       "master"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "verdict",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10840,7 +10850,7 @@
       "master"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10889,7 +10899,7 @@
       "mcore"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10933,7 +10943,7 @@
       "mlink"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "verdict",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -10972,7 +10982,7 @@
       "physical"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11008,7 +11018,7 @@
       "i2s"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11044,7 +11054,7 @@
       "i2s"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11082,7 +11092,7 @@
       "rx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11120,7 +11130,7 @@
       "tx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11158,7 +11168,7 @@
       "mod"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11233,7 +11243,7 @@
       "i3c"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11275,7 +11285,7 @@
       "i3c"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11317,7 +11327,7 @@
       "interface"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11404,7 +11414,7 @@
       "regmap"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11486,7 +11496,7 @@
       "word"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11563,7 +11573,7 @@
       "jesd204"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11606,7 +11616,7 @@
       "tile"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11653,7 +11663,7 @@
       "tx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11694,7 +11704,7 @@
       "physical"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11732,7 +11742,7 @@
       "rx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11795,7 +11805,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11836,7 +11846,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11887,7 +11897,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11935,7 +11945,7 @@
       "static"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -11975,7 +11985,7 @@
       "soft"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12017,7 +12027,7 @@
       "tx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12056,7 +12066,7 @@
       "tx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12113,7 +12123,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12153,7 +12163,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12195,7 +12205,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12238,7 +12248,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12281,7 +12291,7 @@
       "tx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12318,7 +12328,7 @@
       "jesd204"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12356,7 +12366,7 @@
       "mem"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12395,7 +12405,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12438,7 +12448,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12476,7 +12486,7 @@
       "sysref"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12516,7 +12526,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12563,7 +12573,7 @@
       "versal"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12609,7 +12619,7 @@
       "versal"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12648,7 +12658,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12685,7 +12695,7 @@
       "mqnic"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12723,7 +12733,7 @@
       "pack"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12760,7 +12770,7 @@
       "pack"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12799,7 +12809,7 @@
       "shell"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12845,7 +12855,7 @@
       "queue"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12888,7 +12898,7 @@
       "quad"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12927,7 +12937,7 @@
       "request"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -12990,7 +13000,7 @@
       "request"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13027,7 +13037,7 @@
       "response"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13065,7 +13075,7 @@
       "response"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved-suspect",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13107,7 +13117,7 @@
       "rx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "header",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13150,7 +13160,7 @@
       "stream"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13190,7 +13200,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13231,7 +13241,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13271,7 +13281,7 @@
       "spi"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13313,7 +13323,7 @@
       "src"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13356,7 +13366,7 @@
       "stream"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13397,7 +13407,7 @@
       "src"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13437,7 +13447,7 @@
       "synchronous"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13476,7 +13486,7 @@
       "synchronous"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13516,7 +13526,7 @@
       "sysid"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13551,7 +13561,7 @@
       "system"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13587,7 +13597,7 @@
       "system"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13623,7 +13633,7 @@
       "system"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13665,7 +13675,7 @@
       "voltage"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13701,7 +13711,7 @@
       "trigger"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13738,7 +13748,7 @@
       "sequencer"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13778,7 +13788,7 @@
       "digital"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13819,7 +13829,7 @@
       "digital"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13858,7 +13868,7 @@
       "clkgen"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13898,7 +13908,7 @@
       "digital"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13938,7 +13948,7 @@
       "digital"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -13978,7 +13988,7 @@
       "delay"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "verdict",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14017,7 +14027,7 @@
       "rx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14059,7 +14069,7 @@
       "tx"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14098,7 +14108,7 @@
       "pmod"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14136,7 +14146,7 @@
       "tdd"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14174,7 +14184,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14214,7 +14224,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14255,7 +14265,7 @@
       "xch"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14298,7 +14308,7 @@
       "util"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14345,7 +14355,7 @@
       "util"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14388,7 +14398,7 @@
       "util"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14432,7 +14442,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14471,7 +14481,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14507,7 +14517,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14543,7 +14553,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14579,7 +14589,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14621,7 +14631,7 @@
       "util"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14662,7 +14672,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14704,7 +14714,7 @@
       "util"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14743,7 +14753,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14782,7 +14792,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14825,7 +14835,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14863,7 +14873,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14901,7 +14911,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14944,7 +14954,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -14981,7 +14991,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15056,7 +15066,7 @@
       "xilinx"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15092,7 +15102,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15133,7 +15143,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15171,7 +15181,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15207,7 +15217,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15249,7 +15259,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15288,7 +15298,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15325,7 +15335,7 @@
       "util"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15367,7 +15377,7 @@
       "util"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15411,7 +15421,7 @@
       "var"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15447,7 +15457,7 @@
       "wfifo"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "ports",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15466,7 +15476,7 @@
     "versions": [
       "master"
     ],
-    "description": "2D/3D graphics engine (GPU) \u2014 Drawing Engine 2D + 3D, texel pipeline, Display List Processor, Texture Cache, float ALU, Memory Controller, Digital RAMDAC, IBM-compatible VGA, host bus interface. Verilog/VHDL, GPL-3.0 with commercial dual-license available.",
+    "description": "2D/3D graphics engine (GPU) — Drawing Engine 2D + 3D, texel pipeline, Display List Processor, Texture Cache, float ALU, Memory Controller, Digital RAMDAC, IBM-compatible VGA, host bus interface. Verilog/VHDL, GPL-3.0 with commercial dual-license available.",
     "license": "GPL-3.0-only",
     "license_class": "strong-copyleft",
     "language": "verilog",
@@ -15721,7 +15731,7 @@
       "583f9e012f66",
       "HEAD"
     ],
-    "description": "Open-source neuromorphic processor (second generation) \u2014 LIF compartmental neurons, microcode learning, STDP + three-factor synaptic plasticity, asynchronous Network-on-Chip mesh, RV32I/RV32IM management cores, multi-chip routing. Apache-2.0, FPGA-validated on AWS F2, Kria, and Arty.",
+    "description": "Open-source neuromorphic processor (second generation) — LIF compartmental neurons, microcode learning, STDP + three-factor synaptic plasticity, asynchronous Network-on-Chip mesh, RV32I/RV32IM management cores, multi-chip routing. Apache-2.0, FPGA-validated on AWS F2, Kria, and Arty.",
     "license": "Apache-2.0",
     "license_class": "permissive",
     "language": "verilog",
@@ -15942,7 +15952,7 @@
       "resize"
     ],
     "role": "top",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -15981,7 +15991,7 @@
       "round"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -16018,7 +16028,7 @@
       "saturate"
     ],
     "role": "component",
-    "desc_source": "",
+    "desc_source": "preserved",
     "top_modules": [],
     "provides_packages": [],
     "routertl_compat": {
@@ -16157,7 +16167,7 @@
     "versions": [
       "master"
     ],
-    "description": "Pyrite PCIe configuration programmers \u2014 VPD (Vital Product Data) and VSEC (Vendor-Specific Extended Capability) over BPI flash and QSPI flash, UltraScale variants.",
+    "description": "Pyrite PCIe configuration programmers — VPD (Vital Product Data) and VSEC (Vendor-Specific Extended Capability) over BPI flash and QSPI flash, UltraScale variants.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -16363,7 +16373,7 @@
     "versions": [
       "master"
     ],
-    "description": "AXI4-Stream infrastructure: FIFOs (sync/async/pipeline), broadcast, demux/mux, switch, register, COBS encode/decode, null src/snk, tie. Excludes Ethernet PCS streams (BASE-R, XGMII, GMII bridges) \u2014 those live in taxi-ethernet.",
+    "description": "AXI4-Stream infrastructure: FIFOs (sync/async/pipeline), broadcast, demux/mux, switch, register, COBS encode/decode, null src/snk, tie. Excludes Ethernet PCS streams (BASE-R, XGMII, GMII bridges) — those live in taxi-ethernet.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -16633,7 +16643,10 @@
         "src/eth/rtl/taxi_eth_mac_phy_10g_fifo.sv",
         "src/lss/rtl/taxi_mdio_master.sv"
       ]
-    }
+    },
+    "health_tier": "gold",
+    "last_verified_at": "2026-05-06",
+    "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml"
   },
   {
     "namespace": "fpganinja",
@@ -16829,7 +16842,7 @@
     "versions": [
       "master"
     ],
-    "description": "Source-synchronous I/O \u2014 DDR / SDR in / out with diff variants, plus the bare IDDR / ODDR I/O DDR-register primitives.",
+    "description": "Source-synchronous I/O — DDR / SDR in / out with diff variants, plus the bare IDDR / ODDR I/O DDR-register primitives.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -17086,7 +17099,7 @@
     "versions": [
       "master"
     ],
-    "description": "Zircon IP packet processor \u2014 RX parse / ingress / egress and TX buffer / deparse / ingress / egress, plus length+checksum core.",
+    "description": "Zircon IP packet processor — RX parse / ingress / egress and TX buffer / deparse / ingress / egress, plus length+checksum core.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -17208,7 +17221,9 @@
         "rtl/lxp32c_top.vhd",
         "rtl/lxp32u_top.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "neorv32",
@@ -17245,7 +17260,7 @@
       "xbus2axi4"
     ],
     "role": "repo",
-    "desc_source": "",
+    "desc_source": "readme",
     "top_modules": [
       "neoTRNG_cell",
       "neorv32_bus_amo_rvs",
@@ -17349,7 +17364,7 @@
     "versions": [
       "master"
     ],
-    "description": "Etherbone \u2014 Wishbone-over-Ethernet remote-access protocol. Three HDL subsystems: Etherbone master (eb_master_core), slave (eb_slave_core, used by White Rabbit's wrc_core for remote register access), and a USB transport variant (eb_usb_core). OHWR-canonical post-migration.",
+    "description": "Etherbone — Wishbone-over-Ethernet remote-access protocol. Three HDL subsystems: Etherbone master (eb_master_core), slave (eb_slave_core, used by White Rabbit's wrc_core for remote register access), and a USB transport variant (eb_usb_core). OHWR-canonical post-migration.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -17430,7 +17445,7 @@
     "versions": [
       "master"
     ],
-    "description": "General Cores \u2014 generic FPGA primitive library. Edge detectors, CDC synchronizers (gc_sync_*), pulse synchronizer, debouncers, Wishbone primitives + slaves + crossbars (wb_*/xwb_*), generic memory primitives (genram_pkg single/dual-port + async FIFO), AXI/DSP/I2C primitives, 8b/10b coder, radiation-tolerant variants. The CERN BE-CO-HT primitive library underlying every OHWR design.",
+    "description": "General Cores — generic FPGA primitive library. Edge detectors, CDC synchronizers (gc_sync_*), pulse synchronizer, debouncers, Wishbone primitives + slaves + crossbars (wb_*/xwb_*), generic memory primitives (genram_pkg single/dual-port + async FIFO), AXI/DSP/I2C primitives, 8b/10b coder, radiation-tolerant variants. The CERN BE-CO-HT primitive library underlying every OHWR design.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -20900,7 +20915,9 @@
         "rtl/verilog/ge_1000baseX.v",
         "rtl/verilog/ge_1000baseX_test.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -20954,7 +20971,9 @@
         "rtl/verilog/regblock.v",
         "rtl/verilog/MC6809_cpu.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21154,7 +21173,9 @@
         "rtl/verilog/oc8051_wb_iinterface.v",
         "rtl/verilog/oc8051_top.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21202,7 +21223,9 @@
         "rtl/vedic4x4.v",
         "rtl/vedic8x8.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -21264,7 +21287,9 @@
         "verilog/top.v",
         "verilog/test.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21350,7 +21375,9 @@
         "Hardware/adv_dbg_if/bench/simulated_system/adv_dbg_tb.v",
         "Hardware/adv_dbg_if/bench/full_system/xsv_fpga_top.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21426,7 +21453,9 @@
         "rtl/peripheral/timer_periph.v",
         "rtl/soc/soc.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21542,7 +21571,9 @@
         "hw/vlog/lib/xs6_sram_256x32_byte_en.v",
         "hw/vlog/lib/xs6_sram_512x128_byte_en.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21586,7 +21617,9 @@
       "files": [
         "rtl/ao68000.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21596,7 +21629,7 @@
       "74ca9275976b",
       "HEAD"
     ],
-    "description": "APB-to-AES-128 bridge \u2014 exposes an AES-128 cipher core through the AMBA APB peripheral bus for register-mapped key/data access.",
+    "description": "APB-to-AES-128 bridge — exposes an AES-128 cipher core through the AMBA APB peripheral bus for register-mapped key/data access.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -21640,7 +21673,9 @@
         "rtl/host_interface.v",
         "rtl/aes_ip.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -21649,7 +21684,7 @@
     "versions": [
       "master"
     ],
-    "description": "AES (Advanced Encryption Standard) 128-bit encryption/decryption block (AVS variant) \u2014 BSD-2-Clause Verilog primitive with synchronous load/ready handshake.",
+    "description": "AES (Advanced Encryption Standard) 128-bit encryption/decryption block (AVS variant) — BSD-2-Clause Verilog primitive with synchronous load/ready handshake.",
     "license": "BSD-2-Clause",
     "license_class": "permissive",
     "language": "vhdl-2008",
@@ -21695,7 +21730,9 @@
         "rtl/VHDL/aes_fsm_encrypt.vhd",
         "rtl/VHDL/avs_aes.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -21728,7 +21765,9 @@
         "rtl/verilog/registerDelay.v",
         "rtl/verilog/bilinearDemosaic.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21763,7 +21802,9 @@
         "bcd_to_binary.v",
         "binary_to_bcd.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -21824,7 +21865,9 @@
         "rtl/verilog/oc_fifo_basic.v",
         "rtl/verilog/random_ff.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -21871,7 +21914,9 @@
         "cdc_ufifo.sv",
         "gray2bin.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -21908,7 +21953,9 @@
         "rtl/verilog/cfi_ctrl_engine.v",
         "rtl/verilog/cfi_ctrl.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -21995,7 +22042,9 @@
         "copyblaze/rtl/vhdl/ip/wb_uart/wb_uart.vhd",
         "copyblaze/rtl/vhdl/ip/wb_uart/wb_uart_8.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -22043,7 +22092,9 @@
         "rtl/vhdl/core.vhd",
         "rtl/vhdl/r65c02_tc.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -22052,7 +22103,7 @@
     "versions": [
       "master"
     ],
-    "description": "DES (Data Encryption Standard) cipher core \u2014 56-bit key, 64-bit block. GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants.",
+    "description": "DES (Data Encryption Standard) cipher core — 56-bit key, 64-bit block. GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants.",
     "license": "GPL-3.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -22083,7 +22134,9 @@
         "rtl/key_schedule.vhd",
         "rtl/des_loop.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -22092,7 +22145,7 @@
     "versions": [
       "master"
     ],
-    "description": "DESL (DES-Lightweight) variant \u2014 area-optimised DES with a single shared S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore.",
+    "description": "DESL (DES-Lightweight) variant — area-optimised DES with a single shared S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore.",
     "license": "GPL-3.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -22123,7 +22176,9 @@
         "rtl/key_schedule.vhd",
         "rtl/des_loop.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -22132,7 +22187,7 @@
     "versions": [
       "master"
     ],
-    "description": "DESLX variant \u2014 combines the DES-Lightweight S-box optimisation with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore.",
+    "description": "DESLX variant — combines the DES-Lightweight S-box optimisation with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore.",
     "license": "GPL-3.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -22163,7 +22218,9 @@
         "rtl/key_schedule.vhd",
         "rtl/des_loop.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -22172,7 +22229,7 @@
     "versions": [
       "master"
     ],
-    "description": "DES-X variant \u2014 adds XOR pre/post-whitening keys to standard DES (Rivest 1984), strengthening against brute-force. GPL-3+ VHDL.",
+    "description": "DES-X variant — adds XOR pre/post-whitening keys to standard DES (Rivest 1984), strengthening against brute-force. GPL-3+ VHDL.",
     "license": "GPL-3.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -22203,7 +22260,9 @@
         "rtl/key_schedule.vhd",
         "rtl/des_loop.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -22238,7 +22297,9 @@
         "Sources/variableresetrandomwalkfilter.v",
         "Sources/dpll.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -22311,7 +22372,9 @@
         "rtl/f3m.v",
         "rtl/ecg.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -22377,7 +22440,45 @@
         "rtl/verilog/afifo.v",
         "rtl/verilog/MAC_top.v"
       ]
-    }
+    },
+    "health_tier": "silver",
+    "last_verified_at": "2026-05-06",
+    "contract": {
+      "traits": {
+        "back_to_back_rx_requires_rd_pulse": true,
+        "requires_csr_init_before_tx": true,
+        "rx_strips_fcs": true,
+        "tx_hwmark_default_safe": false,
+        "tx_user_frame_includes_fcs": false
+      },
+      "defects": [
+        {
+          "id": "OC-TRIMODE-TX-HWMARK",
+          "severity": "critical",
+          "kind": "underrun-on-low-hwmark",
+          "discovered": "2026-05-03",
+          "provenance": "RTL-T2",
+          "evidence": "Tx_Hwmark default 9 entries; >512 B frames hit underrun before frame fully buffered, deliver as constant ~2,560 B GIANT wire frames regardless of input size. VCD-confirmed (Tx_en stays HIGH continuously through full 20.4-20.5 µs span) and lever-experiment-confirmed (HWM = 31 collapses 4 GIANTs to 0).",
+          "recoverable": true,
+          "workaround": "CSR-write Tx_Hwmark >= 31 entries (5'h1F) before any TX traffic",
+          "fix_pr": null,
+          "review_after": "2026-08-03"
+        },
+        {
+          "id": "OC-TRIMODE-RX-WAIT-END",
+          "severity": "major",
+          "kind": "protocol-handshake-mismatch",
+          "discovered": "2026-05-03",
+          "provenance": "RTL-T3",
+          "evidence": "MAC_rx_FF.v SYS_wait_end → SYS_idle requires !Rx_mac_rd; perpetual-ready hosts (modern AXI-Stream-style ingress) wedge after frame 0 EOP and never receive subsequent frames. VCD-confirmed (FSM transitions from SYS_read → SYS_wait_end at first EOP and never moves again across 1.4 Mns sim).",
+          "recoverable": true,
+          "workaround": "BFM/host pulses Rx_mac_rd low for one cycle after each EOP",
+          "fix_pr": null,
+          "review_after": "2026-08-03"
+        }
+      ]
+    },
+    "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml"
   },
   {
     "namespace": "opencores",
@@ -22448,7 +22549,10 @@
         "rtl/verilog/ethmac.v",
         "rtl/verilog/eth_top.v"
       ]
-    }
+    },
+    "health_tier": "silver",
+    "last_verified_at": "2026-05-04",
+    "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/oc_ethmac.md"
   },
   {
     "namespace": "opencores",
@@ -22458,7 +22562,7 @@
       "596c754dca8a",
       "HEAD"
     ],
-    "description": "Fully-pipelined image edge-detection algorithms \u2014 Sobel and Canny family operators in mature Verilog form, ready for streaming raster pixel inputs.",
+    "description": "Fully-pipelined image edge-detection algorithms — Sobel and Canny family operators in mature Verilog form, ready for streaming raster pixel inputs.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "vhdl-2008",
@@ -22492,7 +22596,9 @@
         "src/SobelFilter.vhd",
         "src/EdgeDetection.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -22594,7 +22700,9 @@
         "VHDL/G729A_codec_sdp_SYN.vhd",
         "VHDL/SELF_TEST/G729A_codec_selftest.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -22654,7 +22762,9 @@
         "snespad/rtl/vhdl/snespad_pad.vhd",
         "snespad/rtl/vhdl/snespad.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -22693,7 +22803,9 @@
         "rtl/propagate_generate.v",
         "rtl/carry_lookahead_adder.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -22741,7 +22853,9 @@
         "rtl/gng_interp.v",
         "rtl/gng.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -22795,7 +22909,9 @@
         "rtl/bus/wishbone/wb_slv_wrapper.v",
         "rtl/bus/wishbone/ha1588_wb.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -22804,7 +22920,7 @@
     "versions": [
       "master"
     ],
-    "description": "I\u00b2S audio bus interface controller with Wishbone control port \u2014 VHDL bridge between FPGA and external audio codecs.",
+    "description": "I²S audio bus interface controller with Wishbone control port — VHDL bridge between FPGA and external audio codecs.",
     "license": "GPL-2.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -22852,7 +22968,9 @@
         "rtl/vhdl/tx_i2s_topm.vhd",
         "rtl/vhdl/tx_i2s_tops.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -22915,7 +23033,9 @@
         "src/wishbone.vhd",
         "src/iicmb_m_wb.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -22976,7 +23096,9 @@
         "fifo_out.v",
         "jpeg_top.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -23028,7 +23150,9 @@
         "src/window.v",
         "src/LinkRunCCA.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -23038,7 +23162,7 @@
       "3f7adf4b32ae",
       "HEAD"
     ],
-    "description": "National Semiconductor NS32000-series 32-bit CPU implementation in Verilog (Udo M\u00f6ller). Maintained at RetroPM/m32632; LGPL-2.1.",
+    "description": "National Semiconductor NS32000-series 32-bit CPU implementation in Verilog (Udo Möller). Maintained at RetroPM/m32632; LGPL-2.1.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -23123,7 +23247,9 @@
         "rtl/STEUERUNG.v",
         "rtl/M32632.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -23184,7 +23310,9 @@
         "miniMIPS/bench/ram.vhd",
         "miniMIPS/bench/rom.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -23193,7 +23321,7 @@
     "versions": [
       "master"
     ],
-    "description": "Minimal OpenRISC 1200 system-on-chip \u2014 OR1200 CPU with Wishbone-attached on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera). Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013).",
+    "description": "Minimal OpenRISC 1200 system-on-chip — OR1200 CPU with Wishbone-attached on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera). Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013).",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -23244,7 +23372,9 @@
         "rtl/verilog/minsoc_startup/spi_top.v",
         "rtl/verilog/minsoc_top.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -23339,7 +23469,9 @@
         "Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Top.v",
         "Hardware/XUPV5-LX110T_SoC/MIPS32-Pipelined-Hw/src/Simulation/Top_Tester.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -23430,7 +23562,9 @@
         "src_me/reference_memory64_dp_large.vhd",
         "src_me/reference_memory64_remap.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -23473,7 +23607,9 @@
         "VHDL/nand_master.vhd",
         "VHDL/nand_avalon.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -23511,7 +23647,9 @@
         "NextZ80Reg.v",
         "NextZ80CPU.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -23543,7 +23681,9 @@
         "rtl/dff.v",
         "rtl/nlprg8.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -23632,7 +23772,9 @@
         "rtl/f36m.v",
         "rtl/tate_pairing.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -23641,7 +23783,7 @@
     "versions": [
       "master"
     ],
-    "description": "Bidirectional 32-bit PCI \u2194 Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006).",
+    "description": "Bidirectional 32-bit PCI ↔ Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006).",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -23733,7 +23875,9 @@
         "rtl/verilog/pci_wbs_wbb3_2_wbb2.v",
         "rtl/verilog/pci_bridge32.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -23743,7 +23887,7 @@
       "1685821cee9f",
       "HEAD"
     ],
-    "description": "PCI 32-bit Lite Target controller \u2014 minimal PCI target-mode interface in VHDL, useful for Wishbone-bus designs needing a PCI front-end.",
+    "description": "PCI 32-bit Lite Target controller — minimal PCI target-mode interface in VHDL, useful for Wishbone-bus designs needing a PCI front-end.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "vhdl-2008",
@@ -23785,7 +23929,9 @@
         "rtl/pciwbsequ.vhd",
         "rtl/pci32tlite.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -23834,7 +23980,9 @@
         "hdl/ps2_host_tx.v",
         "hdl/ps2_host.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -23898,7 +24046,9 @@
         "sqrtdiv/sqrtdiv.vhd",
         "fpbranch/unrm/unrm1.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -23952,7 +24102,9 @@
         "rtl/transport_in2out.v",
         "rtl/RS_dec.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -24011,7 +24163,9 @@
         "fifo_register.v",
         "RSDecoder.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -24020,7 +24174,7 @@
     "versions": [
       "master"
     ],
-    "description": "Streamlined adaptation of Sun's OpenSPARC T1 \u2014 single 64-bit SPARC v9 core supporting 1-4 concurrent threads, with Wishbone master interface. Authors: Watson, Rozhdestvenskiy, Luzzu, Fazzino (2007-2018).",
+    "description": "Streamlined adaptation of Sun's OpenSPARC T1 — single 64-bit SPARC v9 core supporting 1-4 concurrent threads, with Wishbone master interface. Authors: Watson, Rozhdestvenskiy, Luzzu, Fazzino (2007-2018).",
     "license": "GPL-2.0-only",
     "license_class": "strong-copyleft",
     "language": "verilog",
@@ -24530,7 +24684,9 @@
         "hdl/rtl/s1_top/s1_top.v",
         "hdl/rtl/sparc_core/synchronizer_asr.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -24540,7 +24696,7 @@
       "0608d0daaf4b",
       "HEAD"
     ],
-    "description": "SAP-1 (Simple-As-Possible) educational processor with nanoprogrammed control unit, following the Malvino reference design \u2014 pedagogical CPU implementation in Verilog.",
+    "description": "SAP-1 (Simple-As-Possible) educational processor with nanoprogrammed control unit, following the Malvino reference design — pedagogical CPU implementation in Verilog.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -24588,7 +24744,9 @@
       "files": [
         "M3CPU8.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -24648,7 +24806,9 @@
         "rtl/verilog/sd_fifo_filler.v",
         "rtl/verilog/sdc_controller.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -24714,7 +24874,9 @@
         "rtl/sdc_dma/verilog/sd_fifo_tx_filler.v",
         "rtl/sdc_dma/verilog/sdc_controller.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -24768,7 +24930,9 @@
         "rtl/top/sdrc_top.v",
         "rtl/lib/sync_fifo.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -24808,7 +24972,9 @@
         "serial_divide_uu.v",
         "pwm_reader.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -24818,7 +24984,7 @@
       "094b65152da7",
       "HEAD"
     ],
-    "description": "SHA-256 cryptographic hash core \u2014 single-block 256-bit Secure Hash Algorithm 2 implementation with synchronous control interface.",
+    "description": "SHA-256 cryptographic hash core — single-block 256-bit Secure Hash Algorithm 2 implementation with synchronous control interface.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "vhdl-2008",
@@ -24859,7 +25025,9 @@
         "syn/sha256/sha256_regs.vhd",
         "syn/sha256/gv_sha256.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -24868,7 +25036,7 @@
     "versions": [
       "master"
     ],
-    "description": "Keccak / SHA-3 cryptographic hash family \u2014 Apache-2.0 Verilog implementation with ack/in handshake interface.",
+    "description": "Keccak / SHA-3 cryptographic hash family — Apache-2.0 Verilog implementation with ack/in handshake interface.",
     "license": "Apache-2.0",
     "license_class": "permissive",
     "language": "verilog",
@@ -24900,7 +25068,9 @@
         "high_throughput_core/rtl/rconst2in1.v",
         "high_throughput_core/rtl/round2in1.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -24909,7 +25079,7 @@
     "versions": [
       "master"
     ],
-    "description": "SHA-1 (160-bit Secure Hash Algorithm) cryptographic hash core \u2014 single-block hashing primitive.",
+    "description": "SHA-1 (160-bit Secure Hash Algorithm) cryptographic hash core — single-block hashing primitive.",
     "license": "OpenCores-Permissive-1.0",
     "license_class": "unknown",
     "language": "verilog",
@@ -24934,7 +25104,9 @@
         "rtl/sha256.v",
         "rtl/sha512.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -24984,7 +25156,9 @@
         "rtl/vhdl/spwstream.vhd",
         "rtl/vhdl/streamtest.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -25373,7 +25547,9 @@
         "T1-common/common/ucb_flow_spi.v",
         "T1-common/common/ucb_noflow.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -25382,7 +25558,7 @@
     "versions": [
       "master"
     ],
-    "description": "Xilinx SRL16/SRL32-based compact FIFO \u2014 uses SRL shift-register primitives for storage on Xilinx FPGA targets. VHDL utility primitive.",
+    "description": "Xilinx SRL16/SRL32-based compact FIFO — uses SRL shift-register primitives for storage on Xilinx FPGA targets. VHDL utility primitive.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "vhdl-2008",
@@ -25415,7 +25591,9 @@
         "rtl/srl_fifo_32.vhd",
         "rtl/srl_fifo_64.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -25424,7 +25602,7 @@
     "versions": [
       "master"
     ],
-    "description": "Educational SoC with peripheral suite \u2014 I2C, UART, PS/2, PWM, 7-segment display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented in STORM SoC datasheet PDF.",
+    "description": "Educational SoC with peripheral suite — I2C, UART, PS/2, PWM, 7-segment display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented in STORM SoC datasheet PDF.",
     "license": "GPL-2.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -25484,7 +25662,9 @@
         "components/ps2core/rtl/vhdl/ps2.vhd",
         "components/ps2core/rtl/vhdl/ps2_wb.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -25517,7 +25697,9 @@
       "files": [
         "rtl/fifo.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -25568,7 +25750,9 @@
         "rtl/verilog/aes192lowarea/aes192.v",
         "rtl/verilog/aes128lowarea/wb_aescontroller.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -25669,7 +25853,9 @@
         "rtl/vhdl/t8243/t8243.vhd",
         "rtl/vhdl/t8243/t8243_sync_notri.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -25765,7 +25951,9 @@
         "rtl/Module_HostWBM.v",
         "rtl/Module_Host.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -25825,7 +26013,9 @@
         "rtl/aes_192.v",
         "rtl/aes_256.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -25889,7 +26079,9 @@
         "group_size_is_151_bits/rtl/pairing.v",
         "group_size_is_697_bits/rtl/cubic.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -25939,7 +26131,9 @@
         "verilog/sine.v",
         "verilog/tangent.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -25985,7 +26179,9 @@
         "rtl/verilog/usb_tx_phy.v",
         "rtl/verilog/usb_phy.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26123,7 +26319,9 @@
         "RTL/wrapper/usbSlaveCyc2Wrap.v",
         "RTL/wrapper/usbSlaveCyc2Wrap_usb1t11.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -26184,7 +26382,9 @@
         "rtl/verilog/versatile_fifo_dual_port_ram_sc_dw.v",
         "rtl/verilog/versatile_fifo_dual_port_ram_sc_sw.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -26269,7 +26469,9 @@
         "rtl/verilog/vga_wb_slave.v",
         "rtl/verilog/vga_enh_top.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -26278,7 +26480,7 @@
     "versions": [
       "master"
     ],
-    "description": "Video stream scaler \u2014 line-buffer-based filtering pipeline that resamples raster video streams to a target output resolution. LGPL-2.1+ Verilog.",
+    "description": "Video stream scaler — line-buffer-based filtering pipeline that resamples raster video streams to a target output resolution. LGPL-2.1+ Verilog.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -26301,7 +26503,9 @@
       "files": [
         "rtl/verilog/scaler.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26352,7 +26556,9 @@
         "src/traceback.vhd",
         "src/dec_viterbi.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -26398,7 +26604,9 @@
         "rtl/vit_tbu.sv",
         "rtl/vit_top.sv"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26407,7 +26615,7 @@
     "versions": [
       "master"
     ],
-    "description": "Image warping pipeline with image-decay / temporal-aging effect \u2014 geometric distortion + temporal modulation.",
+    "description": "Image warping pipeline with image-decay / temporal-aging effect — geometric distortion + temporal modulation.",
     "license": "OpenCores-Permissive-1.0",
     "license_class": "unknown",
     "language": "verilog",
@@ -26441,7 +26649,9 @@
         "rtl/writedest.v",
         "rtl/warp.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26476,7 +26686,9 @@
       "files": [
         "rtl/verilog/wb_flash.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26485,7 +26697,7 @@
     "versions": [
       "master"
     ],
-    "description": "Wishbone-controlled LPC (Low Pin Count) bus interface \u2014 bridges Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD, BMC).",
+    "description": "Wishbone-controlled LPC (Low Pin Count) bus interface — bridges Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD, BMC).",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -26531,7 +26743,9 @@
         "rtl/verilog/wb_lpc_periph.v",
         "rtl/verilog/wb_regfile.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26566,7 +26780,9 @@
       "files": [
         "rtl/verilog/wb_mcs51.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26575,7 +26791,7 @@
     "versions": [
       "master"
     ],
-    "description": "Wishbone bus width-resize bridge \u2014 connects masters and slaves with mismatched data widths via byte-lane steering.",
+    "description": "Wishbone bus width-resize bridge — connects masters and slaves with mismatched data widths via byte-lane steering.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -26612,7 +26828,9 @@
         "src/asram_if.v",
         "src/async_mem_if.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26622,7 +26840,7 @@
       "HEAD",
       "d248fe6384ac"
     ],
-    "description": "Wishbone-controlled FM transmitter \u2014 software-defined-radio building block that takes a Wishbone-attached audio stream and produces an FM-modulated baseband output.",
+    "description": "Wishbone-controlled FM transmitter — software-defined-radio building block that takes a Wishbone-attached audio stream and produces an FM-modulated baseband output.",
     "license": "GPL-2.0-or-later",
     "license_class": "strong-copyleft",
     "language": "verilog",
@@ -26643,7 +26861,9 @@
       "files": [
         "rtl/wbfmtxhack.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26709,7 +26929,9 @@
         "rtl/core/fm_sys.v",
         "rtl/core/fm_3d_core.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26753,7 +26975,9 @@
         "src/concentrator_switch.vhd",
         "src/bnet_concentrator.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26813,7 +27037,9 @@
         "rtl/verilog/xgate_wbs_bus.v",
         "rtl/verilog/xgate_top.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-04"
   },
   {
     "namespace": "opencores",
@@ -26879,7 +27105,10 @@
         "rtl/verilog/wishbone_if.v",
         "rtl/verilog/xge_mac.v"
       ]
-    }
+    },
+    "health_tier": "silver",
+    "last_verified_at": "2026-05-04",
+    "contract_url": "https://github.com/routertl/ip-index/blob/main/contracts/oc_xge_mac.md"
   },
   {
     "namespace": "opencores",
@@ -26888,7 +27117,7 @@
     "versions": [
       "master"
     ],
-    "description": "XTEA (eXtended Tiny Encryption Algorithm) cipher core \u2014 128-bit key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL.",
+    "description": "XTEA (eXtended Tiny Encryption Algorithm) cipher core — 128-bit key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL.",
     "license": "GPL-3.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -26915,7 +27144,9 @@
         "rtl/round_f.vhd",
         "rtl/xtea.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "opencores",
@@ -26924,7 +27155,7 @@
     "versions": [
       "master"
     ],
-    "description": "Yet Another CORDIC \u2014 generic iterative CORDIC pipeline for trigonometric and hyperbolic functions with parameterised data width.",
+    "description": "Yet Another CORDIC — generic iterative CORDIC pipeline for trigonometric and hyperbolic functions with parameterised data width.",
     "license": "LGPL-3.0-or-later",
     "license_class": "weak-copyleft",
     "language": "vhdl-2008",
@@ -26952,7 +27183,9 @@
         "rtl/vhdl/cordic_iterative_pkg.vhd",
         "rtl/vhdl/cordic_iterative_int.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "openhwgroup",
@@ -27558,7 +27791,7 @@
       "wishbone"
     ],
     "role": "repo",
-    "desc_source": "",
+    "desc_source": "readme",
     "top_modules": [
       "cve2_branch_predict",
       "cve2_top_tracing"
@@ -34967,7 +35200,7 @@
       "6f122afe0685",
       "HEAD"
     ],
-    "description": "Empty stub for wbgenplus_pkg.  mkreider/wbgenplus's codegen emits `use work.wbgenplus_pkg.all;` in every generated VHDL file unconditionally, but the runtime support package the clause references was never published in any public repo (RTL-P4.35: verified across mkreider/wbgenplus, GSI bel_projects, GSI's wr-cores fork, mkreider/eca, gitlab.com/ohwr/project \u2014 0 hits filename-wide).  Audit of consumers in white-rabbit/wr-eca shows zero symbol references from wbgenplus_pkg, so an empty package suffices.  When external_uses.work.wbgenplus_pkg resolves through the registry, this stub is the canonical provider \u2014 explicit curator provenance, not a copy of any upstream artifact.",
+    "description": "Empty stub for wbgenplus_pkg.  mkreider/wbgenplus's codegen emits `use work.wbgenplus_pkg.all;` in every generated VHDL file unconditionally, but the runtime support package the clause references was never published in any public repo (RTL-P4.35: verified across mkreider/wbgenplus, GSI bel_projects, GSI's wr-cores fork, mkreider/eca, gitlab.com/ohwr/project — 0 hits filename-wide).  Audit of consumers in white-rabbit/wr-eca shows zero symbol references from wbgenplus_pkg, so an empty package suffices.  When external_uses.work.wbgenplus_pkg resolves through the registry, this stub is the canonical provider — explicit curator provenance, not a copy of any upstream artifact.",
     "license": "MIT",
     "license_class": "permissive",
     "language": "vhdl-2008",
@@ -35074,7 +35307,9 @@
         "rtl/top_templates/neo430_top_axi4lite.vhd",
         "rtl/top_templates/neo430_top_std_logic.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "white-rabbit",
@@ -35083,7 +35318,7 @@
     "versions": [
       "master"
     ],
-    "description": "Shared internals required by every wr-cores subsystem \u2014 WRF (White Rabbit Fabric) primitives, DMTD (Digital Multi-Tap Delay) phase meters, pulse helpers, fabric mux/reg/loopback. Not a standalone install target; auto-pulled via external_uses by wr-ptp-core, wr-endpoint, wr-softpll-ng, wr-streamers, wr-mini-nic.",
+    "description": "Shared internals required by every wr-cores subsystem — WRF (White Rabbit Fabric) primitives, DMTD (Digital Multi-Tap Delay) phase meters, pulse helpers, fabric mux/reg/loopback. Not a standalone install target; auto-pulled via external_uses by wr-ptp-core, wr-endpoint, wr-softpll-ng, wr-streamers, wr-mini-nic.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35161,7 +35396,7 @@
     "versions": [
       "master"
     ],
-    "description": "ECA \u2014 Event Conditional Action timing controller. Hardware action scheduler that triggers outputs on absolute timestamp matches with sub-ns precision. Includes bitonic sort, MSI delivery, FIFOs, Wishbone slaves, free-list, scubus channel adapter, time-latched unit (TLU) integration.",
+    "description": "ECA — Event Conditional Action timing controller. Hardware action scheduler that triggers outputs on absolute timestamp matches with sub-ns precision. Includes bitonic sort, MSI delivery, FIFOs, Wishbone slaves, free-list, scubus channel adapter, time-latched unit (TLU) integration.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35256,7 +35491,7 @@
     "versions": [
       "master"
     ],
-    "description": "1G WR Endpoint \u2014 Gigabit Ethernet MAC + 1000Base-X PCS + PTP timestamping unit. Carrier-grade Ethernet path with timestamping hooks for sub-ns precision. Includes auto-negotiation, flow control, RMON counters, packet filtering, VLAN, RX bypass queue.",
+    "description": "1G WR Endpoint — Gigabit Ethernet MAC + 1000Base-X PCS + PTP timestamping unit. Carrier-grade Ethernet path with timestamping hooks for sub-ns precision. Includes auto-negotiation, flow control, RMON counters, packet filtering, VLAN, RX bypass queue.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35352,7 +35587,7 @@
     "versions": [
       "master"
     ],
-    "description": "Mini-NIC \u2014 minimal Wishbone-mastered Ethernet NIC for the embedded LM32 SoftCPU running the PTP stack. Memory-mapped TX/RX packet buffers, Wishbone slave control register file.",
+    "description": "Mini-NIC — minimal Wishbone-mastered Ethernet NIC for the embedded LM32 SoftCPU running the PTP stack. Memory-mapped TX/RX packet buffers, Wishbone slave control register file.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35443,7 +35678,7 @@
     "versions": [
       "master"
     ],
-    "description": "WR PTP Core (WRPC) \u2014 the headline IEEE-1588 PTP core delivering sub-nanosecond clock synchronization across Ethernet. Integrates WR Endpoint + Softpll + PPS gen + LM32 SoftCPU running the PTP stack. Used at LHC, KM3NeT, GSI, ESS, and accelerator facilities worldwide.",
+    "description": "WR PTP Core (WRPC) — the headline IEEE-1588 PTP core delivering sub-nanosecond clock synchronization across Ethernet. Integrates WR Endpoint + Softpll + PPS gen + LM32 SoftCPU running the PTP stack. Used at LHC, KM3NeT, GSI, ESS, and accelerator facilities worldwide.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35557,7 +35792,7 @@
     "versions": [
       "master"
     ],
-    "description": "SoftPLL-NG \u2014 software-controlled PLL for sub-nanosecond clock recovery. Carrier-grade clock-domain alignment using DDMTD (Dual-Mixer Time-to-Digital) phase detection plus bang-bang + period-detect digital PI loops. The clock-recovery heart of the WR system.",
+    "description": "SoftPLL-NG — software-controlled PLL for sub-nanosecond clock recovery. Carrier-grade clock-domain alignment using DDMTD (Dual-Mixer Time-to-Digital) phase detection plus bang-bang + period-detect digital PI loops. The clock-recovery heart of the WR system.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35613,7 +35848,7 @@
     "versions": [
       "master"
     ],
-    "description": "Streaming layer over WR \u2014 application-layer TX/RX framers for sending arbitrary user data over the WR Ethernet path. Drop-buffer, escape detection/insertion, statistics counters, Wishbone-mapped configuration.",
+    "description": "Streaming layer over WR — application-layer TX/RX framers for sending arbitrary user data over the WR Ethernet path. Drop-buffer, escape detection/insertion, statistics counters, Wishbone-mapped configuration.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35740,7 +35975,7 @@
     "versions": [
       "master"
     ],
-    "description": "Time-Latched Unit \u2014 captures input-pin transitions with the WR-recovered nanosecond timestamp. Used as the timestamping front-end for ECA and external trigger capture.",
+    "description": "Time-Latched Unit — captures input-pin transitions with the WR-recovered nanosecond timestamp. Used as the timestamping front-end for ECA and external trigger capture.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35797,7 +36032,9 @@
       "files": [
         "rtl/apbslave.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -35825,7 +36062,9 @@
       "files": [
         "rtl/apbxclk.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -35855,7 +36094,9 @@
         "rtl/skidbuffer.v",
         "rtl/axi2axi3.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -35886,7 +36127,9 @@
         "rtl/skidbuffer.v",
         "rtl/axi2axilite.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -35918,7 +36161,9 @@
         "rtl/axi2axilite.v",
         "rtl/axi2axilsub.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -35949,7 +36194,9 @@
         "rtl/skidbuffer.v",
         "rtl/axi32axi.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -35978,7 +36225,9 @@
         "rtl/sfifo.v",
         "rtl/axi3reorder.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36008,7 +36257,9 @@
         "rtl/skidbuffer.v",
         "rtl/axidma.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36040,7 +36291,9 @@
         "rtl/skidbuffer.v",
         "rtl/axidouble.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36069,7 +36322,9 @@
         "rtl/skidbuffer.v",
         "rtl/axiempty.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36098,7 +36353,9 @@
         "rtl/skidbuffer.v",
         "rtl/axil2apb.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36128,7 +36385,9 @@
         "rtl/skidbuffer.v",
         "rtl/axil2axis.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36159,7 +36418,9 @@
         "rtl/skidbuffer.v",
         "rtl/axildouble.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36188,7 +36449,9 @@
         "rtl/skidbuffer.v",
         "rtl/axilempty.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36217,7 +36480,9 @@
         "rtl/sfifo.v",
         "rtl/axilfetch.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36246,7 +36511,9 @@
         "rtl/skidbuffer.v",
         "rtl/axilgpio.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36274,7 +36541,9 @@
       "files": [
         "rtl/axilite2axi.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36303,7 +36572,9 @@
         "rtl/skidbuffer.v",
         "rtl/axilsafety.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36333,7 +36604,9 @@
         "rtl/skidbuffer.v",
         "rtl/axilsingle.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36363,7 +36636,9 @@
         "rtl/skidbuffer.v",
         "rtl/axilupsz.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36393,7 +36668,9 @@
         "rtl/skidbuffer.v",
         "rtl/axilxbar.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36427,7 +36704,9 @@
         "rtl/wbarbiter.v",
         "rtl/axim2wbsp.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36457,7 +36736,9 @@
         "rtl/skidbuffer.v",
         "rtl/aximm2s.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36488,7 +36769,9 @@
         "rtl/skidbuffer.v",
         "rtl/aximrd2wbsp.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36519,7 +36802,9 @@
         "rtl/skidbuffer.v",
         "rtl/aximwr2wbsp.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36548,7 +36833,9 @@
         "rtl/skidbuffer.v",
         "rtl/axiperf.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36579,7 +36866,9 @@
         "rtl/skidbuffer.v",
         "rtl/axis2mm.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36607,7 +36896,9 @@
       "files": [
         "rtl/axisafety.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36637,7 +36928,9 @@
         "rtl/skidbuffer.v",
         "rtl/axisbroadcast.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36670,7 +36963,9 @@
         "rtl/axisgfsm.v",
         "rtl/axisgdma.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36699,7 +36994,9 @@
         "rtl/skidbuffer.v",
         "rtl/axispacker.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36727,7 +37024,9 @@
       "files": [
         "rtl/axisrandom.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36755,7 +37054,9 @@
       "files": [
         "rtl/axissafety.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36784,7 +37085,9 @@
         "rtl/skidbuffer.v",
         "rtl/axisswitch.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36814,7 +37117,9 @@
         "rtl/skidbuffer.v",
         "rtl/axivcamera.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36844,7 +37149,9 @@
         "rtl/skidbuffer.v",
         "rtl/axivdisplay.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36873,7 +37180,9 @@
         "rtl/sfifo.v",
         "rtl/axivfifo.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36903,7 +37212,9 @@
         "rtl/skidbuffer.v",
         "rtl/axixbar.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36932,7 +37243,9 @@
         "rtl/afifo.v",
         "rtl/axixclk.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36963,7 +37276,9 @@
         "rtl/wbarbiter.v",
         "rtl/axlite2wbsp.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -36997,7 +37312,9 @@
         "rtl/axlite2wbsp.v",
         "rtl/axlite_wrapper.vhd"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37025,7 +37342,9 @@
       "files": [
         "rtl/demoaxi.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37055,7 +37374,9 @@
         "rtl/skidbuffer.v",
         "rtl/demofull.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37083,7 +37404,9 @@
       "files": [
         "rtl/dualflexpress.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37112,7 +37435,9 @@
         "rtl/skidbuffer.v",
         "rtl/easyaxil.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37140,7 +37465,9 @@
       "files": [
         "rtl/iceddrck.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37170,7 +37497,9 @@
         "rtl/wbm2axisp.v",
         "rtl/migsdram.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37198,7 +37527,9 @@
       "files": [
         "rtl/qflexpress.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37227,7 +37558,9 @@
         "rtl/sfifo.v",
         "rtl/sfifothresh.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37255,7 +37588,9 @@
       "files": [
         "rtl/spixpress.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37283,7 +37618,9 @@
       "files": [
         "rtl/wbc2pipeline.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37312,7 +37649,9 @@
         "rtl/sfifo.v",
         "rtl/wbdown.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37340,7 +37679,9 @@
       "files": [
         "rtl/wbm2axilite.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37369,7 +37710,9 @@
         "rtl/skidbuffer.v",
         "rtl/wbm2axisp.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37397,7 +37740,9 @@
       "files": [
         "rtl/wbp2classic.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37426,7 +37771,9 @@
         "rtl/llqspi.v",
         "rtl/wbqspiflash.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37455,7 +37802,9 @@
         "rtl/skidbuffer.v",
         "rtl/wbsafety.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37484,7 +37833,9 @@
         "rtl/sfifo.v",
         "rtl/wbupsz.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37514,7 +37865,9 @@
         "rtl/skidbuffer.v",
         "rtl/wbxbar.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37543,7 +37896,9 @@
         "rtl/afifo.v",
         "rtl/wbxclk.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37571,7 +37926,9 @@
       "files": [
         "rtl/xddrcck.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37599,7 +37956,9 @@
       "files": [
         "rtl/xioddr.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   },
   {
     "namespace": "zipcpu",
@@ -37627,6 +37986,8 @@
       "files": [
         "rtl/xoddr.v"
       ]
-    }
+    },
+    "health_tier": "bronze",
+    "last_verified_at": "2026-05-05"
   }
 ]
