@@ -17,11 +17,10 @@ routertl_compat:
   language: vhdl-2008
   library: olo
   files:
-  - src/base/vhdl/olo_base_pkg_array.vhd
-  - src/base/vhdl/olo_base_pkg_math.vhd
-  - src/base/vhdl/olo_base_pkg_string.vhd
   - src/fix/vhdl/olo_fix_pkg.vhd
   - src/fix/vhdl/olo_fix_bin_div.vhd
+  package_deps:
+  - open-logic/olo_base
 tags:
 - bin
 - div
@@ -89,7 +88,4 @@ external_uses:
 - library: work
   package: en_cl_fix_private_pkg
 provides_packages:
-- olo_base_pkg_array
-- olo_base_pkg_math
-- olo_base_pkg_string
 - olo_fix_pkg

@@ -19,10 +19,9 @@ routertl_compat:
   library: olo
   files:
   - src/axi/vhdl/olo_axi_pkg_protocol.vhd
-  - src/base/vhdl/olo_base_pkg_array.vhd
-  - src/base/vhdl/olo_base_pkg_math.vhd
-  - src/base/vhdl/olo_base_pkg_logic.vhd
   - src/axi/vhdl/olo_axi_lite_slave.vhd
+  package_deps:
+  - open-logic/olo_base
 tags:
 - amba
 - axi
@@ -165,6 +164,3 @@ external_uses:
   package: en_cl_fix_private_pkg
 provides_packages:
 - olo_axi_pkg_protocol
-- olo_base_pkg_array
-- olo_base_pkg_logic
-- olo_base_pkg_math

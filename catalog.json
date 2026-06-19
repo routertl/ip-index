@@ -6,7 +6,7 @@
     "versions": [
       "master"
     ],
-    "description": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream — author moved active development to fpganinja/taxi (CERN-OHL-S-2.0).",
+    "description": "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G with both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream \u2014 author moved active development to fpganinja/taxi (CERN-OHL-S-2.0).",
     "license": "MIT",
     "license_class": "permissive",
     "language": "verilog",
@@ -15476,7 +15476,7 @@
     "versions": [
       "master"
     ],
-    "description": "2D/3D graphics engine (GPU) — Drawing Engine 2D + 3D, texel pipeline, Display List Processor, Texture Cache, float ALU, Memory Controller, Digital RAMDAC, IBM-compatible VGA, host bus interface. Verilog/VHDL, GPL-3.0 with commercial dual-license available.",
+    "description": "2D/3D graphics engine (GPU) \u2014 Drawing Engine 2D + 3D, texel pipeline, Display List Processor, Texture Cache, float ALU, Memory Controller, Digital RAMDAC, IBM-compatible VGA, host bus interface. Verilog/VHDL, GPL-3.0 with commercial dual-license available.",
     "license": "GPL-3.0-only",
     "license_class": "strong-copyleft",
     "language": "verilog",
@@ -15731,7 +15731,7 @@
       "583f9e012f66",
       "HEAD"
     ],
-    "description": "Open-source neuromorphic processor (second generation) — LIF compartmental neurons, microcode learning, STDP + three-factor synaptic plasticity, asynchronous Network-on-Chip mesh, RV32I/RV32IM management cores, multi-chip routing. Apache-2.0, FPGA-validated on AWS F2, Kria, and Arty.",
+    "description": "Open-source neuromorphic processor (second generation) \u2014 LIF compartmental neurons, microcode learning, STDP + three-factor synaptic plasticity, asynchronous Network-on-Chip mesh, RV32I/RV32IM management cores, multi-chip routing. Apache-2.0, FPGA-validated on AWS F2, Kria, and Arty.",
     "license": "Apache-2.0",
     "license_class": "permissive",
     "language": "verilog",
@@ -16167,7 +16167,7 @@
     "versions": [
       "master"
     ],
-    "description": "Pyrite PCIe configuration programmers — VPD (Vital Product Data) and VSEC (Vendor-Specific Extended Capability) over BPI flash and QSPI flash, UltraScale variants.",
+    "description": "Pyrite PCIe configuration programmers \u2014 VPD (Vital Product Data) and VSEC (Vendor-Specific Extended Capability) over BPI flash and QSPI flash, UltraScale variants.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -16373,7 +16373,7 @@
     "versions": [
       "master"
     ],
-    "description": "AXI4-Stream infrastructure: FIFOs (sync/async/pipeline), broadcast, demux/mux, switch, register, COBS encode/decode, null src/snk, tie. Excludes Ethernet PCS streams (BASE-R, XGMII, GMII bridges) — those live in taxi-ethernet.",
+    "description": "AXI4-Stream infrastructure: FIFOs (sync/async/pipeline), broadcast, demux/mux, switch, register, COBS encode/decode, null src/snk, tie. Excludes Ethernet PCS streams (BASE-R, XGMII, GMII bridges) \u2014 those live in taxi-ethernet.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -16842,7 +16842,7 @@
     "versions": [
       "master"
     ],
-    "description": "Source-synchronous I/O — DDR / SDR in / out with diff variants, plus the bare IDDR / ODDR I/O DDR-register primitives.",
+    "description": "Source-synchronous I/O \u2014 DDR / SDR in / out with diff variants, plus the bare IDDR / ODDR I/O DDR-register primitives.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -17099,7 +17099,7 @@
     "versions": [
       "master"
     ],
-    "description": "Zircon IP packet processor — RX parse / ingress / egress and TX buffer / deparse / ingress / egress, plus length+checksum core.",
+    "description": "Zircon IP packet processor \u2014 RX parse / ingress / egress and TX buffer / deparse / ingress / egress, plus length+checksum core.",
     "license": "CERN-OHL-S-2.0",
     "license_class": "strong-copyleft",
     "language": "systemverilog",
@@ -17364,7 +17364,7 @@
     "versions": [
       "master"
     ],
-    "description": "Etherbone — Wishbone-over-Ethernet remote-access protocol. Three HDL subsystems: Etherbone master (eb_master_core), slave (eb_slave_core, used by White Rabbit's wrc_core for remote register access), and a USB transport variant (eb_usb_core). OHWR-canonical post-migration.",
+    "description": "Etherbone \u2014 Wishbone-over-Ethernet remote-access protocol. Three HDL subsystems: Etherbone master (eb_master_core), slave (eb_slave_core, used by White Rabbit's wrc_core for remote register access), and a USB transport variant (eb_usb_core). OHWR-canonical post-migration.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -17445,7 +17445,7 @@
     "versions": [
       "master"
     ],
-    "description": "General Cores — generic FPGA primitive library. Edge detectors, CDC synchronizers (gc_sync_*), pulse synchronizer, debouncers, Wishbone primitives + slaves + crossbars (wb_*/xwb_*), generic memory primitives (genram_pkg single/dual-port + async FIFO), AXI/DSP/I2C primitives, 8b/10b coder, radiation-tolerant variants. The CERN BE-CO-HT primitive library underlying every OHWR design.",
+    "description": "General Cores \u2014 generic FPGA primitive library. Edge detectors, CDC synchronizers (gc_sync_*), pulse synchronizer, debouncers, Wishbone primitives + slaves + crossbars (wb_*/xwb_*), generic memory primitives (genram_pkg single/dual-port + async FIFO), AXI/DSP/I2C primitives, 8b/10b coder, radiation-tolerant variants. The CERN BE-CO-HT primitive library underlying every OHWR design.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -17955,20 +17955,17 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_axi_pkg_protocol",
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
+      "olo_axi_pkg_protocol"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
         "src/axi/vhdl/olo_axi_pkg_protocol.vhd",
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/axi/vhdl/olo_axi_lite_slave.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18000,29 +17997,22 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_axi_pkg_protocol",
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
+      "olo_axi_pkg_protocol"
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/axi/vhdl/olo_axi_pkg_protocol.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_fifo_sync.vhd",
         "src/axi/vhdl/olo_axi_master_simple.vhd",
         "src/base/vhdl/olo_base_pl_stage.vhd",
         "src/base/vhdl/olo_base_wconv_n2xn.vhd",
         "src/axi/vhdl/olo_axi_master_full.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18054,26 +18044,19 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_axi_pkg_protocol",
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
+      "olo_axi_pkg_protocol"
     ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/axi/vhdl/olo_axi_pkg_protocol.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_fifo_sync.vhd",
         "src/axi/vhdl/olo_axi_master_simple.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18103,16 +18086,15 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_pl_stage.vhd",
         "src/axi/vhdl/olo_axi_pl_stage.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18142,19 +18124,14 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/base/vhdl/olo_base_arb_prio.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18184,20 +18161,15 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/base/vhdl/olo_base_arb_prio.vhd",
         "src/base/vhdl/olo_base_arb_rr.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18227,21 +18199,16 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/base/vhdl/olo_base_arb_prio.vhd",
         "src/base/vhdl/olo_base_arb_rr.vhd",
         "src/base/vhdl/olo_base_arb_wrr.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18271,25 +18238,16 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_decode_firstbit.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_cam.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18319,15 +18277,14 @@
     "role": "component",
     "desc_source": "preserved",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18357,19 +18314,18 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
         "src/base/vhdl/olo_base_cc_reset.vhd",
         "src/base/vhdl/olo_base_cc_pulse.vhd",
         "src/base/vhdl/olo_base_cc_simple.vhd",
         "src/base/vhdl/olo_base_cc_handshake.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18399,17 +18355,16 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
         "src/base/vhdl/olo_base_cc_reset.vhd",
         "src/base/vhdl/olo_base_cc_n2xn.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18439,17 +18394,16 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
         "src/base/vhdl/olo_base_cc_reset.vhd",
         "src/base/vhdl/olo_base_cc_pulse.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18479,16 +18433,15 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
         "src/base/vhdl/olo_base_cc_reset.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18518,18 +18471,17 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
         "src/base/vhdl/olo_base_cc_reset.vhd",
         "src/base/vhdl/olo_base_cc_pulse.vhd",
         "src/base/vhdl/olo_base_cc_simple.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18559,19 +18511,18 @@
     "role": "top",
     "desc_source": "preserved",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
         "src/base/vhdl/olo_base_cc_reset.vhd",
         "src/base/vhdl/olo_base_cc_pulse.vhd",
         "src/base/vhdl/olo_base_cc_simple.vhd",
         "src/base/vhdl/olo_base_cc_status.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18601,17 +18552,16 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
         "src/base/vhdl/olo_base_cc_reset.vhd",
         "src/base/vhdl/olo_base_cc_xn2n.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18641,21 +18591,14 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_crc.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18686,25 +18629,16 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_crc.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_pl_stage.vhd",
         "src/base/vhdl/olo_base_crc_append.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18734,28 +18668,19 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_crc.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_fifo_sync.vhd",
         "src/base/vhdl/olo_base_fifo_packet.vhd",
         "src/base/vhdl/olo_base_pl_stage.vhd",
         "src/base/vhdl/olo_base_crc_check.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18783,19 +18708,14 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/base/vhdl/olo_base_decode_firstbit.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18822,22 +18742,15 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_delay.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18865,22 +18778,15 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_delay_cfg.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18910,21 +18816,14 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_dyn_sft.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -18955,26 +18854,17 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
         "src/base/vhdl/olo_base_cc_reset.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_fifo_async.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19004,25 +18894,16 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_fifo_sync.vhd",
         "src/base/vhdl/olo_base_fifo_packet.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19054,22 +18935,15 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_fifo_sync.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19097,23 +18971,16 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_fifo_sync.vhd",
         "src/base/vhdl/olo_base_flowctrl_handler.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19141,24 +19008,17 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_delay.vhd",
         "src/base/vhdl/olo_base_fifo_sync.vhd",
         "src/base/vhdl/olo_base_latency_comp.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19185,15 +19045,14 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_pl_stage.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19220,19 +19079,14 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/base/vhdl/olo_base_prbs.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19263,21 +19117,14 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19308,21 +19155,14 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_ram_sp.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19353,21 +19193,14 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008-relaxed",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_ram_tdp.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19395,24 +19228,15 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_pl_stage.vhd",
         "src/base/vhdl/olo_base_rate_limit.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19440,19 +19264,14 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_reset_gen.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19481,17 +19300,14 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
         "src/base/vhdl/olo_base_strobe_div.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19519,17 +19335,14 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
         "src/base/vhdl/olo_base_strobe_gen.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19558,17 +19371,14 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
         "src/base/vhdl/olo_base_tdm_mux.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19598,19 +19408,14 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/base/vhdl/olo_base_wconv_n2m.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19640,19 +19445,14 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/base/vhdl/olo_base_wconv_n2xn.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19682,19 +19482,14 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/base/vhdl/olo_base_wconv_xn2n.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19723,24 +19518,21 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd",
         "src/fix/vhdl/olo_fix_saturate.vhd",
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_abs.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19769,24 +19561,21 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd",
         "src/fix/vhdl/olo_fix_saturate.vhd",
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_add.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19815,24 +19604,21 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd",
         "src/fix/vhdl/olo_fix_saturate.vhd",
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_addsub.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19863,20 +19649,17 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_bin_div.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19909,25 +19692,15 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_delay.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/base/vhdl/olo_base_dyn_sft.vhd",
         "src/base/vhdl/olo_base_wconv_xn2n.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
@@ -19936,6 +19709,9 @@
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_mult.vhd",
         "src/fix/vhdl/olo_fix_cic_dec_par_tdm.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -19967,25 +19743,15 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_delay.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
         "src/base/vhdl/olo_base_dyn_sft.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd",
@@ -19993,6 +19759,9 @@
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_mult.vhd",
         "src/fix/vhdl/olo_fix_cic_dec_tdm.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20021,21 +19790,18 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_compare.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20065,18 +19831,12 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd",
@@ -20084,6 +19844,9 @@
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_mult.vhd",
         "src/fix/vhdl/olo_fix_cordic_rot.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20113,21 +19876,13 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_ram_sdp.vhd",
         "src/base/vhdl/olo_base_delay.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
@@ -20136,6 +19891,9 @@
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_mult.vhd",
         "src/fix/vhdl/olo_fix_cordic_vect.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20164,20 +19922,17 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_from_real.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20206,24 +19961,21 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd",
         "src/fix/vhdl/olo_fix_saturate.vhd",
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_limit.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20252,24 +20004,21 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd",
         "src/fix/vhdl/olo_fix_saturate.vhd",
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_mult.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20298,24 +20047,21 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd",
         "src/fix/vhdl/olo_fix_saturate.vhd",
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_neg.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20344,23 +20090,20 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd",
         "src/fix/vhdl/olo_fix_saturate.vhd",
         "src/fix/vhdl/olo_fix_resize.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20389,21 +20132,18 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20432,21 +20172,18 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_saturate.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20474,24 +20211,21 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_private_optional_reg.vhd",
         "src/fix/vhdl/olo_fix_round.vhd",
         "src/fix/vhdl/olo_fix_saturate.vhd",
         "src/fix/vhdl/olo_fix_resize.vhd",
         "src/fix/vhdl/olo_fix_sub.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20520,20 +20254,17 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string",
       "olo_fix_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/fix/vhdl/olo_fix_pkg.vhd",
         "src/fix/vhdl/olo_fix_to_real.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20564,24 +20295,19 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/base/vhdl/olo_base_cc_bits.vhd",
         "src/base/vhdl/olo_base_cc_reset.vhd",
         "src/base/vhdl/olo_base_cc_pulse.vhd",
         "src/base/vhdl/olo_base_cc_simple.vhd",
         "src/base/vhdl/olo_base_strobe_gen.vhd",
         "src/intf/vhdl/olo_intf_clk_meas.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20610,23 +20336,16 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_strobe_gen.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/intf/vhdl/olo_intf_sync.vhd",
         "src/intf/vhdl/olo_intf_debounce.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20659,22 +20378,17 @@
     "desc_source": "header",
     "top_modules": [],
     "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
       "olo_intf_i2c_master_pkg"
     ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/intf/vhdl/olo_intf_sync.vhd",
         "src/intf/vhdl/olo_intf_i2c_master.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20706,21 +20420,14 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/intf/vhdl/olo_intf_spi_master.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20752,22 +20459,15 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/intf/vhdl/olo_intf_sync.vhd",
         "src/intf/vhdl/olo_intf_spi_slave.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20798,15 +20498,14 @@
     "role": "component",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_attribute"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/intf/vhdl/olo_intf_sync.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -20840,25 +20539,16 @@
     "role": "top",
     "desc_source": "header",
     "top_modules": [],
-    "provides_packages": [
-      "olo_base_pkg_array",
-      "olo_base_pkg_attribute",
-      "olo_base_pkg_logic",
-      "olo_base_pkg_math",
-      "olo_base_pkg_string"
-    ],
     "routertl_compat": {
       "language": "vhdl-2008",
       "library": "olo",
       "files": [
-        "src/base/vhdl/olo_base_pkg_array.vhd",
-        "src/base/vhdl/olo_base_pkg_math.vhd",
-        "src/base/vhdl/olo_base_pkg_logic.vhd",
-        "src/base/vhdl/olo_base_pkg_string.vhd",
         "src/base/vhdl/olo_base_strobe_gen.vhd",
-        "src/base/vhdl/olo_base_pkg_attribute.vhd",
         "src/intf/vhdl/olo_intf_sync.vhd",
         "src/intf/vhdl/olo_intf_uart.vhd"
+      ],
+      "package_deps": [
+        "open-logic/olo_base"
       ]
     }
   },
@@ -21629,7 +21319,7 @@
       "74ca9275976b",
       "HEAD"
     ],
-    "description": "APB-to-AES-128 bridge — exposes an AES-128 cipher core through the AMBA APB peripheral bus for register-mapped key/data access.",
+    "description": "APB-to-AES-128 bridge \u2014 exposes an AES-128 cipher core through the AMBA APB peripheral bus for register-mapped key/data access.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -21684,7 +21374,7 @@
     "versions": [
       "master"
     ],
-    "description": "AES (Advanced Encryption Standard) 128-bit encryption/decryption block (AVS variant) — BSD-2-Clause Verilog primitive with synchronous load/ready handshake.",
+    "description": "AES (Advanced Encryption Standard) 128-bit encryption/decryption block (AVS variant) \u2014 BSD-2-Clause Verilog primitive with synchronous load/ready handshake.",
     "license": "BSD-2-Clause",
     "license_class": "permissive",
     "language": "vhdl-2008",
@@ -22103,7 +21793,7 @@
     "versions": [
       "master"
     ],
-    "description": "DES (Data Encryption Standard) cipher core — 56-bit key, 64-bit block. GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants.",
+    "description": "DES (Data Encryption Standard) cipher core \u2014 56-bit key, 64-bit block. GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants.",
     "license": "GPL-3.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -22145,7 +21835,7 @@
     "versions": [
       "master"
     ],
-    "description": "DESL (DES-Lightweight) variant — area-optimised DES with a single shared S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore.",
+    "description": "DESL (DES-Lightweight) variant \u2014 area-optimised DES with a single shared S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore.",
     "license": "GPL-3.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -22187,7 +21877,7 @@
     "versions": [
       "master"
     ],
-    "description": "DESLX variant — combines the DES-Lightweight S-box optimisation with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore.",
+    "description": "DESLX variant \u2014 combines the DES-Lightweight S-box optimisation with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore.",
     "license": "GPL-3.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -22229,7 +21919,7 @@
     "versions": [
       "master"
     ],
-    "description": "DES-X variant — adds XOR pre/post-whitening keys to standard DES (Rivest 1984), strengthening against brute-force. GPL-3+ VHDL.",
+    "description": "DES-X variant \u2014 adds XOR pre/post-whitening keys to standard DES (Rivest 1984), strengthening against brute-force. GPL-3+ VHDL.",
     "license": "GPL-3.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -22458,7 +22148,7 @@
           "kind": "underrun-on-low-hwmark",
           "discovered": "2026-05-03",
           "provenance": "RTL-T2",
-          "evidence": "Tx_Hwmark default 9 entries; >512 B frames hit underrun before frame fully buffered, deliver as constant ~2,560 B GIANT wire frames regardless of input size. VCD-confirmed (Tx_en stays HIGH continuously through full 20.4-20.5 µs span) and lever-experiment-confirmed (HWM = 31 collapses 4 GIANTs to 0).",
+          "evidence": "Tx_Hwmark default 9 entries; >512 B frames hit underrun before frame fully buffered, deliver as constant ~2,560 B GIANT wire frames regardless of input size. VCD-confirmed (Tx_en stays HIGH continuously through full 20.4-20.5 \u00b5s span) and lever-experiment-confirmed (HWM = 31 collapses 4 GIANTs to 0).",
           "recoverable": true,
           "workaround": "CSR-write Tx_Hwmark >= 31 entries (5'h1F) before any TX traffic",
           "fix_pr": null,
@@ -22470,7 +22160,7 @@
           "kind": "protocol-handshake-mismatch",
           "discovered": "2026-05-03",
           "provenance": "RTL-T3",
-          "evidence": "MAC_rx_FF.v SYS_wait_end → SYS_idle requires !Rx_mac_rd; perpetual-ready hosts (modern AXI-Stream-style ingress) wedge after frame 0 EOP and never receive subsequent frames. VCD-confirmed (FSM transitions from SYS_read → SYS_wait_end at first EOP and never moves again across 1.4 Mns sim).",
+          "evidence": "MAC_rx_FF.v SYS_wait_end \u2192 SYS_idle requires !Rx_mac_rd; perpetual-ready hosts (modern AXI-Stream-style ingress) wedge after frame 0 EOP and never receive subsequent frames. VCD-confirmed (FSM transitions from SYS_read \u2192 SYS_wait_end at first EOP and never moves again across 1.4 Mns sim).",
           "recoverable": true,
           "workaround": "BFM/host pulses Rx_mac_rd low for one cycle after each EOP",
           "fix_pr": null,
@@ -22562,7 +22252,7 @@
       "596c754dca8a",
       "HEAD"
     ],
-    "description": "Fully-pipelined image edge-detection algorithms — Sobel and Canny family operators in mature Verilog form, ready for streaming raster pixel inputs.",
+    "description": "Fully-pipelined image edge-detection algorithms \u2014 Sobel and Canny family operators in mature Verilog form, ready for streaming raster pixel inputs.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "vhdl-2008",
@@ -22920,7 +22610,7 @@
     "versions": [
       "master"
     ],
-    "description": "I²S audio bus interface controller with Wishbone control port — VHDL bridge between FPGA and external audio codecs.",
+    "description": "I\u00b2S audio bus interface controller with Wishbone control port \u2014 VHDL bridge between FPGA and external audio codecs.",
     "license": "GPL-2.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -23162,7 +22852,7 @@
       "3f7adf4b32ae",
       "HEAD"
     ],
-    "description": "National Semiconductor NS32000-series 32-bit CPU implementation in Verilog (Udo Möller). Maintained at RetroPM/m32632; LGPL-2.1.",
+    "description": "National Semiconductor NS32000-series 32-bit CPU implementation in Verilog (Udo M\u00f6ller). Maintained at RetroPM/m32632; LGPL-2.1.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -23321,7 +23011,7 @@
     "versions": [
       "master"
     ],
-    "description": "Minimal OpenRISC 1200 system-on-chip — OR1200 CPU with Wishbone-attached on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera). Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013).",
+    "description": "Minimal OpenRISC 1200 system-on-chip \u2014 OR1200 CPU with Wishbone-attached on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera). Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013).",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -23783,7 +23473,7 @@
     "versions": [
       "master"
     ],
-    "description": "Bidirectional 32-bit PCI ↔ Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006).",
+    "description": "Bidirectional 32-bit PCI \u2194 Wishbone bridge supporting both initiator and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006).",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -23887,7 +23577,7 @@
       "1685821cee9f",
       "HEAD"
     ],
-    "description": "PCI 32-bit Lite Target controller — minimal PCI target-mode interface in VHDL, useful for Wishbone-bus designs needing a PCI front-end.",
+    "description": "PCI 32-bit Lite Target controller \u2014 minimal PCI target-mode interface in VHDL, useful for Wishbone-bus designs needing a PCI front-end.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "vhdl-2008",
@@ -24174,7 +23864,7 @@
     "versions": [
       "master"
     ],
-    "description": "Streamlined adaptation of Sun's OpenSPARC T1 — single 64-bit SPARC v9 core supporting 1-4 concurrent threads, with Wishbone master interface. Authors: Watson, Rozhdestvenskiy, Luzzu, Fazzino (2007-2018).",
+    "description": "Streamlined adaptation of Sun's OpenSPARC T1 \u2014 single 64-bit SPARC v9 core supporting 1-4 concurrent threads, with Wishbone master interface. Authors: Watson, Rozhdestvenskiy, Luzzu, Fazzino (2007-2018).",
     "license": "GPL-2.0-only",
     "license_class": "strong-copyleft",
     "language": "verilog",
@@ -24696,7 +24386,7 @@
       "0608d0daaf4b",
       "HEAD"
     ],
-    "description": "SAP-1 (Simple-As-Possible) educational processor with nanoprogrammed control unit, following the Malvino reference design — pedagogical CPU implementation in Verilog.",
+    "description": "SAP-1 (Simple-As-Possible) educational processor with nanoprogrammed control unit, following the Malvino reference design \u2014 pedagogical CPU implementation in Verilog.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -24984,7 +24674,7 @@
       "094b65152da7",
       "HEAD"
     ],
-    "description": "SHA-256 cryptographic hash core — single-block 256-bit Secure Hash Algorithm 2 implementation with synchronous control interface.",
+    "description": "SHA-256 cryptographic hash core \u2014 single-block 256-bit Secure Hash Algorithm 2 implementation with synchronous control interface.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "vhdl-2008",
@@ -25036,7 +24726,7 @@
     "versions": [
       "master"
     ],
-    "description": "Keccak / SHA-3 cryptographic hash family — Apache-2.0 Verilog implementation with ack/in handshake interface.",
+    "description": "Keccak / SHA-3 cryptographic hash family \u2014 Apache-2.0 Verilog implementation with ack/in handshake interface.",
     "license": "Apache-2.0",
     "license_class": "permissive",
     "language": "verilog",
@@ -25079,7 +24769,7 @@
     "versions": [
       "master"
     ],
-    "description": "SHA-1 (160-bit Secure Hash Algorithm) cryptographic hash core — single-block hashing primitive.",
+    "description": "SHA-1 (160-bit Secure Hash Algorithm) cryptographic hash core \u2014 single-block hashing primitive.",
     "license": "OpenCores-Permissive-1.0",
     "license_class": "unknown",
     "language": "verilog",
@@ -25558,7 +25248,7 @@
     "versions": [
       "master"
     ],
-    "description": "Xilinx SRL16/SRL32-based compact FIFO — uses SRL shift-register primitives for storage on Xilinx FPGA targets. VHDL utility primitive.",
+    "description": "Xilinx SRL16/SRL32-based compact FIFO \u2014 uses SRL shift-register primitives for storage on Xilinx FPGA targets. VHDL utility primitive.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "vhdl-2008",
@@ -25602,7 +25292,7 @@
     "versions": [
       "master"
     ],
-    "description": "Educational SoC with peripheral suite — I2C, UART, PS/2, PWM, 7-segment display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented in STORM SoC datasheet PDF.",
+    "description": "Educational SoC with peripheral suite \u2014 I2C, UART, PS/2, PWM, 7-segment display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented in STORM SoC datasheet PDF.",
     "license": "GPL-2.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -26480,7 +26170,7 @@
     "versions": [
       "master"
     ],
-    "description": "Video stream scaler — line-buffer-based filtering pipeline that resamples raster video streams to a target output resolution. LGPL-2.1+ Verilog.",
+    "description": "Video stream scaler \u2014 line-buffer-based filtering pipeline that resamples raster video streams to a target output resolution. LGPL-2.1+ Verilog.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -26615,7 +26305,7 @@
     "versions": [
       "master"
     ],
-    "description": "Image warping pipeline with image-decay / temporal-aging effect — geometric distortion + temporal modulation.",
+    "description": "Image warping pipeline with image-decay / temporal-aging effect \u2014 geometric distortion + temporal modulation.",
     "license": "OpenCores-Permissive-1.0",
     "license_class": "unknown",
     "language": "verilog",
@@ -26697,7 +26387,7 @@
     "versions": [
       "master"
     ],
-    "description": "Wishbone-controlled LPC (Low Pin Count) bus interface — bridges Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD, BMC).",
+    "description": "Wishbone-controlled LPC (Low Pin Count) bus interface \u2014 bridges Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD, BMC).",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -26791,7 +26481,7 @@
     "versions": [
       "master"
     ],
-    "description": "Wishbone bus width-resize bridge — connects masters and slaves with mismatched data widths via byte-lane steering.",
+    "description": "Wishbone bus width-resize bridge \u2014 connects masters and slaves with mismatched data widths via byte-lane steering.",
     "license": "LGPL-2.1-or-later",
     "license_class": "weak-copyleft",
     "language": "verilog",
@@ -26840,7 +26530,7 @@
       "HEAD",
       "d248fe6384ac"
     ],
-    "description": "Wishbone-controlled FM transmitter — software-defined-radio building block that takes a Wishbone-attached audio stream and produces an FM-modulated baseband output.",
+    "description": "Wishbone-controlled FM transmitter \u2014 software-defined-radio building block that takes a Wishbone-attached audio stream and produces an FM-modulated baseband output.",
     "license": "GPL-2.0-or-later",
     "license_class": "strong-copyleft",
     "language": "verilog",
@@ -27117,7 +26807,7 @@
     "versions": [
       "master"
     ],
-    "description": "XTEA (eXtended Tiny Encryption Algorithm) cipher core — 128-bit key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL.",
+    "description": "XTEA (eXtended Tiny Encryption Algorithm) cipher core \u2014 128-bit key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL.",
     "license": "GPL-3.0-or-later",
     "license_class": "strong-copyleft",
     "language": "vhdl-2008",
@@ -27155,7 +26845,7 @@
     "versions": [
       "master"
     ],
-    "description": "Yet Another CORDIC — generic iterative CORDIC pipeline for trigonometric and hyperbolic functions with parameterised data width.",
+    "description": "Yet Another CORDIC \u2014 generic iterative CORDIC pipeline for trigonometric and hyperbolic functions with parameterised data width.",
     "license": "LGPL-3.0-or-later",
     "license_class": "weak-copyleft",
     "language": "vhdl-2008",
@@ -35200,7 +34890,7 @@
       "6f122afe0685",
       "HEAD"
     ],
-    "description": "Empty stub for wbgenplus_pkg.  mkreider/wbgenplus's codegen emits `use work.wbgenplus_pkg.all;` in every generated VHDL file unconditionally, but the runtime support package the clause references was never published in any public repo (RTL-P4.35: verified across mkreider/wbgenplus, GSI bel_projects, GSI's wr-cores fork, mkreider/eca, gitlab.com/ohwr/project — 0 hits filename-wide).  Audit of consumers in white-rabbit/wr-eca shows zero symbol references from wbgenplus_pkg, so an empty package suffices.  When external_uses.work.wbgenplus_pkg resolves through the registry, this stub is the canonical provider — explicit curator provenance, not a copy of any upstream artifact.",
+    "description": "Empty stub for wbgenplus_pkg.  mkreider/wbgenplus's codegen emits `use work.wbgenplus_pkg.all;` in every generated VHDL file unconditionally, but the runtime support package the clause references was never published in any public repo (RTL-P4.35: verified across mkreider/wbgenplus, GSI bel_projects, GSI's wr-cores fork, mkreider/eca, gitlab.com/ohwr/project \u2014 0 hits filename-wide).  Audit of consumers in white-rabbit/wr-eca shows zero symbol references from wbgenplus_pkg, so an empty package suffices.  When external_uses.work.wbgenplus_pkg resolves through the registry, this stub is the canonical provider \u2014 explicit curator provenance, not a copy of any upstream artifact.",
     "license": "MIT",
     "license_class": "permissive",
     "language": "vhdl-2008",
@@ -35318,7 +35008,7 @@
     "versions": [
       "master"
     ],
-    "description": "Shared internals required by every wr-cores subsystem — WRF (White Rabbit Fabric) primitives, DMTD (Digital Multi-Tap Delay) phase meters, pulse helpers, fabric mux/reg/loopback. Not a standalone install target; auto-pulled via external_uses by wr-ptp-core, wr-endpoint, wr-softpll-ng, wr-streamers, wr-mini-nic.",
+    "description": "Shared internals required by every wr-cores subsystem \u2014 WRF (White Rabbit Fabric) primitives, DMTD (Digital Multi-Tap Delay) phase meters, pulse helpers, fabric mux/reg/loopback. Not a standalone install target; auto-pulled via external_uses by wr-ptp-core, wr-endpoint, wr-softpll-ng, wr-streamers, wr-mini-nic.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35396,7 +35086,7 @@
     "versions": [
       "master"
     ],
-    "description": "ECA — Event Conditional Action timing controller. Hardware action scheduler that triggers outputs on absolute timestamp matches with sub-ns precision. Includes bitonic sort, MSI delivery, FIFOs, Wishbone slaves, free-list, scubus channel adapter, time-latched unit (TLU) integration.",
+    "description": "ECA \u2014 Event Conditional Action timing controller. Hardware action scheduler that triggers outputs on absolute timestamp matches with sub-ns precision. Includes bitonic sort, MSI delivery, FIFOs, Wishbone slaves, free-list, scubus channel adapter, time-latched unit (TLU) integration.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35491,7 +35181,7 @@
     "versions": [
       "master"
     ],
-    "description": "1G WR Endpoint — Gigabit Ethernet MAC + 1000Base-X PCS + PTP timestamping unit. Carrier-grade Ethernet path with timestamping hooks for sub-ns precision. Includes auto-negotiation, flow control, RMON counters, packet filtering, VLAN, RX bypass queue.",
+    "description": "1G WR Endpoint \u2014 Gigabit Ethernet MAC + 1000Base-X PCS + PTP timestamping unit. Carrier-grade Ethernet path with timestamping hooks for sub-ns precision. Includes auto-negotiation, flow control, RMON counters, packet filtering, VLAN, RX bypass queue.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35587,7 +35277,7 @@
     "versions": [
       "master"
     ],
-    "description": "Mini-NIC — minimal Wishbone-mastered Ethernet NIC for the embedded LM32 SoftCPU running the PTP stack. Memory-mapped TX/RX packet buffers, Wishbone slave control register file.",
+    "description": "Mini-NIC \u2014 minimal Wishbone-mastered Ethernet NIC for the embedded LM32 SoftCPU running the PTP stack. Memory-mapped TX/RX packet buffers, Wishbone slave control register file.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35678,7 +35368,7 @@
     "versions": [
       "master"
     ],
-    "description": "WR PTP Core (WRPC) — the headline IEEE-1588 PTP core delivering sub-nanosecond clock synchronization across Ethernet. Integrates WR Endpoint + Softpll + PPS gen + LM32 SoftCPU running the PTP stack. Used at LHC, KM3NeT, GSI, ESS, and accelerator facilities worldwide.",
+    "description": "WR PTP Core (WRPC) \u2014 the headline IEEE-1588 PTP core delivering sub-nanosecond clock synchronization across Ethernet. Integrates WR Endpoint + Softpll + PPS gen + LM32 SoftCPU running the PTP stack. Used at LHC, KM3NeT, GSI, ESS, and accelerator facilities worldwide.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35792,7 +35482,7 @@
     "versions": [
       "master"
     ],
-    "description": "SoftPLL-NG — software-controlled PLL for sub-nanosecond clock recovery. Carrier-grade clock-domain alignment using DDMTD (Dual-Mixer Time-to-Digital) phase detection plus bang-bang + period-detect digital PI loops. The clock-recovery heart of the WR system.",
+    "description": "SoftPLL-NG \u2014 software-controlled PLL for sub-nanosecond clock recovery. Carrier-grade clock-domain alignment using DDMTD (Dual-Mixer Time-to-Digital) phase detection plus bang-bang + period-detect digital PI loops. The clock-recovery heart of the WR system.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35848,7 +35538,7 @@
     "versions": [
       "master"
     ],
-    "description": "Streaming layer over WR — application-layer TX/RX framers for sending arbitrary user data over the WR Ethernet path. Drop-buffer, escape detection/insertion, statistics counters, Wishbone-mapped configuration.",
+    "description": "Streaming layer over WR \u2014 application-layer TX/RX framers for sending arbitrary user data over the WR Ethernet path. Drop-buffer, escape detection/insertion, statistics counters, Wishbone-mapped configuration.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -35975,7 +35665,7 @@
     "versions": [
       "master"
     ],
-    "description": "Time-Latched Unit — captures input-pin transitions with the WR-recovered nanosecond timestamp. Used as the timestamping front-end for ECA and external trigger capture.",
+    "description": "Time-Latched Unit \u2014 captures input-pin transitions with the WR-recovered nanosecond timestamp. Used as the timestamping front-end for ECA and external trigger capture.",
     "license": "LGPL-2.1",
     "license_class": "unknown",
     "language": "vhdl-2008",
@@ -37989,5 +37679,46 @@
     },
     "health_tier": "bronze",
     "last_verified_at": "2026-05-05"
+  },
+  {
+    "name": "olo_base",
+    "role": "component",
+    "routertl_compat": {
+      "library": "olo",
+      "files": [
+        "src/base/vhdl/olo_base_pkg_array.vhd",
+        "src/base/vhdl/olo_base_pkg_math.vhd",
+        "src/base/vhdl/olo_base_pkg_logic.vhd",
+        "src/base/vhdl/olo_base_pkg_attribute.vhd",
+        "src/base/vhdl/olo_base_pkg_string.vhd"
+      ],
+      "language": "vhdl-2008-relaxed"
+    },
+    "description": "Shared base packages for open-logic (extracted by RTL-P3.738 so consumers depend on them once).",
+    "license_class": "unknown",
+    "tags": [
+      "olo",
+      "package",
+      "base"
+    ],
+    "provides_packages": [
+      "olo_base_pkg_array",
+      "olo_base_pkg_attribute",
+      "olo_base_pkg_logic",
+      "olo_base_pkg_math",
+      "olo_base_pkg_string"
+    ],
+    "latest": "4.4.1",
+    "versions": [
+      "4.4.1"
+    ],
+    "commit_sha": "d1407a7427d9201a7bcd8c37749ec083b13006dc",
+    "published_at": "2026-03-10T06:51:30+01:00",
+    "language": "vhdl-2008",
+    "library": "olo",
+    "source_url": "https://github.com/open-logic/open-logic.git",
+    "license": "",
+    "namespace": "open-logic",
+    "top_modules": []
   }
 ]

@@ -16,12 +16,11 @@ routertl_compat:
   language: vhdl-2008
   library: olo
   files:
-  - src/base/vhdl/olo_base_pkg_array.vhd
-  - src/base/vhdl/olo_base_pkg_math.vhd
-  - src/base/vhdl/olo_base_pkg_logic.vhd
   - src/base/vhdl/olo_base_arb_prio.vhd
   - src/base/vhdl/olo_base_arb_rr.vhd
   - src/base/vhdl/olo_base_arb_wrr.vhd
+  package_deps:
+  - open-logic/olo_base
 tags:
 - arb
 - arbiter
@@ -84,7 +83,4 @@ external_uses:
   package: en_cl_fix_pkg
 - library: work
   package: en_cl_fix_private_pkg
-provides_packages:
-- olo_base_pkg_array
-- olo_base_pkg_logic
-- olo_base_pkg_math
+provides_packages: []
