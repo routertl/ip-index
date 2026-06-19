@@ -1,20 +1,17 @@
-name: cv32e40s
 namespace: openhwgroup
+name: cv32e40s
 version: master
 commit_sha: 9d9cae78b01a11458953133d1173c61933a2ba86
 published_at: '2024-10-31T08:14:27+01:00'
 description: CV32E40S is a small and efficient, 32-bit, in-order RISC-V core with
   a 4-stage pipeline that implements the following instruction set architecture
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/openhwgroup/cv32e40s.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 9d9cae78b01a11458953133d1173c61933a2ba86
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - rtl/include/cv32e40s_pkg.sv
@@ -67,6 +64,9 @@ routertl_compat:
   - rtl/cv32e40s_wb_stage.sv
   - rtl/cv32e40s_core.sv
   - rtl/cv32e40s_popcnt.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - alignment
 - compressed
@@ -80,57 +80,10 @@ tags:
 - prefetcher
 - registers
 - sequencer
-role: repo
-top_modules:
-- cv32e40s_core
-- cv32e40s_popcnt
-components:
-- cv32e40s_alert
-- cv32e40s_alignment_buffer
-- cv32e40s_alu
-- cv32e40s_alu_b_cpop
-- cv32e40s_b_decoder
-- cv32e40s_clic_int_controller
-- cv32e40s_compressed_decoder
-- cv32e40s_controller
-- cv32e40s_controller_bypass
-- cv32e40s_controller_fsm
-- cv32e40s_cs_registers
-- cv32e40s_csr
-- cv32e40s_data_obi_interface
-- cv32e40s_debug_triggers
-- cv32e40s_decoder
-- cv32e40s_div
-- cv32e40s_dummy_instr
-- cv32e40s_ex_stage
-- cv32e40s_ff_one
-- cv32e40s_i_decoder
-- cv32e40s_id_stage
-- cv32e40s_if_stage
-- cv32e40s_instr_obi_interface
-- cv32e40s_int_controller
-- cv32e40s_lfsr
-- cv32e40s_load_store_unit
-- cv32e40s_lsu_response_filter
-- cv32e40s_m_decoder
-- cv32e40s_mpu
-- cv32e40s_mult
-- cv32e40s_obi_integrity_fifo
-- cv32e40s_pc_check
-- cv32e40s_pc_target
-- cv32e40s_pma
-- cv32e40s_pmp
-- cv32e40s_prefetch_unit
-- cv32e40s_prefetcher
-- cv32e40s_rchk_check
-- cv32e40s_register_file
-- cv32e40s_register_file_ecc
-- cv32e40s_register_file_wrapper
-- cv32e40s_sequencer
-- cv32e40s_sleep_unit
-- cv32e40s_wb_stage
-- cv32e40s_wpt
-- cv32e40s_write_buffer
+role: top
+desc_source: readme
+provides_packages:
+- cv32e40s_pkg
 top_ports:
   cv32e40s_core:
   - direction: in
@@ -382,7 +335,6 @@ top_ports:
     name: result_o
     type: wire
     width: '[5: 0]'
-total_entities: 48
-desc_source: readme
-provides_packages:
-- cv32e40s_pkg
+top_modules:
+- cv32e40s_core
+- cv32e40s_popcnt

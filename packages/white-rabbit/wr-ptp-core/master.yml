@@ -1,5 +1,5 @@
-name: wr-ptp-core
 namespace: white-rabbit
+name: wr-ptp-core
 version: master
 commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
 published_at: '2017-12-18T18:45:29+01:00'
@@ -8,15 +8,12 @@ description: "WR PTP Core (WRPC) \u2014 the headline IEEE-1588 PTP core deliveri
   \ Softpll + PPS gen + LM32 SoftCPU running the PTP stack. Used at LHC, KM3NeT, GSI,\
   \ ESS, and accelerator facilities worldwide."
 license: LGPL-2.1
-license_class: unknown
+language: vhdl-2008
 source:
-  type: git
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
 routertl_compat:
-  language: vhdl-2008
   library: wr
   files:
   - modules/wrc_core/wrc_syscon_pkg.vhd
@@ -81,6 +78,9 @@ routertl_compat:
   - modules/fabric/xwrf_mux.vhd
   - modules/wrc_core/wr_core.vhd
   - modules/wrc_core/xwr_core.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - bus
 - core
@@ -92,15 +92,35 @@ tags:
 - wr
 - wrc
 - xwr
-role: subproject
-top_modules:
-- xwr_core
-components:
-- wr_core
-- wrc_diags_wb
-- wrc_periph
-- wrc_syscon_wb
-- xwr_diags_wb
+role: top
+desc_source: curator
+external_uses:
+- library: work
+  package: gencores_pkg
+- library: work
+  package: genram_pkg
+- library: work
+  package: wb_irq_pkg
+- library: work
+  package: wbgen2_pkg
+- library: work
+  package: wbgenplus_pkg
+- library: work
+  package: wishbone_pkg
+- library: work
+  package: wr_transmission_wbgen2_pkg
+provides_packages:
+- endpoint_pkg
+- endpoint_private_pkg
+- ep_crc32_pkg
+- ep_wbgen2_pkg
+- minic_wbgen2_pkg
+- softpll_pkg
+- spll_wbgen2_pkg
+- sysc_wbgen2_pkg
+- wr_fabric_pkg
+- wrc_diags_wbgen2_pkg
+- wrcore_pkg
 top_ports:
   xwr_core:
   - direction: in
@@ -459,32 +479,5 @@ top_ports:
     name: link_ok_o
     type: std_logic
     width: ''
-total_entities: 6
-desc_source: curator
-external_uses:
-- library: work
-  package: gencores_pkg
-- library: work
-  package: genram_pkg
-- library: work
-  package: wb_irq_pkg
-- library: work
-  package: wbgen2_pkg
-- library: work
-  package: wbgenplus_pkg
-- library: work
-  package: wishbone_pkg
-- library: work
-  package: wr_transmission_wbgen2_pkg
-provides_packages:
-- endpoint_pkg
-- endpoint_private_pkg
-- ep_crc32_pkg
-- ep_wbgen2_pkg
-- minic_wbgen2_pkg
-- softpll_pkg
-- spll_wbgen2_pkg
-- sysc_wbgen2_pkg
-- wr_fabric_pkg
-- wrc_diags_wbgen2_pkg
-- wrcore_pkg
+top_modules:
+- xwr_core

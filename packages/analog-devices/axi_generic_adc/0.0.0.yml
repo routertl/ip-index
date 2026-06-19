@@ -1,16 +1,13 @@
-name: axi_generic_adc
 namespace: analog-devices
+name: axi_generic_adc
 version: 0.0.0
 description: AXI4-Lite with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/up_xfer_cntrl.v
@@ -21,6 +18,9 @@ routertl_compat:
   - library/common/up_adc_common.v
   - library/common/up_axi.v
   - library/axi_generic_adc/axi_generic_adc.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adc
 - amba
@@ -30,73 +30,4 @@ tags:
 - converter
 - digital
 role: top
-components:
-- ad_ip_jesd204_tpl_adc
-- ad_ip_jesd204_tpl_adc_regmap
-- ad_ip_jesd204_tpl_dac_regmap
-- ad_rst
-- axi_ad35xxr_channel
-- axi_ad35xxr_core
-- axi_ad485x_16b_channel
-- axi_ad485x_20b_channel
-- axi_ad9122_channel
-- axi_ad9122_core
-- axi_ad9265_channel
-- axi_ad9361_rx
-- axi_ad9361_rx_channel
-- axi_ad9361_tdd
-- axi_ad9361_tx
-- axi_ad9361_tx_channel
-- axi_ad9434_core
-- axi_ad9467_channel
-- axi_ad9625_channel
-- axi_ad9671_channel
-- axi_ad9684_channel
-- axi_ad9739a_channel
-- axi_ad9739a_core
-- axi_ad9740_channel
-- axi_ad9740_core
-- axi_ad9783_channel
-- axi_ad9783_core
-- axi_ad9963_rx
-- axi_ad9963_rx_channel
-- axi_ad9963_tx
-- axi_ad9963_tx_channel
-- axi_adaq8092_channel
-- axi_adc_decimate_reg
-- axi_adc_trigger_reg
-- axi_adcfifo_adc
-- axi_adcfifo_dma
-- axi_adrv9001_core
-- axi_adrv9001_rx
-- axi_adrv9001_rx_channel
-- axi_adrv9001_sync_ctrl
-- axi_adrv9001_tdd
-- axi_adrv9001_tx
-- axi_adrv9001_tx_channel
-- axi_dac_interpolate_reg
-- axi_dmac_regmap
-- axi_gpreg_clock_mon
-- axi_logic_analyzer_reg
-- axi_ltc2387_channel
-- axi_pulsar_lvds_channel
-- axi_pulse_gen_regmap
-- axi_pwm_gen_regmap
-- axi_xcvrlb_1
-- hsci_master_top
-- i3c_controller_regmap
-- jesd204_up_common
-- up_ad5766_sequencer
-- up_adc_channel
-- up_adc_common
-- up_axi
-- up_clkgen
-- up_clock_mon
-- up_dac_channel
-- up_dac_common
-- up_delay_cntrl
-- up_hdmi_rx
-- up_hdmi_tx
-- up_tdd_cntrl
-- up_xfer_cntrl
-- up_xfer_status
+desc_source: ports

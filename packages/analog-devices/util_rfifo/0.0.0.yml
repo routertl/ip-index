@@ -1,39 +1,22 @@
-name: util_rfifo
 namespace: analog-devices
+name: util_rfifo
 version: 0.0.0
 description: FIFO buffer with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_mem.v
   - library/util_rfifo/util_rfifo.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - rfifo
 - util
 role: top
-components:
-- ad_mem
-- avl_dacfifo_rd
-- axi_ad9625_if
-- axi_ad9671_if
-- axi_adcfifo_wr
-- axi_dacfifo_address_buffer
-- axi_dacfifo_rd
-- axi_dmac_regmap
-- axi_dmac_regmap_request
-- axi_dmac_response_manager
-- axi_dmac_transfer
-- axi_hdmi_tx_core
-- dmac_sg
-- i3c_controller_regmap
-- request_arb
-- util_axis_fifo
-- util_axis_fifo_asym
+desc_source: ports

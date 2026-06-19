@@ -1,20 +1,17 @@
-name: taxi-dma
 namespace: fpganinja
+name: taxi-dma
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
 description: 'Generic DMA building blocks: AXIS client sink/source, descriptor mux,
   AXI-IF DMAs, DMA mux, ps-dpram (sync + async), RAM demux.'
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
@@ -38,6 +35,9 @@ routertl_compat:
   - src/dma/rtl/taxi_dma_psdpram.sv
   - src/dma/rtl/taxi_dma_psdpram_async.sv
   - src/dma/rtl/taxi_dma_ram_demux.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - asynchronous
@@ -51,23 +51,8 @@ tags:
 - random
 - source
 - stream
-role: subproject
-top_modules:
-- taxi_dma_client_axis_sink
-- taxi_dma_client_axis_source
-- taxi_dma_if_axi
-- taxi_dma_if_mux
-- taxi_dma_psdpram
-- taxi_dma_psdpram_async
-- taxi_dma_ram_demux
-components:
-- taxi_dma_desc_mux
-- taxi_dma_if_axi_rd
-- taxi_dma_if_axi_wr
-- taxi_dma_if_mux_rd
-- taxi_dma_if_mux_wr
-- taxi_dma_ram_demux_rd
-- taxi_dma_ram_demux_wr
+role: top
+desc_source: curator
 top_ports:
   taxi_dma_client_axis_sink:
   - direction: in
@@ -280,5 +265,11 @@ top_ports:
     name: ram_rd
     type: taxi_dma_ram_if.rd_mst
     width: ''
-total_entities: 14
-desc_source: curator
+top_modules:
+- taxi_dma_client_axis_sink
+- taxi_dma_client_axis_source
+- taxi_dma_if_axi
+- taxi_dma_if_mux
+- taxi_dma_psdpram
+- taxi_dma_psdpram_async
+- taxi_dma_ram_demux

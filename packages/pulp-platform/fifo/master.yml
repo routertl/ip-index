@@ -1,33 +1,29 @@
-name: fifo
 namespace: pulp-platform
+name: fifo
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: FIFO buffer with FIFO interface
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/fifo_v3.sv
   - src/deprecated/fifo_v2.sv
   - src/deprecated/fifo_v1.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - buffer
 - queue
 role: top
-components:
-- fifo_v2
-- fifo_v3
-- mem_to_banks_detailed
-- stream_fifo
+desc_source: ports
 top_ports:
   fifo:
   - direction: in
@@ -74,4 +70,3 @@ top_ports:
     name: pop_i
     type: wire
     width: ''
-desc_source: ports

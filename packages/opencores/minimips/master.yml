@@ -1,19 +1,16 @@
-name: minimips
 namespace: opencores
+name: minimips
 version: master
 commit_sha: 77b142dbd5171770bfc527ea6d49fe26091b0db0
 published_at: '2006-03-23T16:34:22+00:00'
 description: A 32-bit MIPS processor core with RAM interface and interrupt support.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/minimips.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 77b142dbd5171770bfc527ea6d49fe26091b0db0
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - miniMIPS/src/pack_mips.vhd
@@ -31,6 +28,9 @@ routertl_compat:
   - miniMIPS/src/minimips.vhd
   - miniMIPS/bench/ram.vhd
   - miniMIPS/bench/rom.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - bus
@@ -44,23 +44,15 @@ tags:
 - pps
 - random
 - read
-role: repo
-top_modules:
-- minimips
-- ram
-- rom
-components:
-- alu
-- banc
-- bus_ctrl
-- pps_di
-- pps_ei
-- pps_ex
-- pps_mem
-- pps_pf
-- predict
-- renvoi
-- syscop
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: preserved
+external_uses:
+- library: work
+  package: alu
+provides_packages:
+- pack_mips
 top_ports:
   minimips:
   - direction: in
@@ -137,12 +129,7 @@ top_ports:
     name: fname
     type: string
     width: ''
-total_entities: 14
-desc_source: preserved
-health_tier: bronze
-last_verified_at: '2026-05-04'
-external_uses:
-- library: work
-  package: alu
-provides_packages:
-- pack_mips
+top_modules:
+- minimips
+- ram
+- rom

@@ -1,5 +1,5 @@
-name: wr-common
 namespace: white-rabbit
+name: wr-common
 version: master
 commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
 published_at: '2017-12-18T18:45:29+01:00'
@@ -8,15 +8,12 @@ description: "Shared internals required by every wr-cores subsystem \u2014 WRF (
   \ helpers, fabric mux/reg/loopback. Not a standalone install target; auto-pulled\
   \ via external_uses by wr-ptp-core, wr-endpoint, wr-softpll-ng, wr-streamers, wr-mini-nic."
 license: LGPL-2.1
-license_class: unknown
+language: vhdl-2008
 source:
-  type: git
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
 routertl_compat:
-  language: vhdl-2008
   library: wr
   files:
   - modules/timing/dmtd_with_deglitcher.vhd
@@ -38,6 +35,9 @@ routertl_compat:
   - modules/fabric/xwrf_loopback/wrf_loopback.vhd
   - modules/fabric/xwrf_mux.vhd
   - modules/fabric/xwrf_reg.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - controller
 - deglitcher
@@ -51,24 +51,29 @@ tags:
 - source
 - stamper
 - wishbone
-role: subproject
-top_modules:
-- dmtd_phase_meas
-- hpll_period_detect
-- multi_dmtd_with_deglitcher
-- pulse_gen
-- pulse_stamper
-- wb_fabric_sink
-- wb_fabric_source
-- wrf_loopback
-- xwb_fabric_sink
-- xwb_fabric_source
-- xwrf_mux
-- xwrf_reg
-components:
-- dmtd_with_deglitcher
-- lbk_wishbone_controller
-- xwrf_loopback
+role: top
+desc_source: curator
+external_uses:
+- library: work
+  package: gencores_pkg
+- library: work
+  package: genram_pkg
+- library: work
+  package: wb_irq_pkg
+- library: work
+  package: wbgen2_pkg
+- library: work
+  package: wbgenplus_pkg
+- library: work
+  package: wishbone_pkg
+- library: work
+  package: wr_transmission_wbgen2_pkg
+provides_packages:
+- endpoint_pkg
+- endpoint_private_pkg
+- ep_wbgen2_pkg
+- lbk_wbgen2_pkg
+- wr_fabric_pkg
 top_ports:
   dmtd_phase_meas:
   - direction: in
@@ -658,26 +663,16 @@ top_ports:
     name: src_o
     type: t_wrf_source_out
     width: ''
-total_entities: 15
-desc_source: curator
-external_uses:
-- library: work
-  package: gencores_pkg
-- library: work
-  package: genram_pkg
-- library: work
-  package: wb_irq_pkg
-- library: work
-  package: wbgen2_pkg
-- library: work
-  package: wbgenplus_pkg
-- library: work
-  package: wishbone_pkg
-- library: work
-  package: wr_transmission_wbgen2_pkg
-provides_packages:
-- endpoint_pkg
-- endpoint_private_pkg
-- ep_wbgen2_pkg
-- lbk_wbgen2_pkg
-- wr_fabric_pkg
+top_modules:
+- dmtd_phase_meas
+- hpll_period_detect
+- multi_dmtd_with_deglitcher
+- pulse_gen
+- pulse_stamper
+- wb_fabric_sink
+- wb_fabric_source
+- wrf_loopback
+- xwb_fabric_sink
+- xwb_fabric_source
+- xwrf_mux
+- xwrf_reg

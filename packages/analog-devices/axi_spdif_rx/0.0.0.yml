@@ -1,16 +1,13 @@
-name: axi_spdif_rx
 namespace: analog-devices
+name: axi_spdif_rx
 version: 0.0.0
 description: AXI4-Lite receive engine with AXI4-Stream interface and memory interface
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - library/axi_spdif_rx/rx_package.vhd
@@ -18,6 +15,9 @@ routertl_compat:
   - library/axi_spdif_rx/rx_phase_det.vhd
   - library/axi_spdif_rx/rx_status_reg.vhd
   - library/axi_spdif_rx/axi_spdif_rx.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -27,7 +27,4 @@ tags:
 - rx
 - spdif
 role: top
-components:
-- rx_decode
-- rx_phase_det
-- rx_status_reg
+desc_source: ports

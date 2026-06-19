@@ -1,22 +1,23 @@
-name: i2s_tx
 namespace: analog-devices
+name: i2s_tx
 version: 0.0.0
 description: Transmit engine
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - library/axi_i2s_adi/i2s_tx.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - i2s
 - transmit
 - transmitter
 - tx
 role: top
+desc_source: ports

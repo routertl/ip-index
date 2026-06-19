@@ -1,5 +1,5 @@
-name: ring_buffer
 namespace: pulp-platform
+name: ring_buffer
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
@@ -7,22 +7,23 @@ description: This module implements a flexible ring buffer with decoupled write 
   read access. It supports sequential writes and random reads with a valid/ready handshake
   protocol.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/ring_buffer.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - buffer
 - ring
 role: top
+desc_source: header
 top_ports:
   ring_buffer:
   - direction: in
@@ -77,4 +78,3 @@ top_ports:
     name: logic
     type: wire
     width: ''
-desc_source: header

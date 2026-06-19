@@ -1,19 +1,16 @@
-name: rs_decoder_31_19_6
 namespace: opencores
+name: rs_decoder_31_19_6
 version: master
 commit_sha: 06190eed9f10a429d311bb77b5bf48db4210c3a6
 published_at: '2006-02-09T06:06:28+00:00'
 description: Decodes Reed-Solomon encoded words and corrects errors in received data.
 license: OpenCores-Permissive-1.0
-license_class: unknown
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/rs_decoder_31_19_6.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 06190eed9f10a429d311bb77b5bf48db4210c3a6
 routertl_compat:
-  language: verilog
   library: work
   files:
   - common_modules.v
@@ -21,6 +18,9 @@ routertl_compat:
   - controller.v
   - fifo_register.v
   - RSDecoder.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - buffer
 - degree0
@@ -34,26 +34,10 @@ tags:
 - queue
 - register
 - register5
-role: repo
-top_modules:
-- RSDecoder
-- degree0_cell
-- degree1_cell
-- degree2_cell
-- degree3_cell
-- degree4_cell
-- degree5_cell
-- degree6_cell
-- inverscomb
-- lcpmult
-- mux2_to_1
-- register5_wl
-- register5_wlh
-components:
-- CSEEblock
-- MainControl
-- fifo_register
-- gfadder
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: preserved
 top_ports:
   RSDecoder:
   - direction: in
@@ -520,7 +504,17 @@ top_ports:
     name: dataout
     type: wire
     width: '[4:0]'
-total_entities: 17
-desc_source: preserved
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- RSDecoder
+- degree0_cell
+- degree1_cell
+- degree2_cell
+- degree3_cell
+- degree4_cell
+- degree5_cell
+- degree6_cell
+- inverscomb
+- lcpmult
+- mux2_to_1
+- register5_wl
+- register5_wlh

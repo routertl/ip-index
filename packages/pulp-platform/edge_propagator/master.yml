@@ -1,34 +1,31 @@
-name: edge_propagator
 namespace: pulp-platform
+name: edge_propagator
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Detects input edges and synchronously propagates them across two independent
   clock domains.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/deprecated/pulp_sync.sv
   - src/deprecated/pulp_sync_wedge.sv
   - src/edge_propagator_ack.sv
   - src/edge_propagator.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - edge
 - propagator
 role: top
-components:
-- edge_propagator_ack
-- pulp_sync
-- pulp_sync_wedge
+desc_source: preserved
 top_ports:
   edge_propagator:
   - direction: in
@@ -55,4 +52,3 @@ top_ports:
     name: edge_o
     type: wire
     width: ''
-desc_source: preserved

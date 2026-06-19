@@ -1,5 +1,5 @@
-name: cva6
 namespace: openhwgroup
+name: cva6
 version: master
 commit_sha: b3bee0ca1b4cfe78559ed11fd28d3abb137fc8ec
 published_at: '2026-05-13T13:41:37+02:00'
@@ -7,15 +7,12 @@ description: 'CVA6 is a 6-stage, single-issue, in-order CPU which implements the
   RISC-V instruction set. It fully implements I, M, A and C extensions as specified
   in Volume I: User-Level ISA V 2.3 as well as the draft privilege extension 1.10.'
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/openhwgroup/cva6.git
   tag: master
-  ip_yml_path: .
   resolved_commit: b3bee0ca1b4cfe78559ed11fd28d3abb137fc8ec
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - vendor/pulp-platform/fpga-support/behav/common/include/assertions.sv
@@ -234,6 +231,9 @@ routertl_compat:
   - corev_apu/tb/common/SimJTAG.sv
   - corev_apu/openpiton/riscv_peripherals.sv
   - pd/synth/tc_sram_wrapper_256_64_00000008_00000001_00000001_none_0.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - accumulator
 - arbitration
@@ -247,136 +247,20 @@ tags:
 - synchronizer
 - synchronous
 - wbyteenable
-role: repo
-top_modules:
-- amo_alu
-- ariane_verilog_wrap
-- ariane_xilinx
-- clint_sync
-- clint_sync_wedge
-- cva6_altera
-- find_first_one
-- hpdcache_sram_1rw
-- hpdcache_sram_1rw_00000006_0000001c_00000040_00000001
-- hpdcache_sram_wbyteenable_1rw
-- hpdcache_sram_wbyteenable_1rw_00000007_00000020_00000080_00000002
-- miss_handler
-- riscv_peripherals
-- tc_sram_wrapper_256_64_00000008_00000001_00000001_none_0
-components:
-- acc_dispatcher
-- aes
-- alu
-- alu_wrapper
-- amo_buffer
-- ariane
-- ariane_regfile
-- ariane_regfile_fpga
-- axi_adapter
-- axi_adapter_arbiter
-- axi_dw_adapter
-- axi_dw_adapter_rd
-- axi_dw_adapter_wr
-- axi_lite_interface
-- axi_shim
-- bht
-- bht2lvl
-- block_retirement
-- bootrom
-- branch_unit
-- btb
-- cache_ctrl
-- clint
-- commit_stage
-- compressed_decoder
-- compressed_instr_decoder
-- controller
-- copro_alu
-- csr_buffer
-- csr_regfile
-- cva6
-- cva6_accel_first_pass_decoder
-- cva6_fifo_v3
-- cva6_hpdcache_if_adapter
-- cva6_hpdcache_subsystem
-- cva6_hpdcache_subsystem_axi_arbiter
-- cva6_hpdcache_subsystem_l15_adapter
-- cva6_hpdcache_wrapper
-- cva6_icache
-- cva6_icache_axi_wrapper
-- cva6_iti
-- cva6_mmu
-- cva6_peripherals
-- cva6_ptw
-- cva6_rvfi
-- cva6_rvfi_probes
-- cva6_shared_tlb
-- cva6_tlb
-- cvxif_compressed_if_driver
-- cvxif_example_coprocessor
-- cvxif_fu
-- cvxif_issue_register_commit_if_driver
-- decoder
-- dmi_vjtag
-- dmi_vjtag_tap
-- dpti_ctrl
-- encapsulator
-- ex_stage
-- fan_ctrl
-- fpu_wrap
-- frontend
-- id_stage
-- instr_decoder
-- instr_queue
-- instr_realign
-- instr_scan
-- instr_tracer
-- issue_read_operands
-- issue_stage
-- itype_detector
-- load_store_unit
-- load_unit
-- lsu_bypass
-- lzc
-- macro_decoder
-- mult
-- multiplier
-- perf_counters
-- pmp
-- pmp_data_if
-- pmp_entry
-- ras
-- raw_checker
-- rv_tracer
-- scoreboard
-- serdiv
-- single_retirement
-- slicer_DPTI
-- sram
-- sram_cache
-- std_cache_subsystem
-- std_nbdcache
-- store_buffer
-- store_unit
-- tag_cmp
-- tc_sram_wrapper
-- tc_sram_wrapper_cache_techno
-- te_branch_map
-- te_filter
-- te_packet_emitter
-- te_priority
-- te_reg
-- te_resync_counter
-- trigger_module
-- wt_axi_adapter
-- wt_cache_subsystem
-- wt_dcache
-- wt_dcache_ctrl
-- wt_dcache_mem
-- wt_dcache_missunit
-- wt_dcache_wbuffer
-- wt_l15_adapter
-- zcmt_decoder
+role: top
+desc_source: readme
+provides_packages:
+- aes_pkg
+- ariane_pkg
+- axi_pkg
+- cf_math_pkg
+- config_pkg
+- cvxif_instr_pkg
+- l15_pkg
+- riscv
+- std_cache_pkg
+- triggers_pkg
+- wt_cache_pkg
 top_ports:
   amo_alu:
   - direction: in
@@ -1616,17 +1500,18 @@ top_ports:
     name: be_t
     type: wire
     width: ''
-total_entities: 127
-desc_source: readme
-provides_packages:
-- aes_pkg
-- ariane_pkg
-- axi_pkg
-- cf_math_pkg
-- config_pkg
-- cvxif_instr_pkg
-- l15_pkg
-- riscv
-- std_cache_pkg
-- triggers_pkg
-- wt_cache_pkg
+top_modules:
+- amo_alu
+- ariane_verilog_wrap
+- ariane_xilinx
+- clint_sync
+- clint_sync_wedge
+- cva6_altera
+- find_first_one
+- hpdcache_sram_1rw
+- hpdcache_sram_1rw_00000006_0000001c_00000040_00000001
+- hpdcache_sram_wbyteenable_1rw
+- hpdcache_sram_wbyteenable_1rw_00000007_00000020_00000080_00000002
+- miss_handler
+- riscv_peripherals
+- tc_sram_wrapper_256_64_00000008_00000001_00000001_none_0

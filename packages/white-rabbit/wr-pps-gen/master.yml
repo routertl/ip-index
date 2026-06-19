@@ -1,5 +1,5 @@
-name: wr-pps-gen
 namespace: white-rabbit
+name: wr-pps-gen
 version: master
 commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
 published_at: '2017-12-18T18:45:29+01:00'
@@ -7,20 +7,20 @@ description: PPS (Pulse-Per-Second) generator with sub-nanosecond fine offset ad
   Clock-locked output pulse for distribution to downstream timing consumers; Wishbone-controlled
   offset register.
 license: LGPL-2.1
-license_class: unknown
+language: vhdl-2008
 source:
-  type: git
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
 routertl_compat:
-  language: vhdl-2008
   library: wr
   files:
   - modules/wr_pps_gen/pps_gen_wb.vhd
   - modules/wr_pps_gen/wr_pps_gen.vhd
   - modules/wr_pps_gen/xwr_pps_gen.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - bus
 - gen
@@ -29,12 +29,23 @@ tags:
 - wishbone
 - wr
 - xwr
-role: subproject
-top_modules:
-- xwr_pps_gen
-components:
-- pps_gen_wb
-- wr_pps_gen
+role: top
+desc_source: curator
+external_uses:
+- library: work
+  package: gencores_pkg
+- library: work
+  package: genram_pkg
+- library: work
+  package: wb_irq_pkg
+- library: work
+  package: wbgen2_pkg
+- library: work
+  package: wbgenplus_pkg
+- library: work
+  package: wishbone_pkg
+- library: work
+  package: wr_transmission_wbgen2_pkg
 top_ports:
   xwr_pps_gen:
   - direction: in
@@ -97,20 +108,5 @@ top_ports:
     name: tm_time_valid_o
     type: std_logic
     width: ''
-total_entities: 3
-desc_source: curator
-external_uses:
-- library: work
-  package: gencores_pkg
-- library: work
-  package: genram_pkg
-- library: work
-  package: wb_irq_pkg
-- library: work
-  package: wbgen2_pkg
-- library: work
-  package: wbgenplus_pkg
-- library: work
-  package: wishbone_pkg
-- library: work
-  package: wr_transmission_wbgen2_pkg
+top_modules:
+- xwr_pps_gen

@@ -1,20 +1,20 @@
-name: spi_engine_execution
 namespace: analog-devices
+name: spi_engine_execution
 version: 0.0.0
 description: SPI with ready/valid handshake and configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/spi_engine/spi_engine_execution/spi_engine_execution_shiftreg.v
   - library/spi_engine/spi_engine_execution/spi_engine_execution.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - engine
 - execution
@@ -23,5 +23,4 @@ tags:
 - serial
 - spi
 role: top
-components:
-- spi_engine_execution_shiftreg
+desc_source: ports

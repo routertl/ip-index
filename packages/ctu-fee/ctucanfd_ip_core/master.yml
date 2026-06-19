@@ -1,20 +1,17 @@
-name: ctucanfd_ip_core
 namespace: ctu-fee
+name: ctucanfd_ip_core
 version: master
 commit_sha: b76a8888ecd10d2a1f38590eadfc8a3dc2394b48
 published_at: '2026-01-07T13:55:29+01:00'
 description: CTU CAN FD is soft IP-Core written in VHDL which supports ISO and NON-ISO
   versions of CAN FD protocol.
 license: MIT
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://gitlab.fel.cvut.cz/canbus/ctucanfd_ip_core.git
   tag: master
-  ip_yml_path: .
   resolved_commit: b76a8888ecd10d2a1f38590eadfc8a3dc2394b48
 routertl_compat:
-  language: vhdl-2008
   library: ctu_can_fd_rtl
   files:
   - src/memory_registers/generated/address_decoder.vhd
@@ -106,6 +103,9 @@ routertl_compat:
   - src/common_blocks/majority_decoder_3.vhd
   - src/memory_registers/generated/memory_bus.vhd
   - src/common_blocks/shift_reg.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - arbitrator
 - calculator
@@ -119,90 +119,16 @@ tags:
 - synchronizer
 - synchronous
 - transmitter
-role: repo
-top_modules:
-- can_top_ahb
-- can_top_apb
-- majority_decoder_3
-- memory_bus_template
-- shift_reg
-components:
-- address_decoder
-- ahb_ifc
-- apb_ifc
-- bit_destuffing
-- bit_err_detector
-- bit_filter
-- bit_segment_meter
-- bit_stuffing
-- bit_time_cfg_capture
-- bit_time_counters
-- bit_time_fsm
-- bus_sampling
-- bus_traffic_counters
-- can_core
-- can_crc
-- can_top_level
-- clk_gate
-- control_counter
-- control_registers_reg_map
-- crc_calc
-- data_edge_detector
-- dff_arst
-- dff_arst_ce
-- dlc_decoder
-- dp_inf_ram
-- dp_inf_ram_be
-- endian_swapper
-- err_counters
-- err_detector
-- fault_confinement
-- fault_confinement_fsm
-- fault_confinement_rules
-- frame_filters
-- int_manager
-- int_module
-- memory_reg_os
-- memory_reg_os_lock
-- memory_reg_rw
-- memory_reg_rw_lock
-- memory_registers
-- mux2
-- operation_control
-- parity_calculator
-- prescaler
-- priority_decoder
-- protocol_control
-- protocol_control_fsm
-- range_filter
-- read_access_signaller
-- reintegration_counter
-- retransmitt_counter
-- rst_reg
-- rst_sync
-- rx_buffer
-- rx_buffer_fsm
-- rx_buffer_pointers
-- rx_buffer_ram
-- rx_shift_reg
-- sample_mux
-- segment_end_detector
-- shift_reg_byte
-- shift_reg_preload
-- sig_sync
-- ssp_generator
-- synchronisation_checker
-- trigger_generator
-- trigger_mux
-- trv_delay_measurement
-- tx_arbitrator
-- tx_arbitrator_fsm
-- tx_data_cache
-- tx_shift_reg
-- txt_buffer_even
-- txt_buffer_fsm
-- txt_buffer_odd
-- txt_buffer_ram
+role: top
+desc_source: readme
+provides_packages:
+- can_config_pkg
+- can_constants_pkg
+- can_fd_frame_format
+- can_fd_register_map
+- can_registers_pkg
+- can_types_pkg
+- cmn_reg_map_pkg
 top_ports:
   can_top_ahb:
   - direction: in
@@ -441,13 +367,9 @@ top_ports:
     name: reg_output
     type: std_logic
     width: ''
-total_entities: 81
-desc_source: readme
-provides_packages:
-- can_config_pkg
-- can_constants_pkg
-- can_fd_frame_format
-- can_fd_register_map
-- can_registers_pkg
-- can_types_pkg
-- cmn_reg_map_pkg
+top_modules:
+- can_top_ahb
+- can_top_apb
+- majority_decoder_3
+- memory_bus_template
+- shift_reg

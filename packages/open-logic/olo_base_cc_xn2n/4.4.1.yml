@@ -1,26 +1,25 @@
-name: olo_base_cc_xn2n
 namespace: open-logic
+name: olo_base_cc_xn2n
 version: 4.4.1
 commit_sha: d1407a7427d9201a7bcd8c37749ec083b13006dc
 published_at: '2026-03-10T06:51:30+01:00'
 description: This entity implements a clock crossing between two synchronous clocks
   where the output clock period is an integer multiple of the input clock period (input
   clock frequency is an integer multiple of the output clock frequency).
-license: ''
-license_class: unknown
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/open-logic/open-logic.git
-  tag: 4.4.1
-  ip_yml_path: .
+  tag: v4.4.1
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
-  language: vhdl-2008
   library: olo
   files:
   - src/base/vhdl/olo_base_cc_bits.vhd
   - src/base/vhdl/olo_base_cc_reset.vhd
   - src/base/vhdl/olo_base_cc_xn2n.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
   package_deps:
   - open-logic/olo_base
 tags:
@@ -31,18 +30,12 @@ tags:
 - open
 - xn2n
 role: top
-components:
-- olo_axi_master_simple
-- olo_base_cc_bits
-- olo_base_cc_pulse
-- olo_base_cc_reset
-- olo_base_cc_simple
-- olo_base_delay
-- olo_base_fifo_packet
-- olo_base_fifo_sync
-- olo_base_pl_stage
-- olo_base_ram_sdp
-- olo_intf_sync
+desc_source: header
+external_uses:
+- library: work
+  package: en_cl_fix_pkg
+- library: work
+  package: en_cl_fix_private_pkg
 top_ports:
   olo_base_cc_xn2n:
   - direction: in
@@ -93,10 +86,3 @@ top_ports:
     name: Out_Data
     type: std_logic_vector
     width: Width_g - 1 downto 0
-desc_source: header
-external_uses:
-- library: work
-  package: en_cl_fix_pkg
-- library: work
-  package: en_cl_fix_private_pkg
-provides_packages: []

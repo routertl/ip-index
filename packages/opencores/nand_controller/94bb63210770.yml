@@ -1,20 +1,17 @@
-name: nand_controller
 namespace: opencores
+name: nand_controller
 version: 94bb63210770
 commit_sha: 94bb6321077060734432b32c75423b5f6a2aa3c2
 published_at: '2026-05-05T12:54:24+02:00'
 description: Avalon interface controller for NAND flash memory read/write operations
   with command and address sequencing.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/routertl-mirrors/nand_controller.git
-  tag: main
-  ip_yml_path: .
+  tag: 94bb63210770
   resolved_commit: 94bb6321077060734432b32c75423b5f6a2aa3c2
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - VHDL/onfi_package.vhd
@@ -22,19 +19,21 @@ routertl_compat:
   - VHDL/latch_unit.vhd
   - VHDL/nand_master.vhd
   - VHDL/nand_avalon.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - avalon
 - io
 - latch
 - master
 - nand
-role: repo
-top_modules:
-- nand_avalon
-components:
-- io_unit
-- latch_unit
-- nand_master
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: preserved
+provides_packages:
+- onfi
 top_ports:
   nand_avalon:
   - direction: in
@@ -97,11 +96,5 @@ top_ports:
     name: nand_data
     type: std_logic_vector
     width: 15 downto 0
-total_entities: 4
-desc_source: preserved
-mirror_status: curated-mirror
-upstream_url: https://opencores.org/projects/nand_controller
-health_tier: bronze
-last_verified_at: '2026-05-05'
-provides_packages:
-- onfi
+top_modules:
+- nand_avalon

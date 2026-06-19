@@ -1,29 +1,28 @@
-name: video_stream_scaler
 namespace: opencores
+name: video_stream_scaler
 version: master
 commit_sha: 8063961cee8ac56934ca647c9b20ad2c8c5740bf
 published_at: '2011-02-25T03:54:56+00:00'
 description: "Video stream scaler \u2014 line-buffer-based filtering pipeline that\
   \ resamples raster video streams to a target output resolution. LGPL-2.1+ Verilog."
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/video_stream_scaler.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 8063961cee8ac56934ca647c9b20ad2c8c5740bf
 routertl_compat:
-  language: verilog
   library: verilog
   files:
   - rtl/verilog/scaler.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags: []
-role: repo
-top_modules:
-- ramDualPort
-- ramFifo
-- streamScaler
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: verdict
 top_ports:
   ramDualPort:
   - direction: in
@@ -580,7 +579,7 @@ top_ports:
     name: qA
     type: wire
     width: '[(DATA_WIDTH-1):0]'
-total_entities: 3
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- ramDualPort
+- ramFifo
+- streamScaler

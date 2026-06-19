@@ -1,20 +1,17 @@
-name: axi_ad9467
 namespace: analog-devices
+name: axi_ad9467
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
 description: AXI4-Lite controlled AD9467 analog-to-digital converter interface with
   differential signal acquisition and programmable input delay.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 7b364c5dfd5e
   resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_datafmt.v
@@ -33,104 +30,13 @@ routertl_compat:
   - library/common/up_axi.v
   - library/common/up_delay_cntrl.v
   - library/axi_ad9467/axi_ad9467.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad9467
 - amba
 - axi
 - bus
 role: top
-components:
-- ad_data_clk
-- ad_data_in
-- ad_datafmt
-- ad_ip_jesd204_tpl_adc
-- ad_ip_jesd204_tpl_adc_channel
-- ad_ip_jesd204_tpl_adc_core
-- ad_ip_jesd204_tpl_adc_pnmon
-- ad_ip_jesd204_tpl_adc_regmap
-- ad_ip_jesd204_tpl_dac_regmap
-- ad_pnmon
-- ad_rst
-- axi_ad35xxr_channel
-- axi_ad35xxr_core
-- axi_ad485x_16b_channel
-- axi_ad485x_20b_channel
-- axi_ad485x_cmos
-- axi_ad485x_lvds
-- axi_ad9122_channel
-- axi_ad9122_core
-- axi_ad9265_channel
-- axi_ad9265_if
-- axi_ad9265_pnmon
-- axi_ad9361_cmos_if
-- axi_ad9361_lvds_if
-- axi_ad9361_rx
-- axi_ad9361_rx_channel
-- axi_ad9361_rx_pnmon
-- axi_ad9361_tdd
-- axi_ad9361_tx
-- axi_ad9361_tx_channel
-- axi_ad9434_core
-- axi_ad9434_pnmon
-- axi_ad9467_channel
-- axi_ad9467_if
-- axi_ad9467_pnmon
-- axi_ad9625_channel
-- axi_ad9625_pnmon
-- axi_ad9671_channel
-- axi_ad9671_pnmon
-- axi_ad9684_channel
-- axi_ad9684_pnmon
-- axi_ad9739a_channel
-- axi_ad9739a_core
-- axi_ad9740_channel
-- axi_ad9740_core
-- axi_ad9783_channel
-- axi_ad9783_core
-- axi_ad9963_if
-- axi_ad9963_rx
-- axi_ad9963_rx_channel
-- axi_ad9963_rx_pnmon
-- axi_ad9963_tx
-- axi_ad9963_tx_channel
-- axi_adaq8092_channel
-- axi_adaq8092_if
-- axi_adc_decimate_reg
-- axi_adc_trigger_reg
-- axi_adcfifo_adc
-- axi_adcfifo_dma
-- axi_adrv9001_core
-- axi_adrv9001_rx
-- axi_adrv9001_rx_channel
-- axi_adrv9001_sync_ctrl
-- axi_adrv9001_tdd
-- axi_adrv9001_tx
-- axi_adrv9001_tx_channel
-- axi_dac_interpolate_reg
-- axi_dmac_regmap
-- axi_gpreg_clock_mon
-- axi_logic_analyzer_reg
-- axi_ltc2387_channel
-- axi_ltc2387_if
-- axi_pulsar_lvds_channel
-- axi_pulsar_lvds_if
-- axi_pulse_gen_regmap
-- axi_pwm_gen_regmap
-- axi_xcvrlb_1
-- hsci_master_top
-- i3c_controller_regmap
-- jesd204_up_common
-- up_ad5766_sequencer
-- up_adc_channel
-- up_adc_common
-- up_axi
-- up_clkgen
-- up_clock_mon
-- up_dac_channel
-- up_dac_common
-- up_delay_cntrl
-- up_hdmi_rx
-- up_hdmi_tx
-- up_tdd_cntrl
-- up_xfer_cntrl
-- up_xfer_status
+desc_source: preserved

@@ -1,20 +1,17 @@
-name: gamepads
 namespace: opencores
+name: gamepads
 version: master
 commit_sha: a678f96bb1c7bb43a250ad75fa2eddf4019e0a45
 published_at: '2005-09-15T17:28:17+00:00'
 description: Game-controller serial protocol cores covering NES, SNES, and Sega Genesis
   pad interfaces for retro-console replica designs.
 license: BSD-2-Clause
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/gamepads.git
   tag: master
-  ip_yml_path: .
   resolved_commit: a678f96bb1c7bb43a250ad75fa2eddf4019e0a45
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - gcpad/rtl/vhdl/gcpad_pack-p.vhd
@@ -29,6 +26,9 @@ routertl_compat:
   - snespad/rtl/vhdl/snespad_ctrl.vhd
   - snespad/rtl/vhdl/snespad_pad.vhd
   - snespad/rtl/vhdl/snespad.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - basic
 - control
@@ -42,19 +42,13 @@ tags:
 - snespad
 - transmit
 - transmitter
-role: repo
-top_modules:
-- gcpad_basic
-- gcpad_full
-- gcpad_mod
-- snespad
-components:
-- gcpad_ctrl
-- gcpad_rx
-- gcpad_sampler
-- gcpad_tx
-- snespad_ctrl
-- snespad_pad
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
+provides_packages:
+- gcpad_pack
+- snespad_pack
 top_ports:
   gcpad_basic:
   - direction: in
@@ -272,10 +266,8 @@ top_ports:
     name: but_right_o
     type: std_logic_vector
     width: num_pads_g-1 downto 0
-total_entities: 10
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
-provides_packages:
-- gcpad_pack
-- snespad_pack
+top_modules:
+- gcpad_basic
+- gcpad_full
+- gcpad_mod
+- snespad

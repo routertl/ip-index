@@ -1,20 +1,17 @@
-name: taxi-axi
 namespace: fpganinja
+name: taxi-axi
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
 description: 'AXI4 / AXI4-Lite / APB infrastructure: crossbars, interconnects, adapters,
   RAMs, registers, FIFOs, ties, AXI-internal DMA, arbiter.'
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/apb/rtl/taxi_apb_if.sv
@@ -97,6 +94,9 @@ routertl_compat:
   - src/axi/rtl/taxi_axil_ram.sv
   - src/axi/rtl/taxi_axil_register.sv
   - src/axi/rtl/taxi_axil_tie.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - adapter
@@ -110,82 +110,8 @@ tags:
 - peripheral
 - protocol
 - register
-role: subproject
-top_modules:
-- taxi_apb_adapter
-- taxi_apb_axil_adapter
-- taxi_apb_dp_ram
-- taxi_apb_interconnect
-- taxi_apb_interconnect_1s
-- taxi_apb_ram
-- taxi_apb_tie
-- taxi_axi_adapter
-- taxi_axi_axil_adapter
-- taxi_axi_cdma
-- taxi_axi_crossbar
-- taxi_axi_crossbar_1s
-- taxi_axi_dma
-- taxi_axi_dp_ram
-- taxi_axi_fifo
-- taxi_axi_interconnect
-- taxi_axi_interconnect_1s
-- taxi_axi_ram
-- taxi_axi_register
-- taxi_axi_tie
-- taxi_axil_adapter
-- taxi_axil_apb_adapter
-- taxi_axil_axi_adapter
-- taxi_axil_crossbar
-- taxi_axil_crossbar_1s
-- taxi_axil_dp_ram
-- taxi_axil_interconnect
-- taxi_axil_interconnect_1s
-- taxi_axil_ram
-- taxi_axil_register
-- taxi_axil_tie
-components:
-- taxi_arbiter
-- taxi_axi_adapter_rd
-- taxi_axi_adapter_wr
-- taxi_axi_axil_adapter_rd
-- taxi_axi_axil_adapter_wr
-- taxi_axi_crossbar_1s_rd
-- taxi_axi_crossbar_1s_wr
-- taxi_axi_crossbar_addr
-- taxi_axi_crossbar_rd
-- taxi_axi_crossbar_wr
-- taxi_axi_dma_rd
-- taxi_axi_dma_wr
-- taxi_axi_fifo_rd
-- taxi_axi_fifo_wr
-- taxi_axi_interconnect_1s_rd
-- taxi_axi_interconnect_1s_wr
-- taxi_axi_interconnect_rd
-- taxi_axi_interconnect_wr
-- taxi_axi_ram_if_rd
-- taxi_axi_ram_if_rdwr
-- taxi_axi_ram_if_wr
-- taxi_axi_register_rd
-- taxi_axi_register_wr
-- taxi_axi_tie_rd
-- taxi_axi_tie_wr
-- taxi_axil_adapter_rd
-- taxi_axil_adapter_wr
-- taxi_axil_axi_adapter_rd
-- taxi_axil_axi_adapter_wr
-- taxi_axil_crossbar_1s_rd
-- taxi_axil_crossbar_1s_wr
-- taxi_axil_crossbar_addr
-- taxi_axil_crossbar_rd
-- taxi_axil_crossbar_wr
-- taxi_axil_interconnect_1s_rd
-- taxi_axil_interconnect_1s_wr
-- taxi_axil_interconnect_rd
-- taxi_axil_interconnect_wr
-- taxi_axil_register_rd
-- taxi_axil_register_wr
-- taxi_axil_tie_rd
-- taxi_axil_tie_wr
+role: top
+desc_source: curator
 top_ports:
   taxi_apb_adapter:
   - direction: in
@@ -830,5 +756,35 @@ top_ports:
     name: m_axil_rd
     type: taxi_axil_if.rd_mst
     width: ''
-total_entities: 73
-desc_source: curator
+top_modules:
+- taxi_apb_adapter
+- taxi_apb_axil_adapter
+- taxi_apb_dp_ram
+- taxi_apb_interconnect
+- taxi_apb_interconnect_1s
+- taxi_apb_ram
+- taxi_apb_tie
+- taxi_axi_adapter
+- taxi_axi_axil_adapter
+- taxi_axi_cdma
+- taxi_axi_crossbar
+- taxi_axi_crossbar_1s
+- taxi_axi_dma
+- taxi_axi_dp_ram
+- taxi_axi_fifo
+- taxi_axi_interconnect
+- taxi_axi_interconnect_1s
+- taxi_axi_ram
+- taxi_axi_register
+- taxi_axi_tie
+- taxi_axil_adapter
+- taxi_axil_apb_adapter
+- taxi_axil_axi_adapter
+- taxi_axil_crossbar
+- taxi_axil_crossbar_1s
+- taxi_axil_dp_ram
+- taxi_axil_interconnect
+- taxi_axil_interconnect_1s
+- taxi_axil_ram
+- taxi_axil_register
+- taxi_axil_tie

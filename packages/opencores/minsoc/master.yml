@@ -1,5 +1,5 @@
-name: minsoc
 namespace: opencores
+name: minsoc
 version: master
 commit_sha: 3c9f36dc9de929c6e057fdb1cc322ce2cded4296
 published_at: '2013-05-12T18:51:08+00:00'
@@ -7,15 +7,12 @@ description: "Minimal OpenRISC 1200 system-on-chip \u2014 OR1200 CPU with Wishbo
   \ on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera).\
   \ Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013)."
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/minsoc.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3c9f36dc9de929c6e057fdb1cc322ce2cded4296
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/verilog/interconnect_defines.v
@@ -33,6 +30,9 @@ routertl_compat:
   - rtl/verilog/minsoc_startup/spi_shift.v
   - rtl/verilog/minsoc_startup/spi_top.v
   - rtl/verilog/minsoc_top.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - action
@@ -46,24 +46,10 @@ tags:
 - onchip
 - peripheral
 - startup
-role: repo
-top_modules:
-- minsoc_top
-- mux2
-- tc_mi_to_st
-- tc_si_to_mt
-components:
-- OR1K_startup
-- altera_pll
-- minsoc_clock_manager
-- minsoc_onchip_ram
-- minsoc_onchip_ram_top
-- minsoc_tc_top
-- minsoc_xilinx_internal_jtag
-- spi_flash_clgen
-- spi_flash_shift
-- spi_flash_top
-- xilinx_dcm
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   minsoc_top:
   - direction: in
@@ -1485,13 +1471,8 @@ top_ports:
     name: t8_wb_err_i
     type: wire
     width: ''
-total_entities: 15
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
-hdl:
-  vendor_variants:
-    intel:
-    - utils/contributions/initialized_onchip_ram/minsoc_onchip_ram_top_altera.v
-    xilinx:
-    - utils/contributions/initialized_onchip_ram/minsoc_onchip_ram_top_xilinx.v
+top_modules:
+- minsoc_top
+- mux2
+- tc_mi_to_st
+- tc_si_to_mt

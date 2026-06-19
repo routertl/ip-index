@@ -1,26 +1,26 @@
-name: deslxcore
 namespace: opencores
+name: deslxcore
 version: master
 commit_sha: ca3416cec8d26472d0ccdd4f9e0c9a379a983e1d
 published_at: '2013-08-10T10:28:40+00:00'
 description: "DESLX variant \u2014 combines the DES-Lightweight S-box optimisation\
   \ with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore."
 license: GPL-3.0-or-later
-license_class: strong-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/deslxcore.git
   tag: master
-  ip_yml_path: .
   resolved_commit: ca3416cec8d26472d0ccdd4f9e0c9a379a983e1d
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - rtl/f_fun.vhd
   - rtl/des_round.vhd
   - rtl/key_schedule.vhd
   - rtl/des_loop.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - des
 - fun
@@ -28,13 +28,10 @@ tags:
 - loop
 - round
 - schedule
-role: repo
-top_modules:
-- des_loop
-components:
-- des_round
-- f_fun
-- key_schedule
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: verdict
 top_ports:
   des_loop:
   - direction: in
@@ -69,7 +66,5 @@ top_ports:
     name: blk_out
     type: std_logic_vector
     width: 63 downto 0
-total_entities: 4
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- des_loop

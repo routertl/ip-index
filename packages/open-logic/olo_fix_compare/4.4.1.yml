@@ -1,25 +1,24 @@
-name: olo_fix_compare
 namespace: open-logic
+name: olo_fix_compare
 version: 4.4.1
 commit_sha: d1407a7427d9201a7bcd8c37749ec083b13006dc
 published_at: '2026-03-10T06:51:30+01:00'
 description: This entity implements the cl_fix_compare function as entity. Includes
   pipeline stages and allows usage from Verilog.
-license: ''
-license_class: unknown
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/open-logic/open-logic.git
-  tag: 4.4.1
-  ip_yml_path: .
+  tag: v4.4.1
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
-  language: vhdl-2008
   library: olo
   files:
   - src/fix/vhdl/olo_fix_pkg.vhd
   - src/fix/vhdl/olo_fix_private_optional_reg.vhd
   - src/fix/vhdl/olo_fix_compare.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
   package_deps:
   - open-logic/olo_base
 tags:
@@ -28,24 +27,14 @@ tags:
 - olo
 - open
 role: top
-components:
-- olo_axi_master_simple
-- olo_base_arb_prio
-- olo_base_arb_rr
-- olo_base_crc
-- olo_base_decode_firstbit
-- olo_base_delay
-- olo_base_dyn_sft
-- olo_base_fifo_packet
-- olo_base_fifo_sync
-- olo_base_ram_sdp
-- olo_base_strobe_gen
-- olo_base_wconv_n2xn
-- olo_base_wconv_xn2n
-- olo_fix_mult
-- olo_fix_resize
-- olo_fix_round
-- olo_fix_saturate
+desc_source: header
+external_uses:
+- library: work
+  package: en_cl_fix_pkg
+- library: work
+  package: en_cl_fix_private_pkg
+provides_packages:
+- olo_fix_pkg
 top_ports:
   olo_fix_compare:
   - direction: in
@@ -76,11 +65,3 @@ top_ports:
     name: Out_Result
     type: std_logic
     width: ''
-desc_source: header
-external_uses:
-- library: work
-  package: en_cl_fix_pkg
-- library: work
-  package: en_cl_fix_private_pkg
-provides_packages:
-- olo_fix_pkg

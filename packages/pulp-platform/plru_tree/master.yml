@@ -1,27 +1,28 @@
-name: plru_tree
 namespace: pulp-platform
+name: plru_tree
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Implements a pseudo-least-recently-used (PLRU) replacement policy tracker
   that identifies the least recently used cache entry among multiple entries.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/plru_tree.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - plru
 - tree
 role: top
+desc_source: preserved
 top_ports:
   plru_tree:
   - direction: in
@@ -40,4 +41,3 @@ top_ports:
     name: plru_o
     type: wire
     width: '[ENTRIES-1:0]'
-desc_source: preserved

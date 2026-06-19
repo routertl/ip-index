@@ -1,21 +1,21 @@
-name: axi_dac_interpolate_reg
 namespace: analog-devices
+name: axi_dac_interpolate_reg
 version: 0.0.0
 description: Provides AXI register interface for controlling DAC interpolation, filtering,
   and synchronization settings with dual-channel support.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/up_xfer_cntrl.v
   - library/axi_dac_interpolate/axi_dac_interpolate_reg.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - analog
@@ -28,3 +28,4 @@ tags:
 - reg
 - register
 role: component
+desc_source: preserved

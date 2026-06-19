@@ -1,20 +1,20 @@
-name: ad_ip_jesd204_tpl_adc_pnmon
 namespace: analog-devices
+name: ad_ip_jesd204_tpl_adc_pnmon
 version: 0.0.0
 description: Monitors JESD204 ADC PN sequences.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_pnmon.v
   - library/jesd204/ad_ip_jesd204_tpl_adc/ad_ip_jesd204_tpl_adc_pnmon.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adc
 - analog
@@ -29,3 +29,4 @@ tags:
 - tpl
 - transport
 role: component
+desc_source: preserved

@@ -1,22 +1,22 @@
-name: axi_rw_split
 namespace: pulp-platform
+name: axi_rw_split
 version: master
 commit_sha: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 published_at: '2026-05-07T16:14:15+02:00'
 description: Splits a single AXI slave port into separate read and write master ports.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/axi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axi_rw_split.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -24,6 +24,7 @@ tags:
 - rw
 - split
 role: top
+desc_source: preserved
 top_ports:
   axi_rw_split:
   - direction: in
@@ -42,4 +43,3 @@ top_ports:
     name: axi_resp_t
     type: wire
     width: ''
-desc_source: preserved

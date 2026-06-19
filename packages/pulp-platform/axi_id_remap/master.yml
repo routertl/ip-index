@@ -1,24 +1,24 @@
-name: axi_id_remap
 namespace: pulp-platform
+name: axi_id_remap
 version: master
 commit_sha: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 published_at: '2026-05-07T16:14:15+02:00'
 description: Remaps AXI transaction IDs from a wider slave port to a narrower master
   port while enforcing per-ID and total in-flight transaction limits.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/axi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axi_intf.sv
   - src/axi_id_remap.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi

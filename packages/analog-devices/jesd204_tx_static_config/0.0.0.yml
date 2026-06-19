@@ -1,20 +1,20 @@
-name: jesd204_tx_static_config
 namespace: analog-devices
+name: jesd204_tx_static_config
 version: 0.0.0
 description: JESD204 with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/jesd204/jesd204_tx_static_config/jesd204_ilas_cfg_static.v
   - library/jesd204/jesd204_tx_static_config/jesd204_tx_static_config.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - config
 - jesd204
@@ -23,5 +23,4 @@ tags:
 - transmitter
 - tx
 role: top
-components:
-- jesd204_ilas_cfg_static
+desc_source: ports

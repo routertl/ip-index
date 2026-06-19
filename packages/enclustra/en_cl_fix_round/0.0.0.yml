@@ -1,25 +1,26 @@
-name: en_cl_fix_round
 namespace: enclustra
+name: en_cl_fix_round
 version: 0.0.0
 description: Rounds fixed-point data between formats with pipeline registers and optional
   sideband metadata.
 license: MIT
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/enclustra/en_cl_fix.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: vhdl-2008
   library: en_tb
   files:
   - hdl/en_cl_fix_private_pkg.vhd
   - hdl/en_cl_fix_pkg.vhd
   - hdl/en_cl_fix_round.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - cl
 - en
 - fix
 - round
 role: component
+desc_source: preserved

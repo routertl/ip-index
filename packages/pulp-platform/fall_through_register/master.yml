@@ -1,34 +1,30 @@
-name: fall_through_register
 namespace: pulp-platform
+name: fall_through_register
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Buffers data with ready/valid handshake protocol, passing through when
   output is ready.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/fifo_v3.sv
   - src/fall_through_register.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - fall
 - register
 - through
 role: top
-components:
-- fifo_v2
-- fifo_v3
-- mem_to_banks_detailed
-- stream_fifo
+desc_source: preserved
 top_ports:
   fall_through_register:
   - direction: out
@@ -75,4 +71,3 @@ top_ports:
     name: ready_i
     type: wire
     width: ''
-desc_source: preserved

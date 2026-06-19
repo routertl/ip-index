@@ -1,19 +1,16 @@
-name: taxi-ptp
 namespace: fpganinja
+name: taxi-ptp
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
 description: PTP / IEEE-1588 clock, perout, time-domain APB / AXIL bridges.
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/ptp/rtl/taxi_ptp_clock.sv
@@ -27,6 +24,9 @@ routertl_compat:
   - src/ptp/rtl/taxi_ptp_td_phc_axil.sv
   - src/axis/rtl/taxi_axis_if.sv
   - src/ptp/rtl/taxi_ptp_td_rel2tod.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - advanced
 - amba
@@ -40,17 +40,8 @@ tags:
 - precision
 - protocol
 - rel2tod
-role: subproject
-top_modules:
-- taxi_ptp_clock
-- taxi_ptp_clock_cdc
-- taxi_ptp_perout
-- taxi_ptp_td_phc_apb
-- taxi_ptp_td_phc_axil
-- taxi_ptp_td_rel2tod
-components:
-- taxi_ptp_td_leaf
-- taxi_ptp_td_phc
+role: top
+desc_source: curator
 top_ports:
   taxi_ptp_clock:
   - direction: in
@@ -130,5 +121,10 @@ top_ports:
     name: m_axis_ts_tod
     type: taxi_axis_if.src
     width: ''
-total_entities: 8
-desc_source: curator
+top_modules:
+- taxi_ptp_clock
+- taxi_ptp_clock_cdc
+- taxi_ptp_perout
+- taxi_ptp_td_phc_apb
+- taxi_ptp_td_phc_axil
+- taxi_ptp_td_rel2tod

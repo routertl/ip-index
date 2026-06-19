@@ -1,16 +1,13 @@
-name: util_adcfifo
 namespace: analog-devices
+name: util_adcfifo
 version: 0.0.0
 description: FIFO buffer with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_axis_inf_rx.v
@@ -18,56 +15,11 @@ routertl_compat:
   - library/common/ad_rst.v
   - library/util_cdc/sync_gray.v
   - library/util_adcfifo/util_adcfifo.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adcfifo
 - util
 role: top
-components:
-- ad_axis_inf_rx
-- ad_ip_jesd204_tpl_adc
-- ad_ip_jesd204_tpl_adc_regmap
-- ad_ip_jesd204_tpl_dac_regmap
-- ad_mem_asym
-- ad_rst
-- axi_ad35xxr_core
-- axi_ad9122_core
-- axi_ad9361_rx
-- axi_ad9361_tx
-- axi_ad9434_core
-- axi_ad9739a_core
-- axi_ad9740_core
-- axi_ad9783_core
-- axi_ad9963_rx
-- axi_ad9963_tx
-- axi_adcfifo_dma
-- axi_adcfifo_wr
-- axi_adrv9001_core
-- axi_adrv9001_rx
-- axi_adrv9001_sync_ctrl
-- axi_adrv9001_tx
-- axi_dacfifo_rd
-- axi_dacfifo_wr
-- axi_dmac_burst_memory
-- axi_dmac_regmap
-- axi_dmac_regmap_request
-- axi_dmac_response_manager
-- axi_dmac_transfer
-- axi_gpreg_clock_mon
-- axi_logic_analyzer_reg
-- axi_pulse_gen_regmap
-- axi_pwm_gen_regmap
-- dmac_sg
-- hsci_master_top
-- i3c_controller_regmap
-- request_arb
-- sync_gray
-- up_adc_common
-- up_clkgen
-- up_dac_common
-- up_delay_cntrl
-- up_hdmi_rx
-- up_hdmi_tx
-- util_axis_fifo
-- util_axis_fifo_address_generator
-- util_axis_fifo_asym
-- util_dacfifo_bypass
+desc_source: ports

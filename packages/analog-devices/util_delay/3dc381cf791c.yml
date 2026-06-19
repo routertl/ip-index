@@ -1,44 +1,26 @@
-name: util_delay
 namespace: analog-devices
+name: util_delay
 version: 3dc381cf791c
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: Delays input signal.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 3dc381cf791c
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/util_delay.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - delay
 - util
 role: top
-top_ports:
-  util_delay:
-  - direction: in
-    name: clk
-    type: wire
-    width: ''
-  - direction: in
-    name: reset
-    type: wire
-    width: ''
-  - direction: in
-    name: din
-    type: wire
-    width: ''
-  - direction: out
-    name: dout
-    type: wire
-    width: '[DATA_WIDTH-1:0]'
 desc_source: preserved
 external_uses:
 - library: work
@@ -61,3 +43,21 @@ external_uses:
   package: i2s_tx
 - library: work
   package: pl330_dma_fifo
+top_ports:
+  util_delay:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: reset
+    type: wire
+    width: ''
+  - direction: in
+    name: din
+    type: wire
+    width: ''
+  - direction: out
+    name: dout
+    type: wire
+    width: '[DATA_WIDTH-1:0]'

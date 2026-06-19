@@ -1,23 +1,23 @@
-name: axi_tdd_counter
 namespace: analog-devices
+name: axi_tdd_counter
 version: HEAD
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: Counts TDD frames.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - library/axi_tdd/axi_tdd_pkg.sv
   - library/axi_tdd/axi_tdd_counter.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi

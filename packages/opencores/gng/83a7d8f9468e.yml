@@ -1,19 +1,16 @@
-name: gng
 namespace: opencores
+name: gng
 version: 83a7d8f9468e
 commit_sha: 83a7d8f9468e82d4eb9653248de7bb2cae709a1e
 published_at: '2026-05-05T12:54:57+02:00'
 description: Gaussian Noise Generator (GNG) IP Core
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/routertl-mirrors/gng.git
-  tag: main
-  ip_yml_path: .
+  tag: 83a7d8f9468e
   resolved_commit: 83a7d8f9468e82d4eb9653248de7bb2cae709a1e
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/gng_ctg.v
@@ -23,6 +20,9 @@ routertl_compat:
   - rtl/gng_smul_16_18_sadd_37.v
   - rtl/gng_interp.v
   - rtl/gng.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - '16'
 - '18'
@@ -34,16 +34,10 @@ tags:
 - lzd
 - sadd
 - smul
-role: repo
-top_modules:
-- gng
-components:
-- gng_coef
-- gng_ctg
-- gng_interp
-- gng_lzd
-- gng_smul_16_18
-- gng_smul_16_18_sadd_37
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: readme
 top_ports:
   gng:
   - direction: in
@@ -70,9 +64,5 @@ top_ports:
     name: data_out
     type: wire
     width: '[15:0]'
-total_entities: 7
-desc_source: readme
-mirror_status: curated-mirror
-upstream_url: https://opencores.org/projects/gng
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- gng

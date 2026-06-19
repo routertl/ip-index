@@ -1,20 +1,17 @@
-name: linkruncca
 namespace: opencores
+name: linkruncca
 version: dc0a13c4d755
 commit_sha: dc0a13c4d75501f51745b9f13aa6263f41b17eb3
 published_at: '2026-05-05T12:54:46+02:00'
 description: Detects connected components in pixel data stream and outputs bounding
   box coordinates.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/routertl-mirrors/linkruncca.git
-  tag: main
-  ip_yml_path: .
+  tag: dc0a13c4d755
   resolved_commit: dc0a13c4d75501f51745b9f13aa6263f41b17eb3
 routertl_compat:
-  language: verilog
   library: work
   files:
   - src/cca.vh
@@ -26,6 +23,9 @@ routertl_compat:
   - src/table_reader.v
   - src/window.v
   - src/LinkRunCCA.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - accumulator
@@ -39,17 +39,10 @@ tags:
 - reader
 - resolver
 - table
-role: repo
-top_modules:
-- LinkRunCCA
-components:
-- equivalence_resolver
-- feature_accumulator
-- holes_filler
-- row_buf
-- table_ram
-- table_reader
-- window
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: preserved
 top_ports:
   LinkRunCCA:
   - direction: in
@@ -80,9 +73,5 @@ top_ports:
     name: always
     type: wire
     width: ''
-total_entities: 8
-desc_source: preserved
-mirror_status: curated-mirror
-upstream_url: https://opencores.org/projects/linkruncca
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- LinkRunCCA

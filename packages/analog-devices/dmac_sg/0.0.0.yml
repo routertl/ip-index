@@ -1,16 +1,13 @@
-name: dmac_sg
 namespace: analog-devices
+name: dmac_sg
 version: 0.0.0
 description: Dmac IP core with ready/valid handshake and configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/axi_dmac/splitter.v
@@ -20,7 +17,11 @@ routertl_compat:
   - library/util_axis_fifo/util_axis_fifo_address_generator.v
   - library/util_axis_fifo/util_axis_fifo.v
   - library/axi_dmac/dmac_sg.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - dmac
 - sg
 role: component
+desc_source: ports

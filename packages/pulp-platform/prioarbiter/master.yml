@@ -1,28 +1,27 @@
-name: prioarbiter
 namespace: pulp-platform
+name: prioarbiter
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Arbitrates multiple requests using priority encoding, outputting the
   highest-priority granted request index and validity signal.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/onehot_to_bin.sv
   - src/deprecated/prioarbiter.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags: []
 role: top
-components:
-- onehot_to_bin
+desc_source: preserved
 top_ports:
   prioarbiter:
   - direction: in
@@ -57,4 +56,3 @@ top_ports:
     name: idx_o
     type: wire
     width: '[$clog2(NUM_REQ)-1:0]'
-desc_source: preserved

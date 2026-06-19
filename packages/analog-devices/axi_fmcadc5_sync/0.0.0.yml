@@ -1,16 +1,13 @@
-name: axi_fmcadc5_sync
 namespace: analog-devices
+name: axi_fmcadc5_sync
 version: 0.0.0
 description: AXI4-Lite synchronizer with SPI interface
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/xilinx/common/ad_data_out.v
@@ -18,6 +15,9 @@ routertl_compat:
   - library/axi_fmcadc5_sync/axi_fmcadc5_sync_calcor.v
   - library/common/up_axi.v
   - library/axi_fmcadc5_sync/axi_fmcadc5_sync.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -27,47 +27,4 @@ tags:
 - synchronizer
 - synchronous
 role: top
-components:
-- ad_data_out
-- ad_dds
-- ad_dds_1
-- ad_dds_2
-- ad_dds_sine
-- ad_ip_jesd204_tpl_adc
-- ad_ip_jesd204_tpl_adc_regmap
-- ad_ip_jesd204_tpl_dac_channel
-- ad_ip_jesd204_tpl_dac_core
-- ad_ip_jesd204_tpl_dac_regmap
-- ad_iqcor
-- ad_mul
-- axi_ad35xxr_channel
-- axi_ad35xxr_core
-- axi_ad9122_channel
-- axi_ad9122_core
-- axi_ad9361_cmos_if
-- axi_ad9361_lvds_if
-- axi_ad9361_rx
-- axi_ad9361_rx_channel
-- axi_ad9361_tx
-- axi_ad9361_tx_channel
-- axi_ad9739a_channel
-- axi_ad9739a_core
-- axi_ad9740_channel
-- axi_ad9740_core
-- axi_ad9783_channel
-- axi_ad9783_core
-- axi_ad9963_rx
-- axi_ad9963_rx_channel
-- axi_ad9963_tx
-- axi_ad9963_tx_channel
-- axi_adc_decimate_filter
-- axi_adrv9001_core
-- axi_adrv9001_rx
-- axi_adrv9001_rx_channel
-- axi_adrv9001_tx
-- axi_adrv9001_tx_channel
-- axi_dac_interpolate_filter
-- axi_dmac_regmap
-- axi_fmcadc5_sync_calcor
-- i3c_controller_regmap
-- up_axi
+desc_source: ports

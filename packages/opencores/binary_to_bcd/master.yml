@@ -1,31 +1,31 @@
-name: binary_to_bcd
 namespace: opencores
+name: binary_to_bcd
 version: master
 commit_sha: f1629717feae3b12a5519c2c81f34c9249013bcf
 published_at: '2005-10-25T06:18:50+00:00'
 description: 'BCD to binary converter, serial implementation, 1 clock per input bit.
   Description: See description below (which suffices for IP core specification document.)'
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/binary_to_bcd.git
   tag: master
-  ip_yml_path: .
   resolved_commit: f1629717feae3b12a5519c2c81f34c9249013bcf
 routertl_compat:
-  language: verilog
   library: work
   files:
   - bcd_to_binary.v
   - binary_to_bcd.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - bcd
 - binary
-role: repo
-top_modules:
-- bcd_to_binary
-- binary_to_bcd
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: header
 top_ports:
   bcd_to_binary:
   - direction: in
@@ -173,7 +173,6 @@ top_ports:
     name: registers
     type: wire
     width: ''
-total_entities: 2
-desc_source: header
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- bcd_to_binary
+- binary_to_bcd

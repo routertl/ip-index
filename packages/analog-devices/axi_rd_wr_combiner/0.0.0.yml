@@ -1,20 +1,20 @@
-name: axi_rd_wr_combiner
 namespace: analog-devices
+name: axi_rd_wr_combiner
 version: 0.0.0
 description: Helper module to combine a read-only and a write-only AXI interface into
   a single read-write AXI interface. Only supports AXI3 at the moment.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/axi_rd_wr_combiner/axi_rd_wr_combiner.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -23,3 +23,4 @@ tags:
 - rd
 - wr
 role: top
+desc_source: header

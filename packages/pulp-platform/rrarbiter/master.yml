@@ -1,32 +1,28 @@
-name: rrarbiter
 namespace: pulp-platform
+name: rrarbiter
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Round-robin arbiter that prioritizes and grants access to one of multiple
   concurrent requests.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/lzc.sv
   - src/rr_arb_tree.sv
   - src/deprecated/rrarbiter.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags: []
 role: top
-components:
-- lzc
-- rr_arb_tree
-- stream_arbiter_flushable
-- stream_xbar
+desc_source: preserved
 top_ports:
   rrarbiter:
   - direction: in
@@ -61,4 +57,3 @@ top_ports:
     name: idx_o
     type: wire
     width: '[$clog2(NUM_REQ)-1:0]'
-desc_source: preserved

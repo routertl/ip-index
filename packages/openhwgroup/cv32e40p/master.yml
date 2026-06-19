@@ -1,19 +1,16 @@
-name: cv32e40p
 namespace: openhwgroup
+name: cv32e40p
 version: master
 commit_sha: 6033d2b1be3295ec774d17ac4cf226faacfdeb08
 published_at: '2026-04-17T09:34:04-04:00'
 description: Cv32e40p IP core with memory interface and interrupt support
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/openhwgroup/cv32e40p.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 6033d2b1be3295ec774d17ac4cf226faacfdeb08
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - rtl/vendor/pulp_platform_common_cells/include/common_cells/registers.svh
@@ -73,6 +70,9 @@ routertl_compat:
   - rtl/vendor/pulp_platform_fpnew/src/fpnew_top.sv
   - rtl/cv32e40p_fp_wrapper.sv
   - rtl/cv32e40p_top.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - aligner
 - buffer
@@ -86,35 +86,13 @@ tags:
 - prefetch
 - register
 - registers
-role: repo
-top_modules:
-- cv32e40p_top
-components:
-- cv32e40p_aligner
-- cv32e40p_alu
-- cv32e40p_alu_div
-- cv32e40p_apu_disp
-- cv32e40p_compressed_decoder
-- cv32e40p_controller
-- cv32e40p_core
-- cv32e40p_cs_registers
-- cv32e40p_decoder
-- cv32e40p_ex_stage
-- cv32e40p_ff_one
-- cv32e40p_fifo
-- cv32e40p_fp_wrapper
-- cv32e40p_hwloop_regs
-- cv32e40p_id_stage
-- cv32e40p_if_stage
-- cv32e40p_int_controller
-- cv32e40p_load_store_unit
-- cv32e40p_mult
-- cv32e40p_obi_interface
-- cv32e40p_popcnt
-- cv32e40p_prefetch_buffer
-- cv32e40p_prefetch_controller
-- cv32e40p_register_file
-- cv32e40p_sleep_unit
+role: top
+desc_source: ports
+provides_packages:
+- cv32e40p_apu_core_pkg
+- cv32e40p_fpu_pkg
+- cv32e40p_pkg
+- fpnew_pkg
 top_ports:
   cv32e40p_top:
   - direction: in
@@ -245,10 +223,5 @@ top_ports:
     name: signals
     type: wire
     width: ''
-total_entities: 26
-desc_source: ports
-provides_packages:
-- cv32e40p_apu_core_pkg
-- cv32e40p_fpu_pkg
-- cv32e40p_pkg
-- fpnew_pkg
+top_modules:
+- cv32e40p_top

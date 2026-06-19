@@ -1,5 +1,5 @@
-name: wbgenplus
 namespace: routertl-stubs
+name: wbgenplus
 version: HEAD
 commit_sha: 6f122afe0685f5dad29fc1acad9e87ca44947358
 published_at: '2026-05-07T15:04:29+02:00'
@@ -13,26 +13,25 @@ description: "Empty stub for wbgenplus_pkg.  mkreider/wbgenplus's codegen emits 
   \ through the registry, this stub is the canonical provider \u2014 explicit curator\
   \ provenance, not a copy of any upstream artifact."
 license: MIT
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/routertl/stubs.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: 6f122afe0685f5dad29fc1acad9e87ca44947358
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - wbgenplus/wbgenplus_pkg.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - sentinel
 - stub
 - wbgenplus
-role: subproject
-top_modules:
-- wbgenplus_stub_sentinel
-total_entities: 1
+role: top
 desc_source: curator
 provides_packages:
 - wbgenplus_pkg
+top_modules:
+- wbgenplus_stub_sentinel

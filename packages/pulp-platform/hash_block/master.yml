@@ -1,35 +1,31 @@
-name: hash_block
 namespace: pulp-platform
+name: hash_block
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Counting Bloom filter that performs parallel hash-based lookups, increments,
   and decrements on fixed-width counter buckets.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/delta_counter.sv
   - src/counter.sv
   - src/sub_per_hash.sv
   - src/cb_filter.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - block
 - hash
 role: top
-components:
-- clock_divider_counter
-- counter
-- delta_counter
-- sub_per_hash
+desc_source: preserved
 top_ports:
   hash_block:
   - direction: in
@@ -104,4 +100,3 @@ top_ports:
     name: assignment
     type: wire
     width: ''
-desc_source: preserved

@@ -1,20 +1,17 @@
-name: wf3d
 namespace: opencores
+name: wf3d
 version: ffd766c3b3e7
 commit_sha: ffd766c3b3e735a28773c7b74cfc2b54efbb1078
 published_at: '2026-05-05T12:54:00+02:00'
 description: A 3D graphics rendering core that processes commands via Wishbone bus
   interface and manages memory transactions for 3D drawing operations.
 license: BSD-2-Clause
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/routertl-mirrors/wf3d.git
-  tag: main
-  ip_yml_path: .
+  tag: ffd766c3b3e7
   resolved_commit: ffd766c3b3e735a28773c7b74cfc2b54efbb1078
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/include/fm_3d_define.v
@@ -40,6 +37,9 @@ routertl_compat:
   - rtl/core/fm_ras.v
   - rtl/core/fm_sys.v
   - rtl/core/fm_3d_core.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - arbiter
 - arbitration
@@ -53,31 +53,10 @@ tags:
 - persdiv
 - state
 - viewport
-role: repo
-top_modules:
-- fm_3d_core
-components:
-- fm_3d_f22_to_i
-- fm_3d_fadd
-- fm_3d_fcnv
-- fm_3d_fmul
-- fm_3d_frcp
-- fm_3d_frcp_rom
-- fm_3d_norm
-- fm_geo
-- fm_geo_clip
-- fm_geo_cull
-- fm_geo_matrix
-- fm_geo_mem
-- fm_geo_persdiv
-- fm_geo_tri
-- fm_geo_viewport
-- fm_mem_arb
-- fm_ras
-- fm_ras_line
-- fm_ras_mem
-- fm_ras_state
-- fm_sys
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: preserved
 top_ports:
   fm_3d_core:
   - direction: in
@@ -216,9 +195,5 @@ top_ports:
     name: i_dbr_m
     type: wire
     width: '[31:0]'
-total_entities: 22
-desc_source: preserved
-mirror_status: curated-mirror
-upstream_url: https://opencores.org/projects/wf3d
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- fm_3d_core

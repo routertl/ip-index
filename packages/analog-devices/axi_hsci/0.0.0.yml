@@ -1,16 +1,13 @@
-name: axi_hsci
 namespace: analog-devices
+name: axi_hsci
 version: 0.0.0
 description: AXI4-Lite with SPI interface and configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - library/axi_hsci/hsci_master_regs_defs.vh
@@ -28,50 +25,13 @@ routertl_compat:
   - library/axi_hsci/pulse_sync.v
   - library/axi_hsci/hsci_master_top.sv
   - library/axi_hsci/axi_hsci.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
 - bus
 - hsci
 role: top
-components:
-- ad_ip_jesd204_tpl_adc
-- ad_ip_jesd204_tpl_adc_regmap
-- ad_ip_jesd204_tpl_dac_regmap
-- ad_rst
-- axi_ad35xxr_core
-- axi_ad9122_core
-- axi_ad9361_rx
-- axi_ad9361_tx
-- axi_ad9434_core
-- axi_ad9739a_core
-- axi_ad9740_core
-- axi_ad9783_core
-- axi_ad9963_rx
-- axi_ad9963_tx
-- axi_adrv9001_core
-- axi_adrv9001_rx
-- axi_adrv9001_sync_ctrl
-- axi_adrv9001_tx
-- axi_gpreg_clock_mon
-- axi_logic_analyzer_reg
-- axi_pulse_gen_regmap
-- axi_pwm_gen_regmap
-- hsci_master_axi_slave
-- hsci_master_logic
-- hsci_master_regs_regs
-- hsci_master_top
-- hsci_mcore
-- hsci_mdec
-- hsci_menc
-- hsci_mfrm_det
-- hsci_mlink_ctrl
-- i3c_controller_regmap
-- lfsr15_8
-- pulse_sync
-- up_adc_common
-- up_clkgen
-- up_dac_common
-- up_delay_cntrl
-- up_hdmi_rx
-- up_hdmi_tx
+desc_source: ports

@@ -1,19 +1,19 @@
-name: spi_axis_reorder
 namespace: analog-devices
+name: spi_axis_reorder
 version: 0.0.0
 description: SPI with ready/valid handshake
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/spi_engine/spi_axis_reorder/spi_axis_reorder.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - axi
 - axis
@@ -24,3 +24,4 @@ tags:
 - spi
 - stream
 role: top
+desc_source: ports

@@ -1,16 +1,13 @@
-name: axi_adrv9001_if
 namespace: analog-devices
+name: axi_adrv9001_if
 version: 0.0.0
 description: Interfaces with ADRV9001 device.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/axi_adrv9001/intel/adrv9001_rx.v
@@ -21,9 +18,13 @@ routertl_compat:
   - library/axi_adrv9001/intel/adrv9001_tx.v
   - library/axi_adrv9001/adrv9001_tx_link.v
   - library/axi_adrv9001/axi_adrv9001_if.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adrv9001
 - amba
 - axi
 - bus
 role: component
+desc_source: preserved

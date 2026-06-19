@@ -1,23 +1,23 @@
-name: axi_opt_lfsr
 namespace: pulp-platform
+name: axi_opt_lfsr
 version: master
 commit_sha: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 published_at: '2026-05-07T16:14:15+02:00'
 description: AXI4-Lite interface to dual LFSR with independent serial shift ports
   for read and write path testing.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/axi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axi_lite_lfsr.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -30,8 +30,7 @@ tags:
 - register
 - shift
 role: top
-components:
-- axi_lite_lfsr
+desc_source: preserved
 top_ports:
   axi_opt_lfsr:
   - direction: in
@@ -106,4 +105,3 @@ top_ports:
     name: data_o
     type: wire
     width: '[Width-1:0]'
-desc_source: preserved

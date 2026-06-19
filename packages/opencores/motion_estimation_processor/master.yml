@@ -1,20 +1,17 @@
-name: motion_estimation_processor
 namespace: opencores
+name: motion_estimation_processor
 version: master
 commit_sha: 14dc60a686d0ce88a18fae234b420f074d11e5ff
 published_at: '2009-10-11T12:04:00+00:00'
 description: Motion estimation engine computing block-matching displacement vectors
   for video compression workflows.
 license: GPL-2.0-or-later
-license_class: strong-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/motion_estimation_processor.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 14dc60a686d0ce88a18fae234b420f074d11e5ff
 routertl_compat:
-  language: vhdl-2008
   library: xilinxcorelib
   files:
   - src_me/concatenate64.vhd
@@ -47,6 +44,9 @@ routertl_compat:
   - src_me/reference_macroblock_memory64.vhd
   - src_me/reference_memory64_dp_large.vhd
   - src_me/reference_memory64_remap.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - address
 - checker
@@ -60,38 +60,12 @@ tags:
 - reference
 - register
 - selector
-role: repo
-top_modules:
-- concatenate64
-- current_macroblock_memory64
-- macroblock_data0
-- macroblock_data1
-- macroblock_data2
-- macroblock_data3
-- macroblock_data4
-- macroblock_data5
-- macroblock_data6
-- macroblock_data7
-- me_top
-- range_checker
-- reference_data0
-- reference_data1
-- reference_data2
-- reference_data3
-- reference_macroblock_memory64
-- reference_memory64_remap
-components:
-- distance_engine64
-- dual_port_component
-- forward_engine
-- me_control_unit
-- phy_address
-- point_memory
-- program_memory
-- reference_memory64_dp_large
-- reg_memory_dp
-- register_file
-- sad_selector
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
+provides_packages:
+- config
 top_ports:
   concatenate64:
   - direction: in
@@ -619,9 +593,22 @@ top_ports:
     name: we
     type: std_logic
     width: ''
-total_entities: 29
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
-provides_packages:
-- config
+top_modules:
+- concatenate64
+- current_macroblock_memory64
+- macroblock_data0
+- macroblock_data1
+- macroblock_data2
+- macroblock_data3
+- macroblock_data4
+- macroblock_data5
+- macroblock_data6
+- macroblock_data7
+- me_top
+- range_checker
+- reference_data0
+- reference_data1
+- reference_data2
+- reference_data3
+- reference_macroblock_memory64
+- reference_memory64_remap

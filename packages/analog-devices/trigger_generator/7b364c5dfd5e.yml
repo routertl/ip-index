@@ -1,55 +1,25 @@
-name: trigger_generator
 namespace: analog-devices
+name: trigger_generator
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
 description: Generates a trigger signal.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 7b364c5dfd5e
   resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_rst.v
   - projects/ad9084_ebz/common/trigger_generator.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - generator
 - trigger
 role: top
-components:
-- ad_ip_jesd204_tpl_adc
-- ad_ip_jesd204_tpl_adc_regmap
-- ad_ip_jesd204_tpl_dac_regmap
-- ad_rst
-- axi_ad35xxr_core
-- axi_ad9122_core
-- axi_ad9361_rx
-- axi_ad9361_tx
-- axi_ad9434_core
-- axi_ad9739a_core
-- axi_ad9740_core
-- axi_ad9783_core
-- axi_ad9963_rx
-- axi_ad9963_tx
-- axi_adrv9001_core
-- axi_adrv9001_rx
-- axi_adrv9001_sync_ctrl
-- axi_adrv9001_tx
-- axi_gpreg_clock_mon
-- axi_logic_analyzer_reg
-- axi_pulse_gen_regmap
-- axi_pwm_gen_regmap
-- hsci_master_top
-- i3c_controller_regmap
-- up_adc_common
-- up_clkgen
-- up_dac_common
-- up_delay_cntrl
-- up_hdmi_rx
-- up_hdmi_tx
+desc_source: preserved

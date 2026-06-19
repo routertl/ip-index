@@ -1,25 +1,25 @@
-name: stream_fifo_optimal_wrap
 namespace: pulp-platform
+name: stream_fifo_optimal_wrap
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: FIFO buffer with ready/valid handshake
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/spill_register_flushable.sv
   - src/fifo_v3.sv
   - src/stream_fifo.sv
   - src/stream_fifo_optimal_wrap.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - buffer
 - fifo
@@ -28,16 +28,7 @@ tags:
 - stream
 - wrap
 role: top
-components:
-- cdc_4phase
-- cdc_reset_ctrlr
-- fifo_v2
-- fifo_v3
-- mem_to_banks_detailed
-- spill_register
-- spill_register_flushable
-- stream_fifo
-- stream_xbar
+desc_source: ports
 top_ports:
   stream_fifo_optimal_wrap:
   - direction: in
@@ -88,4 +79,3 @@ top_ports:
     name: ready_i
     type: wire
     width: ''
-desc_source: ports

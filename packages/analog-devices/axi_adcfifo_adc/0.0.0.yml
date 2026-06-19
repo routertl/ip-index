@@ -1,20 +1,20 @@
-name: axi_adcfifo_adc
 namespace: analog-devices
+name: axi_adcfifo_adc
 version: 0.0.0
 description: FIFO buffer with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/up_xfer_status.v
   - library/xilinx/axi_adcfifo/axi_adcfifo_adc.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adc
 - adcfifo
@@ -25,3 +25,4 @@ tags:
 - converter
 - digital
 role: component
+desc_source: ports

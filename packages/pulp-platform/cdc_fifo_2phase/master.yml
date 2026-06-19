@@ -1,23 +1,23 @@
-name: cdc_fifo_2phase
 namespace: pulp-platform
+name: cdc_fifo_2phase
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: FIFO buffer with ready/valid handshake and configurable parameters
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/cdc_2phase.sv
   - src/cdc_fifo_2phase.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - 2phase
 - buffer
@@ -28,8 +28,7 @@ tags:
 - fifo
 - queue
 role: top
-components:
-- cdc_2phase
+desc_source: ports
 top_ports:
   cdc_fifo_2phase:
   - direction: in
@@ -68,4 +67,3 @@ top_ports:
     name: dst_ready_i
     type: wire
     width: ''
-desc_source: ports

@@ -1,19 +1,19 @@
-name: axi_i2s_adi
 namespace: analog-devices
+name: axi_i2s_adi
 version: 0.0.0
 description: AXI4-Lite with AXI4-Stream interface and memory interface
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - library/axi_i2s_adi/axi_i2s_adi.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adi
 - amba
@@ -21,3 +21,4 @@ tags:
 - bus
 - i2s
 role: top
+desc_source: ports

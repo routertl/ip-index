@@ -1,22 +1,22 @@
-name: ad9265_spi
 namespace: analog-devices
+name: ad9265_spi
 version: 3dc381cf791c
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: SPI interface controller for the AD9265 analog-to-digital converter.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 3dc381cf791c
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - projects/ad9265_fmc/common/ad9265_spi.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad9265
 - interface
@@ -24,28 +24,6 @@ tags:
 - serial
 - spi
 role: top
-top_ports:
-  ad9265_spi:
-  - direction: in
-    name: spi_csn
-    type: wire
-    width: '[ 1:0]'
-  - direction: in
-    name: spi_clk
-    type: wire
-    width: ''
-  - direction: in
-    name: spi_mosi
-    type: wire
-    width: ''
-  - direction: out
-    name: spi_miso
-    type: wire
-    width: ''
-  - direction: inout
-    name: spi_sdio
-    type: wire
-    width: ''
 desc_source: preserved
 external_uses:
 - library: work
@@ -68,3 +46,25 @@ external_uses:
   package: i2s_tx
 - library: work
   package: pl330_dma_fifo
+top_ports:
+  ad9265_spi:
+  - direction: in
+    name: spi_csn
+    type: wire
+    width: '[ 1:0]'
+  - direction: in
+    name: spi_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: spi_mosi
+    type: wire
+    width: ''
+  - direction: out
+    name: spi_miso
+    type: wire
+    width: ''
+  - direction: inout
+    name: spi_sdio
+    type: wire
+    width: ''

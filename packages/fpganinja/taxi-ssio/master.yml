@@ -1,20 +1,17 @@
-name: taxi-ssio
 namespace: fpganinja
+name: taxi-ssio
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
 description: "Source-synchronous I/O \u2014 DDR / SDR in / out with diff variants,\
   \ plus the bare IDDR / ODDR I/O DDR-register primitives."
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/io/rtl/taxi_ssio_sdr_in.sv
@@ -27,6 +24,9 @@ routertl_compat:
   - src/io/rtl/taxi_ssio_ddr_out_diff.sv
   - src/io/rtl/taxi_ssio_sdr_out.sv
   - src/io/rtl/taxi_ssio_sdr_out_diff.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - data
 - ddr
@@ -39,19 +39,8 @@ tags:
 - sdr
 - ssio
 - taxi
-role: subproject
-top_modules:
-- ssio_sdr_in_diff
-- taxi_ssio_ddr_in_diff
-- taxi_ssio_ddr_out_diff
-- taxi_ssio_sdr_out_diff
-components:
-- taxi_iddr
-- taxi_oddr
-- taxi_ssio_ddr_in
-- taxi_ssio_ddr_out
-- taxi_ssio_sdr_in
-- taxi_ssio_sdr_out
+role: top
+desc_source: curator
 top_ports:
   ssio_sdr_in_diff:
   - direction: in
@@ -73,5 +62,8 @@ top_ports:
     name: logic
     type: wire
     width: ''
-total_entities: 10
-desc_source: curator
+top_modules:
+- ssio_sdr_in_diff
+- taxi_ssio_ddr_in_diff
+- taxi_ssio_ddr_out_diff
+- taxi_ssio_sdr_out_diff

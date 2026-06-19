@@ -1,20 +1,17 @@
-name: ha1588
 namespace: opencores
+name: ha1588
 version: master
 commit_sha: a87db3c6353c09e98280d9e4fea2a4434626fe6e
 published_at: '2014-06-03T04:59:26+00:00'
 description: IEEE 1588 hardware timestamp engine providing precision time protocol
   (PTP) acceleration with one-step and two-step timestamping at the GMII interface.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/ha1588.git
   tag: master
-  ip_yml_path: .
   resolved_commit: a87db3c6353c09e98280d9e4fea2a4434626fe6e
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/reg/reg.v
@@ -27,6 +24,9 @@ routertl_compat:
   - rtl/bus/xps/pcores/ha1588_axi_v1_00_a/hdl/verilog/ha1588_axi.v
   - rtl/bus/wishbone/wb_slv_wrapper.v
   - rtl/bus/wishbone/ha1588_wb.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - avl
@@ -40,19 +40,10 @@ tags:
 - queue
 - time
 - wishbone
-role: repo
-top_modules:
-- ha1588_avl
-- ha1588_axi
-- ha1588_wb
-components:
-- ha1588
-- ptp_parser
-- ptp_queue
-- rgs
-- rtc
-- tsu
-- wb_slv_wrapper
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   ha1588_avl:
   - direction: in
@@ -337,7 +328,7 @@ top_ports:
     name: tx_giga_mode
     type: wire
     width: ''
-total_entities: 10
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- ha1588_avl
+- ha1588_axi
+- ha1588_wb

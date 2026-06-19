@@ -1,5 +1,5 @@
-name: adv_debug_sys
 namespace: opencores
+name: adv_debug_sys
 version: master
 commit_sha: a60f591dc96ac0c3177589b6f166072518fc4a68
 published_at: '2012-01-21T03:12:32+00:00'
@@ -7,15 +7,12 @@ description: Advanced debug system providing JTAG-based memory and CPU access fo
   OpenRISC and other Wishbone-based processors. Includes JTAG TAP, debug interface,
   and Wishbone bridge.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/adv_debug_sys.git
   tag: master
-  ip_yml_path: .
   resolved_commit: a60f591dc96ac0c3177589b6f166072518fc4a68
 routertl_compat:
-  language: verilog
   library: work
   files:
   - Hardware/adv_dbg_if/bench/full_system/xsv_fpga_defines.v
@@ -53,6 +50,9 @@ routertl_compat:
   - Hardware/xilinx_internal_jtag/rtl/verilog/xilinx_internal_jtag.v
   - Hardware/adv_dbg_if/bench/simulated_system/adv_dbg_tb.v
   - Hardware/adv_dbg_if/bench/full_system/xsv_fpga_top.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - action
@@ -66,35 +66,13 @@ tags:
 - register
 - virtual
 - wishbone
-role: repo
-top_modules:
-- BiDirectionalCell
-- ControlCell
-- InputCell
-- OutputCell
-- actel_ujtag
-- altera_virtual_jtag
-- dbg_comm
-- dbg_comm_vpi
-- xilinx_internal_jtag
-- xsv_fpga_top
-components:
-- adbg_crc32
-- adbg_jsp_biu
-- adbg_jsp_module
-- adbg_or1k_biu
-- adbg_or1k_module
-- adbg_or1k_status_reg
-- adbg_top
-- adbg_wb_biu
-- adbg_wb_module
-- bytefifo
-- cpu_behavioral
-- onchip_ram_top
-- syncflop
-- syncreg
-- tap_top
-- wb_slave_behavioral
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
+external_uses:
+- library: altera_mf
+  package: all
 top_ports:
   BiDirectionalCell:
   - direction: in
@@ -562,10 +540,14 @@ top_ports:
     name: so
     type: wire
     width: ''
-total_entities: 26
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
-external_uses:
-- library: altera_mf
-  package: all
+top_modules:
+- BiDirectionalCell
+- ControlCell
+- InputCell
+- OutputCell
+- actel_ujtag
+- altera_virtual_jtag
+- dbg_comm
+- dbg_comm_vpi
+- xilinx_internal_jtag
+- xsv_fpga_top

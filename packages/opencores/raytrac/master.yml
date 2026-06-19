@@ -1,20 +1,17 @@
-name: raytrac
 namespace: opencores
+name: raytrac
 version: master
 commit_sha: d87c7de539eb19daa5fb677c3a97af62e37da743
 published_at: '2011-08-05T00:09:00+00:00'
 description: Ray tracing accelerator computing intersection tests with floating-point
   arithmetic for visibility, shadow, and reflection calculations.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/raytrac.git
   tag: master
-  ip_yml_path: .
   resolved_commit: d87c7de539eb19daa5fb677c3a97af62e37da743
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - sqrtdiv/RLshifter.vhd
@@ -37,32 +34,22 @@ routertl_compat:
   - fpbranch/sqrt/sqrt32.vhd
   - sqrtdiv/sqrtdiv.vhd
   - fpbranch/unrm/unrm1.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - block
 - cla
 - rca
-role: repo
-top_modules:
-- ema32x2
-- ema32x3
-- func
-- invr32
-- memblock
-- mul2
-- raytrac
-- sqrt32
-- sqrtdiv
-- unrm1
-components:
-- RLshifter
-- adder
-- cla_logic_block
-- fastmux
-- opcoder
-- rca_logic_block
-- shifter
-- shifter2xstage
-- uf
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
+external_uses:
+- library: altera_mf
+  package: all
+provides_packages:
+- arithpack
 top_ports:
   ema32x2:
   - direction: in
@@ -421,12 +408,14 @@ top_ports:
     name: inv
     type: std_logic_vector
     width: 16 downto 0
-total_entities: 19
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
-external_uses:
-- library: altera_mf
-  package: all
-provides_packages:
-- arithpack
+top_modules:
+- ema32x2
+- ema32x3
+- func
+- invr32
+- memblock
+- mul2
+- raytrac
+- sqrt32
+- sqrtdiv
+- unrm1

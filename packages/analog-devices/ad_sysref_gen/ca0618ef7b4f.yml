@@ -1,41 +1,27 @@
-name: ad_sysref_gen
 namespace: analog-devices
+name: ad_sysref_gen
 version: ca0618ef7b4f
 commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 published_at: '2026-05-11T12:02:04+03:00'
 description: Generates system reference signal.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: ca0618ef7b4f
   resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_sysref_gen.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad
 - gen
 - sysref
 role: top
-top_ports:
-  ad_sysref_gen:
-  - direction: in
-    name: core_clk
-    type: wire
-    width: ''
-  - direction: in
-    name: sysref_en
-    type: wire
-    width: ''
-  - direction: out
-    name: sysref_out
-    type: wire
-    width: ''
 desc_source: preserved
 external_uses:
 - library: work
@@ -58,3 +44,17 @@ external_uses:
   package: i2s_tx
 - library: work
   package: pl330_dma_fifo
+top_ports:
+  ad_sysref_gen:
+  - direction: in
+    name: core_clk
+    type: wire
+    width: ''
+  - direction: in
+    name: sysref_en
+    type: wire
+    width: ''
+  - direction: out
+    name: sysref_out
+    type: wire
+    width: ''

@@ -1,5 +1,5 @@
-name: ethmac
 namespace: opencores
+name: ethmac
 version: master
 commit_sha: dd26899086edf3b797d2775ef9502d204a9a8149
 published_at: '2019-09-30T10:29:44+02:00'
@@ -7,15 +7,12 @@ description: 10/100 Mbps Ethernet MAC with MII PHY interface and Wishbone host b
   (Igor Mohor + Olof Kindgren 2001-2002). Includes flow control, MIIM management,
   and optional traffic coprocessor.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/ethmac.git
   tag: master
-  ip_yml_path: .
   resolved_commit: dd26899086edf3b797d2775ef9502d204a9a8149
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/verilog/ethmac_defines.v
@@ -46,6 +43,9 @@ routertl_compat:
   - rtl/verilog/eth_wishbone.v
   - rtl/verilog/ethmac.v
   - rtl/verilog/eth_top.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - clockgen
 - ethernet
@@ -59,35 +59,11 @@ tags:
 - rxcounters
 - transmitcontrol
 - txcounters
-role: repo
-top_modules:
-- eth_cop
-- eth_top
-components:
-- eth_clockgen
-- eth_crc
-- eth_fifo
-- eth_maccontrol
-- eth_macstatus
-- eth_miim
-- eth_outputcontrol
-- eth_random
-- eth_receivecontrol
-- eth_register
-- eth_registers
-- eth_rxaddrcheck
-- eth_rxcounters
-- eth_rxethmac
-- eth_rxstatem
-- eth_shiftreg
-- eth_spram_256x32
-- eth_transmitcontrol
-- eth_txcounters
-- eth_txethmac
-- eth_txstatem
-- eth_wishbone
-- ethmac
-- xilinx_dist_ram_16x32
+role: top
+health_tier: silver
+contract_url: https://github.com/routertl/ip-index/blob/main/contracts/oc_ethmac.md
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   eth_cop:
   - direction: in
@@ -319,8 +295,6 @@ top_ports:
     name: mbist_ctrl_i
     type: wire
     width: '[`ETH_MBIST_CTRL_WIDTH - 1:0]'
-total_entities: 26
-desc_source: verdict
-health_tier: silver
-contract_url: https://github.com/routertl/ip-index/blob/main/contracts/oc_ethmac.md
-last_verified_at: '2026-05-04'
+top_modules:
+- eth_cop
+- eth_top

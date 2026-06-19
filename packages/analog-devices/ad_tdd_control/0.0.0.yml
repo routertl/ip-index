@@ -1,23 +1,24 @@
-name: ad_tdd_control
 namespace: analog-devices
+name: ad_tdd_control
 version: 0.0.0
 description: Time-division duplex controller generating synchronized transmit and
   receive path switching signals based on frame timing.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_addsub.v
   - library/common/ad_tdd_control.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad
 - control
 - tdd
 role: component
+desc_source: verdict

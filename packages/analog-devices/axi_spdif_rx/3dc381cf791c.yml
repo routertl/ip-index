@@ -1,19 +1,16 @@
-name: axi_spdif_rx
 namespace: analog-devices
+name: axi_spdif_rx
 version: 3dc381cf791c
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: AXI4-Lite receive engine with AXI4-Stream interface and memory interface
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 3dc381cf791c
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - library/axi_spdif_rx/rx_package.vhd
@@ -21,6 +18,9 @@ routertl_compat:
   - library/axi_spdif_rx/rx_phase_det.vhd
   - library/axi_spdif_rx/rx_status_reg.vhd
   - library/axi_spdif_rx/axi_spdif_rx.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -30,10 +30,30 @@ tags:
 - rx
 - spdif
 role: top
-components:
-- rx_decode
-- rx_phase_det
-- rx_status_reg
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo
+provides_packages:
+- rx_package
 top_ports:
   axi_spdif_rx:
   - direction: out
@@ -192,27 +212,3 @@ top_ports:
     name: dma_req_drready
     type: std_logic
     width: ''
-desc_source: ports
-external_uses:
-- library: work
-  package: axi_ctrlif
-- library: work
-  package: axi_streaming_dma_rx_fifo
-- library: work
-  package: axi_streaming_dma_tx_fifo
-- library: work
-  package: dma_fifo
-- library: work
-  package: fifo_synchronizer
-- library: work
-  package: i2s_clkgen
-- library: work
-  package: i2s_controller
-- library: work
-  package: i2s_rx
-- library: work
-  package: i2s_tx
-- library: work
-  package: pl330_dma_fifo
-provides_packages:
-- rx_package

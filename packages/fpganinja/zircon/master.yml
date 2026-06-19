@@ -1,20 +1,17 @@
-name: zircon
 namespace: fpganinja
+name: zircon
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
 description: "Zircon IP packet processor \u2014 RX parse / ingress / egress and TX\
   \ buffer / deparse / ingress / egress, plus length+checksum core."
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
@@ -39,6 +36,9 @@ routertl_compat:
   - src/axis/rtl/taxi_axis_concat.sv
   - src/zircon/rtl/zircon_ip_tx_egress.sv
   - src/zircon/rtl/zircon_ip_tx_ingress.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - buffer
 - deparse
@@ -52,17 +52,8 @@ tags:
 - transmit
 - transmitter
 - zircon
-role: subproject
-top_modules:
-- zircon_ip_rx_egress
-- zircon_ip_rx_ingress
-- zircon_ip_tx_buffer
-- zircon_ip_tx_egress
-- zircon_ip_tx_ingress
-components:
-- zircon_ip_len_cksum
-- zircon_ip_rx_parse
-- zircon_ip_tx_deparse
+role: top
+desc_source: curator
 top_ports:
   zircon_ip_rx_egress:
   - direction: in
@@ -157,5 +148,9 @@ top_ports:
     name: m_axis_pkt
     type: taxi_axis_if.src
     width: ''
-total_entities: 8
-desc_source: curator
+top_modules:
+- zircon_ip_rx_egress
+- zircon_ip_rx_ingress
+- zircon_ip_tx_buffer
+- zircon_ip_tx_egress
+- zircon_ip_tx_ingress

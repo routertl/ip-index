@@ -1,34 +1,29 @@
-name: id_queue
 namespace: pulp-platform
+name: id_queue
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Queue IP core with FIFO interface and configurable parameters
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/lzc.sv
   - src/onehot_to_bin.sv
   - src/id_queue.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - id
 - queue
 role: top
-components:
-- lzc
-- onehot_to_bin
-- rr_arb_tree
-- stream_arbiter_flushable
-- stream_xbar
+desc_source: ports
 top_ports:
   id_queue:
   - direction: in
@@ -115,4 +110,3 @@ top_ports:
     name: id
     type: wire
     width: ''
-desc_source: ports

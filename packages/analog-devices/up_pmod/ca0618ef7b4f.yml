@@ -1,79 +1,49 @@
-name: up_pmod
 namespace: analog-devices
+name: up_pmod
 version: ca0618ef7b4f
 commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 published_at: '2026-05-11T12:02:04+03:00'
 description: Generates PMOD reset and signal.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: ca0618ef7b4f
   resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_rst.v
   - library/common/up_xfer_status.v
   - library/common/up_pmod.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - pmod
 role: top
-components:
-- ad_ip_jesd204_tpl_adc
-- ad_ip_jesd204_tpl_adc_regmap
-- ad_ip_jesd204_tpl_dac_regmap
-- ad_rst
-- axi_ad35xxr_core
-- axi_ad485x_16b_channel
-- axi_ad485x_20b_channel
-- axi_ad9122_core
-- axi_ad9265_channel
-- axi_ad9361_rx
-- axi_ad9361_rx_channel
-- axi_ad9361_tdd
-- axi_ad9361_tx
-- axi_ad9434_core
-- axi_ad9467_channel
-- axi_ad9625_channel
-- axi_ad9671_channel
-- axi_ad9684_channel
-- axi_ad9739a_core
-- axi_ad9740_core
-- axi_ad9783_core
-- axi_ad9963_rx
-- axi_ad9963_rx_channel
-- axi_ad9963_tx
-- axi_adaq8092_channel
-- axi_adcfifo_adc
-- axi_adcfifo_dma
-- axi_adrv9001_core
-- axi_adrv9001_rx
-- axi_adrv9001_rx_channel
-- axi_adrv9001_sync_ctrl
-- axi_adrv9001_tdd
-- axi_adrv9001_tx
-- axi_gpreg_clock_mon
-- axi_logic_analyzer_reg
-- axi_ltc2387_channel
-- axi_pulsar_lvds_channel
-- axi_pulse_gen_regmap
-- axi_pwm_gen_regmap
-- axi_xcvrlb_1
-- hsci_master_top
-- i3c_controller_regmap
-- up_adc_channel
-- up_adc_common
-- up_clkgen
-- up_dac_common
-- up_delay_cntrl
-- up_hdmi_rx
-- up_hdmi_tx
-- up_tdd_cntrl
-- up_xfer_status
+desc_source: preserved
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo
 top_ports:
   up_pmod:
   - direction: in
@@ -128,25 +98,3 @@ top_ports:
     name: up_rack
     type: wire
     width: ''
-desc_source: preserved
-external_uses:
-- library: work
-  package: axi_ctrlif
-- library: work
-  package: axi_streaming_dma_rx_fifo
-- library: work
-  package: axi_streaming_dma_tx_fifo
-- library: work
-  package: dma_fifo
-- library: work
-  package: fifo_synchronizer
-- library: work
-  package: i2s_clkgen
-- library: work
-  package: i2s_controller
-- library: work
-  package: i2s_rx
-- library: work
-  package: i2s_tx
-- library: work
-  package: pl330_dma_fifo

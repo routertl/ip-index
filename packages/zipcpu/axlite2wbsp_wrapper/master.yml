@@ -1,19 +1,16 @@
-name: axlite2wbsp_wrapper
 namespace: zipcpu
+name: axlite2wbsp_wrapper
 version: master
 commit_sha: df8e7649acf68544a152e39a4589c8e894a4cd0b
 published_at: '2026-03-10T13:49:52-04:00'
 description: AXI4-Lite wrapper with Wishbone interface and configurable parameters
 license: GPL-3.0-or-later
-license_class: strong-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/ZipCPU/wb2axip.git
   tag: master
-  ip_yml_path: .
   resolved_commit: df8e7649acf68544a152e39a4589c8e894a4cd0b
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - rtl/axilrd2wbsp.v
@@ -21,14 +18,15 @@ routertl_compat:
   - rtl/wbarbiter.v
   - rtl/axlite2wbsp.v
   - rtl/axlite_wrapper.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - axlite2wbsp
 role: top
-components:
-- axilrd2wbsp
-- axilwr2wbsp
-- axlite2wbsp
-- wbarbiter
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: ports
 top_ports:
   axlite2wbsp_wrapper:
   - direction: in
@@ -167,6 +165,3 @@ top_ports:
     name: m_wb_err
     type: std_logic
     width: ''
-desc_source: ports
-health_tier: bronze
-last_verified_at: '2026-05-05'

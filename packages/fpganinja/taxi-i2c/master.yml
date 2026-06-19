@@ -1,20 +1,17 @@
-name: taxi-i2c
 namespace: fpganinja
+name: taxi-i2c
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
 description: I2C master, slave (with APB / AXIL bridges), init engine, single-register
   peripheral.
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
@@ -27,6 +24,9 @@ routertl_compat:
   - src/lss/rtl/taxi_i2c_slave_apb_master.sv
   - src/axi/rtl/taxi_axil_if.sv
   - src/lss/rtl/taxi_i2c_slave_axil_master.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - advanced
 - amba
@@ -40,16 +40,8 @@ tags:
 - si5340
 - single
 - slave
-role: subproject
-top_modules:
-- si5340_i2c_init
-- taxi_i2c_init
-- taxi_i2c_master
-- taxi_i2c_single_reg
-- taxi_i2c_slave_apb_master
-- taxi_i2c_slave_axil_master
-components:
-- taxi_i2c_slave
+role: top
+desc_source: curator
 top_ports:
   si5340_i2c_init:
   - direction: in
@@ -165,5 +157,10 @@ top_ports:
     name: m_axil_rd
     type: taxi_axil_if.rd_mst
     width: ''
-total_entities: 7
-desc_source: curator
+top_modules:
+- si5340_i2c_init
+- taxi_i2c_init
+- taxi_i2c_master
+- taxi_i2c_single_reg
+- taxi_i2c_slave_apb_master
+- taxi_i2c_slave_axil_master

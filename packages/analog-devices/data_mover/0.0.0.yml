@@ -1,21 +1,22 @@
-name: data_mover
 namespace: analog-devices
+name: data_mover
 version: 0.0.0
 description: Data IP core with ready/valid handshake and configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/axi_dmac/inc_id.vh
   - library/axi_dmac/data_mover.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - data
 - mover
 role: component
+desc_source: ports

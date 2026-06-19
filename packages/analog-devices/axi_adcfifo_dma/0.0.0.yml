@@ -1,22 +1,22 @@
-name: axi_adcfifo_dma
 namespace: analog-devices
+name: axi_adcfifo_dma
 version: 0.0.0
 description: DMA FIFO buffer with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_axis_inf_rx.v
   - library/common/ad_mem_asym.v
   - library/common/up_xfer_status.v
   - library/xilinx/axi_adcfifo/axi_adcfifo_dma.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - adcfifo
@@ -27,3 +27,4 @@ tags:
 - dma
 - memory
 role: component
+desc_source: ports

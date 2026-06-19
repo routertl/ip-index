@@ -1,5 +1,5 @@
-name: taxi-utils
 namespace: fpganinja
+name: taxi-utils
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
@@ -8,15 +8,12 @@ description: 'Standalone primitives without a project home: debounce, LFSR + CRC
   RAM primitives, stats counters / strings, priority encoder, CDC synchronizers (reset
   + signal).'
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/io/rtl/taxi_debounce_switch.sv
@@ -44,6 +41,9 @@ routertl_compat:
   - src/stats/rtl/taxi_stats_counter.sv
   - src/stats/rtl/taxi_stats_strings_full.sv
   - src/sync/rtl/taxi_sync_reset.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - collect
 - counter
@@ -57,31 +57,8 @@ tags:
 - scramble
 - synchronizer
 - synchronous
-role: subproject
-top_modules:
-- taxi_debounce_switch
-- taxi_irq_rate_limit
-- taxi_led_sreg
-- taxi_lfsr_crc
-- taxi_lfsr_descramble
-- taxi_lfsr_prbs_check
-- taxi_lfsr_prbs_gen
-- taxi_lfsr_scramble
-- taxi_mmcm_frac
-- taxi_mt19937
-- taxi_penc
-- taxi_ram_1r1w_1c
-- taxi_ram_1r1w_2c
-- taxi_ram_1rw
-- taxi_ram_2rw_1c
-- taxi_ram_2rw_2c
-- taxi_stats_collect
-- taxi_stats_counter
-- taxi_stats_strings_full
-- taxi_sync_reset
-components:
-- taxi_lfsr
-- taxi_sync_signal
+role: top
+desc_source: curator
 top_ports:
   taxi_debounce_switch:
   - direction: in
@@ -371,5 +348,24 @@ top_ports:
     name: logic
     type: wire
     width: ''
-total_entities: 22
-desc_source: curator
+top_modules:
+- taxi_debounce_switch
+- taxi_irq_rate_limit
+- taxi_led_sreg
+- taxi_lfsr_crc
+- taxi_lfsr_descramble
+- taxi_lfsr_prbs_check
+- taxi_lfsr_prbs_gen
+- taxi_lfsr_scramble
+- taxi_mmcm_frac
+- taxi_mt19937
+- taxi_penc
+- taxi_ram_1r1w_1c
+- taxi_ram_1r1w_2c
+- taxi_ram_1rw
+- taxi_ram_2rw_1c
+- taxi_ram_2rw_2c
+- taxi_stats_collect
+- taxi_stats_counter
+- taxi_stats_strings_full
+- taxi_sync_reset

@@ -1,20 +1,17 @@
-name: pci
 namespace: opencores
+name: pci
 version: master
 commit_sha: 6afbb5a067308b9537cbdc683ccb5992358429d8
 published_at: '2009-03-10T08:24:20+00:00'
 description: "Bidirectional 32-bit PCI \u2194 Wishbone bridge supporting both initiator\
   \ and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006)."
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/pci.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 6afbb5a067308b9537cbdc683ccb5992358429d8
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/verilog/bus_commands.v
@@ -76,6 +73,9 @@ routertl_compat:
   - rtl/verilog/pci_wb_slave_unit.v
   - rtl/verilog/pci_wbs_wbb3_2_wbb2.v
   - rtl/verilog/pci_bridge32.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - asynchronous
 - bridge32
@@ -89,64 +89,10 @@ tags:
 - synchronous
 - target32
 - wishbone
-role: repo
-top_modules:
-- pci_bridge32
-components:
-- pci_async_reset_flop
-- pci_cbe_en_crit
-- pci_conf_cyc_addr_dec
-- pci_conf_space
-- pci_cur_out_reg
-- pci_delayed_sync
-- pci_delayed_write_reg
-- pci_frame_crit
-- pci_frame_en_crit
-- pci_frame_load_crit
-- pci_in_reg
-- pci_io_mux
-- pci_io_mux_ad_en_crit
-- pci_io_mux_ad_load_crit
-- pci_irdy_out_crit
-- pci_mas_ad_en_crit
-- pci_mas_ad_load_crit
-- pci_mas_ch_state_crit
-- pci_master32_sm
-- pci_master32_sm_if
-- pci_out_reg
-- pci_par_crit
-- pci_parity_check
-- pci_pci_decoder
-- pci_pci_tpram
-- pci_pcir_fifo_control
-- pci_pciw_fifo_control
-- pci_pciw_pcir_fifos
-- pci_perr_crit
-- pci_perr_en_crit
-- pci_ram_16x40d
-- pci_rst_int
-- pci_serr_crit
-- pci_serr_en_crit
-- pci_spoci_ctrl
-- pci_sync_module
-- pci_synchronizer_flop
-- pci_target32_clk_en
-- pci_target32_devs_crit
-- pci_target32_interface
-- pci_target32_sm
-- pci_target32_stop_crit
-- pci_target32_trdy_crit
-- pci_target_unit
-- pci_wb_addr_mux
-- pci_wb_decoder
-- pci_wb_master
-- pci_wb_slave
-- pci_wb_slave_unit
-- pci_wb_tpram
-- pci_wbr_fifo_control
-- pci_wbs_wbb3_2_wbb2
-- pci_wbw_fifo_control
-- pci_wbw_wbr_fifos
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   pci_bridge32:
   - direction: out
@@ -505,7 +451,5 @@ top_ports:
     name: register
     type: wire
     width: ''
-total_entities: 55
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- pci_bridge32

@@ -1,25 +1,23 @@
-name: system_top_corundum
 namespace: analog-devices
+name: system_top_corundum
 version: 0.0.0
 description: SPI with I2C interface and configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_3w_spi.v
   - library/common/ad_iobuf.v
   - projects/ad9081_fmca_ebz/vcu118/system_top_corundum.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - corundum
 - system
 role: top
-components:
-- ad_3w_spi
-- ad_iobuf
+desc_source: ports

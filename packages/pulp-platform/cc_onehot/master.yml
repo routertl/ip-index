@@ -1,28 +1,29 @@
-name: cc_onehot
 namespace: pulp-platform
+name: cc_onehot
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Detects whether the input value has exactly one bit set to one.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/cc_onehot.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - cc
 - clock
 - crossing
 - onehot
 role: top
+desc_source: preserved
 top_ports:
   cc_onehot:
   - direction: in
@@ -37,4 +38,3 @@ top_ports:
     name: level
     type: wire
     width: ''
-desc_source: preserved

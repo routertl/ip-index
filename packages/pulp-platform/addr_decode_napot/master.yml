@@ -1,31 +1,30 @@
-name: addr_decode_napot
 namespace: pulp-platform
+name: addr_decode_napot
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Decodes a NAPOT address against a rule map to output matching rule index
   or default index with validity status.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/addr_decode_dync.sv
   - src/addr_decode_napot.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - addr
 - decode
 - napot
 role: top
-components:
-- addr_decode_dync
+desc_source: preserved
 top_ports:
   addr_decode_napot:
   - direction: out
@@ -56,4 +55,3 @@ top_ports:
     name: en_default_idx_i
     type: wire
     width: ''
-desc_source: preserved

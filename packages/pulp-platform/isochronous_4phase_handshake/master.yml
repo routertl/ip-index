@@ -1,28 +1,29 @@
-name: isochronous_4phase_handshake
 namespace: pulp-platform
+name: isochronous_4phase_handshake
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Synchronizes ready/valid handshake signals between two independent clock
   domains using 4-phase protocol.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/isochronous_4phase_handshake.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - 4phase
 - handshake
 - isochronous
 role: top
+desc_source: preserved
 top_ports:
   isochronous_4phase_handshake:
   - direction: in
@@ -57,4 +58,3 @@ top_ports:
     name: dst_ready_i
     type: wire
     width: ''
-desc_source: preserved

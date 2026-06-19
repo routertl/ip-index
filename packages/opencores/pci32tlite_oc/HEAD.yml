@@ -1,20 +1,17 @@
-name: pci32tlite_oc
 namespace: opencores
+name: pci32tlite_oc
 version: HEAD
 commit_sha: 1685821cee9f14177b334c656626480cc11a019c
 published_at: '2026-05-05T13:55:35+02:00'
 description: "PCI 32-bit Lite Target controller \u2014 minimal PCI target-mode interface\
   \ in VHDL, useful for Wishbone-bus designs needing a PCI front-end."
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/routertl-mirrors/pci32tlite_oc.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: 1685821cee9f14177b334c656626480cc11a019c
 routertl_compat:
-  language: vhdl-2008
   library: onalib
   files:
   - rtl/onalib.vhd
@@ -24,29 +21,18 @@ routertl_compat:
   - rtl/pciregs.vhd
   - rtl/pciwbsequ.vhd
   - rtl/pci32tlite.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - synchronizer
 - synchronous
-role: repo
-top_modules:
-- pci32tLite
-- pfb
-- pfs
-- sync
-- sync2
-- sync2h
-- sync2l
-- synch
-- syncl
-- syncv
-- syncv2h
-components:
-- decoder3to8
-- pcidec
-- pcidmux
-- pcipargen
-- pciregs
-- pciwbsequ
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: verdict
+provides_packages:
+- onapackage
 top_ports:
   pci32tLite:
   - direction: in
@@ -279,11 +265,15 @@ top_ports:
     name: q
     type: std_logic
     width: ''
-total_entities: 17
-desc_source: verdict
-mirror_status: curated-mirror
-upstream_url: https://opencores.org/projects/pci32tlite_oc
-health_tier: bronze
-last_verified_at: '2026-05-05'
-provides_packages:
-- onapackage
+top_modules:
+- pci32tLite
+- pfb
+- pfs
+- sync
+- sync2
+- sync2h
+- sync2l
+- synch
+- syncl
+- syncv
+- syncv2h

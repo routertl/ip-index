@@ -1,19 +1,16 @@
-name: up_adc_common
 namespace: analog-devices
+name: up_adc_common
 version: 1336749ccfa9
 commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 published_at: '2026-05-12T15:24:37+03:00'
 description: Analog IP core with memory interface and interrupt support
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 1336749ccfa9
   resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_rst.v
@@ -21,6 +18,9 @@ routertl_compat:
   - library/common/up_xfer_cntrl.v
   - library/common/up_xfer_status.v
   - library/common/up_adc_common.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adc
 - analog

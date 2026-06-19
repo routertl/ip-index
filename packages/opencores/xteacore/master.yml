@@ -1,35 +1,33 @@
-name: xteacore
 namespace: opencores
+name: xteacore
 version: master
 commit_sha: 16f8a4630851e7b69bcd83b4f1bb40644bf6a02d
 published_at: '2013-07-27T12:19:23+00:00'
 description: "XTEA (eXtended Tiny Encryption Algorithm) cipher core \u2014 128-bit\
   \ key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL."
 license: GPL-3.0-or-later
-license_class: strong-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/xteacore.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 16f8a4630851e7b69bcd83b4f1bb40644bf6a02d
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - rtl/key_schedule.vhd
   - rtl/round_f.vhd
   - rtl/xtea.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - key
 - round
 - schedule
-role: repo
-top_modules:
-- xtea
-components:
-- key_schedule
-- round_f
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: verdict
 top_ports:
   xtea:
   - direction: in
@@ -60,7 +58,5 @@ top_ports:
     name: v_1_out
     type: std_logic_vector
     width: 31 downto 0
-total_entities: 3
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- xtea

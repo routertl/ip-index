@@ -1,20 +1,17 @@
-name: spacewire_light
 namespace: opencores
+name: spacewire_light
 version: master
 commit_sha: d26037ffc408dac1d21bab160e185c4798334681
 published_at: '2013-05-04T20:25:16+00:00'
 description: Lightweight SpaceWire link interface for aerospace and instrumentation
   applications. ECSS-E-ST-50-12C-compliant link layer.
 license: GPL-2.0-or-later
-license_class: strong-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/spacewire_light.git
   tag: master
-  ip_yml_path: .
   resolved_commit: d26037ffc408dac1d21bab160e185c4798334681
 routertl_compat:
-  language: vhdl-2008
   library: grlib
   files:
   - rtl/vhdl/spwpkg.vhd
@@ -30,25 +27,29 @@ routertl_compat:
   - rtl/vhdl/spwamba.vhd
   - rtl/vhdl/spwstream.vhd
   - rtl/vhdl/streamtest.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - fast
 - spwrecvfront
 - spwxmit
-role: repo
-top_modules:
-- spwamba
-- streamtest
-components:
-- spwahbmst
-- spwlink
-- spwram
-- spwrecv
-- spwrecvfront_fast
-- spwrecvfront_generic
-- spwstream
-- spwxmit
-- spwxmit_fast
-- syncdff
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
+external_uses:
+- library: grlib
+  package: amba
+- library: grlib
+  package: devices
+- library: grlib
+  package: stdlib
+- library: techmap
+  package: gencomp
+provides_packages:
+- spwambapkg
+- spwpkg
 top_ports:
   spwamba:
   - direction: in
@@ -192,23 +193,6 @@ top_ports:
     name: spw_so
     type: std_logic
     width: ''
-total_entities: 12
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
-hdl:
-  vendor_variants:
-    generic:
-    - rtl/vhdl/spwrecvfront_generic.vhd
-external_uses:
-- library: grlib
-  package: amba
-- library: grlib
-  package: devices
-- library: grlib
-  package: stdlib
-- library: techmap
-  package: gencomp
-provides_packages:
-- spwambapkg
-- spwpkg
+top_modules:
+- spwamba
+- streamtest

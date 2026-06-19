@@ -1,19 +1,16 @@
-name: altor32
 namespace: opencores
+name: altor32
 version: master
 commit_sha: 6d44db41cbfb3460f90c5c3e93e6032fcc2eba62
 published_at: '2014-08-10T17:49:04+01:00'
 description: AltOr32 - Alternative Lightweight OpenRisc CPU
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/altor32.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 6d44db41cbfb3460f90c5c3e93e6032fcc2eba62
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/cpu/altor32_defs.v
@@ -48,6 +45,9 @@ routertl_compat:
   - rtl/soc/soc_pif8.v
   - rtl/peripheral/timer_periph.v
   - rtl/soc/soc.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - altor32
@@ -61,35 +61,10 @@ tags:
 - regfile
 - wishbone
 - writeback
-role: repo
-top_modules:
-- altor32_lite
-- cpu_if
-- soc
-components:
-- altor32_alu
-- altor32_dcache
-- altor32_dcache_mem_if
-- altor32_dfu
-- altor32_exec
-- altor32_fetch
-- altor32_icache
-- altor32_lfu
-- altor32_lsu
-- altor32_noicache
-- altor32_ram_dp
-- altor32_ram_sp
-- altor32_regfile_alt
-- altor32_regfile_xil
-- altor32_wb_fetch
-- altor32_writeback
-- cpu
-- dmem_mux3
-- intr_periph
-- ram
-- ram_dp8
-- soc_pif8
-- timer_periph
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: readme
 top_ports:
   altor32_lite:
   - direction: in
@@ -394,7 +369,7 @@ top_ports:
     name: io_ack_o
     type: wire
     width: ''
-total_entities: 26
-desc_source: readme
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- altor32_lite
+- cpu_if
+- soc
