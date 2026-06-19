@@ -1,5 +1,5 @@
-name: wbfmtx
 namespace: opencores
+name: wbfmtx
 version: d248fe6384ac
 commit_sha: d248fe6384ac66b83badd53d15e57c2e30b33b5f
 published_at: '2026-05-05T12:54:52+02:00'
@@ -7,22 +7,23 @@ description: "Wishbone-controlled FM transmitter \u2014 software-defined-radio b
   \ block that takes a Wishbone-attached audio stream and produces an FM-modulated\
   \ baseband output."
 license: GPL-2.0-or-later
-license_class: strong-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/routertl-mirrors/wbfmtx.git
-  tag: main
-  ip_yml_path: .
+  tag: d248fe6384ac
   resolved_commit: d248fe6384ac66b83badd53d15e57c2e30b33b5f
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/wbfmtxhack.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags: []
-role: repo
-top_modules:
-- wbfmtxhack
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: verdict
 top_ports:
   wbfmtxhack:
   - direction: in
@@ -77,9 +78,5 @@ top_ports:
     name: a
     type: wire
     width: ''
-total_entities: 1
-desc_source: verdict
-mirror_status: curated-mirror
-upstream_url: https://opencores.org/projects/wbfmtx
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- wbfmtxhack

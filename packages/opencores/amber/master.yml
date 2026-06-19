@@ -1,5 +1,5 @@
-name: amber
 namespace: opencores
+name: amber
 version: master
 commit_sha: 9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9
 published_at: '2013-05-20T21:22:28+00:00'
@@ -7,15 +7,12 @@ description: 'ARMv2-compatible 32-bit RISC processor with Wishbone bus (Conor Sa
   2010+). Two pipeline variants: a23 (3-stage) and a25 (5-stage), shared register
   file, MMU, caches.'
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/amber.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 9b995cc298ecc60d4d6832f54cc4c9cc8dfa86e9
 routertl_compat:
-  language: verilog
   library: work
   files:
   - hw/vlog/amber23/a23_config_defines.v
@@ -88,6 +85,9 @@ routertl_compat:
   - hw/vlog/lib/xs6_sram_2048x32_byte_en.v
   - hw/vlog/lib/xs6_sram_256x32_byte_en.v
   - hw/vlog/lib/xs6_sram_512x128_byte_en.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - 1024x128
 - arbitration
@@ -101,65 +101,10 @@ tags:
 - protocol
 - transmitter
 - universal
-role: repo
-top_modules:
-- ddr3_afifo
-- wb_ddr3_bridge
-- xs6_sram_2048x32_byte_en
-- xs6_sram_256x32_byte_en
-- xs6_sram_512x128_byte_en
-components:
-- a23_alu
-- a23_barrel_shift
-- a23_barrel_shift_fpga
-- a23_cache
-- a23_coprocessor
-- a23_core
-- a23_decode
-- a23_decompile
-- a23_execute
-- a23_fetch
-- a23_multiply
-- a23_ram_register_bank
-- a23_register_bank
-- a23_wishbone
-- a25_alu
-- a25_barrel_shift
-- a25_coprocessor
-- a25_core
-- a25_dcache
-- a25_decode
-- a25_decompile
-- a25_execute
-- a25_fetch
-- a25_icache
-- a25_mem
-- a25_multiply
-- a25_register_bank
-- a25_shifter
-- a25_wishbone
-- a25_wishbone_buf
-- a25_write_back
-- afifo
-- boot_mem128
-- boot_mem32
-- clocks_resets
-- ethmac_wb
-- generic_iobuf
-- generic_sram_byte_en
-- generic_sram_line_en
-- interrupt_controller
-- main_mem
-- system
-- timer_module
-- uart
-- wb_xs6_ddr3_bridge
-- wishbone_arbiter
-- xs6_addsub_n
-- xs6_sram_1024x128_byte_en
-- xs6_sram_256x128_byte_en
-- xs6_sram_256x21_line_en
-- xs6_sram_4096x32_byte_en
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   ddr3_afifo:
   - direction: in
@@ -414,7 +359,9 @@ top_ports:
     name: o_read_data
     type: wire
     width: '[127:0]'
-total_entities: 56
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- ddr3_afifo
+- wb_ddr3_bridge
+- xs6_sram_2048x32_byte_en
+- xs6_sram_256x32_byte_en
+- xs6_sram_512x128_byte_en

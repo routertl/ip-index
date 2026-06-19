@@ -1,19 +1,16 @@
-name: hsci_master_top
 namespace: analog-devices
+name: hsci_master_top
 version: ca0618ef7b4f
 commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 published_at: '2026-05-11T12:02:04+03:00'
 description: SPI master with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: ca0618ef7b4f
   resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - library/corundum/corundum_core/mqnic_app_custom_params.vh
@@ -35,6 +32,9 @@ routertl_compat:
   - library/axi_hsci/hsci_mcore.v
   - library/axi_hsci/pulse_sync.v
   - library/axi_hsci/hsci_master_top.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - hsci
 - master

@@ -1,5 +1,5 @@
-name: axi_ltc2387_channel
 namespace: analog-devices
+name: axi_ltc2387_channel
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
@@ -7,15 +7,12 @@ description: AXI interface controller for LTC2387 ADC that processes raw ADC dat
   performs PN sequence error detection, and provides DMA integration with configurable
   resolution and lane support.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 7b364c5dfd5e
   resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_datafmt.v
@@ -23,6 +20,9 @@ routertl_compat:
   - library/common/up_xfer_status.v
   - library/common/up_adc_channel.v
   - library/axi_ltc2387/axi_ltc2387_channel.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -30,3 +30,4 @@ tags:
 - channel
 - ltc2387
 role: component
+desc_source: preserved

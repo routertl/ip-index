@@ -1,20 +1,17 @@
-name: viterbi_decoder_axi4s
 namespace: opencores
+name: viterbi_decoder_axi4s
 version: master
 commit_sha: 53cc354ee993097882a6b782c61a0dbaa6aa29be
 published_at: '2014-02-17T08:50:43+00:00'
 description: Viterbi maximum-likelihood decoder for forward error correction with
   AXI4-Stream input and output interfaces.
 license: GPL-2.0-only
-license_class: strong-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/viterbi_decoder_axi4s.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 53cc354ee993097882a6b782c61a0dbaa6aa29be
 routertl_compat:
-  language: vhdl-2008
   library: dec_viterbi
   files:
   - src/acs.vhd
@@ -26,6 +23,9 @@ routertl_compat:
   - src/reorder.vhd
   - src/traceback.vhd
   - src/dec_viterbi.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - branch
@@ -39,18 +39,23 @@ tags:
 - traceback
 - trellis
 - viterbi
-role: repo
-top_modules:
-- dec_viterbi
-components:
-- acs
-- axi4s_buffer
-- branch_distance
-- generic_sp_ram
-- ram_ctrl
-- recursion
-- reorder
-- trellis_traceback
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
+external_uses:
+- library: dec_viterbi
+  package: pkg_components
+- library: dec_viterbi
+  package: pkg_helper
+- library: dec_viterbi
+  package: pkg_param
+- library: dec_viterbi
+  package: pkg_param_derived
+- library: dec_viterbi
+  package: pkg_trellis
+- library: dec_viterbi
+  package: pkg_types
 top_ports:
   dec_viterbi:
   - direction: in
@@ -109,20 +114,5 @@ top_ports:
     name: s_axis_ctrl_tready
     type: std_logic
     width: ''
-total_entities: 9
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
-external_uses:
-- library: dec_viterbi
-  package: pkg_components
-- library: dec_viterbi
-  package: pkg_helper
-- library: dec_viterbi
-  package: pkg_param
-- library: dec_viterbi
-  package: pkg_param_derived
-- library: dec_viterbi
-  package: pkg_trellis
-- library: dec_viterbi
-  package: pkg_types
+top_modules:
+- dec_viterbi

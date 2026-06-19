@@ -1,21 +1,22 @@
-name: ethernet_xcvu11p
 namespace: analog-devices
+name: ethernet_xcvu11p
 version: 0.0.0
 description: This file repackages Corundum MQNIC Core AXI with the sole purpose of
   providing it as an IP Core. The original file can be refereed
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/corundum/ethernet/xcvu11p/ethernet_xcvu11p.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ethernet
 - xcvu11p
 role: top
+desc_source: header

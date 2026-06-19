@@ -1,20 +1,17 @@
-name: axi_dmac_reset_manager
 namespace: analog-devices
+name: axi_dmac_reset_manager
 version: HEAD
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: Cross-domain reset and enable manager for AXI DMA controller request,
   destination, and source clock domains.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/corundum/corundum_core/mqnic_app_custom_params.vh
@@ -24,6 +21,9 @@ routertl_compat:
   - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
   - library/util_cdc/sync_bits.v
   - library/axi_dmac/axi_dmac_reset_manager.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi

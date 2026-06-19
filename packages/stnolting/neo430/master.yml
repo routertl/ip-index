@@ -1,20 +1,17 @@
-name: neo430
 namespace: stnolting
+name: neo430
 version: master
 commit_sha: 725ffa6943b16aec55952a8259e403d30ae57062
 published_at: '2021-11-23T08:13:21+01:00'
 description: ':information_source: Please check out the follow-up project: [The NEORV32
   RISC-V Processor](https://github.com/stnolting/neorv32)'
 license: BSD-3-Clause
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/stnolting/neo430.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 725ffa6943b16aec55952a8259e403d30ae57062
 routertl_compat:
-  language: vhdl-2008
   library: neo430
   files:
   - rtl/core/neo430_package.vhd
@@ -48,6 +45,9 @@ routertl_compat:
   - rtl/top_templates/neo430_top_avm.vhd
   - rtl/top_templates/neo430_top_axi4lite.vhd
   - rtl/top_templates/neo430_top_std_logic.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - asynchronous
 - axi4lite
@@ -61,37 +61,19 @@ tags:
 - sysconfig
 - transmitter
 - universal
-role: repo
-top_modules:
-- neo430_test
-- neo430_top_avm
-- neo430_top_axi4lite
-- neo430_top_std_logic
-components:
-- neo430_addr_gen
-- neo430_alu
-- neo430_boot_rom
-- neo430_cfu
-- neo430_control
-- neo430_cpu
-- neo430_crc
-- neo430_dmem
-- neo430_exirq
-- neo430_freq_gen
-- neo430_gpio
-- neo430_imem
-- neo430_muldiv
-- neo430_pwm
-- neo430_reg_file
-- neo430_spi
-- neo430_sysconfig
-- neo430_timer
-- neo430_top
-- neo430_trng
-- neo430_twi
-- neo430_uart
-- neo430_wb_interface
-- neo430_wdt
+role: top
+status: deprecated-upstream
+successor: stnolting/neorv32
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: readme
+external_uses:
+- library: iCE40UP
+  package: components
+provides_packages:
+- neo430_application_image
+- neo430_bootloader_image
+- neo430_package
 top_ports:
   neo430_test:
   - direction: in
@@ -445,16 +427,8 @@ top_ports:
     name: ext_ack_o
     type: std_logic_vector
     width: 07 downto 0
-total_entities: 28
-desc_source: readme
-status: deprecated-upstream
-successor: stnolting/neorv32
-health_tier: bronze
-last_verified_at: '2026-05-05'
-external_uses:
-- library: iCE40UP
-  package: components
-provides_packages:
-- neo430_application_image
-- neo430_bootloader_image
-- neo430_package
+top_modules:
+- neo430_test
+- neo430_top_avm
+- neo430_top_axi4lite
+- neo430_top_std_logic

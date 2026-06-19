@@ -1,24 +1,24 @@
-name: axi_id_remap_intf
 namespace: pulp-platform
+name: axi_id_remap_intf
 version: master
 commit_sha: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 published_at: '2026-05-07T16:14:15+02:00'
 description: Remaps AXI transaction IDs from a wider slave port to a narrower master
   port while enforcing per-ID and total in-flight transaction limits.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/axi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axi_intf.sv
   - src/axi_id_remap.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -28,30 +28,7 @@ tags:
 - intf
 - remap
 role: top
-components:
-- axi_atop_filter
-- axi_burst_splitter
-- axi_burst_splitter_gran
-- axi_cdc_dst
-- axi_cdc_src
-- axi_cut
-- axi_demux
-- axi_dw_downsizer
-- axi_dw_upsizer
-- axi_err_slv
-- axi_id_remap
-- axi_id_serialize
-- axi_lite_demux
-- axi_lite_multicut_intf
-- axi_lite_mux
-- axi_lite_to_axi
-- axi_mux
-- axi_serializer
-- axi_to_axi_lite
-- axi_to_detailed_mem
-- axi_to_mem
-- axi_xbar
-- axi_xbar_unmuxed
+desc_source: preserved
 top_ports:
   axi_id_remap_intf:
   - direction: in
@@ -126,4 +103,3 @@ top_ports:
     name: pop_i
     type: wire
     width: ''
-desc_source: preserved

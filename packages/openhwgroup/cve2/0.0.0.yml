@@ -1,18 +1,15 @@
-name: cve2
 namespace: openhwgroup
+name: cve2
 version: 0.0.0
 description: CVE2 is a class of 2-stage pipeline OpenHW Foundation cores. Currently,
   the only core in this class is the CV32E20. CV32E20 is a fork of the [Ibex](https://github.com/lowRISC/ibex)
   core.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/openhwgroup/cve2.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - rtl/cve2_pkg.sv
@@ -42,6 +39,9 @@ routertl_compat:
   - rtl/cve2_tracer_pkg.sv
   - rtl/cve2_tracer.sv
   - rtl/cve2_top_tracing.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - branch
 - compressed
@@ -55,31 +55,8 @@ tags:
 - registers
 - tracing
 - wishbone
-role: repo
+role: top
+desc_source: readme
 top_modules:
 - cve2_branch_predict
 - cve2_top_tracing
-components:
-- cve2_alu
-- cve2_clock_gate
-- cve2_compressed_decoder
-- cve2_controller
-- cve2_core
-- cve2_counter
-- cve2_cs_registers
-- cve2_csr
-- cve2_decoder
-- cve2_ex_block
-- cve2_fetch_fifo
-- cve2_id_stage
-- cve2_if_stage
-- cve2_load_store_unit
-- cve2_multdiv_fast
-- cve2_multdiv_slow
-- cve2_pmp
-- cve2_prefetch_buffer
-- cve2_register_file_ff
-- cve2_top
-- cve2_tracer
-- cve2_wb
-total_entities: 24

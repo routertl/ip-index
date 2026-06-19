@@ -1,21 +1,22 @@
-name: up_ad5766_sequencer
 namespace: analog-devices
+name: up_ad5766_sequencer
 version: 0.0.0
 description: Generates sequence data.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/up_xfer_cntrl.v
   - library/axi_ad5766/up_ad5766_sequencer.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad5766
 - sequencer
 role: component
+desc_source: preserved

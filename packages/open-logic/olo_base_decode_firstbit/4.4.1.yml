@@ -1,23 +1,22 @@
-name: olo_base_decode_firstbit
 namespace: open-logic
+name: olo_base_decode_firstbit
 version: 4.4.1
 commit_sha: d1407a7427d9201a7bcd8c37749ec083b13006dc
 published_at: '2026-03-10T06:51:30+01:00'
 description: This entity implements a pipelined first bit decoder. It finds out which
   is the lowest index of a bit set in the input vecotr.
-license: ''
-license_class: unknown
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/open-logic/open-logic.git
-  tag: 4.4.1
-  ip_yml_path: .
+  tag: v4.4.1
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
-  language: vhdl-2008
   library: olo
   files:
   - src/base/vhdl/olo_base_decode_firstbit.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
   package_deps:
   - open-logic/olo_base
 tags:
@@ -32,4 +31,3 @@ external_uses:
   package: en_cl_fix_pkg
 - library: work
   package: en_cl_fix_private_pkg
-provides_packages: []

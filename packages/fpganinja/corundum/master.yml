@@ -1,5 +1,5 @@
-name: corundum
 namespace: fpganinja
+name: corundum
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
@@ -7,15 +7,12 @@ description: 'Corundum 100G / 200G / 400G open-source NIC. Three subprojects: cn
   (DMA-lite), cndm_micro (microcoded engine), cndm_proto (prototype controller). Plus
   a board-level I2C controller.'
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
@@ -92,6 +89,9 @@ routertl_compat:
   - src/cndm_proto/rtl/cndm_proto_port.sv
   - src/cndm_proto/rtl/cndm_proto_core.sv
   - src/cndm_proto/rtl/cndm_proto_pcie_us.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - circuit
 - completion
@@ -105,29 +105,8 @@ tags:
 - receiver
 - transmit
 - transmitter
-role: subproject
-top_modules:
-- cndm_brd_ctrl_i2c
-- cndm_lite_pcie_us
-- cndm_micro_pcie_us
-- cndm_proto_pcie_us
-components:
-- cndm_lite_core
-- cndm_micro_cmd_mbox
-- cndm_micro_core
-- cndm_micro_cpl_wr
-- cndm_micro_desc_rd
-- cndm_micro_dp_mgr
-- cndm_micro_port
-- cndm_micro_queue_state
-- cndm_micro_rx
-- cndm_micro_tx
-- cndm_proto_core
-- cndm_proto_cpl_wr
-- cndm_proto_desc_rd
-- cndm_proto_port
-- cndm_proto_rx
-- cndm_proto_tx
+role: top
+desc_source: curator
 top_ports:
   cndm_brd_ctrl_i2c:
   - direction: in
@@ -265,5 +244,8 @@ top_ports:
     name: mac_axis_rx
     type: taxi_axis_if.snk
     width: ''
-total_entities: 20
-desc_source: curator
+top_modules:
+- cndm_brd_ctrl_i2c
+- cndm_lite_pcie_us
+- cndm_micro_pcie_us
+- cndm_proto_pcie_us

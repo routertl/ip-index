@@ -1,20 +1,17 @@
-name: t48
 namespace: opencores
+name: t48
 version: master
 commit_sha: f77d2f97eb831dba488f42fbde3ef55dec83066e
 published_at: '2008-05-02T21:20:41+00:00'
 description: Intel MCS-48 / 8048-family 8-bit microcontroller core in VHDL, implementing
   the original instruction set with on-chip ROM and RAM.
 license: BSD-2-Clause
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/t48.git
   tag: master
-  ip_yml_path: .
   resolved_commit: f77d2f97eb831dba488f42fbde3ef55dec83066e
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - rtl/vhdl/system/lpm_ram_dq.vhd
@@ -57,6 +54,9 @@ routertl_compat:
   - rtl/vhdl/t8243/t8243_async_notri.vhd
   - rtl/vhdl/t8243/t8243.vhd
   - rtl/vhdl/t8243/t8243_sync_notri.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - asynchronous
@@ -70,38 +70,25 @@ tags:
 - synchronizer
 - synchronous
 - wishbone
-role: repo
-top_modules:
-- LPM_RAM_DQ
-- LPM_ROM
-- t49_rom
-- t8039
-- t8048
-- t8050_wb
-- t8243
-- t8243_sync_notri
-components:
-- generic_ram_ena
-- t48_alu
-- t48_bus_mux
-- t48_clock_ctrl
-- t48_cond_branch
-- t48_core
-- t48_db_bus
-- t48_decoder
-- t48_dmem_ctrl
-- t48_int
-- t48_p1
-- t48_p2
-- t48_pmem_ctrl
-- t48_psw
-- t48_rom
-- t48_timer
-- t48_wb_master
-- t8039_notri
-- t8048_notri
-- t8243_async_notri
-- t8243_core
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
+external_uses:
+- library: work
+  package: LPM_COMPONENTS
+provides_packages:
+- t48_alu_pack
+- t48_comp_pack
+- t48_cond_branch_pack
+- t48_core_comp_pack
+- t48_decoder_pack
+- t48_dmem_ctrl_pack
+- t48_pack
+- t48_pmem_ctrl_pack
+- t48_system_comp_pack
+- t48_tb_pack
+- t8243_comp_pack
 top_ports:
   LPM_RAM_DQ:
   - direction: in
@@ -495,22 +482,12 @@ top_ports:
     name: p7_en_o
     type: std_logic
     width: ''
-total_entities: 29
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
-external_uses:
-- library: work
-  package: LPM_COMPONENTS
-provides_packages:
-- t48_alu_pack
-- t48_comp_pack
-- t48_cond_branch_pack
-- t48_core_comp_pack
-- t48_decoder_pack
-- t48_dmem_ctrl_pack
-- t48_pack
-- t48_pmem_ctrl_pack
-- t48_system_comp_pack
-- t48_tb_pack
-- t8243_comp_pack
+top_modules:
+- LPM_RAM_DQ
+- LPM_ROM
+- t49_rom
+- t8039
+- t8048
+- t8050_wb
+- t8243
+- t8243_sync_notri

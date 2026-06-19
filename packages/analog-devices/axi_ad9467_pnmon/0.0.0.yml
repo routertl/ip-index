@@ -1,20 +1,20 @@
-name: axi_ad9467_pnmon
 namespace: analog-devices
+name: axi_ad9467_pnmon
 version: 0.0.0
 description: Monitors ADC PN sequence.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_pnmon.v
   - library/axi_ad9467/axi_ad9467_pnmon.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad9467
 - amba
@@ -22,3 +22,4 @@ tags:
 - bus
 - pnmon
 role: component
+desc_source: preserved

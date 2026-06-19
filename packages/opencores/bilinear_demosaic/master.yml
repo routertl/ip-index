@@ -1,32 +1,29 @@
-name: bilinear_demosaic
 namespace: opencores
+name: bilinear_demosaic
 version: master
 commit_sha: 7717e0d7718be6f0628f1b9f8e8b5c1d1b51b7d4
 published_at: '2012-11-20T18:24:16+00:00'
 description: Bilinear-interpolation Bayer demosaicing block for camera image-sensor
   pipelines, converting raw mosaic data to RGB.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/bilinear_demosaic.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 7717e0d7718be6f0628f1b9f8e8b5c1d1b51b7d4
 routertl_compat:
-  language: verilog
   library: verilog
   files:
   - rtl/verilog/registerDelay.v
   - rtl/verilog/bilinearDemosaic.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags: []
-role: repo
-top_modules:
-- bilinearDemosaic
-- ramDualPort
-- ramFifo
-components:
-- registerDelay
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   bilinearDemosaic:
   - direction: in
@@ -439,7 +436,7 @@ top_ports:
     name: qA
     type: wire
     width: '[(DATA_WIDTH-1):0]'
-total_entities: 4
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- bilinearDemosaic
+- ramDualPort
+- ramFifo

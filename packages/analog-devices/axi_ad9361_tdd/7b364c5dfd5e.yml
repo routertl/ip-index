@@ -1,20 +1,17 @@
-name: axi_ad9361_tdd
 namespace: analog-devices
+name: axi_ad9361_tdd
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
 description: Manages time-division duplex (TDD) mode for AD9361 RF transceiver with
   register control and VCO/RF enable sequencing.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 7b364c5dfd5e
   resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_addsub.v
@@ -23,6 +20,9 @@ routertl_compat:
   - library/common/up_xfer_status.v
   - library/common/up_tdd_cntrl.v
   - library/axi_ad9361/axi_ad9361_tdd.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad9361
 - amba
@@ -30,3 +30,4 @@ tags:
 - bus
 - tdd
 role: component
+desc_source: preserved-suspect

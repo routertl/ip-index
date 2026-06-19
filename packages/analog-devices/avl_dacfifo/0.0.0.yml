@@ -1,16 +1,13 @@
-name: avl_dacfifo
 namespace: analog-devices
+name: avl_dacfifo
 version: 0.0.0
 description: FIFO buffer with ready/valid handshake and configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_b2g.v
@@ -21,33 +18,11 @@ routertl_compat:
   - library/common/ad_mem_asym.v
   - library/util_dacfifo/util_dacfifo_bypass.v
   - library/intel/avl_dacfifo/avl_dacfifo.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - avl
 - dacfifo
 role: top
-components:
-- ad_b2g
-- ad_g2b
-- ad_mem
-- ad_mem_asym
-- avl_dacfifo_rd
-- avl_dacfifo_wr
-- axi_ad9625_if
-- axi_ad9671_if
-- axi_adcfifo_dma
-- axi_adcfifo_wr
-- axi_dacfifo_address_buffer
-- axi_dacfifo_rd
-- axi_dacfifo_wr
-- axi_dmac_burst_memory
-- axi_dmac_regmap
-- axi_dmac_regmap_request
-- axi_dmac_response_manager
-- axi_dmac_transfer
-- axi_hdmi_tx_core
-- dmac_sg
-- i3c_controller_regmap
-- request_arb
-- util_axis_fifo
-- util_axis_fifo_asym
-- util_dacfifo_bypass
+desc_source: ports

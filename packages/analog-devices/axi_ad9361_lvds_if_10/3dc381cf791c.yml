@@ -1,22 +1,22 @@
-name: axi_ad9361_lvds_if_10
 namespace: analog-devices
+name: axi_ad9361_lvds_if_10
 version: 3dc381cf791c
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: Interfaces AD9361 with AXI.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 3dc381cf791c
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/axi_ad9361/intel/axi_ad9361_lvds_if_10.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - '10'
 - ad9361
@@ -29,6 +29,28 @@ tags:
 - signaling
 - voltage
 role: top
+desc_source: preserved
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo
 top_ports:
   axi_ad9361_lvds_if_10:
   - direction: in
@@ -151,25 +173,3 @@ top_ports:
     name: up_rstn
     type: wire
     width: ''
-desc_source: preserved
-external_uses:
-- library: work
-  package: axi_ctrlif
-- library: work
-  package: axi_streaming_dma_rx_fifo
-- library: work
-  package: axi_streaming_dma_tx_fifo
-- library: work
-  package: dma_fifo
-- library: work
-  package: fifo_synchronizer
-- library: work
-  package: i2s_clkgen
-- library: work
-  package: i2s_controller
-- library: work
-  package: i2s_rx
-- library: work
-  package: i2s_tx
-- library: work
-  package: pl330_dma_fifo

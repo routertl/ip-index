@@ -1,5 +1,5 @@
-name: neorv32
 namespace: neorv32
+name: neorv32
 version: d6260ef5a453
 commit_sha: d6260ef5a453a56259285b2b37df19a79517572b
 published_at: '2026-04-13T07:30:18+02:00'
@@ -7,15 +7,12 @@ description: The NEORV32 Processor is a **customizable microcontroller-like syst
   on chip (SoC)** built around the NEORV32 [RISC-V](https://riscv.org/) CPU that is
   written in **platform-independent VHDL**.
 license: BSD-3-Clause
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/stnolting/neorv32.git
-  tag: main
-  ip_yml_path: .
+  tag: d6260ef5a453
   resolved_commit: d6260ef5a453a56259285b2b37df19a79517572b
 routertl_compat:
-  language: vhdl-2008
   library: neorv32
   files:
   - rtl/core/neorv32_package.vhd
@@ -80,6 +77,9 @@ routertl_compat:
   - rtl/verilog/neorv32_verilog_wrapper.vhd
   - rtl/system_integration/xbus2axi4_bridge.vhd
   - rtl/system_integration/neorv32_vivado_ip.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - asynchronous
 - bootloader
@@ -93,7 +93,8 @@ tags:
 - transmitter
 - universal
 - xbus2axi4
-role: repo
+role: top
+desc_source: readme
 top_modules:
 - neoTRNG_cell
 - neorv32_bus_amo_rvs
@@ -119,59 +120,3 @@ top_modules:
 - neorv32_trng
 - neorv32_verilog_wrapper
 - neorv32_vivado_ip
-components:
-- neoTRNG
-- neorv32_bootrom
-- neorv32_bootrom_rom
-- neorv32_bus_amo_rmw
-- neorv32_cache
-- neorv32_cache_ram
-- neorv32_cfs
-- neorv32_clint
-- neorv32_cpu
-- neorv32_cpu_alu
-- neorv32_cpu_alu_bitmanip
-- neorv32_cpu_alu_cfu
-- neorv32_cpu_alu_cond
-- neorv32_cpu_alu_crypto
-- neorv32_cpu_alu_fpu
-- neorv32_cpu_alu_muldiv
-- neorv32_cpu_alu_shifter
-- neorv32_cpu_control
-- neorv32_cpu_counters
-- neorv32_cpu_decompressor
-- neorv32_cpu_frontend
-- neorv32_cpu_hwtrig
-- neorv32_cpu_lsu
-- neorv32_cpu_pmp
-- neorv32_cpu_regfile
-- neorv32_cpu_trace
-- neorv32_debug_auth
-- neorv32_debug_dm
-- neorv32_debug_dtm
-- neorv32_dma
-- neorv32_dmem
-- neorv32_dmem_ram
-- neorv32_gpio
-- neorv32_gptmr
-- neorv32_imem
-- neorv32_imem_ram
-- neorv32_imem_rom
-- neorv32_neoled
-- neorv32_onewire
-- neorv32_prim_cnt
-- neorv32_pwm
-- neorv32_sdi
-- neorv32_slink
-- neorv32_spi
-- neorv32_sys_clock
-- neorv32_sysinfo
-- neorv32_top
-- neorv32_tracer
-- neorv32_twd
-- neorv32_twi
-- neorv32_uart
-- neorv32_wdt
-- neorv32_xbus
-- xbus2axi4_bridge
-total_entities: 78

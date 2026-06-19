@@ -1,20 +1,17 @@
-name: usbhostslave
 namespace: opencores
+name: usbhostslave
 version: master
 commit_sha: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
 published_at: '2011-03-18T17:52:17+00:00'
 description: USB 1.1 host and slave controller in one package, with serial interface
   engine, host control state machine, and slave endpoint logic. Wishbone bus interface.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/usbhostslave.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3508a22f1c3df7cd3c86fd2e6e6a12e025c90305
 routertl_compat:
-  language: verilog
   library: work
   files:
   - RTL/include/usbConstants_h.v
@@ -103,6 +100,9 @@ routertl_compat:
   - RTL/wrapper/usbHostSlaveCyc2Wrap.v
   - RTL/wrapper/usbSlaveCyc2Wrap.v
   - RTL/wrapper/usbSlaveCyc2Wrap_usb1t11.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - 48mhz
 - clock
@@ -116,76 +116,10 @@ tags:
 - usbslavecyc2wrap
 - wishbone
 - xilinx
-role: repo
-top_modules:
-- speedCtrlMux
-- testCase0
-- usbDeviceActelTop
-- usbDeviceAlteraTop
-- usbDeviceXilinxTop
-- usbHostCyc2Wrap
-- usbHostCyc2Wrap_usb1t11
-- usbHostSlaveAvalonWrap
-- usbHostSlaveCyc2Wrap
-- usbSlaveCyc2Wrap
-- usbSlaveCyc2Wrap_usb1t11
-components:
-- EP0
-- EP1Mouse
-- HCTxPortArbiter
-- RxFifo
-- RxfifoBI
-- SCTxPortArbiter
-- SIEReceiver
-- SIETransmitter
-- SOFController
-- SOFTransmit
-- TxFifo
-- TxfifoBI
-- USBHostControlBI
-- USBSlaveControlBI
-- USBTxWireArbiter
-- checkLineState
-- directControl
-- dpMem_dc
-- endpMux
-- fifoMux
-- fifoRTL
-- getPacket
-- hostSlaveMux
-- hostSlaveMuxBI
-- hostcontroller
-- lineControlUpdate
-- pll_48MHz
-- pll_48MHz_xilinx
-- processRxBit
-- processRxByte
-- processTxByte
-- readUSBWireData
-- rxStatusMonitor
-- sendPacket
-- sendPacketArbiter
-- sendPacketCheckPreamble
-- slaveDirectControl
-- slaveGetPacket
-- slaveRxStatusMonitor
-- slaveSendPacket
-- slavecontroller
-- testHarness
-- updateCRC16
-- updateCRC5
-- usbDevice
-- usbHost
-- usbHostControl
-- usbHostSlave
-- usbROM
-- usbSerialInterfaceEngine
-- usbSlave
-- usbSlaveControl
-- wb_master_model
-- wishBoneBI
-- wishboneArb
-- writeUSBWireData
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   speedCtrlMux:
   - direction: in
@@ -933,7 +867,15 @@ top_ports:
     name: vBusDetect
     type: wire
     width: ''
-total_entities: 67
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- speedCtrlMux
+- testCase0
+- usbDeviceActelTop
+- usbDeviceAlteraTop
+- usbDeviceXilinxTop
+- usbHostCyc2Wrap
+- usbHostCyc2Wrap_usb1t11
+- usbHostSlaveAvalonWrap
+- usbHostSlaveCyc2Wrap
+- usbSlaveCyc2Wrap
+- usbSlaveCyc2Wrap_usb1t11

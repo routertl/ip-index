@@ -1,20 +1,17 @@
-name: apbtoaes128
 namespace: opencores
+name: apbtoaes128
 version: HEAD
 commit_sha: 74ca9275976b427baf2fccd052cffbc7763e7b16
 published_at: '2026-05-05T12:54:29+02:00'
 description: "APB-to-AES-128 bridge \u2014 exposes an AES-128 cipher core through\
   \ the AMBA APB peripheral bus for register-mapped key/data access."
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/routertl-mirrors/apbtoaes128.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: 74ca9275976b427baf2fccd052cffbc7763e7b16
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/control_unit.v
@@ -28,6 +25,9 @@ routertl_compat:
   - rtl/aes_core.v
   - rtl/host_interface.v
   - rtl/aes_ip.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - columns
 - control
@@ -41,20 +41,10 @@ tags:
 - protocol
 - rows
 - shift
-role: repo
-top_modules:
-- aes_ip
-components:
-- aes_core
-- control_unit
-- data_swap
-- datapath
-- host_interface
-- key_expander
-- mix_columns
-- sBox
-- sBox_8
-- shift_rows
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: verdict
 top_ports:
   aes_ip:
   - direction: out
@@ -113,9 +103,5 @@ top_ports:
     name: PRESETn
     type: wire
     width: ''
-total_entities: 11
-desc_source: verdict
-mirror_status: curated-mirror
-upstream_url: https://opencores.org/projects/apbtoaes128
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- aes_ip

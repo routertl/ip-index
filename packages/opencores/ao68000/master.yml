@@ -1,23 +1,23 @@
-name: ao68000
 namespace: opencores
+name: ao68000
 version: master
 commit_sha: f3d77fc77e17feef3b7220a73812400030fc7742
 published_at: '2011-02-24T20:04:55+00:00'
 description: Motorola 68000-compatible 16/32-bit processor with Wishbone bus interface,
   permissively licensed (BSD-2) for embedded use.
 license: BSD-2-Clause
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/ao68000.git
   tag: master
-  ip_yml_path: .
   resolved_commit: f3d77fc77e17feef3b7220a73812400030fc7742
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/ao68000.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - branch
 - bus
@@ -25,16 +25,10 @@ tags:
 - memory
 - microcode
 - registers
-role: repo
-top_modules:
-- alu
-- ao68000
-- bus_control
-- condition
-- decoder
-- memory_registers
-- microcode_branch
-- registers
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   alu:
   - direction: in
@@ -5004,7 +4998,12 @@ top_ports:
     name: branch_offset
     type: wire
     width: '[3:0]'
-total_entities: 8
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- alu
+- ao68000
+- bus_control
+- condition
+- decoder
+- memory_registers
+- microcode_branch
+- registers

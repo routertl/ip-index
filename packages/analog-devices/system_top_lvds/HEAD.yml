@@ -1,22 +1,22 @@
-name: system_top_lvds
 namespace: analog-devices
+name: system_top_lvds
 version: HEAD
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: SPI with MDIO interface
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - projects/dc2677a/c5soc/system_top_lvds.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - differential
 - low
@@ -25,6 +25,28 @@ tags:
 - system
 - voltage
 role: top
+desc_source: ports
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo
 top_ports:
   system_top_lvds:
   - direction: in
@@ -287,25 +309,3 @@ top_ports:
     name: sdo_n
     type: wire
     width: ''
-desc_source: ports
-external_uses:
-- library: work
-  package: axi_ctrlif
-- library: work
-  package: axi_streaming_dma_rx_fifo
-- library: work
-  package: axi_streaming_dma_tx_fifo
-- library: work
-  package: dma_fifo
-- library: work
-  package: fifo_synchronizer
-- library: work
-  package: i2s_clkgen
-- library: work
-  package: i2s_controller
-- library: work
-  package: i2s_rx
-- library: work
-  package: i2s_tx
-- library: work
-  package: pl330_dma_fifo

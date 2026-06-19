@@ -1,31 +1,30 @@
-name: sha_core
 namespace: opencores
+name: sha_core
 version: master
 commit_sha: f90e67a6040d7dd5de54188ed0b8b7ec05d4ac85
 published_at: '2004-05-20T12:42:31+00:00'
 description: "SHA-1 (160-bit Secure Hash Algorithm) cryptographic hash core \u2014\
   \ single-block hashing primitive."
 license: OpenCores-Permissive-1.0
-license_class: unknown
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/sha_core.git
   tag: master
-  ip_yml_path: .
   resolved_commit: f90e67a6040d7dd5de54188ed0b8b7ec05d4ac85
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/sha1.v
   - rtl/sha256.v
   - rtl/sha512.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags: []
-role: repo
-top_modules:
-- sha1
-- sha256
-- sha512
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: verdict
 top_ports:
   sha1:
   - direction: in
@@ -126,7 +125,7 @@ top_ports:
     name: cmd_o
     type: wire
     width: '[4:0]'
-total_entities: 3
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- sha1
+- sha256
+- sha512

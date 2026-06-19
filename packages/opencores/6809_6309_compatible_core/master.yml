@@ -1,20 +1,17 @@
-name: 6809_6309_compatible_core
 namespace: opencores
+name: 6809_6309_compatible_core
 version: master
 commit_sha: 8b231da2ee37806a9f3dad4aaf6cb685f1a76931
 published_at: '2014-07-07T03:57:00+00:00'
 description: Motorola 6809 / Hitachi 6309 8/16-bit hybrid processor compatible with
   both ISAs, 16-bit address space, dual accumulator.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/6809_6309_compatible_core.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 8b231da2ee37806a9f3dad4aaf6cb685f1a76931
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/verilog/defs.v
@@ -22,6 +19,9 @@ routertl_compat:
   - rtl/verilog/decoders.v
   - rtl/verilog/regblock.v
   - rtl/verilog/MC6809_cpu.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - alu
 - calc
@@ -31,24 +31,10 @@ tags:
 - mc6809
 - op
 - processor
-role: repo
-top_modules:
-- MC6809_cpu
-- alu16
-- alu8
-- arith16
-- arith8
-- decode_ea
-- decode_op
-- decode_regs
-- logic8
-- mul8x8
-- regblock
-- shift8
-components:
-- alu
-- calc_ea
-- decode_alu
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   MC6809_cpu:
   - direction: in
@@ -1110,7 +1096,16 @@ top_ports:
     name: q
     type: wire
     width: '[15:0]'
-total_entities: 15
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- MC6809_cpu
+- alu16
+- alu8
+- arith16
+- arith8
+- decode_ea
+- decode_op
+- decode_regs
+- logic8
+- mul8x8
+- regblock
+- shift8

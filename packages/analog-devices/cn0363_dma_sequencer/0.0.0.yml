@@ -1,19 +1,19 @@
-name: cn0363_dma_sequencer
 namespace: analog-devices
+name: cn0363_dma_sequencer
 version: 0.0.0
 description: DMA with ready/valid handshake
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/cn0363/cn0363_dma_sequencer/cn0363_dma_sequencer.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - cn0363
@@ -22,3 +22,4 @@ tags:
 - memory
 - sequencer
 role: top
+desc_source: ports

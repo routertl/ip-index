@@ -1,19 +1,16 @@
-name: mor1kx
 namespace: openrisc
+name: mor1kx
 version: master
 commit_sha: bb037a733255a523b871b9be8fdace0fb293cf3c
 published_at: '2025-08-21T19:51:28+01:00'
 description: This repository contains an OpenRISC 1000 compliant processor IP core.
 license: CERN-OHL-W-2.0
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/openrisc/mor1kx.git
   tag: master
-  ip_yml_path: .
   resolved_commit: bb037a733255a523b871b9be8fdace0fb293cf3c
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/verilog/mor1kx-defines.v
@@ -65,6 +62,9 @@ routertl_compat:
   - rtl/verilog/mor1kx_cpu_prontoespresso.v
   - rtl/verilog/mor1kx_cpu.v
   - rtl/verilog/mor1kx.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - cappuccino
 - control
@@ -78,56 +78,8 @@ tags:
 - saturation
 - ticktimer
 - wishbone
-role: repo
-top_modules:
-- mor1kx
-components:
-- arecip_lut
-- mor1kx_branch_prediction
-- mor1kx_branch_predictor_gshare
-- mor1kx_branch_predictor_saturation_counter
-- mor1kx_branch_predictor_simple
-- mor1kx_bus_if_wb32
-- mor1kx_cache_lru
-- mor1kx_cfgrs
-- mor1kx_cpu
-- mor1kx_cpu_cappuccino
-- mor1kx_cpu_espresso
-- mor1kx_cpu_prontoespresso
-- mor1kx_ctrl_cappuccino
-- mor1kx_ctrl_espresso
-- mor1kx_ctrl_prontoespresso
-- mor1kx_dcache
-- mor1kx_decode
-- mor1kx_decode_execute_cappuccino
-- mor1kx_dmmu
-- mor1kx_execute_alu
-- mor1kx_execute_ctrl_cappuccino
-- mor1kx_fetch_cappuccino
-- mor1kx_fetch_espresso
-- mor1kx_fetch_prontoespresso
-- mor1kx_fetch_tcm_prontoespresso
-- mor1kx_icache
-- mor1kx_immu
-- mor1kx_lsu_cappuccino
-- mor1kx_lsu_espresso
-- mor1kx_pcu
-- mor1kx_pic
-- mor1kx_rf_cappuccino
-- mor1kx_rf_espresso
-- mor1kx_simple_dpram_sclk
-- mor1kx_store_buffer
-- mor1kx_ticktimer
-- mor1kx_true_dpram_sclk
-- mor1kx_wb_mux_cappuccino
-- mor1kx_wb_mux_espresso
-- pfpu32_addsub
-- pfpu32_f2i
-- pfpu32_fcmp
-- pfpu32_i2f
-- pfpu32_muldiv
-- pfpu32_rnd
-- pfpu32_top
+role: top
+desc_source: readme
 top_ports:
   mor1kx:
   - direction: in
@@ -326,5 +278,5 @@ top_ports:
     name: snoop_en_i
     type: wire
     width: ''
-total_entities: 47
-desc_source: readme
+top_modules:
+- mor1kx

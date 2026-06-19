@@ -1,16 +1,13 @@
-name: request_arb
 namespace: analog-devices
+name: request_arb
 version: 0.0.0
 description: AXI4 arbiter with ready/valid handshake and configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/axi_dmac/inc_id.vh
@@ -41,9 +38,13 @@ routertl_compat:
   - library/axi_dmac/src_axi_stream.v
   - library/axi_dmac/src_fifo_inf.v
   - library/axi_dmac/request_arb.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - arb
 - arbiter
 - arbitration
 - request
 role: component
+desc_source: ports

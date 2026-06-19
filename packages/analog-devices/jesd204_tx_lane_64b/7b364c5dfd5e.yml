@@ -1,25 +1,25 @@
-name: jesd204_tx_lane_64b
 namespace: analog-devices
+name: jesd204_tx_lane_64b
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
 description: Transmits JESD204 data.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 7b364c5dfd5e
   resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/jesd204/jesd204_common/jesd204_crc12.v
   - library/jesd204/jesd204_common/jesd204_scrambler_64b.v
   - library/jesd204/jesd204_tx/jesd204_tx_header.v
   - library/jesd204/jesd204_tx/jesd204_tx_lane_64b.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - 64b
 - jesd204
@@ -28,3 +28,4 @@ tags:
 - transmitter
 - tx
 role: component
+desc_source: preserved

@@ -1,19 +1,19 @@
-name: jesd204_versal_gt_adapter_tx
 namespace: analog-devices
+name: jesd204_versal_gt_adapter_tx
 version: 0.0.0
 description: JESD204 adapter
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/jesd204/jesd204_versal_gt_adapter_tx/jesd204_versal_gt_adapter_tx.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adapter
 - bridge
@@ -26,3 +26,4 @@ tags:
 - tx
 - versal
 role: top
+desc_source: ports

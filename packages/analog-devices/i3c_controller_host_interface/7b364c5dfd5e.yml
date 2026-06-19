@@ -1,19 +1,16 @@
-name: i3c_controller_host_interface
 namespace: analog-devices
+name: i3c_controller_host_interface
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
 description: AXI4-Lite controller with SPI interface and ready/valid handshake
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 7b364c5dfd5e
   resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/i3c_controller/i3c_controller_host_interface/i3c_controller_cmd_parser.v
@@ -31,89 +28,13 @@ routertl_compat:
   - library/i3c_controller/i3c_controller_host_interface/i3c_controller_unpack.v
   - library/i3c_controller/i3c_controller_host_interface/i3c_controller_write_ibi.v
   - library/i3c_controller/i3c_controller_host_interface/i3c_controller_host_interface.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - controller
 - host
 - i3c
 - interface
 role: top
-components:
-- ad408x_phy
-- ad_ip_jesd204_tpl_adc
-- ad_ip_jesd204_tpl_adc_regmap
-- ad_ip_jesd204_tpl_dac_regmap
-- ad_mem
-- ad_mem_dual
-- ad_rst
-- ad_serdes_in
-- avl_dacfifo_rd
-- axi_ad35xxr_core
-- axi_ad9122_core
-- axi_ad9361_rx
-- axi_ad9361_tx
-- axi_ad9434_core
-- axi_ad9434_if
-- axi_ad9625_if
-- axi_ad9671_if
-- axi_ad9684_if
-- axi_ad9739a_core
-- axi_ad9740_core
-- axi_ad9783_core
-- axi_ad9963_rx
-- axi_ad9963_tx
-- axi_ada4355_if
-- axi_ada4355_regmap
-- axi_adcfifo_wr
-- axi_adrv9001_core
-- axi_adrv9001_rx
-- axi_adrv9001_sync_ctrl
-- axi_adrv9001_tx
-- axi_dacfifo_address_buffer
-- axi_dacfifo_rd
-- axi_dmac_burst_memory
-- axi_dmac_ext_sync
-- axi_dmac_regmap
-- axi_dmac_regmap_request
-- axi_dmac_reset_manager
-- axi_dmac_response_manager
-- axi_dmac_transfer
-- axi_gpreg_clock_mon
-- axi_hdmi_tx_core
-- axi_laser_driver_regmap
-- axi_logic_analyzer_reg
-- axi_pulse_gen_regmap
-- axi_pwm_gen_regmap
-- axi_tdd_regmap
-- axi_xcvrlb_1
-- data_offload_fsm
-- data_offload_regmap
-- dmac_sg
-- hsci_master_top
-- i3c_controller_cmd_parser
-- i3c_controller_pack
-- i3c_controller_regmap
-- i3c_controller_unpack
-- i3c_controller_write_ibi
-- jesd204_tx_ctrl
-- jesd204_tx_gearbox
-- jesd204_up_ilas_mem
-- jesd204_up_rx
-- jesd204_up_rx_lane
-- jesd204_up_sysref
-- jesd204_up_tx
-- request_arb
-- sync_bits
-- sync_data
-- sync_event
-- sync_gray
-- up_adc_common
-- up_axi
-- up_clkgen
-- up_dac_common
-- up_delay_cntrl
-- up_hdmi_rx
-- up_hdmi_tx
-- util_adxcvr_xch
-- util_axis_fifo
-- util_axis_fifo_address_generator
-- util_axis_fifo_asym
+desc_source: ports

@@ -1,20 +1,17 @@
-name: taxi-xfcp
 namespace: fpganinja
+name: taxi-xfcp
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
 description: 'XFCP debug protocol: UART transport, APB / AXI / AXIL / I2C-master modules,
   stats module, fabric switch.'
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
@@ -41,6 +38,9 @@ routertl_compat:
   - src/prim/rtl/taxi_arbiter.sv
   - src/xfcp/rtl/taxi_xfcp_switch.sv
   - src/xfcp/rtl/taxi_xfcp_mod_stats.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - advanced
 - asynchronous
@@ -54,16 +54,8 @@ tags:
 - switch
 - transmitter
 - universal
-role: subproject
-top_modules:
-- taxi_xfcp_if_uart
-- taxi_xfcp_mod_apb
-- taxi_xfcp_mod_axi
-- taxi_xfcp_mod_i2c_master
-- taxi_xfcp_mod_stats
-components:
-- taxi_xfcp_mod_axil
-- taxi_xfcp_switch
+role: top
+desc_source: curator
 top_ports:
   taxi_xfcp_if_uart:
   - direction: in
@@ -194,5 +186,9 @@ top_ports:
     name: s_axis_stat
     type: taxi_axis_if.snk
     width: ''
-total_entities: 7
-desc_source: curator
+top_modules:
+- taxi_xfcp_if_uart
+- taxi_xfcp_mod_apb
+- taxi_xfcp_mod_axi
+- taxi_xfcp_mod_i2c_master
+- taxi_xfcp_mod_stats

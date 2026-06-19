@@ -1,22 +1,22 @@
-name: dest_axi_stream
 namespace: analog-devices
+name: dest_axi_stream
 version: 0.0.0
 description: Dest IP core with ready/valid handshake and configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/axi_dmac/inc_id.vh
   - library/axi_dmac/resp.vh
   - library/axi_dmac/response_generator.v
   - library/axi_dmac/dest_axi_stream.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -24,3 +24,4 @@ tags:
 - dest
 - stream
 role: component
+desc_source: ports

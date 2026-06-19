@@ -1,24 +1,23 @@
-name: olo_intf_uart
 namespace: open-logic
+name: olo_intf_uart
 version: 4.4.1
 commit_sha: d1407a7427d9201a7bcd8c37749ec083b13006dc
 published_at: '2026-03-10T06:51:30+01:00'
 description: This entity implements a simple UART.
-license: ''
-license_class: unknown
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/open-logic/open-logic.git
-  tag: 4.4.1
-  ip_yml_path: .
+  tag: v4.4.1
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
-  language: vhdl-2008
   library: olo
   files:
   - src/base/vhdl/olo_base_strobe_gen.vhd
   - src/intf/vhdl/olo_intf_sync.vhd
   - src/intf/vhdl/olo_intf_uart.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
   package_deps:
   - open-logic/olo_base
 tags:
@@ -33,30 +32,12 @@ tags:
 - uart
 - universal
 role: top
-components:
-- olo_axi_master_simple
-- olo_base_arb_prio
-- olo_base_arb_rr
-- olo_base_cc_bits
-- olo_base_cc_pulse
-- olo_base_cc_reset
-- olo_base_cc_simple
-- olo_base_crc
-- olo_base_decode_firstbit
-- olo_base_delay
-- olo_base_dyn_sft
-- olo_base_fifo_packet
-- olo_base_fifo_sync
-- olo_base_pl_stage
-- olo_base_ram_sdp
-- olo_base_strobe_gen
-- olo_base_wconv_n2xn
-- olo_base_wconv_xn2n
-- olo_fix_mult
-- olo_fix_resize
-- olo_fix_round
-- olo_fix_saturate
-- olo_intf_sync
+desc_source: header
+external_uses:
+- library: work
+  package: en_cl_fix_pkg
+- library: work
+  package: en_cl_fix_private_pkg
 top_ports:
   olo_intf_uart:
   - direction: in
@@ -99,10 +80,3 @@ top_ports:
     name: Uart_Rx
     type: std_logic
     width: ''
-desc_source: header
-external_uses:
-- library: work
-  package: en_cl_fix_pkg
-- library: work
-  package: en_cl_fix_private_pkg
-provides_packages: []

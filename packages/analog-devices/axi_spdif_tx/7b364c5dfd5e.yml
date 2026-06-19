@@ -1,24 +1,24 @@
-name: axi_spdif_tx
 namespace: analog-devices
+name: axi_spdif_tx
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
 description: AXI4-Lite transmit engine with AXI4-Stream interface and memory interface
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 7b364c5dfd5e
   resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - library/axi_spdif_tx/tx_package.vhd
   - library/axi_spdif_tx/tx_encoder.vhd
   - library/axi_spdif_tx/axi_spdif_tx.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -28,5 +28,4 @@ tags:
 - transmitter
 - tx
 role: top
-components:
-- tx_encoder
+desc_source: ports

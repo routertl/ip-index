@@ -1,5 +1,5 @@
-name: i3c_controller_cmd_parser
 namespace: analog-devices
+name: i3c_controller_cmd_parser
 version: 3dc381cf791c
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
@@ -7,19 +7,19 @@ description: Parse commands. When the first command indicates a pair command (e.
   CCC), await next command to complete request (e.g. add CCC ID to parsed CCC command).
   If it is a simple command (e.g. private transfer), their is no pair command.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 3dc381cf791c
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
   - library/i3c_controller/i3c_controller_host_interface/i3c_controller_cmd_parser.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - cmd
 - controller

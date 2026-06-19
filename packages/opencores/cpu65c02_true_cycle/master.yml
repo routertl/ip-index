@@ -1,20 +1,17 @@
-name: cpu65c02_true_cycle
 namespace: opencores
+name: cpu65c02_true_cycle
 version: master
 commit_sha: acd38f0ec29facbf7a0d6c144b20a4757bfc0358
 published_at: '2013-08-02T08:40:04+00:00'
 description: Cycle-accurate WDC 65C02 8-bit processor recreating the original instruction
   set with bus timing matching the silicon.
 license: GPL-3.0-or-later
-license_class: strong-copyleft
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/cpu65c02_true_cycle.git
   tag: master
-  ip_yml_path: .
   resolved_commit: acd38f0ec29facbf7a0d6c144b20a4757bfc0358
 routertl_compat:
-  language: vhdl-2008
   library: r65c02_tc
   files:
   - rtl/vhdl/fsm_execution_unit.vhd
@@ -24,6 +21,9 @@ routertl_compat:
   - rtl/vhdl/regbank_axy.vhd
   - rtl/vhdl/core.vhd
   - rtl/vhdl/r65c02_tc.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - axy
 - execution
@@ -36,16 +36,10 @@ tags:
 - register
 - sp
 - tc
-role: repo
-top_modules:
-- r65c02_tc
-components:
-- core
-- fsm_execution_unit
-- fsm_intnmi
-- reg_pc
-- reg_sp
-- regbank_axy
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   r65c02_tc:
   - direction: in
@@ -100,7 +94,5 @@ top_ports:
     name: wr_o
     type: std_logic
     width: ''
-total_entities: 7
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- r65c02_tc

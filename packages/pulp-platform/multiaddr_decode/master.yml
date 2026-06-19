@@ -1,27 +1,28 @@
-name: multiaddr_decode
 namespace: pulp-platform
+name: multiaddr_decode
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Decodes which address map rules match a given address set in {addr, mask}
   representation.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/multiaddr_decode.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - decode
 - multiaddr
 role: top
+desc_source: preserved
 top_ports:
   multiaddr_decode:
   - direction: in
@@ -48,4 +49,3 @@ top_ports:
     name: address
     type: wire
     width: ''
-desc_source: preserved

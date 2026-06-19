@@ -1,23 +1,23 @@
-name: jesd204_tx_ctrl
 namespace: analog-devices
+name: jesd204_tx_ctrl
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
 description: JESD204 controller with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 7b364c5dfd5e
   resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/util_cdc/sync_bits.v
   - library/jesd204/jesd204_tx/jesd204_tx_ctrl.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - control
 - controller
@@ -27,3 +27,4 @@ tags:
 - transmitter
 - tx
 role: component
+desc_source: ports

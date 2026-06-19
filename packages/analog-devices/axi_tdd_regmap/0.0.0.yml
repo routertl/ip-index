@@ -1,17 +1,14 @@
-name: axi_tdd_regmap
 namespace: analog-devices
+name: axi_tdd_regmap
 version: 0.0.0
 description: Provides AXI register interface for configuring and controlling time-division
   duplex (TDD) channel timing and synchronization.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - library/axi_tdd/axi_tdd_pkg.sv
@@ -19,6 +16,9 @@ routertl_compat:
   - library/util_cdc/sync_data.v
   - library/util_cdc/sync_event.v
   - library/axi_tdd/axi_tdd_regmap.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -26,3 +26,4 @@ tags:
 - regmap
 - tdd
 role: component
+desc_source: preserved

@@ -1,20 +1,20 @@
-name: jesd204_soft_pcs_tx
 namespace: analog-devices
+name: jesd204_soft_pcs_tx
 version: 0.0.0
 description: JESD204 transmit engine with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/jesd204/jesd204_soft_pcs_tx/jesd204_8b10b_encoder.v
   - library/jesd204/jesd204_soft_pcs_tx/jesd204_soft_pcs_tx.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - jesd204
 - pcs
@@ -23,5 +23,4 @@ tags:
 - transmitter
 - tx
 role: top
-components:
-- jesd204_8b10b_encoder
+desc_source: ports

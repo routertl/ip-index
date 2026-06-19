@@ -1,25 +1,25 @@
-name: en_cl_fix_saturate
 namespace: enclustra
+name: en_cl_fix_saturate
 version: HEAD
 commit_sha: d2ce1a617bc8ba466244a4e500a6edbeea6dba7a
 published_at: '2026-04-13T08:56:36+02:00'
 description: Converts fixed-point data between formats with optional saturation and
   pipeline registration.
 license: MIT
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/enclustra/en_cl_fix.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: d2ce1a617bc8ba466244a4e500a6edbeea6dba7a
 routertl_compat:
-  language: vhdl-2008
   library: en_tb
   files:
   - hdl/en_cl_fix_private_pkg.vhd
   - hdl/en_cl_fix_pkg.vhd
   - hdl/en_cl_fix_saturate.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - cl
 - en

@@ -1,19 +1,16 @@
-name: cdc_fifo_gray_dst_clearable
 namespace: pulp-platform
+name: cdc_fifo_gray_dst_clearable
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: FIFO buffer with ready/valid handshake and configurable parameters
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/binary_to_gray.sv
@@ -25,6 +22,9 @@ routertl_compat:
   - src/cdc_reset_ctrlr.sv
   - src/gray_to_binary.sv
   - src/cdc_fifo_gray_clearable.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - buffer
 - cdc
@@ -37,16 +37,9 @@ tags:
 - gray
 - queue
 role: top
-components:
-- binary_to_gray
-- cdc_4phase
-- cdc_reset_ctrlr
-- gray_to_binary
-- spill_register
-- spill_register_flushable
-- stream_xbar
-- sync
-- sync_wedge
+desc_source: ports
+provides_packages:
+- cdc_reset_ctrlr_pkg
 top_ports:
   cdc_fifo_gray_dst_clearable:
   - direction: in
@@ -117,6 +110,3 @@ top_ports:
     name: async_rptr_o
     type: wire
     width: '[LOG_DEPTH:0]'
-desc_source: ports
-provides_packages:
-- cdc_reset_ctrlr_pkg

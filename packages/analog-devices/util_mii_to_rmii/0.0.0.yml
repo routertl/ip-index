@@ -1,21 +1,21 @@
-name: util_mii_to_rmii
 namespace: analog-devices
+name: util_mii_to_rmii
 version: 0.0.0
 description: MII to RMII converter.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/util_mii_to_rmii/mac_phy_link.v
   - library/util_mii_to_rmii/phy_mac_link.v
   - library/util_mii_to_rmii/util_mii_to_rmii.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - independent
 - interface
@@ -24,6 +24,4 @@ tags:
 - rmii
 - util
 role: top
-components:
-- mac_phy_link
-- phy_mac_link
+desc_source: preserved

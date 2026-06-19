@@ -1,25 +1,28 @@
-name: dualflexpress
 namespace: zipcpu
+name: dualflexpress
 version: master
 commit_sha: f0a3d2ac4c0e2d4bd2a7847bc0df24bb3a7c11ad
 published_at: '2021-01-25T11:57:49-05:00'
 description: Dual-channel Wishbone-controlled QSPI flash memory controller supporting
   configurable addressing, pipelined transactions, and optional erase/program operations.
 license: GPL-3.0-or-later
-license_class: strong-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/ZipCPU/qspiflash.git
   tag: master
-  ip_yml_path: .
   resolved_commit: f0a3d2ac4c0e2d4bd2a7847bc0df24bb3a7c11ad
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/dualflexpress.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags: []
 role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: preserved
 top_ports:
   dualflexpress:
   - direction: out
@@ -86,6 +89,3 @@ top_ports:
     name: initial
     type: wire
     width: ''
-desc_source: preserved
-health_tier: bronze
-last_verified_at: '2026-05-05'

@@ -1,20 +1,17 @@
-name: ad_ip_jesd204_tpl_dac_channel
 namespace: analog-devices
+name: ad_ip_jesd204_tpl_dac_channel
 version: HEAD
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: JESD204 DAC channel processor that selects between DMA data, DDS-generated
   signals, and test patterns, with optional IQ correction and masking.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/corundum/corundum_core/mqnic_app_custom_params.vh
@@ -31,6 +28,9 @@ routertl_compat:
   - library/common/ad_dds.v
   - library/common/ad_iqcor.v
   - library/jesd204/ad_ip_jesd204_tpl_dac/ad_ip_jesd204_tpl_dac_channel.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - analog
 - channel

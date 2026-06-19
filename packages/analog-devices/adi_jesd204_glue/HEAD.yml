@@ -1,46 +1,28 @@
-name: adi_jesd204_glue
 namespace: analog-devices
+name: adi_jesd204_glue
 version: HEAD
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: Interfaces JESD204 PLL control signals between different clock generation
   domains.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/intel/adi_jesd204/adi_jesd204_glue.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adi
 - glue
 - jesd204
 role: top
-top_ports:
-  adi_jesd204_glue:
-  - direction: in
-    name: in_pll_powerdown
-    type: wire
-    width: ''
-  - direction: out
-    name: out_pll_powerdown
-    type: wire
-    width: ''
-  - direction: out
-    name: out_mcgb_rst
-    type: wire
-    width: ''
-  - direction: out
-    name: out_pll_select_gnd
-    type: wire
-    width: ''
 desc_source: preserved
 external_uses:
 - library: work
@@ -63,3 +45,21 @@ external_uses:
   package: i2s_tx
 - library: work
   package: pl330_dma_fifo
+top_ports:
+  adi_jesd204_glue:
+  - direction: in
+    name: in_pll_powerdown
+    type: wire
+    width: ''
+  - direction: out
+    name: out_pll_powerdown
+    type: wire
+    width: ''
+  - direction: out
+    name: out_mcgb_rst
+    type: wire
+    width: ''
+  - direction: out
+    name: out_pll_select_gnd
+    type: wire
+    width: ''

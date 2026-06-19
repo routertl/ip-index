@@ -1,33 +1,28 @@
-name: axivfifo
 namespace: zipcpu
+name: axivfifo
 version: master
 commit_sha: df8e7649acf68544a152e39a4589c8e894a4cd0b
 published_at: '2026-03-10T13:49:52-04:00'
 description: AXI4 FIFO buffer with AXI4-Stream interface and FIFO interface
 license: GPL-3.0-or-later
-license_class: strong-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/ZipCPU/wb2axip.git
   tag: master
-  ip_yml_path: .
   resolved_commit: df8e7649acf68544a152e39a4589c8e894a4cd0b
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/sfifo.v
   - rtl/axivfifo.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags: []
 role: top
-components:
-- axi2axilite
-- axi3reorder
-- axidma
-- axilfetch
-- aximrd2wbsp
-- aximwr2wbsp
-- sfifo
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: ports
 top_ports:
   axivfifo:
   - direction: in
@@ -242,6 +237,3 @@ top_ports:
     name: o_fill
     type: wire
     width: '[C_AXI_ADDR_WIDTH-ADDRLSB:0]'
-desc_source: ports
-health_tier: bronze
-last_verified_at: '2026-05-05'

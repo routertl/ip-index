@@ -1,19 +1,19 @@
-name: jesd204_phy_glue
 namespace: analog-devices
+name: jesd204_phy_glue
 version: 0.0.0
 description: JESD204 with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/intel/jesd204_phy/jesd204_phy_glue.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - glue
 - jesd204
@@ -21,3 +21,4 @@ tags:
 - phy
 - physical
 role: top
+desc_source: ports

@@ -1,20 +1,17 @@
-name: sdr_ctrl
 namespace: opencores
+name: sdr_ctrl
 version: master
 commit_sha: 4f3f0b4e000039e09bacbae41fe7db5a7309b5a8
 published_at: '2013-06-17T04:44:18+00:00'
 description: Single-data-rate SDRAM controller with Wishbone host bus, supporting
   standard 16-bit/32-bit memory configurations and bank interleaving.
 license: GPL-2.0-or-later
-license_class: strong-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/sdr_ctrl.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 4f3f0b4e000039e09bacbae41fe7db5a7309b5a8
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/core/sdrc_define.v
@@ -28,6 +25,9 @@ routertl_compat:
   - rtl/wb2sdrc/wb2sdrc.v
   - rtl/top/sdrc_top.v
   - rtl/lib/sync_fifo.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - async
 - asynchronous
@@ -41,19 +41,10 @@ tags:
 - sync
 - synchronizer
 - synchronous
-role: repo
-top_modules:
-- sdrc_top
-- sync_fifo
-components:
-- async_fifo
-- sdrc_bank_ctl
-- sdrc_bank_fsm
-- sdrc_bs_convert
-- sdrc_core
-- sdrc_req_gen
-- sdrc_xfr_ctl
-- wb2sdrc
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   sdrc_top:
   - direction: in
@@ -229,7 +220,6 @@ top_ports:
     name: full
     type: wire
     width: ''
-total_entities: 10
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- sdrc_top
+- sync_fifo

@@ -1,20 +1,17 @@
-name: 1000base-x
 namespace: opencores
+name: 1000base-x
 version: master
 commit_sha: 9fe612b16e36bda3372286eef7354e64b52e950d
 published_at: '2012-02-22T23:59:47+00:00'
 description: 1000BASE-X physical coding sublayer (PCS) implementing IEEE 802.3 8b/10b
   encoding and synchronization for SFP-attached 1G optical transceivers.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/1000base-x.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 9fe612b16e36bda3372286eef7354e64b52e950d
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/verilog/ge_1000baseX_constants.v
@@ -30,6 +27,9 @@ routertl_compat:
   - rtl/verilog/ge_1000baseX_tx.v
   - rtl/verilog/ge_1000baseX.v
   - rtl/verilog/ge_1000baseX_test.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - 1000basex
 - 8b10b
@@ -43,19 +43,10 @@ tags:
 - synchronous
 - transmit
 - transmitter
-role: repo
-top_modules:
-- ge_1000baseX_test
-components:
-- clean_rst
-- decoder_8b10b
-- encoder_8b10b
-- ge_1000baseX
-- ge_1000baseX_an
-- ge_1000baseX_mdio
-- ge_1000baseX_rx
-- ge_1000baseX_sync
-- ge_1000baseX_tx
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   ge_1000baseX_test:
   - direction: in
@@ -142,7 +133,5 @@ top_ports:
     name: clock
     type: wire
     width: ''
-total_entities: 10
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- ge_1000baseX_test

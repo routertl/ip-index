@@ -1,20 +1,17 @@
-name: theia_gpu
 namespace: opencores
+name: theia_gpu
 version: master
 commit_sha: 032c448aec59a2182f50a1c2a6012e78c7a3d332
 published_at: '2011-08-22T03:28:39+00:00'
 description: GPU core implementing a 3D graphics rendering pipeline with programmable
   shading.
 license: GPL-2.0-or-later
-license_class: strong-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/theia_gpu.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 032c448aec59a2182f50a1c2a6012e78c7a3d332
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/aDefinitions.v
@@ -48,6 +45,9 @@ routertl_compat:
   - rtl/Theia.v
   - rtl/Module_HostWBM.v
   - rtl/Module_Host.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - asynchronous
 - busarbitrer
@@ -61,62 +61,10 @@ tags:
 - tmeminterface
 - upcounter
 - walkingone
-role: repo
-top_modules:
-- CIRCULAR_SHIFTLEFT_POSEDGE_EX
-- FFD32_POSEDGE
-- FFD_POSEDGE_ASYNC_RESET
-- FFD_POSEDGE_SYNCRONOUS_RESET
-- FFT1
-- FFToggleOnce_1Bit
-- INCREMENT
-- MUXFULLPARALELL_16bits_2SEL
-- MUXFULLPARALELL_16bits_2SEL_X
-- MUXFULLPARALELL_2SEL_GENERIC
-- MUXFULLPARALELL_3SEL_WALKINGONE
-- MUXFULLPARALELL_96bits_2SEL
-- Module_Host
-- RADIX_R_MUL_32_FULL_PARALLEL
-- RAM_SINGLE_READ_PORT
-- SELECT_1_TO_N
-- SHIFTER2_16_BITS
-- SHIFTLEFT_POSEDGE
-- SignedIntegerDivision
-- UPCOUNTER_POSEDGE
-- UnsignedIntegerDivision
-- UpCounter_16E
-- UpCounter_3
-- UpCounter_32
-components:
-- ArithmeticComparison
-- CIRCULAR_SHIFTLEFT_POSEDGE
-- ControlRegister
-- ControlUnit
-- ExecutionFSM
-- ExecutionUnit
-- FixedAddSub
-- FixedPointSquareRoot
-- IO_Unit
-- InstructionDecode
-- InstructionEntryPoint
-- InstructionFetch
-- MEM2WBMUnitB
-- MUX_4_TO_1_32Bits_FullParallel
-- MemoryUnit
-- Module_BusArbitrer
-- Module_OMemInterface
-- Module_TMemInterface
-- Modulus2N
-- RAM_DUAL_READ_PORT
-- ROM
-- SWAP_MEM
-- Swizzle3D
-- THEIA
-- THEIACORE
-- VectorALU
-- WBMaster
-- WishBoneMasterUnit
-- WishBoneSlaveUnit
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   CIRCULAR_SHIFTLEFT_POSEDGE_EX:
   - direction: in
@@ -1478,7 +1426,28 @@ top_ports:
     name: S
     type: wire
     width: ''
-total_entities: 53
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- CIRCULAR_SHIFTLEFT_POSEDGE_EX
+- FFD32_POSEDGE
+- FFD_POSEDGE_ASYNC_RESET
+- FFD_POSEDGE_SYNCRONOUS_RESET
+- FFT1
+- FFToggleOnce_1Bit
+- INCREMENT
+- MUXFULLPARALELL_16bits_2SEL
+- MUXFULLPARALELL_16bits_2SEL_X
+- MUXFULLPARALELL_2SEL_GENERIC
+- MUXFULLPARALELL_3SEL_WALKINGONE
+- MUXFULLPARALELL_96bits_2SEL
+- Module_Host
+- RADIX_R_MUL_32_FULL_PARALLEL
+- RAM_SINGLE_READ_PORT
+- SELECT_1_TO_N
+- SHIFTER2_16_BITS
+- SHIFTLEFT_POSEDGE
+- SignedIntegerDivision
+- UPCOUNTER_POSEDGE
+- UnsignedIntegerDivision
+- UpCounter_16E
+- UpCounter_3
+- UpCounter_32

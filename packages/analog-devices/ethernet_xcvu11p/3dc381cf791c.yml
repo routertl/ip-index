@@ -1,27 +1,49 @@
-name: ethernet_xcvu11p
 namespace: analog-devices
+name: ethernet_xcvu11p
 version: 3dc381cf791c
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: This file repackages Corundum MQNIC Core AXI with the sole purpose of
   providing it as an IP Core. The original file can be refereed
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 3dc381cf791c
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/corundum/ethernet/xcvu11p/ethernet_xcvu11p.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ethernet
 - xcvu11p
 role: top
+desc_source: header
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo
 top_ports:
   ethernet_xcvu11p:
   - direction: in
@@ -376,25 +398,3 @@ top_ports:
     name: qspi_1_cs
     type: wire
     width: ''
-desc_source: header
-external_uses:
-- library: work
-  package: axi_ctrlif
-- library: work
-  package: axi_streaming_dma_rx_fifo
-- library: work
-  package: axi_streaming_dma_tx_fifo
-- library: work
-  package: dma_fifo
-- library: work
-  package: fifo_synchronizer
-- library: work
-  package: i2s_clkgen
-- library: work
-  package: i2s_controller
-- library: work
-  package: i2s_rx
-- library: work
-  package: i2s_tx
-- library: work
-  package: pl330_dma_fifo

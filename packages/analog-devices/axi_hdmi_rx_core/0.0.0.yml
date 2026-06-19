@@ -1,16 +1,13 @@
-name: axi_hdmi_rx_core
 namespace: analog-devices
+name: axi_hdmi_rx_core
 version: 0.0.0
 description: Receives HDMI input and generates DMA output.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_csc.v
@@ -19,6 +16,9 @@ routertl_compat:
   - library/axi_hdmi_rx/axi_hdmi_rx_es.v
   - library/axi_hdmi_rx/axi_hdmi_rx_tpm.v
   - library/axi_hdmi_rx/axi_hdmi_rx_core.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -29,3 +29,4 @@ tags:
 - receiver
 - rx
 role: component
+desc_source: preserved

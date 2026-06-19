@@ -1,21 +1,21 @@
-name: axi_adc_trigger_reg
 namespace: analog-devices
+name: axi_adc_trigger_reg
 version: 0.0.0
 description: Configures ADC trigger conditions and parameters via AXI register interface,
   outputting trigger settings for level, edge, and threshold-based detection.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/up_xfer_cntrl.v
   - library/axi_adc_trigger/axi_adc_trigger_reg.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adc
 - amba
@@ -28,3 +28,4 @@ tags:
 - register
 - trigger
 role: component
+desc_source: preserved

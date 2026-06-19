@@ -1,20 +1,21 @@
-name: system_top
 namespace: analog-devices
+name: system_top
 version: 0.0.0
 description: Top-level system module interfacing GPIO, differential clock I/O, parallel
   data outputs, and SPI communication.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - projects/ad9783_ebz/zcu102/system_top.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - system
 role: top
+desc_source: preserved

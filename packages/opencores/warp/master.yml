@@ -1,20 +1,17 @@
-name: warp
 namespace: opencores
+name: warp
 version: master
 commit_sha: 7e4e8ed164356ae0906752eb7099204c16a5d3b5
 published_at: '2008-06-26T20:11:33+00:00'
 description: "Image warping pipeline with image-decay / temporal-aging effect \u2014\
   \ geometric distortion + temporal modulation."
 license: OpenCores-Permissive-1.0
-license_class: unknown
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/warp.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 7e4e8ed164356ae0906752eb7099204c16a5d3b5
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/roundrobin3.v
@@ -31,24 +28,14 @@ routertl_compat:
   - rtl/warpreg.v
   - rtl/writedest.v
   - rtl/warp.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags: []
-role: repo
-top_modules:
-- warp
-components:
-- arbiter3
-- boundarycheck
-- bresenham
-- decay
-- divider10
-- fetchmesh
-- fetchsource
-- pixeladdresses
-- roundrobin3
-- triangle
-- triangleany
-- warpreg
-- writedest
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: verdict
 top_ports:
   warp:
   - direction: in
@@ -127,7 +114,5 @@ top_ports:
     name: '2'
     type: wire
     width: ''
-total_entities: 14
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- warp

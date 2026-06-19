@@ -1,16 +1,13 @@
-name: axi_jesd204_tx
 namespace: analog-devices
+name: axi_jesd204_tx
 version: 0.0.0
 description: AXI4-Lite transmit engine with JESD204 interface and memory interface
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/up_clock_mon.v
@@ -22,6 +19,9 @@ routertl_compat:
   - library/jesd204/axi_jesd204_tx/jesd204_up_tx.v
   - library/common/up_axi.v
   - library/jesd204/axi_jesd204_tx/axi_jesd204_tx.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -31,65 +31,4 @@ tags:
 - transmitter
 - tx
 role: top
-components:
-- ad408x_phy
-- ad_ip_jesd204_tpl_adc
-- ad_ip_jesd204_tpl_adc_regmap
-- ad_ip_jesd204_tpl_dac_regmap
-- ad_serdes_in
-- axi_ad35xxr_core
-- axi_ad9122_core
-- axi_ad9361_rx
-- axi_ad9361_tx
-- axi_ad9434_core
-- axi_ad9434_if
-- axi_ad9684_if
-- axi_ad9739a_core
-- axi_ad9740_core
-- axi_ad9783_core
-- axi_ad9963_rx
-- axi_ad9963_tx
-- axi_ada4355_if
-- axi_ada4355_regmap
-- axi_adrv9001_core
-- axi_adrv9001_rx
-- axi_adrv9001_sync_ctrl
-- axi_adrv9001_tx
-- axi_dmac_burst_memory
-- axi_dmac_ext_sync
-- axi_dmac_regmap
-- axi_dmac_regmap_request
-- axi_dmac_reset_manager
-- axi_dmac_response_manager
-- axi_dmac_transfer
-- axi_gpreg_clock_mon
-- axi_laser_driver_regmap
-- axi_pulse_gen_regmap
-- axi_pwm_gen_regmap
-- axi_tdd_regmap
-- axi_xcvrlb_1
-- data_offload_fsm
-- data_offload_regmap
-- dmac_sg
-- i3c_controller_regmap
-- jesd204_tx_ctrl
-- jesd204_tx_gearbox
-- jesd204_up_common
-- jesd204_up_ilas_mem
-- jesd204_up_rx
-- jesd204_up_rx_lane
-- jesd204_up_sysref
-- jesd204_up_tx
-- request_arb
-- sync_bits
-- sync_data
-- sync_event
-- up_adc_common
-- up_axi
-- up_clock_mon
-- up_dac_common
-- up_hdmi_rx
-- up_hdmi_tx
-- util_adxcvr_xch
-- util_axis_fifo
-- util_axis_fifo_asym
+desc_source: ports

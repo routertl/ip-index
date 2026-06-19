@@ -1,19 +1,16 @@
-name: 8bit_vedic_multiplier
 namespace: opencores
+name: 8bit_vedic_multiplier
 version: 3cd5ea40cadd
 commit_sha: 3cd5ea40cadd7d5dd6746ef390758a8ded01ac97
 published_at: '2026-05-05T12:54:06+02:00'
 description: Multiplies two 8-bit unsigned integers to produce a 16-bit product.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/routertl-mirrors/8bit_vedic_multiplier.git
-  tag: main
-  ip_yml_path: .
+  tag: 3cd5ea40cadd
   resolved_commit: 3cd5ea40cadd7d5dd6746ef390758a8ded01ac97
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/half_adder.v
@@ -25,6 +22,9 @@ routertl_compat:
   - rtl/vedic2x2.v
   - rtl/vedic4x4.v
   - rtl/vedic8x8.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - 12bit
 - 4bit
@@ -34,18 +34,10 @@ tags:
 - full
 - half
 - ripple
-role: repo
-top_modules:
-- vedic8x8
-components:
-- full_adder
-- half_adder
-- ripple_adder_12bit
-- ripple_adder_4bit
-- ripple_adder_6bit
-- ripple_adder_8bit
-- vedic2x2
-- vedic4x4
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: preserved
 top_ports:
   vedic8x8:
   - direction: in
@@ -56,9 +48,5 @@ top_ports:
     name: prod
     type: wire
     width: '[15:0]'
-total_entities: 9
-desc_source: preserved
-mirror_status: curated-mirror
-upstream_url: https://opencores.org/projects/8bit_vedic_multiplier
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- vedic8x8

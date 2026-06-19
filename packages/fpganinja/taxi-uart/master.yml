@@ -1,19 +1,16 @@
-name: taxi-uart
 namespace: fpganinja
+name: taxi-uart
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
 description: UART top + rx + tx primitives.
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
@@ -21,6 +18,9 @@ routertl_compat:
   - src/lss/rtl/taxi_uart_rx.sv
   - src/lss/rtl/taxi_uart_tx.sv
   - src/lss/rtl/taxi_uart.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - asynchronous
 - brg
@@ -34,13 +34,8 @@ tags:
 - tx
 - uart
 - universal
-role: subproject
-top_modules:
-- taxi_uart
-components:
-- taxi_uart_brg
-- taxi_uart_rx
-- taxi_uart_tx
+role: top
+desc_source: curator
 top_ports:
   taxi_uart:
   - direction: in
@@ -55,5 +50,5 @@ top_ports:
     name: m_axis_rx
     type: taxi_axis_if.src
     width: ''
-total_entities: 4
-desc_source: curator
+top_modules:
+- taxi_uart

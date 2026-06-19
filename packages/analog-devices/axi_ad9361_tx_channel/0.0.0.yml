@@ -1,16 +1,13 @@
-name: axi_ad9361_tx_channel
 namespace: analog-devices
+name: axi_ad9361_tx_channel
 version: 0.0.0
 description: Transmits digital data to DAC.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/xilinx/common/ad_mul.v
@@ -24,6 +21,9 @@ routertl_compat:
   - library/common/up_xfer_cntrl.v
   - library/common/up_dac_channel.v
   - library/axi_ad9361/axi_ad9361_tx_channel.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad9361
 - amba
@@ -34,3 +34,4 @@ tags:
 - transmitter
 - tx
 role: component
+desc_source: preserved

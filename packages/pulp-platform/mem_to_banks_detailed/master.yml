@@ -1,25 +1,25 @@
-name: mem_to_banks_detailed
 namespace: pulp-platform
+name: mem_to_banks_detailed
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Splits memory transactions across multiple banks, distributing data and
   strobe signals while managing address translation and response aggregation.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/fifo_v3.sv
   - src/stream_fifo.sv
   - src/mem_to_banks_detailed.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - banks
 - detailed

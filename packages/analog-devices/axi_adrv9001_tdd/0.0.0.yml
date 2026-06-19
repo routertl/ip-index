@@ -1,17 +1,14 @@
-name: axi_adrv9001_tdd
 namespace: analog-devices
+name: axi_adrv9001_tdd
 version: 0.0.0
 description: AXI interface controller for ADRV9001 TDD mode managing transmit/receive
   RF switching, VCO enables, and data flow synchronization.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_addsub.v
@@ -20,6 +17,9 @@ routertl_compat:
   - library/common/up_xfer_status.v
   - library/common/up_tdd_cntrl.v
   - library/axi_adrv9001/axi_adrv9001_tdd.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adrv9001
 - amba
@@ -27,3 +27,4 @@ tags:
 - bus
 - tdd
 role: component
+desc_source: preserved

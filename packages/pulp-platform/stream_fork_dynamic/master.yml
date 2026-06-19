@@ -1,31 +1,30 @@
-name: stream_fork_dynamic
 namespace: pulp-platform
+name: stream_fork_dynamic
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Dynamically routes an input stream to multiple output streams based on
   a selection mask.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/stream_fork.sv
   - src/stream_fork_dynamic.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - dynamic
 - fork
 - stream
 role: top
-components:
-- stream_fork
+desc_source: preserved
 top_ports:
   stream_fork_dynamic:
   - direction: in
@@ -80,4 +79,3 @@ top_ports:
     name: handshaking
     type: wire
     width: ''
-desc_source: preserved

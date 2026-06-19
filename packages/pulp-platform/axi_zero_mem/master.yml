@@ -1,25 +1,25 @@
-name: axi_zero_mem
 namespace: pulp-platform
+name: axi_zero_mem
 version: master
 commit_sha: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 published_at: '2026-05-07T16:14:15+02:00'
 description: Bridges AXI4+ATOP transactions to a zero-latency memory interface with
   configurable banks and response buffering.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/axi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axi_intf.sv
   - src/axi_to_detailed_mem.sv
   - src/axi_zero_mem.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -27,30 +27,7 @@ tags:
 - mem
 - zero
 role: top
-components:
-- axi_atop_filter
-- axi_burst_splitter
-- axi_burst_splitter_gran
-- axi_cdc_dst
-- axi_cdc_src
-- axi_cut
-- axi_demux
-- axi_dw_downsizer
-- axi_dw_upsizer
-- axi_err_slv
-- axi_id_remap
-- axi_id_serialize
-- axi_lite_demux
-- axi_lite_multicut_intf
-- axi_lite_mux
-- axi_lite_to_axi
-- axi_mux
-- axi_serializer
-- axi_to_axi_lite
-- axi_to_detailed_mem
-- axi_to_mem
-- axi_xbar
-- axi_xbar_unmuxed
+desc_source: preserved
 top_ports:
   axi_zero_mem:
   - direction: in
@@ -73,4 +50,3 @@ top_ports:
     name: axi_resp_t
     type: wire
     width: ''
-desc_source: preserved

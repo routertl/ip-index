@@ -1,24 +1,24 @@
-name: util_mii_to_rmii
 namespace: analog-devices
+name: util_mii_to_rmii
 version: 1336749ccfa9
 commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 published_at: '2026-05-12T15:24:37+03:00'
 description: MII to RMII converter.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 1336749ccfa9
   resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/util_mii_to_rmii/mac_phy_link.v
   - library/util_mii_to_rmii/phy_mac_link.v
   - library/util_mii_to_rmii/util_mii_to_rmii.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - independent
 - interface
@@ -27,9 +27,28 @@ tags:
 - rmii
 - util
 role: top
-components:
-- mac_phy_link
-- phy_mac_link
+desc_source: preserved
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo
 top_ports:
   util_mii_to_rmii:
   - direction: in
@@ -100,25 +119,3 @@ top_ports:
     name: reset_n
     type: wire
     width: ''
-desc_source: preserved
-external_uses:
-- library: work
-  package: axi_ctrlif
-- library: work
-  package: axi_streaming_dma_rx_fifo
-- library: work
-  package: axi_streaming_dma_tx_fifo
-- library: work
-  package: dma_fifo
-- library: work
-  package: fifo_synchronizer
-- library: work
-  package: i2s_clkgen
-- library: work
-  package: i2s_controller
-- library: work
-  package: i2s_rx
-- library: work
-  package: i2s_tx
-- library: work
-  package: pl330_dma_fifo

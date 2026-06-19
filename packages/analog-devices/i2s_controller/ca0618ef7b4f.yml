@@ -1,40 +1,26 @@
-name: i2s_controller
 namespace: analog-devices
+name: i2s_controller
 version: ca0618ef7b4f
 commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 published_at: '2026-05-11T12:02:04+03:00'
 description: JESD204 controller with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: ca0618ef7b4f
   resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - library/axi_i2s_adi/i2s_controller.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - controller
 - i2s
 role: top
-top_ports:
-  i2s_controller:
-  - direction: in
-    name: clk
-    type: std_logic
-    width: ''
-  - direction: out
-    name: rx_stb
-    type: std_logic
-    width: ''
-  - direction: in
-    name: lrclk_div_rate
-    type: "natural range 0 to 255\n\t)"
-    width: ''
 desc_source: ports
 external_uses:
 - library: work
@@ -57,3 +43,17 @@ external_uses:
   package: i2s_tx
 - library: work
   package: pl330_dma_fifo
+top_ports:
+  i2s_controller:
+  - direction: in
+    name: clk
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rx_stb
+    type: std_logic
+    width: ''
+  - direction: in
+    name: lrclk_div_rate
+    type: "natural range 0 to 255\n\t)"
+    width: ''

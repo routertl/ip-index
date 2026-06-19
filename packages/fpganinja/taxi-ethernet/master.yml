@@ -1,5 +1,5 @@
-name: taxi-ethernet
 namespace: fpganinja
+name: taxi-ethernet
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
@@ -7,15 +7,12 @@ description: 'Full Ethernet stack: 1G/10G/25G MACs, 10G/25G PHYs, MII/GMII/RGMII
   interfaces, MAC control + 802.3x pause, MDIO master, BASE-R + XGMII PCS encoders/decoders,
   transceiver reset helpers, eth_mac_stats.'
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
@@ -96,6 +93,9 @@ routertl_compat:
   - src/eth/rtl/taxi_eth_mac_mii_fifo.sv
   - src/eth/rtl/taxi_eth_mac_phy_10g_fifo.sv
   - src/lss/rtl/taxi_mdio_master.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - advanced
 - controller
@@ -109,63 +109,12 @@ tags:
 - synchronizer
 - synchronous
 - transmitter
-role: subproject
-top_modules:
-- taxi_eth_mac_10g_fifo
-- taxi_eth_mac_1g_fifo
-- taxi_eth_mac_1g_gmii_fifo
-- taxi_eth_mac_1g_rgmii_fifo
-- taxi_eth_mac_25g_us
-- taxi_eth_mac_mii_fifo
-- taxi_eth_mac_phy_10g_fifo
-- taxi_mdio_master
-components:
-- taxi_axis_baser_rx_32
-- taxi_axis_baser_rx_64
-- taxi_axis_baser_tx_32
-- taxi_axis_baser_tx_64
-- taxi_axis_gmii_rx
-- taxi_axis_gmii_tx
-- taxi_axis_xgmii_rx_32
-- taxi_axis_xgmii_rx_64
-- taxi_axis_xgmii_tx_32
-- taxi_axis_xgmii_tx_64
-- taxi_eth_mac_10g
-- taxi_eth_mac_1g
-- taxi_eth_mac_1g_gmii
-- taxi_eth_mac_1g_rgmii
-- taxi_eth_mac_25g_us_ch
-- taxi_eth_mac_mii
-- taxi_eth_mac_phy_10g
-- taxi_eth_mac_phy_10g_rx
-- taxi_eth_mac_phy_10g_tx
-- taxi_eth_mac_stats
-- taxi_eth_phy_10g
-- taxi_eth_phy_10g_7_gt
-- taxi_eth_phy_10g_rx
-- taxi_eth_phy_10g_rx_ber_mon
-- taxi_eth_phy_10g_rx_frame_sync
-- taxi_eth_phy_10g_rx_if
-- taxi_eth_phy_10g_rx_watchdog
-- taxi_eth_phy_10g_tx
-- taxi_eth_phy_10g_tx_if
-- taxi_eth_phy_10g_us_gt
-- taxi_eth_phy_10g_us_gt_ll
-- taxi_eth_phy_25g_us_gt
-- taxi_eth_phy_25g_us_gt_apb
-- taxi_eth_phy_25g_us_gt_ll
-- taxi_gmii_phy_if
-- taxi_gt_qpll_reset
-- taxi_gt_rx_reset
-- taxi_gt_tx_reset
-- taxi_mac_ctrl_rx
-- taxi_mac_ctrl_tx
-- taxi_mac_pause_ctrl_rx
-- taxi_mac_pause_ctrl_tx
-- taxi_mii_phy_if
-- taxi_rgmii_phy_if
-- taxi_xgmii_baser_dec
-- taxi_xgmii_baser_enc
+role: top
+health_tier: gold
+contract_url: https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml
+test_status_url: https://github.com/routertl/ip-index/blob/main/test_results/fpganinja/taxi-ethernet/last_run.json
+last_verified_at: '2026-05-06'
+desc_source: curator
 top_ports:
   taxi_eth_mac_10g_fifo:
   - direction: in
@@ -379,9 +328,12 @@ top_ports:
     name: m_axis_rd_data
     type: taxi_axis_if.src
     width: ''
-total_entities: 54
-desc_source: curator
-health_tier: gold
-contract_url: https://github.com/routertl/ip-index/blob/main/contracts/eth_mac_1g_requirements.yml
-test_status_url: https://github.com/routertl/ip-index/blob/main/test_results/fpganinja/taxi-ethernet/last_run.json
-last_verified_at: '2026-05-06'
+top_modules:
+- taxi_eth_mac_10g_fifo
+- taxi_eth_mac_1g_fifo
+- taxi_eth_mac_1g_gmii_fifo
+- taxi_eth_mac_1g_rgmii_fifo
+- taxi_eth_mac_25g_us
+- taxi_eth_mac_mii_fifo
+- taxi_eth_mac_phy_10g_fifo
+- taxi_mdio_master

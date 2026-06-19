@@ -1,28 +1,29 @@
-name: synchronous_reset_fifo
 namespace: opencores
+name: synchronous_reset_fifo
 version: master
 commit_sha: 88cad31ca0a18b7c24a8995176b54a6461e8898e
 published_at: '2011-12-19T18:38:18+00:00'
 description: FIFO buffer with FIFO interface and configurable parameters
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/synchronous_reset_fifo.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 88cad31ca0a18b7c24a8995176b54a6461e8898e
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/fifo.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - buffer
 - queue
-role: repo
-top_modules:
-- fifo
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: ports
 top_ports:
   fifo:
   - direction: in
@@ -57,7 +58,5 @@ top_ports:
     name: full
     type: wire
     width: ''
-total_entities: 1
-desc_source: ports
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- fifo

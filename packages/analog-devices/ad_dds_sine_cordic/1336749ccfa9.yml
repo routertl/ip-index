@@ -1,23 +1,23 @@
-name: ad_dds_sine_cordic
 namespace: analog-devices
+name: ad_dds_sine_cordic
 version: 1336749ccfa9
 commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 published_at: '2026-05-12T15:24:37+03:00'
 description: Generates sine and cosine values.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 1336749ccfa9
   resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/common/ad_dds_cordic_pipe.v
   - library/common/ad_dds_sine_cordic.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad
 - cordic

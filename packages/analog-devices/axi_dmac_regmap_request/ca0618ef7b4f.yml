@@ -1,19 +1,16 @@
-name: axi_dmac_regmap_request
 namespace: analog-devices
+name: axi_dmac_regmap_request
 version: ca0618ef7b4f
 commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 published_at: '2026-05-11T12:02:04+03:00'
 description: Axi IP core with ready/valid handshake and configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: ca0618ef7b4f
   resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/corundum/corundum_core/mqnic_app_custom_params.vh
@@ -27,6 +24,9 @@ routertl_compat:
   - library/util_axis_fifo/util_axis_fifo_address_generator.v
   - library/util_axis_fifo/util_axis_fifo.v
   - library/axi_dmac/axi_dmac_regmap_request.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi

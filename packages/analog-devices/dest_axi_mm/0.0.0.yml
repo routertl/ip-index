@@ -1,16 +1,13 @@
-name: dest_axi_mm
 namespace: analog-devices
+name: dest_axi_mm
 version: 0.0.0
 description: AXI4-Lite with ready/valid handshake and configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/axi_dmac/inc_id.vh
@@ -18,6 +15,9 @@ routertl_compat:
   - library/axi_dmac/resp.vh
   - library/axi_dmac/response_handler.v
   - library/axi_dmac/dest_axi_mm.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi
@@ -25,3 +25,4 @@ tags:
 - dest
 - mm
 role: component
+desc_source: ports

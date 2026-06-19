@@ -1,19 +1,16 @@
-name: axi_ad9467_pnmon
 namespace: analog-devices
+name: axi_ad9467_pnmon
 version: 1336749ccfa9
 commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 published_at: '2026-05-12T15:24:37+03:00'
 description: Monitors ADC PN sequence.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 1336749ccfa9
   resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/corundum/corundum_core/mqnic_app_custom_params.vh
@@ -23,6 +20,9 @@ routertl_compat:
   - library/i3c_controller/i3c_controller_host_interface/i3c_controller_regmap.vh
   - library/common/ad_pnmon.v
   - library/axi_ad9467/axi_ad9467_pnmon.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad9467
 - amba

@@ -1,19 +1,19 @@
-name: util_i2c_mixer
 namespace: analog-devices
+name: util_i2c_mixer
 version: 0.0.0
 description: Mixes I2C signals from multiple sources.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - library/util_i2c_mixer/util_i2c_mixer.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - circuit
 - fpga
@@ -24,3 +24,4 @@ tags:
 - util
 - xilinx
 role: top
+desc_source: preserved

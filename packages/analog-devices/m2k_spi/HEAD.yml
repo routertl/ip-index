@@ -1,22 +1,22 @@
-name: m2k_spi
 namespace: analog-devices
+name: m2k_spi
 version: HEAD
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: Implements SPI interface.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - projects/m2k/m2k_spi.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - interface
 - m2k
@@ -24,6 +24,28 @@ tags:
 - serial
 - spi
 role: top
+desc_source: preserved
+external_uses:
+- library: work
+  package: axi_ctrlif
+- library: work
+  package: axi_streaming_dma_rx_fifo
+- library: work
+  package: axi_streaming_dma_tx_fifo
+- library: work
+  package: dma_fifo
+- library: work
+  package: fifo_synchronizer
+- library: work
+  package: i2s_clkgen
+- library: work
+  package: i2s_controller
+- library: work
+  package: i2s_rx
+- library: work
+  package: i2s_tx
+- library: work
+  package: pl330_dma_fifo
 top_ports:
   m2k_spi:
   - direction: in
@@ -50,25 +72,3 @@ top_ports:
     name: spi_sdio
     type: wire
     width: ''
-desc_source: preserved
-external_uses:
-- library: work
-  package: axi_ctrlif
-- library: work
-  package: axi_streaming_dma_rx_fifo
-- library: work
-  package: axi_streaming_dma_tx_fifo
-- library: work
-  package: dma_fifo
-- library: work
-  package: fifo_synchronizer
-- library: work
-  package: i2s_clkgen
-- library: work
-  package: i2s_controller
-- library: work
-  package: i2s_rx
-- library: work
-  package: i2s_tx
-- library: work
-  package: pl330_dma_fifo

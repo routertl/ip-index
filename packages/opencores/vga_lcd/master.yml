@@ -1,20 +1,17 @@
-name: vga_lcd
 namespace: opencores
+name: vga_lcd
 version: master
 commit_sha: 6baa0f08e50457dc528ec877420e97e3eea68233
 published_at: '2003-09-23T13:09:26+00:00'
 description: VGA + LCD display controller generating timing for standard VGA modes
   and parallel LCD interfaces. Includes pixel clock generator and frame buffer interface.
 license: GPL-2.0-or-later
-license_class: strong-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/vga_lcd.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 6baa0f08e50457dc528ec877420e97e3eea68233
 routertl_compat:
-  language: verilog
   library: count
   files:
   - rtl/verilog/vga_defines.v
@@ -48,6 +45,9 @@ routertl_compat:
   - rtl/verilog/vga_wb_master.v
   - rtl/verilog/vga_wb_slave.v
   - rtl/verilog/vga_enh_top.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - altera
@@ -61,45 +61,12 @@ tags:
 - memory
 - ported
 - wishbone
-role: repo
-top_modules:
-- Pgen
-- Tgen
-- generic_dpram
-- generic_spram
-- tst_bench
-- ud_cnt
-- vga_enh_top
-- vid_mem
-- wb_host
-- xilinx_ram_dp
-- xilinx_ram_sp
-components:
-- FIFO
-- FIFO_DC
-- VGA
-- altera_ram_dp
-- altera_ram_sp
-- colproc
-- csm_pb
-- dual_ported_memory
-- ro_cnt
-- vga_and_clut
-- vga_clkgen
-- vga_colproc
-- vga_csm_pb
-- vga_cur_cregs
-- vga_curproc
-- vga_fifo
-- vga_fifo_dc
-- vga_pgen
-- vga_tgen
-- vga_vtim
-- vga_wb_master
-- vga_wb_slave
-- vtim
-- wb_master
-- wb_slave
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
+provides_packages:
+- count
 top_ports:
   Pgen:
   - direction: in
@@ -1256,9 +1223,15 @@ top_ports:
     name: en
     type: wire
     width: ''
-total_entities: 36
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
-provides_packages:
-- count
+top_modules:
+- Pgen
+- Tgen
+- generic_dpram
+- generic_spram
+- tst_bench
+- ud_cnt
+- vga_enh_top
+- vid_mem
+- wb_host
+- xilinx_ram_dp
+- xilinx_ram_sp

@@ -1,5 +1,5 @@
-name: avs_aes
 namespace: opencores
+name: avs_aes
 version: master
 commit_sha: b1c1fce84629551eab88c1dc8cfcf7eea121622e
 published_at: '2014-04-19T21:02:24+00:00'
@@ -7,15 +7,12 @@ description: "AES (Advanced Encryption Standard) 128-bit encryption/decryption b
   \ (AVS variant) \u2014 BSD-2-Clause Verilog primitive with synchronous load/ready\
   \ handshake."
 license: BSD-2-Clause
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/freecores/avs_aes.git
   tag: master
-  ip_yml_path: .
   resolved_commit: b1c1fce84629551eab88c1dc8cfcf7eea121622e
 routertl_compat:
-  language: vhdl-2008
   library: avs_aes_lib
   files:
   - rtl/VHDL/avs_aes_pkg.vhd
@@ -31,6 +28,9 @@ routertl_compat:
   - rtl/VHDL/aes_fsm_decrypt.vhd
   - rtl/VHDL/aes_fsm_encrypt.vhd
   - rtl/VHDL/avs_aes.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - aes
 - avs
@@ -40,21 +40,15 @@ tags:
 - fsm
 - memory
 - word
-role: repo
-top_modules:
-- aes_fsm_decrypt
-- aes_fsm_encrypt
-- avs_AES
-components:
-- AES_CORE
-- AddRoundKey
-- Mixcol
-- Shiftrow
-- keyexpansionV2
-- memory_word
-- mux2
-- mux3
-- sbox
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: verdict
+external_uses:
+- library: altera_mf
+  package: all
+provides_packages:
+- avs_aes_pkg
 top_ports:
   aes_fsm_decrypt:
   - direction: in
@@ -147,12 +141,7 @@ top_ports:
     name: avs_s1_readdata
     type: STD_LOGIC_VECTOR
     width: 31 downto 0
-total_entities: 12
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-05'
-external_uses:
-- library: altera_mf
-  package: all
-provides_packages:
-- avs_aes_pkg
+top_modules:
+- aes_fsm_decrypt
+- aes_fsm_encrypt
+- avs_AES

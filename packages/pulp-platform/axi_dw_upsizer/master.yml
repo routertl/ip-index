@@ -1,20 +1,17 @@
-name: axi_dw_upsizer
 namespace: pulp-platform
+name: axi_dw_upsizer
 version: master
 commit_sha: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 published_at: '2026-05-07T16:14:15+02:00'
 description: Converts AXI transactions from a narrower slave port to a wider master
   port.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/axi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axi_pkg.sv
@@ -25,6 +22,9 @@ routertl_compat:
   - src/axi_atop_filter.sv
   - src/axi_err_slv.sv
   - src/axi_dw_upsizer.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - amba
 - axi

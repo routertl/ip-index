@@ -1,26 +1,26 @@
-name: i3c_controller_word
 namespace: analog-devices
+name: i3c_controller_word
 version: 3dc381cf791c
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: Executes Word Commands received by the framing module. Each state has
   linear sub-states counted in Bit Modulation Commands.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 3dc381cf791c
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/i3c_controller/i3c_controller_core/i3c_controller_word.vh
   - library/i3c_controller/i3c_controller_core/i3c_controller_bit_mod.vh
   - library/i3c_controller/i3c_controller_core/i3c_controller_bit_mod.v
   - library/i3c_controller/i3c_controller_core/i3c_controller_word.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - controller
 - i3c

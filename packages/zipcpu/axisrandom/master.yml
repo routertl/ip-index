@@ -1,25 +1,28 @@
-name: axisrandom
 namespace: zipcpu
+name: axisrandom
 version: master
 commit_sha: df8e7649acf68544a152e39a4589c8e894a4cd0b
 published_at: '2026-03-10T13:49:52-04:00'
 description: Generates random 32-bit data values and transmits them via AXI4-Stream
   output.
 license: GPL-3.0-or-later
-license_class: strong-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/ZipCPU/wb2axip.git
   tag: master
-  ip_yml_path: .
   resolved_commit: df8e7649acf68544a152e39a4589c8e894a4cd0b
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/axisrandom.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags: []
 role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: preserved
 top_ports:
   axisrandom:
   - direction: in
@@ -42,6 +45,3 @@ top_ports:
     name: M_AXIS_TDATA
     type: wire
     width: '[C_AXIS_DATA_WIDTH-1:0]'
-desc_source: preserved
-health_tier: bronze
-last_verified_at: '2026-05-05'

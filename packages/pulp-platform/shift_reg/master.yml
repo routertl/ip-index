@@ -1,31 +1,30 @@
-name: shift_reg
 namespace: pulp-platform
+name: shift_reg
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Shift register that delays an input signal by a configurable number of
   stages.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/shift_reg_gated.sv
   - src/shift_reg.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - reg
 - register
 - shift
 role: top
-components:
-- shift_reg_gated
+desc_source: preserved
 top_ports:
   shift_reg:
   - direction: in
@@ -40,4 +39,3 @@ top_ports:
     name: dtype
     type: wire
     width: ''
-desc_source: preserved

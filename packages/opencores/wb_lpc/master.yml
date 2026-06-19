@@ -1,5 +1,5 @@
-name: wb_lpc
 namespace: opencores
+name: wb_lpc
 version: master
 commit_sha: 485adf16ad90821170c3b52f2965c0ae7d914c9c
 published_at: '2008-12-27T19:46:18+00:00'
@@ -7,15 +7,12 @@ description: "Wishbone-controlled LPC (Low Pin Count) bus interface \u2014 bridg
   \ Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD,\
   \ BMC)."
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/wb_lpc.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 485adf16ad90821170c3b52f2965c0ae7d914c9c
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/verilog/serirq_defines.v
@@ -27,6 +24,9 @@ routertl_compat:
   - rtl/verilog/wb_lpc_host.v
   - rtl/verilog/wb_lpc_periph.v
   - rtl/verilog/wb_regfile.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - bus
 - dreq
@@ -38,15 +38,10 @@ tags:
 - slave
 - wb
 - wishbone
-role: repo
-top_modules:
-- serirq_host
-- serirq_slave
-- wb_dreq_host
-- wb_dreq_periph
-- wb_lpc_host
-- wb_lpc_periph
-- wb_regfile
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: verdict
 top_ports:
   serirq_host:
   - direction: in
@@ -391,7 +386,11 @@ top_ports:
     name: datareg1
     type: wire
     width: '[31:0]'
-total_entities: 7
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- serirq_host
+- serirq_slave
+- wb_dreq_host
+- wb_dreq_periph
+- wb_lpc_host
+- wb_lpc_periph
+- wb_regfile

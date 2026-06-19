@@ -1,20 +1,17 @@
-name: lxp32-cpu
 namespace: lxp32
+name: lxp32-cpu
 version: develop
 commit_sha: 569f3b032acd6d43674f70779dd2aa5d0ff44b57
 published_at: '2025-05-29T13:01:35+02:00'
 description: LXP32 is a small and FPGA friendly 32-bit CPU IP core based on a simple,
   original instruction set. Its key features include
 license: MIT
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/lxp32/lxp32-cpu.git
   tag: develop
-  ip_yml_path: .
   resolved_commit: 569f3b032acd6d43674f70779dd2aa5d0ff44b57
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - rtl/lxp32_compl.vhd
@@ -37,6 +34,9 @@ routertl_compat:
   - rtl/lxp32_icache.vhd
   - rtl/lxp32c_top.vhd
   - rtl/lxp32u_top.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - decode
 - digital
@@ -50,29 +50,10 @@ tags:
 - ram256x32
 - scratchpad
 - shifter
-role: repo
-top_modules:
-- lxp32c_top
-- lxp32u_top
-components:
-- lxp32_alu
-- lxp32_compl
-- lxp32_cpu
-- lxp32_dbus
-- lxp32_decode
-- lxp32_divider
-- lxp32_execute
-- lxp32_fetch
-- lxp32_icache
-- lxp32_interrupt_mux
-- lxp32_mul16x16
-- lxp32_mul_dsp
-- lxp32_mul_opt
-- lxp32_mul_seq
-- lxp32_ram256x32
-- lxp32_scratchpad
-- lxp32_shifter
-- lxp32_ubuf
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: readme
 top_ports:
   lxp32c_top:
   - direction: in
@@ -208,7 +189,6 @@ top_ports:
     name: irq_i
     type: std_logic_vector
     width: 7 downto 0
-total_entities: 20
-desc_source: readme
-health_tier: bronze
-last_verified_at: '2026-05-05'
+top_modules:
+- lxp32c_top
+- lxp32u_top

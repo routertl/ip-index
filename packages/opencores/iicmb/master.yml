@@ -1,19 +1,16 @@
-name: iicmb
 namespace: opencores
+name: iicmb
 version: master
 commit_sha: c57238879332826f8e57744dabdb6e7ad86cbb2a
 published_at: '2024-10-01T21:23:24+03:00'
 description: I2C with interrupt support
 license: BSD-2-Clause
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/sshuv/iicmb.git
   tag: master
-  ip_yml_path: .
   resolved_commit: c57238879332826f8e57744dabdb6e7ad86cbb2a
 routertl_compat:
-  language: vhdl-2008
   library: iicmb
   files:
   - src/avalon_mm.vhd
@@ -32,6 +29,9 @@ routertl_compat:
   - src/iicmb_m_sq.vhd
   - src/wishbone.vhd
   - src/iicmb_m_wb.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - av
 - avalon
@@ -45,23 +45,13 @@ tags:
 - state
 - wb
 - wishbone
-role: repo
-top_modules:
-- iicmb_m_av
-- iicmb_m_sq
-- iicmb_m_wb
-components:
-- avalon_mm
-- bus_state
-- conditioner
-- conditioner_mux
-- filter
-- iicmb_m
-- mbit
-- mbyte
-- regblock
-- sequencer
-- wishbone
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-05'
+desc_source: ports
+provides_packages:
+- iicmb_int_pkg
+- iicmb_pkg
 top_ports:
   iicmb_m_av:
   - direction: in
@@ -214,10 +204,7 @@ top_ports:
     name: sda_o
     type: std_logic_vector
     width: 0 to g_bus_num - 1
-total_entities: 14
-desc_source: ports
-health_tier: bronze
-last_verified_at: '2026-05-05'
-provides_packages:
-- iicmb_int_pkg
-- iicmb_pkg
+top_modules:
+- iicmb_m_av
+- iicmb_m_sq
+- iicmb_m_wb

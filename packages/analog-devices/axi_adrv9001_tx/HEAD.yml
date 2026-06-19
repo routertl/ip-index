@@ -1,19 +1,16 @@
-name: axi_adrv9001_tx
 namespace: analog-devices
+name: axi_adrv9001_tx
 version: HEAD
 commit_sha: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 published_at: '2026-05-13T08:20:05+00:00'
 description: Transmit engine
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: HEAD
   resolved_commit: 3dc381cf791c3771ceaac3bd25458527ce2e3a65
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/corundum/corundum_core/mqnic_app_custom_params.vh
@@ -39,6 +36,9 @@ routertl_compat:
   - library/common/up_xfer_status.v
   - library/common/up_dac_common.v
   - library/axi_adrv9001/axi_adrv9001_tx.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adrv9001
 - amba

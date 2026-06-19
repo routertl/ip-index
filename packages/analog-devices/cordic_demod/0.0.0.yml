@@ -1,20 +1,21 @@
-name: cordic_demod
 namespace: analog-devices
+name: cordic_demod
 version: 0.0.0
 description: Demodulates input data.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/cordic_demod/cordic_demod.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - cordic
 - demod
 role: top
+desc_source: preserved

@@ -1,22 +1,22 @@
-name: axi_streaming_dma_tx_fifo
 namespace: analog-devices
+name: axi_streaming_dma_tx_fifo
 version: 7b364c5dfd5e
 commit_sha: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 published_at: '2026-04-15T16:15:19+03:00'
 description: AXI4-Stream FIFO buffer with configurable parameters
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 7b364c5dfd5e
   resolved_commit: 7b364c5dfd5ef9a94e801063b2864d96645ed7af
 routertl_compat:
-  language: vhdl-2008
   library: work
   files:
   - library/common/axi_streaming_dma_tx_fifo.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - access
 - amba
@@ -31,3 +31,4 @@ tags:
 - transmit
 - transmitter
 role: top
+desc_source: ports

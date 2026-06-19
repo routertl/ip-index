@@ -1,5 +1,5 @@
-name: taxi-axis
 namespace: fpganinja
+name: taxi-axis
 version: master
 commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
@@ -7,15 +7,12 @@ description: "AXI4-Stream infrastructure: FIFOs (sync/async/pipeline), broadcast
   \ demux/mux, switch, register, COBS encode/decode, null src/snk, tie. Excludes Ethernet\
   \ PCS streams (BASE-R, XGMII, GMII bridges) \u2014 those live in taxi-ethernet."
 license: CERN-OHL-S-2.0
-license_class: strong-copyleft
+language: systemverilog
 source:
-  type: git
   url: https://github.com/fpganinja/taxi.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/axis/rtl/taxi_axis_if.sv
@@ -44,6 +41,9 @@ routertl_compat:
   - src/axis/rtl/taxi_axis_pipeline_register.sv
   - src/axis/rtl/taxi_axis_switch.sv
   - src/axis/rtl/taxi_axis_tie.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - adapter
 - arbiter
@@ -57,29 +57,8 @@ tags:
 - pipeline
 - protocol
 - register
-role: subproject
-top_modules:
-- taxi_axis_arb_mux
-- taxi_axis_async_fifo_adapter
-- taxi_axis_broadcast
-- taxi_axis_cobs_decode
-- taxi_axis_cobs_encode
-- taxi_axis_concat
-- taxi_axis_demux
-- taxi_axis_fifo_adapter
-- taxi_axis_mux
-- taxi_axis_null_snk
-- taxi_axis_null_src
-- taxi_axis_pad
-- taxi_axis_pipeline_fifo
-- taxi_axis_pipeline_register
-- taxi_axis_switch
-- taxi_axis_tie
-components:
-- taxi_axis_adapter
-- taxi_axis_async_fifo
-- taxi_axis_fifo
-- taxi_axis_register
+role: top
+desc_source: curator
 top_ports:
   taxi_axis_arb_mux:
   - direction: in
@@ -505,5 +484,20 @@ top_ports:
     name: m_axis
     type: taxi_axis_if.src
     width: ''
-total_entities: 20
-desc_source: curator
+top_modules:
+- taxi_axis_arb_mux
+- taxi_axis_async_fifo_adapter
+- taxi_axis_broadcast
+- taxi_axis_cobs_decode
+- taxi_axis_cobs_encode
+- taxi_axis_concat
+- taxi_axis_demux
+- taxi_axis_fifo_adapter
+- taxi_axis_mux
+- taxi_axis_null_snk
+- taxi_axis_null_src
+- taxi_axis_pad
+- taxi_axis_pipeline_fifo
+- taxi_axis_pipeline_register
+- taxi_axis_switch
+- taxi_axis_tie

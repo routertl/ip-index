@@ -1,19 +1,16 @@
-name: jesd204_tx_lane
 namespace: analog-devices
+name: jesd204_tx_lane
 version: 1336749ccfa9
 commit_sha: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 published_at: '2026-05-12T15:24:37+03:00'
 description: Transmits JESD204 data.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: 1336749ccfa9
   resolved_commit: 1336749ccfa9a98561b3ba8dd3b2f1bcac87664f
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/corundum/corundum_core/mqnic_app_custom_params.vh
@@ -25,6 +22,9 @@ routertl_compat:
   - library/jesd204/jesd204_common/jesd204_scrambler.v
   - library/common/util_pipeline_stage.v
   - library/jesd204/jesd204_tx/jesd204_tx_lane.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - jesd204
 - lane

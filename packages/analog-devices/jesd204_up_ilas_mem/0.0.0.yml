@@ -1,22 +1,23 @@
-name: jesd204_up_ilas_mem
 namespace: analog-devices
+name: jesd204_up_ilas_mem
 version: 0.0.0
 description: JESD204 with ready/valid handshake
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/util_cdc/sync_bits.v
   - library/jesd204/axi_jesd204_rx/jesd204_up_ilas_mem.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ilas
 - jesd204
 - mem
 role: component
+desc_source: ports

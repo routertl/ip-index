@@ -1,20 +1,17 @@
-name: clock_divider
 namespace: pulp-platform
+name: clock_divider
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Divides input clock frequency by a programmable factor with gating and
   test mode control.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/clk_int_div.sv
@@ -27,21 +24,14 @@ routertl_compat:
   - src/rstgen_bypass.sv
   - src/rstgen.sv
   - src/deprecated/clock_divider.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - clock
 - divider
 role: top
-components:
-- clk_div
-- clk_int_div
-- clock_divider_counter
-- counter
-- delta_counter
-- edge_propagator_ack
-- pulp_sync
-- pulp_sync_wedge
-- rstgen
-- rstgen_bypass
+desc_source: preserved
 top_ports:
   clock_divider:
   - direction: in
@@ -80,4 +70,3 @@ top_ports:
     name: RESET
     type: wire
     width: ''
-desc_source: preserved

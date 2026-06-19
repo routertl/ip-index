@@ -1,22 +1,22 @@
-name: sysid_rom
 namespace: analog-devices
+name: sysid_rom
 version: ca0618ef7b4f
 commit_sha: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 published_at: '2026-05-11T12:02:04+03:00'
 description: Stores system ID data.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: ca0618ef7b4f
   resolved_commit: ca0618ef7b4f7441ab7fac34665362b99f188ab4
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/sysid_rom/sysid_rom.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - memory
 - only
@@ -24,20 +24,6 @@ tags:
 - rom
 - sysid
 role: top
-top_ports:
-  sysid_rom:
-  - direction: in
-    name: clk
-    type: wire
-    width: ''
-  - direction: in
-    name: rom_addr
-    type: wire
-    width: '[ROM_ADDR_BITS-1:0]'
-  - direction: out
-    name: rom_data
-    type: wire
-    width: '[ROM_WIDTH-1:0]'
 desc_source: preserved
 external_uses:
 - library: work
@@ -60,3 +46,17 @@ external_uses:
   package: i2s_tx
 - library: work
   package: pl330_dma_fifo
+top_ports:
+  sysid_rom:
+  - direction: in
+    name: clk
+    type: wire
+    width: ''
+  - direction: in
+    name: rom_addr
+    type: wire
+    width: '[ROM_ADDR_BITS-1:0]'
+  - direction: out
+    name: rom_data
+    type: wire
+    width: '[ROM_WIDTH-1:0]'

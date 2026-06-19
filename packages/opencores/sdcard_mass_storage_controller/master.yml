@@ -1,20 +1,17 @@
-name: sdcard_mass_storage_controller
 namespace: opencores
+name: sdcard_mass_storage_controller
 version: master
 commit_sha: e09d1db9da0aa2db58cabf521433c8257f10a451
 published_at: '2010-10-15T13:30:30+00:00'
 description: SD card mass-storage controller with FAT16/FAT32 file system support,
   designed for embedded applications requiring persistent storage.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/sdcard_mass_storage_controller.git
   tag: master
-  ip_yml_path: .
   resolved_commit: e09d1db9da0aa2db58cabf521433c8257f10a451
 routertl_compat:
-  language: verilog
   library: work
   files:
   - rtl/sdc_dma/verilog/sd_defines.v
@@ -34,6 +31,9 @@ routertl_compat:
   - rtl/sdc_dma/verilog/sd_tx_fifo.v
   - rtl/sdc_dma/verilog/sd_fifo_tx_filler.v
   - rtl/sdc_dma/verilog/sdc_controller.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - asynchronous
 - comparator
@@ -47,32 +47,10 @@ tags:
 - transmitter
 - versatile
 - wishbone
-role: repo
-top_modules:
-- CRC_7
-- sd_cmd_phy
-- sd_controller_fifo_wba
-- sd_counter
-- sd_data_phy
-- sd_fifo
-- sdc_controller
-- versatile_fifo_async_cmp
-components:
-- CRC_16
-- sd_bd
-- sd_clock_divider
-- sd_cmd_master
-- sd_cmd_serial_host
-- sd_controller_wb
-- sd_crc_16
-- sd_crc_7
-- sd_data_master
-- sd_data_serial_host
-- sd_fifo_rx_filler
-- sd_fifo_tx_filler
-- sd_rx_fifo
-- sd_tx_fifo
-- versatile_fifo_dptam_dw
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   CRC_7:
   - direction: in
@@ -1642,11 +1620,12 @@ top_ports:
     name: fifo_acces
     type: wire
     width: ''
-total_entities: 23
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
-hdl:
-  vendor_variants:
-    microchip:
-    - rtl/sdc_fifo/verilog/sd_controller_fifo_actel.v
+top_modules:
+- CRC_7
+- sd_cmd_phy
+- sd_controller_fifo_wba
+- sd_counter
+- sd_data_phy
+- sd_fifo
+- sdc_controller
+- versatile_fifo_async_cmp

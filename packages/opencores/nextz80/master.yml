@@ -1,37 +1,31 @@
-name: nextz80
 namespace: opencores
+name: nextz80
 version: master
 commit_sha: 8fab829e8ea3673c42cfbbb577119cb6c49d4f8e
 published_at: '2014-02-06T21:34:08+00:00'
 description: Z80-compatible 8-bit processor with Wishbone bus interface, suitable
   for retro-computer reimplementation and embedded controllers.
 license: LGPL-2.1-or-later
-license_class: weak-copyleft
+language: verilog
 source:
-  type: git
   url: https://github.com/freecores/nextz80.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 8fab829e8ea3673c42cfbbb577119cb6c49d4f8e
 routertl_compat:
-  language: verilog
   library: work
   files:
   - NextZ80ALU.v
   - NextZ80Reg.v
   - NextZ80CPU.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ram16x8d
-role: repo
-top_modules:
-- ALU8
-- NextZ80
-- RegSelect
-- Z80Reg
-- daa
-components:
-- ALU16
-- RAM16X8D_regs
+role: top
+health_tier: bronze
+last_verified_at: '2026-05-04'
+desc_source: verdict
 top_ports:
   ALU8:
   - direction: in
@@ -298,7 +292,9 @@ top_ports:
     name: DOUT
     type: wire
     width: '[15:0]'
-total_entities: 7
-desc_source: verdict
-health_tier: bronze
-last_verified_at: '2026-05-04'
+top_modules:
+- ALU8
+- NextZ80
+- RegSelect
+- Z80Reg
+- daa

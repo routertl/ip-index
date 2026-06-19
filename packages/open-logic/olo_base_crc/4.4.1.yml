@@ -1,24 +1,23 @@
-name: olo_base_crc
 namespace: open-logic
+name: olo_base_crc
 version: 4.4.1
 commit_sha: d1407a7427d9201a7bcd8c37749ec083b13006dc
 published_at: '2026-03-10T06:51:30+01:00'
 description: 'Description: A CRC generator based on a linear-feedback shifter register.
   Can be used to generate CRCs to add on TX side or to calculate CRCs to compare to
   received CRC on RX side.'
-license: ''
-license_class: unknown
+language: vhdl-2008
 source:
-  type: git
   url: https://github.com/open-logic/open-logic.git
-  tag: 4.4.1
-  ip_yml_path: .
+  tag: v4.4.1
   resolved_commit: d1407a7427d9201a7bcd8c37749ec083b13006dc
 routertl_compat:
-  language: vhdl-2008
   library: olo
   files:
   - src/base/vhdl/olo_base_crc.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
   package_deps:
   - open-logic/olo_base
 tags:
@@ -35,4 +34,3 @@ external_uses:
   package: en_cl_fix_pkg
 - library: work
   package: en_cl_fix_private_pkg
-provides_packages: []

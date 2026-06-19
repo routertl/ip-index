@@ -1,23 +1,23 @@
-name: axi_ad485x_lvds
 namespace: analog-devices
+name: axi_ad485x_lvds
 version: 0.0.0
 description: Interfaces with AD485x LVDS ADC, deserializes serial data from multiple
   channels, and outputs parallel ADC samples with optional CRC validation.
 license: ADIBSD OR GPL-2.0-only
-license_class: permissive
+language: verilog
 source:
-  type: git
   url: https://github.com/analogdevicesinc/hdl.git
-  tag: main
-  ip_yml_path: .
+  tag: v0.0.0
 routertl_compat:
-  language: verilog
   library: work
   files:
   - library/xilinx/common/ad_data_in.v
   - library/xilinx/common/ad_serdes_out.v
   - library/axi_ad485x/axi_ad485x_crc.v
   - library/axi_ad485x/axi_ad485x_lvds.v
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - ad485x
 - amba
@@ -29,3 +29,4 @@ tags:
 - signaling
 - voltage
 role: component
+desc_source: preserved

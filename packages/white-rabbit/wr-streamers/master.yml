@@ -1,5 +1,5 @@
-name: wr-streamers
 namespace: white-rabbit
+name: wr-streamers
 version: master
 commit_sha: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
 published_at: '2017-12-18T18:45:29+01:00'
@@ -7,15 +7,12 @@ description: "Streaming layer over WR \u2014 application-layer TX/RX framers for
   \ arbitrary user data over the WR Ethernet path. Drop-buffer, escape detection/insertion,\
   \ statistics counters, Wishbone-mapped configuration."
 license: LGPL-2.1
-license_class: unknown
+language: vhdl-2008
 source:
-  type: git
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 69cc4cc3132530c836cd57ce1b282e8377fe7a07
 routertl_compat:
-  language: vhdl-2008
   library: wr
   files:
   - modules/wr_streamers/dropping_buffer.vhd
@@ -42,6 +39,9 @@ routertl_compat:
   - modules/wr_streamers/xtx_streamers_stats.vhd
   - modules/wr_streamers/xrtx_streamers_stats.vhd
   - modules/wr_streamers/xwr_streamers.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - buffer
 - detector
@@ -55,21 +55,33 @@ tags:
 - transmit
 - transmitter
 - wishbone
-role: subproject
-top_modules:
-- rx_streamer
-- tx_streamer
-- xwr_streamers
-components:
-- dropping_buffer
-- escape_detector
-- gc_escape_inserter
-- wr_streamers_wb
-- xrtx_streamers_stats
-- xrx_streamer
-- xrx_streamers_stats
-- xtx_streamer
-- xtx_streamers_stats
+role: top
+desc_source: curator
+external_uses:
+- library: work
+  package: gencores_pkg
+- library: work
+  package: genram_pkg
+- library: work
+  package: wb_irq_pkg
+- library: work
+  package: wbgen2_pkg
+- library: work
+  package: wbgenplus_pkg
+- library: work
+  package: wishbone_pkg
+- library: work
+  package: wr_transmission_wbgen2_pkg
+provides_packages:
+- endpoint_pkg
+- softpll_pkg
+- streamers_pkg
+- streamers_priv_pkg
+- sysc_wbgen2_pkg
+- wr_fabric_pkg
+- wr_streamers_wbgen2_pkg
+- wrc_diags_wbgen2_pkg
+- wrcore_pkg
 top_ports:
   rx_streamer:
   - direction: in
@@ -418,30 +430,7 @@ top_ports:
     name: rx_streamer_cfg_i
     type: t_rx_streamer_cfg
     width: ''
-total_entities: 12
-desc_source: curator
-external_uses:
-- library: work
-  package: gencores_pkg
-- library: work
-  package: genram_pkg
-- library: work
-  package: wb_irq_pkg
-- library: work
-  package: wbgen2_pkg
-- library: work
-  package: wbgenplus_pkg
-- library: work
-  package: wishbone_pkg
-- library: work
-  package: wr_transmission_wbgen2_pkg
-provides_packages:
-- endpoint_pkg
-- softpll_pkg
-- streamers_pkg
-- streamers_priv_pkg
-- sysc_wbgen2_pkg
-- wr_fabric_pkg
-- wr_streamers_wbgen2_pkg
-- wrc_diags_wbgen2_pkg
-- wrcore_pkg
+top_modules:
+- rx_streamer
+- tx_streamer
+- xwr_streamers

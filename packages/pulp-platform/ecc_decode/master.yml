@@ -1,24 +1,24 @@
-name: ecc_decode
 namespace: pulp-platform
+name: ecc_decode
 version: master
 commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Decodes ECC-encoded data, corrects single-bit errors, and detects double-bit
   errors with syndrome output.
 license: Apache-2.0
-license_class: permissive
+language: systemverilog
 source:
-  type: git
   url: https://github.com/pulp-platform/common_cells.git
   tag: master
-  ip_yml_path: .
   resolved_commit: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 routertl_compat:
-  language: systemverilog
   library: work
   files:
   - src/ecc_pkg.sv
   - src/ecc_decode.sv
+  library_deps: []
+  module_deps: []
+  modules_provided: []
 tags:
 - code
 - correction
@@ -26,6 +26,9 @@ tags:
 - ecc
 - error
 role: top
+desc_source: preserved
+provides_packages:
+- ecc_pkg
 top_ports:
   ecc_decode:
   - direction: out
@@ -56,6 +59,3 @@ top_ports:
     name: double_error_o
     type: wire
     width: ''
-desc_source: preserved
-provides_packages:
-- ecc_pkg
