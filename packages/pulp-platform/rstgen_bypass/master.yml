@@ -1,0 +1,56 @@
+name: rstgen_bypass
+namespace: pulp-platform
+version: master
+commit_sha: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+published_at: '2026-07-16T13:11:59+00:00'
+description: Generates synchronized reset and initialization signals with optional
+  test mode bypass capability.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/pulp-platform/common_cells.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - src/cc_rstgen_bypass.sv
+  - src/deprecated/rstgen_bypass.sv
+tags:
+- bypass
+- rstgen
+role: top
+components:
+- cc_clk_mux_glitch_free
+- cc_rstgen
+- cc_rstgen_bypass
+top_ports:
+  rstgen_bypass:
+  - direction: in
+    name: clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: rst_test_mode_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: test_mode_i
+    type: wire
+    width: ''
+  - direction: out
+    name: rst_no
+    type: wire
+    width: ''
+  - direction: out
+    name: init_no
+    type: wire
+    width: ''
+desc_source: llm

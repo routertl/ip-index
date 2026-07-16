@@ -1,0 +1,38 @@
+name: cc_stream_omega_net
+namespace: pulp-platform
+version: master
+commit_sha: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+published_at: '2026-07-16T13:11:59+00:00'
+description: Omega network switch that routes multiple input streams to multiple outputs
+  using round-robin arbitration with AXI valid/ready handshaking.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/pulp-platform/common_cells.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - include/common_cells/deprecated/registers.svh
+  - src/cc_stream_demux.sv
+  - src/cc_stream_omega_net.sv
+  package_deps:
+  - pulp-platform/cc_lzc
+  - pulp-platform/cc_rr_arb_tree
+  - pulp-platform/cc_spill_register_flushable
+  - pulp-platform/cc_spill_register
+  - pulp-platform/cc_stream_xbar
+  - pulp-platform/common_cells
+tags:
+- cc
+- clock
+- crossing
+- net
+- omega
+- stream
+role: component
+desc_source: llm

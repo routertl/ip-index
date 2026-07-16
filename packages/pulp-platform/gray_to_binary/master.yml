@@ -1,0 +1,39 @@
+name: gray_to_binary
+namespace: pulp-platform
+version: master
+commit_sha: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+published_at: '2026-07-16T13:11:59+00:00'
+description: Converts an N-bit Gray code input to its binary equivalent output.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/pulp-platform/common_cells.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - src/cc_gray_to_binary.sv
+  - src/deprecated/gray_to_binary.sv
+tags:
+- binary
+- gray
+role: top
+components:
+- cc_cdc_fifo_gray
+- cc_cdc_fifo_gray_clearable
+- cc_gray_to_binary
+top_ports:
+  gray_to_binary:
+  - direction: in
+    name: A
+    type: wire
+    width: '[N-1:0]'
+  - direction: out
+    name: Z
+    type: wire
+    width: '[N-1:0]'
+desc_source: llm

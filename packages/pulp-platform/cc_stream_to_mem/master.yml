@@ -1,0 +1,33 @@
+name: cc_stream_to_mem
+namespace: pulp-platform
+version: master
+commit_sha: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+published_at: '2026-07-16T13:11:59+00:00'
+description: Bridges request/response streams to memory interface with configurable
+  buffering for response latency matching.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/pulp-platform/common_cells.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - include/common_cells/deprecated/registers.svh
+  - src/cc_stream_to_mem.sv
+  package_deps:
+  - pulp-platform/cc_fifo
+  - pulp-platform/cc_stream_fifo
+  - pulp-platform/common_cells
+tags:
+- cc
+- clock
+- crossing
+- mem
+- stream
+role: component
+desc_source: llm

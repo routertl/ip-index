@@ -1,0 +1,38 @@
+name: cc_cdc_fifo_gray
+namespace: pulp-platform
+version: master
+commit_sha: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+published_at: '2026-07-16T13:11:59+00:00'
+description: FIFO buffer with ready/valid handshake
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/pulp-platform/common_cells.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - include/common_cells/deprecated/registers.svh
+  - src/cc_binary_to_gray.sv
+  - src/cc_gray_to_binary.sv
+  - src/cc_cdc_fifo_gray.sv
+  package_deps:
+  - pulp-platform/cc_spill_register_flushable
+  - pulp-platform/cc_spill_register
+  - pulp-platform/common_cells
+tags:
+- buffer
+- cc
+- cdc
+- clock
+- crossing
+- domain
+- fifo
+- gray
+- queue
+role: component
+desc_source: ports

@@ -1,0 +1,34 @@
+name: axi_bus_compare
+namespace: pulp-platform
+version: master
+commit_sha: e55ae2a7ee606ee3cfd4257f63982a971b704407
+published_at: '2026-06-22T18:08:39+02:00'
+description: Compares two AXI4+ATOP bus transactions for differences and reports mismatches
+  across write and read channels.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/pulp-platform/axi.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: e55ae2a7ee606ee3cfd4257f63982a971b704407
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - include/axi/port.svh
+  - include/axi/typedef.svh
+  - include/axi/assign.svh
+  - src/axi_bus_compare.sv
+  package_deps:
+  - pulp-platform/common_cells
+  package_dep_constraints:
+    pulp-platform/common_cells: HEAD
+tags:
+- amba
+- axi
+- bus
+- compare
+role: component
+desc_source: llm

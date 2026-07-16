@@ -1,0 +1,43 @@
+name: sub_per_hash
+namespace: pulp-platform
+version: master
+commit_sha: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+published_at: '2026-07-16T13:11:59+00:00'
+description: Computes a hash of input data and outputs both binary and one-hot encoded
+  hash values.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/pulp-platform/common_cells.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - src/cc_sub_per_hash.sv
+  - src/deprecated/sub_per_hash.sv
+tags:
+- hash
+- per
+role: top
+components:
+- cc_cb_filter
+- cc_sub_per_hash
+top_ports:
+  sub_per_hash:
+  - direction: in
+    name: data_i
+    type: wire
+    width: '[InpWidth-1:0]'
+  - direction: out
+    name: hash_o
+    type: wire
+    width: '[HashWidth-1:0]'
+  - direction: out
+    name: hash_onehot_o
+    type: wire
+    width: '[2**HashWidth-1:0]'
+desc_source: llm

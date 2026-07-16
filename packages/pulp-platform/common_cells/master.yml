@@ -1,0 +1,31 @@
+name: common_cells
+namespace: pulp-platform
+version: master
+commit_sha: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+published_at: '2026-07-16T13:11:59+00:00'
+description: PULP common package and include provider retained once for cross-entry
+  package_deps consumers.
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/pulp-platform/common_cells.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+routertl_compat:
+  library: work
+  files:
+  - include/common_cells/registers.svh
+  - include/common_cells/assertions.svh
+  - src/cc_pkg.sv
+  - src/assert_rpt_pkg.sv
+  language: systemverilog
+tags:
+- work
+- package
+- base
+role: component
+provides_packages:
+- assert_rpt_pkg
+- cc_pkg

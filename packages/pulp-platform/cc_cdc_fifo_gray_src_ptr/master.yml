@@ -1,0 +1,186 @@
+name: cc_cdc_fifo_gray_src_ptr
+namespace: pulp-platform
+version: master
+commit_sha: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+published_at: '2026-07-16T13:11:59+00:00'
+description: FIFO buffer with ready/valid handshake
+license: Apache-2.0
+license_class: permissive
+source:
+  type: git
+  url: https://github.com/pulp-platform/common_cells.git
+  tag: master
+  ip_yml_path: .
+  resolved_commit: af0dd13f9ce1aba3b38b10739c30d0d5bc7b5db5
+routertl_compat:
+  language: systemverilog
+  library: work
+  files:
+  - include/common_cells/deprecated/registers.svh
+  - src/cc_binary_to_gray.sv
+  - src/cc_gray_to_binary.sv
+  - src/cc_cdc_fifo_gray.sv
+  package_deps:
+  - pulp-platform/cc_spill_register_flushable
+  - pulp-platform/cc_spill_register
+  - pulp-platform/common_cells
+tags:
+- buffer
+- cc
+- cdc
+- clock
+- crossing
+- domain
+- fifo
+- gray
+- ptr
+- queue
+- src
+role: top
+components:
+- cc_addr_decode
+- cc_addr_decode_dync
+- cc_addr_decode_napot
+- cc_binary_to_gray
+- cc_cb_filter
+- cc_cdc_2phase
+- cc_cdc_2phase_clearable
+- cc_cdc_4phase
+- cc_cdc_fifo_2phase
+- cc_cdc_fifo_gray
+- cc_cdc_fifo_gray_clearable
+- cc_cdc_reset_ctrlr
+- cc_clk_int_div
+- cc_clk_int_div_static
+- cc_clk_mux_glitch_free
+- cc_counter
+- cc_credit_counter
+- cc_delta_counter
+- cc_edge_detect
+- cc_edge_propagator
+- cc_edge_propagator_ack
+- cc_edge_propagator_rx
+- cc_exp_backoff
+- cc_fall_through_register
+- cc_fifo
+- cc_gray_to_binary
+- cc_id_queue
+- cc_isochronous_4phase_handshake
+- cc_isochronous_spill_register
+- cc_lfsr
+- cc_lfsr_16bit
+- cc_lfsr_8bit
+- cc_lossy_valid_to_stream
+- cc_lzc
+- cc_max_counter
+- cc_mem_to_banks
+- cc_mem_to_banks_detailed
+- cc_multiaddr_decode
+- cc_onehot_to_bin
+- cc_passthrough_stream_fifo
+- cc_plru_tree
+- cc_ring_buffer
+- cc_rr_arb_tree
+- cc_shift_register
+- cc_shift_register_gated
+- cc_spill_register
+- cc_spill_register_flushable
+- cc_stream_arbiter
+- cc_stream_delay
+- cc_stream_fifo
+- cc_stream_fifo_optimal_wrap
+- cc_stream_fork
+- cc_stream_fork_dynamic
+- cc_stream_join
+- cc_stream_join_dynamic
+- cc_stream_mux
+- cc_stream_omega_net
+- cc_stream_register
+- cc_stream_throttle
+- cc_stream_to_mem
+- cc_stream_xbar
+- cc_sync_wedge
+- cc_trip_counter
+top_ports:
+  cc_cdc_fifo_gray_src_ptr:
+  - direction: in
+    name: src_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: src_clk_i
+    type: wire
+    width: ''
+  - direction: in
+    name: data_t
+    type: wire
+    width: ''
+  - direction: in
+    name: src_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: src_ready_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_rst_ni
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_clk_i
+    type: wire
+    width: ''
+  - direction: out
+    name: dst_valid_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_ready_i
+    type: wire
+    width: ''
+  - direction: out
+    name: async_wptr_o
+    type: wire
+    width: '[LogDepth:0]'
+  - direction: in
+    name: async_rptr_i
+    type: wire
+    width: '[LogDepth:0]'
+  - direction: in
+    name: async_wptr_i
+    type: wire
+    width: '[LogDepth:0]'
+  - direction: out
+    name: async_rptr_o
+    type: wire
+    width: '[LogDepth:0]'
+  - direction: in
+    name: src_widx_i
+    type: wire
+    width: '[LogDepth-1:0]'
+  - direction: in
+    name: src_write_i
+    type: wire
+    width: ''
+  - direction: out
+    name: src_widx_o
+    type: wire
+    width: '[LogDepth-1:0]'
+  - direction: out
+    name: dst_ridx_o
+    type: wire
+    width: '[LogDepth-1:0]'
+  - direction: in
+    name: dst_valid_i
+    type: wire
+    width: ''
+  - direction: out
+    name: dst_ready_o
+    type: wire
+    width: ''
+  - direction: in
+    name: dst_ridx_i
+    type: wire
+    width: '[LogDepth-1:0]'
+desc_source: ports
