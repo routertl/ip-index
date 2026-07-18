@@ -1,0 +1,10 @@
+name: rr_ddr_stream
+namespace: routertl
+version: 0.3.0
+description: "DDR-backed ring-buffered streaming-DMA primitive with AXI4 and Avalon-MM backends \u2014 bus-master + pointer-math substrate for capture, logging, burst-store, and virtual-FIFO use cases."
+license: MIT
+license_class: permissive
+provenance: first-party publish (rr pkg publish)
+routertl_compat:
+  language: vhdl
+  library: rr

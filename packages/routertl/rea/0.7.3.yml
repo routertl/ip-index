@@ -1,0 +1,13 @@
+name: rea
+namespace: routertl
+version: 0.7.3
+description: "RouteRTL Embedded Analyzer JTAG logic analyzer IP."
+license: MIT
+license_class: permissive
+provenance: first-party publish (rr pkg publish)
+routertl_compat:
+  language: vhdl
+  library: rr_rea
+source:
+  type: git
+  url: https://github.com/djmazure/rr-rea.git

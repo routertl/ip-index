@@ -1,0 +1,10 @@
+name: fft
+namespace: routertl
+version: 0.1.0
+description: "Pipelined streaming FFT/IFFT (radix-2^2 SDF, 256-pt/24-bit, scaled + unscaled builds, xfft drop-in shim), contract-verified bit-exact to its fixed-point oracle."
+license: MIT
+license_class: permissive
+provenance: first-party publish (rr pkg publish)
+routertl_compat:
+  language: vhdl
+  library: rr_fft
