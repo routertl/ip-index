@@ -5,6 +5,8 @@ commit_sha: d1407a7427d9201a7bcd8c37749ec083b13006dc
 published_at: '2026-03-10T06:51:30+01:00'
 description: "Open Logic shared base packages (olo_base_pkg_math/logic/array/string/attribute)\
   \ \u2014 extracted by RTL-P3.738 so consumers depend on them once via package_deps."
+license: PSI-HDL-1.0
+license_class: weak-copyleft
 language: vhdl-2008-relaxed
 source:
   url: https://github.com/open-logic/open-logic.git

@@ -6,6 +6,8 @@ published_at: '2026-03-10T06:51:30+01:00'
 description: This is a delay element. It is either implemented in BRAM & SRL. The
   output is always a fabric register for improved timing. The delay is settable by
   a input and not fixed as the olo_base_delay.
+license: PSI-HDL-1.0
+license_class: weak-copyleft
 language: vhdl-2008-relaxed
 source:
   url: https://github.com/open-logic/open-logic.git

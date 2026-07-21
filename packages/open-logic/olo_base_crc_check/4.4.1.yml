@@ -5,6 +5,8 @@ commit_sha: d1407a7427d9201a7bcd8c37749ec083b13006dc
 published_at: '2026-03-10T06:51:30+01:00'
 description: 'Description: Check the CRC appended to AXI4-Stream packets and drop
   packets with errors.'
+license: PSI-HDL-1.0
+license_class: weak-copyleft
 language: vhdl-2008-relaxed
 source:
   url: https://github.com/open-logic/open-logic.git

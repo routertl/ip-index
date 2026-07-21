@@ -4,6 +4,8 @@ version: 4.4.1
 commit_sha: d1407a7427d9201a7bcd8c37749ec083b13006dc
 published_at: '2026-03-10T06:51:30+01:00'
 description: This entity implements a simple SPI-master
+license: PSI-HDL-1.0
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/open-logic/open-logic.git

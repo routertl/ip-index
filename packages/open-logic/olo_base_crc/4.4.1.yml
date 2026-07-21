@@ -6,6 +6,8 @@ published_at: '2026-03-10T06:51:30+01:00'
 description: 'Description: A CRC generator based on a linear-feedback shifter register.
   Can be used to generate CRCs to add on TX side or to calculate CRCs to compare to
   received CRC on RX side.'
+license: PSI-HDL-1.0
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/open-logic/open-logic.git

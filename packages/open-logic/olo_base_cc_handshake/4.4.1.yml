@@ -6,6 +6,8 @@ published_at: '2026-03-10T06:51:30+01:00'
 description: This is a very basic clock crossing that allows passing of data with
   the commonly used Valid/Ready handshake. The clock crossing is not meant to achieve
   high-performance but to be simple and safe.
+license: PSI-HDL-1.0
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/open-logic/open-logic.git

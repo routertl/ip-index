@@ -6,6 +6,8 @@ published_at: '2026-03-10T06:51:30+01:00'
 description: This entity implements a full AXI master. In contrast to olo_axi_master_simple,
   this entity can do unaligned transfers and it supports different width for the AXI
   interface than for the data interface.
+license: PSI-HDL-1.0
+license_class: weak-copyleft
 language: vhdl-2008-relaxed
 source:
   url: https://github.com/open-logic/open-logic.git

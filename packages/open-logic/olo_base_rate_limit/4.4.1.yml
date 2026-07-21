@@ -6,6 +6,8 @@ published_at: '2026-03-10T06:51:30+01:00'
 description: This component limits the rate of AXI4-Stream style handshaked interfaces
   to a specified maximum data rate. It can be used to avoid overloading downstream
   components.
+license: PSI-HDL-1.0
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/open-logic/open-logic.git

@@ -6,6 +6,8 @@ published_at: '2026-03-10T06:51:30+01:00'
 description: This entity implements the cl_fix_from_real function as entity. it does
   NOT include pipeline stages because real numbers are only used for synthesis/simuation.
   They do not exist in the hardware.
+license: PSI-HDL-1.0
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/open-logic/open-logic.git
