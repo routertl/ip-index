@@ -6,6 +6,7 @@ published_at: '2011-10-23T12:05:51+00:00'
 description: Top level of CFI controller with 32-bit Wishbone classic interface Intended
   to be used at about 66MHz with a 32MB CFI flash part with 16-bit data interface.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/cfi_ctrl.git

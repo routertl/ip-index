@@ -6,6 +6,7 @@ published_at: '2026-05-11T12:02:04+03:00'
 description: Bridges standard 4-wire SPI to dual-protocol interface supporting 4-wire
   and 3-wire SPI modes for multi-device FMCOMMS11 RF board control.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

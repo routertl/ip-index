@@ -3,6 +3,7 @@ name: system_top_lvds
 version: 0.0.0
 description: SPI with MDIO interface
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

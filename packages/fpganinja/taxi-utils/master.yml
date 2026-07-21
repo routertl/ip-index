@@ -8,6 +8,7 @@ description: 'Standalone primitives without a project home: debounce, LFSR + CRC
   RAM primitives, stats counters / strings, priority encoder, CDC synchronizers (reset
   + signal).'
 license: CERN-OHL-S-2.0
+license_class: strong-copyleft
 language: systemverilog
 source:
   url: https://github.com/fpganinja/taxi.git

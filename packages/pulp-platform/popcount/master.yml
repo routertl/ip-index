@@ -5,6 +5,7 @@ commit_sha: 63e1b679a70eca3a1d60d686bc1fa170ec08e1ab
 published_at: '2026-04-17T14:02:22+00:00'
 description: Counts the number of set bits in a fixed-width input data word.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/common_cells.git

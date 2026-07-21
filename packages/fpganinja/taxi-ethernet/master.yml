@@ -7,6 +7,7 @@ description: 'Full Ethernet stack: 1G/10G/25G MACs, 10G/25G PHYs, MII/GMII/RGMII
   interfaces, MAC control + 802.3x pause, MDIO master, BASE-R + XGMII PCS encoders/decoders,
   transceiver reset helpers, eth_mac_stats.'
 license: CERN-OHL-S-2.0
+license_class: strong-copyleft
 language: systemverilog
 source:
   url: https://github.com/fpganinja/taxi.git

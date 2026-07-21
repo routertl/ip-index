@@ -7,6 +7,7 @@ description: AES (Advanced Encryption Standard) symmetric block cipher with 128/
   key support and configurable round-pipeline (Homer Hsing 2012+). Includes both encryption
   and decryption cores. Ships a FuseSoC manifest.
 license: Apache-2.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/freecores/tiny_aes.git

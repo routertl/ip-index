@@ -3,6 +3,7 @@ name: axi_ada4355_if
 version: 0.0.0
 description: Interfaces with ADA4355.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

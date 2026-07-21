@@ -7,6 +7,7 @@ description: 'Corundum 100G / 200G / 400G open-source NIC. Three subprojects: cn
   (DMA-lite), cndm_micro (microcoded engine), cndm_proto (prototype controller). Plus
   a board-level I2C controller.'
 license: CERN-OHL-S-2.0
+license_class: strong-copyleft
 language: systemverilog
 source:
   url: https://github.com/fpganinja/taxi.git

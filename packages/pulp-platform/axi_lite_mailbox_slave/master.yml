@@ -5,6 +5,7 @@ commit_sha: e286bb1a4aba6fc145f3cb41bd78665c5868e2a9
 published_at: '2026-05-07T16:14:15+02:00'
 description: Slave with FIFO interface and interrupt support
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/axi.git

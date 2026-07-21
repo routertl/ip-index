@@ -5,6 +5,7 @@ commit_sha: 428f254c09b173e9f7e8853102d2d6edc0b19dc8
 published_at: '2013-07-18T15:04:17+00:00'
 description: Trigonometric functions using double precision Floating Point Unit        ////
 license: OpenCores-Permissive-1.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/freecores/trigonometric_functions_in_double_fpu.git

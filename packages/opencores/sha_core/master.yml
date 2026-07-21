@@ -6,6 +6,7 @@ published_at: '2004-05-20T12:42:31+00:00'
 description: "SHA-1 (160-bit Secure Hash Algorithm) cryptographic hash core \u2014\
   \ single-block hashing primitive."
 license: OpenCores-Permissive-1.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/freecores/sha_core.git

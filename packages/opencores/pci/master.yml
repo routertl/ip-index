@@ -6,6 +6,7 @@ published_at: '2009-03-10T08:24:20+00:00'
 description: "Bidirectional 32-bit PCI \u2194 Wishbone bridge supporting both initiator\
   \ and target operation (Tadej Markovic + Miha Dolenc, OpenCores 2001-2006)."
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/pci.git

@@ -5,6 +5,7 @@ commit_sha: 06190eed9f10a429d311bb77b5bf48db4210c3a6
 published_at: '2006-02-09T06:06:28+00:00'
 description: Decodes Reed-Solomon encoded words and corrects errors in received data.
 license: OpenCores-Permissive-1.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/freecores/rs_decoder_31_19_6.git

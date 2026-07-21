@@ -6,6 +6,7 @@ published_at: '2025-05-29T13:01:35+02:00'
 description: LXP32 is a small and FPGA friendly 32-bit CPU IP core based on a simple,
   original instruction set. Its key features include
 license: MIT
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://github.com/lxp32/lxp32-cpu.git

@@ -6,6 +6,7 @@ published_at: '2013-08-10T10:22:38+00:00'
 description: "DESL (DES-Lightweight) variant \u2014 area-optimised DES with a single\
   \ shared S-box (Rolfes et al.). GPL-3+ VHDL. Sibling to descore/deslxcore/desxcore."
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/deslcore.git

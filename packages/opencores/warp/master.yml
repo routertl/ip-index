@@ -6,6 +6,7 @@ published_at: '2008-06-26T20:11:33+00:00'
 description: "Image warping pipeline with image-decay / temporal-aging effect \u2014\
   \ geometric distortion + temporal modulation."
 license: OpenCores-Permissive-1.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/freecores/warp.git

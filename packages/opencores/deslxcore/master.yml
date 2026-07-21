@@ -6,6 +6,7 @@ published_at: '2013-08-10T10:28:40+00:00'
 description: "DESLX variant \u2014 combines the DES-Lightweight S-box optimisation\
   \ with DES-X key whitening. GPL-3+ VHDL. Sibling to descore/deslcore/desxcore."
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/deslxcore.git

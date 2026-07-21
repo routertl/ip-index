@@ -5,6 +5,7 @@ commit_sha: df8e7649acf68544a152e39a4589c8e894a4cd0b
 published_at: '2026-03-10T13:49:52-04:00'
 description: AXI4-Lite with configurable parameters
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/ZipCPU/wb2axip.git

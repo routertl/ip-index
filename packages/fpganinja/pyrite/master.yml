@@ -7,6 +7,7 @@ description: "Pyrite PCIe configuration programmers \u2014 VPD (Vital Product Da
   \ and VSEC (Vendor-Specific Extended Capability) over BPI flash and QSPI flash,\
   \ UltraScale variants."
 license: CERN-OHL-S-2.0
+license_class: strong-copyleft
 language: systemverilog
 source:
   url: https://github.com/fpganinja/taxi.git

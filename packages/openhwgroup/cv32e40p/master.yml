@@ -5,6 +5,7 @@ commit_sha: 6033d2b1be3295ec774d17ac4cf226faacfdeb08
 published_at: '2026-04-17T09:34:04-04:00'
 description: Cv32e40p IP core with memory interface and interrupt support
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/openhwgroup/cv32e40p.git

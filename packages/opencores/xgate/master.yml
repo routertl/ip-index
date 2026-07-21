@@ -5,6 +5,7 @@ commit_sha: 37e26eda14784c531c6b1af84d6900ab99179ee9
 published_at: '2013-01-27T16:52:29+00:00'
 description: XGATE Coprocessor - XGATE JTAG Module
 license: LGPL-3.0-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/xgate.git

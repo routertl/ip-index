@@ -5,6 +5,7 @@ commit_sha: 77b142dbd5171770bfc527ea6d49fe26091b0db0
 published_at: '2006-03-23T16:34:22+00:00'
 description: A 32-bit MIPS processor core with RAM interface and interrupt support.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/minimips.git

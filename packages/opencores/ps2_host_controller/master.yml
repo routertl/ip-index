@@ -6,6 +6,7 @@ published_at: '2011-12-19T02:13:20+00:00'
 description: PS/2 host controller that transmits and receives 8-bit data over PS/2
   clock and data lines with status indication.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/ps2_host_controller.git

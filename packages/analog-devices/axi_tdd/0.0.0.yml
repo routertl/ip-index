@@ -3,6 +3,7 @@ name: axi_tdd
 version: 0.0.0
 description: Generates TDD signals.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

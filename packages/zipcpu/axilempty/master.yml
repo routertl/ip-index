@@ -6,6 +6,7 @@ published_at: '2026-03-10T13:49:52-04:00'
 description: Implements an AXI-lite slave interface that responds to read/write transactions
   with empty responses.
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/ZipCPU/wb2axip.git

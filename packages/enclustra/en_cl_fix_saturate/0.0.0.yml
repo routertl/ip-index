@@ -4,6 +4,7 @@ version: 0.0.0
 description: Converts fixed-point data between formats with optional saturation and
   pipeline registration.
 license: MIT
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://github.com/enclustra/en_cl_fix.git

@@ -8,6 +8,7 @@ description: "WR PTP Core (WRPC) \u2014 the headline IEEE-1588 PTP core deliveri
   \ Softpll + PPS gen + LM32 SoftCPU running the PTP stack. Used at LHC, KM3NeT, GSI,\
   \ ESS, and accelerator facilities worldwide."
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git

@@ -6,6 +6,7 @@ published_at: '2026-05-07T16:14:15+02:00'
 description: Serializes AXI transactions by remapping slave port IDs to master port
   IDs while enforcing per-ID transaction limits.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/axi.git

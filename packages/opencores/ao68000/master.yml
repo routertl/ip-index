@@ -6,6 +6,7 @@ published_at: '2011-02-24T20:04:55+00:00'
 description: Motorola 68000-compatible 16/32-bit processor with Wishbone bus interface,
   permissively licensed (BSD-2) for embedded use.
 license: BSD-2-Clause
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/freecores/ao68000.git

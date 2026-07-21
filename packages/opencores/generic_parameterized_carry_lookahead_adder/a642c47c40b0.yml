@@ -6,6 +6,7 @@ published_at: '2026-05-05T12:55:08+02:00'
 description: Adds two binary numbers with carry-lookahead logic for faster propagation
   of carry signals.
 license: GPL-2.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/routertl-mirrors/generic_parameterized_carry_lookahead_adder.git

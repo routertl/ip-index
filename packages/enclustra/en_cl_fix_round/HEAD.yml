@@ -6,6 +6,7 @@ published_at: '2026-04-13T08:56:36+02:00'
 description: Rounds fixed-point data between formats with pipeline registers and optional
   sideband metadata.
 license: MIT
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://github.com/enclustra/en_cl_fix.git

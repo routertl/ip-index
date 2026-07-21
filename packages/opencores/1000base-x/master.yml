@@ -6,6 +6,7 @@ published_at: '2012-02-22T23:59:47+00:00'
 description: 1000BASE-X physical coding sublayer (PCS) implementing IEEE 802.3 8b/10b
   encoding and synchronization for SFP-attached 1G optical transceivers.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/1000base-x.git

@@ -6,6 +6,7 @@ published_at: '2021-01-25T11:57:49-05:00'
 description: Converts a 2-bit DDR input signal into a single-pin output with clock-based
   timing control.
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/ZipCPU/qspiflash.git

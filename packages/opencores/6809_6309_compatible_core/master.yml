@@ -6,6 +6,7 @@ published_at: '2014-07-07T03:57:00+00:00'
 description: Motorola 6809 / Hitachi 6309 8/16-bit hybrid processor compatible with
   both ISAs, 16-bit address space, dual accumulator.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/6809_6309_compatible_core.git

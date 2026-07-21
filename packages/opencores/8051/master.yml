@@ -6,6 +6,7 @@ published_at: '2003-07-15T09:38:49+00:00'
 description: Intel 8051 / 8052-compatible 8-bit microcontroller with peripheral ecosystem
   (UART, timers, I2C, SPI) and Wishbone host bus support.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/8051.git

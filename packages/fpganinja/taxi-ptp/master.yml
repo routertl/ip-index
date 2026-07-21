@@ -5,6 +5,7 @@ commit_sha: 3951a565b5c5ac53cfe19839434ba3eb7e3a3533
 published_at: '2026-05-12T13:06:02-07:00'
 description: PTP / IEEE-1588 clock, perout, time-domain APB / AXIL bridges.
 license: CERN-OHL-S-2.0
+license_class: strong-copyleft
 language: systemverilog
 source:
   url: https://github.com/fpganinja/taxi.git

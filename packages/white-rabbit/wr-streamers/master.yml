@@ -7,6 +7,7 @@ description: "Streaming layer over WR \u2014 application-layer TX/RX framers for
   \ arbitrary user data over the WR Ethernet path. Drop-buffer, escape detection/insertion,\
   \ statistics counters, Wishbone-mapped configuration."
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git

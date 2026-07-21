@@ -7,6 +7,7 @@ description: "Educational SoC with peripheral suite \u2014 I2C, UART, PS/2, PWM,
   \ display, SPI, SRAM controller, timer, and vectored interrupt controller. Documented\
   \ in STORM SoC datasheet PDF."
 license: GPL-2.0-or-later
+license_class: strong-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/storm_soc.git

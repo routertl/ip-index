@@ -6,6 +6,7 @@ published_at: '2026-04-17T14:02:22+00:00'
 description: A parameterizable counter that tracks current value and maximum value
   reached, with up/down counting, load, and overflow detection.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/common_cells.git

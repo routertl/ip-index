@@ -6,6 +6,7 @@ published_at: '2021-01-25T11:57:49-05:00'
 description: Dual-channel Wishbone-controlled QSPI flash memory controller supporting
   configurable addressing, pipelined transactions, and optional erase/program operations.
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/ZipCPU/qspiflash.git

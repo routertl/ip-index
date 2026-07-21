@@ -8,6 +8,7 @@ description: "ECA \u2014 Event Conditional Action timing controller. Hardware ac
   \ Includes bitonic sort, MSI delivery, FIFOs, Wishbone slaves, free-list, scubus\
   \ channel adapter, time-latched unit (TLU) integration."
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git

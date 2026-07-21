@@ -7,6 +7,7 @@ description: PPS (Pulse-Per-Second) generator with sub-nanosecond fine offset ad
   Clock-locked output pulse for distribution to downstream timing consumers; Wishbone-controlled
   offset register.
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git

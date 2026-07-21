@@ -6,6 +6,7 @@ published_at: '2012-03-04T09:06:24+00:00'
 description: Tate bilinear pairing computation over the F_3^m characteristic-3 extension
   field for pairing-based cryptography (Homer Hsing, 2011).
 license: LGPL-3.0-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/pairing.git

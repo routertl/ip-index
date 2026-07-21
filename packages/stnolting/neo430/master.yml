@@ -6,6 +6,7 @@ published_at: '2021-11-23T08:13:21+01:00'
 description: ':information_source: Please check out the follow-up project: [The NEORV32
   RISC-V Processor](https://github.com/stnolting/neorv32)'
 license: BSD-3-Clause
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://github.com/stnolting/neo430.git

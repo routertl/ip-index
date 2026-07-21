@@ -7,6 +7,7 @@ description: "Mini-NIC \u2014 minimal Wishbone-mastered Ethernet NIC for the emb
   \ LM32 SoftCPU running the PTP stack. Memory-mapped TX/RX packet buffers, Wishbone\
   \ slave control register file."
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git

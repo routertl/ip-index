@@ -6,6 +6,7 @@ published_at: '2008-05-02T21:20:41+00:00'
 description: Intel MCS-48 / 8048-family 8-bit microcontroller core in VHDL, implementing
   the original instruction set with on-chip ROM and RAM.
 license: BSD-2-Clause
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://github.com/freecores/t48.git

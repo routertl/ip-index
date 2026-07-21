@@ -5,6 +5,7 @@ commit_sha: fed5cdbbd07523dff528e9dcb7d8f36056043987
 published_at: '2008-03-10T13:58:10+00:00'
 description: MCS51 to Wishbone Interface                                 ////
 license: OpenCores-Permissive-1.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/freecores/wb_mcs51.git

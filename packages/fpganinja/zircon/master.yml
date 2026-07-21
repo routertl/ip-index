@@ -6,6 +6,7 @@ published_at: '2026-05-12T13:06:02-07:00'
 description: "Zircon IP packet processor \u2014 RX parse / ingress / egress and TX\
   \ buffer / deparse / ingress / egress, plus length+checksum core."
 license: CERN-OHL-S-2.0
+license_class: strong-copyleft
 language: systemverilog
 source:
   url: https://github.com/fpganinja/taxi.git

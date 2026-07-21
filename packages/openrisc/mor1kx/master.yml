@@ -5,6 +5,7 @@ commit_sha: bb037a733255a523b871b9be8fdace0fb293cf3c
 published_at: '2025-08-21T19:51:28+01:00'
 description: This repository contains an OpenRISC 1000 compliant processor IP core.
 license: CERN-OHL-W-2.0
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/openrisc/mor1kx.git

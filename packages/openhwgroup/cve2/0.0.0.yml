@@ -5,6 +5,7 @@ description: CVE2 is a class of 2-stage pipeline OpenHW Foundation cores. Curren
   the only core in this class is the CV32E20. CV32E20 is a fork of the [Ibex](https://github.com/lowRISC/ibex)
   core.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/openhwgroup/cve2.git

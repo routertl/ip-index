@@ -6,6 +6,7 @@ published_at: '2024-08-02T14:57:07+01:00'
 description: "National Semiconductor NS32000-series 32-bit CPU implementation in Verilog\
   \ (Udo M\xF6ller). Maintained at RetroPM/m32632; LGPL-2.1."
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/RetroPM/m32632.git

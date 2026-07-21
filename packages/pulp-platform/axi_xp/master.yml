@@ -6,6 +6,7 @@ published_at: '2026-05-07T16:14:15+02:00'
 description: AXI4+ATOP crossbar interconnect that routes transactions from multiple
   slave ports to master ports based on configurable address maps and connectivity.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/axi.git

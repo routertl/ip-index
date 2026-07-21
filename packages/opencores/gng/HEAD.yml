@@ -5,6 +5,7 @@ commit_sha: 83a7d8f9468e82d4eb9653248de7bb2cae709a1e
 published_at: '2026-05-05T12:54:57+02:00'
 description: Gaussian Noise Generator (GNG) IP Core
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/routertl-mirrors/gng.git

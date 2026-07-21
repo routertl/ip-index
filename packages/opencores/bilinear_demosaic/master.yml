@@ -6,6 +6,7 @@ published_at: '2012-11-20T18:24:16+00:00'
 description: Bilinear-interpolation Bayer demosaicing block for camera image-sensor
   pipelines, converting raw mosaic data to RGB.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/bilinear_demosaic.git

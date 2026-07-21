@@ -9,6 +9,7 @@ description: "General Cores \u2014 generic FPGA primitive library. Edge detector
   \ + async FIFO), AXI/DSP/I2C primitives, 8b/10b coder, radiation-tolerant variants.\
   \ The CERN BE-CO-HT primitive library underlying every OHWR design."
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.com/ohwr/project/general-cores.git

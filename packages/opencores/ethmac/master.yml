@@ -7,6 +7,7 @@ description: 10/100 Mbps Ethernet MAC with MII PHY interface and Wishbone host b
   (Igor Mohor + Olof Kindgren 2001-2002). Includes flow control, MIIM management,
   and optional traffic coprocessor.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/ethmac.git

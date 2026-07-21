@@ -6,6 +6,7 @@ published_at: '2026-01-07T13:55:29+01:00'
 description: CTU CAN FD is soft IP-Core written in VHDL which supports ISO and NON-ISO
   versions of CAN FD protocol.
 license: MIT
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://gitlab.fel.cvut.cz/canbus/ctucanfd_ip_core.git

@@ -7,6 +7,7 @@ description: "Wishbone-controlled LPC (Low Pin Count) bus interface \u2014 bridg
   \ Wishbone to LPC for x86-class designs needing legacy device buses (serial, KBD,\
   \ BMC)."
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/wb_lpc.git

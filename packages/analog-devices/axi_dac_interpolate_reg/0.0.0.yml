@@ -4,6 +4,7 @@ version: 0.0.0
 description: Provides AXI register interface for controlling DAC interpolation, filtering,
   and synchronization settings with dual-channel support.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

@@ -4,6 +4,7 @@ version: 0.0.0
 description: Resizes fixed-point data between formats with optional rounding, saturation,
   and metadata pass-through.
 license: MIT
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://github.com/enclustra/en_cl_fix.git

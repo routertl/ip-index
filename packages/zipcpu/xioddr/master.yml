@@ -6,6 +6,7 @@ published_at: '2021-01-25T11:57:49-05:00'
 description: Bidirectional DDR I/O buffer with output enable control for dual-rate
   data transmission.
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/ZipCPU/qspiflash.git

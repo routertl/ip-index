@@ -8,6 +8,7 @@ description: "2D/3D graphics engine (GPU) \u2014 Drawing Engine 2D + 3D, texel p
   \ IBM-compatible VGA, host bus interface. Verilog/VHDL, GPL-3.0 with commercial\
   \ dual-license available."
 license: GPL-3.0-only
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/asicguy/gplgpu.git

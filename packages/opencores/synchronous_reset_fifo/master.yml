@@ -5,6 +5,7 @@ commit_sha: 88cad31ca0a18b7c24a8995176b54a6461e8898e
 published_at: '2011-12-19T18:38:18+00:00'
 description: FIFO buffer with FIFO interface and configurable parameters
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/synchronous_reset_fifo.git

@@ -6,6 +6,7 @@ published_at: '2026-05-12T15:24:37+03:00'
 description: Interfaces JESD204 PLL control signals between different clock generation
   domains.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

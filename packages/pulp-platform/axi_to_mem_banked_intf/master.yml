@@ -6,6 +6,7 @@ published_at: '2026-05-07T16:14:15+02:00'
 description: Converts AXI4+ATOP transactions into banked memory interface requests
   with configurable latency and bank arbitration.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/axi.git

@@ -6,6 +6,7 @@ published_at: '2013-08-10T10:19:23+00:00'
 description: "DES (Data Encryption Standard) cipher core \u2014 56-bit key, 64-bit\
   \ block. GPL-3+ VHDL. Sibling to deslcore/deslxcore/desxcore variants."
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/descore.git

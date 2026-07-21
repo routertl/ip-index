@@ -6,6 +6,7 @@ published_at: '2026-05-11T12:02:04+03:00'
 description: Top-level system module interfacing GPIO, differential clock I/O, parallel
   data outputs, and SPI communication.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

@@ -6,6 +6,7 @@ published_at: '2026-05-05T13:55:35+02:00'
 description: "PCI 32-bit Lite Target controller \u2014 minimal PCI target-mode interface\
   \ in VHDL, useful for Wishbone-bus designs needing a PCI front-end."
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/routertl-mirrors/pci32tlite_oc.git

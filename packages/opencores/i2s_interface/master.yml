@@ -6,6 +6,7 @@ published_at: '2007-10-09T20:13:08+00:00'
 description: "I\xB2S audio bus interface controller with Wishbone control port \u2014\
   \ VHDL bridge between FPGA and external audio codecs."
 license: GPL-2.0-or-later
+license_class: strong-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/i2s_interface.git

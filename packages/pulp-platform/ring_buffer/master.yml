@@ -7,6 +7,7 @@ description: This module implements a flexible ring buffer with decoupled write 
   read access. It supports sequential writes and random reads with a valid/ready handshake
   protocol.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/common_cells.git

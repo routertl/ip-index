@@ -7,6 +7,7 @@ description: "Streamlined adaptation of Sun's OpenSPARC T1 \u2014 single 64-bit 
   \ v9 core supporting 1-4 concurrent threads, with Wishbone master interface. Authors:\
   \ Watson, Rozhdestvenskiy, Luzzu, Fazzino (2007-2018)."
 license: GPL-2.0-only
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/s1_core.git

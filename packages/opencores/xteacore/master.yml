@@ -6,6 +6,7 @@ published_at: '2013-07-27T12:19:23+00:00'
 description: "XTEA (eXtended Tiny Encryption Algorithm) cipher core \u2014 128-bit\
   \ key, 64-bit block, 64 Feistel rounds. GPL-3+ VHDL."
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/xteacore.git

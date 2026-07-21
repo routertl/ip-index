@@ -6,6 +6,7 @@ published_at: '2010-04-11T14:41:07+00:00'
 description: Generic Reed-Solomon decoder pipeline with configurable code parameters.
   Sibling to opencores/rs_decoder_31_19_6 (specific to the (31,19,6) code).
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/reed_solomon_decoder.git

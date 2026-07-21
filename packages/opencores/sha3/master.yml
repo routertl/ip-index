@@ -6,6 +6,7 @@ published_at: '2013-01-29T07:40:49+00:00'
 description: "Keccak / SHA-3 cryptographic hash family \u2014 Apache-2.0 Verilog implementation\
   \ with ack/in handshake interface."
 license: Apache-2.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/freecores/sha3.git

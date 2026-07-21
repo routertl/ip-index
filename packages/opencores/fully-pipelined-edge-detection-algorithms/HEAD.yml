@@ -6,6 +6,7 @@ published_at: '2026-05-05T12:54:17+02:00'
 description: "Fully-pipelined image edge-detection algorithms \u2014 Sobel and Canny\
   \ family operators in mature Verilog form, ready for streaming raster pixel inputs."
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/routertl-mirrors/fully-pipelined-edge-detection-algorithms.git

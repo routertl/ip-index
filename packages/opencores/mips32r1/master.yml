@@ -6,6 +6,7 @@ published_at: '2014-01-02T00:24:50+00:00'
 description: MIPS32 Release 1 RISC processor implementing the MIPS32R1 ISA with Wishbone
   bus and 5-stage pipeline.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/mips32r1.git

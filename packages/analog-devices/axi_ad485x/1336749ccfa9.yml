@@ -6,6 +6,7 @@ published_at: '2026-05-12T15:24:37+03:00'
 description: AXI4-Lite interface controller for AD485x high-speed analog-to-digital
   converter with configurable LVDS/CMOS lanes and timing control.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

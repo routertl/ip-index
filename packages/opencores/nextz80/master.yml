@@ -6,6 +6,7 @@ published_at: '2014-02-06T21:34:08+00:00'
 description: Z80-compatible 8-bit processor with Wishbone bus interface, suitable
   for retro-computer reimplementation and embedded controllers.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/nextz80.git

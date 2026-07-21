@@ -6,6 +6,7 @@ published_at: '2026-04-17T14:02:22+00:00'
 description: Counts up by delta_i each cycle until reaching bound_i, signaling completion
   via trip_o.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/common_cells.git

@@ -6,6 +6,7 @@ published_at: '2010-10-15T13:30:30+00:00'
 description: SD card mass-storage controller with FAT16/FAT32 file system support,
   designed for embedded applications requiring persistent storage.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/sdcard_mass_storage_controller.git

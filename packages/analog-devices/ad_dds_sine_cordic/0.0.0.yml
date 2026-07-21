@@ -3,6 +3,7 @@ name: ad_dds_sine_cordic
 version: 0.0.0
 description: Generates sine and cosine values.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

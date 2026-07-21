@@ -6,6 +6,7 @@ published_at: '2010-11-04T10:02:53+00:00'
 description: Generic parameterized FIFO library covering single-clock and dual-clock
   variants with optional almost-full/almost-empty thresholds.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/versatile_fifo.git

@@ -6,6 +6,7 @@ published_at: '2013-05-04T20:25:16+00:00'
 description: Lightweight SpaceWire link interface for aerospace and instrumentation
   applications. ECSS-E-ST-50-12C-compliant link layer.
 license: GPL-2.0-or-later
+license_class: strong-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/spacewire_light.git

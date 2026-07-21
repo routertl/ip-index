@@ -7,6 +7,7 @@ description: Tri-mode 10/100/1000 Mbps Ethernet MAC with GMII PHY interface (Jon
   OpenCores 2005-2018). 32-bit OpenCores streaming user bus, Wishbone-style CSR access,
   includes RMON statistics.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/ethernet_tri_mode.git

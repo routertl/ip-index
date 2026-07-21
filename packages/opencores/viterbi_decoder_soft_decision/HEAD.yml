@@ -6,6 +6,7 @@ published_at: '2026-05-05T12:54:35+02:00'
 description: Viterbi decoder that recovers information bits from received symbol pairs
   using branch and path metrics.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: systemverilog
 source:
   url: https://github.com/routertl-mirrors/viterbi_decoder_soft_decision.git

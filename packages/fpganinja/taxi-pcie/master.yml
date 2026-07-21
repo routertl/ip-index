@@ -6,6 +6,7 @@ published_at: '2026-05-12T13:06:02-07:00'
 description: PCIe AXI-Lite masters, MSI / MSI-X controllers, VPD / VSEC programmers,
   UltraScale/+ wrappers, PCIe-to-DMA bridges.
 license: CERN-OHL-S-2.0
+license_class: strong-copyleft
 language: systemverilog
 source:
   url: https://github.com/fpganinja/taxi.git

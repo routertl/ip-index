@@ -8,6 +8,7 @@ description: "1G WR Endpoint \u2014 Gigabit Ethernet MAC + 1000Base-X PCS + PTP 
   \ Includes auto-negotiation, flow control, RMON counters, packet filtering, VLAN,\
   \ RX bypass queue."
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git

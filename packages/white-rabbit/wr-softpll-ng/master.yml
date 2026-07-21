@@ -8,6 +8,7 @@ description: "SoftPLL-NG \u2014 software-controlled PLL for sub-nanosecond clock
   \ phase detection plus bang-bang + period-detect digital PI loops. The clock-recovery\
   \ heart of the WR system."
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git

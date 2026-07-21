@@ -6,6 +6,7 @@ published_at: '2013-08-02T08:40:04+00:00'
 description: Cycle-accurate WDC 65C02 8-bit processor recreating the original instruction
   set with bus timing matching the silicon.
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/cpu65c02_true_cycle.git

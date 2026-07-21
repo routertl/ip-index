@@ -6,6 +6,7 @@ published_at: '2014-06-03T04:59:26+00:00'
 description: IEEE 1588 hardware timestamp engine providing precision time protocol
   (PTP) acceleration with one-step and two-step timestamping at the GMII interface.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/ha1588.git

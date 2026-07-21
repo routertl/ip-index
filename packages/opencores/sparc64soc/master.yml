@@ -7,6 +7,7 @@ description: 'Full SoC built around OpenSPARC T1 with floating-point unit, OS2WB
   bridge, and OpenCores peripherals (NOR flash, UART, Ethernet, DRAM controllers).
   Capable of running Ubuntu Linux 2.6.22+. Authors: Rozhdestvenskiy, Fazzino (2010-2011).'
 license: GPL-2.0-only
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/sparc64soc.git

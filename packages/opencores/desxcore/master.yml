@@ -6,6 +6,7 @@ published_at: '2013-08-10T10:26:10+00:00'
 description: "DES-X variant \u2014 adds XOR pre/post-whitening keys to standard DES\
   \ (Rivest 1984), strengthening against brute-force. GPL-3+ VHDL."
 license: GPL-3.0-or-later
+license_class: strong-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/desxcore.git

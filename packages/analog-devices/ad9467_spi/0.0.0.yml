@@ -4,6 +4,7 @@ version: 0.0.0
 description: Interfaces with an AD9467 analog-to-digital converter via SPI protocol
   for configuration and readback operations.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

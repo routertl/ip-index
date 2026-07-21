@@ -5,6 +5,7 @@ commit_sha: c57238879332826f8e57744dabdb6e7ad86cbb2a
 published_at: '2024-10-01T21:23:24+03:00'
 description: I2C with interrupt support
 license: BSD-2-Clause
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://github.com/sshuv/iicmb.git

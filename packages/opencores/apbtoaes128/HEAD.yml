@@ -6,6 +6,7 @@ published_at: '2026-05-05T12:54:29+02:00'
 description: "APB-to-AES-128 bridge \u2014 exposes an AES-128 cipher core through\
   \ the AMBA APB peripheral bus for register-mapped key/data access."
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/routertl-mirrors/apbtoaes128.git

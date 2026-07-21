@@ -6,6 +6,7 @@ published_at: '2014-02-15T15:21:12+00:00'
 description: ITU-T G.729 Annex A voice codec implementing 8 kbit/s speech compression
   with 10 ms frames for low-bandwidth telephony applications.
 license: OpenCores-Permissive-1.0
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://github.com/freecores/g729a_codec.git

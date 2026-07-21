@@ -6,6 +6,7 @@ published_at: '2026-05-13T08:20:05+00:00'
 description: This module controls the read and write access to the storage unit. It
   is used for both transmit and receive use cases
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

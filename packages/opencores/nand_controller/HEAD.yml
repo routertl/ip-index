@@ -6,6 +6,7 @@ published_at: '2026-05-05T12:54:24+02:00'
 description: Avalon interface controller for NAND flash memory read/write operations
   with command and address sequencing.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/routertl-mirrors/nand_controller.git

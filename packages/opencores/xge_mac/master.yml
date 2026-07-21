@@ -7,6 +7,7 @@ description: 10 Gigabit Ethernet MAC with XGMII PHY interface and Wishbone bus (
   Tanguay 2008). Packet-level pkt_tx/pkt_rx user interface, includes generic FIFOs
   and clock-domain-crossing utilities.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/xge_mac.git

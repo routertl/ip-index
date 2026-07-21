@@ -5,6 +5,7 @@ commit_sha: 3cd5ea40cadd7d5dd6746ef390758a8ded01ac97
 published_at: '2026-05-05T12:54:06+02:00'
 description: Multiplies two 8-bit unsigned integers to produce a 16-bit product.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/routertl-mirrors/8bit_vedic_multiplier.git

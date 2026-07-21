@@ -5,6 +5,7 @@ commit_sha: 6d44db41cbfb3460f90c5c3e93e6032fcc2eba62
 published_at: '2014-08-10T17:49:04+01:00'
 description: AltOr32 - Alternative Lightweight OpenRisc CPU
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/altor32.git

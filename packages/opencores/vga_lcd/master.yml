@@ -6,6 +6,7 @@ published_at: '2003-09-23T13:09:26+00:00'
 description: VGA + LCD display controller generating timing for standard VGA modes
   and parallel LCD interfaces. Includes pixel clock generator and frame buffer interface.
 license: GPL-2.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/vga_lcd.git

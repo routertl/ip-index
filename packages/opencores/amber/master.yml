@@ -7,6 +7,7 @@ description: 'ARMv2-compatible 32-bit RISC processor with Wishbone bus (Conor Sa
   2010+). Two pipeline variants: a23 (3-stage) and a25 (5-stage), shared register
   file, MMU, caches.'
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/amber.git

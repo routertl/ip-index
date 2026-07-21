@@ -6,6 +6,7 @@ published_at: '2008-06-04T06:10:35+00:00'
 description: Wishbone-controlled parallel flash memory controller (CFI/JEDEC compatible).
   Verilog.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/wb_flash.git

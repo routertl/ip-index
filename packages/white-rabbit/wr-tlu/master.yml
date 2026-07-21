@@ -7,6 +7,7 @@ description: "Time-Latched Unit \u2014 captures input-pin transitions with the W
   \ nanosecond timestamp. Used as the timestamping front-end for ECA and external\
   \ trigger capture."
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git

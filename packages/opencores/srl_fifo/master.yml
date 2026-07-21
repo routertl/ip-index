@@ -6,6 +6,7 @@ published_at: '2009-03-10T09:35:24+00:00'
 description: "Xilinx SRL16/SRL32-based compact FIFO \u2014 uses SRL shift-register\
   \ primitives for storage on Xilinx FPGA targets. VHDL utility primitive."
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/srl_fifo.git

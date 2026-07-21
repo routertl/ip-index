@@ -6,6 +6,7 @@ published_at: '2026-05-05T12:54:40+02:00'
 description: "SHA-256 cryptographic hash core \u2014 single-block 256-bit Secure Hash\
   \ Algorithm 2 implementation with synchronous control interface."
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/routertl-mirrors/sha256_hash_core.git

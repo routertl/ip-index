@@ -7,6 +7,7 @@ description: cdc_ufifo generate an minimalist fifo. it can be 4 cells minimum. b
   default used implementation without ram only standart cells used , and it can be
   selected if need. most slowest stage is the output multiplexor.
 license: Apache-2.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/freecores/cdc_ufifo.git

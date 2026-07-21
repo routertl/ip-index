@@ -13,6 +13,7 @@ description: "Empty stub for wbgenplus_pkg.  mkreider/wbgenplus's codegen emits 
   \ through the registry, this stub is the canonical provider \u2014 explicit curator\
   \ provenance, not a copy of any upstream artifact."
 license: MIT
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://github.com/routertl/stubs.git

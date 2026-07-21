@@ -4,6 +4,7 @@ version: 0.0.0
 description: Receives differential ADC data and clock from AD9684, performs LVDS deserialization
   and calibration, outputs dual 14-bit channels with configurable I/O delays.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

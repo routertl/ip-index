@@ -4,6 +4,7 @@ version: 0.0.0
 description: Provides AXI register interface for configuring and controlling time-division
   duplex (TDD) channel timing and synchronization.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

@@ -8,6 +8,7 @@ description: "Shared internals required by every wr-cores subsystem \u2014 WRF (
   \ helpers, fabric mux/reg/loopback. Not a standalone install target; auto-pulled\
   \ via external_uses by wr-ptp-core, wr-endpoint, wr-softpll-ng, wr-streamers, wr-mini-nic."
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git

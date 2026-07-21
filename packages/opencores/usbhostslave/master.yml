@@ -6,6 +6,7 @@ published_at: '2011-03-18T17:52:17+00:00'
 description: USB 1.1 host and slave controller in one package, with serial interface
   engine, host control state machine, and slave endpoint logic. Wishbone bus interface.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/usbhostslave.git

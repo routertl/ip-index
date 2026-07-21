@@ -6,6 +6,7 @@ published_at: '2011-08-22T03:28:39+00:00'
 description: GPU core implementing a 3D graphics rendering pipeline with programmable
   shading.
 license: GPL-2.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/theia_gpu.git

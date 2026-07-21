@@ -6,6 +6,7 @@ published_at: '2014-03-30T09:58:35+00:00'
 description: "Yet Another CORDIC \u2014 generic iterative CORDIC pipeline for trigonometric\
   \ and hyperbolic functions with parameterised data width."
 license: LGPL-3.0-or-later
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://github.com/freecores/yac.git

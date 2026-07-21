@@ -6,6 +6,7 @@ published_at: '2005-09-15T17:28:17+00:00'
 description: Game-controller serial protocol cores covering NES, SNES, and Sega Genesis
   pad interfaces for retro-console replica designs.
 license: BSD-2-Clause
+license_class: permissive
 language: vhdl-2008
 source:
   url: https://github.com/freecores/gamepads.git

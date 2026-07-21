@@ -7,6 +7,7 @@ description: Clock-domain-boundary primitive library covering arbiter, basic FIF
   clock detection, clock switching (2/3/4/8 sources), and debouncer for safe cross-domain
   glue.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/boundaries.git

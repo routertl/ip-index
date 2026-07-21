@@ -6,6 +6,7 @@ published_at: '2026-05-05T12:54:46+02:00'
 description: Detects connected components in pixel data stream and outputs bounding
   box coordinates.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/routertl-mirrors/linkruncca.git

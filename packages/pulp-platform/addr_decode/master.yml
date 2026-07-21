@@ -6,6 +6,7 @@ published_at: '2026-04-17T14:02:22+00:00'
 description: Decodes an input address against a set of rules to output a matching
   index or error flag.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/common_cells.git

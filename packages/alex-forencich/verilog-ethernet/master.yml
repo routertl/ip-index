@@ -7,6 +7,7 @@ description: "Verilog Ethernet MAC + IP/UDP stack supporting 1G/10G/25G/40G/100G
   \ both Intel and Xilinx primitives (Alex Forencich). Deprecated upstream \u2014\
   \ author moved active development to fpganinja/taxi (CERN-OHL-S-2.0)."
 license: MIT
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/alexforencich/verilog-ethernet.git

@@ -7,6 +7,7 @@ description: TBI (Ten-Bit Interface) PHY adapter + 8b/10b coder. Bridges the WR 
   MAC to a TBI-style transceiver for vendors without a built-in PCS. Includes the
   in-tree 8b/10b encode/decode + LUT.
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.cern.ch/white-rabbit/wr-cores.git

@@ -7,6 +7,7 @@ description: "Minimal OpenRISC 1200 system-on-chip \u2014 OR1200 CPU with Wishbo
   \ on-chip RAM, UART, Ethernet, and JTAG debug. Generic FPGA targets (Xilinx + Altera).\
   \ Authors: Xanthopoulos, Hicks, Almansa, Yawn, Jayar, Fajardo (2009-2013)."
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/minsoc.git

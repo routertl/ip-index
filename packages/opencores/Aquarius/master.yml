@@ -6,6 +6,7 @@ published_at: '2003-12-10T16:39:23+00:00'
 description: SuperH SH-2-compatible 32-bit RISC processor implementing the SH-2 ISA
   with 5-stage pipeline and 16-bit instruction encoding.
 license: GPL-2.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/Aquarius.git

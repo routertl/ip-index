@@ -6,6 +6,7 @@ published_at: '2026-05-07T16:14:15+02:00'
 description: AXI4-Lite interface to dual LFSR with independent serial shift ports
   for read and write path testing.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/axi.git

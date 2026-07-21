@@ -8,6 +8,7 @@ description: "Etherbone \u2014 Wishbone-over-Ethernet remote-access protocol. Th
   \ by White Rabbit's wrc_core for remote register access), and a USB transport variant\
   \ (eb_usb_core). OHWR-canonical post-migration."
 license: LGPL-2.1
+license_class: weak-copyleft
 language: vhdl-2008
 source:
   url: https://gitlab.com/ohwr/project/etherbone-core.git

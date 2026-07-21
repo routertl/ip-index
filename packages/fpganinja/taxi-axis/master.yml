@@ -7,6 +7,7 @@ description: "AXI4-Stream infrastructure: FIFOs (sync/async/pipeline), broadcast
   \ demux/mux, switch, register, COBS encode/decode, null src/snk, tie. Excludes Ethernet\
   \ PCS streams (BASE-R, XGMII, GMII bridges) \u2014 those live in taxi-ethernet."
 license: CERN-OHL-S-2.0
+license_class: strong-copyleft
 language: systemverilog
 source:
   url: https://github.com/fpganinja/taxi.git

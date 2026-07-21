@@ -6,6 +6,7 @@ published_at: '2026-05-12T13:06:02-07:00'
 description: I2C master, slave (with APB / AXIL bridges), init engine, single-register
   peripheral.
 license: CERN-OHL-S-2.0
+license_class: strong-copyleft
 language: systemverilog
 source:
   url: https://github.com/fpganinja/taxi.git

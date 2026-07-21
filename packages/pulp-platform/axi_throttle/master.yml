@@ -6,6 +6,7 @@ published_at: '2026-05-07T16:14:15+02:00'
 description: Throttles AXI transactions by limiting concurrent write and read requests
   based on available credits.
 license: Apache-2.0
+license_class: permissive
 language: systemverilog
 source:
   url: https://github.com/pulp-platform/axi.git

@@ -6,6 +6,7 @@ published_at: '2005-09-19T09:15:18+00:00'
 description: Encrypts or decrypts 128-bit AES data blocks using a provided key with
   configurable operation mode.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/systemcaes.git

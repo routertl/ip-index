@@ -7,6 +7,7 @@ description: This is the top level module of the JPEG Encoder Core. This module 
   the output from the fifo_out module and sends it to the ff_checker module to check
   for FF's in the bitstream.
 license: OpenCores-Permissive-1.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/freecores/jpegencode.git

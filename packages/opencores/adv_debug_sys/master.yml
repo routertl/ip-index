@@ -7,6 +7,7 @@ description: Advanced debug system providing JTAG-based memory and CPU access fo
   OpenRISC and other Wishbone-based processors. Includes JTAG TAP, debug interface,
   and Wishbone bridge.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/freecores/adv_debug_sys.git

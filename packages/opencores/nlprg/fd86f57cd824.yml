@@ -7,6 +7,7 @@ description: This project provides an example of a non-linear pseudo random gene
   ( nlprg ). The nlprg can produce a pseudo-random sequence with a period of 2^n numbers,
   where n is the numbers of registers.
 license: OpenCores-Permissive-1.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/routertl-mirrors/nlprg.git

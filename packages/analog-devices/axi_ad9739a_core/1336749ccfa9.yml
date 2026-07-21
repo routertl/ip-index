@@ -6,6 +6,7 @@ published_at: '2026-05-12T15:24:37+03:00'
 description: AXI AD9739A DAC core that generates or processes 16 parallel 16-bit DAC
   output channels with optional DDS and DMA interface support.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

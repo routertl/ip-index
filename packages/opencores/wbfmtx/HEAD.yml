@@ -7,6 +7,7 @@ description: "Wishbone-controlled FM transmitter \u2014 software-defined-radio b
   \ block that takes a Wishbone-attached audio stream and produces an FM-modulated\
   \ baseband output."
 license: GPL-2.0-or-later
+license_class: strong-copyleft
 language: verilog
 source:
   url: https://github.com/routertl-mirrors/wbfmtx.git

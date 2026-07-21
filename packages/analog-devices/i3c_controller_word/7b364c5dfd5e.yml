@@ -6,6 +6,7 @@ published_at: '2026-04-15T16:15:19+03:00'
 description: Executes Word Commands received by the framing module. Each state has
   linear sub-states counted in Bit Modulation Commands.
 license: ADIBSD OR GPL-2.0-only
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/analogdevicesinc/hdl.git

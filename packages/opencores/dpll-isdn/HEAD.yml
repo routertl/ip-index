@@ -6,6 +6,7 @@ published_at: '2026-05-05T12:55:03+02:00'
 description: Synchronizes an input signal to a main clock using phase-locked loop
   control with lead/lag outputs.
 license: LGPL-2.1-or-later
+license_class: weak-copyleft
 language: verilog
 source:
   url: https://github.com/routertl-mirrors/dpll-isdn.git

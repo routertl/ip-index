@@ -8,6 +8,7 @@ description: "Open-source neuromorphic processor (second generation) \u2014 LIF 
   \ Network-on-Chip mesh, RV32I/RV32IM management cores, multi-chip routing. Apache-2.0,\
   \ FPGA-validated on AWS F2, Kria, and Arty."
 license: Apache-2.0
+license_class: permissive
 language: verilog
 source:
   url: https://github.com/catalyst-neuromorphic/catalyst-n2.git
