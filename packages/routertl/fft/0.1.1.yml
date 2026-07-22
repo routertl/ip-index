@@ -1,10 +1,51 @@
-name: fft
 namespace: routertl
+name: fft
 version: 0.1.1
-description: "Pipelined streaming FFT/IFFT (radix-2^2 SDF, 256-pt/24-bit, scaled + unscaled builds, xfft drop-in shim), contract-verified bit-exact to its fixed-point oracle."
+commit_sha: a9a6cd6aefc2c2e0d644a613ec672e25ea4a1308
+published_at: '2026-07-17 10:30:33'
+description: Pipelined streaming FFT/IFFT (radix-2^2 SDF, 256-pt/24-bit, scaled +
+  unscaled builds, xfft drop-in shim), contract-verified bit-exact to its fixed-point
+  oracle.
 license: MIT
 license_class: permissive
-provenance: first-party publish (rr pkg publish)
+language: vhdl
+source:
+  url: https://github.com/djmazure/rr-fft.git
+  tag: v0.1.1
+  resolved_commit: a9a6cd6aefc2c2e0d644a613ec672e25ea4a1308
 routertl_compat:
-  language: vhdl
   library: rr_fft
+  files:
+  - rtl/rr_fft_pkg.vhd
+  - rtl/rr_fft_sdf_pair.vhd
+  - rtl/rr_fft_reorder.vhd
+  - rtl/rr_fft_top.vhd
+  - rtl/rr_fft_xfft_shim.vhd
+  library_deps: []
+  module_deps: []
+  modules_provided:
+  - rr_fft_reorder
+  - rr_fft_sdf_pair
+  - rr_fft_top
+  - rr_fft_xfft_shim
+tags: []
+role: top
+ip_yml: "# rr_fft \u2014 first-party pipelined streaming FFT/IFFT.\n#\n# THIS repo\
+  \ is the source of the routertl/fft package: `rr pkg publish`\n# runs from here\
+  \ and the registry pins this repo's commits. Installs are\n# served from the registry\
+  \ blob. Contract-first: bit-exact to the fixed-point\n# oracle in model/ (the arithmetic\
+  \ spec), SNR-equivalent to Xilinx xfft\n# v9.1 (fwd scaled within 1 LSB, >108 dB),\
+  \ OOC timing-closed at 375 MHz\n# on xczu5cg-2 in both build variants (DSP 24, BRAM\
+  \ <= 3).\n#\n# Two build variants via the G_HAS_SCALING top generic (xfft\n# C_HAS_SCALING\
+  \ analog): scaled (runtime schedule, 24-bit out, wrap) and\n# unscaled (bit growth\
+  \ to 33-bit out on the oracle-proven width plan).\n# rr_fft_xfft_shim is a drop-in\
+  \ xfft v9.1 port-map adapter for both.\n\nname: fft\nnamespace: routertl\nversion:\
+  \ 0.1.1\ndescription: Pipelined streaming FFT/IFFT (radix-2^2 SDF, 256-pt/24-bit,\
+  \ scaled + unscaled builds, xfft drop-in shim), contract-verified bit-exact to its\
+  \ fixed-point oracle.\nlicense: MIT\nlibrary: rr_fft\nlanguage: vhdl\n\nhdl:\n \
+  \ library: rr_fft\n  language: vhdl\n  top_module: rr_fft_top\n  top_sim: rr_fft_top\n\
+  \  files:\n    - rtl/rr_fft_pkg.vhd\n    - rtl/rr_fft_sdf_pair.vhd\n    - rtl/rr_fft_reorder.vhd\n\
+  \    - rtl/rr_fft_top.vhd\n    - rtl/rr_fft_xfft_shim.vhd\n\npaths:\n  sources:\
+  \ rtl\n\nsynthesis:\n  mode: rtl\n  sources:\n    - rtl/rr_fft_pkg.vhd\n    - rtl/rr_fft_sdf_pair.vhd\n\
+  \    - rtl/rr_fft_reorder.vhd\n    - rtl/rr_fft_top.vhd\n    - rtl/rr_fft_xfft_shim.vhd\n\
+  \nrequirements: requirements.yml\n"
