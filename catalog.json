@@ -427989,5 +427989,7349 @@
     "library_deps": [
       "olo"
     ]
+  },
+  {
+    "namespace": "colibri",
+    "name": "colibri-common",
+    "latest": "2026.07",
+    "versions": [
+      "2026.07"
+    ],
+    "commit_sha": "3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f",
+    "published_at": "2026-07-17T09:57:54+00:00",
+    "description": "Shared packages, types, arithmetic, and basic building blocks (counters, buffers, arbiters, edge detectors, reset controllers) used across the colibri library. Auto-pulled via external_uses by the other colibri subsystems.",
+    "license": "CERN-OHL-W-2.0",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "library": "colibri",
+    "source_url": "https://gitlab.com/colibri-cern/colibri.git",
+    "tags": [
+      "arbitration",
+      "buffer",
+      "counter",
+      "detect",
+      "edge",
+      "frequency",
+      "pipeline",
+      "powerup",
+      "remove",
+      "reset",
+      "stream",
+      "trail"
+    ],
+    "role": "subproject",
+    "top_modules": [
+      "arbiter",
+      "be_add_lead",
+      "be_add_trail",
+      "be_remove_lead",
+      "be_remove_trail",
+      "comparator",
+      "debouncer",
+      "edge_detect",
+      "frequency_counter",
+      "heartbeat",
+      "pipeline_buffer",
+      "powerup_reset",
+      "stream_buffer",
+      "stream_buffer_generic",
+      "stream_to_wbm"
+    ],
+    "components": [
+      "counter",
+      "skid_buffer"
+    ],
+    "top_ports": {
+      "arbiter": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "requests_i",
+          "type": "std_logic_vector",
+          "width": "g_NUM_INPUTS - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "grants_o",
+          "type": "std_logic_vector",
+          "width": "g_NUM_INPUTS - 1 downto 0"
+        }
+      ],
+      "be_add_lead": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "shl_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_lead_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "be_add_trail": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "shl_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_trail_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "be_remove_lead": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "shl_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_head_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "be_remove_trail": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "shl_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_tail_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "comparator": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "enable_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "a_i",
+          "type": "unsigned",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "b_i",
+          "type": "unsigned",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "a_gt_b_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "debouncer": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "data_i",
+          "type": "std_logic_vector",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "data_o",
+          "type": "std_logic_vector",
+          "width": ""
+        }
+      ],
+      "edge_detect": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "data_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "pulse_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "frequency_counter": [
+        {
+          "direction": "in",
+          "name": "clk_ref_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "clk_meas_i",
+          "type": "std_logic_vector",
+          "width": "g_NUM_CLOCKS - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "freq_data_o",
+          "type": "uns_array_t",
+          "width": "0 to g_NUM_CLOCKS - 1)(g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "freq_valid_o",
+          "type": "std_logic_vector",
+          "width": "g_NUM_CLOCKS - 1 downto 0"
+        }
+      ],
+      "heartbeat": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "heartbeat_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "pipeline_buffer": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_keep_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH / 8 - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_keep_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH / 8 - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "powerup_reset": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_ext_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "reset_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "stream_buffer": [
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "stream_buffer_generic": [
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "data_t",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "data_t",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "stream_to_wbm": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "8 + maximum(g_WB_ADDR_WIDTH, g_WB_DATA_WIDTH)  - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "8 + maximum(g_WB_ADDR_WIDTH, g_WB_DATA_WIDTH) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wb_adr_o",
+          "type": "unsigned",
+          "width": "g_WB_ADDR_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "wb_dat_i",
+          "type": "std_logic_vector",
+          "width": "g_WB_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "wb_dat_o",
+          "type": "std_logic_vector",
+          "width": "g_WB_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "wb_we_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wb_sel_o",
+          "type": "std_logic_vector",
+          "width": "g_WB_DATA_WIDTH / 8 - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "wb_stb_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wb_cyc_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wb_ack_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wb_err_i",
+          "type": "std_logic",
+          "width": ""
+        }
+      ]
+    },
+    "desc_source": "curator",
+    "provides_packages": [
+      "types",
+      "utils"
+    ],
+    "upstream_evidence": {
+      "frameworks": [
+        "vunit"
+      ],
+      "testbench_count": 90,
+      "runners": [
+        {
+          "path": "sim/common/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/comms/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/endec/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/fileio/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/interfaces/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/i2c/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/jtag/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/spi/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/uart/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/memory/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/misc/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/packet/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/pipes/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/proto/aurora_64b66b/run.py",
+          "framework": "vunit"
+        }
+      ],
+      "formal": {
+        "tool": "symbiyosys",
+        "sby_files": [
+          "fv/common/run.sby",
+          "fv/comms/run.sby",
+          "fv/endec/run.sby",
+          "fv/interfaces/stream/run.sby",
+          "fv/memory/run.sby",
+          "fv/misc/run.sby",
+          "fv/packet/run.sby",
+          "fv/pipes/run.sby"
+        ],
+        "property_files": [
+          {
+            "path": "fv/common/counter.psl",
+            "assert_statements": 4,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/debouncer.psl",
+            "assert_statements": 2,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/edge_detect.psl",
+            "assert_statements": 3,
+            "assume_statements": 0,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/pipeline_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/skid_buffer.psl",
+            "assert_statements": 5,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/stream_buffer.psl",
+            "assert_statements": 3,
+            "assume_statements": 1,
+            "cover_statements": 4
+          },
+          {
+            "path": "fv/common/utils.psl",
+            "assert_statements": 1,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_down.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_up.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_decode.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_encode.psl",
+            "assert_statements": 8,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_read.psl",
+            "assert_statements": 25,
+            "assume_statements": 1,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write.psl",
+            "assert_statements": 5,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write_unaligned.psl",
+            "assert_statements": 15,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_to_axis.psl",
+            "assert_statements": 2,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/axis_to_avst.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/fifo.psl",
+            "assert_statements": 10,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/ring_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 1,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/misc/be_add_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_add_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/broadcaster.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/deinterleaver.psl",
+            "assert_statements": 7,
+            "assume_statements": 7,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/header_add.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/header_remove.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/interleaver.psl",
+            "assert_statements": 10,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/interleaver_bd.psl",
+            "assert_statements": 13,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_delay.psl",
+            "assert_statements": 7,
+            "assume_statements": 6,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_join.psl",
+            "assert_statements": 9,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/pipes/arbiter.psl",
+            "assert_statements": 6,
+            "assume_statements": 2,
+            "cover_statements": 0
+          }
+        ],
+        "assert_statements": 185,
+        "cover_statements": 20
+      },
+      "ci_config": [
+        ".gitlab-ci.yml",
+        "utils/ci_jobs/formal_ci.yml",
+        "utils/ci_jobs/simulation_ci.yml",
+        "utils/ci_jobs/style_ci.yml"
+      ]
+    },
+    "routertl_compat": {
+      "language": "vhdl-2008",
+      "library": "colibri",
+      "files": [
+        "src/pipes/arbiter.vhdl",
+        "src/common/utils.vhdl",
+        "src/common/types.vhdl",
+        "src/common/skid_buffer.vhdl",
+        "src/misc/be_add_lead.vhdl",
+        "src/misc/be_add_trail.vhdl",
+        "src/misc/be_remove_lead.vhdl",
+        "src/misc/be_remove_trail.vhdl",
+        "src/common/comparator.vhdl",
+        "src/common/counter.vhdl",
+        "src/common/debouncer.vhdl",
+        "src/common/edge_detect.vhdl",
+        "src/common/synchro.vhdl",
+        "src/common/synchro_pulse.vhdl",
+        "src/misc/frequency_counter.vhdl",
+        "src/misc/heartbeat.vhdl",
+        "src/common/pipeline_buffer.vhdl",
+        "src/misc/powerup_reset.vhdl",
+        "src/common/stream_buffer.vhdl",
+        "src/common/stream_buffer_generic.vhdl",
+        "src/misc/stream_to_wbm.vhdl"
+      ]
+    }
+  },
+  {
+    "namespace": "colibri",
+    "name": "colibri-cdc",
+    "latest": "2026.07",
+    "versions": [
+      "2026.07"
+    ],
+    "commit_sha": "3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f",
+    "published_at": "2026-07-17T09:57:54+00:00",
+    "description": "Clock Domain Crossing (CDC) synchronizers — pulse, reset, generic, and handshake synchronizers for crossing asynchronous clock boundaries.",
+    "license": "CERN-OHL-W-2.0",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "library": "colibri",
+    "source_url": "https://gitlab.com/colibri-cern/colibri.git",
+    "tags": [
+      "handshake",
+      "pulse",
+      "reset",
+      "synchro"
+    ],
+    "role": "subproject",
+    "top_modules": [
+      "synchro_generic",
+      "synchro_handshake",
+      "synchro_pulse"
+    ],
+    "components": [
+      "synchro",
+      "synchro_reset"
+    ],
+    "top_ports": {
+      "synchro_generic": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "data_i",
+          "type": "data_t",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "data_o",
+          "type": "data_t",
+          "width": ""
+        }
+      ],
+      "synchro_handshake": [
+        {
+          "direction": "in",
+          "name": "snk_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "synchro_pulse": [
+        {
+          "direction": "in",
+          "name": "src_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "dst_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "pulse_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "pulse_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ]
+    },
+    "desc_source": "curator",
+    "upstream_evidence": {
+      "frameworks": [
+        "vunit"
+      ],
+      "testbench_count": 90,
+      "runners": [
+        {
+          "path": "sim/common/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/comms/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/endec/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/fileio/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/interfaces/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/i2c/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/jtag/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/spi/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/uart/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/memory/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/misc/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/packet/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/pipes/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/proto/aurora_64b66b/run.py",
+          "framework": "vunit"
+        }
+      ],
+      "formal": {
+        "tool": "symbiyosys",
+        "sby_files": [
+          "fv/common/run.sby",
+          "fv/comms/run.sby",
+          "fv/endec/run.sby",
+          "fv/interfaces/stream/run.sby",
+          "fv/memory/run.sby",
+          "fv/misc/run.sby",
+          "fv/packet/run.sby",
+          "fv/pipes/run.sby"
+        ],
+        "property_files": [
+          {
+            "path": "fv/common/counter.psl",
+            "assert_statements": 4,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/debouncer.psl",
+            "assert_statements": 2,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/edge_detect.psl",
+            "assert_statements": 3,
+            "assume_statements": 0,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/pipeline_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/skid_buffer.psl",
+            "assert_statements": 5,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/stream_buffer.psl",
+            "assert_statements": 3,
+            "assume_statements": 1,
+            "cover_statements": 4
+          },
+          {
+            "path": "fv/common/utils.psl",
+            "assert_statements": 1,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_down.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_up.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_decode.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_encode.psl",
+            "assert_statements": 8,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_read.psl",
+            "assert_statements": 25,
+            "assume_statements": 1,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write.psl",
+            "assert_statements": 5,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write_unaligned.psl",
+            "assert_statements": 15,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_to_axis.psl",
+            "assert_statements": 2,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/axis_to_avst.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/fifo.psl",
+            "assert_statements": 10,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/ring_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 1,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/misc/be_add_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_add_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/broadcaster.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/deinterleaver.psl",
+            "assert_statements": 7,
+            "assume_statements": 7,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/header_add.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/header_remove.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/interleaver.psl",
+            "assert_statements": 10,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/interleaver_bd.psl",
+            "assert_statements": 13,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_delay.psl",
+            "assert_statements": 7,
+            "assume_statements": 6,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_join.psl",
+            "assert_statements": 9,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/pipes/arbiter.psl",
+            "assert_statements": 6,
+            "assume_statements": 2,
+            "cover_statements": 0
+          }
+        ],
+        "assert_statements": 185,
+        "cover_statements": 20
+      },
+      "ci_config": [
+        ".gitlab-ci.yml",
+        "utils/ci_jobs/formal_ci.yml",
+        "utils/ci_jobs/simulation_ci.yml",
+        "utils/ci_jobs/style_ci.yml"
+      ]
+    },
+    "routertl_compat": {
+      "language": "vhdl-2008",
+      "library": "colibri",
+      "files": [
+        "src/common/synchro.vhdl",
+        "src/common/synchro_generic.vhdl",
+        "src/common/synchro_reset.vhdl",
+        "src/common/synchro_handshake.vhdl",
+        "src/common/synchro_pulse.vhdl"
+      ]
+    }
+  },
+  {
+    "namespace": "colibri",
+    "name": "colibri-memory",
+    "latest": "2026.07",
+    "versions": [
+      "2026.07"
+    ],
+    "commit_sha": "3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f",
+    "published_at": "2026-07-17T09:57:54+00:00",
+    "description": "RAM, ROM, and FIFO memory structures — single-clock and dual-clock (cross-clock) FIFOs, packet FIFOs, true/simple dual-port RAMs, content-addressable memories (BiCAM), ring buffers, Wishbone RAM wrappers, and register utils.",
+    "license": "CERN-OHL-W-2.0",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "library": "colibri",
+    "source_url": "https://gitlab.com/colibri-cern/colibri.git",
+    "tags": [
+      "access",
+      "altera",
+      "buffer",
+      "crossing",
+      "memory",
+      "packet",
+      "random",
+      "receive",
+      "receiver",
+      "transmit",
+      "transmitter",
+      "wishbone"
+    ],
+    "role": "subproject",
+    "top_modules": [
+      "bicam",
+      "mmap_fifo",
+      "packet_cc_fifo",
+      "packet_cc_ram_fifo",
+      "packet_fifo",
+      "ring_buffer",
+      "rom",
+      "simple_dpram_be",
+      "true_dpram",
+      "wb_ram"
+    ],
+    "components": [
+      "cc_fifo",
+      "cc_ram_fifo",
+      "fifo",
+      "mmap_fifo_csr",
+      "mmap_fifo_rx",
+      "mmap_fifo_tx",
+      "ram",
+      "rxfifo_csr",
+      "simple_dpram",
+      "simple_dpram_altera",
+      "simple_dpram_xilinx",
+      "true_dpram_altera",
+      "true_dpram_xilinx",
+      "txfifo_csr"
+    ],
+    "top_ports": {
+      "bicam": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "rdreq_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wrreq_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "clear_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "full_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "busy_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "match_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "addr_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_N_WORDS) - 1 downto 0"
+        }
+      ],
+      "mmap_fifo": [
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_STREAM_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_STREAM_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_chan_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_NUM_CH) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_STREAM_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_STREAM_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_chan_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_NUM_CH) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "wb_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wb_adr_i",
+          "type": "unsigned",
+          "width": "g_WB_ADDR_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "wb_dat_o",
+          "type": "std_logic_vector",
+          "width": "g_WB_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "wb_dat_i",
+          "type": "std_logic_vector",
+          "width": "g_WB_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "wb_we_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wb_sel_i",
+          "type": "std_logic_vector",
+          "width": "g_WB_DATA_WIDTH / 8 - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "wb_stb_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wb_cyc_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wb_ack_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wb_err_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "rx_intr_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "tx_intr_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "packet_cc_fifo": [
+        {
+          "direction": "in",
+          "name": "wrclk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "rdclk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wrusedp_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_USEDP_BITS) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "rdusedp_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_USEDP_BITS) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "wrempty_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wrfull_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "rdempty_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "rdfull_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_size_o",
+          "type": "unsigned",
+          "width": "g_PKT_SIZE_BITS - 1 downto 0"
+        }
+      ],
+      "packet_cc_ram_fifo": [
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_SNK_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_SNK_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_drop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_SRC_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_SRC_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_size_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_MAX_PACKET_BYTES * g_NUM_PACKETS) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "packet_fifo": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "full_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "empty_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "usedp_o",
+          "type": "unsigned",
+          "width": "g_USEDP_BITS - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_size_o",
+          "type": "unsigned",
+          "width": "g_PKT_SIZE_BITS - 1 downto 0"
+        }
+      ],
+      "ring_buffer": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "rom": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "addr_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_N_WORDS) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "simple_dpram_be": [
+        {
+          "direction": "in",
+          "name": "wrclk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wren_i",
+          "type": "std_logic_vector",
+          "width": "g_WORD_BYTES - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "wraddr_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_N_WORDS) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "wrdata_i",
+          "type": "std_logic_vector",
+          "width": "g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "rdclk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "rden_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "rdaddr_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_N_WORDS) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "rddata_o",
+          "type": "std_logic_vector",
+          "width": "g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0"
+        }
+      ],
+      "true_dpram": [
+        {
+          "direction": "in",
+          "name": "clka_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wra_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "addra_i",
+          "type": "unsigned",
+          "width": "g_A_ADDR_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "dataa_i",
+          "type": "std_logic_vector",
+          "width": "g_A_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "dataa_o",
+          "type": "std_logic_vector",
+          "width": "g_A_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "clkb_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wrb_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "addrb_i",
+          "type": "unsigned",
+          "width": "g_B_ADDR_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "datab_i",
+          "type": "std_logic_vector",
+          "width": "g_B_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "datab_o",
+          "type": "std_logic_vector",
+          "width": "g_B_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "wb_ram": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wb_adr_i",
+          "type": "unsigned",
+          "width": "g_WB_ADDR_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "wb_dat_i",
+          "type": "std_logic_vector",
+          "width": "g_WB_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "wb_dat_o",
+          "type": "std_logic_vector",
+          "width": "g_WB_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "wb_we_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wb_sel_i",
+          "type": "std_logic_vector",
+          "width": "g_WB_DATA_WIDTH / 8 - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "wb_stb_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "wb_cyc_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wb_ack_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wb_err_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ]
+    },
+    "desc_source": "curator",
+    "provides_packages": [
+      "encoders",
+      "mem",
+      "mmap_fifo_csr_pkg",
+      "reg_utils",
+      "rxfifo_csr_pkg",
+      "txfifo_csr_pkg",
+      "types",
+      "utils"
+    ],
+    "upstream_evidence": {
+      "frameworks": [
+        "vunit"
+      ],
+      "testbench_count": 90,
+      "runners": [
+        {
+          "path": "sim/common/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/comms/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/endec/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/fileio/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/interfaces/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/i2c/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/jtag/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/spi/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/uart/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/memory/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/misc/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/packet/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/pipes/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/proto/aurora_64b66b/run.py",
+          "framework": "vunit"
+        }
+      ],
+      "formal": {
+        "tool": "symbiyosys",
+        "sby_files": [
+          "fv/common/run.sby",
+          "fv/comms/run.sby",
+          "fv/endec/run.sby",
+          "fv/interfaces/stream/run.sby",
+          "fv/memory/run.sby",
+          "fv/misc/run.sby",
+          "fv/packet/run.sby",
+          "fv/pipes/run.sby"
+        ],
+        "property_files": [
+          {
+            "path": "fv/common/counter.psl",
+            "assert_statements": 4,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/debouncer.psl",
+            "assert_statements": 2,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/edge_detect.psl",
+            "assert_statements": 3,
+            "assume_statements": 0,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/pipeline_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/skid_buffer.psl",
+            "assert_statements": 5,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/stream_buffer.psl",
+            "assert_statements": 3,
+            "assume_statements": 1,
+            "cover_statements": 4
+          },
+          {
+            "path": "fv/common/utils.psl",
+            "assert_statements": 1,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_down.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_up.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_decode.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_encode.psl",
+            "assert_statements": 8,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_read.psl",
+            "assert_statements": 25,
+            "assume_statements": 1,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write.psl",
+            "assert_statements": 5,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write_unaligned.psl",
+            "assert_statements": 15,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_to_axis.psl",
+            "assert_statements": 2,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/axis_to_avst.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/fifo.psl",
+            "assert_statements": 10,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/ring_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 1,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/misc/be_add_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_add_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/broadcaster.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/deinterleaver.psl",
+            "assert_statements": 7,
+            "assume_statements": 7,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/header_add.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/header_remove.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/interleaver.psl",
+            "assert_statements": 10,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/interleaver_bd.psl",
+            "assert_statements": 13,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_delay.psl",
+            "assert_statements": 7,
+            "assume_statements": 6,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_join.psl",
+            "assert_statements": 9,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/pipes/arbiter.psl",
+            "assert_statements": 6,
+            "assume_statements": 2,
+            "cover_statements": 0
+          }
+        ],
+        "assert_statements": 185,
+        "cover_statements": 20
+      },
+      "ci_config": [
+        ".gitlab-ci.yml",
+        "utils/ci_jobs/formal_ci.yml",
+        "utils/ci_jobs/simulation_ci.yml",
+        "utils/ci_jobs/style_ci.yml"
+      ]
+    },
+    "routertl_compat": {
+      "language": "vhdl-2008",
+      "library": "colibri",
+      "files": [
+        "src/common/utils.vhdl",
+        "src/common/encoders.vhdl",
+        "src/common/types.vhdl",
+        "src/memory/bicam.vhdl",
+        "src/comms/gearbox.vhdl",
+        "src/common/synchro.vhdl",
+        "src/common/synchro_reset.vhdl",
+        "src/memory/cc_fifo.vhdl",
+        "src/memory/mem_pkg.vhdl",
+        "src/memory/optimized/simple_dpram_altera.vhdl",
+        "src/memory/optimized/simple_dpram_xilinx.vhdl",
+        "src/memory/simple_dpram.vhdl",
+        "src/memory/cc_ram_fifo.vhdl",
+        "src/memory/fifo.vhdl",
+        "src/misc/mmap_fifo/vhdl_if/mmap_fifo_csr_pkg.vhdl",
+        "src/misc/mmap_fifo/vhdl_if/reg_utils.vhdl",
+        "src/misc/mmap_fifo/vhdl_if/mmap_fifo_csr.vhdl",
+        "src/misc/mmap_fifo/vhdl_if/rxfifo_csr_pkg.vhdl",
+        "src/common/synchro_pulse.vhdl",
+        "src/misc/mmap_fifo/vhdl_if/rxfifo_csr.vhdl",
+        "src/misc/mmap_fifo/mmap_fifo_rx.vhdl",
+        "src/misc/mmap_fifo/vhdl_if/txfifo_csr_pkg.vhdl",
+        "src/misc/mmap_fifo/vhdl_if/txfifo_csr.vhdl",
+        "src/misc/mmap_fifo/mmap_fifo_tx.vhdl",
+        "src/misc/mmap_fifo/mmap_fifo.vhdl",
+        "src/memory/packet_cc_fifo.vhdl",
+        "src/common/skid_buffer.vhdl",
+        "src/common/stream_buffer.vhdl",
+        "src/memory/packet_cc_ram_fifo.vhdl",
+        "src/memory/packet_fifo.vhdl",
+        "src/memory/ram.vhdl",
+        "src/memory/ring_buffer.vhdl",
+        "src/memory/rom.vhdl",
+        "src/memory/simple_dpram_be.vhdl",
+        "src/memory/optimized/true_dpram_altera.vhdl",
+        "src/memory/optimized/true_dpram_xilinx.vhdl",
+        "src/memory/true_dpram.vhdl",
+        "src/interfaces/memory_mapped/wb_ram.vhdl"
+      ]
+    }
+  },
+  {
+    "namespace": "colibri",
+    "name": "colibri-stream",
+    "latest": "2026.07",
+    "versions": [
+      "2026.07"
+    ],
+    "commit_sha": "3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f",
+    "published_at": "2026-07-17T09:57:54+00:00",
+    "description": "Avalon-ST and AXI-Stream interface adaptors, width converters, cross-clock stream bridges, and Avalon-ST RAM read/write controllers.",
+    "license": "CERN-OHL-W-2.0",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "library": "colibri",
+    "source_url": "https://gitlab.com/colibri-cern/colibri.git",
+    "tags": [
+      "access",
+      "buffer",
+      "clock",
+      "converter",
+      "crossing",
+      "domain",
+      "memory",
+      "queue",
+      "random",
+      "stream",
+      "unaligned",
+      "width"
+    ],
+    "role": "subproject",
+    "top_modules": [
+      "avst_cdc",
+      "avst_fifo",
+      "avst_ram_read",
+      "avst_ram_read_unaligned",
+      "avst_ram_write",
+      "avst_ram_write_unaligned",
+      "avst_to_axis",
+      "avst_width_converter",
+      "axis_to_avst"
+    ],
+    "top_ports": {
+      "avst_cdc": [
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "avst_fifo": [
+        {
+          "direction": "in",
+          "name": "snk_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_DATA_SYM), 1) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_SYM_WIDTH * g_DATA_SYM - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_DATA_SYM), 1) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_SYM_WIDTH * g_DATA_SYM - 1 downto 0"
+        }
+      ],
+      "avst_ram_read": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_WORD_BYTES), 1) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "start_addr_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_RAM_DEPTH) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "length_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_RAM_DEPTH * g_WORD_BYTES + 1) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "start_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "stop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "busy_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "rd_en_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "rd_addr_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_RAM_DEPTH) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "rd_data_i",
+          "type": "std_logic_vector",
+          "width": "g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0"
+        }
+      ],
+      "avst_ram_read_unaligned": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_WORD_BYTES), 1) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "start_addr_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_RAM_DEPTH * g_WORD_BYTES) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "length_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_RAM_DEPTH * g_WORD_BYTES) downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "start_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "busy_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "rd_en_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "rd_addr_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_RAM_DEPTH) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "rd_data_i",
+          "type": "std_logic_vector",
+          "width": "g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0"
+        }
+      ],
+      "avst_ram_write": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "start_addr_i",
+          "type": "unsigned",
+          "width": "g_ADDR_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wr_en_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wr_addr_o",
+          "type": "unsigned",
+          "width": "g_ADDR_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "wr_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "avst_ram_write_unaligned": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_WORD_BYTES), 1) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "start_addr_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_RAM_DEPTH * g_WORD_BYTES) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "flush_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "wr_be_o",
+          "type": "std_logic_vector",
+          "width": "g_WORD_BYTES - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "wr_addr_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_RAM_DEPTH) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "wr_data_o",
+          "type": "std_logic_vector",
+          "width": "g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0"
+        }
+      ],
+      "avst_to_axis": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_tready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_tvalid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_tlast_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_tkeep_o",
+          "type": "std_logic_vector",
+          "width": "(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_tdata_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "avst_width_converter": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_INPUT_SYM), 1) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_SYM_WIDTH * g_INPUT_SYM - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_OUTPUT_SYM), 1) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_SYM_WIDTH * g_OUTPUT_SYM - 1 downto 0"
+        }
+      ],
+      "axis_to_avst": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_tready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_tvalid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_tlast_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_tkeep_i",
+          "type": "std_logic_vector",
+          "width": "(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_tdata_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ]
+    },
+    "desc_source": "curator",
+    "provides_packages": [
+      "encoders",
+      "types",
+      "utils"
+    ],
+    "upstream_evidence": {
+      "frameworks": [
+        "vunit"
+      ],
+      "testbench_count": 90,
+      "runners": [
+        {
+          "path": "sim/common/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/comms/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/endec/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/fileio/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/interfaces/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/i2c/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/jtag/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/spi/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/uart/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/memory/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/misc/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/packet/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/pipes/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/proto/aurora_64b66b/run.py",
+          "framework": "vunit"
+        }
+      ],
+      "formal": {
+        "tool": "symbiyosys",
+        "sby_files": [
+          "fv/common/run.sby",
+          "fv/comms/run.sby",
+          "fv/endec/run.sby",
+          "fv/interfaces/stream/run.sby",
+          "fv/memory/run.sby",
+          "fv/misc/run.sby",
+          "fv/packet/run.sby",
+          "fv/pipes/run.sby"
+        ],
+        "property_files": [
+          {
+            "path": "fv/common/counter.psl",
+            "assert_statements": 4,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/debouncer.psl",
+            "assert_statements": 2,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/edge_detect.psl",
+            "assert_statements": 3,
+            "assume_statements": 0,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/pipeline_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/skid_buffer.psl",
+            "assert_statements": 5,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/stream_buffer.psl",
+            "assert_statements": 3,
+            "assume_statements": 1,
+            "cover_statements": 4
+          },
+          {
+            "path": "fv/common/utils.psl",
+            "assert_statements": 1,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_down.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_up.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_decode.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_encode.psl",
+            "assert_statements": 8,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_read.psl",
+            "assert_statements": 25,
+            "assume_statements": 1,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write.psl",
+            "assert_statements": 5,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write_unaligned.psl",
+            "assert_statements": 15,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_to_axis.psl",
+            "assert_statements": 2,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/axis_to_avst.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/fifo.psl",
+            "assert_statements": 10,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/ring_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 1,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/misc/be_add_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_add_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/broadcaster.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/deinterleaver.psl",
+            "assert_statements": 7,
+            "assume_statements": 7,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/header_add.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/header_remove.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/interleaver.psl",
+            "assert_statements": 10,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/interleaver_bd.psl",
+            "assert_statements": 13,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_delay.psl",
+            "assert_statements": 7,
+            "assume_statements": 6,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_join.psl",
+            "assert_statements": 9,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/pipes/arbiter.psl",
+            "assert_statements": 6,
+            "assume_statements": 2,
+            "cover_statements": 0
+          }
+        ],
+        "assert_statements": 185,
+        "cover_statements": 20
+      },
+      "ci_config": [
+        ".gitlab-ci.yml",
+        "utils/ci_jobs/formal_ci.yml",
+        "utils/ci_jobs/simulation_ci.yml",
+        "utils/ci_jobs/style_ci.yml"
+      ]
+    },
+    "routertl_compat": {
+      "language": "vhdl-2008",
+      "library": "colibri",
+      "files": [
+        "src/common/utils.vhdl",
+        "src/common/types.vhdl",
+        "src/common/synchro.vhdl",
+        "src/common/synchro_reset.vhdl",
+        "src/interfaces/stream/avst_cdc.vhdl",
+        "src/common/encoders.vhdl",
+        "src/comms/gearbox.vhdl",
+        "src/memory/cc_fifo.vhdl",
+        "src/memory/fifo.vhdl",
+        "src/interfaces/stream/avst_fifo.vhdl",
+        "src/interfaces/stream/avst_ram_read.vhdl",
+        "src/interfaces/stream/avst_ram_read_unaligned.vhdl",
+        "src/interfaces/stream/avst_ram_write.vhdl",
+        "src/interfaces/stream/avst_ram_write_unaligned.vhdl",
+        "src/interfaces/stream/avst_to_axis.vhdl",
+        "src/interfaces/stream/avst_width_converter.vhdl",
+        "src/interfaces/stream/axis_to_avst.vhdl"
+      ]
+    }
+  },
+  {
+    "namespace": "colibri",
+    "name": "colibri-packet",
+    "latest": "2026.07",
+    "versions": [
+      "2026.07"
+    ],
+    "commit_sha": "3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f",
+    "published_at": "2026-07-17T09:57:54+00:00",
+    "description": "Packet processing pipelines — header addition and removal, interleaving and deinterleaving, packet broadcasting, joining, and programmable packet delay.",
+    "license": "CERN-OHL-W-2.0",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "library": "colibri",
+    "source_url": "https://gitlab.com/colibri-cern/colibri.git",
+    "tags": [
+      "add",
+      "delay",
+      "header",
+      "join",
+      "packet",
+      "remove"
+    ],
+    "role": "subproject",
+    "top_modules": [
+      "broadcaster",
+      "deinterleaver",
+      "header_add",
+      "header_remove",
+      "interleaver",
+      "packet_delay",
+      "packet_join"
+    ],
+    "top_ports": {
+      "broadcaster": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic_vector",
+          "width": "g_NUM_OUTPUTS - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic_vector",
+          "width": "g_NUM_OUTPUTS - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic_vector",
+          "width": "g_NUM_OUTPUTS - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic_vector",
+          "width": "g_NUM_OUTPUTS - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "slv_array_t",
+          "width": "g_NUM_OUTPUTS - 1 downto 0)\n    (g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "uns_array_t",
+          "width": "g_NUM_OUTPUTS - 1 downto 0)\n    (log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        }
+      ],
+      "deinterleaver": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_channel_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_NUM_OUTPUTS) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic_vector",
+          "width": "g_NUM_OUTPUTS - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic_vector",
+          "width": "g_NUM_OUTPUTS - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic_vector",
+          "width": "g_NUM_OUTPUTS - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic_vector",
+          "width": "g_NUM_OUTPUTS - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "slv_array_t",
+          "width": "g_NUM_OUTPUTS - 1 downto 0)\n    (g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "uns_array_t",
+          "width": "g_NUM_OUTPUTS - 1 downto 0)\n    (log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        }
+      ],
+      "header_add": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_header_i",
+          "type": "std_logic_vector",
+          "width": "g_HEADER_BYTES * 8 - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        }
+      ],
+      "header_remove": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_header_o",
+          "type": "std_logic_vector",
+          "width": "g_HEADER_BYTES * 8 - 1 downto 0"
+        }
+      ],
+      "interleaver": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic_vector",
+          "width": "g_NUM_INPUTS - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic_vector",
+          "width": "g_NUM_INPUTS - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic_vector",
+          "width": "g_NUM_INPUTS - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic_vector",
+          "width": "g_NUM_INPUTS - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "slv_array_t",
+          "width": "g_NUM_INPUTS - 1 downto 0)\n    (g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "uns_array_t",
+          "width": "g_NUM_INPUTS - 1 downto 0)\n    (log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_channel_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_NUM_INPUTS) - 1 downto 0"
+        }
+      ],
+      "packet_delay": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "delay_i",
+          "type": "unsigned",
+          "width": "g_DELAY_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_SYM * g_SYM_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_DATA_SYM), 1) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_SYM * g_SYM_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_DATA_SYM), 1) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "packet_join": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "last_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_SYM * g_SYM_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_DATA_SYM), 1) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_SYM * g_SYM_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "maximum(log2ceil(g_DATA_SYM), 1) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        }
+      ]
+    },
+    "desc_source": "curator",
+    "provides_packages": [
+      "encoders",
+      "types",
+      "utils"
+    ],
+    "upstream_evidence": {
+      "frameworks": [
+        "vunit"
+      ],
+      "testbench_count": 90,
+      "runners": [
+        {
+          "path": "sim/common/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/comms/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/endec/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/fileio/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/interfaces/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/i2c/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/jtag/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/spi/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/uart/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/memory/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/misc/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/packet/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/pipes/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/proto/aurora_64b66b/run.py",
+          "framework": "vunit"
+        }
+      ],
+      "formal": {
+        "tool": "symbiyosys",
+        "sby_files": [
+          "fv/common/run.sby",
+          "fv/comms/run.sby",
+          "fv/endec/run.sby",
+          "fv/interfaces/stream/run.sby",
+          "fv/memory/run.sby",
+          "fv/misc/run.sby",
+          "fv/packet/run.sby",
+          "fv/pipes/run.sby"
+        ],
+        "property_files": [
+          {
+            "path": "fv/common/counter.psl",
+            "assert_statements": 4,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/debouncer.psl",
+            "assert_statements": 2,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/edge_detect.psl",
+            "assert_statements": 3,
+            "assume_statements": 0,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/pipeline_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/skid_buffer.psl",
+            "assert_statements": 5,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/stream_buffer.psl",
+            "assert_statements": 3,
+            "assume_statements": 1,
+            "cover_statements": 4
+          },
+          {
+            "path": "fv/common/utils.psl",
+            "assert_statements": 1,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_down.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_up.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_decode.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_encode.psl",
+            "assert_statements": 8,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_read.psl",
+            "assert_statements": 25,
+            "assume_statements": 1,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write.psl",
+            "assert_statements": 5,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write_unaligned.psl",
+            "assert_statements": 15,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_to_axis.psl",
+            "assert_statements": 2,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/axis_to_avst.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/fifo.psl",
+            "assert_statements": 10,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/ring_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 1,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/misc/be_add_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_add_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/broadcaster.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/deinterleaver.psl",
+            "assert_statements": 7,
+            "assume_statements": 7,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/header_add.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/header_remove.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/interleaver.psl",
+            "assert_statements": 10,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/interleaver_bd.psl",
+            "assert_statements": 13,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_delay.psl",
+            "assert_statements": 7,
+            "assume_statements": 6,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_join.psl",
+            "assert_statements": 9,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/pipes/arbiter.psl",
+            "assert_statements": 6,
+            "assume_statements": 2,
+            "cover_statements": 0
+          }
+        ],
+        "assert_statements": 185,
+        "cover_statements": 20
+      },
+      "ci_config": [
+        ".gitlab-ci.yml",
+        "utils/ci_jobs/formal_ci.yml",
+        "utils/ci_jobs/simulation_ci.yml",
+        "utils/ci_jobs/style_ci.yml"
+      ]
+    },
+    "routertl_compat": {
+      "language": "vhdl-2008",
+      "library": "colibri",
+      "files": [
+        "src/common/utils.vhdl",
+        "src/common/types.vhdl",
+        "src/common/pipeline_buffer.vhdl",
+        "src/packet/broadcaster.vhdl",
+        "src/packet/deinterleaver.vhdl",
+        "src/common/skid_buffer.vhdl",
+        "src/misc/be_add_lead.vhdl",
+        "src/packet/header_add.vhdl",
+        "src/misc/be_remove_lead.vhdl",
+        "src/packet/header_remove.vhdl",
+        "src/packet/interleaver.vhdl",
+        "src/common/encoders.vhdl",
+        "src/comms/gearbox.vhdl",
+        "src/common/synchro.vhdl",
+        "src/common/synchro_reset.vhdl",
+        "src/memory/cc_fifo.vhdl",
+        "src/memory/fifo.vhdl",
+        "src/interfaces/stream/avst_fifo.vhdl",
+        "src/common/counter.vhdl",
+        "src/packet/packet_delay.vhdl",
+        "src/packet/packet_join.vhdl"
+      ]
+    }
+  },
+  {
+    "namespace": "colibri",
+    "name": "colibri-comms",
+    "latest": "2026.07",
+    "versions": [
+      "2026.07"
+    ],
+    "commit_sha": "3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f",
+    "published_at": "2026-07-17T09:57:54+00:00",
+    "description": "Communications and datapath primitives — bit shifters, gearboxes (single-clock and cross-clock), PRBS/BERT testers, scramblers, descramblers, CRCs, and slip buffers.",
+    "license": "CERN-OHL-W-2.0",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "library": "colibri",
+    "source_url": "https://gitlab.com/colibri-cern/colibri.git",
+    "tags": [
+      "bit",
+      "buffer",
+      "cc",
+      "check",
+      "clock",
+      "crossing",
+      "cyclic",
+      "gearbox",
+      "redundancy",
+      "shifter",
+      "slip"
+    ],
+    "role": "subproject",
+    "top_modules": [
+      "bert",
+      "bit_shifter",
+      "cc_gearbox",
+      "crc",
+      "descrambler",
+      "slip_buffer"
+    ],
+    "components": [
+      "gearbox",
+      "scrambler"
+    ],
+    "top_ports": {
+      "bert": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "bit_errors_o",
+          "type": "unsigned",
+          "width": "g_STATS_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "total_bits_o",
+          "type": "unsigned",
+          "width": "g_STATS_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "word_errors_o",
+          "type": "unsigned",
+          "width": "g_STATS_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "invalid_words_o",
+          "type": "unsigned",
+          "width": "g_STATS_WIDTH - 1 downto 0"
+        }
+      ],
+      "bit_shifter": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "offset_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "cc_gearbox": [
+        {
+          "direction": "in",
+          "name": "snk_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_INPUT_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_OUTPUT_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "crc": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(g_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_crc_o",
+          "type": "std_logic_vector",
+          "width": "g_CRC_POLY'range"
+        }
+      ],
+      "descrambler": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ],
+      "slip_buffer": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "slip_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        }
+      ]
+    },
+    "desc_source": "curator",
+    "provides_packages": [
+      "encoders",
+      "mem",
+      "poly",
+      "types",
+      "utils"
+    ],
+    "upstream_evidence": {
+      "frameworks": [
+        "vunit"
+      ],
+      "testbench_count": 90,
+      "runners": [
+        {
+          "path": "sim/common/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/comms/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/endec/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/fileio/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/interfaces/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/i2c/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/jtag/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/spi/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/uart/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/memory/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/misc/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/packet/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/pipes/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/proto/aurora_64b66b/run.py",
+          "framework": "vunit"
+        }
+      ],
+      "formal": {
+        "tool": "symbiyosys",
+        "sby_files": [
+          "fv/common/run.sby",
+          "fv/comms/run.sby",
+          "fv/endec/run.sby",
+          "fv/interfaces/stream/run.sby",
+          "fv/memory/run.sby",
+          "fv/misc/run.sby",
+          "fv/packet/run.sby",
+          "fv/pipes/run.sby"
+        ],
+        "property_files": [
+          {
+            "path": "fv/common/counter.psl",
+            "assert_statements": 4,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/debouncer.psl",
+            "assert_statements": 2,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/edge_detect.psl",
+            "assert_statements": 3,
+            "assume_statements": 0,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/pipeline_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/skid_buffer.psl",
+            "assert_statements": 5,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/stream_buffer.psl",
+            "assert_statements": 3,
+            "assume_statements": 1,
+            "cover_statements": 4
+          },
+          {
+            "path": "fv/common/utils.psl",
+            "assert_statements": 1,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_down.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_up.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_decode.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_encode.psl",
+            "assert_statements": 8,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_read.psl",
+            "assert_statements": 25,
+            "assume_statements": 1,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write.psl",
+            "assert_statements": 5,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write_unaligned.psl",
+            "assert_statements": 15,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_to_axis.psl",
+            "assert_statements": 2,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/axis_to_avst.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/fifo.psl",
+            "assert_statements": 10,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/ring_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 1,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/misc/be_add_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_add_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/broadcaster.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/deinterleaver.psl",
+            "assert_statements": 7,
+            "assume_statements": 7,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/header_add.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/header_remove.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/interleaver.psl",
+            "assert_statements": 10,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/interleaver_bd.psl",
+            "assert_statements": 13,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_delay.psl",
+            "assert_statements": 7,
+            "assume_statements": 6,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_join.psl",
+            "assert_statements": 9,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/pipes/arbiter.psl",
+            "assert_statements": 6,
+            "assume_statements": 2,
+            "cover_statements": 0
+          }
+        ],
+        "assert_statements": 185,
+        "cover_statements": 20
+      },
+      "ci_config": [
+        ".gitlab-ci.yml",
+        "utils/ci_jobs/formal_ci.yml",
+        "utils/ci_jobs/simulation_ci.yml",
+        "utils/ci_jobs/style_ci.yml"
+      ]
+    },
+    "routertl_compat": {
+      "language": "vhdl-2008",
+      "library": "colibri",
+      "files": [
+        "src/common/utils.vhdl",
+        "src/common/poly_pkg.vhdl",
+        "src/comms/scrambler.vhdl",
+        "src/comms/bert.vhdl",
+        "src/comms/bit_shifter.vhdl",
+        "src/common/encoders.vhdl",
+        "src/comms/gearbox.vhdl",
+        "src/common/synchro.vhdl",
+        "src/common/synchro_reset.vhdl",
+        "src/memory/cc_fifo.vhdl",
+        "src/common/types.vhdl",
+        "src/memory/mem_pkg.vhdl",
+        "src/memory/optimized/simple_dpram_altera.vhdl",
+        "src/memory/optimized/simple_dpram_xilinx.vhdl",
+        "src/memory/simple_dpram.vhdl",
+        "src/memory/cc_ram_fifo.vhdl",
+        "src/comms/cc_gearbox.vhdl",
+        "src/common/skid_buffer.vhdl",
+        "src/comms/crc.vhdl",
+        "src/comms/descrambler.vhdl",
+        "src/comms/slip_buffer.vhdl"
+      ]
+    }
+  },
+  {
+    "namespace": "colibri",
+    "name": "colibri-endec",
+    "latest": "2026.07",
+    "versions": [
+      "2026.07"
+    ],
+    "commit_sha": "3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f",
+    "published_at": "2026-07-17T09:57:54+00:00",
+    "description": "Encoders and decoders — 8b/10b encoder and decoder, and Run-Length Encoding (RLE) compression encoders and decoders.",
+    "license": "CERN-OHL-W-2.0",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "library": "colibri",
+    "source_url": "https://gitlab.com/colibri-cern/colibri.git",
+    "tags": [
+      "8b10b",
+      "decode",
+      "encode",
+      "rle"
+    ],
+    "role": "subproject",
+    "top_modules": [
+      "decode_8b10b",
+      "encode_8b10b",
+      "rle_decode",
+      "rle_encode"
+    ],
+    "top_ports": {
+      "decode_8b10b": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "9 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "7 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_control_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "encode_8b10b": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "7 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_control_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "9 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "rle_decode": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_WORD_WIDTH + g_COUNT_WIDTH  - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_WORD_WIDTH - 1 downto 0"
+        }
+      ],
+      "rle_encode": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "flush_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_WORD_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_WORD_WIDTH + g_COUNT_WIDTH - 1 downto 0"
+        }
+      ]
+    },
+    "desc_source": "curator",
+    "provides_packages": [
+      "common_8b10b",
+      "types",
+      "utils"
+    ],
+    "upstream_evidence": {
+      "frameworks": [
+        "vunit"
+      ],
+      "testbench_count": 90,
+      "runners": [
+        {
+          "path": "sim/common/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/comms/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/endec/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/fileio/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/interfaces/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/i2c/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/jtag/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/spi/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/uart/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/memory/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/misc/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/packet/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/pipes/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/proto/aurora_64b66b/run.py",
+          "framework": "vunit"
+        }
+      ],
+      "formal": {
+        "tool": "symbiyosys",
+        "sby_files": [
+          "fv/common/run.sby",
+          "fv/comms/run.sby",
+          "fv/endec/run.sby",
+          "fv/interfaces/stream/run.sby",
+          "fv/memory/run.sby",
+          "fv/misc/run.sby",
+          "fv/packet/run.sby",
+          "fv/pipes/run.sby"
+        ],
+        "property_files": [
+          {
+            "path": "fv/common/counter.psl",
+            "assert_statements": 4,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/debouncer.psl",
+            "assert_statements": 2,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/edge_detect.psl",
+            "assert_statements": 3,
+            "assume_statements": 0,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/pipeline_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/skid_buffer.psl",
+            "assert_statements": 5,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/stream_buffer.psl",
+            "assert_statements": 3,
+            "assume_statements": 1,
+            "cover_statements": 4
+          },
+          {
+            "path": "fv/common/utils.psl",
+            "assert_statements": 1,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_down.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_up.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_decode.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_encode.psl",
+            "assert_statements": 8,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_read.psl",
+            "assert_statements": 25,
+            "assume_statements": 1,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write.psl",
+            "assert_statements": 5,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write_unaligned.psl",
+            "assert_statements": 15,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_to_axis.psl",
+            "assert_statements": 2,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/axis_to_avst.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/fifo.psl",
+            "assert_statements": 10,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/ring_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 1,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/misc/be_add_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_add_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/broadcaster.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/deinterleaver.psl",
+            "assert_statements": 7,
+            "assume_statements": 7,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/header_add.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/header_remove.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/interleaver.psl",
+            "assert_statements": 10,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/interleaver_bd.psl",
+            "assert_statements": 13,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_delay.psl",
+            "assert_statements": 7,
+            "assume_statements": 6,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_join.psl",
+            "assert_statements": 9,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/pipes/arbiter.psl",
+            "assert_statements": 6,
+            "assume_statements": 2,
+            "cover_statements": 0
+          }
+        ],
+        "assert_statements": 185,
+        "cover_statements": 20
+      },
+      "ci_config": [
+        ".gitlab-ci.yml",
+        "utils/ci_jobs/formal_ci.yml",
+        "utils/ci_jobs/simulation_ci.yml",
+        "utils/ci_jobs/style_ci.yml"
+      ]
+    },
+    "routertl_compat": {
+      "language": "vhdl-2008",
+      "library": "colibri",
+      "files": [
+        "src/common/utils.vhdl",
+        "src/common/types.vhdl",
+        "src/endec/common_8b10b_pkg.vhdl",
+        "src/endec/decode_8b10b.vhdl",
+        "src/endec/encode_8b10b.vhdl",
+        "src/common/skid_buffer.vhdl",
+        "src/endec/rle_decode.vhdl",
+        "src/endec/rle_encode.vhdl"
+      ]
+    }
+  },
+  {
+    "namespace": "colibri",
+    "name": "colibri-io",
+    "latest": "2026.07",
+    "versions": [
+      "2026.07"
+    ],
+    "commit_sha": "3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f",
+    "published_at": "2026-07-17T09:57:54+00:00",
+    "description": "Peripheral I/O controllers — UART, SPI master/slave, I2C controller, and JTAG SerDes interfaces.",
+    "license": "CERN-OHL-W-2.0",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "library": "colibri",
+    "source_url": "https://gitlab.com/colibri-cern/colibri.git",
+    "tags": [
+      "asynchronous",
+      "circuit",
+      "controller",
+      "deserializer",
+      "inter-integrated",
+      "interface",
+      "peripheral",
+      "receiver",
+      "serializer",
+      "transmit",
+      "transmitter",
+      "universal"
+    ],
+    "role": "subproject",
+    "top_modules": [
+      "i2c_controller",
+      "jtag_serdes",
+      "spi_master",
+      "spi_slave",
+      "uart"
+    ],
+    "components": [
+      "uart_rx",
+      "uart_tx"
+    ],
+    "top_ports": {
+      "i2c_controller": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "scl_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "sda_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "sda_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "sda_en_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "cmd_data_i",
+          "type": "std_logic_vector",
+          "width": "7 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "cmd_address_i",
+          "type": "std_logic_vector",
+          "width": "6 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "cmd_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "cmd_error_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "cmd_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "cmd_read_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "rd_data_o",
+          "type": "std_logic_vector",
+          "width": "7 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "rd_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "rd_ready_i",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "jtag_serdes": [
+        {
+          "direction": "in",
+          "name": "clk_ser_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "clk_par_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "shift_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "update_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "par_data_i",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "par_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "par_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "par_data_o",
+          "type": "std_logic_vector",
+          "width": "g_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "par_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "ser_data_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "ser_data_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "spi_master": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "miso_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "mosi_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "cs_n_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "sck_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_WORD_SIZE - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_WORD_SIZE - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "spi_slave": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "miso_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "mosi_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "cs_n_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "sck_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "g_WORD_SIZE - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "g_WORD_SIZE - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "uart": [
+        {
+          "direction": "in",
+          "name": "clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "tx_data_i",
+          "type": "std_logic_vector",
+          "width": "7 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "tx_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "tx_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "rx_data_o",
+          "type": "std_logic_vector",
+          "width": "7 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "rx_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "rx_pin_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "tx_pin_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ]
+    },
+    "desc_source": "curator",
+    "provides_packages": [
+      "utils"
+    ],
+    "upstream_evidence": {
+      "frameworks": [
+        "vunit"
+      ],
+      "testbench_count": 90,
+      "runners": [
+        {
+          "path": "sim/common/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/comms/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/endec/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/fileio/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/interfaces/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/i2c/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/jtag/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/spi/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/uart/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/memory/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/misc/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/packet/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/pipes/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/proto/aurora_64b66b/run.py",
+          "framework": "vunit"
+        }
+      ],
+      "formal": {
+        "tool": "symbiyosys",
+        "sby_files": [
+          "fv/common/run.sby",
+          "fv/comms/run.sby",
+          "fv/endec/run.sby",
+          "fv/interfaces/stream/run.sby",
+          "fv/memory/run.sby",
+          "fv/misc/run.sby",
+          "fv/packet/run.sby",
+          "fv/pipes/run.sby"
+        ],
+        "property_files": [
+          {
+            "path": "fv/common/counter.psl",
+            "assert_statements": 4,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/debouncer.psl",
+            "assert_statements": 2,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/edge_detect.psl",
+            "assert_statements": 3,
+            "assume_statements": 0,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/pipeline_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/skid_buffer.psl",
+            "assert_statements": 5,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/stream_buffer.psl",
+            "assert_statements": 3,
+            "assume_statements": 1,
+            "cover_statements": 4
+          },
+          {
+            "path": "fv/common/utils.psl",
+            "assert_statements": 1,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_down.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_up.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_decode.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_encode.psl",
+            "assert_statements": 8,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_read.psl",
+            "assert_statements": 25,
+            "assume_statements": 1,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write.psl",
+            "assert_statements": 5,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write_unaligned.psl",
+            "assert_statements": 15,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_to_axis.psl",
+            "assert_statements": 2,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/axis_to_avst.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/fifo.psl",
+            "assert_statements": 10,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/ring_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 1,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/misc/be_add_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_add_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/broadcaster.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/deinterleaver.psl",
+            "assert_statements": 7,
+            "assume_statements": 7,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/header_add.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/header_remove.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/interleaver.psl",
+            "assert_statements": 10,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/interleaver_bd.psl",
+            "assert_statements": 13,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_delay.psl",
+            "assert_statements": 7,
+            "assume_statements": 6,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_join.psl",
+            "assert_statements": 9,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/pipes/arbiter.psl",
+            "assert_statements": 6,
+            "assume_statements": 2,
+            "cover_statements": 0
+          }
+        ],
+        "assert_statements": 185,
+        "cover_statements": 20
+      },
+      "ci_config": [
+        ".gitlab-ci.yml",
+        "utils/ci_jobs/formal_ci.yml",
+        "utils/ci_jobs/simulation_ci.yml",
+        "utils/ci_jobs/style_ci.yml"
+      ]
+    },
+    "routertl_compat": {
+      "language": "vhdl-2008",
+      "library": "colibri",
+      "files": [
+        "src/common/utils.vhdl",
+        "src/io/i2c/i2c_controller.vhdl",
+        "src/common/synchro.vhdl",
+        "src/io/jtag/jtag_serdes.vhdl",
+        "src/io/spi/spi_master.vhdl",
+        "src/io/spi/spi_slave.vhdl",
+        "src/io/uart/uart_rx.vhdl",
+        "src/io/uart/uart_tx.vhdl",
+        "src/io/uart/uart.vhdl"
+      ]
+    }
+  },
+  {
+    "namespace": "colibri",
+    "name": "colibri-aurora64b66b",
+    "latest": "2026.07",
+    "versions": [
+      "2026.07"
+    ],
+    "commit_sha": "3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f",
+    "published_at": "2026-07-17T09:57:54+00:00",
+    "description": "Aurora 64B/66B high-speed serial link protocol implementation — Aurora TX/RX datapaths, block sync FSM, channel bonding, stream encoder/decoder, and constants.",
+    "license": "CERN-OHL-W-2.0",
+    "license_class": "weak-copyleft",
+    "language": "vhdl-2008",
+    "library": "colibri",
+    "source_url": "https://gitlab.com/colibri-cern/colibri.git",
+    "tags": [
+      "aurora",
+      "channel",
+      "crossing",
+      "decoder",
+      "encoder",
+      "gearbox",
+      "receive",
+      "receiver",
+      "synchronizer",
+      "synchronous",
+      "transmit",
+      "transmitter"
+    ],
+    "role": "subproject",
+    "top_modules": [
+      "aurora_rx",
+      "aurora_tx"
+    ],
+    "components": [
+      "aurora_st_decoder",
+      "aurora_st_encoder",
+      "block_sync_fsm",
+      "cc_gearbox_up",
+      "channel_bond",
+      "gearbox_up",
+      "meta_buffer"
+    ],
+    "top_ports": {
+      "aurora_rx": [
+        {
+          "direction": "in",
+          "name": "snk_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic_vector",
+          "width": "g_N_LANES - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "slv_array_t",
+          "width": "0 to g_N_LANES - 1)(g_LANE_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_sop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_eop_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_error_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "std_logic_vector",
+          "width": "c_AURORA_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_empty_o",
+          "type": "unsigned",
+          "width": "log2ceil(c_AURORA_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_link_up_o",
+          "type": "std_logic",
+          "width": ""
+        }
+      ],
+      "aurora_tx": [
+        {
+          "direction": "in",
+          "name": "snk_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_reset_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "src_clk_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_sop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_eop_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_valid_i",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "out",
+          "name": "snk_ready_o",
+          "type": "std_logic",
+          "width": ""
+        },
+        {
+          "direction": "in",
+          "name": "snk_data_i",
+          "type": "std_logic_vector",
+          "width": "c_AURORA_DATA_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "snk_empty_i",
+          "type": "unsigned",
+          "width": "log2ceil(c_AURORA_DATA_WIDTH / 8) - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_data_o",
+          "type": "slv_array_t",
+          "width": "0 to g_N_LANES - 1)(g_LANE_WIDTH - 1 downto 0"
+        },
+        {
+          "direction": "out",
+          "name": "src_valid_o",
+          "type": "std_logic_vector",
+          "width": "g_N_LANES - 1 downto 0"
+        },
+        {
+          "direction": "in",
+          "name": "src_ready_i",
+          "type": "std_logic_vector",
+          "width": "g_N_LANES - 1 downto 0"
+        }
+      ]
+    },
+    "desc_source": "curator",
+    "provides_packages": [
+      "aurora_const",
+      "encoders",
+      "mem",
+      "poly",
+      "types",
+      "utils"
+    ],
+    "upstream_evidence": {
+      "frameworks": [
+        "vunit"
+      ],
+      "testbench_count": 90,
+      "runners": [
+        {
+          "path": "sim/common/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/comms/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/endec/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/fileio/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/interfaces/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/i2c/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/jtag/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/spi/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/io/uart/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/memory/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/misc/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/packet/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/pipes/run.py",
+          "framework": "vunit"
+        },
+        {
+          "path": "sim/proto/aurora_64b66b/run.py",
+          "framework": "vunit"
+        }
+      ],
+      "formal": {
+        "tool": "symbiyosys",
+        "sby_files": [
+          "fv/common/run.sby",
+          "fv/comms/run.sby",
+          "fv/endec/run.sby",
+          "fv/interfaces/stream/run.sby",
+          "fv/memory/run.sby",
+          "fv/misc/run.sby",
+          "fv/packet/run.sby",
+          "fv/pipes/run.sby"
+        ],
+        "property_files": [
+          {
+            "path": "fv/common/counter.psl",
+            "assert_statements": 4,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/debouncer.psl",
+            "assert_statements": 2,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/edge_detect.psl",
+            "assert_statements": 3,
+            "assume_statements": 0,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/pipeline_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/skid_buffer.psl",
+            "assert_statements": 5,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/common/stream_buffer.psl",
+            "assert_statements": 3,
+            "assume_statements": 1,
+            "cover_statements": 4
+          },
+          {
+            "path": "fv/common/utils.psl",
+            "assert_statements": 1,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_down.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/comms/gearbox_up.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_decode.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/endec/rle_encode.psl",
+            "assert_statements": 8,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_read.psl",
+            "assert_statements": 25,
+            "assume_statements": 1,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write.psl",
+            "assert_statements": 5,
+            "assume_statements": 1,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_ram_write_unaligned.psl",
+            "assert_statements": 15,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/avst_to_axis.psl",
+            "assert_statements": 2,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/interfaces/stream/axis_to_avst.psl",
+            "assert_statements": 4,
+            "assume_statements": 5,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/fifo.psl",
+            "assert_statements": 10,
+            "assume_statements": 3,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/memory/ring_buffer.psl",
+            "assert_statements": 6,
+            "assume_statements": 1,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/misc/be_add_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_add_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 6,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_lead.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/misc/be_remove_trail.psl",
+            "assert_statements": 3,
+            "assume_statements": 9,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/broadcaster.psl",
+            "assert_statements": 6,
+            "assume_statements": 3,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/deinterleaver.psl",
+            "assert_statements": 7,
+            "assume_statements": 7,
+            "cover_statements": 3
+          },
+          {
+            "path": "fv/packet/header_add.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/header_remove.psl",
+            "assert_statements": 3,
+            "assume_statements": 3,
+            "cover_statements": 1
+          },
+          {
+            "path": "fv/packet/interleaver.psl",
+            "assert_statements": 10,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/interleaver_bd.psl",
+            "assert_statements": 13,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_delay.psl",
+            "assert_statements": 7,
+            "assume_statements": 6,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/packet/packet_join.psl",
+            "assert_statements": 9,
+            "assume_statements": 8,
+            "cover_statements": 0
+          },
+          {
+            "path": "fv/pipes/arbiter.psl",
+            "assert_statements": 6,
+            "assume_statements": 2,
+            "cover_statements": 0
+          }
+        ],
+        "assert_statements": 185,
+        "cover_statements": 20
+      },
+      "ci_config": [
+        ".gitlab-ci.yml",
+        "utils/ci_jobs/formal_ci.yml",
+        "utils/ci_jobs/simulation_ci.yml",
+        "utils/ci_jobs/style_ci.yml"
+      ]
+    },
+    "routertl_compat": {
+      "language": "vhdl-2008",
+      "library": "colibri",
+      "files": [
+        "src/common/utils.vhdl",
+        "src/common/poly_pkg.vhdl",
+        "src/common/types.vhdl",
+        "src/proto/aurora_64b66b/include/aurora_const_pkg.vhdl",
+        "src/common/encoders.vhdl",
+        "src/comms/gearbox.vhdl",
+        "src/common/synchro.vhdl",
+        "src/common/synchro_reset.vhdl",
+        "src/memory/cc_fifo.vhdl",
+        "src/memory/mem_pkg.vhdl",
+        "src/memory/optimized/simple_dpram_altera.vhdl",
+        "src/memory/optimized/simple_dpram_xilinx.vhdl",
+        "src/memory/simple_dpram.vhdl",
+        "src/memory/cc_ram_fifo.vhdl",
+        "src/comms/cc_gearbox.vhdl",
+        "src/proto/aurora_64b66b/rx/gearbox_up.vhdl",
+        "src/common/synchro_pulse.vhdl",
+        "src/proto/aurora_64b66b/rx/cc_gearbox_up.vhdl",
+        "src/comms/descrambler.vhdl",
+        "src/comms/slip_buffer.vhdl",
+        "src/memory/fifo.vhdl",
+        "src/proto/aurora_64b66b/rx/aurora_st_decoder.vhdl",
+        "src/proto/aurora_64b66b/rx/block_sync_fsm.vhdl",
+        "src/proto/aurora_64b66b/rx/channel_bond.vhdl",
+        "src/proto/aurora_64b66b/include/meta_buffer.vhdl",
+        "src/proto/aurora_64b66b/aurora_rx.vhdl",
+        "src/proto/aurora_64b66b/tx/aurora_st_encoder.vhdl",
+        "src/comms/scrambler.vhdl",
+        "src/proto/aurora_64b66b/aurora_tx.vhdl"
+      ]
+    }
   }
 ]

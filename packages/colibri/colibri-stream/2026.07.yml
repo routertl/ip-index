@@ -1,0 +1,748 @@
+name: colibri-stream
+namespace: colibri
+version: '2026.07'
+commit_sha: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+published_at: '2026-07-17T09:57:54+00:00'
+description: Avalon-ST and AXI-Stream interface adaptors, width converters, cross-clock
+  stream bridges, and Avalon-ST RAM read/write controllers.
+license: CERN-OHL-W-2.0
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://gitlab.com/colibri-cern/colibri.git
+  tag: '2026.07'
+  ip_yml_path: .
+  resolved_commit: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+routertl_compat:
+  language: vhdl-2008
+  library: colibri
+  files:
+  - src/common/utils.vhdl
+  - src/common/types.vhdl
+  - src/common/synchro.vhdl
+  - src/common/synchro_reset.vhdl
+  - src/interfaces/stream/avst_cdc.vhdl
+  - src/common/encoders.vhdl
+  - src/comms/gearbox.vhdl
+  - src/memory/cc_fifo.vhdl
+  - src/memory/fifo.vhdl
+  - src/interfaces/stream/avst_fifo.vhdl
+  - src/interfaces/stream/avst_ram_read.vhdl
+  - src/interfaces/stream/avst_ram_read_unaligned.vhdl
+  - src/interfaces/stream/avst_ram_write.vhdl
+  - src/interfaces/stream/avst_ram_write_unaligned.vhdl
+  - src/interfaces/stream/avst_to_axis.vhdl
+  - src/interfaces/stream/avst_width_converter.vhdl
+  - src/interfaces/stream/axis_to_avst.vhdl
+tags:
+- access
+- buffer
+- clock
+- converter
+- crossing
+- domain
+- memory
+- queue
+- random
+- stream
+- unaligned
+- width
+role: subproject
+top_modules:
+- avst_cdc
+- avst_fifo
+- avst_ram_read
+- avst_ram_read_unaligned
+- avst_ram_write
+- avst_ram_write_unaligned
+- avst_to_axis
+- avst_width_converter
+- axis_to_avst
+top_ports:
+  avst_cdc:
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: src_clk_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_empty_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH) - 1 downto 0
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH) - 1 downto 0
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  avst_fifo:
+  - direction: in
+    name: snk_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: src_clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_reset_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_empty_i
+    type: unsigned
+    width: maximum(log2ceil(g_DATA_SYM), 1) - 1 downto 0
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_SYM_WIDTH * g_DATA_SYM - 1 downto 0
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: maximum(log2ceil(g_DATA_SYM), 1) - 1 downto 0
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_SYM_WIDTH * g_DATA_SYM - 1 downto 0
+  avst_ram_read:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: maximum(log2ceil(g_WORD_BYTES), 1) - 1 downto 0
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: start_addr_i
+    type: unsigned
+    width: log2ceil(g_RAM_DEPTH) - 1 downto 0
+  - direction: in
+    name: length_i
+    type: unsigned
+    width: log2ceil(g_RAM_DEPTH * g_WORD_BYTES + 1) - 1 downto 0
+  - direction: in
+    name: start_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: stop_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: busy_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rd_en_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rd_addr_o
+    type: unsigned
+    width: log2ceil(g_RAM_DEPTH) - 1 downto 0
+  - direction: in
+    name: rd_data_i
+    type: std_logic_vector
+    width: g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0
+  avst_ram_read_unaligned:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: maximum(log2ceil(g_WORD_BYTES), 1) - 1 downto 0
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: start_addr_i
+    type: unsigned
+    width: log2ceil(g_RAM_DEPTH * g_WORD_BYTES) - 1 downto 0
+  - direction: in
+    name: length_i
+    type: unsigned
+    width: log2ceil(g_RAM_DEPTH * g_WORD_BYTES) downto 0
+  - direction: in
+    name: start_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: busy_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rd_en_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: rd_addr_o
+    type: unsigned
+    width: log2ceil(g_RAM_DEPTH) - 1 downto 0
+  - direction: in
+    name: rd_data_i
+    type: std_logic_vector
+    width: g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0
+  avst_ram_write:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: start_addr_i
+    type: unsigned
+    width: g_ADDR_WIDTH - 1 downto 0
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wr_en_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wr_addr_o
+    type: unsigned
+    width: g_ADDR_WIDTH - 1 downto 0
+  - direction: out
+    name: wr_data_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  avst_ram_write_unaligned:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0
+  - direction: in
+    name: snk_empty_i
+    type: unsigned
+    width: maximum(log2ceil(g_WORD_BYTES), 1) - 1 downto 0
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: start_addr_i
+    type: unsigned
+    width: log2ceil(g_RAM_DEPTH * g_WORD_BYTES) - 1 downto 0
+  - direction: in
+    name: flush_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wr_be_o
+    type: std_logic_vector
+    width: g_WORD_BYTES - 1 downto 0
+  - direction: out
+    name: wr_addr_o
+    type: unsigned
+    width: log2ceil(g_RAM_DEPTH) - 1 downto 0
+  - direction: out
+    name: wr_data_o
+    type: std_logic_vector
+    width: g_WORD_BYTES * g_BYTE_WIDTH - 1 downto 0
+  avst_to_axis:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_empty_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: src_tready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_tvalid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_tlast_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_tkeep_o
+    type: std_logic_vector
+    width: (g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: out
+    name: src_tdata_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  avst_width_converter:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_empty_i
+    type: unsigned
+    width: maximum(log2ceil(g_INPUT_SYM), 1) - 1 downto 0
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_SYM_WIDTH * g_INPUT_SYM - 1 downto 0
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: maximum(log2ceil(g_OUTPUT_SYM), 1) - 1 downto 0
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_SYM_WIDTH * g_OUTPUT_SYM - 1 downto 0
+  axis_to_avst:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_tready_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_tvalid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_tlast_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_tkeep_i
+    type: std_logic_vector
+    width: (g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: in
+    name: snk_tdata_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+total_entities: 9
+desc_source: curator
+provides_packages:
+- encoders
+- types
+- utils
+upstream_evidence:
+  frameworks:
+  - vunit
+  testbench_count: 90
+  runners:
+  - path: sim/common/run.py
+    framework: vunit
+  - path: sim/comms/run.py
+    framework: vunit
+  - path: sim/endec/run.py
+    framework: vunit
+  - path: sim/fileio/run.py
+    framework: vunit
+  - path: sim/interfaces/run.py
+    framework: vunit
+  - path: sim/io/i2c/run.py
+    framework: vunit
+  - path: sim/io/jtag/run.py
+    framework: vunit
+  - path: sim/io/spi/run.py
+    framework: vunit
+  - path: sim/io/uart/run.py
+    framework: vunit
+  - path: sim/memory/run.py
+    framework: vunit
+  - path: sim/misc/run.py
+    framework: vunit
+  - path: sim/packet/run.py
+    framework: vunit
+  - path: sim/pipes/run.py
+    framework: vunit
+  - path: sim/proto/aurora_64b66b/run.py
+    framework: vunit
+  formal:
+    tool: symbiyosys
+    sby_files:
+    - fv/common/run.sby
+    - fv/comms/run.sby
+    - fv/endec/run.sby
+    - fv/interfaces/stream/run.sby
+    - fv/memory/run.sby
+    - fv/misc/run.sby
+    - fv/packet/run.sby
+    - fv/pipes/run.sby
+    property_files:
+    - path: fv/common/counter.psl
+      assert_statements: 4
+      assume_statements: 1
+      cover_statements: 0
+    - path: fv/common/debouncer.psl
+      assert_statements: 2
+      assume_statements: 1
+      cover_statements: 0
+    - path: fv/common/edge_detect.psl
+      assert_statements: 3
+      assume_statements: 0
+      cover_statements: 0
+    - path: fv/common/pipeline_buffer.psl
+      assert_statements: 6
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/common/skid_buffer.psl
+      assert_statements: 5
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/common/stream_buffer.psl
+      assert_statements: 3
+      assume_statements: 1
+      cover_statements: 4
+    - path: fv/common/utils.psl
+      assert_statements: 1
+      assume_statements: 1
+      cover_statements: 0
+    - path: fv/comms/gearbox_down.psl
+      assert_statements: 3
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/comms/gearbox_up.psl
+      assert_statements: 3
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/endec/rle_decode.psl
+      assert_statements: 4
+      assume_statements: 5
+      cover_statements: 0
+    - path: fv/endec/rle_encode.psl
+      assert_statements: 8
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/interfaces/stream/avst_ram_read.psl
+      assert_statements: 25
+      assume_statements: 1
+      cover_statements: 1
+    - path: fv/interfaces/stream/avst_ram_write.psl
+      assert_statements: 5
+      assume_statements: 1
+      cover_statements: 0
+    - path: fv/interfaces/stream/avst_ram_write_unaligned.psl
+      assert_statements: 15
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/interfaces/stream/avst_to_axis.psl
+      assert_statements: 2
+      assume_statements: 5
+      cover_statements: 0
+    - path: fv/interfaces/stream/axis_to_avst.psl
+      assert_statements: 4
+      assume_statements: 5
+      cover_statements: 0
+    - path: fv/memory/fifo.psl
+      assert_statements: 10
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/memory/ring_buffer.psl
+      assert_statements: 6
+      assume_statements: 1
+      cover_statements: 3
+    - path: fv/misc/be_add_lead.psl
+      assert_statements: 3
+      assume_statements: 6
+      cover_statements: 1
+    - path: fv/misc/be_add_trail.psl
+      assert_statements: 3
+      assume_statements: 6
+      cover_statements: 1
+    - path: fv/misc/be_remove_lead.psl
+      assert_statements: 3
+      assume_statements: 9
+      cover_statements: 1
+    - path: fv/misc/be_remove_trail.psl
+      assert_statements: 3
+      assume_statements: 9
+      cover_statements: 1
+    - path: fv/packet/broadcaster.psl
+      assert_statements: 6
+      assume_statements: 3
+      cover_statements: 3
+    - path: fv/packet/deinterleaver.psl
+      assert_statements: 7
+      assume_statements: 7
+      cover_statements: 3
+    - path: fv/packet/header_add.psl
+      assert_statements: 3
+      assume_statements: 3
+      cover_statements: 1
+    - path: fv/packet/header_remove.psl
+      assert_statements: 3
+      assume_statements: 3
+      cover_statements: 1
+    - path: fv/packet/interleaver.psl
+      assert_statements: 10
+      assume_statements: 8
+      cover_statements: 0
+    - path: fv/packet/interleaver_bd.psl
+      assert_statements: 13
+      assume_statements: 8
+      cover_statements: 0
+    - path: fv/packet/packet_delay.psl
+      assert_statements: 7
+      assume_statements: 6
+      cover_statements: 0
+    - path: fv/packet/packet_join.psl
+      assert_statements: 9
+      assume_statements: 8
+      cover_statements: 0
+    - path: fv/pipes/arbiter.psl
+      assert_statements: 6
+      assume_statements: 2
+      cover_statements: 0
+    assert_statements: 185
+    cover_statements: 20
+  ci_config:
+  - .gitlab-ci.yml
+  - utils/ci_jobs/formal_ci.yml
+  - utils/ci_jobs/simulation_ci.yml
+  - utils/ci_jobs/style_ci.yml

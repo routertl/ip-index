@@ -1,0 +1,827 @@
+name: colibri-common
+namespace: colibri
+version: '2026.07'
+commit_sha: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+published_at: '2026-07-17T09:57:54+00:00'
+description: Shared packages, types, arithmetic, and basic building blocks (counters,
+  buffers, arbiters, edge detectors, reset controllers) used across the colibri library.
+  Auto-pulled via external_uses by the other colibri subsystems.
+license: CERN-OHL-W-2.0
+license_class: weak-copyleft
+source:
+  type: git
+  url: https://gitlab.com/colibri-cern/colibri.git
+  tag: '2026.07'
+  ip_yml_path: .
+  resolved_commit: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+routertl_compat:
+  language: vhdl-2008
+  library: colibri
+  files:
+  - src/pipes/arbiter.vhdl
+  - src/common/utils.vhdl
+  - src/common/types.vhdl
+  - src/common/skid_buffer.vhdl
+  - src/misc/be_add_lead.vhdl
+  - src/misc/be_add_trail.vhdl
+  - src/misc/be_remove_lead.vhdl
+  - src/misc/be_remove_trail.vhdl
+  - src/common/comparator.vhdl
+  - src/common/counter.vhdl
+  - src/common/debouncer.vhdl
+  - src/common/edge_detect.vhdl
+  - src/common/synchro.vhdl
+  - src/common/synchro_pulse.vhdl
+  - src/misc/frequency_counter.vhdl
+  - src/misc/heartbeat.vhdl
+  - src/common/pipeline_buffer.vhdl
+  - src/misc/powerup_reset.vhdl
+  - src/common/stream_buffer.vhdl
+  - src/common/stream_buffer_generic.vhdl
+  - src/misc/stream_to_wbm.vhdl
+tags:
+- arbitration
+- buffer
+- counter
+- detect
+- edge
+- frequency
+- pipeline
+- powerup
+- remove
+- reset
+- stream
+- trail
+role: subproject
+top_modules:
+- arbiter
+- be_add_lead
+- be_add_trail
+- be_remove_lead
+- be_remove_trail
+- comparator
+- debouncer
+- edge_detect
+- frequency_counter
+- heartbeat
+- pipeline_buffer
+- powerup_reset
+- stream_buffer
+- stream_buffer_generic
+- stream_to_wbm
+components:
+- counter
+- skid_buffer
+top_ports:
+  arbiter:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: requests_i
+    type: std_logic_vector
+    width: g_NUM_INPUTS - 1 downto 0
+  - direction: out
+    name: grants_o
+    type: std_logic_vector
+    width: g_NUM_INPUTS - 1 downto 0
+  be_add_lead:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: shl_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) downto 0
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_empty_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: snk_lead_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  be_add_trail:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: shl_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) downto 0
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_empty_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: snk_trail_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  be_remove_lead:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: shl_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) downto 0
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_empty_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: out
+    name: src_head_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  be_remove_trail:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: shl_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) downto 0
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_empty_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: out
+    name: src_tail_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  comparator:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: enable_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: a_i
+    type: unsigned
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: b_i
+    type: unsigned
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: out
+    name: a_gt_b_o
+    type: std_logic
+    width: ''
+  debouncer:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data_i
+    type: std_logic_vector
+    width: ''
+  - direction: out
+    name: data_o
+    type: std_logic_vector
+    width: ''
+  edge_detect:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: data_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: pulse_o
+    type: std_logic
+    width: ''
+  frequency_counter:
+  - direction: in
+    name: clk_ref_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_meas_i
+    type: std_logic_vector
+    width: g_NUM_CLOCKS - 1 downto 0
+  - direction: out
+    name: freq_data_o
+    type: uns_array_t
+    width: 0 to g_NUM_CLOCKS - 1)(g_DATA_WIDTH - 1 downto 0
+  - direction: out
+    name: freq_valid_o
+    type: std_logic_vector
+    width: g_NUM_CLOCKS - 1 downto 0
+  heartbeat:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: heartbeat_o
+    type: std_logic
+    width: ''
+  pipeline_buffer:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: snk_empty_i
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: in
+    name: snk_keep_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH / 8 - 1 downto 0
+  - direction: in
+    name: snk_sop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_eop_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: out
+    name: src_empty_o
+    type: unsigned
+    width: log2ceil(g_DATA_WIDTH / 8) - 1 downto 0
+  - direction: out
+    name: src_keep_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH / 8 - 1 downto 0
+  - direction: out
+    name: src_sop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_eop_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  powerup_reset:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_ext_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: reset_o
+    type: std_logic
+    width: ''
+  stream_buffer:
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: g_DATA_WIDTH - 1 downto 0
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  stream_buffer_generic:
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_data_i
+    type: data_t
+    width: ''
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_data_o
+    type: data_t
+    width: ''
+  - direction: in
+    name: src_ready_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  stream_to_wbm:
+  - direction: in
+    name: clk_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: reset_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: snk_data_i
+    type: std_logic_vector
+    width: 8 + maximum(g_WB_ADDR_WIDTH, g_WB_DATA_WIDTH)  - 1 downto 0
+  - direction: in
+    name: snk_valid_i
+    type: std_logic
+    width: ''
+  - direction: out
+    name: snk_ready_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: src_data_o
+    type: std_logic_vector
+    width: 8 + maximum(g_WB_ADDR_WIDTH, g_WB_DATA_WIDTH) - 1 downto 0
+  - direction: out
+    name: src_valid_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_adr_o
+    type: unsigned
+    width: g_WB_ADDR_WIDTH - 1 downto 0
+  - direction: in
+    name: wb_dat_i
+    type: std_logic_vector
+    width: g_WB_DATA_WIDTH - 1 downto 0
+  - direction: out
+    name: wb_dat_o
+    type: std_logic_vector
+    width: g_WB_DATA_WIDTH - 1 downto 0
+  - direction: out
+    name: wb_we_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_sel_o
+    type: std_logic_vector
+    width: g_WB_DATA_WIDTH / 8 - 1 downto 0
+  - direction: out
+    name: wb_stb_o
+    type: std_logic
+    width: ''
+  - direction: out
+    name: wb_cyc_o
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_ack_i
+    type: std_logic
+    width: ''
+  - direction: in
+    name: wb_err_i
+    type: std_logic
+    width: ''
+total_entities: 17
+desc_source: curator
+provides_packages:
+- types
+- utils
+upstream_evidence:
+  frameworks:
+  - vunit
+  testbench_count: 90
+  runners:
+  - path: sim/common/run.py
+    framework: vunit
+  - path: sim/comms/run.py
+    framework: vunit
+  - path: sim/endec/run.py
+    framework: vunit
+  - path: sim/fileio/run.py
+    framework: vunit
+  - path: sim/interfaces/run.py
+    framework: vunit
+  - path: sim/io/i2c/run.py
+    framework: vunit
+  - path: sim/io/jtag/run.py
+    framework: vunit
+  - path: sim/io/spi/run.py
+    framework: vunit
+  - path: sim/io/uart/run.py
+    framework: vunit
+  - path: sim/memory/run.py
+    framework: vunit
+  - path: sim/misc/run.py
+    framework: vunit
+  - path: sim/packet/run.py
+    framework: vunit
+  - path: sim/pipes/run.py
+    framework: vunit
+  - path: sim/proto/aurora_64b66b/run.py
+    framework: vunit
+  formal:
+    tool: symbiyosys
+    sby_files:
+    - fv/common/run.sby
+    - fv/comms/run.sby
+    - fv/endec/run.sby
+    - fv/interfaces/stream/run.sby
+    - fv/memory/run.sby
+    - fv/misc/run.sby
+    - fv/packet/run.sby
+    - fv/pipes/run.sby
+    property_files:
+    - path: fv/common/counter.psl
+      assert_statements: 4
+      assume_statements: 1
+      cover_statements: 0
+    - path: fv/common/debouncer.psl
+      assert_statements: 2
+      assume_statements: 1
+      cover_statements: 0
+    - path: fv/common/edge_detect.psl
+      assert_statements: 3
+      assume_statements: 0
+      cover_statements: 0
+    - path: fv/common/pipeline_buffer.psl
+      assert_statements: 6
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/common/skid_buffer.psl
+      assert_statements: 5
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/common/stream_buffer.psl
+      assert_statements: 3
+      assume_statements: 1
+      cover_statements: 4
+    - path: fv/common/utils.psl
+      assert_statements: 1
+      assume_statements: 1
+      cover_statements: 0
+    - path: fv/comms/gearbox_down.psl
+      assert_statements: 3
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/comms/gearbox_up.psl
+      assert_statements: 3
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/endec/rle_decode.psl
+      assert_statements: 4
+      assume_statements: 5
+      cover_statements: 0
+    - path: fv/endec/rle_encode.psl
+      assert_statements: 8
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/interfaces/stream/avst_ram_read.psl
+      assert_statements: 25
+      assume_statements: 1
+      cover_statements: 1
+    - path: fv/interfaces/stream/avst_ram_write.psl
+      assert_statements: 5
+      assume_statements: 1
+      cover_statements: 0
+    - path: fv/interfaces/stream/avst_ram_write_unaligned.psl
+      assert_statements: 15
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/interfaces/stream/avst_to_axis.psl
+      assert_statements: 2
+      assume_statements: 5
+      cover_statements: 0
+    - path: fv/interfaces/stream/axis_to_avst.psl
+      assert_statements: 4
+      assume_statements: 5
+      cover_statements: 0
+    - path: fv/memory/fifo.psl
+      assert_statements: 10
+      assume_statements: 3
+      cover_statements: 0
+    - path: fv/memory/ring_buffer.psl
+      assert_statements: 6
+      assume_statements: 1
+      cover_statements: 3
+    - path: fv/misc/be_add_lead.psl
+      assert_statements: 3
+      assume_statements: 6
+      cover_statements: 1
+    - path: fv/misc/be_add_trail.psl
+      assert_statements: 3
+      assume_statements: 6
+      cover_statements: 1
+    - path: fv/misc/be_remove_lead.psl
+      assert_statements: 3
+      assume_statements: 9
+      cover_statements: 1
+    - path: fv/misc/be_remove_trail.psl
+      assert_statements: 3
+      assume_statements: 9
+      cover_statements: 1
+    - path: fv/packet/broadcaster.psl
+      assert_statements: 6
+      assume_statements: 3
+      cover_statements: 3
+    - path: fv/packet/deinterleaver.psl
+      assert_statements: 7
+      assume_statements: 7
+      cover_statements: 3
+    - path: fv/packet/header_add.psl
+      assert_statements: 3
+      assume_statements: 3
+      cover_statements: 1
+    - path: fv/packet/header_remove.psl
+      assert_statements: 3
+      assume_statements: 3
+      cover_statements: 1
+    - path: fv/packet/interleaver.psl
+      assert_statements: 10
+      assume_statements: 8
+      cover_statements: 0
+    - path: fv/packet/interleaver_bd.psl
+      assert_statements: 13
+      assume_statements: 8
+      cover_statements: 0
+    - path: fv/packet/packet_delay.psl
+      assert_statements: 7
+      assume_statements: 6
+      cover_statements: 0
+    - path: fv/packet/packet_join.psl
+      assert_statements: 9
+      assume_statements: 8
+      cover_statements: 0
+    - path: fv/pipes/arbiter.psl
+      assert_statements: 6
+      assume_statements: 2
+      cover_statements: 0
+    assert_statements: 185
+    cover_statements: 20
+  ci_config:
+  - .gitlab-ci.yml
+  - utils/ci_jobs/formal_ci.yml
+  - utils/ci_jobs/simulation_ci.yml
+  - utils/ci_jobs/style_ci.yml
