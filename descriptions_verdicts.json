@@ -779,13 +779,6 @@
       "reviewed_by": "dmazure",
       "notes": "RTL-P3.284 ingest. Scanner picked the GPL preamble (\"This program is free software...\") from a header; rubric-locked the actual project description from curator notes."
     },
-    "catalyst-neuromorphic/catalyst-n2": {
-      "verdict": "good",
-      "locked_text": "Open-source neuromorphic processor (second generation) \u2014 LIF compartmental neurons, microcode learning, STDP + three-factor synaptic plasticity, asynchronous Network-on-Chip mesh, RV32I/RV32IM management cores, multi-chip routing. Apache-2.0, FPGA-validated on AWS F2, Kria, and Arty.",
-      "reviewed_at": "2026-05-07",
-      "reviewed_by": "dmazure",
-      "notes": "RTL-P3.402 ingest. granularity=repo (cohesive chip design; sub-components like async_noc_mesh / neuromorphic_top weren't usefully scannable per-entity \u2014 first-pass scanner gave port-heuristic descriptions that misclassified neuromorphic_top as a UART). Hand-locked from project README + the queue note's deep eval."
-    },
     "ohwr/etherbone-core": {
       "verdict": "good",
       "locked_text": "Etherbone \u2014 Wishbone-over-Ethernet remote-access protocol. Three HDL subsystems: Etherbone master (eb_master_core), slave (eb_slave_core, used by White Rabbit's wrc_core for remote register access), and a USB transport variant (eb_usb_core). OHWR-canonical post-migration.",
